@@ -156,6 +156,16 @@
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fortnite\Engine\FCurlHTTPRequest\Header\" />
+    <Folder Include="Fortnite\Engine\FCurlHTTPRequest\Source\" />
+    <Folder Include="Fortnite\FortniteGame\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="Libraries\Include.h" />
+    <ClInclude Include="Libraries\Minhook\Minhook.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

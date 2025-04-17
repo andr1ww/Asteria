@@ -87,12 +87,12 @@ void Asteria::Socket::Client::OnMessageCallback(const ix::WebSocketMessagePtr& M
         }
     case ix::WebSocketMessageType::Close:
         bIsConnectionOpen = false;
-     //   LI_FN(TerminateProcess)(LI_FN(GetCurrentProcess)(), 0);
+        LI_FN(TerminateProcess)(LI_FN(GetCurrentProcess)(), 0);
         break;
     case ix::WebSocketMessageType::Error:
         {
             bIsConnectionOpen = false;
-       //     LI_FN(TerminateProcess)(LI_FN(GetCurrentProcess)(), 0);
+            LI_FN(TerminateProcess)(LI_FN(GetCurrentProcess)(), 0);
             break;
         }
     default:

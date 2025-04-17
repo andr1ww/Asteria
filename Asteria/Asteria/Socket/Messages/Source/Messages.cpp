@@ -1,6 +1,7 @@
 ﻿#include "../Header/Messages.h"
 
 #include "Asteria/Socket/Client/Header/Client.h"
+#include "Asteria/Socket/Detection/Enum/Detection.h"
 #include "Asteria/Socket/Encryption/Header/Encryption.h"
 
 string Asteria::Socket::Messages::Init()
@@ -47,11 +48,23 @@ string Asteria::Socket::Messages::Heartbeat(const uint64 SendTime)
         LastSendTime = SendTime;
         nlohmann::json JSON{};
         JSON[(skCrypt("message_type").decrypt())] = _str("heartbeat");
-        JSON[(skCrypt("exchange_code").decrypt())] = string(wpassword.begin(), wpassword.end());;
+        JSON[(skCrypt("exchange_code").decrypt())] = string(wpassword.begin(), wpassword.end());
         JSON[(skCrypt("timestamp").decrypt())] = SendTime;
         string Message = Encryption::Encrypt(JSON.dump());
 
         return Message;
     }
     return "";
+}
+
+string Asteria::Socket::Messages::Detection(Detections::Detection DetectionType,  string msg)
+{
+    nlohmann::json JSON{};
+    JSON[(skCrypt("message_type").decrypt())] = _("detection").decrypt();
+    JSON[(skCrypt("exchange_code").decrypt())] = string(wpassword.begin(), wpassword.end());
+    JSON[(skCrypt("detection").decrypt())] = static_cast<int32>(DetectionType);
+    JSON[(skCrypt("message").decrypt())] = std::string(msg.begin(), msg.end());
+
+    string Message = Encryption::Encrypt(JSON.dump());
+    return Message;
 }

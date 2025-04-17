@@ -11,12 +11,12 @@ static bool HookedExit = false;
 
 bool Engine::FCurlHTTPRequest::ShouldRedirect(const wchar_t* url)
 {
-    static constexpr const wchar_t* redirectedUrls[] = {
-        L"ol.epicgames.com",
-        L"ol.epicgames.net",
-        L"on.epicgames.com",
-        L"game-social.epicgames.com",
-        L"ak.epicgames.com",
+    static const wchar_t* redirectedUrls[] = {
+        skCrypt(L"ol.epicgames.com").decrypt(), 
+        skCrypt(L"ol.epicgames.net").decrypt(), 
+        skCrypt(L"on.epicgames.com").decrypt(), 
+        skCrypt(L"game-social.epicgames.com").decrypt(), 
+        skCrypt(L"ak.epicgames.com").decrypt()
     };
 
     std::wstring urlWS = url + 8;
@@ -55,6 +55,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
         std::wstring newPath = URL.substr(end);
         std::wstring newUrl = Backend.decrypt() + newPath;
         Request->SetURL(newUrl.c_str());
+        Backend.encrypt(); // encrypt after use so harder to find
 
         if (!HookedExit && newPath.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)
         {

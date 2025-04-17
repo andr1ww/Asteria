@@ -377,3 +377,16 @@ link.command.1.tlog
 link.read.1.tlog
 link.secondary.1.tlog
 link.write.1.tlog
+# Build outputs
+*.dll
+*.obj
+*.iobj
+*.ipdb
+*.pdb
+*.tlog
+*.command.1.tlog
+*.read.1.tlog
+*.write.1.tlog
+*.items.tlog
+*.secondary.1.tlog
+vc*.pdb

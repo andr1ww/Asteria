@@ -157,6 +157,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Asteria\Finder\Source\Finder.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Fortnite\Engine\FCurlHTTPRequest\Source\FCurlHTTPRequest.cpp" />
     <ClCompile Include="SDK\Basic.cpp" />
@@ -170,6 +171,7 @@
     <Folder Include="Fortnite\FortniteGame\" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Asteria\Finder\Header\Finder.h" />
     <ClInclude Include="Asteria\Globals.h" />
     <ClInclude Include="Fortnite\Engine\FCurlHTTPRequest\Header\FCurlHTTPRequest.h" />
     <ClInclude Include="Framework.h" />

@@ -44,3 +44,9 @@ using namespace SDK;
 #include "Asteria/Globals.h"
 
 using namespace std;
+
+#define Log(...) do { \
+std::ostringstream ss; \
+ss << __VA_ARGS__; \
+printf("[Asteria] %s (%s:%d) --> %s\n", __func__, __FILE__, __LINE__, ss.str().c_str()); \
+} while(0)

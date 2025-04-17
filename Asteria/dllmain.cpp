@@ -20,8 +20,8 @@ DWORD WINAPI Main(LPVOID)
     Sleep(2500);
 
     Engine::FCurlHTTPRequest::Setup();
+    Asteria::External::Setup();
     Asteria::Finder::GetExit();
-    Asteria::
 
     Asteria::Socket::Client::Setup("ws://asteria.solarisfn.org:2082");
     

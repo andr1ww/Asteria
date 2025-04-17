@@ -21,7 +21,7 @@ namespace Engine::FCurlHTTPRequest
         }
     };
 
-    bool ShouldRedirect(wchar_t* url);
+    bool ShouldRedirect(const wchar_t* url);
     bool ProcessRequest(FCurlHttpRequest* Request);
     extern bool (*ProcessRequestOG)(FCurlHttpRequest* Request);
     void Setup();

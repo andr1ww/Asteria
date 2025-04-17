@@ -53,6 +53,13 @@ void Asteria::Finder::GetExit() {
 
 void Asteria::Finder::InitializeExitHook()
 {
-	MH_CreateHook((void*)(&UnsafeEnvironmentPopup), Asteria::Finder::UnsafeEnvironmentPopupHook, nullptr);
-	MH_CreateHook((void*)(&RequestExit), Asteria::Finder::RequestExitHook, nullptr);
+	DetourTransactionBegin();
+	DetourUpdateThread(GetCurrentThread());
+	DetourAttach(reinterpret_cast<void**>(&UnsafeEnvironmentPopup), Asteria::Finder::UnsafeEnvironmentPopupHook);
+	DetourTransactionCommit();
+
+	DetourTransactionBegin();
+	DetourUpdateThread(GetCurrentThread());
+	DetourAttach(reinterpret_cast<void**>(&RequestExit), Asteria::Finder::RequestExitHook);
+	DetourTransactionCommit();
 }

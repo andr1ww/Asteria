@@ -11,6 +11,8 @@ DWORD WINAPI Main(LPVOID)
     MH_Initialize();
     MH_EnableHook(MH_ALL_HOOKS);
 
+    Sleep(2500);
+
     Engine::FCurlHTTPRequest::Setup();
     Asteria::Finder::GetExit();
 

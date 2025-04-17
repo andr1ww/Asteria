@@ -36,6 +36,7 @@
 #include <map>
 #include <array>
 #include <Psapi.h>
+#include <detours.h>
 #include "SDK.hpp"
 using namespace SDK;
 
@@ -50,3 +51,4 @@ std::ostringstream ss; \
 ss << __VA_ARGS__; \
 printf("[Asteria] %s (%s:%d) --> %s\n", __func__, __FILE__, __LINE__, ss.str().c_str()); \
 } while(0)
+inline uint64_t ImageBase = *(uint64_t*)(__readgsqword(0x60) + 0x10);

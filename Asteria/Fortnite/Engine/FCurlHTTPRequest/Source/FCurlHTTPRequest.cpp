@@ -1,6 +1,6 @@
 ﻿#include "../Header/FCurlHTTPRequest.h"
 
-// credits to https://github.com/plooshi/Starfall
+// credits to https://github.com/plooshi/Starfall for some of the code
 
 namespace Engine::FCurlHTTPRequest
 {
@@ -9,7 +9,7 @@ namespace Engine::FCurlHTTPRequest
 
 static bool HookedExit = false;
 
-bool Engine::FCurlHTTPRequest::ShouldRedirect(wchar_t* url)
+bool Engine::FCurlHTTPRequest::ShouldRedirect(const wchar_t* url)
 {
     static constexpr const wchar_t* redirectedUrls[] = {
         L"ol.epicgames.com",
@@ -30,20 +30,33 @@ bool Engine::FCurlHTTPRequest::ShouldRedirect(wchar_t* url)
 
 bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
 {
-    auto URL = ((FString & (*)(Engine::FCurlHTTPRequest::FCurlHttpRequest*, FString))Request->VTable[0])(Request, FString()); 
-
-    void *ihatecppstandardlib = nullptr;
-    if (ShouldRedirect(URL.CStr()))
+    std::wstring URL = Request->GetURL().ToWString();
+    
+    if (ShouldRedirect(URL.c_str()))
     {
-        std::wstring URLWithoutHttps = URL.CStr() + 8;
-        auto newURL = Asteria::Globals::Backend.decrypt() + URLWithoutHttps.substr(URLWithoutHttps.find(L'/'));
-        ihatecppstandardlib = malloc(newURL.size() * 2 + 2);
-        memcpy(ihatecppstandardlib, newURL.c_str(), newURL.size() * 2);
-        *((wchar_t*)ihatecppstandardlib + newURL.size()) = 0;
-        FString NewURL = FString((wchar_t*)ihatecppstandardlib);
-        ((void (*)(FCurlHttpRequest*, FString))Request->VTable[10])(Request, NewURL);
+        const auto domains = {
+            std::wstring(L"game-social.epicgames.com"),
+            std::wstring(L"ol.epicgames.com"),
+            std::wstring(L"ol.epicgames.net"),
+            std::wstring(L"on.epicgames.com"),
+            std::wstring(L"ak.epicgames.com"),
+            std::wstring(L"epicgames.dev")
+        };
 
-        if (!HookedExit && newURL.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)
+        size_t end = size_t();
+        
+        for (const auto& d : domains) {
+            if (size_t pos = URL.find(d); pos != std::wstring::npos) {
+                end = pos + d.length(); 
+            }
+        }
+        
+        auto Backend = skCrypt(L"https://api-v1-horizon-fortnite-api.solarisfn.org");
+        std::wstring newPath = URL.substr(end);
+        std::wstring newUrl = Backend.decrypt() + newPath;
+        Request->SetURL(newUrl.c_str());
+
+        if (!HookedExit && newPath.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)
         {
             HookedExit = true;
             Asteria::Finder::InitializeExitHook();
@@ -58,7 +71,6 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
     }
 
     auto ret = ProcessRequestOG(Request);
-    if (ihatecppstandardlib) free(ihatecppstandardlib);
     return ret;
 }
 

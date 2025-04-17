@@ -3,5 +3,5 @@
 
 namespace Asteria::Socket::Messages
 {
-    void Init();
+    string Init();
 }

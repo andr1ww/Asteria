@@ -1,8 +1,8 @@
 ﻿#include "../Header/Messages.h"
 
-void Asteria::Socket::Messages::Init()
+string Asteria::Socket::Messages::Init()
 {
-    constexpr auto Argument = std::find(args.begin(), args.end(), skCrypt(L"-AUTH_PASSWORD=").decrypt());
+    auto Argument = std::find(args.begin(), args.end(), skCrypt(L"-AUTH_PASSWORD=").decrypt());
     if (Argument != args.end())
     {
         std::wstring password = Argument->substr(Argument->find(L"=") + 1);
@@ -10,7 +10,7 @@ void Asteria::Socket::Messages::Init()
         {
             nlohmann::json JSON{};
 
-            JSON[(skCrypt("message_type").decrypt())] = str("register");
+            JSON[(skCrypt("message_type").decrypt())] = _str("register");
             JSON[(skCrypt("exchange_code").decrypt())] = password;
         }
     }

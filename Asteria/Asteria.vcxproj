@@ -163,6 +163,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ClCompile Include="Asteria\Finder\Source\Finder.cpp" />
+    <ClCompile Include="Asteria\Socket\Client\Source\Client.cpp" />
     <ClCompile Include="Asteria\Socket\Encryption\Source\Encryption.cpp" />
     <ClCompile Include="Asteria\Socket\Messages\Header\Messages.h" />
     <ClCompile Include="Asteria\Socket\Messages\Source\Messages.cpp" />
@@ -219,6 +220,7 @@
     <ClInclude Include="Asteria\Finder\Header\Finder.h" />
     <ClInclude Include="Asteria\Globals.h" />
     <ClInclude Include="Asteria\Holder.h" />
+    <ClInclude Include="Asteria\Socket\Client\Header\Client.h" />
     <ClInclude Include="Asteria\Socket\Encryption\Header\Encryption.h" />
     <ClInclude Include="Fortnite\Engine\FCurlHTTPRequest\Header\FCurlHTTPRequest.h" />
     <ClInclude Include="Fortnite\FortniteGame\FortPlayerController\Header\FortPlayerController.h" />
@@ -289,6 +291,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libraries\LazyImporter.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

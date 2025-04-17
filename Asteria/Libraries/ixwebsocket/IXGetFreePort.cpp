@@ -14,12 +14,10 @@
 
 #include "IXGetFreePort.h"
 
-#include "../ixwebsocket/IXNetSystem.h"
-#include "../ixwebsocket/IXSocket.h"
+#include <ixwebsocket/IXNetSystem.h>
+#include <ixwebsocket/IXSocket.h>
 #include <random>
 #include <string>
-#include <winsock2.h>
-#include <ws2tcpip.h>
 
 namespace ix
 {

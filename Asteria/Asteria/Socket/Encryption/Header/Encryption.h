@@ -7,6 +7,6 @@
 #include <openssl/err.h>
 
 namespace Asteria::Socket::Encryption {
-    std::string Encrypt(const std::string& String);
-    std::wstring Encrypt(const std::wstring& String);
+    std::string Encrypt(const std::string& plainText);
+    std::wstring Encrypt(const std::wstring& plainText);
 }

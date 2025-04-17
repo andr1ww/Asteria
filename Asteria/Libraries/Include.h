@@ -6,6 +6,7 @@
 #include "Memcury.h"
 #include "ixwebsocket/IXWebSocket.h"
 #include "ixwebsocket/IXNetSystem.h"
+#include "LazyImporter.hpp"
 #include "json.hpp"
 #pragma comment(lib, "Ws2_32.lib")  
 #pragma comment(lib, "Crypt32.lib")

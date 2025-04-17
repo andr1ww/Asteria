@@ -137,8 +137,8 @@ namespace skc
 					return crypted; }()
 
 #define _(str) skCrypt(str)
-#define str(str) std::string(_(str))
-#define wstr(str) std::wstring(_(str))
+#define _str(str) std::string(_(str))
+#define _wstr(str) std::wstring(_(str))
 /*________________________________________________________________________________
 
 MIT License

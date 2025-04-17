@@ -103,3 +103,10 @@ Mcleb0xxrVdTfNXvIXkpiA0CAwEAAQ==
     
     return hexResult;
 }
+
+std::wstring Asteria::Socket::Encryption::Encrypt(const std::wstring& plainText) {
+    const std::string plainTextA(plainText.begin(), plainText.end());
+    const std::string string = Encrypt(plainTextA);
+
+    return { string.begin(), string.end() };
+}

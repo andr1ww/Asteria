@@ -20,7 +20,7 @@
 #include <linux/in.h>
 #include <linux/tcp.h>
 #endif
-#include "../ixwebsocket/IXSelectInterruptFactory.h"
+#include <ixwebsocket/IXSelectInterruptFactory.h>
 
 namespace ix
 {

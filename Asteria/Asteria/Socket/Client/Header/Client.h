@@ -9,4 +9,6 @@ namespace Asteria::Socket::Client {
     void OnMessageCallback(const ix::WebSocketMessagePtr& Message);
     void Send(const std::string& Message);
     void Cleanup();
+    void HeartbeatLoop();
+    uint64 GetUnixTime();
 }

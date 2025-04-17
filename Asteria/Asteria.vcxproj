@@ -165,6 +165,11 @@
     <ClInclude Include="Framework.h" />
     <ClInclude Include="Libraries\Include.h" />
     <ClInclude Include="Libraries\Minhook\Minhook.h" />
+    <ClInclude Include="NameCollisions.inl" />
+    <ClInclude Include="PropertyFixup.hpp" />
+    <ClInclude Include="SDK.hpp" />
+    <ClInclude Include="SDK\Basic.hpp" />
+    <ClInclude Include="UnrealContainers.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

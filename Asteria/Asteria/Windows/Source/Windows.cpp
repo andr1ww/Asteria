@@ -4,6 +4,8 @@
 #include "Asteria/Socket/Detection/Enum/Detection.h"
 #include "Asteria/Socket/Messages/Header/Messages.h"
 
+// credits to https://github.com/plooshi/Arsenic for VerifyEmbeddedSignature and part of LdrLoadDllHook
+
 __forceinline BOOL Asteria::Windows::VerifyEmbeddedSignature(LPCWSTR pwszSourceFile)
 {
     LONG lStatus;

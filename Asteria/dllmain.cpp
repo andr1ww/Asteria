@@ -4,11 +4,15 @@
 
 DWORD WINAPI Main(LPVOID)
 {
-    AllocConsole();
-    FILE* f;
-    freopen_s(&f, "CONOUT$", "w", stdout);
-    freopen_s(&f, "CONOUT$", "w", stderr);
-    freopen_s(&f, "CONIN$", "r", stdin);
+    if (Asteria::Globals::bConsole)
+    {
+        AllocConsole();
+        FILE* f;
+        freopen_s(&f, "CONOUT$", "w", stdout);
+        freopen_s(&f, "CONOUT$", "w", stderr);
+        freopen_s(&f, "CONIN$", "r", stdin);
+    }
+    
     MH_Initialize();
 
     Sleep(2500);

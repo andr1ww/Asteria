@@ -5,5 +5,5 @@
 namespace Asteria::Globals
 {
     auto Backend = skCrypt(L"https://api-v1-horizon-fortnite-api.solarisfn.org"); // someone fix this, i have to define in func rn
-    bool bConsole = false;
+    inline bool bConsole = false;
 }

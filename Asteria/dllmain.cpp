@@ -1,4 +1,5 @@
 #include "Framework.h"
+#include "Fortnite/Engine/FCurlHTTPRequest/Header/FCurlHTTPRequest.h"
 
 DWORD WINAPI Main(LPVOID)
 {
@@ -7,7 +8,10 @@ DWORD WINAPI Main(LPVOID)
     freopen_s(&f, "CONOUT$", "w", stdout);
     freopen_s(&f, "CONOUT$", "w", stderr);
     freopen_s(&f, "CONIN$", "r", stdin);
-    
+    MH_Initialize();
+    MH_EnableHook(MH_ALL_HOOKS);
+
+    Engine::FCurlHTTPRequest::Setup();
     return 0;
 }
 

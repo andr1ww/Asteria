@@ -145,6 +145,9 @@
       <PreprocessorDefinitions>NDEBUG;CPPDYNAMICLIBRARYTEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -155,16 +158,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Fortnite\Engine\FCurlHTTPRequest\Source\FCurlHTTPRequest.cpp" />
+    <ClCompile Include="SDK\Basic.cpp" />
+    <ClCompile Include="SDK\BlueprintContext_functions.cpp" />
+    <ClCompile Include="SDK\CoreUObject_functions.cpp" />
+    <ClCompile Include="SDK\Engine_functions.cpp" />
+    <ClCompile Include="SDK\FortniteGame_functions.cpp" />
+    <ClCompile Include="SDK\FortniteUI_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Fortnite\Engine\FCurlHTTPRequest\Header\" />
-    <Folder Include="Fortnite\Engine\FCurlHTTPRequest\Source\" />
     <Folder Include="Fortnite\FortniteGame\" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Asteria\Globals.h" />
+    <ClInclude Include="Fortnite\Engine\FCurlHTTPRequest\Header\FCurlHTTPRequest.h" />
     <ClInclude Include="Framework.h" />
     <ClInclude Include="Libraries\Include.h" />
+    <ClInclude Include="Libraries\Memcury.h" />
     <ClInclude Include="Libraries\Minhook\Minhook.h" />
+    <ClInclude Include="Libraries\skCrypter.h" />
     <ClInclude Include="NameCollisions.inl" />
     <ClInclude Include="PropertyFixup.hpp" />
     <ClInclude Include="SDK.hpp" />

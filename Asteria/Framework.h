@@ -36,8 +36,11 @@
 #include <map>
 #include <array>
 #include <Psapi.h>
+#include "SDK.hpp"
+using namespace SDK;
 
 // asteria include
 #include "Libraries/Include.h"
+#include "Asteria/Globals.h"
 
 using namespace std;

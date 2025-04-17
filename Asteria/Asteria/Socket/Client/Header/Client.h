@@ -3,7 +3,6 @@
 #include <memory>
 
 namespace Asteria::Socket::Client {
-    extern std::unique_ptr<ix::WebSocket> WebSocket;
     extern bool bIsConnectionOpen;
     
     void Setup(string URL);

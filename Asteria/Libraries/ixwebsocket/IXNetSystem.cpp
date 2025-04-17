@@ -15,6 +15,7 @@
   #define ENOSPC 28
 #endif
 #include <vector>
+#include <iostream>
 #endif
 
 namespace ix

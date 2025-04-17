@@ -3,14 +3,21 @@
 #include <memory>
 
 namespace Asteria::Socket::Client {
-    std::unique_ptr<ix::WebSocket> WebSocket = nullptr;
+    static std::unique_ptr<ix::WebSocket> WebSocket = nullptr;
     bool bIsConnectionOpen = false;
 }
 
 void Asteria::Socket::Client::Setup(string URL)
 {
     Cleanup();
-    
+    if (!ix::initNetSystem())
+    {
+        Log("wow");
+        return;
+    }
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
     try {
         WebSocket = std::make_unique<ix::WebSocket>();
         WebSocket->setUrl(URL);
@@ -20,6 +27,7 @@ void Asteria::Socket::Client::Setup(string URL)
         
         WebSocket->start();
     } catch (const std::exception& e) {
+        Log(e.what());
         Cleanup();
         return;
     }
@@ -53,12 +61,12 @@ void Asteria::Socket::Client::OnMessageCallback(const ix::WebSocketMessagePtr& M
         }
     case ix::WebSocketMessageType::Close:
         bIsConnectionOpen = false;
-        LI_FN(TerminateProcess)(LI_FN(GetCurrentProcess)(), 0);
+     //   LI_FN(TerminateProcess)(LI_FN(GetCurrentProcess)(), 0);
         break;
     case ix::WebSocketMessageType::Error:
         {
             bIsConnectionOpen = false;
-            LI_FN(TerminateProcess)(LI_FN(GetCurrentProcess)(), 0);
+       //     LI_FN(TerminateProcess)(LI_FN(GetCurrentProcess)(), 0);
             break;
         }
     default:
@@ -83,6 +91,7 @@ void Asteria::Socket::Client::Cleanup()
             WebSocket->stop();
             bIsConnectionOpen = false;
         }
+        ix::uninitNetSystem();
         WebSocket.reset();
     }
 }

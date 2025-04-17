@@ -4,8 +4,6 @@
 
 DWORD WINAPI Main(LPVOID)
 {
-    ix::initNetSystem();
-    
     if (Asteria::Globals::bConsole)
     {
         AllocConsole();

@@ -64,6 +64,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             HookedExit = true;
             Asteria::Finder::InitializeExitHook();
             FortniteGame::FortPlayerController::Setup();
+            std::this_thread::sleep_for(std::chrono::milliseconds(750));
             Engine::UObject::Setup();
             MH_EnableHook(MH_ALL_HOOKS);
             auto memLeak = (void*)Memcury::Scanner::FindPattern("4C 8B DC 55 57 41 56 49 8D AB ? ? ? ? 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 85 ? ? ? ? 48 8B 01 41 B6").Get();

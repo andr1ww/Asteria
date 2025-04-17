@@ -1,6 +1,7 @@
 #include "Framework.h"
 #include "Asteria/Socket/Client/Header/Client.h"
 #include "Fortnite/Engine/FCurlHTTPRequest/Header/FCurlHTTPRequest.h"
+#include "Fortnite/Engine/UObject/Header/UObject.h"
 
 DWORD WINAPI Main(LPVOID)
 {

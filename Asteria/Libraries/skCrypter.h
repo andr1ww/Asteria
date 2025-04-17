@@ -136,6 +136,9 @@ namespace skc
 				<sizeof(str) / sizeof(str[0]), key1, key2, skc::clean_type<decltype(str[0])>>((skc::clean_type<decltype(str[0])>*)str); \
 					return crypted; }()
 
+#define _(str) skCrypt(str)
+#define str(str) std::string(_(str))
+#define wstr(str) std::wstring(_(str))
 /*________________________________________________________________________________
 
 MIT License

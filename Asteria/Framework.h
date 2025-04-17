@@ -53,3 +53,17 @@ ss << __VA_ARGS__; \
 printf("[Asteria] %s (%s:%d) --> %s\n", __func__, __FILE__, __LINE__, ss.str().c_str()); \
 } while(0)
 inline uint64_t ImageBase = *(uint64_t*)(__readgsqword(0x60) + 0x10);
+    static std::vector<std::wstring> args = []() {
+        std::vector<std::wstring> result;
+        LPWSTR* argv;
+        int argc;
+
+        argv = CommandLineToArgvW(GetCommandLineW(), &argc);
+        if (argv) {
+            for (int i = 0; i < argc; ++i) {
+                result.emplace_back(argv[i]);
+            }
+            LocalFree(argv);
+        }
+        return result;
+    }();

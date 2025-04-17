@@ -1,9 +1,10 @@
 #include "Framework.h"
 #include "Fortnite/Engine/FCurlHTTPRequest/Header/FCurlHTTPRequest.h"
-#include "Fortnite/FortniteGame/FortPlayerController/Header/FortPlayerController.h"
 
 DWORD WINAPI Main(LPVOID)
 {
+    ix::initNetSystem();
+    
     if (Asteria::Globals::bConsole)
     {
         AllocConsole();

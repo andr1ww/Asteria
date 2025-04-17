@@ -37,6 +37,7 @@
 #include <array>
 #include <Psapi.h>
 #include <detours.h>
+#include <mscat.h>
 #include "SDK.hpp"
 #include <shellapi.h>
 using namespace SDK;

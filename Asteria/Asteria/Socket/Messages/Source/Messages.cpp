@@ -7,27 +7,30 @@
 string Asteria::Socket::Messages::Init()
 {
     static bool bInit = false;
-    auto Argument = std::find_if(args.begin(), args.end(), [](const std::wstring& arg) {
-        return arg.find(L"-AUTH_PASSWORD=") == 0;
-    });
-    
-    if (Argument != args.end())
+    if (!bInit)
     {
-        wpassword = Argument->substr(Argument->find(L"=") + 1);
-        if (!wpassword.empty())
+        auto Argument = std::find_if(args.begin(), args.end(), [](const std::wstring& arg) {
+            return arg.find(L"-AUTH_PASSWORD=") == 0;
+        });
+    
+        if (Argument != args.end())
         {
-            std::string password(wpassword.begin(), wpassword.end());
+            wpassword = Argument->substr(Argument->find(L"=") + 1);
+            if (!wpassword.empty())
+            {
+                std::string password(wpassword.begin(), wpassword.end());
             
-            nlohmann::json JSON{};
-            JSON[(skCrypt("message_type").decrypt())] = _str("register");
-            JSON[(skCrypt("exchange_code").decrypt())] = password;
+                nlohmann::json JSON{};
+                JSON[(skCrypt("message_type").decrypt())] = _str("register");
+                JSON[(skCrypt("exchange_code").decrypt())] = password;
 
-            string Message = Encryption::Encrypt(JSON.dump());
-            Log(Message);
+                string Message = Encryption::Encrypt(JSON.dump());
+                Log(Message);
 
-            bInit = true;
+                bInit = true;
             
-            return Message;
+                return Message;
+            }
         }
     }
     

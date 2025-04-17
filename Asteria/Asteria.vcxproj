@@ -162,11 +162,13 @@
     <VcpkgUseMD>false</VcpkgUseMD>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="Asteria\External\Source\External.cpp" />
     <ClCompile Include="Asteria\Finder\Source\Finder.cpp" />
     <ClCompile Include="Asteria\Socket\Client\Source\Client.cpp" />
     <ClCompile Include="Asteria\Socket\Encryption\Source\Encryption.cpp" />
     <ClCompile Include="Asteria\Socket\Messages\Header\Messages.h" />
     <ClCompile Include="Asteria\Socket\Messages\Source\Messages.cpp" />
+    <ClCompile Include="Asteria\Windows\Source\Windows.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Fortnite\Engine\FCurlHTTPRequest\Source\FCurlHTTPRequest.cpp" />
     <ClCompile Include="Fortnite\Engine\UObject\Source\UObject.cpp" />
@@ -218,12 +220,14 @@
     <ClCompile Include="SDK\FortniteUI_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Asteria\External\Header\External.h" />
     <ClInclude Include="Asteria\Finder\Header\Finder.h" />
     <ClInclude Include="Asteria\Globals.h" />
     <ClInclude Include="Asteria\Holder.h" />
     <ClInclude Include="Asteria\Socket\Client\Header\Client.h" />
     <ClInclude Include="Asteria\Socket\Detection\Enum\Detection.h" />
     <ClInclude Include="Asteria\Socket\Encryption\Header\Encryption.h" />
+    <ClInclude Include="Asteria\Windows\Header\Windows.h" />
     <ClInclude Include="Fortnite\Engine\FCurlHTTPRequest\Header\FCurlHTTPRequest.h" />
     <ClInclude Include="Fortnite\Engine\UObject\Header\UObject.h" />
     <ClInclude Include="Fortnite\FortniteGame\FortPlayerController\Header\FortPlayerController.h" />

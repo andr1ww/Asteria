@@ -8,6 +8,7 @@ namespace Asteria::Socket::Detections
         ProcessEventFlaggedFunction,
         D3D11CreateDeviceAndSwapChainFlagged,
         RuntimeMemoryTampered,
+        LDRLoadDLLFlagged,
         ExternalDetection
     };
 }

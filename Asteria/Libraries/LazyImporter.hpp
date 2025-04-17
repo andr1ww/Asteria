@@ -27,8 +27,13 @@
 #ifndef LAZY_IMPORTER_HPP
 #define LAZY_IMPORTER_HPP
 
-
 #define LI_FN(name) ::li::detail::lazy_function<LAZY_IMPORTER_KHASH(#name), decltype(&name)>()
+
+#ifdef _DEBUG
+#define LI_FN_CACHED(name) name
+#else
+#define LI_FN_CACHED(name) LI_FN(name).cached()
+#endif
 
 #define LI_FN_DEF(name) ::li::detail::lazy_function<LAZY_IMPORTER_KHASH(#name), name>()
 
@@ -68,7 +73,7 @@
 #define LAZY_IMPORTER_STRINGIZE_EXPAND(x) LAZY_IMPORTER_STRINGIZE(x)
 
 #define LAZY_IMPORTER_KHASH(str) ::li::detail::khash(str, \
-    ::li::detail::khash_impl( __TIME__ __DATE__ LAZY_IMPORTER_STRINGIZE_EXPAND(__LINE__) LAZY_IMPORTER_STRINGIZE_EXPAND(__COUNTER__), 2166136261 ))
+    ::li::detail::khash_impl( __TIME__ __DATE__/* LAZY_IMPORTER_STRINGIZE_EXPAND(__LINE__) LAZY_IMPORTER_STRINGIZE_EXPAND(__COUNTER__)*/, 2166136261 ))
 
 namespace li {
     namespace detail {
@@ -443,12 +448,14 @@ namespace li {
 
             LAZY_IMPORTER_FORCEINLINE safe_module_enumerator() noexcept
                 : safe_module_enumerator(ldr_data_entry())
-            {}
+            {
+            }
 
             LAZY_IMPORTER_FORCEINLINE
                 safe_module_enumerator(const detail::win::LDR_DATA_TABLE_ENTRY_T* ldr) noexcept
                 : value(ldr->load_order_next()), head(value)
-            {}
+            {
+            }
 
             LAZY_IMPORTER_FORCEINLINE void reset() noexcept
             {
@@ -469,7 +476,8 @@ namespace li {
 
             LAZY_IMPORTER_FORCEINLINE unsafe_module_enumerator() noexcept
                 : value(ldr_data_entry())
-            {}
+            {
+            }
 
             LAZY_IMPORTER_FORCEINLINE void reset() noexcept { value = ldr_data_entry(); }
 

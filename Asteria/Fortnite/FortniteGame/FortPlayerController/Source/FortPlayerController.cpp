@@ -36,9 +36,9 @@ void FortniteGame::FortPlayerController::Setup()
         reinterpret_cast<void**>(&PerformBuildingEditInteractionOG)
     );
     MH_CreateHook(
-        (LPVOID)Asteria::Holder::AFortPlayerController_EditSelect,
-        &EditSelectHook,
-        reinterpret_cast<void**>(&EditSelectOG)
-    );
+      (LPVOID)Asteria::Holder::AFortPlayerController_EditSelect,
+      &EditSelectHook,
+      reinterpret_cast<void**>(&EditSelectOG)
+  );
     MH_EnableHook(MH_ALL_HOOKS);
 }

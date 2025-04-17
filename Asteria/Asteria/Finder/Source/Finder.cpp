@@ -2,7 +2,7 @@
 
 uint64_t Asteria::Finder::FindRequestExit()
 {
-	auto StringRef = Memcury::Scanner::FindStringRef(L"Memory pools allocations failed, exiting...\n");
+	auto StringRef = Memcury::Scanner::FindStringRef(skCrypt(L"Memory pools allocations failed, exiting...\n").decrypt());
 
 	if (StringRef.IsValid())
 		return StringRef.ScanFor({ Memcury::ASM::CALL }, true, 1).RelativeOffset(1).Get();
@@ -12,7 +12,7 @@ uint64_t Asteria::Finder::FindRequestExit()
 
 uint64_t Asteria::Finder::FindUnsafeEnvironment()
 {
-	auto StringRef = Memcury::Scanner::FindStringRef(L"UnsafeEnvironment_Title");
+	auto StringRef = Memcury::Scanner::FindStringRef(skCrypt(L"UnsafeEnvironment_Title").decrypt());
 
 	if (StringRef.IsValid())
 	{

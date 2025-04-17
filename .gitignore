@@ -49,6 +49,12 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+*.tlog
+*.obj
+*.lastbuildstate
+*.pdb
+*.iobj
+
 # Mono auto generated files
 mono_crash.*
 

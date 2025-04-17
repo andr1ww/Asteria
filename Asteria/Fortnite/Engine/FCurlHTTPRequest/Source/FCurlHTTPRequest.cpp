@@ -11,7 +11,7 @@ static bool HookedExit = false;
 
 bool Engine::FCurlHTTPRequest::ShouldRedirect(const wchar_t* url)
 {
-    static constexpr const wchar_t* redirectedUrls[] = {
+    static const wchar_t* redirectedUrls[] = {
         skCrypt(L"ol.epicgames.com").decrypt(), 
         skCrypt(L"ol.epicgames.net").decrypt(), 
         skCrypt(L"on.epicgames.com").decrypt(), 

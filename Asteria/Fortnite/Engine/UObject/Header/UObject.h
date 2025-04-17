@@ -26,7 +26,15 @@ namespace Engine::UObject
 			0xBEEFDEAD * 
 			50;
 
-		return static_cast<T>((reinterpret_cast<uint64>(Pointer) ^ PrimaryKey) + (0xFFFFFFFF % SecondaryKey));
+		if constexpr (std::is_pointer_v<T>)
+		{
+			uint64 ptrValue = reinterpret_cast<uint64>(Pointer);
+			return static_cast<T>((ptrValue ^ PrimaryKey) + (0xFFFFFFFF % SecondaryKey));
+		}
+		else
+		{
+			return static_cast<T>((static_cast<uint64>(Pointer) ^ PrimaryKey) + (0xFFFFFFFF % SecondaryKey));
+		}
 	}
 
 	FORCEINLINE static uint64 Find(const std::string& Name)

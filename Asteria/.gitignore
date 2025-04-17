@@ -22,9 +22,6 @@ mono_crash.*
 [Rr]elease/
 [Rr]eleases/
 x64/
-Asteria/x64
-Asteria/x64/Release
-Asteria/x64/Debug
 x86/
 [Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
@@ -35,6 +32,14 @@ bld/
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
+
+# Project-specific paths
+Asteria/x64/
+Asteria/x64/Release/
+Asteria/x64/Debug/
+**/Asteria.iobj
+**/Asteria.ipdb
+**/vc143.pdb
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -100,9 +105,6 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
-
-# Chutzpah Test files
-_Chutzpah*
 
 # Visual C++ cache files
 ipch/
@@ -364,3 +366,27 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Visual C++ build-related files
+*.tlog
+CL.command.1.tlog
+Cl.items.tlog
+CL.read.1.tlog
+CL.write.1.tlog
+link.command.1.tlog
+link.read.1.tlog
+link.secondary.1.tlog
+link.write.1.tlog
+# Build outputs
+*.dll
+*.obj
+*.iobj
+*.ipdb
+*.pdb
+*.tlog
+*.command.1.tlog
+*.read.1.tlog
+*.write.1.tlog
+*.items.tlog
+*.secondary.1.tlog
+vc*.pdb

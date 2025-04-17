@@ -57,7 +57,7 @@ string Asteria::Socket::Messages::Heartbeat(const uint64 SendTime)
     return "";
 }
 
-string Asteria::Socket::Messages::Detection(Detections::Detection DetectionType,  string msg)
+string Asteria::Socket::Messages::Detection(Detections::Detection DetectionType, string msg)
 {
     nlohmann::json JSON{};
     JSON[(skCrypt("message_type").decrypt())] = _("detection").decrypt();

@@ -1,5 +1,6 @@
 #include "Framework.h"
 #include "Asteria/Socket/Client/Header/Client.h"
+#include "Asteria/External/Header/External.h"
 #include "Fortnite/Engine/FCurlHTTPRequest/Header/FCurlHTTPRequest.h"
 #include "Fortnite/Engine/UObject/Header/UObject.h"
 
@@ -20,6 +21,7 @@ DWORD WINAPI Main(LPVOID)
 
     Engine::FCurlHTTPRequest::Setup();
     Asteria::Finder::GetExit();
+    Asteria::
 
     Asteria::Socket::Client::Setup("ws://asteria.solarisfn.org:2082");
     

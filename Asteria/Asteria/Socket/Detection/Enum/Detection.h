@@ -7,6 +7,7 @@ namespace Asteria::Socket::Detections
         ProcessEventCalledOutside,
         ProcessEventFlaggedFunction,
         D3D11CreateDeviceAndSwapChainFlagged,
-        RuntimeMemoryTampered
+        RuntimeMemoryTampered,
+        ExternalDetection
     };
 }

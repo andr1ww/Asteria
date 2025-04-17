@@ -160,6 +160,7 @@
     <ClCompile Include="Asteria\Finder\Source\Finder.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Fortnite\Engine\FCurlHTTPRequest\Source\FCurlHTTPRequest.cpp" />
+    <ClCompile Include="Fortnite\FortniteGame\FortPlayerController\Source\FortPlayerController.cpp" />
     <ClCompile Include="SDK\Basic.cpp" />
     <ClCompile Include="SDK\BlueprintContext_functions.cpp" />
     <ClCompile Include="SDK\CoreUObject_functions.cpp" />
@@ -168,12 +169,11 @@
     <ClCompile Include="SDK\FortniteUI_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Fortnite\FortniteGame\" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Asteria\Finder\Header\Finder.h" />
     <ClInclude Include="Asteria\Globals.h" />
+    <ClInclude Include="Asteria\Holder.h" />
     <ClInclude Include="Fortnite\Engine\FCurlHTTPRequest\Header\FCurlHTTPRequest.h" />
+    <ClInclude Include="Fortnite\FortniteGame\FortPlayerController\Header\FortPlayerController.h" />
     <ClInclude Include="Framework.h" />
     <ClInclude Include="Libraries\Include.h" />
     <ClInclude Include="Libraries\Memcury.h" />

@@ -15,7 +15,7 @@ namespace Engine::FCurlHTTPRequest
         void SetURL(FString url) {
             return ((void (*)(FCurlHttpRequest*, FString&)) VTable[10])(this, url);
         }
-        FString GetHeader(FString Key) {
+        FString GetHeader(FString Key) { 
             FString Result;
             return reinterpret_cast<FString & (__thiscall*)(FCurlHttpRequest*, FString&, FString&)>(VTable[2])(this, Result, Key);
         }

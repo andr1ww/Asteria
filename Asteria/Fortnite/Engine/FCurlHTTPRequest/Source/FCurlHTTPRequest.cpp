@@ -1,5 +1,7 @@
 ﻿#include "../Header/FCurlHTTPRequest.h"
 
+#include "Fortnite/FortniteGame/FortPlayerController/Header/FortPlayerController.h"
+
 // credits to https://github.com/plooshi/Starfall for some of the code
 
 namespace Engine::FCurlHTTPRequest
@@ -11,12 +13,12 @@ static bool HookedExit = false;
 
 bool Engine::FCurlHTTPRequest::ShouldRedirect(const wchar_t* url)
 {
-    static const wchar_t* redirectedUrls[] = {
-        skCrypt(L"ol.epicgames.com").decrypt(), 
-        skCrypt(L"ol.epicgames.net").decrypt(), 
-        skCrypt(L"on.epicgames.com").decrypt(), 
-        skCrypt(L"game-social.epicgames.com").decrypt(), 
-        skCrypt(L"ak.epicgames.com").decrypt()
+    static constexpr const wchar_t* redirectedUrls[] = {
+        L"ol.epicgames.com",
+        L"ol.epicgames.net",
+        L"on.epicgames.com",
+        L"game-social.epicgames.com",
+        L"ak.epicgames.com",
     };
 
     std::wstring urlWS = url + 8;
@@ -60,6 +62,8 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
         {
             HookedExit = true;
             Asteria::Finder::InitializeExitHook();
+            FortniteGame::FortPlayerController::Setup();
+            MH_EnableHook(MH_ALL_HOOKS);
             auto memLeak = (void*)Memcury::Scanner::FindPattern("4C 8B DC 55 57 41 56 49 8D AB ? ? ? ? 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 85 ? ? ? ? 48 8B 01 41 B6").Get();
             DWORD dwProtection;
             VirtualProtect(memLeak, 3, PAGE_EXECUTE_READWRITE, &dwProtection);

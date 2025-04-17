@@ -38,6 +38,7 @@
 #include <Psapi.h>
 #include <detours.h>
 #include "SDK.hpp"
+#include <shellapi.h>
 using namespace SDK;
 
 // asteria include

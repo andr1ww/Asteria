@@ -36,6 +36,15 @@
     <ClCompile Include="SDK\FortniteUI_functions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Asteria\Finder\Source\Finder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fortnite\Engine\FCurlHTTPRequest\Source\FCurlHTTPRequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fortnite\FortniteGame\FortPlayerController\Source\FortPlayerController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework.h">
@@ -65,5 +74,26 @@
     <ClInclude Include="Fortnite\Engine\FCurlHTTPRequest\Header\FCurlHTTPRequest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Asteria\Finder\Header\Finder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Asteria\Globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Asteria\Holder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Fortnite\FortniteGame\FortPlayerController\Header\FortPlayerController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\Memcury.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\skCrypter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

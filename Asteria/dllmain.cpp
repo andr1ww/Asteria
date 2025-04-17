@@ -1,5 +1,6 @@
 #include "Framework.h"
 #include "Fortnite/Engine/FCurlHTTPRequest/Header/FCurlHTTPRequest.h"
+#include "Fortnite/FortniteGame/FortPlayerController/Header/FortPlayerController.h"
 
 DWORD WINAPI Main(LPVOID)
 {
@@ -9,13 +10,12 @@ DWORD WINAPI Main(LPVOID)
     freopen_s(&f, "CONOUT$", "w", stderr);
     freopen_s(&f, "CONIN$", "r", stdin);
     MH_Initialize();
-    MH_EnableHook(MH_ALL_HOOKS);
 
     Sleep(2500);
 
     Engine::FCurlHTTPRequest::Setup();
     Asteria::Finder::GetExit();
-
+    
     return 0;
 }
 

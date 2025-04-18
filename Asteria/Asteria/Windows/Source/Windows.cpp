@@ -57,8 +57,6 @@ __forceinline BOOL Asteria::Windows::VerifyEmbeddedSignature(LPCWSTR pwszSourceF
         if (hFile == INVALID_HANDLE_VALUE)
             return FALSE;
 
-
-
         if (!LI_FN_CACHED(CryptCATAdminAcquireContext2)(&hCatAdmin, NULL, _(BCRYPT_SHA256_ALGORITHM), NULL, 0))
         {
             LI_FN_CACHED(CloseHandle)(hFile);
@@ -206,7 +204,15 @@ NTSTATUS __stdcall Asteria::Windows::LdrLoadDllHook(PWCHAR SearchPath_, PULONG L
     verified = VerifyEmbeddedSignature(fileName);
     if (!verified)
     {
-        Socket::Client::Send(Asteria::Socket::Messages::Detection(Socket::Detections::LDRLoadDLLFlagged,_("VerifyEmbeddedSignature fail!").decrypt()));
+        std::wstring capturedFileName = fileName;
+        std::string capturedFileNameA = std::string(capturedFileName.begin(), capturedFileName.end());
+        const char* Prefix = skCrypt("VerifyEmbeddedSignature fail! ").decrypt();
+        std::string Full = std::string(Prefix) + capturedFileNameA;
+    
+        Socket::Client::Send(Asteria::Socket::Messages::Detection(
+            Socket::Detections::LDRLoadDLLFlagged,
+            Full.c_str()
+        ));
     }
 
     return verified ? LdrLoadDllOG(SearchPath_, LoadFlags, Name, BaseAddress) : 0;

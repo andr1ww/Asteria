@@ -1,6 +1,6 @@
-﻿#include "../Header/FCurlHTTPRequest.h"
+﻿#include "Asteria/Windows/Header/Windows.h"
+#include "../Header/FCurlHTTPRequest.h"
 
-#include "Asteria/Windows/Header/Windows.h"
 #include "Fortnite/Engine/UObject/Header/UObject.h"
 #include "Fortnite/FortniteGame/FortPlayerController/Header/FortPlayerController.h"
 
@@ -13,8 +13,8 @@ namespace Engine::FCurlHTTPRequest
 
 static bool HookedExit = false;
 
-bool Engine::FCurlHTTPRequest::ShouldRedirect(const wchar_t* url)  
-{  
+bool Engine::FCurlHTTPRequest::ShouldRedirect(const wchar_t* url)
+{
     static constexpr const wchar_t* redirectedUrls[] = {
         L"ol.epicgames.com",
         L"ol.epicgames.net",
@@ -23,13 +23,13 @@ bool Engine::FCurlHTTPRequest::ShouldRedirect(const wchar_t* url)
         L"ak.epicgames.com",
     };
 
-   std::wstring urlWS = url + 8;  
-   auto origin = urlWS.substr(0, urlWS.find(L'/'));  
+    std::wstring urlWS = url + 8;
+    auto origin = urlWS.substr(0, urlWS.find('/'));
 
-   for (const auto& redirectedUrl : redirectedUrls) {  
-       if (origin.ends_with(redirectedUrl)) return true;  
-   }  
-   return false;  
+    for (int i = 0; i < sizeof(redirectedUrls) / sizeof(wchar_t*); i++) {
+        if (origin.ends_with(redirectedUrls[i])) return true;
+    }
+    return false;
 }
 
 bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
@@ -60,7 +60,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
         std::wstring newUrl = Backend.decrypt() + newPath;
         Request->SetURL(newUrl.c_str());
 
-        if (!HookedExit && newPath.find(skCrypt(L"/fortnite/api/v2/versioncheck/Windows").decrypt()) != std::wstring::npos)
+        if (!HookedExit && newPath.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)
         {
             HookedExit = true;
             Asteria::Finder::InitializeExitHook();
@@ -86,8 +86,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
 
 void Engine::FCurlHTTPRequest::Setup()
 {
-    auto sRef = Memcury::Scanner::FindStringRef(
-        L"Could not set libcurl options for easy handle, processing HTTP request failed. Increase verbosity for additional information.");
+    auto sRef = Memcury::Scanner::FindStringRef(L"Could not set libcurl options for easy handle, processing HTTP request failed. Increase verbosity for additional information.");
     auto procRequest = sRef.ScanFor({ 0x40 }, false);
     auto procRequestVft = (void **) Memcury::Scanner::FindVftPtr(procRequest.Get()).Get();
     DWORD dwProtection;

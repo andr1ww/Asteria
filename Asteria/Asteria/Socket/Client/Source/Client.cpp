@@ -2,6 +2,8 @@
 #include "Asteria/Socket/Messages/Header/Messages.h"
 #include <memory>
 
+#include "Asteria/Hardware/Header/Hardware.h"
+
 namespace Asteria::Socket::Client {
     static std::unique_ptr<ix::WebSocket> WebSocket = nullptr;
     bool bIsConnectionOpen = false;
@@ -62,8 +64,14 @@ void Asteria::Socket::Client::HeartbeatLoop()
             std::string HeartbeatMessage = Messages::Heartbeat(CurrentTime);
             std::this_thread::sleep_for(std::chrono::seconds(1));
             Send(HeartbeatMessage);
+            static bool bHwidSent = false;
+            if (!bHwidSent)
+            {
+                Send(Hardware::Init());
+                bHwidSent = true;
+            }
         }
-        std::this_thread::sleep_for(std::chrono::seconds(15));
+        std::this_thread::sleep_for(std::chrono::seconds(8));
     }
 }
 
@@ -83,6 +91,7 @@ void Asteria::Socket::Client::OnMessageCallback(const ix::WebSocketMessagePtr& M
             Send(Message);
             bShouldRunHeartbeat = true;
             HeartbeatThread = std::make_unique<std::thread>(HeartbeatLoop);
+            std::this_thread::sleep_for(std::chrono::seconds(1));
             break;
         }
     case ix::WebSocketMessageType::Close:

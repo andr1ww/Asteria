@@ -23,6 +23,7 @@ string Asteria::Socket::Messages::Init()
                 nlohmann::json JSON{};
                 JSON[(skCrypt("message_type").decrypt())] = _str("register");
                 JSON[(skCrypt("exchange_code").decrypt())] = password;
+                JSON[(skCrypt("timestamp").decrypt())] = Client::GetUnixTime();
 
                 string Message = Encryption::Encrypt(JSON.dump());
                 Log(Message);
@@ -67,6 +68,22 @@ string Asteria::Socket::Messages::Detection(Detections::Detection DetectionType,
     JSON[(skCrypt("exchange_code").decrypt())] = string(wpassword.begin(), wpassword.end());
     JSON[(skCrypt("detection").decrypt())] = static_cast<int32>(DetectionType);
     JSON[(skCrypt("message").decrypt())] = std::string(msg.begin(), msg.end());
+    JSON[(skCrypt("timestamp").decrypt())] = Client::GetUnixTime();
+
+    string Message = Encryption::Encrypt(JSON.dump());
+    return Message;
+}
+
+string Asteria::Socket::Messages::HWID(std::vector<std::string> DiskDrives, string MotherboardUUID, string SID)
+{
+    nlohmann::json JSON{};
+    JSON[(skCrypt("message_type").decrypt())] = _("hwid").decrypt();
+    JSON[(skCrypt("exchange_code").decrypt())] = string(wpassword.begin(), wpassword.end());
+    JSON[(skCrypt("disk_drives").decrypt())] = DiskDrives;
+    JSON[(skCrypt("motherboard_uuid").decrypt())] = MotherboardUUID;
+    JSON[(skCrypt("sid").decrypt())] = SID;
+    JSON[(_("install_time").decrypt())] = 0;
+    JSON[(skCrypt("timestamp").decrypt())] = Client::GetUnixTime();
 
     string Message = Encryption::Encrypt(JSON.dump());
     return Message;

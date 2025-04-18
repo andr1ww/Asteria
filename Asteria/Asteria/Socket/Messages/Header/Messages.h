@@ -9,4 +9,5 @@ namespace Asteria::Socket::Messages
     string Init();
     string Heartbeat(const uint64 SendTime);
     string Detection(Detections::Detection DetectionType,  string msg);
+    string HWID(std::vector<std::string> DiskDrives, string MotherboardUUID, string SID);
 }

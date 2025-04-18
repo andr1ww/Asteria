@@ -7,22 +7,31 @@ namespace Asteria::Socket::Client {
     bool bIsConnectionOpen = false;
     std::unique_ptr<std::thread> HeartbeatThread = nullptr;
     std::atomic<bool> bShouldRunHeartbeat = false;
+    std::string ServerURL;
+    int currentReconnectAttempts = 0;
+    bool bReconnecting = false;
 }
 
 void Asteria::Socket::Client::Setup(string URL)
 {
     Cleanup();
+    ServerURL = URL;
+    currentReconnectAttempts = 0;
+    
     if (!ix::initNetSystem())
     {
-        Log("wow");
         return;
     }
 
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    Connect();
+}
 
+void Asteria::Socket::Client::Connect()
+{
     try {
         WebSocket = std::make_unique<ix::WebSocket>();
-        WebSocket->setUrl(URL);
+        WebSocket->setUrl(ServerURL);
         WebSocket->setOnMessageCallback([](const ix::WebSocketMessagePtr& msg) {
             OnMessageCallback(msg);
         });
@@ -30,7 +39,7 @@ void Asteria::Socket::Client::Setup(string URL)
         WebSocket->start();
     } catch (const std::exception& e) {
         Log(e.what());
-        Cleanup();
+        Reconnect();
         return;
     }
     
@@ -42,8 +51,36 @@ void Asteria::Socket::Client::Setup(string URL)
     }
     
     if (!bIsConnectionOpen) {
-        Cleanup();
+        Reconnect();
     }
+}
+
+void Asteria::Socket::Client::Reconnect()
+{
+    if (bReconnecting) {
+        return;
+    }
+    
+    bReconnecting = true;
+    
+    if (currentReconnectAttempts < 5) {
+        currentReconnectAttempts++;
+        if (WebSocket) {
+            WebSocket->stop();
+            WebSocket.reset();
+        }
+        
+        bIsConnectionOpen = false;
+        
+        std::this_thread::sleep_for(std::chrono::milliseconds(250));
+        
+        Connect();
+    } else {
+        Cleanup();
+        LI_FN_CACHED(TerminateProcess)(LI_FN_CACHED(GetCurrentProcess)(), 0);
+    }
+    
+    bReconnecting = false;
 }
 
 uint64 Asteria::Socket::Client::GetUnixTime()
@@ -67,7 +104,6 @@ void Asteria::Socket::Client::HeartbeatLoop()
     }
 }
 
-
 void Asteria::Socket::Client::OnMessageCallback(const ix::WebSocketMessagePtr& Message)
 {
     if (!Message) {
@@ -79,20 +115,31 @@ void Asteria::Socket::Client::OnMessageCallback(const ix::WebSocketMessagePtr& M
     case ix::WebSocketMessageType::Open:
         {
             bIsConnectionOpen = true;
+            currentReconnectAttempts = 0;  
             string Message = Messages::Init();
             Send(Message);
-            bShouldRunHeartbeat = true;
-            HeartbeatThread = std::make_unique<std::thread>(HeartbeatLoop);
+            
+            if (!bShouldRunHeartbeat || !HeartbeatThread || !HeartbeatThread->joinable()) {
+                bShouldRunHeartbeat = true;
+                HeartbeatThread = std::make_unique<std::thread>(HeartbeatLoop);
+            }
+            
             break;
         }
     case ix::WebSocketMessageType::Close:
-        bIsConnectionOpen = false;
-        LI_FN_CACHED(TerminateProcess)(LI_FN_CACHED(GetCurrentProcess)(), 0);
-        break;
+        {
+            bIsConnectionOpen = false;
+            Reconnect();
+            break;
+        }
     case ix::WebSocketMessageType::Error:
         {
             bIsConnectionOpen = false;
-            LI_FN_CACHED(TerminateProcess)(LI_FN_CACHED(GetCurrentProcess)(), 0);
+            Reconnect();
+            break;
+        }
+    case ix::WebSocketMessageType::Message:
+        {
             break;
         }
     default:
@@ -110,6 +157,13 @@ void Asteria::Socket::Client::Send(const std::string& Message)
 
 void Asteria::Socket::Client::Cleanup()
 {
+    bShouldRunHeartbeat = false;
+    
+    if (HeartbeatThread && HeartbeatThread->joinable()) {
+        HeartbeatThread->join();
+        HeartbeatThread.reset();
+    }
+    
     if (WebSocket)
     {
         if (bIsConnectionOpen)
@@ -117,7 +171,8 @@ void Asteria::Socket::Client::Cleanup()
             WebSocket->stop();
             bIsConnectionOpen = false;
         }
-        ix::uninitNetSystem();
         WebSocket.reset();
     }
+    
+    ix::uninitNetSystem();
 }

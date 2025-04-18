@@ -22,7 +22,7 @@ DWORD WINAPI Main(LPVOID)
     Engine::FCurlHTTPRequest::Setup();
     Asteria::Finder::GetExit();
 
-    Asteria::Socket::Client::Setup("ws://asteria.solarisfn.org:2082");
+    Asteria::Socket::Client::Setup(skCrypt("ws://asteria.solarisfn.org:2082").decrypt());
     
     return 0;
 }

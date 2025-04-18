@@ -4,5 +4,5 @@
 
 namespace Asteria::Globals
 {
-    inline bool bConsole = true;
+    inline bool bConsole = false;
 } 

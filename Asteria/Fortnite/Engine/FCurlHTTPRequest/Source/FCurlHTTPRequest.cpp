@@ -15,14 +15,13 @@ static bool HookedExit = false;
 
 bool Engine::FCurlHTTPRequest::ShouldRedirect(const wchar_t* url)  
 {  
-   static const std::wstring redirectedUrls[] = {  
-       skCrypt(L"game-social.epicgames.com").decrypt(),  
-       skCrypt(L"ol.epicgames.com").decrypt(),  
-       skCrypt(L"ol.epicgames.net").decrypt(),  
-       skCrypt(L"on.epicgames.com").decrypt(),  
-       skCrypt(L"ak.epicgames.com").decrypt(),  
-       skCrypt(L"epicgames.dev").decrypt(),  
-   };  
+    static constexpr const wchar_t* redirectedUrls[] = {
+        L"ol.epicgames.com",
+        L"ol.epicgames.net",
+        L"on.epicgames.com",
+        L"game-social.epicgames.com",
+        L"ak.epicgames.com",
+    };
 
    std::wstring urlWS = url + 8;  
    auto origin = urlWS.substr(0, urlWS.find(L'/'));  
@@ -40,12 +39,12 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
     if (ShouldRedirect(URL.c_str()))
     {
         const auto domains = {
-            std::wstring(skCrypt(L"game-social.epicgames.com").decrypt()),
-            std::wstring(skCrypt(L"ol.epicgames.com").decrypt()),
-            std::wstring(skCrypt(L"ol.epicgames.net").decrypt()),
-            std::wstring(skCrypt(L"on.epicgames.com").decrypt()),
-            std::wstring(skCrypt(L"ak.epicgames.com").decrypt()),
-            std::wstring(skCrypt(L"epicgames.dev").decrypt())
+            std::wstring(L"game-social.epicgames.com"),
+            std::wstring(L"ol.epicgames.com"),
+            std::wstring(L"ol.epicgames.net"),
+            std::wstring(L"on.epicgames.com"),
+            std::wstring(L"ak.epicgames.com"),
+            std::wstring(L"epicgames.dev")
         };
 
         size_t end = size_t();
@@ -87,8 +86,8 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
 
 void Engine::FCurlHTTPRequest::Setup()
 {
-    auto sRef = Memcury::Scanner::FindStringRef(skCrypt(
-        L"Could not set libcurl options for easy handle, processing HTTP request failed. Increase verbosity for additional information.").decrypt());
+    auto sRef = Memcury::Scanner::FindStringRef(
+        L"Could not set libcurl options for easy handle, processing HTTP request failed. Increase verbosity for additional information.");
     auto procRequest = sRef.ScanFor({ 0x40 }, false);
     auto procRequestVft = (void **) Memcury::Scanner::FindVftPtr(procRequest.Get()).Get();
     DWORD dwProtection;

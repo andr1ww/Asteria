@@ -12,8 +12,6 @@
             <Procedure MapAddress="Asteria::Socket::Messages::Init(void)" Options="0" />
             <Procedure MapAddress="Asteria::Socket::Messages::Detection(enum Asteria::Socket::Detections::Detection,class std::basic_string&lt;char,struct std::char_traits&lt;char&gt;,class std::allocator&lt;char&gt; &gt;)" Options="0" />
             <Procedure MapAddress="Asteria::Socket::Messages::Heartbeat(unsigned __int64)" Options="0" />
-            <Procedure MapAddress="Asteria::Socket::Client::Reconnect(void)" Options="0" />
-            <Procedure MapAddress="Asteria::Socket::Client::Connect(void)" Options="0" />
         </Procedures>
         <Objects />
     </Protection>

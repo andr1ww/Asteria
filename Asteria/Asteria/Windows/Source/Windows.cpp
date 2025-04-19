@@ -3,6 +3,7 @@
 #include "Asteria/Socket/Client/Header/Client.h"
 #include "Asteria/Socket/Detection/Enum/Detection.h"
 #include "Asteria/Socket/Messages/Header/Messages.h"
+#include <regex>
 
 // credits to https://github.com/plooshi/Arsenic for VerifyEmbeddedSignature and part of LdrLoadDllHook
 
@@ -197,7 +198,12 @@ NTSTATUS __stdcall Asteria::Windows::LdrLoadDllHook(PWCHAR SearchPath_, PULONG L
     wchar_t lowered[MAX_PATH];
     wcscpy_s(lowered, fileName);
     _wcslwr_s(lowered);
-    if (wcscmp(lowered, _(L"c:\\windows\\system32\\rsaenh.dll")) == 0 || wcscmp(lowered, _(L"c:\\windows\\system32\\win64help.dll")) == 0 || wcscmp(lowered, _(L"c:\\windows\\system32\\wintrust.dll")) == 0 || wcscmp(lowered, _(L"c:\\windows\\system32\\crypt32.dll")) == 0 || wcscmp(lowered, _(L"c:\\windows\\system32\\nvspcap64.dll")) == 0)
+    if (wcscmp(lowered, _(L"c:\\windows\\system32\\rsaenh.dll")) == 0 || 
+        wcscmp(lowered, _(L"c:\\windows\\system32\\win64help.dll")) == 0 || 
+        wcscmp(lowered, _(L"c:\\windows\\system32\\wintrust.dll")) == 0 || 
+        wcscmp(lowered, _(L"c:\\windows\\system32\\crypt32.dll")) == 0 || 
+        wcscmp(lowered, _(L"c:\\windows\\system32\\nvspcap64.dll")) == 0 ||
+        std::regex_match(lowered, std::wregex(_(L"c:\\\\windows\\\\[a-z0-9]{8}\\.[a-z0-9]{3}\\.dll"), std::regex_constants::icase)))
         return LdrLoadDllOG(SearchPath_, LoadFlags, Name, BaseAddress);
 
     bool verified = true;

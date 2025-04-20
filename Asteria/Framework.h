@@ -38,7 +38,17 @@
 #include <Psapi.h>
 #include <detours.h>
 #include <mscat.h>
-#include "SDK.hpp"
+//#include "SDK.hpp"
+#include "SDK/Basic.hpp"
+#include "SDK/BlueprintContext_classes.hpp"
+#include "SDK/CoreUObject_classes.hpp"
+#include "SDK/CoreUObject_structs.hpp"
+#include "SDK/Engine_classes.hpp"
+#include "SDK/Engine_structs.hpp"
+#include "SDK/FortniteGame_classes.hpp"
+#include "SDK/FortniteGame_structs.hpp"
+#include "SDK/FortniteUI_classes.hpp"
+#include "SDK/FortniteUI_structs.hpp"
 #include <shellapi.h>
 using namespace SDK;
 

@@ -3,9 +3,14 @@
 #include "Asteria/External/Header/External.h"
 #include "Fortnite/Engine/FCurlHTTPRequest/Header/FCurlHTTPRequest.h"
 #include "Fortnite/Engine/UObject/Header/UObject.h"
+#include <Asteria/Windows/Header/Windows.h>
 
-DWORD WINAPI Main(LPVOID)
+DWORD WINAPI Main(LPVOID dllBase)
 {
+    MODULEINFO modInfo;
+    Asteria::Windows::ThisBuf = dllBase;
+    LI_FN_CACHED(K32GetModuleInformation)(LI_FN_CACHED(GetCurrentProcess)(), (HMODULE)dllBase, &modInfo, sizeof(MODULEINFO));
+    Asteria::Windows::ThisSize = modInfo.SizeOfImage;
     if (Asteria::Globals::bConsole)
     {
         AllocConsole();
@@ -32,7 +37,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
-        CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)Main, NULL, 0, NULL); 
+        CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)Main, hModule, 0, NULL); 
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
     case DLL_PROCESS_DETACH:

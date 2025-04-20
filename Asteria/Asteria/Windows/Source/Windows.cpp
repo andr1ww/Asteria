@@ -5,7 +5,7 @@
 #include "Asteria/Socket/Messages/Header/Messages.h"
 #include <regex>
 
-// credits to https://github.com/plooshi/Arsenic for VerifyEmbeddedSignature and part of LdrLoadDllHook
+// credits to https://github.com/plooshi/Arsenic for VerifyEmbeddedSignature and part of LdrLoadDllHook, and FlushInstructionCacheHook
 
 __forceinline BOOL Asteria::Windows::VerifyEmbeddedSignature(LPCWSTR pwszSourceFile)
 {
@@ -224,7 +224,61 @@ NTSTATUS __stdcall Asteria::Windows::LdrLoadDllHook(PWCHAR SearchPath_, PULONG L
     return verified ? LdrLoadDllOG(SearchPath_, LoadFlags, Name, BaseAddress) : 0;
 }
 
+
+BOOL Asteria::Windows::FlushInstructionCacheHook(HANDLE hProcess, LPCVOID lpBaseAddress, SIZE_T dwSize)
+{
+    auto Ret = _ReturnAddress();
+    if (uint64_t(Ret) < uint64_t(ThisBuf) || uint64_t(Ret) >= uint64_t(ThisBuf) + ThisSize)
+    {
+        Socket::Client::Send(Asteria::Socket::Messages::Detection(
+            Socket::Detections::RuntimeMemoryTampered,
+            skCrypt("FlushInstructionCache detected invalid access!").decrypt()
+        ));
+        return FALSE;
+    }
+
+    return FlushInstructionCacheOG(hProcess, lpBaseAddress, dwSize);
+}
+
+typedef struct _VECTOR_HANDLER_ENTRY {
+    LIST_ENTRY ListEntry;
+    PLONG64 pRefCount;
+    DWORD unk_0;
+    DWORD pad_0;
+    PVOID EncodedHandler;
+} VECTOR_HANDLER_ENTRY, * PVECTOR_HANDLER_ENTRY;
+
+typedef struct _LDRP_VECTOR_HANDLER_LIST {
+    PSRWLOCK LdrpVehLock;
+    LIST_ENTRY LdrpVehList;
+    PSRWLOCK LdrpVchLock;
+    LIST_ENTRY LdrpVchList;
+} LDRP_VECTOR_HANDLER_LIST, * PLDRP_VECTOR_HANDLER_LIST;
+
+void Asteria::Windows::VEHChecker()
+{
+    auto RtlRemoveVectoredExceptionHandler_ = LI_FN_NO_DEF(RtlRemoveVectoredExceptionHandler).get();
+    auto RtlpRemoveVectoredHandler_ = Memcury::Scanner(RtlRemoveVectoredExceptionHandler_).RelativeOffset(3);
+    auto LdrpVectorHandlerList = (_LDRP_VECTOR_HANDLER_LIST*)RtlpRemoveVectoredHandler_.ScanFor({ 0x48, 0x8B, 0xE9 }).RelativeOffset(-4).Get();
+
+    while (true)
+    {
+        LIST_ENTRY* pListHead = &LdrpVectorHandlerList->LdrpVehList;
+
+        for (LIST_ENTRY* pListEntry = pListHead->Flink; pListEntry != pListHead; pListEntry = pListEntry->Flink)
+        {
+            PVECTOR_HANDLER_ENTRY pEntry = CONTAINING_RECORD(pListEntry, VECTOR_HANDLER_ENTRY, ListEntry);
+
+            decltype(RemoveVectoredExceptionHandler) RtlRemoveVectoredExceptionHandler;
+            LI_FN_CACHED(RtlRemoveVectoredExceptionHandler)(pEntry);
+        }
+    }
+
+}
+
 void Asteria::Windows::Setup()
 {
     MH_CreateHook(LI_FN_CACHED(LdrLoadDll), Asteria::Windows::LdrLoadDllHook, (LPVOID*)&Asteria::Windows::LdrLoadDllOG);
+    MH_CreateHook(LI_FN_CACHED(FlushInstructionCache), Asteria::Windows::FlushInstructionCacheHook, (LPVOID*)&Asteria::Windows::FlushInstructionCacheOG); // hooks
+    LI_FN_CACHED(CreateThread)(0, 0, (LPTHREAD_START_ROUTINE)VEHChecker, 0, 0, 0);
 }

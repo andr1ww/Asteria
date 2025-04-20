@@ -35,7 +35,7 @@
 #define LI_FN_CACHED(name) LI_FN(name).cached()
 #endif
 
-#define LI_FN_DEF(name) ::li::detail::lazy_function<LAZY_IMPORTER_KHASH(#name), name>()
+#define LI_FN_NO_DEF(name) ::li::detail::lazy_function<LAZY_IMPORTER_KHASH(#name), void*>()
 
 #define LI_MODULE(name) ::li::detail::lazy_module<LAZY_IMPORTER_KHASH(name)>()
 

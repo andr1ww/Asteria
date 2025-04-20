@@ -228,7 +228,7 @@ NTSTATUS __stdcall Asteria::Windows::LdrLoadDllHook(PWCHAR SearchPath_, PULONG L
 BOOL Asteria::Windows::FlushInstructionCacheHook(HANDLE hProcess, LPCVOID lpBaseAddress, SIZE_T dwSize)
 {
     auto Ret = _ReturnAddress();
-    if (uint64_t(Ret) < uint64_t(ThisBuf) || uint64_t(Ret) >= uint64_t(ThisBuf) + ThisSize)
+    if ((uint64_t(Ret) < uint64_t(ThisBuf) || uint64_t(Ret) >= uint64_t(ThisBuf) + ThisSize) && (uint64_t(Ret) < uint64_t(ImageBase) || uint64_t(Ret) >= uint64_t(ImageBase) + ImageSize))
     {
         Socket::Client::Send(Asteria::Socket::Messages::Detection(
             Socket::Detections::RuntimeMemoryTampered,

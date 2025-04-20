@@ -11,6 +11,12 @@ DWORD WINAPI Main(LPVOID dllBase)
     Asteria::Windows::ThisBuf = dllBase;
     LI_FN_CACHED(K32GetModuleInformation)(LI_FN_CACHED(GetCurrentProcess)(), (HMODULE)dllBase, &modInfo, sizeof(MODULEINFO));
     Asteria::Windows::ThisSize = modInfo.SizeOfImage;
+
+    modInfo = {};
+
+    LI_FN_CACHED(K32GetModuleInformation)(LI_FN_CACHED(GetCurrentProcess)(), (HMODULE)ImageBase, &modInfo, sizeof(MODULEINFO));
+    ImageSize = modInfo.SizeOfImage;
+
     if (Asteria::Globals::bConsole)
     {
         AllocConsole();

@@ -510,7 +510,7 @@ namespace Memcury
                 return _address != address._address;
             }
 
-            auto RelativeOffset(uint32_t offset, uint32_t off2 = 0) -> Address
+            auto RelativeOffset(int32_t offset, uint32_t off2 = 0) -> Address
             {
                 _address = ((_address + offset + 4 + off2) + *(int32_t*)(_address + offset));
                 return *this;
@@ -1046,7 +1046,7 @@ namespace Memcury
             return *this;
         }
 
-        auto RelativeOffset(uint32_t offset, uint32_t off2 = 0) -> Scanner
+        auto RelativeOffset(int32_t offset, uint32_t off2 = 0) -> Scanner
         {
             if (!_address.Get())
             {

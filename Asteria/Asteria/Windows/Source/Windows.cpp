@@ -225,10 +225,27 @@ NTSTATUS __stdcall Asteria::Windows::LdrLoadDllHook(PWCHAR SearchPath_, PULONG L
 }
 
 
+bool IsAddrInLoadedModule(void* addr)
+{
+    auto PEB = (li::detail::win::PEB_T*)__readgsqword(0x60);
+    auto Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+    auto Head = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+
+    do
+    {
+        if (addr >= Entry->DllBase && addr <= Entry->DllBase + Entry->SizeOfImage)
+            return true;
+    } while ((Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)Entry->InLoadOrderLinks.Flink) && Entry != Head);
+
+    return false;
+}
+
+
+
 BOOL Asteria::Windows::FlushInstructionCacheHook(HANDLE hProcess, LPCVOID lpBaseAddress, SIZE_T dwSize)
 {
     auto Ret = _ReturnAddress();
-    if ((uint64_t(Ret) < uint64_t(ThisBuf) || uint64_t(Ret) >= uint64_t(ThisBuf) + ThisSize) && (uint64_t(Ret) < uint64_t(ImageBase) || uint64_t(Ret) >= uint64_t(ImageBase) + ImageSize))
+    if (!IsAddrInLoadedModule(Ret))
     {
         Socket::Client::Send(Asteria::Socket::Messages::Detection(
             Socket::Detections::RuntimeMemoryTampered,

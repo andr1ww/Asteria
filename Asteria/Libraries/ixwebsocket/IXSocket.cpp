@@ -3,6 +3,7 @@
  *  Author: Benjamin Sergeant
  *  Copyright (c) 2017-2018 Machine Zone, Inc. All rights reserved.
  */
+#include "Framework.h"
 
 #include "IXSocket.h"
 

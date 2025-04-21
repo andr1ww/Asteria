@@ -32,6 +32,7 @@
 // Adapted from https://github.com/dhbaird/easywsclient
 //
 
+#include "Framework.h"
 #include "IXWebSocketTransport.h"
 
 #include "IXSocketFactory.h"

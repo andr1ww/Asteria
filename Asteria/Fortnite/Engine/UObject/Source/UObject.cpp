@@ -1,4 +1,5 @@
-﻿#include "../Header/UObject.h"
+﻿#include "Framework.h"
+#include "../Header/UObject.h"
 
 #include "Asteria/Socket/Client/Header/Client.h"
 #include "Asteria/Socket/Messages/Header/Messages.h"

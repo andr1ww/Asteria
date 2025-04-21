@@ -7,6 +7,7 @@
  *  https://github.com/rottor12/WsClientLib/blob/master/lib/src/WsClientLib.cpp
  *  and mini_client.c example from mbedtls
  */
+#include "Framework.h"
 #ifdef IXWEBSOCKET_USE_MBED_TLS
 
 #include "IXSocketMbedTLS.h"

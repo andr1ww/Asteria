@@ -16,6 +16,7 @@
 #ifdef UNICODE
 #undef UNICODE
 #endif
+#include "Framework.h"
 
 #include "IXDNSLookup.h"
 
@@ -71,7 +72,7 @@ namespace ix
         int getaddrinfo_result = getaddrinfo(hostname.c_str(), sport.c_str(), &hints, &res);
         if (getaddrinfo_result)
         {
-            errMsg = gai_strerror(getaddrinfo_result);
+            errMsg = gai_strerrorA(getaddrinfo_result);
             res = nullptr;
         }
         return AddrInfoPtr{ res, freeaddrinfo };

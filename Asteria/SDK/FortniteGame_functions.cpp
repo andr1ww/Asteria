@@ -7,6 +7,7 @@
 */
 
 // Package: FortniteGame
+#include "Framework.h"
 
 #include "Basic.hpp"
 

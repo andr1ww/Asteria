@@ -5,6 +5,7 @@
  *
  *  Adapted from Satori SDK OpenSSL code.
  */
+#include "Framework.h"
 #ifdef IXWEBSOCKET_USE_OPEN_SSL
 
 #include "IXSocketOpenSSL.h"
@@ -14,11 +15,6 @@
 #include <cassert>
 #include <errno.h>
 #include <vector>
-#ifdef _WIN32
-#include <shlwapi.h>
-#else
-#include <fnmatch.h>
-#endif
 #if OPENSSL_VERSION_NUMBER < 0x10100000L
 #include <openssl/x509v3.h>
 #endif

@@ -3,6 +3,7 @@
  *  Author: Benjamin Sergeant
  *  Copyright (c) 2019 Machine Zone, Inc. All rights reserved.
  */
+#include "Framework.h"
 
 #include "IXHttp.h"
 
@@ -145,6 +146,8 @@ namespace ix
                     return std::make_tuple(
                         false, "Error parsing HTTP Header 'Content-Length'", httpRequest);
                 }
+#undef max
+#undef min
                 if (val > std::numeric_limits<int>::max())
                 {
                     return std::make_tuple(

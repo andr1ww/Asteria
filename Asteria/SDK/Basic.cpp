@@ -7,6 +7,7 @@
 */
 
 // Basic file containing function-implementations from Basic.hpp
+#include "Framework.h"
 
 #include <Windows.h>
 #include "Basic.hpp"

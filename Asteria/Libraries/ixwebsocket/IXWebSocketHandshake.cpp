@@ -4,6 +4,7 @@
  *  Copyright (c) 2019 Machine Zone, Inc. All rights reserved.
  */
 
+#include "Framework.h"
 #include "IXWebSocketHandshake.h"
 
 #include "IXBase64.h"

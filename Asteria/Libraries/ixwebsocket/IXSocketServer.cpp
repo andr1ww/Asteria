@@ -3,6 +3,7 @@
  *  Author: Benjamin Sergeant
  *  Copyright (c) 2018 Machine Zone, Inc. All rights reserved.
  */
+#include "Framework.h"
 
 #include "IXSocketServer.h"
 
@@ -116,7 +117,7 @@ namespace ix
             }
 
             // Bind the socket to the server address.
-            if (bind(_serverFd, (struct sockaddr*) &server, sizeof(server)) < 0)
+            if (::bind(_serverFd, (struct sockaddr*) &server, sizeof(server)) < 0)
             {
                 std::stringstream ss;
                 ss << "SocketServer::listen() error calling bind "
@@ -145,7 +146,7 @@ namespace ix
             }
 
             // Bind the socket to the server address.
-            if (bind(_serverFd, (struct sockaddr*) &server, sizeof(server)) < 0)
+            if (::bind(_serverFd, (struct sockaddr*) &server, sizeof(server)) < 0)
             {
                 std::stringstream ss;
                 ss << "SocketServer::listen() error calling bind "

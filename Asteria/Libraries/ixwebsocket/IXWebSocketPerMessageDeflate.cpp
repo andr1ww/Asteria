@@ -46,6 +46,7 @@
  *
  */
 
+#include "Framework.h"
 #include <cstdint>
 
 #include "IXWebSocketPerMessageDeflate.h"

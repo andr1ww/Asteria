@@ -14,6 +14,7 @@
  * Code adapted from https://github.com/r-lyeh-archived/sole
  */
 
+#include "Framework.h"
 #include "IXUuid.h"
 
 #include <cstdint>

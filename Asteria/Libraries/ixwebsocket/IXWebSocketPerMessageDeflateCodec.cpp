@@ -4,6 +4,7 @@
  *  Copyright (c) 2018-2019 Machine Zone, Inc. All rights reserved.
  */
 
+#include "Framework.h"
 #include "IXWebSocketPerMessageDeflateCodec.h"
 
 #include "IXWebSocketPerMessageDeflateOptions.h"

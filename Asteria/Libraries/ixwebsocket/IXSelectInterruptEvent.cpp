@@ -1,6 +1,7 @@
 /*
  *  IXSelectInterruptEvent.cpp
  */
+#include "Framework.h"
 
 //
 // On Windows we use a Windows Event to wake up ix::poll() (WSAWaitForMultipleEvents).

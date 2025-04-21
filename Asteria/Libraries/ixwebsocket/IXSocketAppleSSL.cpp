@@ -5,6 +5,8 @@
  *
  *  Adapted from Satori SDK Apple SSL code.
  */
+#include "Framework.h"
+
 #ifdef IXWEBSOCKET_USE_SECURE_TRANSPORT
 
 #include "IXSocketAppleSSL.h"

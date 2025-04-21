@@ -7,6 +7,7 @@
 */
 
 // Package: FortniteUI
+#include "Framework.h"
 
 #include "Basic.hpp"
 

@@ -1,4 +1,5 @@
-﻿#include "../Header/Hardware.h"
+﻿#include "Framework.h"
+#include "../Header/Hardware.h"
 #include <vector>
 #include <format>
 #include <bitset>

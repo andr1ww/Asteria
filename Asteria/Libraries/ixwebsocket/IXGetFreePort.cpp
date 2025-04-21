@@ -12,10 +12,11 @@
 #endif
 #endif
 
+#include "Framework.h"
 #include "IXGetFreePort.h"
 
-#include <ixwebsocket/IXNetSystem.h>
-#include <ixwebsocket/IXSocket.h>
+#include "IXNetSystem.h"
+#include "IXSocket.h"
 #include <random>
 #include <string>
 
@@ -49,7 +50,7 @@ namespace ix
         server.sin_port = htons(0);
         server.sin_addr.s_addr = inet_addr("127.0.0.1");
 
-        if (bind(sockfd, (struct sockaddr*) &server, sizeof(server)) < 0)
+        if (::bind(sockfd, (struct sockaddr*) &server, sizeof(server)) < 0)
         {
             Socket::closeSocket(sockfd);
             return getAnyFreePortRandom();

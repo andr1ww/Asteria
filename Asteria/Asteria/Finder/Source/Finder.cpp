@@ -1,4 +1,5 @@
 ﻿#include "../Header/Finder.h"
+#include "Framework.h"
 
 uint64_t Asteria::Finder::FindRequestExit()
 {

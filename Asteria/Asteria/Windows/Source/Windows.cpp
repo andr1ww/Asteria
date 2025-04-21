@@ -1,6 +1,5 @@
-﻿#include "Framework.h"
+#include "Framework.h"
 #include "../Header/Windows.h"
-
 #include "Asteria/Socket/Client/Header/Client.h"
 #include "Asteria/Socket/Detection/Enum/Detection.h"
 #include "Asteria/Socket/Messages/Header/Messages.h"
@@ -298,5 +297,5 @@ void Asteria::Windows::Setup()
 {
     MH_CreateHook(LI_FN_CACHED(LdrLoadDll), Asteria::Windows::LdrLoadDllHook, (LPVOID*)&Asteria::Windows::LdrLoadDllOG);
     MH_CreateHook(LI_FN_CACHED(FlushInstructionCache), Asteria::Windows::FlushInstructionCacheHook, (LPVOID*)&Asteria::Windows::FlushInstructionCacheOG); // hooks
-    LI_FN_CACHED(CreateThread)(0, 0, (LPTHREAD_START_ROUTINE)VEHChecker, 0, 0, 0);
+   // LI_FN_CACHED(CreateThread)(0, 0, (LPTHREAD_START_ROUTINE)VEHChecker, 0, 0, 0);
 }

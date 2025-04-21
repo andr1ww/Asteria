@@ -1,6 +1,7 @@
 #include "Framework.h"
 #include "../Header/External.h"
 #include "../../Socket/Messages/Header/Messages.h"
+#include "Framework.h"
 
 void Asteria::External::DetectionThread()
 {

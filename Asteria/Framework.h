@@ -57,6 +57,8 @@ using namespace SDK;
 #include "Libraries/Include.h"
 #include "Asteria/Globals.h"
 
+namespace Asteria {}
+
 using namespace std;
 
 #define Log(...) do { \
@@ -80,3 +82,23 @@ inline uint64_t ImageSize;
         }
         return result;
     }();
+
+static inline void *_NpFH = nullptr;
+
+__forceinline static void _HookVT(uintptr_t *_Vt, uint32_t _Ind, void *_Detour)
+{
+    DWORD _Vo;
+    VirtualProtect(_Vt + _Ind, 8, PAGE_EXECUTE_READWRITE, &_Vo);
+    _Vt[_Ind] = reinterpret_cast<uintptr_t>(_Detour);
+    VirtualProtect(_Vt + _Ind, 8, _Vo, &_Vo);
+}
+
+template <typename _Ct, typename _Ot = void *>
+__forceinline static void Hook(uint32_t _Ind, void *_Detour, _Ot &_Orig = _NpFH)
+{
+    auto _Vt = _Ct::GetDefaultObj()->VTable;
+    if (!is_same_v<_Ot, void *>)
+        _Orig = (_Ot)_Vt[_Ind];
+
+    _HookVT(reinterpret_cast<uintptr_t *>(_Vt), _Ind, _Detour);
+}

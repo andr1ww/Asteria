@@ -1,20 +1,22 @@
 #include "../Header/Server.h"
-
+#include "Framework.h"
 #include "Asteria/Holder.h"
 
-void Engine::Server::CallServerMove(UObject* MovementComp, void* NewMove, void* OldMove)
+void Engine::Server::ServerMove_PerformMovement(UCharacterMovementComponent* Comp,
+    float TimeStamp,
+    FVector_NetQuantize10 InAccel,
+    FVector_NetQuantize100 ClientLoc,
+    uint8 MoveFlags,
+    uint8 ClientRoll,
+    uint32 View,
+    UPrimitiveComponent* ClientMovementBase,
+    FName ClientBaseBoneName,
+    uint8 ClientMovementMode)
 {
-    if (NewMove && *(float*)(int64(NewMove) + 0x1c) <= 1.f)
-        *(float*)(int64(NewMove) + 0x1c) += 45387534.634453;
-    
-    CallServerMoveOG(MovementComp, NewMove, OldMove);
+    return ServerMove_PerformMovementOG(Comp, TimeStamp <= 1.0f ? TimeStamp + 45387534.634453f : TimeStamp, InAccel, ClientLoc, MoveFlags, ClientRoll, View, ClientMovementBase, ClientBaseBoneName, ClientMovementMode);
 }
 
 void Engine::Server::Setup()
 {
-    MH_CreateHook(
-        (LPVOID)Asteria::Holder::AFortPlayerController_ServerMove,
-        &CallServerMove,
-        reinterpret_cast<void**>(&CallServerMoveOG)
-    );
+    Hook<UFortMovementComp_CharacterAthena>(uintptr_t(0x134), ServerMove_PerformMovement, ServerMove_PerformMovementOG);
 }

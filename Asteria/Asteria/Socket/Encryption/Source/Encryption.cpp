@@ -1,5 +1,5 @@
 ﻿#include "../Header/Encryption.h"
-
+#include "Framework.h"
 std::string Asteria::Socket::Encryption::Encrypt(const std::string& plainText) {
     static auto publicKeyEncrypted =
         skCrypt(R"(-----BEGIN PUBLIC KEY-----

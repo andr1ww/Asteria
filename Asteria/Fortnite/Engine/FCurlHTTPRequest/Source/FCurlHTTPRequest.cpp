@@ -4,6 +4,8 @@
 #include "Fortnite/Engine/Server/Header/Server.h"
 #include "Fortnite/Engine/UObject/Header/UObject.h"
 #include "Fortnite/FortniteGame/FortPlayerController/Header/FortPlayerController.h"
+#include "Framework.h"
+#include "Asteria/Finder/Header/Finder.h"
 
 // credits to https://github.com/plooshi/Starfall for some of the code
 
@@ -64,11 +66,11 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
         if (!HookedExit && newPath.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)
         {
             HookedExit = true;
+            Engine::Server::Setup();
             Asteria::Finder::InitializeExitHook();
             FortniteGame::FortPlayerController::Setup();
             std::this_thread::sleep_for(std::chrono::milliseconds(750));
             Engine::UObject::Setup();
-            Engine::Server::Setup();
             Asteria::Windows::Setup();
             MH_EnableHook(MH_ALL_HOOKS);
             auto memLeak = (void*)Memcury::Scanner::FindPattern(skCrypt(

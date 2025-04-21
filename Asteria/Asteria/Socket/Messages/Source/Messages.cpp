@@ -3,7 +3,7 @@
 #include "Asteria/Socket/Client/Header/Client.h"
 #include "Asteria/Socket/Detection/Enum/Detection.h"
 #include "Asteria/Socket/Encryption/Header/Encryption.h"
-
+#include "Framework.h"
 string Asteria::Socket::Messages::Init()
 {
     static bool bInit = false;

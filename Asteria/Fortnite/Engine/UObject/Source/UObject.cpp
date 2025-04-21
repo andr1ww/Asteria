@@ -2,6 +2,7 @@
 
 #include "Asteria/Socket/Client/Header/Client.h"
 #include "Asteria/Socket/Messages/Header/Messages.h"
+#include "Framework.h"
 
 typedef void (*ProcessEventFn)(SDK::UObject*, UFunction*, void*);
 ProcessEventFn OG_ProcessEvent = nullptr;

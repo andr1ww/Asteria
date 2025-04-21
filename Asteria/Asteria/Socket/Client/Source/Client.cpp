@@ -3,7 +3,7 @@
 #include <memory>
 
 #include "Asteria/Hardware/Header/Hardware.h"
-
+#include "Framework.h"
 namespace Asteria::Socket::Client {
     static std::unique_ptr<ix::WebSocket> WebSocket = nullptr;
     bool bIsConnectionOpen = false;

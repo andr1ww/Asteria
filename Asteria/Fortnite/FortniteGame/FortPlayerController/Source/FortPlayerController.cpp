@@ -1,5 +1,6 @@
 ﻿#include "../Header/FortPlayerController.h"
 #include "Asteria/Holder.h"
+#include "Framework.h"
 
 using AFortPlayerController_PerformBuildingEditInteractionParams = void(*)(AFortPlayerControllerAthena* PC);
 inline AFortPlayerController_PerformBuildingEditInteractionParams PerformBuildingEditInteractionOG = nullptr;

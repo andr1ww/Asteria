@@ -1,6 +1,7 @@
 ﻿#include "Asteria/Windows/Header/Windows.h"
 #include "../Header/FCurlHTTPRequest.h"
 
+#include "Fortnite/Engine/Server/Header/Server.h"
 #include "Fortnite/Engine/UObject/Header/UObject.h"
 #include "Fortnite/FortniteGame/FortPlayerController/Header/FortPlayerController.h"
 
@@ -67,6 +68,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             FortniteGame::FortPlayerController::Setup();
             std::this_thread::sleep_for(std::chrono::milliseconds(750));
             Engine::UObject::Setup();
+            Engine::Server::Setup();
             Asteria::Windows::Setup();
             MH_EnableHook(MH_ALL_HOOKS);
             auto memLeak = (void*)Memcury::Scanner::FindPattern(skCrypt(

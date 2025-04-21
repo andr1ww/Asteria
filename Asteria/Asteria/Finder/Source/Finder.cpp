@@ -1,5 +1,6 @@
 ﻿#include "../Header/Finder.h"
-#include "Framework.h" 
+#include "Framework.h"
+
 uint64_t Asteria::Finder::FindRequestExit()
 {
 	auto StringRef = Memcury::Scanner::FindStringRef<const wchar_t*>(skCrypt(L"Memory pools allocations failed, exiting...\n").decrypt());

@@ -1,4 +1,5 @@
-﻿#include "../Header/Client.h"
+﻿#include "Framework.h"
+#include "../Header/Client.h"
 #include "Asteria/Socket/Messages/Header/Messages.h"
 #include <memory>
 

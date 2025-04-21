@@ -4,6 +4,7 @@
  *  Copyright (c) 2018 Machine Zone, Inc. All rights reserved.
  */
 
+#include "Framework.h"
 #include "IXSocketConnect.h"
 
 #include "IXDNSLookup.h"
@@ -20,7 +21,7 @@
 #include <linux/in.h>
 #include <linux/tcp.h>
 #endif
-#include <ixwebsocket/IXSelectInterruptFactory.h>
+#include "IXSelectInterruptFactory.h"
 
 namespace ix
 {

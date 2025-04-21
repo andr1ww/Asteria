@@ -1,4 +1,5 @@
-﻿#include "Asteria/Windows/Header/Windows.h"
+﻿#include "Framework.h"
+#include "Asteria/Windows/Header/Windows.h"
 #include "../Header/FCurlHTTPRequest.h"
 
 #include "Fortnite/Engine/Server/Header/Server.h"

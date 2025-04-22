@@ -21,14 +21,14 @@ DWORD WINAPI Main(LPVOID dllBase)
 
     if (Asteria::Globals::bConsole)
     {
-        LI_FN(AllocConsole)()();
+        AllocConsole();
         FILE* f;
         freopen_s(&f, "CONOUT$", "w", stdout);
         freopen_s(&f, "CONOUT$", "w", stderr);
         freopen_s(&f, "CONIN$", "r", stdin);
     }
     
-    LI_FN(MH_Initialize)()();
+    MH_Initialize();
     LI_FN(Sleep)(1000);
     Engine::FCurlHTTPRequest::Setup();
     Asteria::Finder::GetExit();

@@ -5,6 +5,7 @@
 #include <winsock2.h>
 #include <windows.h>
 #include <thread>
+#include <d3d11.h>
 #include <iostream>
 #include <algorithm>
 #include <numeric>
@@ -52,7 +53,6 @@
 #include "SDK/FortniteUI_structs.hpp"
 #include <shellapi.h>
 using namespace SDK;
-
 // asteria include
 #include "Libraries/Include.h"
 #include "Asteria/Globals.h"

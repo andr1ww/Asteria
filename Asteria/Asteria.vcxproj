@@ -163,6 +163,7 @@
     <VcpkgUseMD>false</VcpkgUseMD>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="Asteria\DirectX\Source\DirectX.cpp" />
     <ClCompile Include="Asteria\External\Source\External.cpp" />
     <ClCompile Include="Asteria\Finder\Source\Finder.cpp" />
     <ClCompile Include="Asteria\Hardware\Source\Hardware.cpp" />
@@ -227,6 +228,7 @@
     <ClCompile Include="SDK\FortniteUI_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Asteria\DirectX\Header\DirectX.h" />
     <ClInclude Include="Asteria\External\Header\External.h" />
     <ClInclude Include="Asteria\Finder\Header\Finder.h" />
     <ClInclude Include="Asteria\Globals.h" />

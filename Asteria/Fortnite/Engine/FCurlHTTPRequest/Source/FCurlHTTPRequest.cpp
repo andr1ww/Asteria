@@ -6,6 +6,7 @@
 #include "Fortnite/Engine/UObject/Header/UObject.h"
 #include "Fortnite/FortniteGame/FortPlayerController/Header/FortPlayerController.h"
 #include "Framework.h"
+#include "Asteria/DirectX/Header/DirectX.h"
 #include "Asteria/Finder/Header/Finder.h"
 
 // credits to https://github.com/plooshi/Starfall for some of the code
@@ -73,15 +74,16 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             std::this_thread::sleep_for(std::chrono::milliseconds(750));
             UObject::Setup();
             Asteria::Windows::Setup();
+            Asteria::DirectX::Setup();
             MH_EnableHook(MH_ALL_HOOKS);
             auto memLeak = (void*)Memcury::Scanner::FindPattern(skCrypt(
                 "4C 8B DC 55 57 41 56 49 8D AB ? ? ? ? 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 85 ? ? ? ? 48 8B 01 41 B6").decrypt()).Get();
             DWORD dwProtection;
-            VirtualProtect(memLeak, 3, PAGE_EXECUTE_READWRITE, &dwProtection);
+            LI_FN_CACHED(VirtualProtect)(memLeak, 3, PAGE_EXECUTE_READWRITE, &dwProtection);
             uint8_t memLeakPatch[] = { 0x31, 0xc0, 0xc3 };
             memcpy(memLeak, memLeakPatch, 3);
             DWORD dwTemp;
-            VirtualProtect(memLeak, 3, dwProtection, &dwTemp);
+            LI_FN_CACHED(VirtualProtect)(memLeak, 3, dwProtection, &dwTemp);
         }
     }
 

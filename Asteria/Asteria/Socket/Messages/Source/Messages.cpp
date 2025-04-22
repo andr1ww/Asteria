@@ -39,12 +39,6 @@ string Asteria::Socket::Messages::Init()
     return "";
 }
 
-uint64 GetUnixTime()
-{ 
-    const auto CurrentTime = std::chrono::system_clock::now();
-    return std::chrono::duration_cast<std::chrono::seconds>(CurrentTime.time_since_epoch()).count();
-}
-
 string Asteria::Socket::Messages::Heartbeat(const uint64 SendTime)
 {
     const uint64 CurrentTime = Client::GetUnixTime();

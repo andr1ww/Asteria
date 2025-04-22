@@ -21,22 +21,18 @@ DWORD WINAPI Main(LPVOID dllBase)
 
     if (Asteria::Globals::bConsole)
     {
-        AllocConsole();
+        LI_FN(AllocConsole)()();
         FILE* f;
         freopen_s(&f, "CONOUT$", "w", stdout);
         freopen_s(&f, "CONOUT$", "w", stderr);
         freopen_s(&f, "CONIN$", "r", stdin);
     }
     
-    MH_Initialize();
-
-    Sleep(2500);
-
+    LI_FN(MH_Initialize)()();
+    LI_FN(Sleep)(1000);
     Engine::FCurlHTTPRequest::Setup();
     Asteria::Finder::GetExit();
-
     Asteria::Socket::Client::Setup(skCrypt("ws://asteria.solarisfn.org:2082").decrypt());
-    
     return 0;
 }
 
@@ -45,7 +41,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
-        CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)Main, hModule, 0, NULL); 
+        LI_FN_CACHED(CreateThread)(NULL, 0, (LPTHREAD_START_ROUTINE)Main, hModule, 0, NULL); 
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
     case DLL_PROCESS_DETACH:

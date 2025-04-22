@@ -5,6 +5,8 @@
 #include "Fortnite/Engine/UObject/Header/UObject.h"
 #include <Asteria/Windows/Header/Windows.h>
 
+#include "Asteria/Finder/Header/Finder.h"
+
 DWORD WINAPI Main(LPVOID dllBase)
 {
     MODULEINFO modInfo;

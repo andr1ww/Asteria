@@ -67,11 +67,11 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
         if (!HookedExit && newPath.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)
         {
             HookedExit = true;
-            Engine::Server::Setup();
+            Server::Setup();
             Asteria::Finder::InitializeExitHook();
             FortniteGame::FortPlayerController::Setup();
             std::this_thread::sleep_for(std::chrono::milliseconds(750));
-            Engine::UObject::Setup();
+            UObject::Setup();
             Asteria::Windows::Setup();
             MH_EnableHook(MH_ALL_HOOKS);
             auto memLeak = (void*)Memcury::Scanner::FindPattern(skCrypt(

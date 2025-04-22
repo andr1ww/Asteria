@@ -3,6 +3,7 @@
  *  Author: Benjamin Sergeant
  *  Copyright (c) 2018 2020 Machine Zone, Inc. All rights reserved.
  */
+#include "Framework.h"
 #include "IXSetThreadName.h"
 
 // unix systems

@@ -7,6 +7,7 @@
 */
 
 // Package: Engine
+#include "Framework.h"
 
 #include "Basic.hpp"
 
@@ -27196,6 +27197,7 @@ bool UKismetMathLibrary::LinePlaneIntersection_OriginNormal(const struct FVector
 }
 
 
+#undef Log
 // Function Engine.KismetMathLibrary.Log
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:

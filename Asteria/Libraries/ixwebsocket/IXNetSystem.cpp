@@ -3,6 +3,7 @@
  *  Author: Korchynskyi Dmytro
  *  Copyright (c) 2019 Machine Zone. All rights reserved.
  */
+#include "Framework.h"
 
 #include "IXNetSystem.h"
 #include <cstdint>

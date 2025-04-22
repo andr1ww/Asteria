@@ -7,6 +7,7 @@
 */
 
 // Package: CoreUObject
+#include "Framework.h"
 
 #include "Basic.hpp"
 

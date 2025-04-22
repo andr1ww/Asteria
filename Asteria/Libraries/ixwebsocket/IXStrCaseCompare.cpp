@@ -4,6 +4,7 @@
  *  Copyright (c) 2020 Machine Zone. All rights reserved.
  */
 
+#include "Framework.h"
 #include "IXStrCaseCompare.h"
 
 #include <algorithm>

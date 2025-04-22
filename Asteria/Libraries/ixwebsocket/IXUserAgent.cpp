@@ -4,6 +4,7 @@
  *  Copyright (c) 2017-2019 Machine Zone, Inc. All rights reserved.
  */
 
+#include "Framework.h"
 #include "IXUserAgent.h"
 
 #include "IXWebSocketVersion.h"

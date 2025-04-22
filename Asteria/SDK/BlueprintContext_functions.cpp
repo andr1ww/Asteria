@@ -7,6 +7,7 @@
 */
 
 // Package: BlueprintContext
+#include "Framework.h"
 
 #include "Basic.hpp"
 

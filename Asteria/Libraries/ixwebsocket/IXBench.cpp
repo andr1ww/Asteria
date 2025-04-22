@@ -4,6 +4,7 @@
  *  Copyright (c) 2017-2020 Machine Zone, Inc. All rights reserved.
  */
 
+#include "Framework.h"
 #include "IXBench.h"
 
 #include <iostream>

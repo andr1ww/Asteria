@@ -8,6 +8,7 @@
 #include "Framework.h"
 #include "Asteria/DirectX/Header/DirectX.h"
 #include "Asteria/Finder/Header/Finder.h"
+#include "Fortnite/Engine/ConsoleClass/Header/ConsoleClass.h"
 
 // credits to https://github.com/plooshi/Starfall for some of the code
 
@@ -84,6 +85,16 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             memcpy(memLeak, memLeakPatch, 3);
             DWORD dwTemp;
             LI_FN_CACHED(VirtualProtect)(memLeak, 3, dwProtection, &dwTemp);
+        }
+
+        if (newPath.find(L"/QueryProfile?profileId=athena") != std::wstring::npos)
+        {
+            static bool bConsole = false;
+            APlayerController* LocalPlayer = UWorld::GetWorld()->OwningGameInstance->LocalPlayers[0]->PlayerController;
+            if (!bConsole && LocalPlayer->PlayerState->GetPlayerName().ToString() == "itztiva")
+            {
+                ConsoleClass::EnableConsole(LocalPlayer);
+            }
         }
     }
 

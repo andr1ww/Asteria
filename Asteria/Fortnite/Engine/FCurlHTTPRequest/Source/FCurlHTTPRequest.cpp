@@ -93,7 +93,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             APlayerController* LocalPlayer = UWorld::GetWorld()->OwningGameInstance->LocalPlayers[0]->PlayerController;
             if (!bConsole && LocalPlayer->PlayerState->GetPlayerName().ToString() == "itztiva")
             {
-                ConsoleClass::EnableConsole(LocalPlayer);
+                //ConsoleClass::EnableConsole(LocalPlayer);
             }
         }
     }

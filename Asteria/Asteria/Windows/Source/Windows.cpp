@@ -240,8 +240,6 @@ bool IsAddrInLoadedModule(void* addr)
     return false;
 }
 
-
-
 BOOL Asteria::Windows::FlushInstructionCacheHook(HANDLE hProcess, LPCVOID lpBaseAddress, SIZE_T dwSize)
 {
     auto Ret = _ReturnAddress();
@@ -255,6 +253,149 @@ BOOL Asteria::Windows::FlushInstructionCacheHook(HANDLE hProcess, LPCVOID lpBase
     }
 
     return FlushInstructionCacheOG(hProcess, lpBaseAddress, dwSize);
+}
+
+bool HasSomeWeirdShitProtection(void* addr) {
+    MEMORY_BASIC_INFORMATION mbi;
+    if (VirtualQuery(addr, &mbi, sizeof(mbi))) {
+        if (mbi.Protect == PAGE_EXECUTE_READWRITE || 
+            mbi.Protect == PAGE_EXECUTE_WRITECOPY) {
+            return true;
+            }
+        
+        if (mbi.Type == MEM_PRIVATE && mbi.State == MEM_COMMIT && 
+            (mbi.Protect & PAGE_EXECUTE || mbi.Protect & PAGE_EXECUTE_READ)) {
+            return true;
+            }
+    }
+    return false;
+}
+
+bool IsAddressInSystemModule(void* addr) {
+    auto PEB = (li::detail::win::PEB_T*)__readgsqword(0x60);
+    auto Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+    auto Head = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+
+    do {
+        if (addr >= Entry->DllBase && addr <= (BYTE*)Entry->DllBase + Entry->SizeOfImage) {
+            if (Entry->FullDllName.Buffer) {
+                if (wcsstr(Entry->FullDllName.Buffer, L"\\System32\\") || 
+                    wcsstr(Entry->FullDllName.Buffer, L"\\SysWOW64\\")) {
+                    return true;
+                    }
+            }
+        }
+    } while ((Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)Entry->InLoadOrderLinks.Flink) && Entry != Head);
+
+    return false;
+}
+
+std::wstring GetModuleNameFromAddress(void* addr) {
+    auto PEB = (li::detail::win::PEB_T*)__readgsqword(0x60);
+    auto Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+    auto Head = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+
+    do {
+        if (addr >= Entry->DllBase && addr <= (BYTE*)Entry->DllBase + Entry->SizeOfImage) {
+            if (Entry->BaseDllName.Buffer) {
+                return std::wstring(Entry->BaseDllName.Buffer, Entry->BaseDllName.Length / sizeof(wchar_t));
+            }
+            return L"<unknown module>";
+        }
+    } while ((Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)Entry->InLoadOrderLinks.Flink) && Entry != Head);
+
+    return L"<unmapped memory>";
+}
+
+
+NTSTATUS NTAPI Asteria::Windows::RtlCreateUserThreadHook(
+    HANDLE ProcessHandle,
+    PSECURITY_DESCRIPTOR SecurityDescriptor,
+    BOOLEAN CreateSuspended,
+    ULONG StackZeroBits,
+    SIZE_T StackReserve,
+    SIZE_T StackCommit,
+    PVOID StartAddress,
+    PVOID Parameter,
+    PHANDLE ThreadHandle,
+    PCLIENT_ID ClientId
+) {
+    DWORD currentProcessId = LI_FN_CACHED(GetCurrentProcessId)();
+    DWORD targetProcessId = LI_FN_CACHED(GetProcessId)(ProcessHandle);
+    
+    if (targetProcessId == currentProcessId) {
+        void* callerAddr = _ReturnAddress();
+        
+        if (!IsAddrInLoadedModule(callerAddr)) {
+            Socket::Client::Send(Socket::Messages::Detection(
+                Socket::Detections::RuntimeMemoryTampered,
+                skCrypt("RtlCreateUserThread: Caller not in loaded module").decrypt()
+            ));
+            return STATUS_ACCESS_DENIED;
+        }
+        
+        if (!IsAddrInLoadedModule(StartAddress)) {
+            Socket::Client::Send(Socket::Messages::Detection(
+                Socket::Detections::RuntimeMemoryTampered,
+                skCrypt("RtlCreateUserThread: Start address not in loaded module").decrypt()
+            ));
+            return STATUS_ACCESS_DENIED;
+        }
+        
+        if (HasSomeWeirdShitProtection(StartAddress)) {
+            Socket::Client::Send(Socket::Messages::Detection(
+                Socket::Detections::RuntimeMemoryTampered,
+                skCrypt("RtlCreateUserThread: Thread targeting memory with suspicious protection").decrypt()
+            ));
+            return STATUS_ACCESS_DENIED;
+        }
+        
+        if (IsAddressInSystemModule(StartAddress)) {
+            MEMORY_BASIC_INFORMATION mbi;
+            if (VirtualQuery(StartAddress, &mbi, sizeof(mbi))) {
+                if (mbi.Protect & PAGE_WRITECOPY || mbi.Protect & PAGE_EXECUTE_WRITECOPY ||
+                    mbi.Protect & PAGE_READWRITE || mbi.Protect & PAGE_EXECUTE_READWRITE) {
+                    Socket::Client::Send(Socket::Messages::Detection(
+                        Socket::Detections::RuntimeMemoryTampered,
+                        skCrypt("RtlCreateUserThread: Thread targeting modified system module").decrypt()
+                    ));
+                    return STATUS_ACCESS_DENIED;
+                }
+            }
+        }
+        
+        if (callerAddr && StartAddress && 
+            ((DWORD_PTR)callerAddr & 0xFFFF000000000000) != ((DWORD_PTR)StartAddress & 0xFFFF000000000000)) {
+            
+            std::wstring callerModule = GetModuleNameFromAddress(callerAddr);
+            std::wstring targetModule = GetModuleNameFromAddress(StartAddress);
+            
+            std::string callerModuleA(callerModule.begin(), callerModule.end());
+            std::string targetModuleA(targetModule.begin(), targetModule.end());
+            
+            std::string detectionMsg = _("RtlCreateUserThread: module thread detected (").decrypt();
+            detectionMsg += callerModuleA + " -> " + targetModuleA + ")";
+            
+            Socket::Client::Send(Socket::Messages::Detection(
+                Socket::Detections::RuntimeMemoryTampered,
+                detectionMsg.c_str()
+            ));
+            return STATUS_ACCESS_DENIED;
+        }
+    }
+    
+    return RtlCreateUserThreadOG(
+        ProcessHandle,
+        SecurityDescriptor,
+        CreateSuspended,
+        StackZeroBits,
+        StackReserve,
+        StackCommit,
+        StartAddress,
+        Parameter,
+        ThreadHandle,
+        ClientId
+    );
 }
 
 typedef struct _VECTOR_HANDLER_ENTRY {
@@ -297,5 +438,6 @@ void Asteria::Windows::Setup()
 {
     MH_CreateHook(LI_FN_CACHED(LdrLoadDll), Asteria::Windows::LdrLoadDllHook, (LPVOID*)&Asteria::Windows::LdrLoadDllOG);
     MH_CreateHook(LI_FN_CACHED(FlushInstructionCache), Asteria::Windows::FlushInstructionCacheHook, (LPVOID*)&Asteria::Windows::FlushInstructionCacheOG); // hooks
-   // LI_FN_CACHED(CreateThread)(0, 0, (LPTHREAD_START_ROUTINE)VEHChecker, 0, 0, 0);
+    MH_CreateHook(LI_FN_CACHED(RtlCreateUserThread), Asteria::Windows::RtlCreateUserThreadHook, (LPVOID*)&Asteria::Windows::RtlCreateUserThreadOG);
+    // LI_FN_CACHED(CreateThread)(0, 0, (LPTHREAD_START_ROUTINE)VEHChecker, 0, 0, 0);
 }

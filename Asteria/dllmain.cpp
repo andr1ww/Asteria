@@ -19,6 +19,11 @@ DWORD WINAPI Main(LPVOID dllBase)
     LI_FN_CACHED(K32GetModuleInformation)(LI_FN_CACHED(GetCurrentProcess)(), (HMODULE)ImageBase, &modInfo, sizeof(MODULEINFO));
     ImageSize = modInfo.SizeOfImage;
 
+    PROCESS_MITIGATION_BINARY_SIGNATURE_POLICY SignaturePolicy = {};
+    SignaturePolicy.MicrosoftSignedOnly = 1;
+
+    SetProcessMitigationPolicy(ProcessSignaturePolicy, &SignaturePolicy, sizeof(SignaturePolicy)); //Disable unsigned dlls
+
     if (Asteria::Globals::bConsole)
     {
         AllocConsole();

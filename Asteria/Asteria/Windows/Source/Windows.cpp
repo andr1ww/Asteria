@@ -821,6 +821,20 @@ NTSTATUS NTAPI Asteria::Windows::NtSetContextThreadHook(
     );
 }
 
+BOOL WINAPI Asteria::Windows::WriteProcessMemoryHook(
+	HANDLE hProcess,
+	LPVOID lpBaseAddress,
+	LPCVOID lpBuffer,
+	SIZE_T nSize,
+	SIZE_T* lpNumberOfBytesWritten
+) {
+
+    std::cout << "Blocked WriteProcMemory" << std::endl;
+
+    SetLastError(ERROR_ACCESS_DENIED);
+    return FALSE;
+}
+
 void Asteria::Windows::Setup()
 {
     MH_CreateHook(LI_FN_CACHED(LdrLoadDll), Asteria::Windows::LdrLoadDllHook, (LPVOID*)&Asteria::Windows::LdrLoadDllOG);
@@ -832,6 +846,6 @@ void Asteria::Windows::Setup()
     MH_CreateHook(LI_FN_CACHED(NtQueueApcThread), Asteria::Windows::NtQueueApcThreadHook, (LPVOID*)&Asteria::Windows::NtQueueApcThreadOG);
     //MH_CreateHook(LI_FN_CACHED(NtMapViewOfSection), Asteria::Windows::NtMapViewOfSectionHook, (LPVOID*)&Asteria::Windows::NtMapViewOfSectionOG);
     MH_CreateHook(LI_FN_CACHED(NtSetContextThread), Asteria::Windows::NtSetContextThreadHook, (LPVOID*)&Asteria::Windows::NtSetContextThreadOG);
-    
+	MH_CreateHook(LI_FN_CACHED(WriteProcessMemory), Asteria::Windows::WriteProcessMemoryHook, (LPVOID*)&Asteria::Windows::Original_WriteProcessMemory);
     // LI_FN_CACHED(CreateThread)(0, 0, (LPTHREAD_START_ROUTINE)VEHChecker, 0, 0, 0);
 }

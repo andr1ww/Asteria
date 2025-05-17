@@ -1,8 +1,10 @@
 ﻿#include "../Header/Finder.h"
 #include "Framework.h"
+#include "Asteria/Holder.h"
 
 uint64_t Asteria::Finder::FindRequestExit()
 {
+	fuckIda;
 	auto StringRef = Memcury::Scanner::FindStringRef<const wchar_t*>(skCrypt(L"Memory pools allocations failed, exiting...\n").decrypt());
 
 	if (StringRef.IsValid())
@@ -13,6 +15,7 @@ uint64_t Asteria::Finder::FindRequestExit()
 
 uint64_t Asteria::Finder::FindUnsafeEnvironment()
 {
+	fuckIda;
 	auto StringRef = Memcury::Scanner::FindStringRef<const wchar_t*>(skCrypt(L"UnsafeEnvironment_Title").decrypt());
 
 	if (StringRef.IsValid())
@@ -33,6 +36,7 @@ uint64_t Asteria::Finder::FindUnsafeEnvironment()
 }
 
 void Asteria::Finder::GetExit() {
+	fuckIda;
 	Asteria::Finder::UnsafeEnvironmentPopup = Asteria::Finder::FindUnsafeEnvironment();
 	if (!Asteria::Finder::UnsafeEnvironmentPopup)
 	{

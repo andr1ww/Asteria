@@ -5,10 +5,13 @@
 #include "Asteria/Socket/Messages/Header/Messages.h"
 #include <regex>
 
+#include "Asteria/Holder.h"
+
 // credits to https://github.com/plooshi/Arsenic for VerifyEmbeddedSignature and part of LdrLoadDllHook, and FlushInstructionCacheHook
 
 __forceinline BOOL Asteria::Windows::VerifyEmbeddedSignature(LPCWSTR pwszSourceFile)
 {
+    fuckIda;
     LONG lStatus;
     GUID WintrustVerifyGuid = WINTRUST_ACTION_GENERIC_VERIFY_V2;
     GUID DriverActionGuid = DRIVER_ACTION_VERIFY;
@@ -132,6 +135,7 @@ __forceinline BOOL Asteria::Windows::VerifyEmbeddedSignature(LPCWSTR pwszSourceF
 
 NTSTATUS __stdcall Asteria::Windows::LdrLoadDllHook(PWCHAR SearchPath_, PULONG LoadFlags, PUNICODE_STRING Name, PVOID* BaseAddress)
 {
+    fuckIda;
     std::wstring ws = Name->Buffer;
     std::string s( ws.begin(), ws.end() );
     Log(s);
@@ -227,6 +231,7 @@ NTSTATUS __stdcall Asteria::Windows::LdrLoadDllHook(PWCHAR SearchPath_, PULONG L
 
 bool IsAddrInLoadedModule(void* addr)
 {
+    fuckIda;
     auto PEB = (li::detail::win::PEB_T*)__readgsqword(0x60);
     auto Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
     auto Head = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
@@ -242,6 +247,7 @@ bool IsAddrInLoadedModule(void* addr)
 
 BOOL Asteria::Windows::FlushInstructionCacheHook(HANDLE hProcess, LPCVOID lpBaseAddress, SIZE_T dwSize)
 {
+    fuckIda;
     auto Ret = _ReturnAddress();
     if (!IsAddrInLoadedModule(Ret))
     {
@@ -256,6 +262,7 @@ BOOL Asteria::Windows::FlushInstructionCacheHook(HANDLE hProcess, LPCVOID lpBase
 }
 
 bool HasSomeWeirdShitProtection(void* addr) {
+    fuckIda;
     MEMORY_BASIC_INFORMATION mbi;
     if (VirtualQuery(addr, &mbi, sizeof(mbi))) {
         if (mbi.Protect == PAGE_EXECUTE_READWRITE || 
@@ -272,6 +279,7 @@ bool HasSomeWeirdShitProtection(void* addr) {
 }
 
 bool IsAddressInSystemModule(void* addr) {
+    fuckIda;
     auto PEB = (li::detail::win::PEB_T*)__readgsqword(0x60);
     auto Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
     auto Head = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
@@ -291,6 +299,7 @@ bool IsAddressInSystemModule(void* addr) {
 }
 
 std::wstring GetModuleNameFromAddress(void* addr) {
+    fuckIda;
     auto PEB = (li::detail::win::PEB_T*)__readgsqword(0x60);
     auto Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
     auto Head = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
@@ -320,6 +329,7 @@ NTSTATUS NTAPI Asteria::Windows::RtlCreateUserThreadHook(
     PHANDLE ThreadHandle,
     PCLIENT_ID ClientId
 ) {
+    fuckIda;
     DWORD currentProcessId = LI_FN_CACHED(GetCurrentProcessId)();
     DWORD targetProcessId = LI_FN_CACHED(GetProcessId)(ProcessHandle);
     
@@ -415,6 +425,7 @@ typedef struct _LDRP_VECTOR_HANDLER_LIST {
 
 void Asteria::Windows::VEHChecker()
 {
+    fuckIda;
     auto RtlRemoveVectoredExceptionHandler_ = LI_FN_NO_DEF(RtlRemoveVectoredExceptionHandler).get();
     auto RtlpRemoveVectoredHandler_ = Memcury::Scanner(RtlRemoveVectoredExceptionHandler_).RelativeOffset(3);
     auto LdrpVectorHandlerList = (_LDRP_VECTOR_HANDLER_LIST*)RtlpRemoveVectoredHandler_.ScanFor({ 0x48, 0x8B, 0xE9 }).RelativeOffset(-4).Get();
@@ -441,6 +452,7 @@ NTSTATUS NTAPI Asteria::Windows::NtAllocateVirtualMemoryHook(
     ULONG AllocationType,
     ULONG Protect
 ) {
+    fuckIda;
     DWORD currentProcessId = LI_FN_CACHED(GetCurrentProcessId)();
     DWORD targetProcessId = LI_FN_CACHED(GetProcessId)(ProcessHandle);
     
@@ -507,6 +519,7 @@ NTSTATUS NTAPI Asteria::Windows::NtCreateThreadExHook(
     SIZE_T MaximumStackSize,
     PVOID AttributeList
 ) {
+    fuckIda;
     DWORD currentProcessId = LI_FN_CACHED(GetCurrentProcessId)();
     DWORD targetProcessId = LI_FN_CACHED(GetProcessId)(ProcessHandle);
     
@@ -587,6 +600,7 @@ NTSTATUS NTAPI Asteria::Windows::NtQueueApcThreadHook(
     PVOID ApcArgument2,
     PVOID ApcArgument3
 ) {
+    fuckIda;
     if (!IsAddrInLoadedModule(ApcRoutine)) {
         Socket::Client::Send(Socket::Messages::Detection(
             Socket::Detections::RuntimeMemoryTampered,
@@ -643,6 +657,7 @@ NTSTATUS NTAPI Asteria::Windows::NtMapViewOfSectionHook(
     ULONG AllocationType,
     ULONG Win32Protect
 ) {
+    fuckIda;
     DWORD currentProcessId = LI_FN_CACHED(GetCurrentProcessId)();
     DWORD targetProcessId = LI_FN_CACHED(GetProcessId)(ProcessHandle);
     
@@ -726,6 +741,7 @@ BOOL WINAPI Asteria::Windows::WriteProcessMemoryHook(
 	SIZE_T nSize,
 	SIZE_T* lpNumberOfBytesWritten
 ) {
+    fuckIda;
 
     std::cout << "Blocked WriteProcMemory" << std::endl;
 
@@ -735,6 +751,7 @@ BOOL WINAPI Asteria::Windows::WriteProcessMemoryHook(
 
 void Asteria::Windows::Setup()
 {
+    fuckIda;
     MH_CreateHook(LI_FN_CACHED(LdrLoadDll), Asteria::Windows::LdrLoadDllHook, (LPVOID*)&Asteria::Windows::LdrLoadDllOG);
     MH_CreateHook(LI_FN_CACHED(FlushInstructionCache), Asteria::Windows::FlushInstructionCacheHook, (LPVOID*)&Asteria::Windows::FlushInstructionCacheOG); // hooks
     MH_CreateHook(LI_FN_CACHED(RtlCreateUserThread), Asteria::Windows::RtlCreateUserThreadHook, (LPVOID*)&Asteria::Windows::RtlCreateUserThreadOG);

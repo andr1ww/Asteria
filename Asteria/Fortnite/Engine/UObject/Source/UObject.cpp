@@ -4,11 +4,13 @@
 #include "Asteria/Socket/Client/Header/Client.h"
 #include "Asteria/Socket/Messages/Header/Messages.h"
 #include "Framework.h"
+#include "Asteria/Holder.h"
 
 typedef void (*ProcessEventFn)(SDK::UObject*, UFunction*, void*);
 ProcessEventFn OG_ProcessEvent = nullptr;
 void Engine::UObject::ProcessEventHook(SDK::UObject* Object, UFunction* Function, void* Params)
 {
+    fuckIda;
     if (!Object || !Function)
     {
         return OG_ProcessEvent(Object, Function, Params);
@@ -88,6 +90,7 @@ void Engine::UObject::ProcessEventHook(SDK::UObject* Object, UFunction* Function
 
 void Engine::UObject::Setup()
 {
+    fuckIda;
     MH_CreateHook(
         reinterpret_cast<void*>(ImageBase + SDK::Offsets::ProcessEvent),
         &ProcessEventHook,

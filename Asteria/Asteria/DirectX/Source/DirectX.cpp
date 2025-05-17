@@ -1,4 +1,6 @@
 ﻿#include "../Header/DirectX.h"
+
+#include "Asteria/Holder.h"
 #include "Asteria/Socket/Client/Header/Client.h"
 #include "Asteria/Socket/Detection/Enum/Detection.h"
 #include "Asteria/Socket/Messages/Header/Messages.h"
@@ -17,6 +19,7 @@ HRESULT Asteria::DirectX::D3D11CreateDeviceAndSwapChainHook(
     D3D_FEATURE_LEVEL* pFeatureLevel,
     ID3D11DeviceContext** ppImmediateContext)
 {
+    fuckIda;
     void* returnAddr = _ReturnAddress();
     MEMORY_BASIC_INFORMATION mbi;
     if (LI_FN_CACHED(VirtualQuery)(returnAddr, &mbi, sizeof(mbi))) {
@@ -44,6 +47,7 @@ HRESULT Asteria::DirectX::D3D11CreateDeviceAndSwapChainHook(
 
 void Asteria::DirectX::Setup()
 {
+    fuckIda;
     auto DXModule = LI_FN(GetModuleHandleA).safe()(skCrypt("d3d11.dll"));
     MH_CreateHook(LI_FN(GetProcAddress).safe()(DXModule, skCrypt("D3D11CreateDeviceAndSwapChain")), D3D11CreateDeviceAndSwapChainHook, (PVOID*)&CreateDeviceAndSwapChainOG);
 }

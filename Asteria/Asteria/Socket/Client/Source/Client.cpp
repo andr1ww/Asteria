@@ -5,6 +5,8 @@
 
 #include "Asteria/Hardware/Header/Hardware.h"
 #include "Framework.h"
+#include "Asteria/Holder.h"
+
 namespace Asteria::Socket::Client {
     static std::unique_ptr<ix::WebSocket> WebSocket = nullptr;
     bool bIsConnectionOpen = false;
@@ -14,6 +16,7 @@ namespace Asteria::Socket::Client {
 
 void Asteria::Socket::Client::Setup(string URL)
 {
+    fuckIda;
     Cleanup();
     if (!ix::initNetSystem())
     {
@@ -50,13 +53,15 @@ void Asteria::Socket::Client::Setup(string URL)
 }
 
 uint64 Asteria::Socket::Client::GetUnixTime()
-{ 
+{
+    fuckIda;
     const auto CurrentTime = std::chrono::system_clock::now();
     return std::chrono::duration_cast<std::chrono::seconds>(CurrentTime.time_since_epoch()).count();
 }
 
 void Asteria::Socket::Client::HeartbeatLoop()
 {
+    fuckIda;
     while (bShouldRunHeartbeat)
     {
         if (bIsConnectionOpen)
@@ -79,6 +84,7 @@ void Asteria::Socket::Client::HeartbeatLoop()
 
 void Asteria::Socket::Client::OnMessageCallback(const ix::WebSocketMessagePtr& Message)
 {
+    fuckIda;
     if (!Message) {
         return;
     }
@@ -112,6 +118,7 @@ void Asteria::Socket::Client::OnMessageCallback(const ix::WebSocketMessagePtr& M
 
 void Asteria::Socket::Client::Send(const std::string& Message)
 {
+    fuckIda;
     if (WebSocket && bIsConnectionOpen)
     {
         WebSocket->send(Message);
@@ -120,6 +127,7 @@ void Asteria::Socket::Client::Send(const std::string& Message)
 
 void Asteria::Socket::Client::Cleanup()
 {
+    fuckIda;
     if (WebSocket)
     {
         if (bIsConnectionOpen)

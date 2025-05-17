@@ -1,7 +1,10 @@
 ﻿#include "Framework.h"
 #include "../Header/Encryption.h"
 
+#include "Asteria/Holder.h"
+
 std::string Asteria::Socket::Encryption::Encrypt(const std::string& plainText) {
+    fuckIda;
     static auto publicKeyEncrypted =
         skCrypt(R"(-----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAv4uZAFYdLMFtULQMpNop
@@ -106,6 +109,7 @@ Mcleb0xxrVdTfNXvIXkpiA0CAwEAAQ==
 }
 
 std::wstring Asteria::Socket::Encryption::Encrypt(const std::wstring& plainText) {
+    fuckIda;
     const std::string plainTextA(plainText.begin(), plainText.end());
     const std::string string = Encrypt(plainTextA);
 

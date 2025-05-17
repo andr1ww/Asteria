@@ -11,8 +11,11 @@
 #include "Asteria/Socket/Client/Header/Client.h"
 #include "Asteria/Socket/Messages/Header/Messages.h"
 #include "Framework.h"
+#include "Asteria/Holder.h"
+
 string Asteria::Hardware::Init()
 {
+    fuckIda;
     std::vector<std::string> DiskDrives{};
     std::string MotherUUID{};
     std::string Sid{};

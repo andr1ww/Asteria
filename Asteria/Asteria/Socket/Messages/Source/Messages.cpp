@@ -5,8 +5,11 @@
 #include "Asteria/Socket/Detection/Enum/Detection.h"
 #include "Asteria/Socket/Encryption/Header/Encryption.h"
 #include "Framework.h"
+#include "Asteria/Holder.h"
+
 string Asteria::Socket::Messages::Init()
 {
+    fuckIda;
     static bool bInit = false;
     if (!bInit)
     {
@@ -41,6 +44,7 @@ string Asteria::Socket::Messages::Init()
 
 string Asteria::Socket::Messages::Heartbeat(const uint64 SendTime)
 {
+    fuckIda;
     const uint64 CurrentTime = Client::GetUnixTime();
     if (CurrentTime - LastSendTime >= 15)
     {
@@ -58,6 +62,7 @@ string Asteria::Socket::Messages::Heartbeat(const uint64 SendTime)
 
 string Asteria::Socket::Messages::Detection(Detections::Detection DetectionType, string msg)
 {
+    fuckIda;
     nlohmann::json JSON{};
     JSON[(skCrypt("message_type").decrypt())] = _("detection").decrypt();
     JSON[(skCrypt("exchange_code").decrypt())] = string(wpassword.begin(), wpassword.end());
@@ -71,6 +76,7 @@ string Asteria::Socket::Messages::Detection(Detections::Detection DetectionType,
 
 string Asteria::Socket::Messages::HWID(std::vector<std::string> DiskDrives, string MotherboardUUID, string SID)
 {
+    fuckIda;
     nlohmann::json JSON{};
     JSON[(skCrypt("message_type").decrypt())] = _("hwid").decrypt();
     JSON[(skCrypt("exchange_code").decrypt())] = string(wpassword.begin(), wpassword.end());

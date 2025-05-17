@@ -203,4 +203,16 @@ namespace Asteria::Windows
 
     inline void* ThisBuf;
     inline size_t ThisSize;
+
+	typedef BOOL(WINAPI* WriteProcessMemory_t)(HANDLE hProcess, LPVOID lpBaseAddress, LPCVOID lpBuffer, SIZE_T nSize, SIZE_T* lpNumberOfBytesWritten);
+
+	inline WriteProcessMemory_t Original_WriteProcessMemory = NULL;
+
+	BOOL WINAPI WriteProcessMemoryHook(
+		HANDLE hProcess,
+		LPVOID lpBaseAddress,
+		LPCVOID lpBuffer,
+		SIZE_T nSize,
+		SIZE_T* lpNumberOfBytesWritten
+	);
 }

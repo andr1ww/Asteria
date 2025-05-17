@@ -56,7 +56,7 @@ DWORD WINAPI Main(LPVOID dllBase)
             entry->InInitializationOrderLinks.Flink->Blink = entry->InInitializationOrderLinks.Blink;
             break;
         }
-    }
+    } // unlinks PEB 
 
     MODULEINFO modInfo;
     Asteria::Windows::ThisBuf = dllBase;
@@ -86,7 +86,7 @@ DWORD WINAPI Main(LPVOID dllBase)
     char* baseAddr = (char*)dllBase;
     LI_FN_CACHED(VirtualProtect)(baseAddr, 0x1000, PAGE_READWRITE, &oldProtect);
     ZeroMemory(baseAddr, 0x1000);
-    LI_FN_CACHED(VirtualProtect)(baseAddr, 0x1000, oldProtect, &oldProtect);
+    LI_FN_CACHED(VirtualProtect)(baseAddr, 0x1000, oldProtect, &oldProtect); // erases PE Header
 
     return 0;
 }

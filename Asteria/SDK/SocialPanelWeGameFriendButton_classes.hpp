@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C
-// 0x0018 (0x0B60 - 0x0B48)
+// 0x0018 (0x0BB8 - 0x0BA0)
 class USocialPanelWeGameFriendButton_C final : public UCommonButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnHovered;                                         // 0x0B50(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_LinkPrompt;                                   // 0x0B58(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnHovered;                                         // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_LinkPrompt;                                   // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_SocialPanelWeGameFriendButton(int32 EntryPoint);
-	void BP_OnHovered();
 	void BP_OnUnhovered();
+	void BP_OnHovered();
 
 public:
 	static class UClass* StaticClass()
@@ -41,11 +41,6 @@ public:
 		return GetDefaultObjImpl<USocialPanelWeGameFriendButton_C>();
 	}
 };
-static_assert(alignof(USocialPanelWeGameFriendButton_C) == 0x000008, "Wrong alignment on USocialPanelWeGameFriendButton_C");
-static_assert(sizeof(USocialPanelWeGameFriendButton_C) == 0x000B60, "Wrong size on USocialPanelWeGameFriendButton_C");
-static_assert(offsetof(USocialPanelWeGameFriendButton_C, UberGraphFrame) == 0x000B48, "Member 'USocialPanelWeGameFriendButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USocialPanelWeGameFriendButton_C, OnHovered) == 0x000B50, "Member 'USocialPanelWeGameFriendButton_C::OnHovered' has a wrong offset!");
-static_assert(offsetof(USocialPanelWeGameFriendButton_C, Text_LinkPrompt) == 0x000B58, "Member 'USocialPanelWeGameFriendButton_C::Text_LinkPrompt' has a wrong offset!");
 
 }
 

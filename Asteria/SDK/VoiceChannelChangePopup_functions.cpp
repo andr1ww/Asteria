@@ -17,63 +17,15 @@
 namespace SDK
 {
 
-// Function VoiceChannelChangePopup.VoiceChannelChangePopup_C.ExecuteUbergraph_VoiceChannelChangePopup
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function VoiceChannelChangePopup.VoiceChannelChangePopup_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UVoiceChannelChangePopup_C::ExecuteUbergraph_VoiceChannelChangePopup(int32 EntryPoint)
+void UVoiceChannelChangePopup_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelChangePopup_C", "ExecuteUbergraph_VoiceChannelChangePopup");
-
-	Params::VoiceChannelChangePopup_C_ExecuteUbergraph_VoiceChannelChangePopup Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function VoiceChannelChangePopup.VoiceChannelChangePopup_C.OnPlayCloseAnimation
-// (Event, Protected, BlueprintEvent)
-
-void UVoiceChannelChangePopup_C::OnPlayCloseAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelChangePopup_C", "OnPlayCloseAnimation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function VoiceChannelChangePopup.VoiceChannelChangePopup_C.OnPlayOpenAnimation
-// (Event, Protected, BlueprintEvent)
-
-void UVoiceChannelChangePopup_C::OnPlayOpenAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelChangePopup_C", "OnPlayOpenAnimation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function VoiceChannelChangePopup.VoiceChannelChangePopup_C.Popup Animation Finished
-// (BlueprintCallable, BlueprintEvent)
-
-void UVoiceChannelChangePopup_C::Popup_Animation_Finished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelChangePopup_C", "Popup Animation Finished");
+		Func = Class->GetFunction("VoiceChannelChangePopup_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -99,17 +51,85 @@ void UVoiceChannelChangePopup_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function VoiceChannelChangePopup.VoiceChannelChangePopup_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function VoiceChannelChangePopup.VoiceChannelChangePopup_C.Popup Animation Finished
+// (BlueprintCallable, BlueprintEvent)
 
-void UVoiceChannelChangePopup_C::Construct()
+void UVoiceChannelChangePopup_C::Popup_Animation_Finished()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelChangePopup_C", "Construct");
+		Func = Class->GetFunction("VoiceChannelChangePopup_C", "Popup Animation Finished");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VoiceChannelChangePopup.VoiceChannelChangePopup_C.OnPlayOpenAnimation
+// (Event, Protected, BlueprintEvent)
+
+void UVoiceChannelChangePopup_C::OnPlayOpenAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VoiceChannelChangePopup_C", "OnPlayOpenAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VoiceChannelChangePopup.VoiceChannelChangePopup_C.OnPlayCloseAnimation
+// (Event, Protected, BlueprintEvent)
+
+void UVoiceChannelChangePopup_C::OnPlayCloseAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VoiceChannelChangePopup_C", "OnPlayCloseAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VoiceChannelChangePopup.VoiceChannelChangePopup_C.OnInputModeChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// ECommonInputType                        NewInputType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UVoiceChannelChangePopup_C::OnInputModeChanged(ECommonInputType NewInputType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VoiceChannelChangePopup_C", "OnInputModeChanged");
+
+	Params::VoiceChannelChangePopup_C_OnInputModeChanged Parms{};
+
+	Parms.NewInputType = NewInputType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function VoiceChannelChangePopup.VoiceChannelChangePopup_C.ExecuteUbergraph_VoiceChannelChangePopup
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UVoiceChannelChangePopup_C::ExecuteUbergraph_VoiceChannelChangePopup(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VoiceChannelChangePopup_C", "ExecuteUbergraph_VoiceChannelChangePopup");
+
+	Params::VoiceChannelChangePopup_C_ExecuteUbergraph_VoiceChannelChangePopup Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UTextStyle_MediumButton_C>();
 	}
 };
-static_assert(alignof(UTextStyle_MediumButton_C) == 0x000008, "Wrong alignment on UTextStyle_MediumButton_C");
-static_assert(sizeof(UTextStyle_MediumButton_C) == 0x000148, "Wrong size on UTextStyle_MediumButton_C");
 
 }
 

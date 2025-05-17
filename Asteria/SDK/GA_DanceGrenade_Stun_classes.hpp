@@ -10,24 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_DanceGrenade_Stun.GA_DanceGrenade_Stun_C
-// 0x0020 (0x0960 - 0x0940)
+// 0x0020 (0x0AC8 - 0x0AA8)
 class UGA_DanceGrenade_Stun_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAnimMontage*                           AnimMontage;                                       // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldUseSharedAnim;                               // 0x0950(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_951[0x3];                                      // 0x0951(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   DanceGrenadeHolsterId;                             // 0x0954(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsSkydiving;                                       // 0x095C(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAnimMontage*                           AnimMontage;                                       // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldUseSharedAnim;                               // 0x0AB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AB9[0x3];                                      // 0x0AB9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   DanceGrenadeHolsterId;                             // 0x0ABC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsSkydiving;                                       // 0x0AC4(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GA_DanceGrenade_Stun(int32 EntryPoint);
@@ -44,13 +44,6 @@ public:
 		return GetDefaultObjImpl<UGA_DanceGrenade_Stun_C>();
 	}
 };
-static_assert(alignof(UGA_DanceGrenade_Stun_C) == 0x000008, "Wrong alignment on UGA_DanceGrenade_Stun_C");
-static_assert(sizeof(UGA_DanceGrenade_Stun_C) == 0x000960, "Wrong size on UGA_DanceGrenade_Stun_C");
-static_assert(offsetof(UGA_DanceGrenade_Stun_C, UberGraphFrame) == 0x000940, "Member 'UGA_DanceGrenade_Stun_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGA_DanceGrenade_Stun_C, AnimMontage) == 0x000948, "Member 'UGA_DanceGrenade_Stun_C::AnimMontage' has a wrong offset!");
-static_assert(offsetof(UGA_DanceGrenade_Stun_C, ShouldUseSharedAnim) == 0x000950, "Member 'UGA_DanceGrenade_Stun_C::ShouldUseSharedAnim' has a wrong offset!");
-static_assert(offsetof(UGA_DanceGrenade_Stun_C, DanceGrenadeHolsterId) == 0x000954, "Member 'UGA_DanceGrenade_Stun_C::DanceGrenadeHolsterId' has a wrong offset!");
-static_assert(offsetof(UGA_DanceGrenade_Stun_C, IsSkydiving) == 0x00095C, "Member 'UGA_DanceGrenade_Stun_C::IsSkydiving' has a wrong offset!");
 
 }
 

@@ -10,30 +10,34 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass Blueprint_Paper_VIM.Blueprint_Paper_VIM_C
-// 0x04F8 (0x0808 - 0x0310)
+// 0x0510 (0x08B0 - 0x03A0)
 class UBlueprint_Paper_VIM_C final : public UFortAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0310(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone_985813CD40257121C24510B1EFA3045F; // 0x0318(0x0128)()
-	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone_88B6F311437F6802F9D4E885AEBB612D; // 0x0440(0x0128)()
-	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone_62132DD84DE9792F6948379FF19FE9B0; // 0x0568(0x0128)()
-	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone_D9C2507C414C01F7CECC0291267407DC; // 0x0690(0x0128)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_209BCB204FB8EDDD0FE0ECAF3A14490E; // 0x07B8(0x0020)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_EAD8434D41BA827A02AADFB11592B5F7; // 0x07D8(0x0020)()
-	struct FAnimNode_MeshSpaceRefPose             AnimGraphNode_MeshRefPose_12EF14484EC26A755A1F178B81B266BF; // 0x07F8(0x0010)()
+	uint8                                         Pad_398[0x8];                                      // 0x0398(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone_3;                        // 0x03B0(0x0128)()
+	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone_2;                        // 0x04D8(0x0128)()
+	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone_1;                        // 0x0600(0x0128)()
+	struct FAnimNode_SpringBone                   AnimGraphNode_SpringBone;                          // 0x0728(0x0128)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0850(0x0020)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0870(0x0030)()
+	struct FAnimNode_MeshSpaceRefPose             AnimGraphNode_MeshRefPose;                         // 0x08A0(0x0010)()
 
 public:
 	void ExecuteUbergraph_Blueprint_Paper_VIM(int32 EntryPoint);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -45,16 +49,6 @@ public:
 		return GetDefaultObjImpl<UBlueprint_Paper_VIM_C>();
 	}
 };
-static_assert(alignof(UBlueprint_Paper_VIM_C) == 0x000008, "Wrong alignment on UBlueprint_Paper_VIM_C");
-static_assert(sizeof(UBlueprint_Paper_VIM_C) == 0x000808, "Wrong size on UBlueprint_Paper_VIM_C");
-static_assert(offsetof(UBlueprint_Paper_VIM_C, UberGraphFrame) == 0x000310, "Member 'UBlueprint_Paper_VIM_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_SpringBone_985813CD40257121C24510B1EFA3045F) == 0x000318, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_SpringBone_985813CD40257121C24510B1EFA3045F' has a wrong offset!");
-static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_SpringBone_88B6F311437F6802F9D4E885AEBB612D) == 0x000440, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_SpringBone_88B6F311437F6802F9D4E885AEBB612D' has a wrong offset!");
-static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_SpringBone_62132DD84DE9792F6948379FF19FE9B0) == 0x000568, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_SpringBone_62132DD84DE9792F6948379FF19FE9B0' has a wrong offset!");
-static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_SpringBone_D9C2507C414C01F7CECC0291267407DC) == 0x000690, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_SpringBone_D9C2507C414C01F7CECC0291267407DC' has a wrong offset!");
-static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_ComponentToLocalSpace_209BCB204FB8EDDD0FE0ECAF3A14490E) == 0x0007B8, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_ComponentToLocalSpace_209BCB204FB8EDDD0FE0ECAF3A14490E' has a wrong offset!");
-static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_Root_EAD8434D41BA827A02AADFB11592B5F7) == 0x0007D8, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_Root_EAD8434D41BA827A02AADFB11592B5F7' has a wrong offset!");
-static_assert(offsetof(UBlueprint_Paper_VIM_C, AnimGraphNode_MeshRefPose_12EF14484EC26A755A1F178B81B266BF) == 0x0007F8, "Member 'UBlueprint_Paper_VIM_C::AnimGraphNode_MeshRefPose_12EF14484EC26A755A1F178B81B266BF' has a wrong offset!");
 
 }
 

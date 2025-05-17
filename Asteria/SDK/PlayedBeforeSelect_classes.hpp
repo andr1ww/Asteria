@@ -18,20 +18,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PlayedBeforeSelect.PlayedBeforeSelect_C
-// 0x0038 (0x0380 - 0x0348)
+// 0x0040 (0x02F0 - 0x02B0)
 class UPlayedBeforeSelect_C final : public UFortPlayedBeforeSelect
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                Border_Invite;                                     // 0x0358(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_1;                                 // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_6;                                 // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_InviteOnly;                   // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInviteEventTitle_C*                    InviteEventTitle;                                  // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x02B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_1;                                 // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_6;                                 // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_InviteOnly;                   // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInviteEventTitle_C*                    InviteEventTitle;                                  // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        LoginType_Switcher;                                // 0x02E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USignInWidget_C*                        SignInWidget;                                      // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnActivated();
+	void OnActivated_1();
 	void ExecuteUbergraph_PlayedBeforeSelect(int32 EntryPoint);
 
 public:
@@ -44,15 +45,6 @@ public:
 		return GetDefaultObjImpl<UPlayedBeforeSelect_C>();
 	}
 };
-static_assert(alignof(UPlayedBeforeSelect_C) == 0x000008, "Wrong alignment on UPlayedBeforeSelect_C");
-static_assert(sizeof(UPlayedBeforeSelect_C) == 0x000380, "Wrong size on UPlayedBeforeSelect_C");
-static_assert(offsetof(UPlayedBeforeSelect_C, UberGraphFrame) == 0x000348, "Member 'UPlayedBeforeSelect_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPlayedBeforeSelect_C, Intro) == 0x000350, "Member 'UPlayedBeforeSelect_C::Intro' has a wrong offset!");
-static_assert(offsetof(UPlayedBeforeSelect_C, Border_Invite) == 0x000358, "Member 'UPlayedBeforeSelect_C::Border_Invite' has a wrong offset!");
-static_assert(offsetof(UPlayedBeforeSelect_C, CommonTextBlock_1) == 0x000360, "Member 'UPlayedBeforeSelect_C::CommonTextBlock_1' has a wrong offset!");
-static_assert(offsetof(UPlayedBeforeSelect_C, CommonTextBlock_6) == 0x000368, "Member 'UPlayedBeforeSelect_C::CommonTextBlock_6' has a wrong offset!");
-static_assert(offsetof(UPlayedBeforeSelect_C, CommonWidgetSwitcher_InviteOnly) == 0x000370, "Member 'UPlayedBeforeSelect_C::CommonWidgetSwitcher_InviteOnly' has a wrong offset!");
-static_assert(offsetof(UPlayedBeforeSelect_C, InviteEventTitle) == 0x000378, "Member 'UPlayedBeforeSelect_C::InviteEventTitle' has a wrong offset!");
 
 }
 

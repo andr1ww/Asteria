@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<URanged3PCamera_C>();
 	}
 };
-static_assert(alignof(URanged3PCamera_C) == 0x000008, "Wrong alignment on URanged3PCamera_C");
-static_assert(sizeof(URanged3PCamera_C) == 0x000138, "Wrong size on URanged3PCamera_C");
 
 }
 

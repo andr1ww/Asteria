@@ -73,15 +73,15 @@ void UTeamMemberManage_C::BndEvt__ContentSwitcher_K2Node_ComponentBoundEvent_2_O
 }
 
 
-// Function TeamMemberManage.TeamMemberManage_C.OnDeactivated
+// Function TeamMemberManage.TeamMemberManage_C.BP_OnDeactivated
 // (Event, Protected, BlueprintEvent)
 
-void UTeamMemberManage_C::OnDeactivated()
+void UTeamMemberManage_C::BP_OnDeactivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberManage_C", "OnDeactivated");
+		Func = Class->GetFunction("TeamMemberManage_C", "BP_OnDeactivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -109,15 +109,15 @@ void UTeamMemberManage_C::BndEvt__BP_LocalPlayerBannerEditor_K2Node_ComponentBou
 }
 
 
-// Function TeamMemberManage.TeamMemberManage_C.OnActivated
+// Function TeamMemberManage.TeamMemberManage_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UTeamMemberManage_C::OnActivated()
+void UTeamMemberManage_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TeamMemberManage_C", "OnActivated");
+		Func = Class->GetFunction("TeamMemberManage_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

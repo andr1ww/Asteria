@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass FortVoiceChannelSpeakerContainer.FortVoiceChannelSpeakerContainer_C
-// 0x0008 (0x02D8 - 0x02D0)
+// 0x0010 (0x0330 - 0x0320)
 class UFortVoiceChannelSpeakerContainer_C final : public UFortVoiceSpeakerContainerWidget
 {
 public:
-	class UImage*                                 SpeakerIcon;                                       // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SpeakerIcon;                                       // 0x0320(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,9 +33,6 @@ public:
 		return GetDefaultObjImpl<UFortVoiceChannelSpeakerContainer_C>();
 	}
 };
-static_assert(alignof(UFortVoiceChannelSpeakerContainer_C) == 0x000008, "Wrong alignment on UFortVoiceChannelSpeakerContainer_C");
-static_assert(sizeof(UFortVoiceChannelSpeakerContainer_C) == 0x0002D8, "Wrong size on UFortVoiceChannelSpeakerContainer_C");
-static_assert(offsetof(UFortVoiceChannelSpeakerContainer_C, SpeakerIcon) == 0x0002D0, "Member 'UFortVoiceChannelSpeakerContainer_C::SpeakerIcon' has a wrong offset!");
 
 }
 

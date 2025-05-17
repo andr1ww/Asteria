@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass RelevancyZoneIndicator.RelevancyZoneIndicator_C
-// 0x0000 (0x03A0 - 0x03A0)
+// 0x0000 (0x0380 - 0x0380)
 class ARelevancyZoneIndicator_C final : public AFortRelevancyZoneIndicator
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ARelevancyZoneIndicator_C>();
 	}
 };
-static_assert(alignof(ARelevancyZoneIndicator_C) == 0x000008, "Wrong alignment on ARelevancyZoneIndicator_C");
-static_assert(sizeof(ARelevancyZoneIndicator_C) == 0x0003A0, "Wrong size on ARelevancyZoneIndicator_C");
 
 }
 

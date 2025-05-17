@@ -37,8 +37,6 @@ public:
 		return GetDefaultObjImpl<UEyeTrackerFunctionLibrary>();
 	}
 };
-static_assert(alignof(UEyeTrackerFunctionLibrary) == 0x000008, "Wrong alignment on UEyeTrackerFunctionLibrary");
-static_assert(sizeof(UEyeTrackerFunctionLibrary) == 0x000028, "Wrong size on UEyeTrackerFunctionLibrary");
 
 }
 

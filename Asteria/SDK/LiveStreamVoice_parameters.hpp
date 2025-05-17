@@ -24,10 +24,6 @@ public:
 	uint8                                         LocalUserNum;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnable;                                           // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveStreamVoiceSubsystem_EnableLocalVoiceProcessing) == 0x000001, "Wrong alignment on LiveStreamVoiceSubsystem_EnableLocalVoiceProcessing");
-static_assert(sizeof(LiveStreamVoiceSubsystem_EnableLocalVoiceProcessing) == 0x000002, "Wrong size on LiveStreamVoiceSubsystem_EnableLocalVoiceProcessing");
-static_assert(offsetof(LiveStreamVoiceSubsystem_EnableLocalVoiceProcessing, LocalUserNum) == 0x000000, "Member 'LiveStreamVoiceSubsystem_EnableLocalVoiceProcessing::LocalUserNum' has a wrong offset!");
-static_assert(offsetof(LiveStreamVoiceSubsystem_EnableLocalVoiceProcessing, bEnable) == 0x000001, "Member 'LiveStreamVoiceSubsystem_EnableLocalVoiceProcessing::bEnable' has a wrong offset!");
 
 // Function LiveStreamVoice.LiveStreamVoiceSubsystem.SetVoiceSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -36,9 +32,6 @@ struct LiveStreamVoiceSubsystem_SetVoiceSettings final
 public:
 	struct FVoiceSettings                         InSettings;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveStreamVoiceSubsystem_SetVoiceSettings) == 0x000008, "Wrong alignment on LiveStreamVoiceSubsystem_SetVoiceSettings");
-static_assert(sizeof(LiveStreamVoiceSubsystem_SetVoiceSettings) == 0x000018, "Wrong size on LiveStreamVoiceSubsystem_SetVoiceSettings");
-static_assert(offsetof(LiveStreamVoiceSubsystem_SetVoiceSettings, InSettings) == 0x000000, "Member 'LiveStreamVoiceSubsystem_SetVoiceSettings::InSettings' has a wrong offset!");
 
 }
 

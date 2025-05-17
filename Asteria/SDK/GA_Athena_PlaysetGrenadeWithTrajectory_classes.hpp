@@ -18,25 +18,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C
-// 0x0028 (0x0C80 - 0x0C58)
+// 0x0028 (0x0E90 - 0x0E68)
 class UGA_Athena_PlaysetGrenadeWithTrajectory_C : public UGA_Athena_UtilityGrenade_WithTrajectory_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_PlaysetGrenadeWithTrajectory_C; // 0x0C58(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class ABP_ProjectileTrajectory_C*             ProjectileTrajectoryRed;                           // 0x0C60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 RedIndicatorClass;                                 // 0x0C68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortPlaysetItemDefinition*             DefaultPlayset;                                    // 0x0C70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShouldNotThrow;                                   // 0x0C78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          CanConsume;                                        // 0x0C79(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_PlaysetGrenadeWithTrajectory_C; // 0x0E68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class ABP_ProjectileTrajectory_C*             ProjectileTrajectoryRed;                           // 0x0E70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 RedIndicatorClass;                                 // 0x0E78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortPlaysetItemDefinition*             DefaultPlayset;                                    // 0x0E80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldNotThrow;                                   // 0x0E88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          CanConsume;                                        // 0x0E89(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory(int32 EntryPoint);
-	void SetupDummyProjectileRed();
-	void GetActivePlaysetData(class UFortPlaysetItemDefinition** OutData);
-	void SetPlaysetData(class AFortProjectileBase* Projectile_Reference);
-	void SetActivePlaysetOnPlayer();
-	void CalculateRotation(class UFortPlaysetItemDefinition* Playset, const struct FRotator& Rotation, struct FRotator* NewRotation);
-	void DestroyProjectileTrajectory();
 	void OnAbilityInputReleased();
 	void AthenaProjectileSpawned(class AFortProjectileBase* ProjectileReference_0);
 	void InitTrajectoryVariables();
@@ -44,6 +38,12 @@ public:
 	void CleanupTrajectoryDisplay();
 	void K2_ActivateAbility();
 	void UpdateTrajectorySpline();
+	void SetupDummyProjectileRed();
+	void GetActivePlaysetData(class UFortPlaysetItemDefinition** OutData);
+	void SetPlaysetData(class AFortProjectileBase* Projectile_Reference);
+	void SetActivePlaysetOnPlayer();
+	void CalculateRotation(class UFortPlaysetItemDefinition* Playset, const struct FRotator& Rotation, struct FRotator* NewRotation);
+	void DestroyProjectileTrajectory();
 
 public:
 	static class UClass* StaticClass()
@@ -55,14 +55,6 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_PlaysetGrenadeWithTrajectory_C>();
 	}
 };
-static_assert(alignof(UGA_Athena_PlaysetGrenadeWithTrajectory_C) == 0x000008, "Wrong alignment on UGA_Athena_PlaysetGrenadeWithTrajectory_C");
-static_assert(sizeof(UGA_Athena_PlaysetGrenadeWithTrajectory_C) == 0x000C80, "Wrong size on UGA_Athena_PlaysetGrenadeWithTrajectory_C");
-static_assert(offsetof(UGA_Athena_PlaysetGrenadeWithTrajectory_C, UberGraphFrame_GA_Athena_PlaysetGrenadeWithTrajectory_C) == 0x000C58, "Member 'UGA_Athena_PlaysetGrenadeWithTrajectory_C::UberGraphFrame_GA_Athena_PlaysetGrenadeWithTrajectory_C' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_PlaysetGrenadeWithTrajectory_C, ProjectileTrajectoryRed) == 0x000C60, "Member 'UGA_Athena_PlaysetGrenadeWithTrajectory_C::ProjectileTrajectoryRed' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_PlaysetGrenadeWithTrajectory_C, RedIndicatorClass) == 0x000C68, "Member 'UGA_Athena_PlaysetGrenadeWithTrajectory_C::RedIndicatorClass' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_PlaysetGrenadeWithTrajectory_C, DefaultPlayset) == 0x000C70, "Member 'UGA_Athena_PlaysetGrenadeWithTrajectory_C::DefaultPlayset' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_PlaysetGrenadeWithTrajectory_C, bShouldNotThrow) == 0x000C78, "Member 'UGA_Athena_PlaysetGrenadeWithTrajectory_C::bShouldNotThrow' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_PlaysetGrenadeWithTrajectory_C, CanConsume) == 0x000C79, "Member 'UGA_Athena_PlaysetGrenadeWithTrajectory_C::CanConsume' has a wrong offset!");
 
 }
 

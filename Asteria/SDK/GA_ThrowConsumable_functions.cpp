@@ -37,6 +37,20 @@ void UGA_ThrowConsumable_C::ExecuteUbergraph_GA_ThrowConsumable(int32 EntryPoint
 }
 
 
+// Function GA_ThrowConsumable.GA_ThrowConsumable_C.ThrowMontageStarted
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_ThrowConsumable_C::ThrowMontageStarted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_ThrowConsumable_C", "ThrowMontageStarted");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_ThrowConsumable.GA_ThrowConsumable_C.UpdateTrajectory
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -228,8 +242,8 @@ void UGA_ThrowConsumable_C::OnFinish_96367E244486362FDDE5ED87D909C17B()
 // Function GA_ThrowConsumable.GA_ThrowConsumable_C.Triggered_01C5B37D48E3DC6F82DDC58640CE2A27
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayAbilityTargetDataHandle TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FGameplayTag                     ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
 void UGA_ThrowConsumable_C::Triggered_01C5B37D48E3DC6F82DDC58640CE2A27(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
 {
@@ -250,8 +264,8 @@ void UGA_ThrowConsumable_C::Triggered_01C5B37D48E3DC6F82DDC58640CE2A27(const str
 // Function GA_ThrowConsumable.GA_ThrowConsumable_C.Cancelled_01C5B37D48E3DC6F82DDC58640CE2A27
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayAbilityTargetDataHandle TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FGameplayTag                     ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
 void UGA_ThrowConsumable_C::Cancelled_01C5B37D48E3DC6F82DDC58640CE2A27(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
 {
@@ -272,8 +286,8 @@ void UGA_ThrowConsumable_C::Cancelled_01C5B37D48E3DC6F82DDC58640CE2A27(const str
 // Function GA_ThrowConsumable.GA_ThrowConsumable_C.Completed_01C5B37D48E3DC6F82DDC58640CE2A27
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayAbilityTargetDataHandle TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FGameplayTag                     ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTag&              ApplicationTag                                         (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
 void UGA_ThrowConsumable_C::Completed_01C5B37D48E3DC6F82DDC58640CE2A27(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)
 {
@@ -309,14 +323,15 @@ void UGA_ThrowConsumable_C::PrethrowSetup()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UClass*                           ProjectileClass_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          ProjectileSpawnLocation                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FRotator                         ProjectileSpawnDirection                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
-// struct FFortGameplayEffectContainerSpec ExplosionEffectContainerSpec_0                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FVector&                   ProjectileSpawnLocation                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FRotator&                  ProjectileSpawnDirection                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+// const struct FFortGameplayEffectContainerSpec&HitEffectContainerSpec_0                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortGameplayEffectContainerSpec&ExplosionEffectContainerSpec_0                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                                   ProjectileInitialSpeed                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   ProjectileGravityScale_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AFortProjectileBase*              SpawnedProjectile_0                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortProjectileBase**             SpawnedProjectile_0                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_ThrowConsumable_C::SpawnThrownProjectile(class UClass* ProjectileClass_0, const struct FVector& ProjectileSpawnLocation, const struct FRotator& ProjectileSpawnDirection, const struct FFortGameplayEffectContainerSpec& ExplosionEffectContainerSpec_0, float ProjectileInitialSpeed, float ProjectileGravityScale_0, class AFortProjectileBase** SpawnedProjectile_0)
+void UGA_ThrowConsumable_C::SpawnThrownProjectile(class UClass* ProjectileClass_0, const struct FVector& ProjectileSpawnLocation, const struct FRotator& ProjectileSpawnDirection, const struct FFortGameplayEffectContainerSpec& HitEffectContainerSpec_0, const struct FFortGameplayEffectContainerSpec& ExplosionEffectContainerSpec_0, float ProjectileInitialSpeed, float ProjectileGravityScale_0, class AFortProjectileBase** SpawnedProjectile_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -328,6 +343,7 @@ void UGA_ThrowConsumable_C::SpawnThrownProjectile(class UClass* ProjectileClass_
 	Parms.ProjectileClass_0 = ProjectileClass_0;
 	Parms.ProjectileSpawnLocation = std::move(ProjectileSpawnLocation);
 	Parms.ProjectileSpawnDirection = std::move(ProjectileSpawnDirection);
+	Parms.HitEffectContainerSpec_0 = std::move(HitEffectContainerSpec_0);
 	Parms.ExplosionEffectContainerSpec_0 = std::move(ExplosionEffectContainerSpec_0);
 	Parms.ProjectileInitialSpeed = ProjectileInitialSpeed;
 	Parms.ProjectileGravityScale_0 = ProjectileGravityScale_0;
@@ -429,6 +445,77 @@ void UGA_ThrowConsumable_C::CleanupTrajectory()
 }
 
 
+// Function GA_ThrowConsumable.GA_ThrowConsumable_C.GetProjectileInitialSpeedToUse
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float*                                  ProjectileSpeedToUse                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_ThrowConsumable_C::GetProjectileInitialSpeedToUse(float* ProjectileSpeedToUse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_ThrowConsumable_C", "GetProjectileInitialSpeedToUse");
+
+	Params::GA_ThrowConsumable_C_GetProjectileInitialSpeedToUse Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ProjectileSpeedToUse != nullptr)
+		*ProjectileSpeedToUse = Parms.ProjectileSpeedToUse;
+}
+
+
+// Function GA_ThrowConsumable.GA_ThrowConsumable_C.GetProjectileInitialGravityScaleToUse
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float*                                  GravityScaleToUse                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_ThrowConsumable_C::GetProjectileInitialGravityScaleToUse(float* GravityScaleToUse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_ThrowConsumable_C", "GetProjectileInitialGravityScaleToUse");
+
+	Params::GA_ThrowConsumable_C_GetProjectileInitialGravityScaleToUse Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (GravityScaleToUse != nullptr)
+		*GravityScaleToUse = Parms.GravityScaleToUse;
+}
+
+
+// Function GA_ThrowConsumable.GA_ThrowConsumable_C.GetProjectileTrajectoryPoints
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<struct FVector>*                 OutSplinePoints                                        (Parm, OutParm, HasGetValueTypeHash)
+// TArray<struct FVector>*                 OutSplineTangents                                      (Parm, OutParm, HasGetValueTypeHash)
+// struct FHitResult*                      OutHitResult                                           (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void UGA_ThrowConsumable_C::GetProjectileTrajectoryPoints(TArray<struct FVector>* OutSplinePoints, TArray<struct FVector>* OutSplineTangents, struct FHitResult* OutHitResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_ThrowConsumable_C", "GetProjectileTrajectoryPoints");
+
+	Params::GA_ThrowConsumable_C_GetProjectileTrajectoryPoints Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutSplinePoints != nullptr)
+		*OutSplinePoints = std::move(Parms.OutSplinePoints);
+
+	if (OutSplineTangents != nullptr)
+		*OutSplineTangents = std::move(Parms.OutSplineTangents);
+
+	if (OutHitResult != nullptr)
+		*OutHitResult = std::move(Parms.OutHitResult);
+}
+
+
 // Function GA_ThrowConsumable.GA_ThrowConsumable_C.SpawnTrajectoryIndicator
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -455,8 +542,8 @@ class AFortProjectileTrajectory* UGA_ThrowConsumable_C::SpawnTrajectoryIndicator
 // Function GA_ThrowConsumable.GA_ThrowConsumable_C.GetSpawnLocationAndRotation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// struct FVector                          Location                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FRotator                         Rotation                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FVector*                         Location                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FRotator*                        Rotation                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UGA_ThrowConsumable_C::GetSpawnLocationAndRotation(struct FVector* Location, struct FRotator* Rotation) const
 {
@@ -480,7 +567,7 @@ void UGA_ThrowConsumable_C::GetSpawnLocationAndRotation(struct FVector* Location
 // Function GA_ThrowConsumable.GA_ThrowConsumable_C.GetOwningPlayer
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AFortPlayerPawn*                  Player_Pawn                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerPawn**                 Player_Pawn                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGA_ThrowConsumable_C::GetOwningPlayer(class AFortPlayerPawn** Player_Pawn) const
 {
@@ -498,32 +585,24 @@ void UGA_ThrowConsumable_C::GetOwningPlayer(class AFortPlayerPawn** Player_Pawn)
 }
 
 
-// Function GA_ThrowConsumable.GA_ThrowConsumable_C.GetProjectileTrajectoryPoints
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Function GA_ThrowConsumable.GA_ThrowConsumable_C.GetProjectileAdditionalThrowAngleToUse
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FVector>                  OutSplinePoints                                        (Parm, OutParm, ZeroConstructor)
-// TArray<struct FVector>                  OutSplineTangents                                      (Parm, OutParm, ZeroConstructor)
-// struct FHitResult                       OutHitResult                                           (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// float*                                  AdditionalThrowAngleToUse                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_ThrowConsumable_C::GetProjectileTrajectoryPoints(TArray<struct FVector>* OutSplinePoints, TArray<struct FVector>* OutSplineTangents, struct FHitResult* OutHitResult) const
+void UGA_ThrowConsumable_C::GetProjectileAdditionalThrowAngleToUse(float* AdditionalThrowAngleToUse) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_ThrowConsumable_C", "GetProjectileTrajectoryPoints");
+		Func = Class->GetFunction("GA_ThrowConsumable_C", "GetProjectileAdditionalThrowAngleToUse");
 
-	Params::GA_ThrowConsumable_C_GetProjectileTrajectoryPoints Parms{};
+	Params::GA_ThrowConsumable_C_GetProjectileAdditionalThrowAngleToUse Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (OutSplinePoints != nullptr)
-		*OutSplinePoints = std::move(Parms.OutSplinePoints);
-
-	if (OutSplineTangents != nullptr)
-		*OutSplineTangents = std::move(Parms.OutSplineTangents);
-
-	if (OutHitResult != nullptr)
-		*OutHitResult = std::move(Parms.OutHitResult);
+	if (AdditionalThrowAngleToUse != nullptr)
+		*AdditionalThrowAngleToUse = Parms.AdditionalThrowAngleToUse;
 }
 
 

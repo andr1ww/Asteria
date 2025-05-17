@@ -10,235 +10,61 @@
 
 #include "Basic.hpp"
 
+#include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function StoreMain_Root.StoreMain_Root_C.ShouldUserSeeNewVBuckOffer
-// 0x0018 (0x0018 - 0x0000)
-struct StoreMain_Root_C_ShouldUserSeeNewVBuckOffer final
+// Function StoreMain_Root.StoreMain_Root_C.ExecuteUbergraph_StoreMain_Root
+// 0x0060 (0x0060 - 0x0000)
+struct StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root final
 {
 public:
-	bool                                          ShowNewStyle;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortStoreContext*                      CallFunc_GetContext_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldShowNewMtxStoreUi_ReturnValue;      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFrontEndCamera                               Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFrontEndCamera                               Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Get_Main_Tab_Reference_ReturnValue;       // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESubGame                                      CallFunc_GetSubGame_ReturnValue;                   // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_1;                              // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_HasOtherPlatformCurrency;             // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class FText                                   K2Node_Event_CurrencyMessageLocText;               // 0x0018(0x0018)(ConstParm)
+	class UFortStoreFrontOfferInfo*               K2Node_Event_OfferData;                            // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortStoreContext*                      CallFunc_GetContext_ReturnValue_1;                 // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFrontEndCamera                               K2Node_Select_Default;                             // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortRuntimeOptions*                    CallFunc_GetRuntimeOptions_ReturnValue;            // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortStoreContext*                      CallFunc_GetContext_ReturnValue_2;                 // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(StoreMain_Root_C_ShouldUserSeeNewVBuckOffer) == 0x000008, "Wrong alignment on StoreMain_Root_C_ShouldUserSeeNewVBuckOffer");
-static_assert(sizeof(StoreMain_Root_C_ShouldUserSeeNewVBuckOffer) == 0x000018, "Wrong size on StoreMain_Root_C_ShouldUserSeeNewVBuckOffer");
-static_assert(offsetof(StoreMain_Root_C_ShouldUserSeeNewVBuckOffer, ShowNewStyle) == 0x000000, "Member 'StoreMain_Root_C_ShouldUserSeeNewVBuckOffer::ShowNewStyle' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ShouldUserSeeNewVBuckOffer, CallFunc_GetContext_ReturnValue) == 0x000008, "Member 'StoreMain_Root_C_ShouldUserSeeNewVBuckOffer::CallFunc_GetContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ShouldUserSeeNewVBuckOffer, CallFunc_ShouldShowNewMtxStoreUi_ReturnValue) == 0x000010, "Member 'StoreMain_Root_C_ShouldUserSeeNewVBuckOffer::CallFunc_ShouldShowNewMtxStoreUi_ReturnValue' has a wrong offset!");
 
-// Function StoreMain_Root.StoreMain_Root_C.HandleBack
-// 0x0010 (0x0010 - 0x0000)
-struct StoreMain_Root_C_HandleBack final
+// Function StoreMain_Root.StoreMain_Root_C.GenerateOfferWidget
+// 0x0008 (0x0008 - 0x0000)
+struct StoreMain_Root_C_GenerateOfferWidget final
 {
 public:
-	bool                                          PassThrough;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortUIManagerWidget_NUI*               CallFunc_GetUIManagerWidget_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortStoreFrontOfferInfo*               OfferData;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(StoreMain_Root_C_HandleBack) == 0x000008, "Wrong alignment on StoreMain_Root_C_HandleBack");
-static_assert(sizeof(StoreMain_Root_C_HandleBack) == 0x000010, "Wrong size on StoreMain_Root_C_HandleBack");
-static_assert(offsetof(StoreMain_Root_C_HandleBack, PassThrough) == 0x000000, "Member 'StoreMain_Root_C_HandleBack::PassThrough' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_HandleBack, CallFunc_GetUIManagerWidget_ReturnValue) == 0x000008, "Member 'StoreMain_Root_C_HandleBack::CallFunc_GetUIManagerWidget_ReturnValue' has a wrong offset!");
 
-// Function StoreMain_Root.StoreMain_Root_C.HandleRedeem
+// Function StoreMain_Root.StoreMain_Root_C.OnUpdateOtherPlatformMTXMessage
 // 0x0020 (0x0020 - 0x0000)
-struct StoreMain_Root_C_HandleRedeem final
+struct StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage final
 {
 public:
-	bool                                          bPassThrough;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          HasOtherPlatformCurrency;                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortUIManagerWidget_NUI*               CallFunc_GetUIManagerWidget_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URedeemFriendCodeWindow_C*              CallFunc_Create_ReturnValue;                       // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CurrencyMessageLocText;                            // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(StoreMain_Root_C_HandleRedeem) == 0x000008, "Wrong alignment on StoreMain_Root_C_HandleRedeem");
-static_assert(sizeof(StoreMain_Root_C_HandleRedeem) == 0x000020, "Wrong size on StoreMain_Root_C_HandleRedeem");
-static_assert(offsetof(StoreMain_Root_C_HandleRedeem, bPassThrough) == 0x000000, "Member 'StoreMain_Root_C_HandleRedeem::bPassThrough' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_HandleRedeem, CallFunc_GetUIManagerWidget_ReturnValue) == 0x000008, "Member 'StoreMain_Root_C_HandleRedeem::CallFunc_GetUIManagerWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_HandleRedeem, CallFunc_GetOwningPlayer_ReturnValue) == 0x000010, "Member 'StoreMain_Root_C_HandleRedeem::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_HandleRedeem, CallFunc_Create_ReturnValue) == 0x000018, "Member 'StoreMain_Root_C_HandleRedeem::CallFunc_Create_ReturnValue' has a wrong offset!");
-
-// Function StoreMain_Root.StoreMain_Root_C.SetupForCampaignUpsell
-// 0x0070 (0x0070 - 0x0000)
-struct StoreMain_Root_C_SetupForCampaignUpsell final
-{
-public:
-	class UFortRuntimeOptions*                    NewLocalVar_0;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortRuntimeOptions*                    CallFunc_GetRuntimeOptions_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor)
-	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle;              // 0x0020(0x0010)(NoDestructor)
-	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate_1;            // 0x0038(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_IsDesktopPlatform_ReturnValue;            // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_1;            // 0x0050(0x0010)(NoDestructor)
-	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x0060(0x0010)(ZeroConstructor, ReferenceParm)
-};
-static_assert(alignof(StoreMain_Root_C_SetupForCampaignUpsell) == 0x000008, "Wrong alignment on StoreMain_Root_C_SetupForCampaignUpsell");
-static_assert(sizeof(StoreMain_Root_C_SetupForCampaignUpsell) == 0x000070, "Wrong size on StoreMain_Root_C_SetupForCampaignUpsell");
-static_assert(offsetof(StoreMain_Root_C_SetupForCampaignUpsell, NewLocalVar_0) == 0x000000, "Member 'StoreMain_Root_C_SetupForCampaignUpsell::NewLocalVar_0' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupForCampaignUpsell, CallFunc_GetRuntimeOptions_ReturnValue) == 0x000008, "Member 'StoreMain_Root_C_SetupForCampaignUpsell::CallFunc_GetRuntimeOptions_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupForCampaignUpsell, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'StoreMain_Root_C_SetupForCampaignUpsell::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupForCampaignUpsell, K2Node_MakeStruct_DataTableRowHandle) == 0x000020, "Member 'StoreMain_Root_C_SetupForCampaignUpsell::K2Node_MakeStruct_DataTableRowHandle' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupForCampaignUpsell, CallFunc_GetContext_ReturnValue) == 0x000030, "Member 'StoreMain_Root_C_SetupForCampaignUpsell::CallFunc_GetContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupForCampaignUpsell, K2Node_CreateDelegate_OutputDelegate_1) == 0x000038, "Member 'StoreMain_Root_C_SetupForCampaignUpsell::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupForCampaignUpsell, CallFunc_IsDesktopPlatform_ReturnValue) == 0x000048, "Member 'StoreMain_Root_C_SetupForCampaignUpsell::CallFunc_IsDesktopPlatform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupForCampaignUpsell, K2Node_MakeStruct_DataTableRowHandle_1) == 0x000050, "Member 'StoreMain_Root_C_SetupForCampaignUpsell::K2Node_MakeStruct_DataTableRowHandle_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupForCampaignUpsell, K2Node_MakeArray_Array) == 0x000060, "Member 'StoreMain_Root_C_SetupForCampaignUpsell::K2Node_MakeArray_Array' has a wrong offset!");
-
-// Function StoreMain_Root.StoreMain_Root_C.SetupFirstFocusableTile
-// 0x0028 (0x0028 - 0x0000)
-struct StoreMain_Root_C_SetupFirstFocusableTile final
-{
-public:
-	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_1;                              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle;  // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_1; // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPanelWidget*                           K2Node_Select_Default;                             // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPanelWidget*                           K2Node_Select_Default_1;                           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue_1;                 // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(StoreMain_Root_C_SetupFirstFocusableTile) == 0x000008, "Wrong alignment on StoreMain_Root_C_SetupFirstFocusableTile");
-static_assert(sizeof(StoreMain_Root_C_SetupFirstFocusableTile) == 0x000028, "Wrong size on StoreMain_Root_C_SetupFirstFocusableTile");
-static_assert(offsetof(StoreMain_Root_C_SetupFirstFocusableTile, Temp_bool_Variable) == 0x000000, "Member 'StoreMain_Root_C_SetupFirstFocusableTile::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupFirstFocusableTile, Temp_bool_Variable_1) == 0x000001, "Member 'StoreMain_Root_C_SetupFirstFocusableTile::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupFirstFocusableTile, CallFunc_IsValid_ReturnValue) == 0x000002, "Member 'StoreMain_Root_C_SetupFirstFocusableTile::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupFirstFocusableTile, CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle) == 0x000003, "Member 'StoreMain_Root_C_SetupFirstFocusableTile::CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupFirstFocusableTile, CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_1) == 0x000004, "Member 'StoreMain_Root_C_SetupFirstFocusableTile::CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupFirstFocusableTile, K2Node_Select_Default) == 0x000008, "Member 'StoreMain_Root_C_SetupFirstFocusableTile::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupFirstFocusableTile, K2Node_Select_Default_1) == 0x000010, "Member 'StoreMain_Root_C_SetupFirstFocusableTile::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupFirstFocusableTile, CallFunc_GetChildAt_ReturnValue) == 0x000018, "Member 'StoreMain_Root_C_SetupFirstFocusableTile::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_SetupFirstFocusableTile, CallFunc_GetChildAt_ReturnValue_1) == 0x000020, "Member 'StoreMain_Root_C_SetupFirstFocusableTile::CallFunc_GetChildAt_ReturnValue_1' has a wrong offset!");
-
-// Function StoreMain_Root.StoreMain_Root_C.LayoutVBuckTiles
-// 0x0088 (0x0088 - 0x0000)
-struct StoreMain_Root_C_LayoutVBuckTiles final
-{
-public:
-	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_1;                              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle;  // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_1; // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_2; // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_2;                              // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class UPanelWidget*                           K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPanelWidget*                           K2Node_Select_Default_1;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStoreMain_MTXOffer_C_C*                K2Node_DynamicCast_AsStore_Main_MTXOffer_C;        // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStoreMain_MTXOffer_B_C*                K2Node_DynamicCast_AsStore_Main_MTXOffer_B;        // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStoreMain_MTXOffer_C*                  K2Node_DynamicCast_AsStore_Main_MTXOffer;          // 0x0060(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGridSlot*                              CallFunc_SlotAsGridSlot_ReturnValue;               // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPanelWidget*                           K2Node_Select_Default_2;                           // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetChildrenCount_ReturnValue_1;           // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(StoreMain_Root_C_LayoutVBuckTiles) == 0x000008, "Wrong alignment on StoreMain_Root_C_LayoutVBuckTiles");
-static_assert(sizeof(StoreMain_Root_C_LayoutVBuckTiles) == 0x000088, "Wrong size on StoreMain_Root_C_LayoutVBuckTiles");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, Temp_bool_Variable) == 0x000000, "Member 'StoreMain_Root_C_LayoutVBuckTiles::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, Temp_bool_Variable_1) == 0x000001, "Member 'StoreMain_Root_C_LayoutVBuckTiles::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, Temp_int_Variable) == 0x000004, "Member 'StoreMain_Root_C_LayoutVBuckTiles::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_Divide_IntInt_ReturnValue) == 0x000008, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_Percent_IntInt_ReturnValue) == 0x00000C, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_Percent_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle) == 0x000014, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_1) == 0x000015, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_2) == 0x000016, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, Temp_bool_Variable_2) == 0x000017, "Member 'StoreMain_Root_C_LayoutVBuckTiles::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, K2Node_Select_Default) == 0x000018, "Member 'StoreMain_Root_C_LayoutVBuckTiles::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, K2Node_Select_Default_1) == 0x000020, "Member 'StoreMain_Root_C_LayoutVBuckTiles::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_GetChildAt_ReturnValue) == 0x000028, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_GetChildrenCount_ReturnValue) == 0x000030, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, K2Node_DynamicCast_AsStore_Main_MTXOffer_C) == 0x000038, "Member 'StoreMain_Root_C_LayoutVBuckTiles::K2Node_DynamicCast_AsStore_Main_MTXOffer_C' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'StoreMain_Root_C_LayoutVBuckTiles::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_Subtract_IntInt_ReturnValue) == 0x000044, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000048, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, K2Node_DynamicCast_AsStore_Main_MTXOffer_B) == 0x000050, "Member 'StoreMain_Root_C_LayoutVBuckTiles::K2Node_DynamicCast_AsStore_Main_MTXOffer_B' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, K2Node_DynamicCast_bSuccess_1) == 0x000058, "Member 'StoreMain_Root_C_LayoutVBuckTiles::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, K2Node_DynamicCast_AsStore_Main_MTXOffer) == 0x000060, "Member 'StoreMain_Root_C_LayoutVBuckTiles::K2Node_DynamicCast_AsStore_Main_MTXOffer' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, K2Node_DynamicCast_bSuccess_2) == 0x000068, "Member 'StoreMain_Root_C_LayoutVBuckTiles::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_SlotAsGridSlot_ReturnValue) == 0x000070, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_SlotAsGridSlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, K2Node_Select_Default_2) == 0x000078, "Member 'StoreMain_Root_C_LayoutVBuckTiles::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_GetChildrenCount_ReturnValue_1) == 0x000080, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_GetChildrenCount_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_LayoutVBuckTiles, CallFunc_Greater_IntInt_ReturnValue) == 0x000084, "Member 'StoreMain_Root_C_LayoutVBuckTiles::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-
-// Function StoreMain_Root.StoreMain_Root_C.Get Main Tab Reference
-// 0x0040 (0x0040 - 0x0000)
-struct StoreMain_Root_C_Get_Main_Tab_Reference final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortUIManagerWidget_NUI*               CallFunc_GetUIManagerWidget_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            CallFunc_GetCachedWidget_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMainTabsScreen_C*                      K2Node_DynamicCast_AsMain_Tabs_Screen;             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetWidgetAtIndex_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(StoreMain_Root_C_Get_Main_Tab_Reference) == 0x000008, "Wrong alignment on StoreMain_Root_C_Get_Main_Tab_Reference");
-static_assert(sizeof(StoreMain_Root_C_Get_Main_Tab_Reference) == 0x000040, "Wrong size on StoreMain_Root_C_Get_Main_Tab_Reference");
-static_assert(offsetof(StoreMain_Root_C_Get_Main_Tab_Reference, ReturnValue) == 0x000000, "Member 'StoreMain_Root_C_Get_Main_Tab_Reference::ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Get_Main_Tab_Reference, CallFunc_GetUIManagerWidget_ReturnValue) == 0x000008, "Member 'StoreMain_Root_C_Get_Main_Tab_Reference::CallFunc_GetUIManagerWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Get_Main_Tab_Reference, CallFunc_GetCachedWidget_ReturnValue) == 0x000010, "Member 'StoreMain_Root_C_Get_Main_Tab_Reference::CallFunc_GetCachedWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Get_Main_Tab_Reference, K2Node_DynamicCast_AsMain_Tabs_Screen) == 0x000018, "Member 'StoreMain_Root_C_Get_Main_Tab_Reference::K2Node_DynamicCast_AsMain_Tabs_Screen' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Get_Main_Tab_Reference, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'StoreMain_Root_C_Get_Main_Tab_Reference::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Get_Main_Tab_Reference, CallFunc_GetWidgetAtIndex_ReturnValue) == 0x000028, "Member 'StoreMain_Root_C_Get_Main_Tab_Reference::CallFunc_GetWidgetAtIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Get_Main_Tab_Reference, CallFunc_GetActiveWidget_ReturnValue) == 0x000030, "Member 'StoreMain_Root_C_Get_Main_Tab_Reference::CallFunc_GetActiveWidget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Get_Main_Tab_Reference, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000038, "Member 'StoreMain_Root_C_Get_Main_Tab_Reference::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
-
-// Function StoreMain_Root.StoreMain_Root_C.Start Ambient Sound
-// 0x0018 (0x0018 - 0x0000)
-struct StoreMain_Root_C_Start_Ambient_Sound final
-{
-public:
-	bool                                          Condition;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESubGame                                      CallFunc_GetSubGame_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        CallFunc_CreateSound2D_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(StoreMain_Root_C_Start_Ambient_Sound) == 0x000008, "Wrong alignment on StoreMain_Root_C_Start_Ambient_Sound");
-static_assert(sizeof(StoreMain_Root_C_Start_Ambient_Sound) == 0x000018, "Wrong size on StoreMain_Root_C_Start_Ambient_Sound");
-static_assert(offsetof(StoreMain_Root_C_Start_Ambient_Sound, Condition) == 0x000000, "Member 'StoreMain_Root_C_Start_Ambient_Sound::Condition' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Start_Ambient_Sound, CallFunc_GetSubGame_ReturnValue) == 0x000001, "Member 'StoreMain_Root_C_Start_Ambient_Sound::CallFunc_GetSubGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Start_Ambient_Sound, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000002, "Member 'StoreMain_Root_C_Start_Ambient_Sound::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Start_Ambient_Sound, CallFunc_BooleanAND_ReturnValue) == 0x000003, "Member 'StoreMain_Root_C_Start_Ambient_Sound::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Start_Ambient_Sound, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'StoreMain_Root_C_Start_Ambient_Sound::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Start_Ambient_Sound, CallFunc_CreateSound2D_ReturnValue) == 0x000008, "Member 'StoreMain_Root_C_Start_Ambient_Sound::CallFunc_CreateSound2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_Start_Ambient_Sound, CallFunc_IsValid_ReturnValue_1) == 0x000010, "Member 'StoreMain_Root_C_Start_Ambient_Sound::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function StoreMain_Root.StoreMain_Root_C.UpdateCurrencyNotification
 // 0x0090 (0x0090 - 0x0000)
@@ -254,233 +80,194 @@ public:
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0018(0x0040)(HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0060(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0060(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0070(0x0018)()
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(StoreMain_Root_C_UpdateCurrencyNotification) == 0x000008, "Wrong alignment on StoreMain_Root_C_UpdateCurrencyNotification");
-static_assert(sizeof(StoreMain_Root_C_UpdateCurrencyNotification) == 0x000090, "Wrong size on StoreMain_Root_C_UpdateCurrencyNotification");
-static_assert(offsetof(StoreMain_Root_C_UpdateCurrencyNotification, Temp_byte_Variable) == 0x000000, "Member 'StoreMain_Root_C_UpdateCurrencyNotification::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_UpdateCurrencyNotification, Temp_byte_Variable_1) == 0x000001, "Member 'StoreMain_Root_C_UpdateCurrencyNotification::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_UpdateCurrencyNotification, Temp_bool_Variable) == 0x000002, "Member 'StoreMain_Root_C_UpdateCurrencyNotification::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_UpdateCurrencyNotification, CallFunc_GetMtxBreakdown_ReturnValue) == 0x000004, "Member 'StoreMain_Root_C_UpdateCurrencyNotification::CallFunc_GetMtxBreakdown_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_UpdateCurrencyNotification, K2Node_MakeStruct_FormatArgumentData) == 0x000018, "Member 'StoreMain_Root_C_UpdateCurrencyNotification::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_UpdateCurrencyNotification, CallFunc_Greater_IntInt_ReturnValue) == 0x000058, "Member 'StoreMain_Root_C_UpdateCurrencyNotification::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_UpdateCurrencyNotification, K2Node_MakeArray_Array) == 0x000060, "Member 'StoreMain_Root_C_UpdateCurrencyNotification::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_UpdateCurrencyNotification, CallFunc_Format_ReturnValue) == 0x000070, "Member 'StoreMain_Root_C_UpdateCurrencyNotification::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_UpdateCurrencyNotification, K2Node_Select_Default) == 0x000088, "Member 'StoreMain_Root_C_UpdateCurrencyNotification::K2Node_Select_Default' has a wrong offset!");
 
-// Function StoreMain_Root.StoreMain_Root_C.Focus
-// 0x0008 (0x0008 - 0x0000)
-struct StoreMain_Root_C_Focus final
+// Function StoreMain_Root.StoreMain_Root_C.Start Ambient Sound
+// 0x0018 (0x0018 - 0x0000)
+struct StoreMain_Root_C_Start_Ambient_Sound final
 {
 public:
-	class UFortUINavigationManager*               CallFunc_GetUINavigationManager_ReturnValue;       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Condition;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESubGame                                      CallFunc_GetSubGame_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        CallFunc_CreateSound2D_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(StoreMain_Root_C_Focus) == 0x000008, "Wrong alignment on StoreMain_Root_C_Focus");
-static_assert(sizeof(StoreMain_Root_C_Focus) == 0x000008, "Wrong size on StoreMain_Root_C_Focus");
-static_assert(offsetof(StoreMain_Root_C_Focus, CallFunc_GetUINavigationManager_ReturnValue) == 0x000000, "Member 'StoreMain_Root_C_Focus::CallFunc_GetUINavigationManager_ReturnValue' has a wrong offset!");
 
-// Function StoreMain_Root.StoreMain_Root_C.OnUpdateOtherPlatformMTXMessage
-// 0x0020 (0x0020 - 0x0000)
-struct StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage final
+// Function StoreMain_Root.StoreMain_Root_C.Get Main Tab Reference
+// 0x0038 (0x0038 - 0x0000)
+struct StoreMain_Root_C_Get_Main_Tab_Reference final
 {
 public:
-	bool                                          HasOtherPlatformCurrency;                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CurrencyMessageLocText;                            // 0x0008(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class UUserWidget*                            CallFunc_GetCachedWidget_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMainTabsScreen_C*                      K2Node_DynamicCast_AsMain_Tabs_Screen;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetWidgetAtIndex_ReturnValue;             // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetActiveWidget_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage) == 0x000008, "Wrong alignment on StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage");
-static_assert(sizeof(StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage) == 0x000020, "Wrong size on StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage");
-static_assert(offsetof(StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage, HasOtherPlatformCurrency) == 0x000000, "Member 'StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage::HasOtherPlatformCurrency' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage, CurrencyMessageLocText) == 0x000008, "Member 'StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage::CurrencyMessageLocText' has a wrong offset!");
 
-// Function StoreMain_Root.StoreMain_Root_C.GenerateOfferWidget
+// Function StoreMain_Root.StoreMain_Root_C.LayoutVBuckTiles
+// 0x0050 (0x0050 - 0x0000)
+struct StoreMain_Root_C_LayoutVBuckTiles final
+{
+public:
+	class UWidget*                                Child;                                             // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStoreMain_MTXOffer_C*                  K2Node_DynamicCast_AsStore_Main_MTXOffer;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGridSlot*                              CallFunc_SlotAsGridSlot_ReturnValue;               // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetChildrenCount_ReturnValue_1;           // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function StoreMain_Root.StoreMain_Root_C.SetupFirstFocusableTile
+// 0x0018 (0x0018 - 0x0000)
+struct StoreMain_Root_C_SetupFirstFocusableTile final
+{
+public:
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue_1;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function StoreMain_Root.StoreMain_Root_C.SetupForCampaignUpsell
+// 0x0070 (0x0070 - 0x0000)
+struct StoreMain_Root_C_SetupForCampaignUpsell final
+{
+public:
+	class UFortRuntimeOptions*                    NewLocalVar_0;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortRuntimeOptions*                    CallFunc_GetRuntimeOptions_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor)
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle;              // 0x0020(0x0010)(NoDestructor)
+	class UFortGlobalUIContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate_1;            // 0x0038(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          CallFunc_IsDesktopPlatform_ReturnValue;            // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_1;            // 0x0050(0x0010)(NoDestructor)
+	TArray<class FString>                         K2Node_MakeArray_Array;                            // 0x0060(0x0010)(ConstParm, ReferenceParm, HasGetValueTypeHash)
+};
+
+// Function StoreMain_Root.StoreMain_Root_C.HandleRedeem
+// 0x0018 (0x0018 - 0x0000)
+struct StoreMain_Root_C_HandleRedeem final
+{
+public:
+	bool                                          bPassThrough;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URedeemFriendCodeWindow_C*              CallFunc_Create_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function StoreMain_Root.StoreMain_Root_C.HandleBack
+// 0x0001 (0x0001 - 0x0000)
+struct StoreMain_Root_C_HandleBack final
+{
+public:
+	bool                                          PassThrough;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function StoreMain_Root.StoreMain_Root_C.PlayEquippedLockerMusic
+// 0x0028 (0x0028 - 0x0000)
+struct StoreMain_Root_C_PlayEquippedLockerMusic final
+{
+public:
+	ESubGame                                      CallFunc_GetSubGame_ReturnValue;                   // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AFort_Entry_Music_Controller_BP_C*> CallFunc_GetAllActorsOfClass_OutActors;         // 0x0008(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFort_Entry_Music_Controller_BP_C*      CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function StoreMain_Root.StoreMain_Root_C.HandleGenerateOffer
+// 0x0050 (0x0050 - 0x0000)
+struct StoreMain_Root_C_HandleGenerateOffer final
+{
+public:
+	class UFortStoreFrontOfferInfo*               OfferInfo;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortRealMoneyOffer*                    StoreOfferWidget;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetStorefrontName_ReturnValue;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetChildrenCount_ReturnValue_1;           // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGridSlot*                              CallFunc_AddChildToGrid_ReturnValue;               // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGridSlot*                              CallFunc_AddChildToGrid_ReturnValue_1;             // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStoreMain_MTXOffer_C*                  CallFunc_Create_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function StoreMain_Root.StoreMain_Root_C.HandleAllOffersGenerated
+// 0x0050 (0x0050 - 0x0000)
+struct StoreMain_Root_C_HandleAllOffersGenerated final
+{
+public:
+	bool                                          BothOfferSectionsVisible;                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	EHorizontalAlignment                          Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHorizontalAlignment                          Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FMargin                                K2Node_MakeStruct_Margin_1;                        // 0x0014(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOverlaySlot*                           K2Node_DynamicCast_AsOverlay_Slot;                 // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              CallFunc_GetVisibilityByChildrenPresence_NewParam; // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              CallFunc_GetVisibilityByChildrenPresence_NewParam_1; // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_1;                              // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0037(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FMargin                                K2Node_Select_Default;                             // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EHorizontalAlignment                          K2Node_Select_Default_1;                           // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function StoreMain_Root.StoreMain_Root_C.GetVisibilityByChildrenPresence
+// 0x0010 (0x0010 - 0x0000)
+struct StoreMain_Root_C_GetVisibilityByChildrenPresence final
+{
+public:
+	class UPanelWidget*                           Panel;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              NewParam;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAnyChildren_ReturnValue;               // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function StoreMain_Root.StoreMain_Root_C.BP_GetDesiredFocusTarget
 // 0x0008 (0x0008 - 0x0000)
-struct StoreMain_Root_C_GenerateOfferWidget final
+struct StoreMain_Root_C_BP_GetDesiredFocusTarget final
 {
 public:
-	class UFortStoreFrontOfferInfo*               OfferData;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(StoreMain_Root_C_GenerateOfferWidget) == 0x000008, "Wrong alignment on StoreMain_Root_C_GenerateOfferWidget");
-static_assert(sizeof(StoreMain_Root_C_GenerateOfferWidget) == 0x000008, "Wrong size on StoreMain_Root_C_GenerateOfferWidget");
-static_assert(offsetof(StoreMain_Root_C_GenerateOfferWidget, OfferData) == 0x000000, "Member 'StoreMain_Root_C_GenerateOfferWidget::OfferData' has a wrong offset!");
-
-// Function StoreMain_Root.StoreMain_Root_C.ExecuteUbergraph_StoreMain_Root
-// 0x0178 (0x0178 - 0x0000)
-struct StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_1;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_2;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EFrontEndCamera                               Temp_byte_Variable_1;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFrontEndCamera                               Temp_byte_Variable_2;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_4;                              // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_5;                              // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_6;                              // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_7;                              // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_8;                              // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_9;                              // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_10;                             // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_11;                             // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_12;                             // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_13;                             // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_14;                             // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_15;                             // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESubGame                                      CallFunc_GetSubGame_ReturnValue;                   // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortRuntimeOptions*                    CallFunc_GetRuntimeOptions_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetEnableSplitWalletTextNotice_ReturnValue; // 0x0030(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsActivated_ReturnValue;                  // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Get_Main_Tab_Reference_ReturnValue;       // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_16;                             // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_HasOtherPlatformCurrency;             // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Event_CurrencyMessageLocText;               // 0x0038(0x0018)(ConstParm)
-	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53[0x5];                                       // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortStoreFrontOfferInfo*               K2Node_Event_OfferData;                            // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortStoreContext*                      CallFunc_GetContext_ReturnValue_1;                 // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_GetStorefrontName_ReturnValue;            // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStoreMain_MTXOffer_B_C*                CallFunc_Create_ReturnValue;                       // 0x0080(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStoreMain_MTXOffer_C_C*                CallFunc_Create_ReturnValue_1;                     // 0x0088(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle;  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_17;                             // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0092(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_1; // 0x0093(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                K2Node_Select_Default;                             // 0x0098(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGridPanel*                             K2Node_Select_Default_1;                           // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGridPanel*                             K2Node_Select_Default_2;                           // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetChildrenCount_ReturnValue_1;           // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGridSlot*                              CallFunc_AddChildToGrid_ReturnValue;               // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGridSlot*                              CallFunc_AddChildToGrid_ReturnValue_1;             // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortStoreContext*                      CallFunc_GetContext_ReturnValue_2;                 // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFrontEndCamera                               K2Node_Select_Default_3;                           // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_2; // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E2[0x6];                                       // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonWidgetSwitcher*                  K2Node_Select_Default_4;                           // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortStoreContext*                      CallFunc_GetContext_ReturnValue_3;                 // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UVerticalBox*                           K2Node_Select_Default_5;                           // 0x00F8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPanelWidget*                           K2Node_Select_Default_6;                           // 0x0100(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAnyChildren_ReturnValue;               // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPanelWidget*                           K2Node_Select_Default_7;                           // 0x0110(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAnyChildren_ReturnValue_1;             // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default_8;                           // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_9;                           // 0x011A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11B[0x5];                                      // 0x011B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                K2Node_Select_Default_10;                          // 0x0120(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UVerticalBox*                           K2Node_Select_Default_11;                          // 0x0128(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_3; // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonWidgetSwitcher*                  K2Node_Select_Default_12;                          // 0x0138(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                K2Node_Select_Default_13;                          // 0x0140(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_4; // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonWidgetSwitcher*                  K2Node_Select_Default_14;                          // 0x0150(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                K2Node_Select_Default_15;                          // 0x0158(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_5; // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidgetSwitcher*                        K2Node_Select_Default_16;                          // 0x0168(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                K2Node_Select_Default_17;                          // 0x0170(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root) == 0x000008, "Wrong alignment on StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root");
-static_assert(sizeof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root) == 0x000178, "Wrong size on StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, EntryPoint) == 0x000000, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::EntryPoint' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_byte_Variable) == 0x000004, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable) == 0x000005, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_1) == 0x000006, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_2) == 0x000007, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_byte_Variable_1) == 0x000008, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_byte_Variable_2) == 0x000009, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_GetContext_ReturnValue) == 0x000010, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_GetContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_3) == 0x000018, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_4) == 0x000019, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_5) == 0x00001A, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_6) == 0x00001B, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_6' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_7) == 0x00001C, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_7' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_8) == 0x00001D, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_8' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_9) == 0x00001E, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_9' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_10) == 0x00001F, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_10' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_11) == 0x000020, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_11' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_12) == 0x000021, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_12' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_13) == 0x000022, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_13' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_14) == 0x000023, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_14' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_15) == 0x000024, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_15' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_GetSubGame_ReturnValue) == 0x000025, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_GetSubGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000026, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_byte_Variable_3) == 0x000027, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_GetRuntimeOptions_ReturnValue) == 0x000028, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_GetRuntimeOptions_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_GetEnableSplitWalletTextNotice_ReturnValue) == 0x000030, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_GetEnableSplitWalletTextNotice_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_IsActivated_ReturnValue) == 0x000031, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_IsActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_Get_Main_Tab_Reference_ReturnValue) == 0x000032, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_Get_Main_Tab_Reference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_16) == 0x000033, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_16' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Event_HasOtherPlatformCurrency) == 0x000034, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Event_HasOtherPlatformCurrency' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Event_CurrencyMessageLocText) == 0x000038, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Event_CurrencyMessageLocText' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_byte_Variable_4) == 0x000050, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_byte_Variable_4' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_BooleanAND_ReturnValue) == 0x000051, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_byte_Variable_5) == 0x000052, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_byte_Variable_5' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Event_OfferData) == 0x000058, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Event_OfferData' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_GetContext_ReturnValue_1) == 0x000060, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_GetContext_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_GetStorefrontName_ReturnValue) == 0x000068, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_GetStorefrontName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000070, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_GetOwningPlayer_ReturnValue) == 0x000078, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_Create_ReturnValue) == 0x000080, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_Create_ReturnValue_1) == 0x000088, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_Create_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle) == 0x000090, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, Temp_bool_Variable_17) == 0x000091, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::Temp_bool_Variable_17' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_Not_PreBool_ReturnValue) == 0x000092, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_1) == 0x000093, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default) == 0x000098, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_1) == 0x0000A0, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_GetChildrenCount_ReturnValue) == 0x0000A8, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_2) == 0x0000B0, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000B8, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_GetChildrenCount_ReturnValue_1) == 0x0000BC, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_GetChildrenCount_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_AddChildToGrid_ReturnValue) == 0x0000C0, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_AddChildToGrid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x0000C8, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_AddChildToGrid_ReturnValue_1) == 0x0000D0, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_AddChildToGrid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_GetContext_ReturnValue_2) == 0x0000D8, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_GetContext_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_3) == 0x0000E0, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_2) == 0x0000E1, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_4) == 0x0000E8, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_GetContext_ReturnValue_3) == 0x0000F0, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_GetContext_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_5) == 0x0000F8, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_5' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_6) == 0x000100, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_6' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_HasAnyChildren_ReturnValue) == 0x000108, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_HasAnyChildren_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_7) == 0x000110, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_7' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_HasAnyChildren_ReturnValue_1) == 0x000118, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_HasAnyChildren_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_8) == 0x000119, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_8' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_9) == 0x00011A, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_9' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_10) == 0x000120, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_10' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_11) == 0x000128, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_11' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_3) == 0x000130, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_3' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_12) == 0x000138, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_12' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_13) == 0x000140, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_13' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_4) == 0x000148, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_4' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_14) == 0x000150, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_14' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_15) == 0x000158, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_15' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_5) == 0x000160, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::CallFunc_ShouldUserSeeNewVBuckOffer_ShowNewStyle_5' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_16) == 0x000168, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_16' has a wrong offset!");
-static_assert(offsetof(StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root, K2Node_Select_Default_17) == 0x000170, "Member 'StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root::K2Node_Select_Default_17' has a wrong offset!");
 
 }
 

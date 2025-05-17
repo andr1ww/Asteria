@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "GA_Athena_UtilityGrenade_WithTrajectory_classes.hpp"
+#include "GA_ThrowConsumable_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_DanceGrenade_WithTrajectory.GA_Athena_DanceGrenade_WithTrajectory_C
-// 0x0000 (0x0C58 - 0x0C58)
-class UGA_Athena_DanceGrenade_WithTrajectory_C final : public UGA_Athena_UtilityGrenade_WithTrajectory_C
+// 0x0000 (0x0E28 - 0x0E28)
+class UGA_Athena_DanceGrenade_WithTrajectory_C final : public UGA_ThrowConsumable_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_DanceGrenade_WithTrajectory_C>();
 	}
 };
-static_assert(alignof(UGA_Athena_DanceGrenade_WithTrajectory_C) == 0x000008, "Wrong alignment on UGA_Athena_DanceGrenade_WithTrajectory_C");
-static_assert(sizeof(UGA_Athena_DanceGrenade_WithTrajectory_C) == 0x000C58, "Wrong size on UGA_Athena_DanceGrenade_WithTrajectory_C");
 
 }
 

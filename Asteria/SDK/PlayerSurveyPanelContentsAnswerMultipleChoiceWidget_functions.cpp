@@ -94,7 +94,7 @@ void UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::HandleQuestionChang
 // Function PlayerSurveyPanelContentsAnswerMultipleChoiceWidget.PlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C.HandleAnswerChanged
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortPlayerSurveyAnswerContainerChangeEventInfoEventInfo                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+// const struct FFortPlayerSurveyAnswerContainerChangeEventInfo&EventInfo                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 
 void UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::HandleAnswerChanged(const struct FFortPlayerSurveyAnswerContainerChangeEventInfo& EventInfo)
 {
@@ -238,10 +238,10 @@ class FText UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::GetSubtitleT
 
 
 // Function PlayerSurveyPanelContentsAnswerMultipleChoiceWidget.PlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C.GetDefaultFocusedWidgetPostDummy
-// (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          Widget                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget**                         Widget                                                 (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::GetDefaultFocusedWidgetPostDummy(EUINavigation Navigation_0, class UWidget** Widget) const
 {
@@ -264,7 +264,7 @@ void UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::GetDefaultFocusedWi
 // Function PlayerSurveyPanelContentsAnswerMultipleChoiceWidget.PlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C.GetDefaultInitialChoiceIndex
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// int32                                   Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  Index_0                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::GetDefaultInitialChoiceIndex(int32* Index_0) const
 {

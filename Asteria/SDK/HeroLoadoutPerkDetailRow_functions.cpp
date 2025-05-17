@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function HeroLoadoutPerkDetailRow.HeroLoadoutPerkDetailRow_C.SetTeamPerk
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortTeamPerkItem*                Team_Perk_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UHeroLoadoutPerkDetailRow_C::SetTeamPerk(class UFortTeamPerkItem* Team_Perk_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HeroLoadoutPerkDetailRow_C", "SetTeamPerk");
-
-	Params::HeroLoadoutPerkDetailRow_C_SetTeamPerk Parms{};
-
-	Parms.Team_Perk_0 = Team_Perk_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function HeroLoadoutPerkDetailRow.HeroLoadoutPerkDetailRow_C.SetRawAbilityKit
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UHeroLoadoutPerkDetailRow_C::SetRawAbilityKit(class UFortAbilityKit* Abilit
 	Params::HeroLoadoutPerkDetailRow_C_SetRawAbilityKit Parms{};
 
 	Parms.Ability_Kit = Ability_Kit;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function HeroLoadoutPerkDetailRow.HeroLoadoutPerkDetailRow_C.SetTeamPerk
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortTeamPerkItem*                Team_Perk_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UHeroLoadoutPerkDetailRow_C::SetTeamPerk(class UFortTeamPerkItem* Team_Perk_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("HeroLoadoutPerkDetailRow_C", "SetTeamPerk");
+
+	Params::HeroLoadoutPerkDetailRow_C_SetTeamPerk Parms{};
+
+	Parms.Team_Perk_0 = Team_Perk_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

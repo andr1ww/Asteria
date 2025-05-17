@@ -158,7 +158,7 @@ void UNormalBangWrapper_C::Update_Bang_Icon_Version(int32 InCount)
 // Function NormalBangWrapper.NormalBangWrapper_C.Adjust Bang Image Translation
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D                        Translation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 Translation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UNormalBangWrapper_C::Adjust_Bang_Image_Translation(const struct FVector2D& Translation)
 {

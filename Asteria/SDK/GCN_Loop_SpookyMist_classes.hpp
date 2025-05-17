@@ -10,62 +10,78 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C
-// 0x0140 (0x08D0 - 0x0790)
+// 0x0188 (0x0948 - 0x07C0)
 class AGCN_Loop_SpookyMist_C final : public AFortGameplayCueNotify_Loop
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0790(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPostProcessComponent*                  PostProcess;                                       // 0x0798(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         FadeInOut_Visbility_642089304BE20EFA276DDA9C98DD3C71; // 0x07A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            FadeInOut__Direction_642089304BE20EFA276DDA9C98DD3C71; // 0x07A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7A5[0x3];                                      // 0x07A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     FadeinOut;                                         // 0x07A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        TargetPlayer;                                      // 0x07B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ExpirationSoundPeriod;                             // 0x07B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         VelocityInterp;                                    // 0x07BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UParticleSystemComponent*>       AttachedFX;                                        // 0x07C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class USkeletalMeshComponent*>         PlayerSkeletalMeshes;                              // 0x07D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                          FriendlyPlayer;                                    // 0x07E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7E1[0x7];                                      // 0x07E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           ExpireTellDelayTimer;                              // 0x07E8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           ExpirationSoundTimer;                              // 0x07F0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         VisbilityLevel;                                    // 0x07F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         WalkVisMultiplier;                                 // 0x07FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SprintVisMultiplier;                               // 0x0800(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MinFriendlyOpacity;                                // 0x0804(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         InteractVisibility;                                // 0x0808(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_80C[0x4];                                      // 0x080C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         DataDuration;                                      // 0x0810(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         DataTellDuration;                                  // 0x0830(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         DataWalkVisMult;                                   // 0x0850(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         DataSprintVisMult;                                 // 0x0870(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         DataFriendlyVisMult;                               // 0x0890(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         DataShadowPlaneOpacity;                            // 0x08B0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UPostProcessComponent*                  PostProcess;                                       // 0x07C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_Interaction_Fade_In_Out_Visbility_5529D6B24898E091AFB4668B43CFAB50; // 0x07D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_Interaction_Fade_In_Out__Direction_5529D6B24898E091AFB4668B43CFAB50; // 0x07D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7D5[0x3];                                      // 0x07D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_Interaction_Fade_In_Out;                  // 0x07D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawn*                        TargetPlayer;                                      // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ExpirationSoundPeriod;                             // 0x07E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         AudioVelocityInterp;                               // 0x07EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class USkeletalMeshComponent*>         PlayerSkeletalMeshes;                              // 0x07F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	struct FTimerHandle                           ExpireTellDelayTimer;                              // 0x0800(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           ExpirationSoundTimer;                              // 0x0808(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         VisbilityLevel;                                    // 0x0810(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         WalkVisMultiplier;                                 // 0x0814(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SprintVisMultiplier;                               // 0x0818(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MinFriendlyOpacity;                                // 0x081C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         InteractVisibility;                                // 0x0820(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_824[0x4];                                      // 0x0824(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         DataDuration;                                      // 0x0828(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         DataTellDuration;                                  // 0x0848(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         DataWalkVisMult;                                   // 0x0868(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         DataSprintVisMult;                                 // 0x0888(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         DataFriendlyVisMult;                               // 0x08A8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         DataShadowPlaneOpacity;                            // 0x08C8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bShowExpireTell_Const;                             // 0x08E8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_8E9[0x3];                                      // 0x08E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Speed_Ribbon_Velocity_Threshold_Const;             // 0x08EC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UAudioComponent*>                Looping_Audio_Components;                          // 0x08F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Attached_FX_Head;                                  // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Attached_FX_Body;                                  // 0x0908(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Mat_Parameter_Name_Spooky_Mist_Mode_Const;         // 0x0910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   FX_Parameter_Name_Ribbons_Const;                   // 0x0918(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Mat_Parameter_Name_Flash_Start_TimeConst;          // 0x0920(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Audio_Parameter_Name_Velocity_Const;               // 0x0928(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Mat_Parameter_Name_Movement_Opacity_Const;         // 0x0930(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   FX_Parameter_Name_Friendly_Const;                  // 0x0938(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         VisibilityLevel_Change_Speed_Const;                // 0x0940(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void GetSkeletalMeshes();
-	void FadeinOut__FinishedFunc();
-	void FadeinOut__UpdateFunc();
-	void OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents);
-	void OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
-	void ReceiveTick(float DeltaSeconds);
-	void BeginExpireTell();
-	void ClearExpireTell();
-	void ExpireWarningTick();
-	void UpdateTeamVisbility();
-	void Audio_Tick(float Velocity);
-	void StartedInteract();
-	void EndedInteract();
 	void ExecuteUbergraph_GCN_Loop_SpookyMist(int32 EntryPoint);
+	void Initialize_Player_Skeletal_Meshes();
+	void UpdateTeamVisbility();
+	void EndedInteract();
+	void StartedInteract();
+	void Audio_Tick(float Velocity);
+	void ExpireWarningTick();
+	void ClearExpireTell();
+	void BeginExpireTell();
+	void ReceiveTick(float DeltaSeconds);
+	void OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
+	void OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents);
+	void Timeline_Interaction_Fade_In_Out__UpdateFunc();
+	void Timeline_Interaction_Fade_In_Out__FinishedFunc();
+	void Get_Skeletal_Meshes();
+	void ShouldSpeedRibbonsBeVisible(bool* Should_Show_Speed_Ribbons);
+	float TickMovement_Opacity();
+	bool ShouldRenderAsLocalPlayer();
+	void Is_Player_Controller_Friendly(class AController* PlayerController, bool* Is_Friendly_Player);
+	float Get_Goal_Visibility_Level();
 
 public:
 	static class UClass* StaticClass()
@@ -77,32 +93,6 @@ public:
 		return GetDefaultObjImpl<AGCN_Loop_SpookyMist_C>();
 	}
 };
-static_assert(alignof(AGCN_Loop_SpookyMist_C) == 0x000008, "Wrong alignment on AGCN_Loop_SpookyMist_C");
-static_assert(sizeof(AGCN_Loop_SpookyMist_C) == 0x0008D0, "Wrong size on AGCN_Loop_SpookyMist_C");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, UberGraphFrame) == 0x000790, "Member 'AGCN_Loop_SpookyMist_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, PostProcess) == 0x000798, "Member 'AGCN_Loop_SpookyMist_C::PostProcess' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, FadeInOut_Visbility_642089304BE20EFA276DDA9C98DD3C71) == 0x0007A0, "Member 'AGCN_Loop_SpookyMist_C::FadeInOut_Visbility_642089304BE20EFA276DDA9C98DD3C71' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, FadeInOut__Direction_642089304BE20EFA276DDA9C98DD3C71) == 0x0007A4, "Member 'AGCN_Loop_SpookyMist_C::FadeInOut__Direction_642089304BE20EFA276DDA9C98DD3C71' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, FadeinOut) == 0x0007A8, "Member 'AGCN_Loop_SpookyMist_C::FadeinOut' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, TargetPlayer) == 0x0007B0, "Member 'AGCN_Loop_SpookyMist_C::TargetPlayer' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, ExpirationSoundPeriod) == 0x0007B8, "Member 'AGCN_Loop_SpookyMist_C::ExpirationSoundPeriod' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, VelocityInterp) == 0x0007BC, "Member 'AGCN_Loop_SpookyMist_C::VelocityInterp' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, AttachedFX) == 0x0007C0, "Member 'AGCN_Loop_SpookyMist_C::AttachedFX' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, PlayerSkeletalMeshes) == 0x0007D0, "Member 'AGCN_Loop_SpookyMist_C::PlayerSkeletalMeshes' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, FriendlyPlayer) == 0x0007E0, "Member 'AGCN_Loop_SpookyMist_C::FriendlyPlayer' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, ExpireTellDelayTimer) == 0x0007E8, "Member 'AGCN_Loop_SpookyMist_C::ExpireTellDelayTimer' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, ExpirationSoundTimer) == 0x0007F0, "Member 'AGCN_Loop_SpookyMist_C::ExpirationSoundTimer' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, VisbilityLevel) == 0x0007F8, "Member 'AGCN_Loop_SpookyMist_C::VisbilityLevel' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, WalkVisMultiplier) == 0x0007FC, "Member 'AGCN_Loop_SpookyMist_C::WalkVisMultiplier' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, SprintVisMultiplier) == 0x000800, "Member 'AGCN_Loop_SpookyMist_C::SprintVisMultiplier' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, MinFriendlyOpacity) == 0x000804, "Member 'AGCN_Loop_SpookyMist_C::MinFriendlyOpacity' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, InteractVisibility) == 0x000808, "Member 'AGCN_Loop_SpookyMist_C::InteractVisibility' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, DataDuration) == 0x000810, "Member 'AGCN_Loop_SpookyMist_C::DataDuration' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, DataTellDuration) == 0x000830, "Member 'AGCN_Loop_SpookyMist_C::DataTellDuration' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, DataWalkVisMult) == 0x000850, "Member 'AGCN_Loop_SpookyMist_C::DataWalkVisMult' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, DataSprintVisMult) == 0x000870, "Member 'AGCN_Loop_SpookyMist_C::DataSprintVisMult' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, DataFriendlyVisMult) == 0x000890, "Member 'AGCN_Loop_SpookyMist_C::DataFriendlyVisMult' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_SpookyMist_C, DataShadowPlaneOpacity) == 0x0008B0, "Member 'AGCN_Loop_SpookyMist_C::DataShadowPlaneOpacity' has a wrong offset!");
 
 }
 

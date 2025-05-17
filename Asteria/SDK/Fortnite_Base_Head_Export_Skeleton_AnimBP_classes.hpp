@@ -10,9 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteGame_classes.hpp"
 #include "LiveLink_structs.hpp"
 
 
@@ -20,49 +21,80 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass Fortnite_Base_Head_Export_Skeleton_AnimBP.Fortnite_Base_Head_Export_Skeleton_AnimBP_C
-// 0x0E60 (0x1250 - 0x03F0)
+// 0x10F0 (0x15A0 - 0x04B0)
 class UFortnite_Base_Head_Export_Skeleton_AnimBP_C : public UHeadPartAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_PoseBlendNode                AnimGraphNode_PoseBlendNode_0E491F3A4C933A03AAE42DA602295362; // 0x03F8(0x0098)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_C9D648834AA29F5B677902BB5A9DC15C; // 0x0490(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_94E41D364E86D3FFC2D042845913D0EE; // 0x04B0(0x0078)()
-	struct FAnimNode_CopyPoseFromMesh             AnimGraphNode_CopyPoseFromMesh_9AC0772D481A4B85CE045AA17CE0F79E; // 0x0528(0x0138)(ContainsInstancedReference)
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_B0BAEC37412A3BDE897683AA32FAE4E1; // 0x0660(0x00B8)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_3971854A46E6B529767EA2AB708A8D46; // 0x0718(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_D687C7FB4A07645ECE24DBB182B71823; // 0x07E0(0x00B8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_19E6568A48732F90AD2036B56ECA0D46; // 0x0898(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_C898D19D46B0E9723DD75AA4710C2707; // 0x08C0(0x0028)()
-	struct FAnimNode_LiveLinkPose                 AnimGraphNode_LiveLinkPose_67AFEC6E4E43108E1E699081080B9448; // 0x08E8(0x0048)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_E8FB05504628ECA52ADD038CBD818957; // 0x0930(0x00B8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_91F05C994C7B4758BA35D2B1F94A7663; // 0x09E8(0x00B8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_53F166F14732C8ECBEC8C0A540192456; // 0x0AA0(0x0028)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_BF175D4149F235AF8059B38CB3517406; // 0x0AC8(0x00C8)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_59950130431F160E70FA618201DA0ED0; // 0x0B90(0x0048)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_4B2D173F4261FBC709962B837E22DAA7; // 0x0BD8(0x00B8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_C50053764A5016625E742C8401AAD202; // 0x0C90(0x00B8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_540FAC8A423311B343A66CBDD1A68E4E; // 0x0D48(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5C0CA1E44DCE78D6CEF568B89CA4B27B; // 0x0D70(0x0028)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_C5BEAB564689BE7F396B479553755894; // 0x0D98(0x0108)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_F7D256644C446D0E0E7A1FAE450C7158; // 0x0EA0(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_E876E3114CDEF692F73DBF884F9BD650; // 0x0EC0(0x0020)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_17658B34440A047EB64B94A7175013F1; // 0x0EE0(0x00B8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_04405D3D4F8BCFD02C681D8D229C0D2E; // 0x0F98(0x0028)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_C68E6B0E407D0454643482B1A7183F5B; // 0x0FC0(0x00A0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_EDDAFEAC483866651C7E3FAC553065FD; // 0x1060(0x0028)()
-	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum_08630207438BC89444088F8788608168; // 0x1088(0x00B0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_FABFCD4648E517EB4D1F55956E6A4DD2; // 0x1138(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_0E3FE42145D747BC790D9C8B3B86A438; // 0x1160(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_534B120E48854DC8D7F075B794D33C5F; // 0x1188(0x0028)()
-	struct FAnimNode_LiveLinkPose                 AnimGraphNode_LiveLinkPose_99C9F7884620B6D189A49A8BB1023059; // 0x11B0(0x0048)()
-	struct FAnimNode_LiveLinkPose                 AnimGraphNode_LiveLinkPose_904059874BC7464442D2C4A54AA56DB6; // 0x11F8(0x0048)()
-	class USkeletalMeshComponent*                 MeshToCopy;                                        // 0x1240(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          GetPlayerListUsesCustomCharacterParts;             // 0x1248(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4A8[0x8];                                      // 0x04A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_2;                  // 0x04C0(0x00C0)()
+	struct FAnimNode_CopyPoseFromMesh             AnimGraphNode_CopyPoseFromMesh;                    // 0x0580(0x0140)(ContainsInstancedReference)
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x06C0(0x0078)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x0738(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_4;                    // 0x0800(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_13;                    // 0x08C8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_12;                    // 0x08F0(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_3;                    // 0x0918(0x00C8)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x09E0(0x0048)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_1;                  // 0x0A28(0x00C0)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0x0AE8(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_11;                    // 0x0BB0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_10;                    // 0x0BD8(0x0028)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x0C00(0x0108)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x0D08(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x0D28(0x0020)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x0D48(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_9;                     // 0x0E10(0x0028)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_1;                   // 0x0E38(0x00A0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_8;                     // 0x0ED8(0x0028)()
+	struct FAnimNode_PoseBlendNode                AnimGraphNode_PoseBlendNode;                       // 0x0F00(0x0098)()
+	struct FFortAnimNode_ScaleCharacterBones      FortAnimGraphNode_ScaleCharacterBones;             // 0x0F98(0x0040)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0FD8(0x0030)()
+	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum_1;                   // 0x1008(0x00B0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0x10B8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0x10E0(0x0028)()
+	struct FAnimNode_LiveLinkPose                 AnimGraphNode_LiveLinkPose_1;                      // 0x1108(0x0050)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x1158(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0x1220(0x0028)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x1248(0x00C0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0x1308(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x1330(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x1358(0x0028)()
+	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x1380(0x00B0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x1430(0x0028)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x1458(0x00A0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x14F8(0x0028)()
+	struct FAnimNode_LiveLinkPose                 AnimGraphNode_LiveLinkPose;                        // 0x1520(0x0050)()
+	class USkeletalMeshComponent*                 MeshToCopy;                                        // 0x1570(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GetPlayerListUsesCustomCharacterParts;             // 0x1578(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsMoving;                                         // 0x1579(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsOnGround_0;                                     // 0x157A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsSlopeSliding_0;                                 // 0x157B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsFallingLocal;                                   // 0x157C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsJumpingLocal;                                   // 0x157D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsCrouching_0;                                    // 0x157E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsCrouchWalking;                                  // 0x157F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsCrouchSprinting_0;                              // 0x1580(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsSprinting_0;                                    // 0x1581(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsJogging_0;                                      // 0x1582(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsDBNO_0;                                         // 0x1583(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsTargeting_0;                                    // 0x1584(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsDancing;                                        // 0x1585(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsMeleeSwing_0;                                   // 0x1586(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsLocomotion_0;                                   // 0x1587(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bRecentlyFired_0;                                  // 0x1588(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1589[0x3];                                     // 0x1589(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LastFireTime;                                      // 0x158C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsSkydiving0;                                      // 0x1590(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsDive0;                                           // 0x1591(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_Fortnite_Base_Head_Export_Skeleton_AnimBP(int32 EntryPoint);
 	void BlueprintInitializeAnimation();
+	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -74,43 +106,6 @@ public:
 		return GetDefaultObjImpl<UFortnite_Base_Head_Export_Skeleton_AnimBP_C>();
 	}
 };
-static_assert(alignof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C) == 0x000008, "Wrong alignment on UFortnite_Base_Head_Export_Skeleton_AnimBP_C");
-static_assert(sizeof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C) == 0x001250, "Wrong size on UFortnite_Base_Head_Export_Skeleton_AnimBP_C");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, UberGraphFrame) == 0x0003F0, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_PoseBlendNode_0E491F3A4C933A03AAE42DA602295362) == 0x0003F8, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_PoseBlendNode_0E491F3A4C933A03AAE42DA602295362' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_Root_C9D648834AA29F5B677902BB5A9DC15C) == 0x000490, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_Root_C9D648834AA29F5B677902BB5A9DC15C' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_SequencePlayer_94E41D364E86D3FFC2D042845913D0EE) == 0x0004B0, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_SequencePlayer_94E41D364E86D3FFC2D042845913D0EE' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_CopyPoseFromMesh_9AC0772D481A4B85CE045AA17CE0F79E) == 0x000528, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_CopyPoseFromMesh_9AC0772D481A4B85CE045AA17CE0F79E' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_LayeredBoneBlend_B0BAEC37412A3BDE897683AA32FAE4E1) == 0x000660, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_LayeredBoneBlend_B0BAEC37412A3BDE897683AA32FAE4E1' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_TwoWayBlend_3971854A46E6B529767EA2AB708A8D46) == 0x000718, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_TwoWayBlend_3971854A46E6B529767EA2AB708A8D46' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_SaveCachedPose_D687C7FB4A07645ECE24DBB182B71823) == 0x0007E0, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_SaveCachedPose_D687C7FB4A07645ECE24DBB182B71823' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_UseCachedPose_19E6568A48732F90AD2036B56ECA0D46) == 0x000898, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_UseCachedPose_19E6568A48732F90AD2036B56ECA0D46' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_UseCachedPose_C898D19D46B0E9723DD75AA4710C2707) == 0x0008C0, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_UseCachedPose_C898D19D46B0E9723DD75AA4710C2707' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_LiveLinkPose_67AFEC6E4E43108E1E699081080B9448) == 0x0008E8, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_LiveLinkPose_67AFEC6E4E43108E1E699081080B9448' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_LayeredBoneBlend_E8FB05504628ECA52ADD038CBD818957) == 0x000930, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_LayeredBoneBlend_E8FB05504628ECA52ADD038CBD818957' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_SaveCachedPose_91F05C994C7B4758BA35D2B1F94A7663) == 0x0009E8, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_SaveCachedPose_91F05C994C7B4758BA35D2B1F94A7663' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_UseCachedPose_53F166F14732C8ECBEC8C0A540192456) == 0x000AA0, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_UseCachedPose_53F166F14732C8ECBEC8C0A540192456' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_TwoWayBlend_BF175D4149F235AF8059B38CB3517406) == 0x000AC8, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_TwoWayBlend_BF175D4149F235AF8059B38CB3517406' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_Slot_59950130431F160E70FA618201DA0ED0) == 0x000B90, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_Slot_59950130431F160E70FA618201DA0ED0' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_LayeredBoneBlend_4B2D173F4261FBC709962B837E22DAA7) == 0x000BD8, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_LayeredBoneBlend_4B2D173F4261FBC709962B837E22DAA7' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_SaveCachedPose_C50053764A5016625E742C8401AAD202) == 0x000C90, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_SaveCachedPose_C50053764A5016625E742C8401AAD202' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_UseCachedPose_540FAC8A423311B343A66CBDD1A68E4E) == 0x000D48, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_UseCachedPose_540FAC8A423311B343A66CBDD1A68E4E' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_UseCachedPose_5C0CA1E44DCE78D6CEF568B89CA4B27B) == 0x000D70, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_UseCachedPose_5C0CA1E44DCE78D6CEF568B89CA4B27B' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_ModifyBone_C5BEAB564689BE7F396B479553755894) == 0x000D98, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_ModifyBone_C5BEAB564689BE7F396B479553755894' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_LocalToComponentSpace_F7D256644C446D0E0E7A1FAE450C7158) == 0x000EA0, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_LocalToComponentSpace_F7D256644C446D0E0E7A1FAE450C7158' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_ComponentToLocalSpace_E876E3114CDEF692F73DBF884F9BD650) == 0x000EC0, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_ComponentToLocalSpace_E876E3114CDEF692F73DBF884F9BD650' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_SaveCachedPose_17658B34440A047EB64B94A7175013F1) == 0x000EE0, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_SaveCachedPose_17658B34440A047EB64B94A7175013F1' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_UseCachedPose_04405D3D4F8BCFD02C681D8D229C0D2E) == 0x000F98, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_UseCachedPose_04405D3D4F8BCFD02C681D8D229C0D2E' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_BlendListByBool_C68E6B0E407D0454643482B1A7183F5B) == 0x000FC0, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_BlendListByBool_C68E6B0E407D0454643482B1A7183F5B' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_UseCachedPose_EDDAFEAC483866651C7E3FAC553065FD) == 0x001060, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_UseCachedPose_EDDAFEAC483866651C7E3FAC553065FD' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_BlendListByEnum_08630207438BC89444088F8788608168) == 0x001088, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_BlendListByEnum_08630207438BC89444088F8788608168' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_UseCachedPose_FABFCD4648E517EB4D1F55956E6A4DD2) == 0x001138, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_UseCachedPose_FABFCD4648E517EB4D1F55956E6A4DD2' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_UseCachedPose_0E3FE42145D747BC790D9C8B3B86A438) == 0x001160, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_UseCachedPose_0E3FE42145D747BC790D9C8B3B86A438' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_UseCachedPose_534B120E48854DC8D7F075B794D33C5F) == 0x001188, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_UseCachedPose_534B120E48854DC8D7F075B794D33C5F' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_LiveLinkPose_99C9F7884620B6D189A49A8BB1023059) == 0x0011B0, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_LiveLinkPose_99C9F7884620B6D189A49A8BB1023059' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, AnimGraphNode_LiveLinkPose_904059874BC7464442D2C4A54AA56DB6) == 0x0011F8, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::AnimGraphNode_LiveLinkPose_904059874BC7464442D2C4A54AA56DB6' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, MeshToCopy) == 0x001240, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::MeshToCopy' has a wrong offset!");
-static_assert(offsetof(UFortnite_Base_Head_Export_Skeleton_AnimBP_C, GetPlayerListUsesCustomCharacterParts) == 0x001248, "Member 'UFortnite_Base_Head_Export_Skeleton_AnimBP_C::GetPlayerListUsesCustomCharacterParts' has a wrong offset!");
 
 }
 

@@ -37,6 +37,34 @@ void UInviteListEntry_FriendInvite_XS_C::ExecuteUbergraph_InviteListEntry_Friend
 }
 
 
+// Function InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UInviteListEntry_FriendInvite_XS_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InviteListEntry_FriendInvite_XS_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UInviteListEntry_FriendInvite_XS_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("InviteListEntry_FriendInvite_XS_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.BndEvt__MenuAnchor_Actions_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -57,40 +85,12 @@ void UInviteListEntry_FriendInvite_XS_C::BndEvt__MenuAnchor_Actions_K2Node_Compo
 }
 
 
-// Function InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UInviteListEntry_FriendInvite_XS_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InviteListEntry_FriendInvite_XS_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UInviteListEntry_FriendInvite_XS_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("InviteListEntry_FriendInvite_XS_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function InviteListEntry_FriendInvite_XS.InviteListEntry_FriendInvite_XS_C.HandleOnlineIndicatorView
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EOnlineStatus                           OnlineStatus                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   OnlineStatus                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UInviteListEntry_FriendInvite_XS_C::HandleOnlineIndicatorView(EOnlineStatus OnlineStatus)
+void UInviteListEntry_FriendInvite_XS_C::HandleOnlineIndicatorView(uint8 OnlineStatus)
 {
 	static class UFunction* Func = nullptr;
 

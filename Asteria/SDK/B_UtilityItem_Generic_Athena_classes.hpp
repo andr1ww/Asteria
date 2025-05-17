@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "B_UtilityItem_Generic_classes.hpp"
 
 
@@ -17,9 +18,19 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_UtilityItem_Generic_Athena.B_UtilityItem_Generic_Athena_C
-// 0x0000 (0x0928 - 0x0928)
+// 0x0010 (0x0CC8 - 0x0CB8)
 class AB_UtilityItem_Generic_Athena_C : public AB_UtilityItem_Generic_C
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0CB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          UseThrowConsumableHudKeyActions;                   // 0x0CC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+public:
+	void ExecuteUbergraph_B_UtilityItem_Generic_Athena(int32 EntryPoint);
+	void ThrowConsumableHudActionKey_Visible(bool Visible);
+	void ThrowConsumableHudActionKey_Targeting(bool Targeting);
+	void ReceiveBeginPlay();
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -30,8 +41,6 @@ public:
 		return GetDefaultObjImpl<AB_UtilityItem_Generic_Athena_C>();
 	}
 };
-static_assert(alignof(AB_UtilityItem_Generic_Athena_C) == 0x000008, "Wrong alignment on AB_UtilityItem_Generic_Athena_C");
-static_assert(sizeof(AB_UtilityItem_Generic_Athena_C) == 0x000928, "Wrong size on AB_UtilityItem_Generic_Athena_C");
 
 }
 

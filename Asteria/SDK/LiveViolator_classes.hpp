@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -17,9 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LiveViolator.LiveViolator_C
-// 0x0000 (0x0230 - 0x0230)
+// 0x0028 (0x0288 - 0x0260)
 class ULiveViolator_C final : public UUserWidget
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       Text_Callout;                                      // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   LiveText;                                          // 0x0270(0x0018)(Edit, BlueprintVisible)
+
+public:
+	void ExecuteUbergraph_LiveViolator(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -30,8 +40,6 @@ public:
 		return GetDefaultObjImpl<ULiveViolator_C>();
 	}
 };
-static_assert(alignof(ULiveViolator_C) == 0x000008, "Wrong alignment on ULiveViolator_C");
-static_assert(sizeof(ULiveViolator_C) == 0x000230, "Wrong size on ULiveViolator_C");
 
 }
 

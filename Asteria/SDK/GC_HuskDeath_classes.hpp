@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GC_HuskDeath.GC_HuskDeath_C
-// 0x0000 (0x0468 - 0x0468)
+// 0x0000 (0x0460 - 0x0460)
 class AGC_HuskDeath_C final : public AFortGameplayCueNotify_BurstLatent
 {
 public:
@@ -33,8 +33,6 @@ public:
 		return GetDefaultObjImpl<AGC_HuskDeath_C>();
 	}
 };
-static_assert(alignof(AGC_HuskDeath_C) == 0x000008, "Wrong alignment on AGC_HuskDeath_C");
-static_assert(sizeof(AGC_HuskDeath_C) == 0x000468, "Wrong size on AGC_HuskDeath_C");
 
 }
 

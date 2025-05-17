@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TracerGeneric_Athena_Cannon_Child.TracerGeneric_Athena_Cannon_Child_C
-// 0x0000 (0x02D8 - 0x02D8)
+// 0x0000 (0x02B8 - 0x02B8)
 class ATracerGeneric_Athena_Cannon_Child_C final : public ATracerGeneric_Athena_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ATracerGeneric_Athena_Cannon_Child_C>();
 	}
 };
-static_assert(alignof(ATracerGeneric_Athena_Cannon_Child_C) == 0x000008, "Wrong alignment on ATracerGeneric_Athena_Cannon_Child_C");
-static_assert(sizeof(ATracerGeneric_Athena_Cannon_Child_C) == 0x0002D8, "Wrong size on ATracerGeneric_Athena_Cannon_Child_C");
 
 }
 

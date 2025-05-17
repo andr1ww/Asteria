@@ -10,34 +10,47 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Prj_Bullet_Sniper.B_Prj_Bullet_Sniper_C
-// 0x0058 (0x07D8 - 0x0780)
-class AB_Prj_Bullet_Sniper_C : public AFortProjectileAthena
+// 0x0128 (0x0AC8 - 0x09A0)
+class AB_Prj_Bullet_Sniper_C final : public AFortProjectileAthena
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0780(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   TracerMesh;                                        // 0x0788(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               P_Sniper_Bullet_Trail;                             // 0x0790(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Sniper_Rifle_SurfaceImpactSound;                   // 0x0798(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Sniper_Rifle_PlayerImpactSound;                    // 0x07A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DecalSize;                                         // 0x07A8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7B4[0x4];                                      // 0x07B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         ProjectileGravityScale;                            // 0x07B8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   TracerMesh;                                        // 0x09A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               P_Sniper_Bullet_Trail;                             // 0x09B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sniper_Rifle_SurfaceImpactSound;                   // 0x09B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sniper_Rifle_PlayerImpactSound;                    // 0x09C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DecalSize;                                         // 0x09C8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9D4[0x4];                                      // 0x09D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         ProjectileGravityScale;                            // 0x09D8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UParticleSystem*                        WaterImpactFX;                                     // 0x09F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             WaterHit;                                          // 0x0A00(0x008C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_A8C[0x4];                                      // 0x0A8C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPhysicalMaterial*                      WaterHitMat;                                       // 0x0A90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         WaterDepthTrace;                                   // 0x0A98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         WaterIndexTrace;                                   // 0x0A9C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                TraceImpactLocation;                               // 0x0AA0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                TraceImpactNormal;                                 // 0x0AAC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sniper_Rifle_WaterImpactSound;                     // 0x0AB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHasPlayedWaterSound;                              // 0x0AC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_B_Prj_Bullet_Sniper(int32 EntryPoint);
+	void OnSniperTraceWaterHit(const struct FHitResult& WaterHit_0, class AFortWaterBodyActor* WaterBody);
+	void OnTouched(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FHitResult& HitResult, bool bIsOverlap);
 	void ReceiveBeginPlay();
 	void OnStop(const struct FHitResult& Hit);
 	void UserConstructionScript();
+	void PlayImpactSFX(bool IsPlayer, bool IsWater);
 
 public:
 	static class UClass* StaticClass()
@@ -49,15 +62,6 @@ public:
 		return GetDefaultObjImpl<AB_Prj_Bullet_Sniper_C>();
 	}
 };
-static_assert(alignof(AB_Prj_Bullet_Sniper_C) == 0x000008, "Wrong alignment on AB_Prj_Bullet_Sniper_C");
-static_assert(sizeof(AB_Prj_Bullet_Sniper_C) == 0x0007D8, "Wrong size on AB_Prj_Bullet_Sniper_C");
-static_assert(offsetof(AB_Prj_Bullet_Sniper_C, UberGraphFrame) == 0x000780, "Member 'AB_Prj_Bullet_Sniper_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Bullet_Sniper_C, TracerMesh) == 0x000788, "Member 'AB_Prj_Bullet_Sniper_C::TracerMesh' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Bullet_Sniper_C, P_Sniper_Bullet_Trail) == 0x000790, "Member 'AB_Prj_Bullet_Sniper_C::P_Sniper_Bullet_Trail' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Bullet_Sniper_C, Sniper_Rifle_SurfaceImpactSound) == 0x000798, "Member 'AB_Prj_Bullet_Sniper_C::Sniper_Rifle_SurfaceImpactSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Bullet_Sniper_C, Sniper_Rifle_PlayerImpactSound) == 0x0007A0, "Member 'AB_Prj_Bullet_Sniper_C::Sniper_Rifle_PlayerImpactSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Bullet_Sniper_C, DecalSize) == 0x0007A8, "Member 'AB_Prj_Bullet_Sniper_C::DecalSize' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Bullet_Sniper_C, ProjectileGravityScale) == 0x0007B8, "Member 'AB_Prj_Bullet_Sniper_C::ProjectileGravityScale' has a wrong offset!");
 
 }
 

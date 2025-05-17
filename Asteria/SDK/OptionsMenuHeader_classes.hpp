@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass OptionsMenuHeader.OptionsMenuHeader_C
-// 0x0088 (0x02F0 - 0x0268)
+// 0x0088 (0x0340 - 0x02B8)
 class UOptionsMenuHeader_C final : public UFortOptionsMenuSetting
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0268(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image_0;                                           // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBoxContainer;                                  // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USpacer*                                SpacerBottom;                                      // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextHeader;                                        // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Tab_Tooltip_Text;                                  // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateFontInfo                         FontMobile;                                        // 0x0298(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	int32                                         FontSizeMobile;                                    // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image_0;                                           // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBoxContainer;                                  // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USpacer*                                SpacerBottom;                                      // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextHeader;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Tab_Tooltip_Text;                                  // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateFontInfo                         FontMobile;                                        // 0x02E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         FontSizeMobile;                                    // 0x0338(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_OptionsMenuHeader(int32 EntryPoint);
@@ -47,8 +47,6 @@ public:
 	void HandlePawnSet();
 	void SetFontSize(class UCommonTextBlock* Text, int32 DefaultSize, int32 MobileSize);
 
-	class UObject* GetListItemObject() const;
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -59,16 +57,6 @@ public:
 		return GetDefaultObjImpl<UOptionsMenuHeader_C>();
 	}
 };
-static_assert(alignof(UOptionsMenuHeader_C) == 0x000008, "Wrong alignment on UOptionsMenuHeader_C");
-static_assert(sizeof(UOptionsMenuHeader_C) == 0x0002F0, "Wrong size on UOptionsMenuHeader_C");
-static_assert(offsetof(UOptionsMenuHeader_C, UberGraphFrame) == 0x000268, "Member 'UOptionsMenuHeader_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UOptionsMenuHeader_C, Image_0) == 0x000270, "Member 'UOptionsMenuHeader_C::Image_0' has a wrong offset!");
-static_assert(offsetof(UOptionsMenuHeader_C, SizeBoxContainer) == 0x000278, "Member 'UOptionsMenuHeader_C::SizeBoxContainer' has a wrong offset!");
-static_assert(offsetof(UOptionsMenuHeader_C, SpacerBottom) == 0x000280, "Member 'UOptionsMenuHeader_C::SpacerBottom' has a wrong offset!");
-static_assert(offsetof(UOptionsMenuHeader_C, TextHeader) == 0x000288, "Member 'UOptionsMenuHeader_C::TextHeader' has a wrong offset!");
-static_assert(offsetof(UOptionsMenuHeader_C, Tab_Tooltip_Text) == 0x000290, "Member 'UOptionsMenuHeader_C::Tab_Tooltip_Text' has a wrong offset!");
-static_assert(offsetof(UOptionsMenuHeader_C, FontMobile) == 0x000298, "Member 'UOptionsMenuHeader_C::FontMobile' has a wrong offset!");
-static_assert(offsetof(UOptionsMenuHeader_C, FontSizeMobile) == 0x0002E8, "Member 'UOptionsMenuHeader_C::FontSizeMobile' has a wrong offset!");
 
 }
 

@@ -108,8 +108,8 @@ void UOptionsMenuHeader_C::OnListItemObjectSet(class UObject* ListItemObject)
 // Function OptionsMenuHeader.OptionsMenuHeader_C.OnMouseEnter
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UOptionsMenuHeader_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
@@ -130,7 +130,7 @@ void UOptionsMenuHeader_C::OnMouseEnter(const struct FGeometry& MyGeometry, cons
 // Function OptionsMenuHeader.OptionsMenuHeader_C.OnMouseLeave
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UOptionsMenuHeader_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
@@ -244,26 +244,6 @@ void UOptionsMenuHeader_C::SetFontSize(class UCommonTextBlock* Text, int32 Defau
 	Parms.MobileSize = MobileSize;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function OptionsMenuHeader.OptionsMenuHeader_C.GetListItemObject
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UObject* UOptionsMenuHeader_C::GetListItemObject() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuHeader_C", "GetListItemObject");
-
-	Params::OptionsMenuHeader_C_GetListItemObject Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 }

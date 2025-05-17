@@ -10,26 +10,26 @@
 
 #include "Basic.hpp"
 
-#include "GameplayAbilities_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GAT_ActiveAbility.GAT_ActiveAbility_C
-// 0x0030 (0x0970 - 0x0940)
+// 0x0030 (0x0AD8 - 0x0AA8)
 class UGAT_ActiveAbility_C : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTag                           TC_AbilitiesGenericActiveAbilityActivate;          // 0x0948(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FName                                   N_SavedCollisionChannel;                           // 0x0950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_KnockBackImmunity;                              // 0x0958(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            GEH_KnockBackImmunity;                             // 0x0960(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          bPlayerHolsterState;                               // 0x0968(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTag                           TC_AbilitiesGenericActiveAbilityActivate;          // 0x0AB0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FName                                   N_SavedCollisionChannel;                           // 0x0AB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_KnockBackImmunity;                              // 0x0AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FActiveGameplayEffectHandle            GEH_KnockBackImmunity;                             // 0x0AC8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPlayerHolsterState;                               // 0x0AD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GAT_ActiveAbility(int32 EntryPoint);
@@ -39,6 +39,7 @@ public:
 	void ActiveAbilitySetup(class UAbilitySystemComponent* AbilitySystemIn, class UAbilitySystemComponent** AbilitySystemOut);
 	void SetHolsterWeaponWithName(class AFortPawn* Target_Fort_Pawn, bool ShouldHolster, bool PlayEquipAnim, bool ShowDebugPrintName, bool* IsWeaponHolstered, bool* OperationSuccessful);
 	void SendHeroAbilityActivationEvent();
+	void EndAbilityWithReason(const class FString& Reason);
 
 	bool K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& Payload) const;
 
@@ -52,14 +53,6 @@ public:
 		return GetDefaultObjImpl<UGAT_ActiveAbility_C>();
 	}
 };
-static_assert(alignof(UGAT_ActiveAbility_C) == 0x000008, "Wrong alignment on UGAT_ActiveAbility_C");
-static_assert(sizeof(UGAT_ActiveAbility_C) == 0x000970, "Wrong size on UGAT_ActiveAbility_C");
-static_assert(offsetof(UGAT_ActiveAbility_C, UberGraphFrame) == 0x000940, "Member 'UGAT_ActiveAbility_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGAT_ActiveAbility_C, TC_AbilitiesGenericActiveAbilityActivate) == 0x000948, "Member 'UGAT_ActiveAbility_C::TC_AbilitiesGenericActiveAbilityActivate' has a wrong offset!");
-static_assert(offsetof(UGAT_ActiveAbility_C, N_SavedCollisionChannel) == 0x000950, "Member 'UGAT_ActiveAbility_C::N_SavedCollisionChannel' has a wrong offset!");
-static_assert(offsetof(UGAT_ActiveAbility_C, GE_KnockBackImmunity) == 0x000958, "Member 'UGAT_ActiveAbility_C::GE_KnockBackImmunity' has a wrong offset!");
-static_assert(offsetof(UGAT_ActiveAbility_C, GEH_KnockBackImmunity) == 0x000960, "Member 'UGAT_ActiveAbility_C::GEH_KnockBackImmunity' has a wrong offset!");
-static_assert(offsetof(UGAT_ActiveAbility_C, bPlayerHolsterState) == 0x000968, "Member 'UGAT_ActiveAbility_C::bPlayerHolsterState' has a wrong offset!");
 
 }
 

@@ -19,35 +19,32 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass CreativeServerOptions.CreativeServerOptions_C
-// 0x0080 (0x02F8 - 0x0278)
+// 0x0068 (0x0330 - 0x02C8)
 class UCreativeServerOptions_C final : public UFortCreativeServersView
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0280(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCircleArrowButton_C*                   CircleArrowButton_Left;                            // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCircleArrowButton_C*                   CircleArrowButton_Right;                           // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCreativeServerOptionsTile_C*           CreativeServerOptionsTile;                         // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCreativeServerOptionsTile_C*           CreativeServerOptionsTile_0;                       // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlayTitle;                                      // 0x02A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              ScaleBox_Title;                                    // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetCarousel*                  ServerCarousel;                                    // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetCarouselNavBar*            ServerCarouselNavBar;                              // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortSwipePanel*                        SwipePanel;                                        // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class UFortCreativeServerInfo* ServerInfo)> OnSelectedServerChanged;                           // 0x02D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UCreativeServerOptionsTile_C*           SelectedCarousel;                                  // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWidget*                                LastSelectedServer;                                // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x02D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCircleArrowButton_C*                   CircleArrowButton_Left;                            // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCircleArrowButton_C*                   CircleArrowButton_Right;                           // 0x02E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCreativeServerOptionsTile_C*           CreativeServerOptionsTile;                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCreativeServerOptionsTile_C*           CreativeServerOptionsTile_0;                       // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetCarousel*                  ServerCarousel;                                    // 0x02F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetCarouselNavBar*            ServerCarouselNavBar;                              // 0x0300(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortSwipePanel*                        SwipePanel;                                        // 0x0308(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class UFortCreativeServerInfo* ServerInfo)> OnSelectedServerChanged; // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UCreativeServerOptionsTile_C*           SelectedCarousel;                                  // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                LastSelectedServer;                                // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_CreativeServerOptions(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
-	void BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void BndEvt__SwipePanel_K2Node_ComponentBoundEvent_2_OnFortSwipeEvent__DelegateSignature();
-	void BndEvt__SwipePanel_K2Node_ComponentBoundEvent_3_OnFortSwipeEvent__DelegateSignature();
-	void Construct();
 	void EventIntro();
+	void BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_5_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void Construct();
+	void BndEvt__SwipePanel_K2Node_ComponentBoundEvent_3_OnFortSwipeEvent__DelegateSignature();
+	void BndEvt__SwipePanel_K2Node_ComponentBoundEvent_2_OnFortSwipeEvent__DelegateSignature();
 	void OnCreativeServerListRefreshed();
 
 public:
@@ -60,23 +57,6 @@ public:
 		return GetDefaultObjImpl<UCreativeServerOptions_C>();
 	}
 };
-static_assert(alignof(UCreativeServerOptions_C) == 0x000008, "Wrong alignment on UCreativeServerOptions_C");
-static_assert(sizeof(UCreativeServerOptions_C) == 0x0002F8, "Wrong size on UCreativeServerOptions_C");
-static_assert(offsetof(UCreativeServerOptions_C, UberGraphFrame) == 0x000278, "Member 'UCreativeServerOptions_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, Intro) == 0x000280, "Member 'UCreativeServerOptions_C::Intro' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, CircleArrowButton_Left) == 0x000288, "Member 'UCreativeServerOptions_C::CircleArrowButton_Left' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, CircleArrowButton_Right) == 0x000290, "Member 'UCreativeServerOptions_C::CircleArrowButton_Right' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, CreativeServerOptionsTile) == 0x000298, "Member 'UCreativeServerOptions_C::CreativeServerOptionsTile' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, CreativeServerOptionsTile_0) == 0x0002A0, "Member 'UCreativeServerOptions_C::CreativeServerOptionsTile_0' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, OverlayTitle) == 0x0002A8, "Member 'UCreativeServerOptions_C::OverlayTitle' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, SafeZone_0) == 0x0002B0, "Member 'UCreativeServerOptions_C::SafeZone_0' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, ScaleBox_Title) == 0x0002B8, "Member 'UCreativeServerOptions_C::ScaleBox_Title' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, ServerCarousel) == 0x0002C0, "Member 'UCreativeServerOptions_C::ServerCarousel' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, ServerCarouselNavBar) == 0x0002C8, "Member 'UCreativeServerOptions_C::ServerCarouselNavBar' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, SwipePanel) == 0x0002D0, "Member 'UCreativeServerOptions_C::SwipePanel' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, OnSelectedServerChanged) == 0x0002D8, "Member 'UCreativeServerOptions_C::OnSelectedServerChanged' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, SelectedCarousel) == 0x0002E8, "Member 'UCreativeServerOptions_C::SelectedCarousel' has a wrong offset!");
-static_assert(offsetof(UCreativeServerOptions_C, LastSelectedServer) == 0x0002F0, "Member 'UCreativeServerOptions_C::LastSelectedServer' has a wrong offset!");
 
 }
 

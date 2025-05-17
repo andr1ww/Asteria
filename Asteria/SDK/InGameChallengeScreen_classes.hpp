@@ -11,32 +11,30 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUI_classes.hpp"
 #include "UMG_structs.hpp"
+#include "FortniteUI_classes.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass InGameChallengeScreen.InGameChallengeScreen_C
-// 0x0038 (0x0358 - 0x0320)
-class UInGameChallengeScreen_C final : public UCommonActivatablePanel
+// 0x0020 (0x0468 - 0x0448)
+class UInGameChallengeScreen_C final : public UFortInGameChallengeScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAthenaChallengeTreeView*               AthenaChallengeTreeView_0;                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                ButtonMobileCloseArea;                             // 0x0330(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 CloseIcon;                                         // 0x0338(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPanelButton_C*                         MobileCloseButton;                                 // 0x0340(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlayCloseButton;                                // 0x0348(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x0350(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0448(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UButton*                                ButtonMobileCloseArea;                             // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCloseButton_C*                         CloseButton;                                       // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_0;                                        // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void HandleBack(bool* PassThrough);
-	void Construct();
-	void BndEvt__ButtonMobileCloseBackgroundButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void ExecuteUbergraph_InGameChallengeScreen(int32 EntryPoint);
+	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void BndEvt__ButtonMobileCloseBackgroundButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void Construct();
+	void HandleBack(bool* PassThrough);
 
 public:
 	static class UClass* StaticClass()
@@ -48,15 +46,6 @@ public:
 		return GetDefaultObjImpl<UInGameChallengeScreen_C>();
 	}
 };
-static_assert(alignof(UInGameChallengeScreen_C) == 0x000008, "Wrong alignment on UInGameChallengeScreen_C");
-static_assert(sizeof(UInGameChallengeScreen_C) == 0x000358, "Wrong size on UInGameChallengeScreen_C");
-static_assert(offsetof(UInGameChallengeScreen_C, UberGraphFrame) == 0x000320, "Member 'UInGameChallengeScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UInGameChallengeScreen_C, AthenaChallengeTreeView_0) == 0x000328, "Member 'UInGameChallengeScreen_C::AthenaChallengeTreeView_0' has a wrong offset!");
-static_assert(offsetof(UInGameChallengeScreen_C, ButtonMobileCloseArea) == 0x000330, "Member 'UInGameChallengeScreen_C::ButtonMobileCloseArea' has a wrong offset!");
-static_assert(offsetof(UInGameChallengeScreen_C, CloseIcon) == 0x000338, "Member 'UInGameChallengeScreen_C::CloseIcon' has a wrong offset!");
-static_assert(offsetof(UInGameChallengeScreen_C, MobileCloseButton) == 0x000340, "Member 'UInGameChallengeScreen_C::MobileCloseButton' has a wrong offset!");
-static_assert(offsetof(UInGameChallengeScreen_C, OverlayCloseButton) == 0x000348, "Member 'UInGameChallengeScreen_C::OverlayCloseButton' has a wrong offset!");
-static_assert(offsetof(UInGameChallengeScreen_C, SafeZone_0) == 0x000350, "Member 'UInGameChallengeScreen_C::SafeZone_0' has a wrong offset!");
 
 }
 

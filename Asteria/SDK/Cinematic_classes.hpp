@@ -19,25 +19,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Cinematic.Cinematic_C
-// 0x0068 (0x03C8 - 0x0360)
+// 0x0060 (0x0500 - 0x04A0)
 class UCinematic_C final : public UFortUIStateWidget_NUI
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNamedSlot*                             LocalizedAudioOnlyMovieSlot;                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetStack*                     MainContentStack;                                  // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNamedSlot*                             MovieSlot;                                         // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlayMovieOverlay;                               // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USubtitles_C*                           Subtitles;                                         // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTeamMicStack_C*                        TeamMicStack;                                      // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBuildWatermark_C*                      Widget_BuildWatermark;                             // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMovieWidget_C*                         MovieWidget;                                       // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortMediaSubtitlesPlayer*              SubtitlesPlayer;                                   // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                CinematicMediaSoundWave;                           // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFinished;                                         // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bVideoStreamed;                                    // 0x03B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3BA[0x6];                                      // 0x03BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMediaPlayer*                           SelectedMediaPlayer;                               // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNamedSlot*                             LocalizedAudioOnlyMovieSlot;                       // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetStack*                     MainContentStack;                                  // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNamedSlot*                             MovieSlot;                                         // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               OverlayMovieOverlay;                               // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USubtitles_C*                           Subtitles;                                         // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTeamMicStack_C*                        TeamMicStack;                                      // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBuildWatermark_C*                      Widget_BuildWatermark;                             // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULegacy_MovieWidget_C*                  MovieWidget;                                       // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortMediaSubtitlesPlayer*              SubtitlesPlayer;                                   // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CinematicMediaSoundWave;                           // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFinished;                                         // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_Cinematic(int32 EntryPoint);
@@ -49,7 +46,7 @@ public:
 	void Destruct();
 	void HandleClientEvent_QueueCinematic(class UObject* EventSource, class UObject* EventFocus, const struct FFortClientEvent& ClientEvent);
 	void Construct();
-	void ShowMovie(class UMediaPlayer* MediaPlayer, class UMediaSource* MediaSource, class UNamedSlot*& MovieSlot_0, class UMovieWidget_C*& MovieWidget_0);
+	void ShowMovie(class UMediaPlayer* MediaPlayer, class UMediaSource* MediaSource, class UNamedSlot*& MovieSlot_0, class ULegacy_MovieWidget_C*& MovieWidget_0);
 	void ClearMovie();
 	void SkipMovie();
 	class UWidget* PopContentWidgetInternal(const struct FContentPushState& State);
@@ -70,22 +67,6 @@ public:
 		return GetDefaultObjImpl<UCinematic_C>();
 	}
 };
-static_assert(alignof(UCinematic_C) == 0x000008, "Wrong alignment on UCinematic_C");
-static_assert(sizeof(UCinematic_C) == 0x0003C8, "Wrong size on UCinematic_C");
-static_assert(offsetof(UCinematic_C, UberGraphFrame) == 0x000360, "Member 'UCinematic_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, LocalizedAudioOnlyMovieSlot) == 0x000368, "Member 'UCinematic_C::LocalizedAudioOnlyMovieSlot' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, MainContentStack) == 0x000370, "Member 'UCinematic_C::MainContentStack' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, MovieSlot) == 0x000378, "Member 'UCinematic_C::MovieSlot' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, OverlayMovieOverlay) == 0x000380, "Member 'UCinematic_C::OverlayMovieOverlay' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, Subtitles) == 0x000388, "Member 'UCinematic_C::Subtitles' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, TeamMicStack) == 0x000390, "Member 'UCinematic_C::TeamMicStack' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, Widget_BuildWatermark) == 0x000398, "Member 'UCinematic_C::Widget_BuildWatermark' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, MovieWidget) == 0x0003A0, "Member 'UCinematic_C::MovieWidget' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, SubtitlesPlayer) == 0x0003A8, "Member 'UCinematic_C::SubtitlesPlayer' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, CinematicMediaSoundWave) == 0x0003B0, "Member 'UCinematic_C::CinematicMediaSoundWave' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, bFinished) == 0x0003B8, "Member 'UCinematic_C::bFinished' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, bVideoStreamed) == 0x0003B9, "Member 'UCinematic_C::bVideoStreamed' has a wrong offset!");
-static_assert(offsetof(UCinematic_C, SelectedMediaPlayer) == 0x0003C0, "Member 'UCinematic_C::SelectedMediaPlayer' has a wrong offset!");
 
 }
 

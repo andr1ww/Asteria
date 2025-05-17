@@ -68,7 +68,7 @@ void UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::HandleCommitCurrentAn
 // Function PlayerSurveyPanelContentsAnswerFreeFormTextWidget.PlayerSurveyPanelContentsAnswerFreeFormTextWidget_C.HandleAnswerChanged
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortPlayerSurveyAnswerContainerChangeEventInfoEventInfo                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+// const struct FFortPlayerSurveyAnswerContainerChangeEventInfo&EventInfo                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
 
 void UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::HandleAnswerChanged(const struct FFortPlayerSurveyAnswerContainerChangeEventInfo& EventInfo)
 {
@@ -88,7 +88,7 @@ void UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::HandleAnswerChanged(c
 // Function PlayerSurveyPanelContentsAnswerFreeFormTextWidget.PlayerSurveyPanelContentsAnswerFreeFormTextWidget_C.BndEvt__EntryTextBox_K2Node_ComponentBoundEvent_1_OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:
-// class FText                             Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // ETextCommit                             CommitMethod                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::BndEvt__EntryTextBox_K2Node_ComponentBoundEvent_1_OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod)
@@ -110,7 +110,7 @@ void UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::BndEvt__EntryTextBox_
 // Function PlayerSurveyPanelContentsAnswerFreeFormTextWidget.PlayerSurveyPanelContentsAnswerFreeFormTextWidget_C.BndEvt__EntryTextBox_K2Node_ComponentBoundEvent_0_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:
-// class FText                             Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::BndEvt__EntryTextBox_K2Node_ComponentBoundEvent_0_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
 {
@@ -172,7 +172,7 @@ void UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::UpdateHintText()
 // Function PlayerSurveyPanelContentsAnswerFreeFormTextWidget.PlayerSurveyPanelContentsAnswerFreeFormTextWidget_C.HandlePlayerEnterAnswer
 // (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           AnswerString                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    AnswerString                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
 void UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::HandlePlayerEnterAnswer(const class FString& AnswerString)
 {

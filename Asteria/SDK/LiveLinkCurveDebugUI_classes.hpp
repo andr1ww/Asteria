@@ -36,8 +36,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkDebuggerBlueprintLibrary>();
 	}
 };
-static_assert(alignof(ULiveLinkDebuggerBlueprintLibrary) == 0x000008, "Wrong alignment on ULiveLinkDebuggerBlueprintLibrary");
-static_assert(sizeof(ULiveLinkDebuggerBlueprintLibrary) == 0x000028, "Wrong size on ULiveLinkDebuggerBlueprintLibrary");
 
 // Class LiveLinkCurveDebugUI.LiveLinkDebuggerSettings
 // 0x0058 (0x0080 - 0x0028)
@@ -63,11 +61,6 @@ public:
 		return GetDefaultObjImpl<ULiveLinkDebuggerSettings>();
 	}
 };
-static_assert(alignof(ULiveLinkDebuggerSettings) == 0x000008, "Wrong alignment on ULiveLinkDebuggerSettings");
-static_assert(sizeof(ULiveLinkDebuggerSettings) == 0x000080, "Wrong size on ULiveLinkDebuggerSettings");
-static_assert(offsetof(ULiveLinkDebuggerSettings, MinBarColor) == 0x000028, "Member 'ULiveLinkDebuggerSettings::MinBarColor' has a wrong offset!");
-static_assert(offsetof(ULiveLinkDebuggerSettings, MaxBarColor) == 0x000050, "Member 'ULiveLinkDebuggerSettings::MaxBarColor' has a wrong offset!");
-static_assert(offsetof(ULiveLinkDebuggerSettings, DPIScaleMultiplier) == 0x000078, "Member 'ULiveLinkDebuggerSettings::DPIScaleMultiplier' has a wrong offset!");
 
 }
 

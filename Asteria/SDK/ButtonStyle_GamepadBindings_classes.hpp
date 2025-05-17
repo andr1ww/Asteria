@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_GamepadBindings_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_GamepadBindings_C) == 0x000008, "Wrong alignment on UButtonStyle_GamepadBindings_C");
-static_assert(sizeof(UButtonStyle_GamepadBindings_C) == 0x000570, "Wrong size on UButtonStyle_GamepadBindings_C");
 
 }
 

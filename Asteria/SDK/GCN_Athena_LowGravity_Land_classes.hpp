@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGCN_Athena_LowGravity_Land_C>();
 	}
 };
-static_assert(alignof(UGCN_Athena_LowGravity_Land_C) == 0x000008, "Wrong alignment on UGCN_Athena_LowGravity_Land_C");
-static_assert(sizeof(UGCN_Athena_LowGravity_Land_C) == 0x000080, "Wrong size on UGCN_Athena_LowGravity_Land_C");
 
 }
 

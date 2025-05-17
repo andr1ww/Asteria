@@ -21,7 +21,7 @@ namespace SDK
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // ETimeSynthEventQuantization             QuantizationType                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TDelegate<void(ETimeSynthEventQuantization QuantizationType, int32 NumBars, float Beat)>OnQuantizationEvent                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const TDelegate<void(ETimeSynthEventQuantization QuantizationType, int32 NumBars, float Beat)>&OnQuantizationEvent                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UTimeSynthComponent::AddQuantizationEventDelegate(ETimeSynthEventQuantization QuantizationType, const TDelegate<void(ETimeSynthEventQuantization QuantizationType, int32 NumBars, float Beat)>& OnQuantizationEvent)
 {
@@ -41,6 +41,31 @@ void UTimeSynthComponent::AddQuantizationEventDelegate(ETimeSynthEventQuantizati
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TimeSynth.TimeSynthComponent.HasActiveClips
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UTimeSynthComponent::HasActiveClips()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TimeSynthComponent", "HasActiveClips");
+
+	Params::TimeSynthComponent_HasActiveClips Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -96,7 +121,7 @@ void UTimeSynthComponent::ResetSeed()
 // Function TimeSynth.TimeSynthComponent.SetBPM
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                                   BeatsPerMinute                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             BeatsPerMinute                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UTimeSynthComponent::SetBPM(const float BeatsPerMinute)
 {
@@ -146,7 +171,7 @@ void UTimeSynthComponent::SetEnvelopeFollowerEnabled(bool bInIsEnabled)
 // Function TimeSynth.TimeSynthComponent.SetEnvelopeFollowerSettings
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FTimeSynthEnvelopeFollowerSettingsInSettings                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTimeSynthEnvelopeFollowerSettings&InSettings                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void UTimeSynthComponent::SetEnvelopeFollowerSettings(const struct FTimeSynthEnvelopeFollowerSettings& InSettings)
 {
@@ -224,7 +249,7 @@ void UTimeSynthComponent::SetFilterEnabled(ETimeSynthFilter Filter, bool bIsEnab
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // ETimeSynthFilter                        Filter                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTimeSynthFilterSettings         InSettings                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTimeSynthFilterSettings&  InSettings                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void UTimeSynthComponent::SetFilterSettings(ETimeSynthFilter Filter, const struct FTimeSynthFilterSettings& InSettings)
 {
@@ -250,7 +275,7 @@ void UTimeSynthComponent::SetFilterSettings(ETimeSynthFilter Filter, const struc
 // Function TimeSynth.TimeSynthComponent.SetQuantizationSettings
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FTimeSynthQuantizationSettings   InQuantizationSettings                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTimeSynthQuantizationSettings&InQuantizationSettings                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UTimeSynthComponent::SetQuantizationSettings(const struct FTimeSynthQuantizationSettings& InQuantizationSettings)
 {
@@ -329,7 +354,7 @@ void UTimeSynthComponent::SetVolumeGroup(class UTimeSynthVolumeGroup* InVolumeGr
 // Function TimeSynth.TimeSynthComponent.StopClip
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FTimeSynthClipHandle             InClipHandle                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTimeSynthClipHandle&      InClipHandle                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // ETimeSynthEventClipQuantization         EventQuantization                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UTimeSynthComponent::StopClip(const struct FTimeSynthClipHandle& InClipHandle, ETimeSynthEventClipQuantization EventQuantization)
@@ -356,9 +381,9 @@ void UTimeSynthComponent::StopClip(const struct FTimeSynthClipHandle& InClipHand
 // Function TimeSynth.TimeSynthComponent.StopClipWithFadeOverride
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FTimeSynthClipHandle             InClipHandle                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTimeSynthClipHandle&      InClipHandle                                           (Parm, NoDestructor, NativeAccessSpecifierPublic)
 // ETimeSynthEventClipQuantization         EventQuantization                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTimeSynthTimeDef                FadeTime                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTimeSynthTimeDef&         FadeTime                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UTimeSynthComponent::StopClipWithFadeOverride(const struct FTimeSynthClipHandle& InClipHandle, ETimeSynthEventClipQuantization EventQuantization, const struct FTimeSynthTimeDef& FadeTime)
 {
@@ -414,7 +439,7 @@ void UTimeSynthComponent::StopSoundsOnVolumeGroup(class UTimeSynthVolumeGroup* I
 // Parameters:
 // class UTimeSynthVolumeGroup*            InVolumeGroup                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ETimeSynthEventClipQuantization         EventQuantization                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTimeSynthTimeDef                FadeTime                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTimeSynthTimeDef&         FadeTime                                               (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UTimeSynthComponent::StopSoundsOnVolumeGroupWithFadeOverride(class UTimeSynthVolumeGroup* InVolumeGroup, ETimeSynthEventClipQuantization EventQuantization, const struct FTimeSynthTimeDef& FadeTime)
 {
@@ -488,10 +513,35 @@ float UTimeSynthComponent::GetEnvelopeFollowerValue() const
 }
 
 
+// Function TimeSynth.TimeSynthComponent.GetMaxActiveClipLimit
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UTimeSynthComponent::GetMaxActiveClipLimit() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TimeSynthComponent", "GetMaxActiveClipLimit");
+
+	Params::TimeSynthComponent_GetMaxActiveClipLimit Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function TimeSynth.TimeSynthComponent.GetSpectralData
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FTimeSynthSpectralData>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+// TArray<struct FTimeSynthSpectralData>   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 TArray<struct FTimeSynthSpectralData> UTimeSynthComponent::GetSpectralData() const
 {

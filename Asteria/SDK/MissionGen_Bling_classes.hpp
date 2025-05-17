@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UMissionGen_Bling_C>();
 	}
 };
-static_assert(alignof(UMissionGen_Bling_C) == 0x000008, "Wrong alignment on UMissionGen_Bling_C");
-static_assert(sizeof(UMissionGen_Bling_C) == 0x0006C0, "Wrong size on UMissionGen_Bling_C");
 
 }
 

@@ -51,20 +51,6 @@ void USocialPanelTab_C::BP_OnDeselected()
 }
 
 
-// Function SocialPanelTab.SocialPanelTab_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void USocialPanelTab_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanelTab_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function SocialPanelTab.SocialPanelTab_C.BP_OnSelected
 // (Event, Protected, BlueprintEvent)
 
@@ -88,6 +74,20 @@ void USocialPanelTab_C::BP_OnUnhovered()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SocialPanelTab_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialPanelTab.SocialPanelTab_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void USocialPanelTab_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanelTab_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

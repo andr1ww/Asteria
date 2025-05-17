@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function EventRegionLockMessage.EventRegionLockMessage_C.RefreshDataBP
-// (Event, Protected, BlueprintEvent)
-
-void UEventRegionLockMessage_C::RefreshDataBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventRegionLockMessage_C", "RefreshDataBP");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function EventRegionLockMessage.EventRegionLockMessage_C.ExecuteUbergraph_EventRegionLockMessage
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -48,6 +34,20 @@ void UEventRegionLockMessage_C::ExecuteUbergraph_EventRegionLockMessage(int32 En
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventRegionLockMessage.EventRegionLockMessage_C.RefreshDataBP
+// (Event, Protected, BlueprintEvent)
+
+void UEventRegionLockMessage_C::RefreshDataBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventRegionLockMessage_C", "RefreshDataBP");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

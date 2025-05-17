@@ -142,6 +142,34 @@ ECommonInputType UCommonInputSubsystem::GetDefaultInputType() const
 }
 
 
+// Function CommonInput.CommonInputSubsystem.IsInputMethodActive
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// ECommonInputType                        InputMethod                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCommonInputSubsystem::IsInputMethodActive(ECommonInputType InputMethod) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CommonInputSubsystem", "IsInputMethodActive");
+
+	Params::CommonInputSubsystem_IsInputMethodActive Parms{};
+
+	Parms.InputMethod = InputMethod;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function CommonInput.CommonInputSubsystem.IsUsingPointerInput
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:

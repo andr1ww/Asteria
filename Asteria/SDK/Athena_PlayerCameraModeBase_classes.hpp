@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Athena_PlayerCameraModeBase.Athena_PlayerCameraModeBase_C
-// 0x0000 (0x0CF0 - 0x0CF0)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class UAthena_PlayerCameraModeBase_C : public UFortCameraMode_ThirdPerson
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UAthena_PlayerCameraModeBase_C>();
 	}
 };
-static_assert(alignof(UAthena_PlayerCameraModeBase_C) == 0x000010, "Wrong alignment on UAthena_PlayerCameraModeBase_C");
-static_assert(sizeof(UAthena_PlayerCameraModeBase_C) == 0x000CF0, "Wrong size on UAthena_PlayerCameraModeBase_C");
 
 }
 

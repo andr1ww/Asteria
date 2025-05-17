@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "CommonInput_classes.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass CommonUI_KeyboardBrushData.CommonUI_KeyboardBrushData_C
-// 0x0000 (0x0040 - 0x0040)
-class UCommonUI_KeyboardBrushData_C final : public UCommonInputControllerData
+// 0x0000 (0x00A0 - 0x00A0)
+class UCommonUI_KeyboardBrushData_C final : public UFortInputControllerData
 {
 public:
 	static class UClass* StaticClass()
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UCommonUI_KeyboardBrushData_C>();
 	}
 };
-static_assert(alignof(UCommonUI_KeyboardBrushData_C) == 0x000008, "Wrong alignment on UCommonUI_KeyboardBrushData_C");
-static_assert(sizeof(UCommonUI_KeyboardBrushData_C) == 0x000040, "Wrong size on UCommonUI_KeyboardBrushData_C");
 
 }
 

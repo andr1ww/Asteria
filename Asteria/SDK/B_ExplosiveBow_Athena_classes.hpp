@@ -10,66 +10,66 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "B_Ranged_Generic_Athena_classes.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_ExplosiveBow_Athena.B_ExplosiveBow_Athena_C
-// 0x0138 (0x0E98 - 0x0D60)
+// 0x0138 (0x12E8 - 0x11B0)
 class AB_ExplosiveBow_Athena_C final : public AB_Ranged_Generic_Athena_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_ExplosiveBow_Athena_C;            // 0x0D60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        FullCharge_AudioComponent;                         // 0x0D68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        Ambient_Charge_AudioComponent;                     // 0x0D70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          Reached_Max_Charge;                                // 0x0D78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Reached_Min_Charge;                                // 0x0D79(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Charging;                                          // 0x0D7A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D7B[0x5];                                      // 0x0D7B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        ChargeAudio;                                       // 0x0D80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               FullyChargedVFX;                                   // 0x0D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0D90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           UpdateTrajectorySpline;                            // 0x0D98(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 Prj_Dummy;                                         // 0x0DA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortProjectileBase*                    DummyProjectile;                                   // 0x0DA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyGravity;                                      // 0x0DB0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyExtent;                                       // 0x0DB4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyMaxSpeed;                                     // 0x0DB8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Gravity;                                           // 0x0DBC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GravityScale;                                      // 0x0DC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GravityTickIncrease;                               // 0x0DC4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ProjectileVelocity;                                // 0x0DC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MaxProjectileVelocity;                             // 0x0DCC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         VelocityTickIncrease;                              // 0x0DD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DD4[0x4];                                      // 0x0DD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           ChargingAnim;                                      // 0x0DD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           MaxChargeAnim;                                     // 0x0DE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         MinProjectileSpeed;                                // 0x0DE8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         MaxProjectileSpeed;                                // 0x0E08(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class ABP_ProjectileTrajectory_ExplosiveBow_C* BowTrajectory;                                     // 0x0E28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyFriction;                                     // 0x0E30(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyBouncieness;                                  // 0x0E34(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECollisionChannel                             DummyCollisionChannel;                             // 0x0E38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E39[0x7];                                      // 0x0E39(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 TrajectoryClass;                                   // 0x0E40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsEquipped_B_ExplosiveBow_Athena_C;                // 0x0E48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          ReachedHalfCharge;                                 // 0x0E49(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E4A[0x2];                                      // 0x0E4A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DummyTimestep;                                     // 0x0E4C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             LowTensionFire;                                    // 0x0E50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             NormalTensionFire;                                 // 0x0E58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             FullTensionFire;                                   // 0x0E60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             FullTensionFireP1;                                 // 0x0E68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             LowTensionFireP1;                                  // 0x0E70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             NormalTensionFireP1;                               // 0x0E78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        AdditionalFireFX;                                  // 0x0E80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        FullyChargeFX;                                     // 0x0E88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SoundOnCharge;                                     // 0x0E90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_ExplosiveBow_Athena_C;            // 0x11B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        FullCharge_AudioComponent;                         // 0x11B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Ambient_Charge_AudioComponent;                     // 0x11C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          Reached_Max_Charge;                                // 0x11C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Reached_Min_Charge;                                // 0x11C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Charging;                                          // 0x11CA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11CB[0x5];                                     // 0x11CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        ChargeAudio;                                       // 0x11D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               FullyChargedVFX;                                   // 0x11D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x11E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           UpdateTrajectorySpline;                            // 0x11E8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Prj_Dummy;                                         // 0x11F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortProjectileBase*                    DummyProjectile;                                   // 0x11F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyGravity;                                      // 0x1200(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyExtent;                                       // 0x1204(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyMaxSpeed;                                     // 0x1208(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Gravity;                                           // 0x120C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GravityScale;                                      // 0x1210(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GravityTickIncrease;                               // 0x1214(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ProjectileVelocity;                                // 0x1218(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MaxProjectileVelocity;                             // 0x121C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         VelocityTickIncrease;                              // 0x1220(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1224[0x4];                                     // 0x1224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           ChargingAnim;                                      // 0x1228(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           MaxChargeAnim;                                     // 0x1230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         MinProjectileSpeed;                                // 0x1238(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         MaxProjectileSpeed;                                // 0x1258(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class ABP_ProjectileTrajectory_ExplosiveBow_C* BowTrajectory;                                    // 0x1278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyFriction;                                     // 0x1280(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyBouncieness;                                  // 0x1284(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECollisionChannel                             DummyCollisionChannel;                             // 0x1288(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1289[0x7];                                     // 0x1289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 TrajectoryClass;                                   // 0x1290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBowEquipped;                                     // 0x1298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          ReachedHalfCharge;                                 // 0x1299(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_129A[0x2];                                     // 0x129A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DummyTimeStep;                                     // 0x129C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             LowTensionFire;                                    // 0x12A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             NormalTensionFire;                                 // 0x12A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             FullTensionFire;                                   // 0x12B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             FullTensionFireP1;                                 // 0x12B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             LowTensionFireP1;                                  // 0x12C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             NormalTensionFireP1;                               // 0x12C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        AdditionalFireFX;                                  // 0x12D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        FullyChargeFX;                                     // 0x12D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SoundOnCharge;                                     // 0x12E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_ExplosiveBow_Athena(int32 EntryPoint);
@@ -105,50 +105,6 @@ public:
 		return GetDefaultObjImpl<AB_ExplosiveBow_Athena_C>();
 	}
 };
-static_assert(alignof(AB_ExplosiveBow_Athena_C) == 0x000008, "Wrong alignment on AB_ExplosiveBow_Athena_C");
-static_assert(sizeof(AB_ExplosiveBow_Athena_C) == 0x000E98, "Wrong size on AB_ExplosiveBow_Athena_C");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, UberGraphFrame_B_ExplosiveBow_Athena_C) == 0x000D60, "Member 'AB_ExplosiveBow_Athena_C::UberGraphFrame_B_ExplosiveBow_Athena_C' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, FullCharge_AudioComponent) == 0x000D68, "Member 'AB_ExplosiveBow_Athena_C::FullCharge_AudioComponent' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, Ambient_Charge_AudioComponent) == 0x000D70, "Member 'AB_ExplosiveBow_Athena_C::Ambient_Charge_AudioComponent' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, Reached_Max_Charge) == 0x000D78, "Member 'AB_ExplosiveBow_Athena_C::Reached_Max_Charge' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, Reached_Min_Charge) == 0x000D79, "Member 'AB_ExplosiveBow_Athena_C::Reached_Min_Charge' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, Charging) == 0x000D7A, "Member 'AB_ExplosiveBow_Athena_C::Charging' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, ChargeAudio) == 0x000D80, "Member 'AB_ExplosiveBow_Athena_C::ChargeAudio' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, FullyChargedVFX) == 0x000D88, "Member 'AB_ExplosiveBow_Athena_C::FullyChargedVFX' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, PlayerPawn) == 0x000D90, "Member 'AB_ExplosiveBow_Athena_C::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, UpdateTrajectorySpline) == 0x000D98, "Member 'AB_ExplosiveBow_Athena_C::UpdateTrajectorySpline' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, Prj_Dummy) == 0x000DA0, "Member 'AB_ExplosiveBow_Athena_C::Prj_Dummy' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, DummyProjectile) == 0x000DA8, "Member 'AB_ExplosiveBow_Athena_C::DummyProjectile' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, DummyGravity) == 0x000DB0, "Member 'AB_ExplosiveBow_Athena_C::DummyGravity' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, DummyExtent) == 0x000DB4, "Member 'AB_ExplosiveBow_Athena_C::DummyExtent' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, DummyMaxSpeed) == 0x000DB8, "Member 'AB_ExplosiveBow_Athena_C::DummyMaxSpeed' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, Gravity) == 0x000DBC, "Member 'AB_ExplosiveBow_Athena_C::Gravity' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, GravityScale) == 0x000DC0, "Member 'AB_ExplosiveBow_Athena_C::GravityScale' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, GravityTickIncrease) == 0x000DC4, "Member 'AB_ExplosiveBow_Athena_C::GravityTickIncrease' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, ProjectileVelocity) == 0x000DC8, "Member 'AB_ExplosiveBow_Athena_C::ProjectileVelocity' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, MaxProjectileVelocity) == 0x000DCC, "Member 'AB_ExplosiveBow_Athena_C::MaxProjectileVelocity' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, VelocityTickIncrease) == 0x000DD0, "Member 'AB_ExplosiveBow_Athena_C::VelocityTickIncrease' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, ChargingAnim) == 0x000DD8, "Member 'AB_ExplosiveBow_Athena_C::ChargingAnim' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, MaxChargeAnim) == 0x000DE0, "Member 'AB_ExplosiveBow_Athena_C::MaxChargeAnim' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, MinProjectileSpeed) == 0x000DE8, "Member 'AB_ExplosiveBow_Athena_C::MinProjectileSpeed' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, MaxProjectileSpeed) == 0x000E08, "Member 'AB_ExplosiveBow_Athena_C::MaxProjectileSpeed' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, BowTrajectory) == 0x000E28, "Member 'AB_ExplosiveBow_Athena_C::BowTrajectory' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, DummyFriction) == 0x000E30, "Member 'AB_ExplosiveBow_Athena_C::DummyFriction' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, DummyBouncieness) == 0x000E34, "Member 'AB_ExplosiveBow_Athena_C::DummyBouncieness' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, DummyCollisionChannel) == 0x000E38, "Member 'AB_ExplosiveBow_Athena_C::DummyCollisionChannel' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, TrajectoryClass) == 0x000E40, "Member 'AB_ExplosiveBow_Athena_C::TrajectoryClass' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, IsEquipped_B_ExplosiveBow_Athena_C) == 0x000E48, "Member 'AB_ExplosiveBow_Athena_C::IsEquipped_B_ExplosiveBow_Athena_C' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, ReachedHalfCharge) == 0x000E49, "Member 'AB_ExplosiveBow_Athena_C::ReachedHalfCharge' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, DummyTimestep) == 0x000E4C, "Member 'AB_ExplosiveBow_Athena_C::DummyTimestep' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, LowTensionFire) == 0x000E50, "Member 'AB_ExplosiveBow_Athena_C::LowTensionFire' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, NormalTensionFire) == 0x000E58, "Member 'AB_ExplosiveBow_Athena_C::NormalTensionFire' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, FullTensionFire) == 0x000E60, "Member 'AB_ExplosiveBow_Athena_C::FullTensionFire' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, FullTensionFireP1) == 0x000E68, "Member 'AB_ExplosiveBow_Athena_C::FullTensionFireP1' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, LowTensionFireP1) == 0x000E70, "Member 'AB_ExplosiveBow_Athena_C::LowTensionFireP1' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, NormalTensionFireP1) == 0x000E78, "Member 'AB_ExplosiveBow_Athena_C::NormalTensionFireP1' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, AdditionalFireFX) == 0x000E80, "Member 'AB_ExplosiveBow_Athena_C::AdditionalFireFX' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, FullyChargeFX) == 0x000E88, "Member 'AB_ExplosiveBow_Athena_C::FullyChargeFX' has a wrong offset!");
-static_assert(offsetof(AB_ExplosiveBow_Athena_C, SoundOnCharge) == 0x000E90, "Member 'AB_ExplosiveBow_Athena_C::SoundOnCharge' has a wrong offset!");
 
 }
 

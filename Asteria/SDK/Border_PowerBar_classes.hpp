@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UBorder_PowerBar_C>();
 	}
 };
-static_assert(alignof(UBorder_PowerBar_C) == 0x000008, "Wrong alignment on UBorder_PowerBar_C");
-static_assert(sizeof(UBorder_PowerBar_C) == 0x0000B0, "Wrong size on UBorder_PowerBar_C");
 
 }
 

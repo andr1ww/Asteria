@@ -29,15 +29,6 @@ public:
 	class AFortPlayerController*                  K2Node_DynamicCast_AsFort_Player_Controller_1;     // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena) == 0x000008, "Wrong alignment on B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena");
-static_assert(sizeof(B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena) == 0x000038, "Wrong size on B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena");
-static_assert(offsetof(B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena, EntryPoint) == 0x000000, "Member 'B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena, CallFunc_GetInstigatorController_ReturnValue) == 0x000008, "Member 'B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena::CallFunc_GetInstigatorController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena, CallFunc_GetInstigatorController_ReturnValue_1) == 0x000010, "Member 'B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena::CallFunc_GetInstigatorController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena, K2Node_DynamicCast_AsFort_Player_Controller) == 0x000018, "Member 'B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena::K2Node_DynamicCast_AsFort_Player_Controller' has a wrong offset!");
-static_assert(offsetof(B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena, K2Node_DynamicCast_AsFort_Player_Controller_1) == 0x000028, "Member 'B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena::K2Node_DynamicCast_AsFort_Player_Controller_1' has a wrong offset!");
-static_assert(offsetof(B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'B_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Grenade_Playset_Athena::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 
 }
 

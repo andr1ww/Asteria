@@ -55,8 +55,9 @@ void AB_Melee_Generic_C::OnWeaponDetached()
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // bool                                    bVisible                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bSetForLocalControllerOnly                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Melee_Generic_C::OnWeaponVisibilityChanged(bool bVisible)
+void AB_Melee_Generic_C::OnWeaponVisibilityChanged(bool bVisible, bool bSetForLocalControllerOnly)
 {
 	static class UFunction* Func = nullptr;
 
@@ -66,6 +67,7 @@ void AB_Melee_Generic_C::OnWeaponVisibilityChanged(bool bVisible)
 	Params::B_Melee_Generic_C_OnWeaponVisibilityChanged Parms{};
 
 	Parms.bVisible = bVisible;
+	Parms.bSetForLocalControllerOnly = bSetForLocalControllerOnly;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -74,7 +76,7 @@ void AB_Melee_Generic_C::OnWeaponVisibilityChanged(bool bVisible)
 // Function B_Melee_Generic.B_Melee_Generic_C.OnInitCosmeticAlterations
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// struct FFortCosmeticModification        CosmeticMod                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortCosmeticModification& CosmeticMod                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void AB_Melee_Generic_C::OnInitCosmeticAlterations(const struct FFortCosmeticModification& CosmeticMod)
 {
@@ -122,11 +124,11 @@ void AB_Melee_Generic_C::OnEquippedWeaponDestory()
 // Function B_Melee_Generic.B_Melee_Generic_C.OnPlayImpactFX
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FHitResult                       HitResult                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FHitResult&                HitResult                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 // EPhysicalSurface                        ImpactPhysicalSurface                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UParticleSystemComponent*         SpawnedPSC                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFXSystemComponent*               SpawnedPSC                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Melee_Generic_C::OnPlayImpactFX(const struct FHitResult& HitResult, EPhysicalSurface ImpactPhysicalSurface, class UParticleSystemComponent* SpawnedPSC)
+void AB_Melee_Generic_C::OnPlayImpactFX(const struct FHitResult& HitResult, EPhysicalSurface ImpactPhysicalSurface, class UFXSystemComponent* SpawnedPSC)
 {
 	static class UFunction* Func = nullptr;
 
@@ -251,29 +253,41 @@ void AB_Melee_Generic_C::FootStepLeft()
 
 // Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingLeft
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Left                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Melee_Generic_C::MeleeSwingLeft()
+void AB_Melee_Generic_C::MeleeSwingLeft(bool First_Left)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingLeft");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::B_Melee_Generic_C_MeleeSwingLeft Parms{};
+
+	Parms.First_Left = First_Left;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function B_Melee_Generic.B_Melee_Generic_C.MeleeSwingRight
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    First_Right                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Melee_Generic_C::MeleeSwingRight()
+void AB_Melee_Generic_C::MeleeSwingRight(bool First_Right)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Melee_Generic_C", "MeleeSwingRight");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::B_Melee_Generic_C_MeleeSwingRight Parms{};
+
+	Parms.First_Right = First_Right;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -350,7 +364,7 @@ void AB_Melee_Generic_C::SetActiveAlterationIdleParticles(bool Active, bool Rese
 // Function B_Melee_Generic.B_Melee_Generic_C.PlayCQCPickaxeEnemyAudio
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FHitResult                       Hit_Result                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FHitResult&                Hit_Result                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
 void AB_Melee_Generic_C::PlayCQCPickaxeEnemyAudio(const struct FHitResult& Hit_Result)
 {
@@ -370,7 +384,7 @@ void AB_Melee_Generic_C::PlayCQCPickaxeEnemyAudio(const struct FHitResult& Hit_R
 // Function B_Melee_Generic.B_Melee_Generic_C.Melee_Effect_Color
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Melee_Color_Set                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         Melee_Color_Set                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AB_Melee_Generic_C::Melee_Effect_Color(struct FVector* Melee_Color_Set)
 {

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GE_ExtraLifeRevive.GE_ExtraLifeRevive_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_ExtraLifeRevive_C final : public UGE_Generic_Revive_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGE_ExtraLifeRevive_C>();
 	}
 };
-static_assert(alignof(UGE_ExtraLifeRevive_C) == 0x000008, "Wrong alignment on UGE_ExtraLifeRevive_C");
-static_assert(sizeof(UGE_ExtraLifeRevive_C) == 0x0005F0, "Wrong size on UGE_ExtraLifeRevive_C");
 
 }
 

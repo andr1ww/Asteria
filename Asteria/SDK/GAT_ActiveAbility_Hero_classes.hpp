@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C
-// 0x0010 (0x0980 - 0x0970)
+// 0x0010 (0x0AE8 - 0x0AD8)
 class UGAT_ActiveAbility_Hero_C : public UGAT_ActiveAbility_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_ActiveAbility_Hero_C;           // 0x0970(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          UseHeroLoadoutSystem;                              // 0x0978(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_ActiveAbility_Hero_C;           // 0x0AD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          UseHeroLoadoutSystem;                              // 0x0AE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GAT_ActiveAbility_Hero(int32 EntryPoint);
@@ -40,10 +40,6 @@ public:
 		return GetDefaultObjImpl<UGAT_ActiveAbility_Hero_C>();
 	}
 };
-static_assert(alignof(UGAT_ActiveAbility_Hero_C) == 0x000008, "Wrong alignment on UGAT_ActiveAbility_Hero_C");
-static_assert(sizeof(UGAT_ActiveAbility_Hero_C) == 0x000980, "Wrong size on UGAT_ActiveAbility_Hero_C");
-static_assert(offsetof(UGAT_ActiveAbility_Hero_C, UberGraphFrame_GAT_ActiveAbility_Hero_C) == 0x000970, "Member 'UGAT_ActiveAbility_Hero_C::UberGraphFrame_GAT_ActiveAbility_Hero_C' has a wrong offset!");
-static_assert(offsetof(UGAT_ActiveAbility_Hero_C, UseHeroLoadoutSystem) == 0x000978, "Member 'UGAT_ActiveAbility_Hero_C::UseHeroLoadoutSystem' has a wrong offset!");
 
 }
 

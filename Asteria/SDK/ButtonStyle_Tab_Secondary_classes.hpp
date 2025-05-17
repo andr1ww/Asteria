@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Tab_Secondary_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_Tab_Secondary_C) == 0x000008, "Wrong alignment on UButtonStyle_Tab_Secondary_C");
-static_assert(sizeof(UButtonStyle_Tab_Secondary_C) == 0x000570, "Wrong size on UButtonStyle_Tab_Secondary_C");
 
 }
 

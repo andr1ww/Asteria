@@ -10,57 +10,79 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass SafeZoneIndicator.SafeZoneIndicator_C
-// 0x0070 (0x04F8 - 0x0488)
+// 0x0140 (0x05B8 - 0x0478)
 class ASafeZoneIndicator_C final : public AFortSafeZoneIndicator
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Pre_Damage_Audio_Ramp_Intensity_05A077AD4FED08F2426E5CA16BD41D7C; // 0x0490(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Pre_Damage_Audio_Ramp__Direction_05A077AD4FED08F2426E5CA16BD41D7C; // 0x0494(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_495[0x3];                                      // 0x0495(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Pre_Damage_Audio_Ramp;                             // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         StormFadeTimeline_StormFadeIn_6FB75EFB416FB419D85F8797DEDD058C; // 0x04A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            StormFadeTimeline__Direction_6FB75EFB416FB419D85F8797DEDD058C; // 0x04A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A5[0x3];                                      // 0x04A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     StormFadeTimeline;                                 // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             ShieldBoundaryLoopSound;                           // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             HoldingLoopSound;                                  // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         HoldingStartTime_0;                                // 0x04C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C4[0x4];                                      // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             HoldingLoopTickSound;                              // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               SafeZoneMID;                                       // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           MegaStormDamageTimer;                              // 0x04D8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         MegastormAudioDuration;                            // 0x04E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E4[0x4];                                      // 0x04E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EFortSafeZoneState SafeZoneState)> OnSafeZoneStateChangeDispatcher;                   // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UChildActorComponent*                   BP_StormMeshRotator;                               // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         VolumetricStormFadeTimeline_StormFadeIn_5D8CED344AED096A33ABDAA94E2E18CD; // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            VolumetricStormFadeTimeline__Direction_5D8CED344AED096A33ABDAA94E2E18CD; // 0x048C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_48D[0x3];                                      // 0x048D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     VolumetricStormFadeTimeline;                       // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         StormFadeTimeline_StormFadeIn_6FB75EFB416FB419D85F8797DEDD058C; // 0x0498(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            StormFadeTimeline__Direction_6FB75EFB416FB419D85F8797DEDD058C; // 0x049C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49D[0x3];                                      // 0x049D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     StormFadeTimeline;                                 // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Pre_Damage_Audio_Ramp_Intensity_05A077AD4FED08F2426E5CA16BD41D7C; // 0x04A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Pre_Damage_Audio_Ramp__Direction_05A077AD4FED08F2426E5CA16BD41D7C; // 0x04AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4AD[0x3];                                      // 0x04AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Pre_Damage_Audio_Ramp;                             // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             ShieldBoundaryLoopSound;                           // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             HoldingLoopSound;                                  // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         HoldingStartTime_0;                                // 0x04C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4CC[0x4];                                      // 0x04CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             HoldingLoopTickSound;                              // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               SafeZoneMID;                                       // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           MegaStormDamageTimer;                              // 0x04E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         MegastormAudioDuration;                            // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4EC[0x4];                                      // 0x04EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(EFortSafeZoneState SafeZoneState)> OnSafeZoneStateChangeDispatcher; // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	EFortSafeZoneState                            SafeZoneState;                                     // 0x0500(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_501[0x7];                                      // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EFortSafeZoneState, struct FVector2D>    SafeZoneStateThunderFreqs;                         // 0x0508(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<EFortSafeZoneState, float>               SafeZoneStateThunderDuration;                      // 0x0558(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          OceanEnabled;                                      // 0x05A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5A9[0x3];                                      // 0x05A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumberofImpactEffects;                             // 0x05AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ImapctFX_MaxHeight;                                // 0x05B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ImapctFX_MinHeight;                                // 0x05B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_SafeZoneIndicator(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void OnSafeZoneStateChange(EFortSafeZoneState NewState, bool bInitial);
+	void Stop_Distant_Storm_Oneshots();
+	void Trigger_Distant_Storm_Oneshot();
+	void Play_Storm_Grow_Audio();
 	void Start_Megastorm_Audio();
 	void Megastorm_Pre_Damage_Tell();
-	void ReceiveBeginPlay();
 	void OnBeginStartingStateEffectsEvent();
 	void ReceiveDestroyed();
 	void stormy(float NewParam);
 	void ResetSafeZoneScale();
-	void OnSafeZoneStateChange(EFortSafeZoneState NewState, bool bInitial);
-	void Pre_Damage_Audio_Ramp__UpdateFunc();
-	void Pre_Damage_Audio_Ramp__FinishedFunc();
+	void VolumetricStormFadeTimeline__UpdateFunc();
+	void VolumetricStormFadeTimeline__FinishedFunc();
 	void StormFadeTimeline__UpdateFunc();
 	void StormFadeTimeline__FinishedFunc();
+	void Pre_Damage_Audio_Ramp__UpdateFunc();
+	void Pre_Damage_Audio_Ramp__FinishedFunc();
 	void UserConstructionScript();
 	void InitClosestPointAudio();
 	void HandleInsideOutsideMix();
 	void GetAthenaGameState(class AAthena_GameState_C** AthenaGS);
+	void GetRandomPointOnBoundary(struct FVector* position);
+	void GetRandomPointInPlayerDir(struct FVector* position);
 
 public:
 	static class UClass* StaticClass()
@@ -72,23 +94,6 @@ public:
 		return GetDefaultObjImpl<ASafeZoneIndicator_C>();
 	}
 };
-static_assert(alignof(ASafeZoneIndicator_C) == 0x000008, "Wrong alignment on ASafeZoneIndicator_C");
-static_assert(sizeof(ASafeZoneIndicator_C) == 0x0004F8, "Wrong size on ASafeZoneIndicator_C");
-static_assert(offsetof(ASafeZoneIndicator_C, UberGraphFrame) == 0x000488, "Member 'ASafeZoneIndicator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, Pre_Damage_Audio_Ramp_Intensity_05A077AD4FED08F2426E5CA16BD41D7C) == 0x000490, "Member 'ASafeZoneIndicator_C::Pre_Damage_Audio_Ramp_Intensity_05A077AD4FED08F2426E5CA16BD41D7C' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, Pre_Damage_Audio_Ramp__Direction_05A077AD4FED08F2426E5CA16BD41D7C) == 0x000494, "Member 'ASafeZoneIndicator_C::Pre_Damage_Audio_Ramp__Direction_05A077AD4FED08F2426E5CA16BD41D7C' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, Pre_Damage_Audio_Ramp) == 0x000498, "Member 'ASafeZoneIndicator_C::Pre_Damage_Audio_Ramp' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, StormFadeTimeline_StormFadeIn_6FB75EFB416FB419D85F8797DEDD058C) == 0x0004A0, "Member 'ASafeZoneIndicator_C::StormFadeTimeline_StormFadeIn_6FB75EFB416FB419D85F8797DEDD058C' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, StormFadeTimeline__Direction_6FB75EFB416FB419D85F8797DEDD058C) == 0x0004A4, "Member 'ASafeZoneIndicator_C::StormFadeTimeline__Direction_6FB75EFB416FB419D85F8797DEDD058C' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, StormFadeTimeline) == 0x0004A8, "Member 'ASafeZoneIndicator_C::StormFadeTimeline' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, ShieldBoundaryLoopSound) == 0x0004B0, "Member 'ASafeZoneIndicator_C::ShieldBoundaryLoopSound' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, HoldingLoopSound) == 0x0004B8, "Member 'ASafeZoneIndicator_C::HoldingLoopSound' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, HoldingStartTime_0) == 0x0004C0, "Member 'ASafeZoneIndicator_C::HoldingStartTime_0' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, HoldingLoopTickSound) == 0x0004C8, "Member 'ASafeZoneIndicator_C::HoldingLoopTickSound' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, SafeZoneMID) == 0x0004D0, "Member 'ASafeZoneIndicator_C::SafeZoneMID' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, MegaStormDamageTimer) == 0x0004D8, "Member 'ASafeZoneIndicator_C::MegaStormDamageTimer' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, MegastormAudioDuration) == 0x0004E0, "Member 'ASafeZoneIndicator_C::MegastormAudioDuration' has a wrong offset!");
-static_assert(offsetof(ASafeZoneIndicator_C, OnSafeZoneStateChangeDispatcher) == 0x0004E8, "Member 'ASafeZoneIndicator_C::OnSafeZoneStateChangeDispatcher' has a wrong offset!");
 
 }
 

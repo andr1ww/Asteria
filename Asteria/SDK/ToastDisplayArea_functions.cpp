@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function ToastDisplayArea.ToastDisplayArea_C.TestFrontendToast
+// (BlueprintCallable, BlueprintEvent)
+
+void UToastDisplayArea_C::TestFrontendToast()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ToastDisplayArea_C", "TestFrontendToast");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ToastDisplayArea.ToastDisplayArea_C.ExecuteUbergraph_ToastDisplayArea
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,132 +48,6 @@ void UToastDisplayArea_C::ExecuteUbergraph_ToastDisplayArea(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ToastDisplayArea.ToastDisplayArea_C.BndEvt__VoiceChannelChangePopup_K2Node_ComponentBoundEvent_1_OnToastDisplayFinished__DelegateSignature
-// (BlueprintEvent)
-
-void UToastDisplayArea_C::BndEvt__VoiceChannelChangePopup_K2Node_ComponentBoundEvent_1_OnToastDisplayFinished__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastDisplayArea_C", "BndEvt__VoiceChannelChangePopup_K2Node_ComponentBoundEvent_1_OnToastDisplayFinished__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ToastDisplayArea.ToastDisplayArea_C.BndEvt__PowerToastWidget_K2Node_ComponentBoundEvent_0_OnToastFinished__DelegateSignature
-// (BlueprintEvent)
-
-void UToastDisplayArea_C::BndEvt__PowerToastWidget_K2Node_ComponentBoundEvent_0_OnToastFinished__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastDisplayArea_C", "BndEvt__PowerToastWidget_K2Node_ComponentBoundEvent_0_OnToastFinished__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ToastDisplayArea.ToastDisplayArea_C.BndEvt__ToastWidget_MinorError_K2Node_ComponentBoundEvent_3_OnFinishedToast__DelegateSignature
-// (BlueprintEvent)
-
-void UToastDisplayArea_C::BndEvt__ToastWidget_MinorError_K2Node_ComponentBoundEvent_3_OnFinishedToast__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastDisplayArea_C", "BndEvt__ToastWidget_MinorError_K2Node_ComponentBoundEvent_3_OnFinishedToast__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ToastDisplayArea.ToastDisplayArea_C.BndEvt__ToastWidget_New_K2Node_ComponentBoundEvent_9_OnFinishedToast__DelegateSignature
-// (BlueprintEvent)
-
-void UToastDisplayArea_C::BndEvt__ToastWidget_New_K2Node_ComponentBoundEvent_9_OnFinishedToast__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastDisplayArea_C", "BndEvt__ToastWidget_New_K2Node_ComponentBoundEvent_9_OnFinishedToast__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ToastDisplayArea.ToastDisplayArea_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UToastDisplayArea_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastDisplayArea_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ToastDisplayArea.ToastDisplayArea_C.HandleNewToastAvailable
-// (BlueprintCallable, BlueprintEvent)
-
-void UToastDisplayArea_C::HandleNewToastAvailable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastDisplayArea_C", "HandleNewToastAvailable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ToastDisplayArea.ToastDisplayArea_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UToastDisplayArea_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastDisplayArea_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ToastDisplayArea.ToastDisplayArea_C.RegisterToastHandler
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UToastDisplayArea_C::RegisterToastHandler()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastDisplayArea_C", "RegisterToastHandler");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ToastDisplayArea.ToastDisplayArea_C.AttemptDisplayNextToast
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UToastDisplayArea_C::AttemptDisplayNextToast()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ToastDisplayArea_C", "AttemptDisplayNextToast");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

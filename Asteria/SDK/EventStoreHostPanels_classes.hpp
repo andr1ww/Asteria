@@ -10,32 +10,33 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventStoreHostPanels.EventStoreHostPanels_C
-// 0x0020 (0x02E8 - 0x02C8)
+// 0x0020 (0x0370 - 0x0350)
 class UEventStoreHostPanels_C final : public UFortItemDetailsHostPanel
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UHorizontalTabList_C*                   DetailPanelTabList;                                // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  DetailPanelWidgetSwitcher;                         // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               ItemSelected;                                      // 0x02E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UHorizontalTabList_C*                   DetailPanelTabList;                                // 0x0358(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  DetailPanelWidgetSwitcher;                         // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               ItemSelected;                                      // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Setup_Details_Panels();
-	void BndEvt__DetailPanelWidgetSwitcher_K2Node_ComponentBoundEvent_16_OnActiveWidgetChanged__DelegateSignature(class UWidget* ActiveWidget, int32 ActiveWidgetIndex);
-	void HandleDifferentItemToDetailSet();
-	void Construct();
-	void BndEvt__DetailPanelTabList_K2Node_ComponentBoundEvent_2_OnTabButtonCreated__DelegateSignature(class FName TabId, class UCommonButton* TabButton);
 	void ExecuteUbergraph_EventStoreHostPanels(int32 EntryPoint);
+	void BndEvt__DetailPanelTabList_K2Node_ComponentBoundEvent_2_OnTabButtonCreated__DelegateSignature(class FName TabId, class UCommonButton* TabButton);
+	void Construct();
+	void HandleDifferentItemToDetailSet();
+	void BndEvt__DetailPanelWidgetSwitcher_K2Node_ComponentBoundEvent_16_OnActiveWidgetChanged__DelegateSignature(class UWidget* ActiveWidget, int32 ActiveWidgetIndex);
+	void Setup_Details_Panels();
+	void SetTabVisibilities(ESlateVisibility StatVisibility, ESlateVisibility BonusVisibility, ESlateVisibility CraftingVisibility);
 
 public:
 	static class UClass* StaticClass()
@@ -47,12 +48,6 @@ public:
 		return GetDefaultObjImpl<UEventStoreHostPanels_C>();
 	}
 };
-static_assert(alignof(UEventStoreHostPanels_C) == 0x000008, "Wrong alignment on UEventStoreHostPanels_C");
-static_assert(sizeof(UEventStoreHostPanels_C) == 0x0002E8, "Wrong size on UEventStoreHostPanels_C");
-static_assert(offsetof(UEventStoreHostPanels_C, UberGraphFrame) == 0x0002C8, "Member 'UEventStoreHostPanels_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventStoreHostPanels_C, DetailPanelTabList) == 0x0002D0, "Member 'UEventStoreHostPanels_C::DetailPanelTabList' has a wrong offset!");
-static_assert(offsetof(UEventStoreHostPanels_C, DetailPanelWidgetSwitcher) == 0x0002D8, "Member 'UEventStoreHostPanels_C::DetailPanelWidgetSwitcher' has a wrong offset!");
-static_assert(offsetof(UEventStoreHostPanels_C, ItemSelected) == 0x0002E0, "Member 'UEventStoreHostPanels_C::ItemSelected' has a wrong offset!");
 
 }
 

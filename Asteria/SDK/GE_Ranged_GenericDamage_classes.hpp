@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GE_Ranged_GenericDamage.GE_Ranged_GenericDamage_C
-// 0x0000 (0x05F0 - 0x05F0)
-class UGE_Ranged_GenericDamage_C : public UGET_DirectPhysicalDamage_C
+// 0x0000 (0x07B8 - 0x07B8)
+class UGE_Ranged_GenericDamage_C final : public UGET_DirectPhysicalDamage_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGE_Ranged_GenericDamage_C>();
 	}
 };
-static_assert(alignof(UGE_Ranged_GenericDamage_C) == 0x000008, "Wrong alignment on UGE_Ranged_GenericDamage_C");
-static_assert(sizeof(UGE_Ranged_GenericDamage_C) == 0x0005F0, "Wrong size on UGE_Ranged_GenericDamage_C");
 
 }
 

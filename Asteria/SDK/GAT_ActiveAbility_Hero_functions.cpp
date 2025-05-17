@@ -54,7 +54,7 @@ void UGAT_ActiveAbility_Hero_C::K2_ActivateAbility()
 // Function GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C.CommitAbilityWithEvent
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Passed                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   Passed                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UGAT_ActiveAbility_Hero_C::CommitAbilityWithEvent(bool* Passed)
 {

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BattleMapWeaponGotKillInstigatorEdge.BP_BattleMapWeaponGotKillInstigatorEdge_C
-// 0x0000 (0x0280 - 0x0280)
+// 0x0000 (0x0288 - 0x0288)
 class ABP_BattleMapWeaponGotKillInstigatorEdge_C final : public ABP_BattleMapBaseEdge_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapWeaponGotKillInstigatorEdge_C>();
 	}
 };
-static_assert(alignof(ABP_BattleMapWeaponGotKillInstigatorEdge_C) == 0x000008, "Wrong alignment on ABP_BattleMapWeaponGotKillInstigatorEdge_C");
-static_assert(sizeof(ABP_BattleMapWeaponGotKillInstigatorEdge_C) == 0x000280, "Wrong size on ABP_BattleMapWeaponGotKillInstigatorEdge_C");
 
 }
 

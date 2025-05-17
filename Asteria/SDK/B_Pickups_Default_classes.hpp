@@ -18,22 +18,25 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Pickups_Default.B_Pickups_Default_C
-// 0x0018 (0x04C0 - 0x04A8)
+// 0x0028 (0x04C0 - 0x0498)
 class AB_Pickups_Default_C final : public AB_Pickups_Parent_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_Pickups_Default_C;                // 0x04A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USpotLightComponent*                    SpotLight;                                         // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Background;                                        // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_Pickups_Default_C;                // 0x0498(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   sm_rare_pickup;                                    // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USpotLightComponent*                    SpotLight;                                         // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Background;                                        // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UFXSystemComponent*                     ParticleSystem;                                    // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_Pickups_Default(int32 EntryPoint);
-	void Setup_Light();
-	void Set_Initial_BKGD_Param(class UMaterialInstanceDynamic* Mid);
+	void ReceiveBeginPlay();
+	void HideBackgroundAndSpotlight();
 	void OnPickedUp();
 	void OnTossed();
 	void UserConstructionScript();
-	void Randomize_Mesh_Rotation_for_BR();
+	void Setup_Light();
+	void Set_Initial_BKGD_Param(class UMaterialInstanceDynamic* Mid);
 
 public:
 	static class UClass* StaticClass()
@@ -45,11 +48,6 @@ public:
 		return GetDefaultObjImpl<AB_Pickups_Default_C>();
 	}
 };
-static_assert(alignof(AB_Pickups_Default_C) == 0x000008, "Wrong alignment on AB_Pickups_Default_C");
-static_assert(sizeof(AB_Pickups_Default_C) == 0x0004C0, "Wrong size on AB_Pickups_Default_C");
-static_assert(offsetof(AB_Pickups_Default_C, UberGraphFrame_B_Pickups_Default_C) == 0x0004A8, "Member 'AB_Pickups_Default_C::UberGraphFrame_B_Pickups_Default_C' has a wrong offset!");
-static_assert(offsetof(AB_Pickups_Default_C, SpotLight) == 0x0004B0, "Member 'AB_Pickups_Default_C::SpotLight' has a wrong offset!");
-static_assert(offsetof(AB_Pickups_Default_C, Background) == 0x0004B8, "Member 'AB_Pickups_Default_C::Background' has a wrong offset!");
 
 }
 

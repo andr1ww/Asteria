@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UAthenaMinimapTeamIndicators_C>();
 	}
 };
-static_assert(alignof(UAthenaMinimapTeamIndicators_C) == 0x000008, "Wrong alignment on UAthenaMinimapTeamIndicators_C");
-static_assert(sizeof(UAthenaMinimapTeamIndicators_C) == 0x000588, "Wrong size on UAthenaMinimapTeamIndicators_C");
 
 }
 

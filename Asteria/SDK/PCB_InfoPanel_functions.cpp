@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function PCB_InfoPanel.PCB_InfoPanel_C.CmsDataRead
-// (Event, Public, BlueprintEvent)
-
-void UPCB_InfoPanel_C::CmsDataRead()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PCB_InfoPanel_C", "CmsDataRead");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PCB_InfoPanel.PCB_InfoPanel_C.ExecuteUbergraph_PCB_InfoPanel
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -48,6 +34,20 @@ void UPCB_InfoPanel_C::ExecuteUbergraph_PCB_InfoPanel(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PCB_InfoPanel.PCB_InfoPanel_C.CmsDataRead
+// (Event, Public, BlueprintEvent)
+
+void UPCB_InfoPanel_C::CmsDataRead()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PCB_InfoPanel_C", "CmsDataRead");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

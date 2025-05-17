@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MegaStormManagerAthena.MegaStormManagerAthena_C
-// 0x0008 (0x0280 - 0x0278)
+// 0x0008 (0x0260 - 0x0258)
 class AMegaStormManagerAthena_C final : public AMegaStormManager
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0278(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0258(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,9 +33,6 @@ public:
 		return GetDefaultObjImpl<AMegaStormManagerAthena_C>();
 	}
 };
-static_assert(alignof(AMegaStormManagerAthena_C) == 0x000008, "Wrong alignment on AMegaStormManagerAthena_C");
-static_assert(sizeof(AMegaStormManagerAthena_C) == 0x000280, "Wrong size on AMegaStormManagerAthena_C");
-static_assert(offsetof(AMegaStormManagerAthena_C, DefaultSceneRoot) == 0x000278, "Member 'AMegaStormManagerAthena_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

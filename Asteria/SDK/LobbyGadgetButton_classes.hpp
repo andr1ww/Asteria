@@ -18,30 +18,30 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass LobbyGadgetButton.LobbyGadgetButton_C
-// 0x0060 (0x0298 - 0x0238)
+// 0x0060 (0x02E8 - 0x0288)
 class ULobbyGadgetButton_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPanelButton_C*                         Button;                                            // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 EmptySlot;                                         // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortMultiSizeItemCard*                 Item;                                              // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UFortWorldItemDefinition*>       DesignTestItemDefinitions;                         // 0x0258(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UFortWorldItem*                         GadgetItem;                                        // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class ULobbyGadgetButton_C* GadgetButton)> OnButtonClicked;                                   // 0x0270(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(class ULobbyGadgetButton_C* GadgetButton)> OnButtonHovered;                                   // 0x0280(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          bLocked;                                           // 0x0290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UPanelButton_C*                         Button;                                            // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 EmptySlot;                                         // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortMultiSizeItemCard*                 Item;                                              // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UFortWorldItemDefinition*>       DesignTestItemDefinitions;                         // 0x02A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UFortWorldItem*                         GadgetItem;                                        // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class ULobbyGadgetButton_C* GadgetButton)> OnButtonClicked;        // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class ULobbyGadgetButton_C* GadgetButton)> OnButtonHovered;        // 0x02D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bLocked;                                           // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void Focus();
-	void GetLocked(bool* bLocked_0);
-	void SetLocked(bool bLocked_0);
-	void GetGadgetItem(class UFortWorldItem** GadgetItem_0);
-	void Refresh(class UFortWorldItem* WorldItem);
-	void PreConstruct(bool IsDesignTime);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature(class UCommonButton* Button_0);
-	void BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature(class UCommonButton* Button_0);
 	void ExecuteUbergraph_LobbyGadgetButton(int32 EntryPoint);
+	void BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature(class UCommonButton* Button_0);
+	void BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature(class UCommonButton* Button_0);
+	void PreConstruct(bool IsDesignTime);
+	void Refresh(class UFortWorldItem* WorldItem);
+	void GetGadgetItem(class UFortWorldItem** GadgetItem_0);
+	void SetLocked(bool bLocked_0);
+	void GetLocked(bool* bLocked_0);
+	void Focus();
 
 public:
 	static class UClass* StaticClass()
@@ -53,17 +53,6 @@ public:
 		return GetDefaultObjImpl<ULobbyGadgetButton_C>();
 	}
 };
-static_assert(alignof(ULobbyGadgetButton_C) == 0x000008, "Wrong alignment on ULobbyGadgetButton_C");
-static_assert(sizeof(ULobbyGadgetButton_C) == 0x000298, "Wrong size on ULobbyGadgetButton_C");
-static_assert(offsetof(ULobbyGadgetButton_C, UberGraphFrame) == 0x000238, "Member 'ULobbyGadgetButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ULobbyGadgetButton_C, Button) == 0x000240, "Member 'ULobbyGadgetButton_C::Button' has a wrong offset!");
-static_assert(offsetof(ULobbyGadgetButton_C, EmptySlot) == 0x000248, "Member 'ULobbyGadgetButton_C::EmptySlot' has a wrong offset!");
-static_assert(offsetof(ULobbyGadgetButton_C, Item) == 0x000250, "Member 'ULobbyGadgetButton_C::Item' has a wrong offset!");
-static_assert(offsetof(ULobbyGadgetButton_C, DesignTestItemDefinitions) == 0x000258, "Member 'ULobbyGadgetButton_C::DesignTestItemDefinitions' has a wrong offset!");
-static_assert(offsetof(ULobbyGadgetButton_C, GadgetItem) == 0x000268, "Member 'ULobbyGadgetButton_C::GadgetItem' has a wrong offset!");
-static_assert(offsetof(ULobbyGadgetButton_C, OnButtonClicked) == 0x000270, "Member 'ULobbyGadgetButton_C::OnButtonClicked' has a wrong offset!");
-static_assert(offsetof(ULobbyGadgetButton_C, OnButtonHovered) == 0x000280, "Member 'ULobbyGadgetButton_C::OnButtonHovered' has a wrong offset!");
-static_assert(offsetof(ULobbyGadgetButton_C, bLocked) == 0x000290, "Member 'ULobbyGadgetButton_C::bLocked' has a wrong offset!");
 
 }
 

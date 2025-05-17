@@ -17,99 +17,80 @@
 namespace SDK
 {
 
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.ExecuteUbergraph_B_MasterPetAnimBP
-// (Final, UbergraphFunction)
+// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.PetSkeletalControlLayer
+// (HasOutParams, BlueprintCallable)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPoseLink&                 Pose                                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   LookAtOverrideInput_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   LookAtTargetLocationInput_0                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   LegIKAlphaOverride_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   HandIKAlphaOverride_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       PetSkeletalControlLayer_0                              (Parm, OutParm, NoDestructor)
 
-void UB_MasterPetAnimBP_C::ExecuteUbergraph_B_MasterPetAnimBP(int32 EntryPoint)
+void UB_MasterPetAnimBP_C::PetSkeletalControlLayer(const struct FPoseLink& Pose, float LookAtOverrideInput_0, const struct FVector& LookAtTargetLocationInput_0, float LegIKAlphaOverride_0, float HandIKAlphaOverride_0, struct FPoseLink* PetSkeletalControlLayer_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "ExecuteUbergraph_B_MasterPetAnimBP");
+		Func = Class->GetFunction("B_MasterPetAnimBP_C", "PetSkeletalControlLayer");
 
-	Params::B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP Parms{};
+	Params::B_MasterPetAnimBP_C_PetSkeletalControlLayer Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Pose = std::move(Pose);
+	Parms.LookAtOverrideInput_0 = LookAtOverrideInput_0;
+	Parms.LookAtTargetLocationInput_0 = std::move(LookAtTargetLocationInput_0);
+	Parms.LegIKAlphaOverride_0 = LegIKAlphaOverride_0;
+	Parms.HandIKAlphaOverride_0 = HandIKAlphaOverride_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (PetSkeletalControlLayer_0 != nullptr)
+		*PetSkeletalControlLayer_0 = std::move(Parms.PetSkeletalControlLayer_0);
 }
 
 
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
+// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.PetFullOverrideLayer
+// (HasOutParams, BlueprintCallable)
 // Parameters:
-// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       PetFullOverrideLayer_0                                 (Parm, OutParm, NoDestructor)
 
-void UB_MasterPetAnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
+void UB_MasterPetAnimBP_C::PetFullOverrideLayer(const struct FPoseLink& InPose, struct FPoseLink* PetFullOverrideLayer_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "BlueprintUpdateAnimation");
+		Func = Class->GetFunction("B_MasterPetAnimBP_C", "PetFullOverrideLayer");
 
-	Params::B_MasterPetAnimBP_C_BlueprintUpdateAnimation Parms{};
+	Params::B_MasterPetAnimBP_C_PetFullOverrideLayer Parms{};
 
-	Parms.DeltaTimeX = DeltaTimeX;
+	Parms.InPose = std::move(InPose);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (PetFullOverrideLayer_0 != nullptr)
+		*PetFullOverrideLayer_0 = std::move(Parms.PetFullOverrideLayer_0);
 }
 
 
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.AnimNotify_CrouchIdle1_FullyBlended
-// (BlueprintCallable, BlueprintEvent)
+// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
-void UB_MasterPetAnimBP_C::AnimNotify_CrouchIdle1_FullyBlended()
+void UB_MasterPetAnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "AnimNotify_CrouchIdle1_FullyBlended");
+		Func = Class->GetFunction("B_MasterPetAnimBP_C", "AnimGraph");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::B_MasterPetAnimBP_C_AnimGraph Parms{};
 
+	UObject::ProcessEvent(Func, &Parms);
 
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.AnimNotify_CrouchIdle2_FullyBlended
-// (BlueprintCallable, BlueprintEvent)
-
-void UB_MasterPetAnimBP_C::AnimNotify_CrouchIdle2_FullyBlended()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "AnimNotify_CrouchIdle2_FullyBlended");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.AnimNotify_Entered_Crouching
-// (BlueprintCallable, BlueprintEvent)
-
-void UB_MasterPetAnimBP_C::AnimNotify_Entered_Crouching()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "AnimNotify_Entered_Crouching");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.AnimNotify_Entered_DownSightsToCrouch
-// (BlueprintCallable, BlueprintEvent)
-
-void UB_MasterPetAnimBP_C::AnimNotify_Entered_DownSightsToCrouch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "AnimNotify_Entered_DownSightsToCrouch");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 
@@ -169,85 +150,57 @@ void UB_MasterPetAnimBP_C::AnimNotify_StartJump_Entered_Test()
 }
 
 
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_LayeredBoneBlend_8F44D9504941E8105FB3BFBD14102B06
-// (BlueprintEvent)
+// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.AnimNotify_CrouchIdle1_FullyBlended
+// (BlueprintCallable, BlueprintEvent)
 
-void UB_MasterPetAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_LayeredBoneBlend_8F44D9504941E8105FB3BFBD14102B06()
+void UB_MasterPetAnimBP_C::AnimNotify_CrouchIdle1_FullyBlended()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_LayeredBoneBlend_8F44D9504941E8105FB3BFBD14102B06");
+		Func = Class->GetFunction("B_MasterPetAnimBP_C", "AnimNotify_CrouchIdle1_FullyBlended");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_3C816C0C48CA2CAFFBF09392A11667F5
-// (BlueprintEvent)
+// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.AnimNotify_CrouchIdle2_FullyBlended
+// (BlueprintCallable, BlueprintEvent)
 
-void UB_MasterPetAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_3C816C0C48CA2CAFFBF09392A11667F5()
+void UB_MasterPetAnimBP_C::AnimNotify_CrouchIdle2_FullyBlended()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_3C816C0C48CA2CAFFBF09392A11667F5");
+		Func = Class->GetFunction("B_MasterPetAnimBP_C", "AnimNotify_CrouchIdle2_FullyBlended");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_AFE2E35C45707BE7E8E2BF91643E0B06
-// (BlueprintEvent)
+// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.AnimNotify_Entered_Crouching
+// (BlueprintCallable, BlueprintEvent)
 
-void UB_MasterPetAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_AFE2E35C45707BE7E8E2BF91643E0B06()
+void UB_MasterPetAnimBP_C::AnimNotify_Entered_Crouching()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_AFE2E35C45707BE7E8E2BF91643E0B06");
+		Func = Class->GetFunction("B_MasterPetAnimBP_C", "AnimNotify_Entered_Crouching");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_CB585D13434F85CC3F6DC0BA4565EAEE
-// (BlueprintEvent)
+// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.AnimNotify_Entered_DownSightsToCrouch
+// (BlueprintCallable, BlueprintEvent)
 
-void UB_MasterPetAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_CB585D13434F85CC3F6DC0BA4565EAEE()
+void UB_MasterPetAnimBP_C::AnimNotify_Entered_DownSightsToCrouch()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_CB585D13434F85CC3F6DC0BA4565EAEE");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_E0DEFD6D4A6F7885EF0C1ABF6CCDE727
-// (BlueprintEvent)
-
-void UB_MasterPetAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_E0DEFD6D4A6F7885EF0C1ABF6CCDE727()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_E0DEFD6D4A6F7885EF0C1ABF6CCDE727");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_FEF157494EA8751993E38097A9F8E26C
-// (BlueprintEvent)
-
-void UB_MasterPetAnimBP_C::EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_FEF157494EA8751993E38097A9F8E26C()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_MasterPetAnimBP_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_B_MasterPetAnimBP_AnimGraphNode_TransitionResult_FEF157494EA8751993E38097A9F8E26C");
+		Func = Class->GetFunction("B_MasterPetAnimBP_C", "AnimNotify_Entered_DownSightsToCrouch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -278,6 +231,26 @@ void UB_MasterPetAnimBP_C::LobbySkyDive_IsGliding()
 		Func = Class->GetFunction("B_MasterPetAnimBP_C", "LobbySkyDive_IsGliding");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.ExecuteUbergraph_B_MasterPetAnimBP
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UB_MasterPetAnimBP_C::ExecuteUbergraph_B_MasterPetAnimBP(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_MasterPetAnimBP_C", "ExecuteUbergraph_B_MasterPetAnimBP");
+
+	Params::B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

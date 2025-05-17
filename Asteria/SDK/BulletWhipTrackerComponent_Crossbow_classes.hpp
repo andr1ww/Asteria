@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BulletWhipTrackerComponent_Crossbow.BulletWhipTrackerComponent_Crossbow_C
-// 0x0000 (0x0110 - 0x0110)
+// 0x0000 (0x00F0 - 0x00F0)
 class UBulletWhipTrackerComponent_Crossbow_C final : public UBulletWhipTrackerComponentBase
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UBulletWhipTrackerComponent_Crossbow_C>();
 	}
 };
-static_assert(alignof(UBulletWhipTrackerComponent_Crossbow_C) == 0x000008, "Wrong alignment on UBulletWhipTrackerComponent_Crossbow_C");
-static_assert(sizeof(UBulletWhipTrackerComponent_Crossbow_C) == 0x000110, "Wrong size on UBulletWhipTrackerComponent_Crossbow_C");
 
 }
 

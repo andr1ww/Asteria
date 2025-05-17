@@ -40,7 +40,7 @@ void UGAT_TriggeredAbility_C::ExecuteUbergraph_GAT_TriggeredAbility(int32 EntryP
 // Function GAT_TriggeredAbility.GAT_TriggeredAbility_C.K2_ActivateAbilityFromEvent
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FGameplayEventData               EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UGAT_TriggeredAbility_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
 {
@@ -61,7 +61,7 @@ void UGAT_TriggeredAbility_C::K2_ActivateAbilityFromEvent(const struct FGameplay
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAbilitySystemComponent*          AbilitySystemIn                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAbilitySystemComponent*          AbilitySystemOut                                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAbilitySystemComponent**         AbilitySystemOut                                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGAT_TriggeredAbility_C::TriggeredAbilitySetup(class UAbilitySystemComponent* AbilitySystemIn, class UAbilitySystemComponent** AbilitySystemOut)
 {
@@ -88,8 +88,8 @@ void UGAT_TriggeredAbility_C::TriggeredAbilitySetup(class UAbilitySystemComponen
 // bool                                    ShouldHolster                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    PlayEquipAnim                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    ShowDebugPrintName                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    IsWeaponHolstered                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    OperationSuccessful                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   IsWeaponHolstered                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   OperationSuccessful                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UGAT_TriggeredAbility_C::SetHolsterWeaponWithName(class AFortPawn* Target_Fort_Pawn, bool ShouldHolster, bool PlayEquipAnim, bool ShowDebugPrintName, bool* IsWeaponHolstered, bool* OperationSuccessful)
 {
@@ -112,6 +112,26 @@ void UGAT_TriggeredAbility_C::SetHolsterWeaponWithName(class AFortPawn* Target_F
 
 	if (OperationSuccessful != nullptr)
 		*OperationSuccessful = Parms.OperationSuccessful;
+}
+
+
+// Function GAT_TriggeredAbility.GAT_TriggeredAbility_C.EndAbilityWithReason
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UGAT_TriggeredAbility_C::EndAbilityWithReason(const class FString& Reason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAT_TriggeredAbility_C", "EndAbilityWithReason");
+
+	Params::GAT_TriggeredAbility_C_EndAbilityWithReason Parms{};
+
+	Parms.Reason = std::move(Reason);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -17,20 +17,20 @@ namespace SDK::Params
 {
 
 // Function ItemRatingIndicator.ItemRatingIndicator_C.ExecuteUbergraph_ItemRatingIndicator
-// 0x0098 (0x0098 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct ItemRatingIndicator_C_ExecuteUbergraph_ItemRatingIndicator final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            CallFunc_GetBrushBySizeFromMultiSizeBrush_ReturnValue; // 0x0008(0x0088)(ConstParm)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            CallFunc_GetBrushBySizeFromMultiSizeBrush_ReturnValue; // 0x0018(0x0088)(ConstParm)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortRuntimeOptions*                    CallFunc_GetRuntimeOptions_ReturnValue;            // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOverlaySlot*                           CallFunc_SlotAsOverlaySlot_ReturnValue;            // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMargin                                K2Node_MakeStruct_Margin_1;                        // 0x00B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ItemRatingIndicator_C_ExecuteUbergraph_ItemRatingIndicator) == 0x000008, "Wrong alignment on ItemRatingIndicator_C_ExecuteUbergraph_ItemRatingIndicator");
-static_assert(sizeof(ItemRatingIndicator_C_ExecuteUbergraph_ItemRatingIndicator) == 0x000098, "Wrong size on ItemRatingIndicator_C_ExecuteUbergraph_ItemRatingIndicator");
-static_assert(offsetof(ItemRatingIndicator_C_ExecuteUbergraph_ItemRatingIndicator, EntryPoint) == 0x000000, "Member 'ItemRatingIndicator_C_ExecuteUbergraph_ItemRatingIndicator::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ItemRatingIndicator_C_ExecuteUbergraph_ItemRatingIndicator, CallFunc_GetBrushBySizeFromMultiSizeBrush_ReturnValue) == 0x000008, "Member 'ItemRatingIndicator_C_ExecuteUbergraph_ItemRatingIndicator::CallFunc_GetBrushBySizeFromMultiSizeBrush_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemRatingIndicator_C_ExecuteUbergraph_ItemRatingIndicator, CallFunc_Conv_IntToFloat_ReturnValue) == 0x000090, "Member 'ItemRatingIndicator_C_ExecuteUbergraph_ItemRatingIndicator::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
 
 }
 

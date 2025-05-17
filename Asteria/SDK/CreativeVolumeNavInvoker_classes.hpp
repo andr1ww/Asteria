@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CreativeVolumeNavInvoker.CreativeVolumeNavInvoker_C
-// 0x0000 (0x0250 - 0x0250)
+// 0x0000 (0x0230 - 0x0230)
 class ACreativeVolumeNavInvoker_C final : public AAthenaNavInvokerBox
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ACreativeVolumeNavInvoker_C>();
 	}
 };
-static_assert(alignof(ACreativeVolumeNavInvoker_C) == 0x000008, "Wrong alignment on ACreativeVolumeNavInvoker_C");
-static_assert(sizeof(ACreativeVolumeNavInvoker_C) == 0x000250, "Wrong size on ACreativeVolumeNavInvoker_C");
 
 }
 

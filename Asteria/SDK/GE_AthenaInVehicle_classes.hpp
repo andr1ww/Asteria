@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GE_AthenaInVehicle.GE_AthenaInVehicle_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_AthenaInVehicle_C final : public UGameplayEffect
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGE_AthenaInVehicle_C>();
 	}
 };
-static_assert(alignof(UGE_AthenaInVehicle_C) == 0x000008, "Wrong alignment on UGE_AthenaInVehicle_C");
-static_assert(sizeof(UGE_AthenaInVehicle_C) == 0x0005F0, "Wrong size on UGE_AthenaInVehicle_C");
 
 }
 

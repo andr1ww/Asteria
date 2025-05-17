@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ShowdownDivisionDetailsInfo.ShowdownDivisionDetailsInfo_C
-// 0x0018 (0x0600 - 0x05E8)
+// 0x0018 (0x06E8 - 0x06D0)
 class UShowdownDivisionDetailsInfo_C final : public UFortDivisionDetailsInfo
 {
 public:
-	class UImage*                                 Hidden_Delete_;                                    // 0x05E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_66;                                          // 0x05F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URichTextBlock*                         RichTextBlock_AboutLeagues;                        // 0x05F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Hidden_Delete_;                                    // 0x06D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_66;                                          // 0x06D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         RichTextBlock_AboutLeagues;                        // 0x06E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,11 +35,6 @@ public:
 		return GetDefaultObjImpl<UShowdownDivisionDetailsInfo_C>();
 	}
 };
-static_assert(alignof(UShowdownDivisionDetailsInfo_C) == 0x000008, "Wrong alignment on UShowdownDivisionDetailsInfo_C");
-static_assert(sizeof(UShowdownDivisionDetailsInfo_C) == 0x000600, "Wrong size on UShowdownDivisionDetailsInfo_C");
-static_assert(offsetof(UShowdownDivisionDetailsInfo_C, Hidden_Delete_) == 0x0005E8, "Member 'UShowdownDivisionDetailsInfo_C::Hidden_Delete_' has a wrong offset!");
-static_assert(offsetof(UShowdownDivisionDetailsInfo_C, Image_66) == 0x0005F0, "Member 'UShowdownDivisionDetailsInfo_C::Image_66' has a wrong offset!");
-static_assert(offsetof(UShowdownDivisionDetailsInfo_C, RichTextBlock_AboutLeagues) == 0x0005F8, "Member 'UShowdownDivisionDetailsInfo_C::RichTextBlock_AboutLeagues' has a wrong offset!");
 
 }
 

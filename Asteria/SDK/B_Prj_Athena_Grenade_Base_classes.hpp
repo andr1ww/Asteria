@@ -10,50 +10,62 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Prj_Athena_Grenade_Base.B_Prj_Athena_Grenade_Base_C
-// 0x0088 (0x0758 - 0x06D0)
+// 0x00C8 (0x0940 - 0x0878)
 class AB_Prj_Athena_Grenade_Base_C : public AFortProjectileBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFortCollisionAudioComponent*           FortCollisionAudio;                                // 0x06D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class URotatingMovementComponent*             RotatingMovement;                                  // 0x06E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Fuse_Particle;                                     // 0x06E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Mesh;                                              // 0x06F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        GrenadeFuse_AudioComponent;                        // 0x06F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Effect_Distance;                                   // 0x0700(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        P_Explosion;                                       // 0x0708(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Cue_ExplosionSound;                                // 0x0710(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         NumberOfBouncesTillExplode;                        // 0x0718(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CurrentNumberOfBounces;                            // 0x071C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Cue_GrenadeFuseSound;                              // 0x0720(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BouncePawnAgainstPawnGravityScale;                 // 0x0728(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_72C[0x4];                                      // 0x072C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UForceFeedbackEffect*                   ExplosionForceFeedbackNear;                        // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UForceFeedbackEffect*                   ExplosionForceFeedbackFar;                         // 0x0738(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Cue_Bounce;                                        // 0x0740(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 ExplosionCameraShake;                              // 0x0748(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FuseTime;                                          // 0x0750(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ExplosionRadius;                                   // 0x0754(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0878(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFortCollisionAudioComponent*           FortCollisionAudio;                                // 0x0880(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class URotatingMovementComponent*             RotatingMovement;                                  // 0x0888(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Fuse_Particle;                                     // 0x0890(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Mesh;                                              // 0x0898(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        GrenadeFuse_AudioComponent;                        // 0x08A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Effect_Distance;                                   // 0x08A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        P_Explosion;                                       // 0x08B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue_ExplosionSound;                                // 0x08B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        P_Explosion_Water;                                 // 0x08C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NumberOfBouncesTillExplode;                        // 0x08C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CurrentNumberOfBounces;                            // 0x08CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue_GrenadeFuseSound;                              // 0x08D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BouncePawnAgainstPawnGravityScale;                 // 0x08D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8DC[0x4];                                      // 0x08DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UForceFeedbackEffect*                   ExplosionForceFeedbackNear;                        // 0x08E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UForceFeedbackEffect*                   ExplosionForceFeedbackFar;                         // 0x08E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue_Bounce;                                        // 0x08F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 ExplosionCameraShake;                              // 0x08F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FuseTime;                                          // 0x0900(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ExplosionRadius;                                   // 0x0904(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Explosion_Rotation;                                // 0x0908(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_914[0x4];                                      // 0x0914(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        WaterFuseAudioComponent;                           // 0x0918(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Water_Debris_Explosion;                            // 0x0920(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Splash_Sound;                                      // 0x0928(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture*                               SoundIndicatorIcon;                                // 0x0930(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           FuseIndicatorTimer;                                // 0x0938(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_Prj_Athena_Grenade_Base(int32 EntryPoint);
-	void OnResumeSimulation();
+	void ShowFuseIndicator();
+	void Held_Water_Impact();
+	void BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_2_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody);
+	void Splash(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody);
 	void BndEvt__CapsuleComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void OnResumeSimulation();
 	void ReceiveAnyDamage(float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, class AActor* DamageCauser);
-	void ReceiveBeginPlay();
-	void OnStop(const struct FHitResult& Hit);
-	void Stop_Rotation();
 	void OnBounce(const struct FHitResult& Hit);
 	void OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults);
+	void Stop_Rotation();
+	void OnStop(const struct FHitResult& Hit);
+	void ReceiveBeginPlay();
 	void UserConstructionScript();
 	void FuseEnded();
 
@@ -67,27 +79,6 @@ public:
 		return GetDefaultObjImpl<AB_Prj_Athena_Grenade_Base_C>();
 	}
 };
-static_assert(alignof(AB_Prj_Athena_Grenade_Base_C) == 0x000008, "Wrong alignment on AB_Prj_Athena_Grenade_Base_C");
-static_assert(sizeof(AB_Prj_Athena_Grenade_Base_C) == 0x000758, "Wrong size on AB_Prj_Athena_Grenade_Base_C");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, UberGraphFrame) == 0x0006D0, "Member 'AB_Prj_Athena_Grenade_Base_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, FortCollisionAudio) == 0x0006D8, "Member 'AB_Prj_Athena_Grenade_Base_C::FortCollisionAudio' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, RotatingMovement) == 0x0006E0, "Member 'AB_Prj_Athena_Grenade_Base_C::RotatingMovement' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, Fuse_Particle) == 0x0006E8, "Member 'AB_Prj_Athena_Grenade_Base_C::Fuse_Particle' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, Mesh) == 0x0006F0, "Member 'AB_Prj_Athena_Grenade_Base_C::Mesh' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, GrenadeFuse_AudioComponent) == 0x0006F8, "Member 'AB_Prj_Athena_Grenade_Base_C::GrenadeFuse_AudioComponent' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, Effect_Distance) == 0x000700, "Member 'AB_Prj_Athena_Grenade_Base_C::Effect_Distance' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, P_Explosion) == 0x000708, "Member 'AB_Prj_Athena_Grenade_Base_C::P_Explosion' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, Cue_ExplosionSound) == 0x000710, "Member 'AB_Prj_Athena_Grenade_Base_C::Cue_ExplosionSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, NumberOfBouncesTillExplode) == 0x000718, "Member 'AB_Prj_Athena_Grenade_Base_C::NumberOfBouncesTillExplode' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, CurrentNumberOfBounces) == 0x00071C, "Member 'AB_Prj_Athena_Grenade_Base_C::CurrentNumberOfBounces' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, Cue_GrenadeFuseSound) == 0x000720, "Member 'AB_Prj_Athena_Grenade_Base_C::Cue_GrenadeFuseSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, BouncePawnAgainstPawnGravityScale) == 0x000728, "Member 'AB_Prj_Athena_Grenade_Base_C::BouncePawnAgainstPawnGravityScale' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, ExplosionForceFeedbackNear) == 0x000730, "Member 'AB_Prj_Athena_Grenade_Base_C::ExplosionForceFeedbackNear' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, ExplosionForceFeedbackFar) == 0x000738, "Member 'AB_Prj_Athena_Grenade_Base_C::ExplosionForceFeedbackFar' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, Cue_Bounce) == 0x000740, "Member 'AB_Prj_Athena_Grenade_Base_C::Cue_Bounce' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, ExplosionCameraShake) == 0x000748, "Member 'AB_Prj_Athena_Grenade_Base_C::ExplosionCameraShake' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, FuseTime) == 0x000750, "Member 'AB_Prj_Athena_Grenade_Base_C::FuseTime' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_Grenade_Base_C, ExplosionRadius) == 0x000754, "Member 'AB_Prj_Athena_Grenade_Base_C::ExplosionRadius' has a wrong offset!");
 
 }
 

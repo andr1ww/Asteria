@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
@@ -22,6 +22,7 @@ namespace SDK
 class AVaultCamera_Blueprint_C final : public AFortCameraBase
 {
 public:
+	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class AFortPlayerPawn*                        CachedPawn;                                        // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MouseDown;                                         // 0x07F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
@@ -29,8 +30,8 @@ public:
 	class AVaultCamera_Blueprint_C*               VaultActor;                                        // 0x07F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnDeactivated();
-	void OnActivated();
+	void OnActivated(class AFortPlayerController* PlayerController);
+	void OnDeactivated(class AFortPlayerController* PlayerController);
 	void ExecuteUbergraph_VaultCamera_Blueprint(int32 EntryPoint);
 
 public:
@@ -43,12 +44,6 @@ public:
 		return GetDefaultObjImpl<AVaultCamera_Blueprint_C>();
 	}
 };
-static_assert(alignof(AVaultCamera_Blueprint_C) == 0x000010, "Wrong alignment on AVaultCamera_Blueprint_C");
-static_assert(sizeof(AVaultCamera_Blueprint_C) == 0x000800, "Wrong size on AVaultCamera_Blueprint_C");
-static_assert(offsetof(AVaultCamera_Blueprint_C, UberGraphFrame) == 0x0007E0, "Member 'AVaultCamera_Blueprint_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AVaultCamera_Blueprint_C, CachedPawn) == 0x0007E8, "Member 'AVaultCamera_Blueprint_C::CachedPawn' has a wrong offset!");
-static_assert(offsetof(AVaultCamera_Blueprint_C, MouseDown) == 0x0007F0, "Member 'AVaultCamera_Blueprint_C::MouseDown' has a wrong offset!");
-static_assert(offsetof(AVaultCamera_Blueprint_C, VaultActor) == 0x0007F8, "Member 'AVaultCamera_Blueprint_C::VaultActor' has a wrong offset!");
 
 }
 

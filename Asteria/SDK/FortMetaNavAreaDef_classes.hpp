@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UFortMetaNavAreaDef_C>();
 	}
 };
-static_assert(alignof(UFortMetaNavAreaDef_C) == 0x000008, "Wrong alignment on UFortMetaNavAreaDef_C");
-static_assert(sizeof(UFortMetaNavAreaDef_C) == 0x000058, "Wrong size on UFortMetaNavAreaDef_C");
 
 }
 

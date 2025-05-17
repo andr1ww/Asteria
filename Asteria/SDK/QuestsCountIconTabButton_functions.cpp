@@ -60,7 +60,7 @@ void UQuestsCountIconTabButton_C::Update_Bang_State(bool bBangEnabled_0, int32 C
 
 
 // Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Update Text
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UQuestsCountIconTabButton_C::Update_Text()
 {
@@ -110,7 +110,7 @@ void UQuestsCountIconTabButton_C::ShowText()
 // Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Set Icon
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSlateBrush                      IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UQuestsCountIconTabButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
 {
@@ -130,7 +130,7 @@ void UQuestsCountIconTabButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0
 // Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.Set Text
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UQuestsCountIconTabButton_C::Set_Text(const class FText& ButtonText_0)
 {
@@ -184,7 +184,7 @@ void UQuestsCountIconTabButton_C::PreConstruct(bool IsDesignTime)
 // Function QuestsCountIconTabButton.QuestsCountIconTabButton_C.SetTabLabelInfo
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FFortTabButtonLabelInfo          TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FFortTabButtonLabelInfo&   TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UQuestsCountIconTabButton_C::SetTabLabelInfo(const struct FFortTabButtonLabelInfo& TabLabelInfo)
 {

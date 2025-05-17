@@ -120,7 +120,7 @@ void UMainTabIconButton_C::SetWrapperNameIDs(class FName InTutorialNameID, class
 // Parameters:
 // bool                                    bBangEnabled_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // EFortUIFeature                          UIFeature                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             UIFeatureRevealText                                    (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      UIFeatureRevealText                                    (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UMainTabIconButton_C::Update_Bang_State(bool bBangEnabled_0, EFortUIFeature UIFeature, const class FText& UIFeatureRevealText)
 {
@@ -176,7 +176,7 @@ void UMainTabIconButton_C::ShowText()
 // Function MainTabIconButton.MainTabIconButton_C.Set Icon
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSlateBrush                      IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UMainTabIconButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
 {
@@ -196,7 +196,7 @@ void UMainTabIconButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
 // Function MainTabIconButton.MainTabIconButton_C.Set Text
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UMainTabIconButton_C::Set_Text(const class FText& ButtonText_0)
 {
@@ -236,7 +236,7 @@ void UMainTabIconButton_C::PreConstruct(bool IsDesignTime)
 // Function MainTabIconButton.MainTabIconButton_C.SetTabLabelInfo
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FFortTabButtonLabelInfo          TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FFortTabButtonLabelInfo&   TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UMainTabIconButton_C::SetTabLabelInfo(const struct FFortTabButtonLabelInfo& TabLabelInfo)
 {
@@ -323,6 +323,20 @@ void UMainTabIconButton_C::BP_OnUnhovered()
 }
 
 
+// Function MainTabIconButton.MainTabIconButton_C.OnCurrentTextStyleChanged
+// (Event, Protected, BlueprintEvent)
+
+void UMainTabIconButton_C::OnCurrentTextStyleChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MainTabIconButton_C", "OnCurrentTextStyleChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function MainTabIconButton.MainTabIconButton_C.HandleTabAdded
 // (BlueprintCallable, BlueprintEvent)
 
@@ -365,20 +379,6 @@ void UMainTabIconButton_C::HandleTabDialogCLosed()
 }
 
 
-// Function MainTabIconButton.MainTabIconButton_C.OnCurrentTextStyleChanged
-// (Event, Protected, BlueprintEvent)
-
-void UMainTabIconButton_C::OnCurrentTextStyleChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "OnCurrentTextStyleChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function MainTabIconButton.MainTabIconButton_C.Handle StopTabCallout
 // (BlueprintCallable, BlueprintEvent)
 
@@ -388,20 +388,6 @@ void UMainTabIconButton_C::Handle_StopTabCallout()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("MainTabIconButton_C", "Handle StopTabCallout");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MainTabIconButton.MainTabIconButton_C.BndEvt__ToastWidget_K2Node_ComponentBoundEvent_0_OnFinishedToast__DelegateSignature
-// (BlueprintEvent)
-
-void UMainTabIconButton_C::BndEvt__ToastWidget_K2Node_ComponentBoundEvent_0_OnFinishedToast__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MainTabIconButton_C", "BndEvt__ToastWidget_K2Node_ComponentBoundEvent_0_OnFinishedToast__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

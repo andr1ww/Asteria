@@ -33,8 +33,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_ShellsOnPumpFX_C>();
 	}
 };
-static_assert(alignof(UAnimNotify_ShellsOnPumpFX_C) == 0x000008, "Wrong alignment on UAnimNotify_ShellsOnPumpFX_C");
-static_assert(sizeof(UAnimNotify_ShellsOnPumpFX_C) == 0x000038, "Wrong size on UAnimNotify_ShellsOnPumpFX_C");
 
 }
 

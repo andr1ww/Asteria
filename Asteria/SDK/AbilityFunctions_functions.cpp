@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // Function AbilityFunctions.AbilityFunctions_C.DoNOTUse-BuildArrayOfHitActors
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayAbilityTargetDataHandle TargetData                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class AActor*>                   HitActors                                              (Parm, OutParm, ZeroConstructor)
+// TArray<class AActor*>*                  HitActors                                              (Parm, OutParm, HasGetValueTypeHash)
 
 void UAbilityFunctions_C::DoNOTUse_BuildArrayOfHitActors(const struct FGameplayAbilityTargetDataHandle& TargetData, class UObject* __WorldContext, TArray<class AActor*>* HitActors)
 {
@@ -44,10 +44,10 @@ void UAbilityFunctions_C::DoNOTUse_BuildArrayOfHitActors(const struct FGameplayA
 
 
 // Function AbilityFunctions.AbilityFunctions_C.SetArrayOfHitActors
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayAbilityTargetDataHandle TargetData                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-// TArray<class AActor*>                   ArrayToSet                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const struct FGameplayAbilityTargetDataHandle&TargetData                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// TArray<class AActor*>&                  ArrayToSet                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAbilityFunctions_C::SetArrayOfHitActors(const struct FGameplayAbilityTargetDataHandle& TargetData, TArray<class AActor*>& ArrayToSet, class UObject* __WorldContext)
@@ -74,7 +74,7 @@ void UAbilityFunctions_C::SetArrayOfHitActors(const struct FGameplayAbilityTarge
 // Parameters:
 // float                                   InRange                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   OutTile                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  OutTile                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAbilityFunctions_C::ConvertRangeToTiles(float InRange, class UObject* __WorldContext, float* OutTile)
 {
@@ -101,7 +101,7 @@ void UAbilityFunctions_C::ConvertRangeToTiles(float InRange, class UObject* __Wo
 // class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   MovementDistance                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          TargetLocation                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         TargetLocation                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAbilityFunctions_C::GetProjectedTeleportLocation(class AActor* Actor, float MovementDistance, class UObject* __WorldContext, struct FVector* TargetLocation)
 {
@@ -126,11 +126,11 @@ void UAbilityFunctions_C::GetProjectedTeleportLocation(class AActor* Actor, floa
 // Function AbilityFunctions.AbilityFunctions_C.GetRangeFromGameplayEffectContainerSpec
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FFortGameplayEffectContainerSpec GE_Container_Spec                                      (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortGameplayEffectContainerSpec&GE_Container_Spec                                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // int32                                   Target_Selection_List_Index                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   At_Level                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Range                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  Range                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAbilityFunctions_C::GetRangeFromGameplayEffectContainerSpec(const struct FFortGameplayEffectContainerSpec& GE_Container_Spec, int32 Target_Selection_List_Index, float At_Level, class UObject* __WorldContext, float* Range)
 {
@@ -156,10 +156,10 @@ void UAbilityFunctions_C::GetRangeFromGameplayEffectContainerSpec(const struct F
 // Function AbilityFunctions.AbilityFunctions_C.GetAngleBetweenTwoVectors
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FVector                          VectorA                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          VectorB                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   VectorA                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   VectorB                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Angle__Degrees_                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  Angle__Degrees_                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAbilityFunctions_C::GetAngleBetweenTwoVectors(const struct FVector& VectorA, const struct FVector& VectorB, class UObject* __WorldContext, float* Angle__Degrees_)
 {
@@ -184,10 +184,10 @@ void UAbilityFunctions_C::GetAngleBetweenTwoVectors(const struct FVector& Vector
 // Function AbilityFunctions.AbilityFunctions_C.GetTotalGameplayEffectCount
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class UClass*>                   EffectsToCount                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<class UClass*>&                  EffectsToCount                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 // class UAbilitySystemComponent*          AbilitySystemComponent                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   FinalEffectCount                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  FinalEffectCount                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAbilityFunctions_C::GetTotalGameplayEffectCount(TArray<class UClass*>& EffectsToCount, class UAbilitySystemComponent* AbilitySystemComponent, class UObject* __WorldContext, int32* FinalEffectCount)
 {
@@ -214,11 +214,11 @@ void UAbilityFunctions_C::GetTotalGameplayEffectCount(TArray<class UClass*>& Eff
 // Function AbilityFunctions.AbilityFunctions_C.GetRangeFromGameplayEffectContainer
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FFortGameplayEffectContainer     GE_Container                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortGameplayEffectContainer&GE_Container                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // int32                                   Target_Selection_List_Index                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   At_Level                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Range                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  Range                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAbilityFunctions_C::GetRangeFromGameplayEffectContainer(const struct FFortGameplayEffectContainer& GE_Container, int32 Target_Selection_List_Index, float At_Level, class UObject* __WorldContext, float* Range)
 {
@@ -244,12 +244,12 @@ void UAbilityFunctions_C::GetRangeFromGameplayEffectContainer(const struct FFort
 // Function AbilityFunctions.AbilityFunctions_C.EvaluatePerkTierBalanceValue
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FScalableFloat                   T01_Balance_Value                                      (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FScalableFloat                   T02_Balance_Value                                      (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FScalableFloat&            T01_Balance_Value                                      (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FScalableFloat&            T02_Balance_Value                                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                                    Owns_T02                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    Should_Override_T01                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FScalableFloat                   Balance_Value                                          (Parm, OutParm)
+// struct FScalableFloat*                  Balance_Value                                          (Parm, OutParm)
 
 void UAbilityFunctions_C::EvaluatePerkTierBalanceValue(const struct FScalableFloat& T01_Balance_Value, const struct FScalableFloat& T02_Balance_Value, bool Owns_T02, bool Should_Override_T01, class UObject* __WorldContext, struct FScalableFloat* Balance_Value)
 {
@@ -278,8 +278,8 @@ void UAbilityFunctions_C::EvaluatePerkTierBalanceValue(const struct FScalableFlo
 // Parameters:
 // class AActor*                           InActor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AFortPlayerPawn*                  OutPawn                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    PawnReturned                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class AFortPlayerPawn**                 OutPawn                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   PawnReturned                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAbilityFunctions_C::GetPawnFromPlayerStateZone(class AActor* InActor, class UObject* __WorldContext, class AFortPlayerPawn** OutPawn, bool* PawnReturned)
 {
@@ -309,7 +309,7 @@ void UAbilityFunctions_C::GetPawnFromPlayerStateZone(class AActor* InActor, clas
 // class AActor*                           Actor1                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Actor2                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Distance                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  Distance                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAbilityFunctions_C::GetDistanceBetweenActors(class AActor* Actor1, class AActor* Actor2, class UObject* __WorldContext, float* Distance)
 {
@@ -331,6 +331,34 @@ void UAbilityFunctions_C::GetDistanceBetweenActors(class AActor* Actor1, class A
 }
 
 
+// Function AbilityFunctions.AbilityFunctions_C.GetDistanceSquaredBetweenActors
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class AActor*                           Actor_1                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Actor_2                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  Distance_Squared                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAbilityFunctions_C::GetDistanceSquaredBetweenActors(class AActor* Actor_1, class AActor* Actor_2, class UObject* __WorldContext, float* Distance_Squared)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AbilityFunctions_C", "GetDistanceSquaredBetweenActors");
+
+	Params::AbilityFunctions_C_GetDistanceSquaredBetweenActors Parms{};
+
+	Parms.Actor_1 = Actor_1;
+	Parms.Actor_2 = Actor_2;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Distance_Squared != nullptr)
+		*Distance_Squared = Parms.Distance_Squared;
+}
+
+
 // Function AbilityFunctions.AbilityFunctions_C.ApplySlowFall
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -338,7 +366,7 @@ void UAbilityFunctions_C::GetDistanceBetweenActors(class AActor* Actor1, class A
 // class UFortGameplayAbility*             SelfGameplayAbilityReference                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UClass*                           GameplayEffect                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FActiveGameplayEffectHandle      EffectSpecHandle                                       (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
+// struct FActiveGameplayEffectHandle*     EffectSpecHandle                                       (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 
 void UAbilityFunctions_C::ApplySlowFall(float SlowFallDuration, class UFortGameplayAbility* SelfGameplayAbilityReference, class UClass* GameplayEffect, class UObject* __WorldContext, struct FActiveGameplayEffectHandle* EffectSpecHandle)
 {
@@ -364,7 +392,7 @@ void UAbilityFunctions_C::ApplySlowFall(float SlowFallDuration, class UFortGamep
 // Function AbilityFunctions.AbilityFunctions_C.ShouldHammerHitsHealRespondToEvent
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// struct FGameplayEventData               Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
@@ -389,7 +417,7 @@ bool UAbilityFunctions_C::ShouldHammerHitsHealRespondToEvent(const struct FGamep
 // Function AbilityFunctions.AbilityFunctions_C.ShouldSwordHitsHealRespondToEvent
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// struct FGameplayEventData               Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 

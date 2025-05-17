@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
@@ -19,13 +18,13 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemDetailsHeaderRarityTypeText.ItemDetailsHeaderRarityTypeText_C
-// 0x0018 (0x0298 - 0x0280)
+// 0x0018 (0x02F8 - 0x02E0)
 class UItemDetailsHeaderRarityTypeText_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       RarityTextBlock;                                   // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TypeTextBlock;                                     // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       RarityTextBlock;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TypeTextBlock;                                     // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void HandlePostDifferentItemToDetailSet();
@@ -42,11 +41,6 @@ public:
 		return GetDefaultObjImpl<UItemDetailsHeaderRarityTypeText_C>();
 	}
 };
-static_assert(alignof(UItemDetailsHeaderRarityTypeText_C) == 0x000008, "Wrong alignment on UItemDetailsHeaderRarityTypeText_C");
-static_assert(sizeof(UItemDetailsHeaderRarityTypeText_C) == 0x000298, "Wrong size on UItemDetailsHeaderRarityTypeText_C");
-static_assert(offsetof(UItemDetailsHeaderRarityTypeText_C, UberGraphFrame) == 0x000280, "Member 'UItemDetailsHeaderRarityTypeText_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UItemDetailsHeaderRarityTypeText_C, RarityTextBlock) == 0x000288, "Member 'UItemDetailsHeaderRarityTypeText_C::RarityTextBlock' has a wrong offset!");
-static_assert(offsetof(UItemDetailsHeaderRarityTypeText_C, TypeTextBlock) == 0x000290, "Member 'UItemDetailsHeaderRarityTypeText_C::TypeTextBlock' has a wrong offset!");
 
 }
 

@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteGame_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Zipline_Smash.GCN_Zipline_Smash_C
-// 0x0000 (0x01A0 - 0x01A0)
+// 0x0000 (0x01B8 - 0x01B8)
 class UGCN_Zipline_Smash_C final : public UFortGameplayCueNotify_Burst
 {
 public:
@@ -34,8 +34,6 @@ public:
 		return GetDefaultObjImpl<UGCN_Zipline_Smash_C>();
 	}
 };
-static_assert(alignof(UGCN_Zipline_Smash_C) == 0x000008, "Wrong alignment on UGCN_Zipline_Smash_C");
-static_assert(sizeof(UGCN_Zipline_Smash_C) == 0x0001A0, "Wrong size on UGCN_Zipline_Smash_C");
 
 }
 

@@ -27,12 +27,6 @@ public:
 	class UGA_Commando_FragGrenade_WithTrajectory_C* K2Node_DynamicCast_AsGA_Commando_Frag_Grenade_with_Trajectory; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal) == 0x000008, "Wrong alignment on TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal");
-static_assert(sizeof(TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal) == 0x000020, "Wrong size on TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal");
-static_assert(offsetof(TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal, AbilityInstance) == 0x000000, "Member 'TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal::AbilityInstance' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal, Context) == 0x000008, "Member 'TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal::Context' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal, K2Node_DynamicCast_AsGA_Commando_Frag_Grenade_with_Trajectory) == 0x000010, "Member 'TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal::K2Node_DynamicCast_AsGA_Commando_Frag_Grenade_with_Trajectory' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'TT_Commando_FragGrenade_C_InitializeAbilityInstanceInternal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function TT_Commando_FragGrenade.TT_Commando_FragGrenade_C.GetTextForTokenFromAbilityInstanceInternal
 // 0x00C0 (0x00C0 - 0x0000)
@@ -55,26 +49,9 @@ public:
 	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0058(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x00A8(0x0018)()
 };
-static_assert(alignof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal) == 0x000008, "Wrong alignment on TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal");
-static_assert(sizeof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal) == 0x0000C0, "Wrong size on TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, AbilityInstance) == 0x000000, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::AbilityInstance' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, Tag) == 0x000008, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::Tag' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, Context) == 0x000010, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::Context' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, Token) == 0x000018, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::Token' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, OutText) == 0x000020, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::OutText' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, ReturnValue) == 0x000038, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::ReturnValue' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, GameplayTagsK2Node_SwitchGameplayTag_CmpSuccess) == 0x000039, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::GameplayTagsK2Node_SwitchGameplayTag_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, K2Node_DynamicCast_AsGA_Commando_Frag_Grenade_with_Trajectory) == 0x000040, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::K2Node_DynamicCast_AsGA_Commando_Frag_Grenade_with_Trajectory' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, CallFunc_IsValid_ReturnValue) == 0x000049, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, CallFunc_Conv_IntToFloat_ReturnValue) == 0x00004C, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000050, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, K2Node_MakeStruct_FormatArgumentData) == 0x000058, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, K2Node_MakeArray_Array) == 0x000098, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal, CallFunc_Format_ReturnValue) == 0x0000A8, "Member 'TT_Commando_FragGrenade_C_GetTextForTokenFromAbilityInstanceInternal::CallFunc_Format_ReturnValue' has a wrong offset!");
 
 // Function TT_Commando_FragGrenade.TT_Commando_FragGrenade_C.GetApplicationTag
 // 0x0028 (0x0028 - 0x0000)
@@ -88,13 +65,6 @@ public:
 	class UGA_Commando_FragGrenade_WithTrajectory_C* K2Node_DynamicCast_AsGA_Commando_Frag_Grenade_with_Trajectory; // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TT_Commando_FragGrenade_C_GetApplicationTag) == 0x000008, "Wrong alignment on TT_Commando_FragGrenade_C_GetApplicationTag");
-static_assert(sizeof(TT_Commando_FragGrenade_C_GetApplicationTag) == 0x000028, "Wrong size on TT_Commando_FragGrenade_C_GetApplicationTag");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetApplicationTag, AbilityInstance) == 0x000000, "Member 'TT_Commando_FragGrenade_C_GetApplicationTag::AbilityInstance' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetApplicationTag, OutTag) == 0x000008, "Member 'TT_Commando_FragGrenade_C_GetApplicationTag::OutTag' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetApplicationTag, ReturnValue) == 0x000010, "Member 'TT_Commando_FragGrenade_C_GetApplicationTag::ReturnValue' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetApplicationTag, K2Node_DynamicCast_AsGA_Commando_Frag_Grenade_with_Trajectory) == 0x000018, "Member 'TT_Commando_FragGrenade_C_GetApplicationTag::K2Node_DynamicCast_AsGA_Commando_Frag_Grenade_with_Trajectory' has a wrong offset!");
-static_assert(offsetof(TT_Commando_FragGrenade_C_GetApplicationTag, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'TT_Commando_FragGrenade_C_GetApplicationTag::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 }
 

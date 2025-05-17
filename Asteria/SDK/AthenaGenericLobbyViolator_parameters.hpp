@@ -26,13 +26,6 @@ public:
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0050(0x0018)()
 };
-static_assert(alignof(AthenaGenericLobbyViolator_C_SetGamemodeName) == 0x000008, "Wrong alignment on AthenaGenericLobbyViolator_C_SetGamemodeName");
-static_assert(sizeof(AthenaGenericLobbyViolator_C_SetGamemodeName) == 0x000068, "Wrong size on AthenaGenericLobbyViolator_C_SetGamemodeName");
-static_assert(offsetof(AthenaGenericLobbyViolator_C_SetGamemodeName, Name_0) == 0x000000, "Member 'AthenaGenericLobbyViolator_C_SetGamemodeName::Name_0' has a wrong offset!");
-static_assert(offsetof(AthenaGenericLobbyViolator_C_SetGamemodeName, SubText_0) == 0x000018, "Member 'AthenaGenericLobbyViolator_C_SetGamemodeName::SubText_0' has a wrong offset!");
-static_assert(offsetof(AthenaGenericLobbyViolator_C_SetGamemodeName, CallFunc_TextToUpper_ReturnValue) == 0x000030, "Member 'AthenaGenericLobbyViolator_C_SetGamemodeName::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AthenaGenericLobbyViolator_C_SetGamemodeName, CallFunc_TextIsEmpty_ReturnValue) == 0x000048, "Member 'AthenaGenericLobbyViolator_C_SetGamemodeName::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AthenaGenericLobbyViolator_C_SetGamemodeName, CallFunc_TextToUpper_ReturnValue_1) == 0x000050, "Member 'AthenaGenericLobbyViolator_C_SetGamemodeName::CallFunc_TextToUpper_ReturnValue_1' has a wrong offset!");
 
 }
 

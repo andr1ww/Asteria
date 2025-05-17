@@ -17,73 +17,24 @@
 namespace SDK
 {
 
-// Function WebPurchase.WebPurchase_C.ExecuteUbergraph_WebPurchase
-// (Final, UbergraphFunction)
+// Function WebPurchase.WebPurchase_C.HandleBack
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWebPurchase_C::ExecuteUbergraph_WebPurchase(int32 EntryPoint)
+void UWebPurchase_C::HandleBack(bool* bPassThrough)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WebPurchase_C", "ExecuteUbergraph_WebPurchase");
+		Func = Class->GetFunction("WebPurchase_C", "HandleBack");
 
-	Params::WebPurchase_C_ExecuteUbergraph_WebPurchase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::WebPurchase_C_HandleBack Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function WebPurchase.WebPurchase_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UWebPurchase_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WebPurchase_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WebPurchase.WebPurchase_C.Display
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          WebWidget                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           AttemptedMTXOfferId                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWebPurchase_C::Display(class UWidget* WebWidget, const class FString& AttemptedMTXOfferId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WebPurchase_C", "Display");
-
-	Params::WebPurchase_C_Display Parms{};
-
-	Parms.WebWidget = WebWidget;
-	Parms.AttemptedMTXOfferId = std::move(AttemptedMTXOfferId);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WebPurchase.WebPurchase_C.Dismiss
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWebPurchase_C::Dismiss()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WebPurchase_C", "Dismiss");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (bPassThrough != nullptr)
+		*bPassThrough = Parms.bPassThrough;
 }
 
 
@@ -101,24 +52,37 @@ void UWebPurchase_C::BindDelegates()
 }
 
 
-// Function WebPurchase.WebPurchase_C.HandleBack
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function WebPurchase.WebPurchase_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
 
-void UWebPurchase_C::HandleBack(bool* bPassThrough)
+void UWebPurchase_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WebPurchase_C", "HandleBack");
+		Func = Class->GetFunction("WebPurchase_C", "BP_OnActivated");
 
-	Params::WebPurchase_C_HandleBack Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WebPurchase.WebPurchase_C.ExecuteUbergraph_WebPurchase
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWebPurchase_C::ExecuteUbergraph_WebPurchase(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WebPurchase_C", "ExecuteUbergraph_WebPurchase");
+
+	Params::WebPurchase_C_ExecuteUbergraph_WebPurchase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (bPassThrough != nullptr)
-		*bPassThrough = Parms.bPassThrough;
 }
 
 }

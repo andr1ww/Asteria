@@ -20,7 +20,7 @@ namespace SDK
 // Function CMSImage.CMSImage_C.SetMediaURL
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           MediaUrl                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    MediaUrl                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
 void UCMSImage_C::SetMediaURL(const class FString& MediaUrl)
 {

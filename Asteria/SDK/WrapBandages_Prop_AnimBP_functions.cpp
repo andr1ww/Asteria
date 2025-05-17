@@ -37,23 +37,24 @@ void UWrapBandages_Prop_AnimBP_C::ExecuteUbergraph_WrapBandages_Prop_AnimBP(int3
 }
 
 
-// Function WrapBandages_Prop_AnimBP.WrapBandages_Prop_AnimBP_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
+// Function WrapBandages_Prop_AnimBP.WrapBandages_Prop_AnimBP_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaTimeX                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
-void UWrapBandages_Prop_AnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
+void UWrapBandages_Prop_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WrapBandages_Prop_AnimBP_C", "BlueprintUpdateAnimation");
+		Func = Class->GetFunction("WrapBandages_Prop_AnimBP_C", "AnimGraph");
 
-	Params::WrapBandages_Prop_AnimBP_C_BlueprintUpdateAnimation Parms{};
-
-	Parms.DeltaTimeX = DeltaTimeX;
+	Params::WrapBandages_Prop_AnimBP_C_AnimGraph Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 }

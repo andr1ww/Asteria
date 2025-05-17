@@ -17,14 +17,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BroadcastPost.BP_BroadcastPost_C
-// 0x0020 (0x0260 - 0x0240)
+// 0x0020 (0x0240 - 0x0220)
 class ABP_BroadcastPost_C final : public AActor
 {
 public:
-	class UPostProcessComponent*                  Extreme;                                           // 0x0240(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                  PostProcess;                                       // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0250(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          ExtremePostEnabled;                                // 0x0258(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UPostProcessComponent*                  Extreme;                                           // 0x0220(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPostProcessComponent*                  PostProcess;                                       // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          ExtremePostEnabled;                                // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void UserConstructionScript();
@@ -39,12 +39,6 @@ public:
 		return GetDefaultObjImpl<ABP_BroadcastPost_C>();
 	}
 };
-static_assert(alignof(ABP_BroadcastPost_C) == 0x000008, "Wrong alignment on ABP_BroadcastPost_C");
-static_assert(sizeof(ABP_BroadcastPost_C) == 0x000260, "Wrong size on ABP_BroadcastPost_C");
-static_assert(offsetof(ABP_BroadcastPost_C, Extreme) == 0x000240, "Member 'ABP_BroadcastPost_C::Extreme' has a wrong offset!");
-static_assert(offsetof(ABP_BroadcastPost_C, PostProcess) == 0x000248, "Member 'ABP_BroadcastPost_C::PostProcess' has a wrong offset!");
-static_assert(offsetof(ABP_BroadcastPost_C, DefaultSceneRoot) == 0x000250, "Member 'ABP_BroadcastPost_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_BroadcastPost_C, ExtremePostEnabled) == 0x000258, "Member 'ABP_BroadcastPost_C::ExtremePostEnabled' has a wrong offset!");
 
 }
 

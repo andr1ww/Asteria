@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function GiftBoxButton.GiftBoxButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function GiftBoxButton.GiftBoxButton_C.ExecuteUbergraph_GiftBoxButton
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGiftBoxButton_C::Construct()
+void UGiftBoxButton_C::ExecuteUbergraph_GiftBoxButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GiftBoxButton_C", "Construct");
+		Func = Class->GetFunction("GiftBoxButton_C", "ExecuteUbergraph_GiftBoxButton");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,23 +57,17 @@ void UGiftBoxButton_C::PlayGiftSelectedAnimation(bool bIsSelected)
 }
 
 
-// Function GiftBoxButton.GiftBoxButton_C.ExecuteUbergraph_GiftBoxButton
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GiftBoxButton.GiftBoxButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UGiftBoxButton_C::ExecuteUbergraph_GiftBoxButton(int32 EntryPoint)
+void UGiftBoxButton_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GiftBoxButton_C", "ExecuteUbergraph_GiftBoxButton");
+		Func = Class->GetFunction("GiftBoxButton_C", "Construct");
 
-	Params::GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

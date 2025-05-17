@@ -51,37 +51,17 @@ void UTabRevealMeassage_C::ToggleTimer(bool Enabled)
 }
 
 
-// Function TabRevealMeassage.TabRevealMeassage_C.OnActivated
+// Function TabRevealMeassage.TabRevealMeassage_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UTabRevealMeassage_C::OnActivated()
+void UTabRevealMeassage_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TabRevealMeassage_C", "OnActivated");
+		Func = Class->GetFunction("TabRevealMeassage_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function TabRevealMeassage.TabRevealMeassage_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UTabRevealMeassage_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TabRevealMeassage_C", "BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-
-	Params::TabRevealMeassage_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

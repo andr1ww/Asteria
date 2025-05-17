@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemCraftingIngredientsDetailWidget.ItemCraftingIngredientsDetailWidget_C
-// 0x0010 (0x0290 - 0x0280)
+// 0x0010 (0x02F0 - 0x02E0)
 class UItemCraftingIngredientsDetailWidget_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UItemCraftingIngredientList_C*          DetailsWidget_ItemCraftingIngredientsList;         // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UItemCraftingIngredientList_C*          DetailsWidget_ItemCraftingIngredientsList;         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void HandlePostDifferentItemToDetailSet();
@@ -41,10 +41,6 @@ public:
 		return GetDefaultObjImpl<UItemCraftingIngredientsDetailWidget_C>();
 	}
 };
-static_assert(alignof(UItemCraftingIngredientsDetailWidget_C) == 0x000008, "Wrong alignment on UItemCraftingIngredientsDetailWidget_C");
-static_assert(sizeof(UItemCraftingIngredientsDetailWidget_C) == 0x000290, "Wrong size on UItemCraftingIngredientsDetailWidget_C");
-static_assert(offsetof(UItemCraftingIngredientsDetailWidget_C, UberGraphFrame) == 0x000280, "Member 'UItemCraftingIngredientsDetailWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UItemCraftingIngredientsDetailWidget_C, DetailsWidget_ItemCraftingIngredientsList) == 0x000288, "Member 'UItemCraftingIngredientsDetailWidget_C::DetailsWidget_ItemCraftingIngredientsList' has a wrong offset!");
 
 }
 

@@ -37,23 +37,17 @@ void UUserActionMenu_C::ExecuteUbergraph_UserActionMenu(int32 EntryPoint)
 }
 
 
-// Function UserActionMenu.UserActionMenu_C.OnEnableBackButtonDisplay
+// Function UserActionMenu.UserActionMenu_C.OnOpened
 // (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bEnableBackButtonDisplay                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UUserActionMenu_C::OnEnableBackButtonDisplay(bool bEnableBackButtonDisplay)
+void UUserActionMenu_C::OnOpened()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UserActionMenu_C", "OnEnableBackButtonDisplay");
+		Func = Class->GetFunction("UserActionMenu_C", "OnOpened");
 
-	Params::UserActionMenu_C_OnEnableBackButtonDisplay Parms{};
-
-	Parms.bEnableBackButtonDisplay = bEnableBackButtonDisplay;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -74,20 +68,6 @@ void UUserActionMenu_C::OnToggleConfirmation(bool bIsVisible)
 	Parms.bIsVisible = bIsVisible;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UserActionMenu.UserActionMenu_C.OnSocialContextSet
-// (Event, Protected, BlueprintEvent)
-
-void UUserActionMenu_C::OnSocialContextSet()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UserActionMenu_C", "OnSocialContextSet");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

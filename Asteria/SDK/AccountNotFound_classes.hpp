@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AccountNotFound.AccountNotFound_C
-// 0x0000 (0x0260 - 0x0260)
+// 0x0000 (0x0468 - 0x0468)
 class UAccountNotFound_C final : public UFortAccountNotFound
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UAccountNotFound_C>();
 	}
 };
-static_assert(alignof(UAccountNotFound_C) == 0x000008, "Wrong alignment on UAccountNotFound_C");
-static_assert(sizeof(UAccountNotFound_C) == 0x000260, "Wrong size on UAccountNotFound_C");
 
 }
 

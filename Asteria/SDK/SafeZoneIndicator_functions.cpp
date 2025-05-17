@@ -37,6 +37,84 @@ void ASafeZoneIndicator_C::ExecuteUbergraph_SafeZoneIndicator(int32 EntryPoint)
 }
 
 
+// Function SafeZoneIndicator.SafeZoneIndicator_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ASafeZoneIndicator_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SafeZoneIndicator_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SafeZoneIndicator.SafeZoneIndicator_C.OnSafeZoneStateChange
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EFortSafeZoneState                      NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInitial                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ASafeZoneIndicator_C::OnSafeZoneStateChange(EFortSafeZoneState NewState, bool bInitial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SafeZoneIndicator_C", "OnSafeZoneStateChange");
+
+	Params::SafeZoneIndicator_C_OnSafeZoneStateChange Parms{};
+
+	Parms.NewState = NewState;
+	Parms.bInitial = bInitial;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function SafeZoneIndicator.SafeZoneIndicator_C.Stop Distant Storm Oneshots
+// (BlueprintCallable, BlueprintEvent)
+
+void ASafeZoneIndicator_C::Stop_Distant_Storm_Oneshots()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SafeZoneIndicator_C", "Stop Distant Storm Oneshots");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SafeZoneIndicator.SafeZoneIndicator_C.Trigger Distant Storm Oneshot
+// (BlueprintCallable, BlueprintEvent)
+
+void ASafeZoneIndicator_C::Trigger_Distant_Storm_Oneshot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SafeZoneIndicator_C", "Trigger Distant Storm Oneshot");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SafeZoneIndicator.SafeZoneIndicator_C.Play Storm Grow Audio
+// (BlueprintCallable, BlueprintEvent)
+
+void ASafeZoneIndicator_C::Play_Storm_Grow_Audio()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SafeZoneIndicator_C", "Play Storm Grow Audio");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function SafeZoneIndicator.SafeZoneIndicator_C.Start Megastorm Audio
 // (BlueprintCallable, BlueprintEvent)
 
@@ -60,20 +138,6 @@ void ASafeZoneIndicator_C::Megastorm_Pre_Damage_Tell()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SafeZoneIndicator_C", "Megastorm Pre Damage Tell");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SafeZoneIndicator.SafeZoneIndicator_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ASafeZoneIndicator_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SafeZoneIndicator_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -141,51 +205,29 @@ void ASafeZoneIndicator_C::ResetSafeZoneScale()
 }
 
 
-// Function SafeZoneIndicator.SafeZoneIndicator_C.OnSafeZoneStateChange
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EFortSafeZoneState                      NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bInitial                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ASafeZoneIndicator_C::OnSafeZoneStateChange(EFortSafeZoneState NewState, bool bInitial)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SafeZoneIndicator_C", "OnSafeZoneStateChange");
-
-	Params::SafeZoneIndicator_C_OnSafeZoneStateChange Parms{};
-
-	Parms.NewState = NewState;
-	Parms.bInitial = bInitial;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SafeZoneIndicator.SafeZoneIndicator_C.Pre Damage Audio Ramp__UpdateFunc
+// Function SafeZoneIndicator.SafeZoneIndicator_C.VolumetricStormFadeTimeline__UpdateFunc
 // (BlueprintEvent)
 
-void ASafeZoneIndicator_C::Pre_Damage_Audio_Ramp__UpdateFunc()
+void ASafeZoneIndicator_C::VolumetricStormFadeTimeline__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SafeZoneIndicator_C", "Pre Damage Audio Ramp__UpdateFunc");
+		Func = Class->GetFunction("SafeZoneIndicator_C", "VolumetricStormFadeTimeline__UpdateFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function SafeZoneIndicator.SafeZoneIndicator_C.Pre Damage Audio Ramp__FinishedFunc
+// Function SafeZoneIndicator.SafeZoneIndicator_C.VolumetricStormFadeTimeline__FinishedFunc
 // (BlueprintEvent)
 
-void ASafeZoneIndicator_C::Pre_Damage_Audio_Ramp__FinishedFunc()
+void ASafeZoneIndicator_C::VolumetricStormFadeTimeline__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SafeZoneIndicator_C", "Pre Damage Audio Ramp__FinishedFunc");
+		Func = Class->GetFunction("SafeZoneIndicator_C", "VolumetricStormFadeTimeline__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -219,8 +261,36 @@ void ASafeZoneIndicator_C::StormFadeTimeline__FinishedFunc()
 }
 
 
+// Function SafeZoneIndicator.SafeZoneIndicator_C.Pre Damage Audio Ramp__UpdateFunc
+// (BlueprintEvent)
+
+void ASafeZoneIndicator_C::Pre_Damage_Audio_Ramp__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SafeZoneIndicator_C", "Pre Damage Audio Ramp__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SafeZoneIndicator.SafeZoneIndicator_C.Pre Damage Audio Ramp__FinishedFunc
+// (BlueprintEvent)
+
+void ASafeZoneIndicator_C::Pre_Damage_Audio_Ramp__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SafeZoneIndicator_C", "Pre Damage Audio Ramp__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function SafeZoneIndicator.SafeZoneIndicator_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ASafeZoneIndicator_C::UserConstructionScript()
 {
@@ -264,7 +334,7 @@ void ASafeZoneIndicator_C::HandleInsideOutsideMix()
 // Function SafeZoneIndicator.SafeZoneIndicator_C.GetAthenaGameState
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AAthena_GameState_C*              AthenaGS                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AAthena_GameState_C**             AthenaGS                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ASafeZoneIndicator_C::GetAthenaGameState(class AAthena_GameState_C** AthenaGS)
 {
@@ -279,6 +349,48 @@ void ASafeZoneIndicator_C::GetAthenaGameState(class AAthena_GameState_C** Athena
 
 	if (AthenaGS != nullptr)
 		*AthenaGS = Parms.AthenaGS;
+}
+
+
+// Function SafeZoneIndicator.SafeZoneIndicator_C.GetRandomPointOnBoundary
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FVector*                         position                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ASafeZoneIndicator_C::GetRandomPointOnBoundary(struct FVector* position)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SafeZoneIndicator_C", "GetRandomPointOnBoundary");
+
+	Params::SafeZoneIndicator_C_GetRandomPointOnBoundary Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (position != nullptr)
+		*position = std::move(Parms.position);
+}
+
+
+// Function SafeZoneIndicator.SafeZoneIndicator_C.GetRandomPointInPlayerDir
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FVector*                         position                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ASafeZoneIndicator_C::GetRandomPointInPlayerDir(struct FVector* position)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SafeZoneIndicator_C", "GetRandomPointInPlayerDir");
+
+	Params::SafeZoneIndicator_C_GetRandomPointInPlayerDir Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (position != nullptr)
+		*position = std::move(Parms.position);
 }
 
 }

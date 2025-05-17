@@ -19,18 +19,21 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass SK_MachineGun_Clip_Skeleton_AnimBlueprint.SK_MachineGun_Clip_Skeleton_AnimBlueprint_C
-// 0x0090 (0x02F8 - 0x0268)
+// 0x00A0 (0x0360 - 0x02C0)
 class USK_MachineGun_Clip_Skeleton_AnimBlueprint_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root_3869FE004A7A40326F179A99947D40FD; // 0x0278(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_42C4DC6D490B221E6A9F9A92B3FEA82E; // 0x0298(0x0048)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose_844915D14C4D660AA45FB1B5C63743BF; // 0x02E0(0x0018)()
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02D0(0x0030)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0300(0x0048)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x0348(0x0018)()
 
 public:
 	void ExecuteUbergraph_SK_MachineGun_Clip_Skeleton_AnimBlueprint(int32 EntryPoint);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -42,12 +45,6 @@ public:
 		return GetDefaultObjImpl<USK_MachineGun_Clip_Skeleton_AnimBlueprint_C>();
 	}
 };
-static_assert(alignof(USK_MachineGun_Clip_Skeleton_AnimBlueprint_C) == 0x000008, "Wrong alignment on USK_MachineGun_Clip_Skeleton_AnimBlueprint_C");
-static_assert(sizeof(USK_MachineGun_Clip_Skeleton_AnimBlueprint_C) == 0x0002F8, "Wrong size on USK_MachineGun_Clip_Skeleton_AnimBlueprint_C");
-static_assert(offsetof(USK_MachineGun_Clip_Skeleton_AnimBlueprint_C, UberGraphFrame) == 0x000270, "Member 'USK_MachineGun_Clip_Skeleton_AnimBlueprint_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USK_MachineGun_Clip_Skeleton_AnimBlueprint_C, AnimGraphNode_Root_3869FE004A7A40326F179A99947D40FD) == 0x000278, "Member 'USK_MachineGun_Clip_Skeleton_AnimBlueprint_C::AnimGraphNode_Root_3869FE004A7A40326F179A99947D40FD' has a wrong offset!");
-static_assert(offsetof(USK_MachineGun_Clip_Skeleton_AnimBlueprint_C, AnimGraphNode_Slot_42C4DC6D490B221E6A9F9A92B3FEA82E) == 0x000298, "Member 'USK_MachineGun_Clip_Skeleton_AnimBlueprint_C::AnimGraphNode_Slot_42C4DC6D490B221E6A9F9A92B3FEA82E' has a wrong offset!");
-static_assert(offsetof(USK_MachineGun_Clip_Skeleton_AnimBlueprint_C, AnimGraphNode_LocalRefPose_844915D14C4D660AA45FB1B5C63743BF) == 0x0002E0, "Member 'USK_MachineGun_Clip_Skeleton_AnimBlueprint_C::AnimGraphNode_LocalRefPose_844915D14C4D660AA45FB1B5C63743BF' has a wrong offset!");
 
 }
 

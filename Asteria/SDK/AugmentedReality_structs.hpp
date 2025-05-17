@@ -27,6 +27,17 @@ enum class EARTrackingState : uint8
 	EARTrackingState_MAX                     = 4,
 };
 
+// Enum AugmentedReality.EARSessionTrackingFeature
+// NumValues: 0x0005
+enum class EARSessionTrackingFeature : uint8
+{
+	None                                     = 0,
+	PoseDetection2D                          = 1,
+	PersonSegmentation                       = 2,
+	PersonSegmentationWithDepth              = 3,
+	EARSessionTrackingFeature_MAX            = 4,
+};
+
 // Enum AugmentedReality.EARFaceTrackingUpdate
 // NumValues: 0x0003
 enum class EARFaceTrackingUpdate : uint8
@@ -76,7 +87,7 @@ enum class EARPlaneDetectionMode : uint8
 };
 
 // Enum AugmentedReality.EARSessionType
-// NumValues: 0x0007
+// NumValues: 0x0008
 enum class EARSessionType : uint8
 {
 	None                                     = 0,
@@ -85,7 +96,8 @@ enum class EARSessionType : uint8
 	Face                                     = 3,
 	Image                                    = 4,
 	ObjectScanning                           = 5,
-	EARSessionType_MAX                       = 6,
+	PoseTracking                             = 6,
+	EARSessionType_MAX                       = 7,
 };
 
 // Enum AugmentedReality.EARWorldAlignment
@@ -223,6 +235,44 @@ enum class EARCandidateImageOrientation : uint8
 	EARCandidateImageOrientation_MAX         = 2,
 };
 
+// Enum AugmentedReality.EARJointTransformSpace
+// NumValues: 0x0003
+enum class EARJointTransformSpace : uint8
+{
+	Model                                    = 0,
+	ParentJoint                              = 1,
+	EARJointTransformSpace_MAX               = 2,
+};
+
+// Enum AugmentedReality.EARObjectClassification
+// NumValues: 0x000D
+enum class EARObjectClassification : uint8
+{
+	NotApplicable                            = 0,
+	Unknown                                  = 1,
+	Wall                                     = 2,
+	Ceiling                                  = 3,
+	Floor                                    = 4,
+	Table                                    = 5,
+	Seat                                     = 6,
+	Face                                     = 7,
+	Image                                    = 8,
+	World                                    = 9,
+	SceneObject                              = 10,
+	HandMesh                                 = 11,
+	EARObjectClassification_MAX              = 12,
+};
+
+// Enum AugmentedReality.EARPlaneOrientation
+// NumValues: 0x0004
+enum class EARPlaneOrientation : uint8
+{
+	Horizontal                               = 0,
+	Vertical                                 = 1,
+	Diagonal                                 = 2,
+	EARPlaneOrientation_MAX                  = 3,
+};
+
 // Enum AugmentedReality.EARWorldMappingState
 // NumValues: 0x0005
 enum class EARWorldMappingState : uint8
@@ -290,10 +340,6 @@ public:
 	int32                                         PreviewImageOffset;                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ARWorldOffset;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FARSharedWorldReplicationState) == 0x000004, "Wrong alignment on FARSharedWorldReplicationState");
-static_assert(sizeof(FARSharedWorldReplicationState) == 0x000008, "Wrong size on FARSharedWorldReplicationState");
-static_assert(offsetof(FARSharedWorldReplicationState, PreviewImageOffset) == 0x000000, "Member 'FARSharedWorldReplicationState::PreviewImageOffset' has a wrong offset!");
-static_assert(offsetof(FARSharedWorldReplicationState, ARWorldOffset) == 0x000004, "Member 'FARSharedWorldReplicationState::ARWorldOffset' has a wrong offset!");
 
 // ScriptStruct AugmentedReality.ARTraceResult
 // 0x0060 (0x0060 - 0x0000)
@@ -307,12 +353,39 @@ public:
 	class UARTrackedGeometry*                     TrackedGeometry;                                   // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FARTraceResult) == 0x000010, "Wrong alignment on FARTraceResult");
-static_assert(sizeof(FARTraceResult) == 0x000060, "Wrong size on FARTraceResult");
-static_assert(offsetof(FARTraceResult, DistanceFromCamera) == 0x000000, "Member 'FARTraceResult::DistanceFromCamera' has a wrong offset!");
-static_assert(offsetof(FARTraceResult, TraceChannel) == 0x000004, "Member 'FARTraceResult::TraceChannel' has a wrong offset!");
-static_assert(offsetof(FARTraceResult, LocalToTrackingTransform) == 0x000010, "Member 'FARTraceResult::LocalToTrackingTransform' has a wrong offset!");
-static_assert(offsetof(FARTraceResult, TrackedGeometry) == 0x000040, "Member 'FARTraceResult::TrackedGeometry' has a wrong offset!");
+
+// ScriptStruct AugmentedReality.ARSkeletonDefinition
+// 0x0028 (0x0028 - 0x0000)
+struct FARSkeletonDefinition final
+{
+public:
+	int32                                         NumJoints;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           JointNames;                                        // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 ParentIndices;                                     // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// ScriptStruct AugmentedReality.ARPose3D
+// 0x0050 (0x0050 - 0x0000)
+struct FARPose3D final
+{
+public:
+	struct FARSkeletonDefinition                  SkeletonDefinition;                                // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     JointTransforms;                                   // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<bool>                                  IsJointTracked;                                    // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EARJointTransformSpace                        JointTransformSpace;                               // 0x0048(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// ScriptStruct AugmentedReality.ARPose2D
+// 0x0048 (0x0048 - 0x0000)
+struct FARPose2D final
+{
+public:
+	struct FARSkeletonDefinition                  SkeletonDefinition;                                // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      JointLocations;                                    // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<bool>                                  IsJointTracked;                                    // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // ScriptStruct AugmentedReality.ARVideoFormat
 // 0x000C (0x000C - 0x0000)
@@ -323,11 +396,6 @@ public:
 	int32                                         Width;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Height;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FARVideoFormat) == 0x000004, "Wrong alignment on FARVideoFormat");
-static_assert(sizeof(FARVideoFormat) == 0x00000C, "Wrong size on FARVideoFormat");
-static_assert(offsetof(FARVideoFormat, FPS) == 0x000000, "Member 'FARVideoFormat::FPS' has a wrong offset!");
-static_assert(offsetof(FARVideoFormat, Width) == 0x000004, "Member 'FARVideoFormat::Width' has a wrong offset!");
-static_assert(offsetof(FARVideoFormat, Height) == 0x000008, "Member 'FARVideoFormat::Height' has a wrong offset!");
 
 // ScriptStruct AugmentedReality.ARSessionStatus
 // 0x0018 (0x0018 - 0x0000)
@@ -338,10 +406,6 @@ public:
 	EARSessionStatus                              Status;                                            // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FARSessionStatus) == 0x000008, "Wrong alignment on FARSessionStatus");
-static_assert(sizeof(FARSessionStatus) == 0x000018, "Wrong size on FARSessionStatus");
-static_assert(offsetof(FARSessionStatus, AdditionalInfo) == 0x000000, "Member 'FARSessionStatus::AdditionalInfo' has a wrong offset!");
-static_assert(offsetof(FARSessionStatus, Status) == 0x000010, "Member 'FARSessionStatus::Status' has a wrong offset!");
 
 }
 

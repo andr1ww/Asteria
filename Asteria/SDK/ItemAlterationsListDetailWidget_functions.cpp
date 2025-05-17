@@ -65,6 +65,20 @@ void UItemAlterationsListDetailWidget_C::HandlePostDifferentItemToCompareWithSet
 }
 
 
+// Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.HandleUpgradeLevelDeltaChanged
+// (Event, Protected, BlueprintEvent)
+
+void UItemAlterationsListDetailWidget_C::HandleUpgradeLevelDeltaChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemAlterationsListDetailWidget_C", "HandleUpgradeLevelDeltaChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ItemAlterationsListDetailWidget.ItemAlterationsListDetailWidget_C.ExecuteUbergraph_ItemAlterationsListDetailWidget
 // (Final, UbergraphFunction)
 // Parameters:

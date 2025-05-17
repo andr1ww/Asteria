@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SimpleCommonButton.SimpleCommonButton_C
-// 0x0000 (0x0B48 - 0x0B48)
+// 0x0000 (0x0BA0 - 0x0BA0)
 class USimpleCommonButton_C final : public UCommonButton
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<USimpleCommonButton_C>();
 	}
 };
-static_assert(alignof(USimpleCommonButton_C) == 0x000008, "Wrong alignment on USimpleCommonButton_C");
-static_assert(sizeof(USimpleCommonButton_C) == 0x000B48, "Wrong size on USimpleCommonButton_C");
 
 }
 

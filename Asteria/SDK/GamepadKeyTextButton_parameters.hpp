@@ -19,106 +19,6 @@
 namespace SDK::Params
 {
 
-// Function GamepadKeyTextButton.GamepadKeyTextButton_C.SetContentAlignment
-// 0x0001 (0x0001 - 0x0000)
-struct GamepadKeyTextButton_C_SetContentAlignment final
-{
-public:
-	EHorizontalAlignment                          ContentAlignment_0;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GamepadKeyTextButton_C_SetContentAlignment) == 0x000001, "Wrong alignment on GamepadKeyTextButton_C_SetContentAlignment");
-static_assert(sizeof(GamepadKeyTextButton_C_SetContentAlignment) == 0x000001, "Wrong size on GamepadKeyTextButton_C_SetContentAlignment");
-static_assert(offsetof(GamepadKeyTextButton_C_SetContentAlignment, ContentAlignment_0) == 0x000000, "Member 'GamepadKeyTextButton_C_SetContentAlignment::ContentAlignment_0' has a wrong offset!");
-
-// Function GamepadKeyTextButton.GamepadKeyTextButton_C.UpdateContentAlignment
-// 0x0018 (0x0018 - 0x0000)
-struct GamepadKeyTextButton_C_UpdateContentAlignment final
-{
-public:
-	class UPanelSlot*                             CallFunc_GetContentSlot_ReturnValue;               // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBorderSlot*                            K2Node_DynamicCast_AsBorder_Slot;                  // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(GamepadKeyTextButton_C_UpdateContentAlignment) == 0x000008, "Wrong alignment on GamepadKeyTextButton_C_UpdateContentAlignment");
-static_assert(sizeof(GamepadKeyTextButton_C_UpdateContentAlignment) == 0x000018, "Wrong size on GamepadKeyTextButton_C_UpdateContentAlignment");
-static_assert(offsetof(GamepadKeyTextButton_C_UpdateContentAlignment, CallFunc_GetContentSlot_ReturnValue) == 0x000000, "Member 'GamepadKeyTextButton_C_UpdateContentAlignment::CallFunc_GetContentSlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_UpdateContentAlignment, K2Node_DynamicCast_AsBorder_Slot) == 0x000008, "Member 'GamepadKeyTextButton_C_UpdateContentAlignment::K2Node_DynamicCast_AsBorder_Slot' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_UpdateContentAlignment, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'GamepadKeyTextButton_C_UpdateContentAlignment::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function GamepadKeyTextButton.GamepadKeyTextButton_C.OnListItemObjectSet
-// 0x0008 (0x0008 - 0x0000)
-struct GamepadKeyTextButton_C_OnListItemObjectSet final
-{
-public:
-	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GamepadKeyTextButton_C_OnListItemObjectSet) == 0x000008, "Wrong alignment on GamepadKeyTextButton_C_OnListItemObjectSet");
-static_assert(sizeof(GamepadKeyTextButton_C_OnListItemObjectSet) == 0x000008, "Wrong size on GamepadKeyTextButton_C_OnListItemObjectSet");
-static_assert(offsetof(GamepadKeyTextButton_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'GamepadKeyTextButton_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
-
-// Function GamepadKeyTextButton.GamepadKeyTextButton_C.SetData
-// 0x0038 (0x0038 - 0x0000)
-struct GamepadKeyTextButton_C_SetData final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class FText                                   DescText;                                          // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FName                                   ActionName;                                        // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GamepadKeyTextButton_C_SetData) == 0x000008, "Wrong alignment on GamepadKeyTextButton_C_SetData");
-static_assert(sizeof(GamepadKeyTextButton_C_SetData) == 0x000038, "Wrong size on GamepadKeyTextButton_C_SetData");
-static_assert(offsetof(GamepadKeyTextButton_C_SetData, Key) == 0x000000, "Member 'GamepadKeyTextButton_C_SetData::Key' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_SetData, DescText) == 0x000018, "Member 'GamepadKeyTextButton_C_SetData::DescText' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_SetData, ActionName) == 0x000030, "Member 'GamepadKeyTextButton_C_SetData::ActionName' has a wrong offset!");
-
-// Function GamepadKeyTextButton.GamepadKeyTextButton_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct GamepadKeyTextButton_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(GamepadKeyTextButton_C_PreConstruct) == 0x000001, "Wrong alignment on GamepadKeyTextButton_C_PreConstruct");
-static_assert(sizeof(GamepadKeyTextButton_C_PreConstruct) == 0x000001, "Wrong size on GamepadKeyTextButton_C_PreConstruct");
-static_assert(offsetof(GamepadKeyTextButton_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'GamepadKeyTextButton_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function GamepadKeyTextButton.GamepadKeyTextButton_C.SetDataAndUpdateButton
-// 0x0038 (0x0038 - 0x0000)
-struct GamepadKeyTextButton_C_SetDataAndUpdateButton final
-{
-public:
-	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class FText                                   DescText;                                          // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class FName                                   ActionName;                                        // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GamepadKeyTextButton_C_SetDataAndUpdateButton) == 0x000008, "Wrong alignment on GamepadKeyTextButton_C_SetDataAndUpdateButton");
-static_assert(sizeof(GamepadKeyTextButton_C_SetDataAndUpdateButton) == 0x000038, "Wrong size on GamepadKeyTextButton_C_SetDataAndUpdateButton");
-static_assert(offsetof(GamepadKeyTextButton_C_SetDataAndUpdateButton, Key) == 0x000000, "Member 'GamepadKeyTextButton_C_SetDataAndUpdateButton::Key' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_SetDataAndUpdateButton, DescText) == 0x000018, "Member 'GamepadKeyTextButton_C_SetDataAndUpdateButton::DescText' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_SetDataAndUpdateButton, ActionName) == 0x000030, "Member 'GamepadKeyTextButton_C_SetDataAndUpdateButton::ActionName' has a wrong offset!");
-
-// Function GamepadKeyTextButton.GamepadKeyTextButton_C.UpdateButton
-// 0x0008 (0x0008 - 0x0000)
-struct GamepadKeyTextButton_C_UpdateButton final
-{
-public:
-	class UGamepadKeyTextButton_C*                Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GamepadKeyTextButton_C_UpdateButton) == 0x000008, "Wrong alignment on GamepadKeyTextButton_C_UpdateButton");
-static_assert(sizeof(GamepadKeyTextButton_C_UpdateButton) == 0x000008, "Wrong size on GamepadKeyTextButton_C_UpdateButton");
-static_assert(offsetof(GamepadKeyTextButton_C_UpdateButton, Button) == 0x000000, "Member 'GamepadKeyTextButton_C_UpdateButton::Button' has a wrong offset!");
-
-// Function GamepadKeyTextButton.GamepadKeyTextButton_C.SetTabLabelInfo
-// 0x00A0 (0x00A0 - 0x0000)
-struct GamepadKeyTextButton_C_SetTabLabelInfo final
-{
-public:
-	struct FFortTabButtonLabelInfo                TabLabelInfo;                                      // 0x0000(0x00A0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(GamepadKeyTextButton_C_SetTabLabelInfo) == 0x000008, "Wrong alignment on GamepadKeyTextButton_C_SetTabLabelInfo");
-static_assert(sizeof(GamepadKeyTextButton_C_SetTabLabelInfo) == 0x0000A0, "Wrong size on GamepadKeyTextButton_C_SetTabLabelInfo");
-static_assert(offsetof(GamepadKeyTextButton_C_SetTabLabelInfo, TabLabelInfo) == 0x000000, "Member 'GamepadKeyTextButton_C_SetTabLabelInfo::TabLabelInfo' has a wrong offset!");
-
 // Function GamepadKeyTextButton.GamepadKeyTextButton_C.ExecuteUbergraph_GamepadKeyTextButton
 // 0x0150 (0x0150 - 0x0000)
 struct GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton final
@@ -147,26 +47,76 @@ public:
 	struct FFortTabButtonLabelInfo                K2Node_Event_TabLabelInfo;                         // 0x00A8(0x00A0)(ConstParm)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton) == 0x000008, "Wrong alignment on GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton");
-static_assert(sizeof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton) == 0x000150, "Wrong size on GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, EntryPoint) == 0x000000, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::EntryPoint' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, Temp_byte_Variable) == 0x000004, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, Temp_byte_Variable_1) == 0x000005, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_Event_ListItemObject) == 0x000008, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_Event_ListItemObject' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_DynamicCast_AsGamepad_Key_Text_Button) == 0x000010, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_DynamicCast_AsGamepad_Key_Text_Button' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_CustomEvent_Key_1) == 0x000020, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_CustomEvent_Key_1' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_CustomEvent_DescText_1) == 0x000038, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_CustomEvent_DescText_1' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_CustomEvent_ActionName_1) == 0x000050, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_CustomEvent_ActionName_1' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_Event_IsDesignTime) == 0x000058, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_CustomEvent_Key) == 0x000060, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_CustomEvent_Key' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_CustomEvent_DescText) == 0x000078, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_CustomEvent_DescText' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_CustomEvent_ActionName) == 0x000090, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_CustomEvent_ActionName' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_CustomEvent_Button) == 0x000098, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_CustomEvent_Button' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, CallFunc_EqualEqual_KeyKey_ReturnValue) == 0x0000A0, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::CallFunc_EqualEqual_KeyKey_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, Temp_bool_Variable) == 0x0000A1, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_Event_TabLabelInfo) == 0x0000A8, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_Event_TabLabelInfo' has a wrong offset!");
-static_assert(offsetof(GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton, K2Node_Select_Default) == 0x000148, "Member 'GamepadKeyTextButton_C_ExecuteUbergraph_GamepadKeyTextButton::K2Node_Select_Default' has a wrong offset!");
+
+// Function GamepadKeyTextButton.GamepadKeyTextButton_C.SetTabLabelInfo
+// 0x00A0 (0x00A0 - 0x0000)
+struct GamepadKeyTextButton_C_SetTabLabelInfo final
+{
+public:
+	struct FFortTabButtonLabelInfo                TabLabelInfo;                                      // 0x0000(0x00A0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
+// Function GamepadKeyTextButton.GamepadKeyTextButton_C.UpdateButton
+// 0x0008 (0x0008 - 0x0000)
+struct GamepadKeyTextButton_C_UpdateButton final
+{
+public:
+	class UGamepadKeyTextButton_C*                Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function GamepadKeyTextButton.GamepadKeyTextButton_C.SetDataAndUpdateButton
+// 0x0038 (0x0038 - 0x0000)
+struct GamepadKeyTextButton_C_SetDataAndUpdateButton final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class FText                                   DescText;                                          // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FName                                   ActionName;                                        // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function GamepadKeyTextButton.GamepadKeyTextButton_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct GamepadKeyTextButton_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function GamepadKeyTextButton.GamepadKeyTextButton_C.SetData
+// 0x0038 (0x0038 - 0x0000)
+struct GamepadKeyTextButton_C_SetData final
+{
+public:
+	struct FKey                                   Key;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class FText                                   DescText;                                          // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class FName                                   ActionName;                                        // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function GamepadKeyTextButton.GamepadKeyTextButton_C.OnListItemObjectSet
+// 0x0008 (0x0008 - 0x0000)
+struct GamepadKeyTextButton_C_OnListItemObjectSet final
+{
+public:
+	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function GamepadKeyTextButton.GamepadKeyTextButton_C.UpdateContentAlignment
+// 0x0018 (0x0018 - 0x0000)
+struct GamepadKeyTextButton_C_UpdateContentAlignment final
+{
+public:
+	class UPanelSlot*                             CallFunc_GetContentSlot_ReturnValue;               // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBorderSlot*                            K2Node_DynamicCast_AsBorder_Slot;                  // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function GamepadKeyTextButton.GamepadKeyTextButton_C.SetContentAlignment
+// 0x0001 (0x0001 - 0x0000)
+struct GamepadKeyTextButton_C_SetContentAlignment final
+{
+public:
+	EHorizontalAlignment                          ContentAlignment_0;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 }
 

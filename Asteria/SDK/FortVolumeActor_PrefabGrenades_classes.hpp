@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FortVolumeActor_PrefabGrenades.FortVolumeActor_PrefabGrenades_C
-// 0x0008 (0x0AC8 - 0x0AC0)
+// 0x0008 (0x0660 - 0x0658)
 class AFortVolumeActor_PrefabGrenades_C final : public AFortVolumeActor_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_FortVolumeActor_PrefabGrenades_C;   // 0x0AC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_FortVolumeActor_PrefabGrenades_C;   // 0x0658(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_FortVolumeActor_PrefabGrenades(int32 EntryPoint);
-	void OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
+	void OnDeathPlayEffects_2(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
 
 public:
 	static class UClass* StaticClass()
@@ -38,9 +38,6 @@ public:
 		return GetDefaultObjImpl<AFortVolumeActor_PrefabGrenades_C>();
 	}
 };
-static_assert(alignof(AFortVolumeActor_PrefabGrenades_C) == 0x000008, "Wrong alignment on AFortVolumeActor_PrefabGrenades_C");
-static_assert(sizeof(AFortVolumeActor_PrefabGrenades_C) == 0x000AC8, "Wrong size on AFortVolumeActor_PrefabGrenades_C");
-static_assert(offsetof(AFortVolumeActor_PrefabGrenades_C, UberGraphFrame_FortVolumeActor_PrefabGrenades_C) == 0x000AC0, "Member 'AFortVolumeActor_PrefabGrenades_C::UberGraphFrame_FortVolumeActor_PrefabGrenades_C' has a wrong offset!");
 
 }
 

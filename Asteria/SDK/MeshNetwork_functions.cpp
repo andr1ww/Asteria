@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function MeshNetwork.MeshBeaconClient.OnRep_ConnectedToRoot
-// (Final, Native, Public)
+// (Final, Native, Protected)
 
 void AMeshBeaconClient::OnRep_ConnectedToRoot()
 {
@@ -36,13 +36,50 @@ void AMeshBeaconClient::OnRep_ConnectedToRoot()
 }
 
 
-// Function MeshNetwork.MeshBeaconClient.ServerUpdateLevelVisibility
-// (Final, Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
-// Parameters:
-// class FName                             PackageName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bIsVisible                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// Function MeshNetwork.MeshBeaconClient.OnRep_MeshPingTime
+// (Native, Protected)
 
-void AMeshBeaconClient::ServerUpdateLevelVisibility(class FName PackageName, bool bIsVisible)
+void AMeshBeaconClient::OnRep_MeshPingTime()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeshBeaconClient", "OnRep_MeshPingTime");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshNetwork.MeshBeaconClient.OnRep_ParentIds
+// (Final, Native, Protected)
+
+void AMeshBeaconClient::OnRep_ParentIds()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeshBeaconClient", "OnRep_ParentIds");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshNetwork.MeshBeaconClient.ServerUpdateLevelVisibility
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// const struct FUpdateLevelVisibilityLevelInfo&LevelVisibility                                        (ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void AMeshBeaconClient::ServerUpdateLevelVisibility(const struct FUpdateLevelVisibilityLevelInfo& LevelVisibility)
 {
 	static class UFunction* Func = nullptr;
 
@@ -51,8 +88,7 @@ void AMeshBeaconClient::ServerUpdateLevelVisibility(class FName PackageName, boo
 
 	Params::MeshBeaconClient_ServerUpdateLevelVisibility Parms{};
 
-	Parms.PackageName = PackageName;
-	Parms.bIsVisible = bIsVisible;
+	Parms.LevelVisibility = std::move(LevelVisibility);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -66,7 +102,7 @@ void AMeshBeaconClient::ServerUpdateLevelVisibility(class FName PackageName, boo
 // Function MeshNetwork.MeshBeaconClient.ServerUpdateMultipleLevelsVisibility
 // (Final, Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// TArray<struct FUpdateLevelVisibilityLevelInfo>LevelVisibilities                                      (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FUpdateLevelVisibilityLevelInfo>&LevelVisibilities                                      (ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void AMeshBeaconClient::ServerUpdateMultipleLevelsVisibility(const TArray<struct FUpdateLevelVisibilityLevelInfo>& LevelVisibilities)
 {
@@ -113,10 +149,62 @@ EMeshNetworkNodeType UMeshNetworkComponent::GetMeshNetworkNodeType() const
 }
 
 
+// Function MeshNetwork.MeshNetworkSubsystem.DisableMeshReplication
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMeshNetworkSubsystem::DisableMeshReplication(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeshNetworkSubsystem", "DisableMeshReplication");
+
+	Params::MeshNetworkSubsystem_DisableMeshReplication Parms{};
+
+	Parms.Actor = Actor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MeshNetwork.MeshNetworkSubsystem.EnableMeshReplication
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSubclassOf<class UMeshNetworkComponent>MeshComponentClass                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMeshNetworkSubsystem::EnableMeshReplication(class AActor* Actor, TSubclassOf<class UMeshNetworkComponent> MeshComponentClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MeshNetworkSubsystem", "EnableMeshReplication");
+
+	Params::MeshNetworkSubsystem_EnableMeshReplication Parms{};
+
+	Parms.Actor = Actor;
+	Parms.MeshComponentClass = MeshComponentClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function MeshNetwork.MeshNetworkSubsystem.GetMetadata
 // (Final, BlueprintAuthorityOnly, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FMeshMetaDataStruct              MetaData                                               (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FMeshMetaDataStruct&             MetaData                                               (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void UMeshNetworkSubsystem::GetMetadata(struct FMeshMetaDataStruct& MetaData)
 {
@@ -144,7 +232,7 @@ void UMeshNetworkSubsystem::GetMetadata(struct FMeshMetaDataStruct& MetaData)
 // (Final, BlueprintAuthorityOnly, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMeshMetaDataStruct              MetaData                                               (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FMeshMetaDataStruct&             MetaData                                               (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UMeshNetworkSubsystem::GetMetaDataWithKey(class FName Key, struct FMeshMetaDataStruct& MetaData)
@@ -175,7 +263,7 @@ bool UMeshNetworkSubsystem::GetMetaDataWithKey(class FName Key, struct FMeshMeta
 // Function MeshNetwork.MeshNetworkSubsystem.SetMetaData
 // (Final, BlueprintAuthorityOnly, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FMeshMetaDataStruct              MetaData                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FMeshMetaDataStruct&       MetaData                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void UMeshNetworkSubsystem::SetMetaData(const struct FMeshMetaDataStruct& MetaData)
 {
@@ -201,7 +289,7 @@ void UMeshNetworkSubsystem::SetMetaData(const struct FMeshMetaDataStruct& MetaDa
 // (Final, BlueprintAuthorityOnly, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FName                             Key                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMeshMetaDataStruct              MetaData                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FMeshMetaDataStruct&       MetaData                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 void UMeshNetworkSubsystem::SetMetaDataWithKey(class FName Key, const struct FMeshMetaDataStruct& MetaData)
 {

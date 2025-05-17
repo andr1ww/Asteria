@@ -33,8 +33,6 @@ public:
 		return GetDefaultObjImpl<UGauntletTestController>();
 	}
 };
-static_assert(alignof(UGauntletTestController) == 0x000008, "Wrong alignment on UGauntletTestController");
-static_assert(sizeof(UGauntletTestController) == 0x000030, "Wrong size on UGauntletTestController");
 
 // Class Gauntlet.GauntletTestControllerBootTest
 // 0x0000 (0x0030 - 0x0030)
@@ -50,8 +48,6 @@ public:
 		return GetDefaultObjImpl<UGauntletTestControllerBootTest>();
 	}
 };
-static_assert(alignof(UGauntletTestControllerBootTest) == 0x000008, "Wrong alignment on UGauntletTestControllerBootTest");
-static_assert(sizeof(UGauntletTestControllerBootTest) == 0x000030, "Wrong size on UGauntletTestControllerBootTest");
 
 // Class Gauntlet.GauntletTestControllerErrorTest
 // 0x0020 (0x0050 - 0x0030)
@@ -70,8 +66,6 @@ public:
 		return GetDefaultObjImpl<UGauntletTestControllerErrorTest>();
 	}
 };
-static_assert(alignof(UGauntletTestControllerErrorTest) == 0x000008, "Wrong alignment on UGauntletTestControllerErrorTest");
-static_assert(sizeof(UGauntletTestControllerErrorTest) == 0x000050, "Wrong size on UGauntletTestControllerErrorTest");
 
 }
 

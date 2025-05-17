@@ -10,53 +10,90 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EVisibleInGameState_structs.hpp"
 #include "Slate_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteGame_classes.hpp"
+#include "EBillboardshadowDirection_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Creative_Billboard.BP_Creative_Billboard_C
-// 0x0068 (0x0B78 - 0x0B10)
+// 0x00D0 (0x0CA8 - 0x0BD8)
 class ABP_Creative_Billboard_C final : public ABuildingProp
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                          ToolPickingBox;                                    // 0x0B18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UToyOptionsComponent_C*                 ToyOptionsComponent;                               // 0x0B20(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UWidgetComponent*                       Background;                                        // 0x0B28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class FString                                 UserDefinedText;                                   // 0x0B30(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, HasGetValueTypeHash)
-	bool                                          bShowBorder;                                       // 0x0B40(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
-	uint8                                         Pad_B41[0x3];                                      // 0x0B41(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           BackgroundColor;                                   // 0x0B44(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	ETextJustify                                  HorizontalTextAlignment;                           // 0x0B54(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B55[0x3];                                      // 0x0B55(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TextSize;                                          // 0x0B58(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	float                                         ViewDistance;                                      // 0x0B5C(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          bAlwaysFaceCamera;                                 // 0x0B60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          WasInRangeLastCheck;                               // 0x0B61(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B62[0x2];                                      // 0x0B62(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         BackgroundColorOverride;                           // 0x0B64(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           TextColor;                                         // 0x0B68(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        WidgetAnchor;                                      // 0x0BE0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCreative_Enabled_Component_C*          Creative_Enabled_Component;                        // 0x0BE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCreative_VisibleInGame_Component_C*    VisibleInGameComponent;                            // 0x0BF0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UFortMinigameLogicComponent*            FortMinigameLogic;                                 // 0x0BF8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UFortGameplayReceiverMessageComponent*  HideTextReceiverComponent;                         // 0x0C00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UFortGameplayReceiverMessageComponent*  ShowTextReceiverComponent;                         // 0x0C08(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          ToolPickingBox;                                    // 0x0C10(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UToyOptionsComponent_C*                 ToyOptionsComponent;                               // 0x0C18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class FString                                 UserDefinedText;                                   // 0x0C20(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          bShowBorder;                                       // 0x0C30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C31[0x3];                                      // 0x0C31(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           BackgroundColor;                                   // 0x0C34(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETextJustify                                  HorizontalTextAlignment;                           // 0x0C44(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C45[0x3];                                      // 0x0C45(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TextSize;                                          // 0x0C48(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ViewDistance;                                      // 0x0C4C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           TextColor;                                         // 0x0C50(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EnabledIndex;                                      // 0x0C60(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TextFont;                                          // 0x0C64(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Show_Debug_Text;                                   // 0x0C68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C69[0x3];                                      // 0x0C69(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               BackgroundRelativeRotationWithBorder;              // 0x0C6C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               BackgroundRelativeRotationWithoutBorder;           // 0x0C78(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	int32                                         OutlineStrength;                                   // 0x0C84(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBillboardshadowDirection                     DropShadow;                                        // 0x0C88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C89[0x3];                                      // 0x0C89(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Shadow_Divisor;                                    // 0x0C8C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidgetComponent*                       WidgetComponent;                                   // 0x0C90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCreative_Background_Widget_C*          Widget;                                            // 0x0C98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MinTextSize;                                       // 0x0CA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortMinigameState                            Last_State_Updated;                                // 0x0CA4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Creative_Billboard(int32 EntryPoint);
-	void PostFinishSpawning();
+	void Initialize_Minigame_Options(class AFortMinigame* Minigame);
+	void BndEvt__FortMinigameLogic_K2Node_ComponentBoundEvent_4_OnMinigameStateChanged__DelegateSignature(class AFortMinigame* Minigame, EFortMinigameState NewMinigameState);
+	void ReceiveBeginPlay();
+	void BndEvt__Creative_Enabled_Component_K2Node_ComponentBoundEvent_7_On_Enabled_State_Changed__DelegateSignature(bool Enabled);
+	void Initialize_Device();
+	void OnWorldReady();
+	void BndEvt__VisibleInGameComponent_K2Node_ComponentBoundEvent_6_On_Visibility_Changed__DelegateSignature(bool Visible);
+	void Update_Static_Mesh_Component_Visibility_Options();
+	void Play_Mode_Changed(class AFortMinigame* Minigame, bool bIsInPlayMode);
+	void BndEvt__FortMinigameLogic_K2Node_ComponentBoundEvent_5_OnMinigameAssignmentChanged__DelegateSignature(class AFortMinigame* Minigame);
+	void BndEvt__HideTextReceiverComponent_K2Node_ComponentBoundEvent_3_OnGameplayMessageReceived__DelegateSignature(class AController* TriggerInstigator);
+	void BndEvt__ShowTextReceiverComponent_K2Node_ComponentBoundEvent_2_OnGameplayMessageReceived__DelegateSignature(class AController* TriggerInstigator);
 	void BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_1_AnyPropertyChangedDelegate__DelegateSignature();
 	void BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_0_AnyPropertyChangedDelegate__DelegateSignature();
 	void PostUpdateProperties();
-	void ReceiveBeginPlay();
 	void SetBackgroundColor();
-	void SetDisplayText();
 	void SetTextSize();
-	void ShowBorder();
 	void SetTextAlignment();
+	void SetDisplayText();
 	void UpdateProperties();
 	void SetTextColor();
 	void SetViewDistance();
+	void SetTextFont();
+	void SetShadow();
+	void Create_Widget();
+	void Text_Visibility_On_Game_State(EFortMinigameState New_State);
+	void Update_Last_Game_State_Enable_Changed();
+	void GetCreativeActorBounds(bool* Override_Bounds, struct FVector* Bounds);
+	void GetCreativeActorOrigin(bool* Override, struct FVector* Center);
+
+	TArray<class UMeshComponent*> GetMeshComponents() const;
+	class UStaticMesh* GetCollisionStaticMesh() const;
 
 public:
 	static class UClass* StaticClass()
@@ -68,22 +105,6 @@ public:
 		return GetDefaultObjImpl<ABP_Creative_Billboard_C>();
 	}
 };
-static_assert(alignof(ABP_Creative_Billboard_C) == 0x000008, "Wrong alignment on ABP_Creative_Billboard_C");
-static_assert(sizeof(ABP_Creative_Billboard_C) == 0x000B78, "Wrong size on ABP_Creative_Billboard_C");
-static_assert(offsetof(ABP_Creative_Billboard_C, UberGraphFrame) == 0x000B10, "Member 'ABP_Creative_Billboard_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, ToolPickingBox) == 0x000B18, "Member 'ABP_Creative_Billboard_C::ToolPickingBox' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, ToyOptionsComponent) == 0x000B20, "Member 'ABP_Creative_Billboard_C::ToyOptionsComponent' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, Background) == 0x000B28, "Member 'ABP_Creative_Billboard_C::Background' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, UserDefinedText) == 0x000B30, "Member 'ABP_Creative_Billboard_C::UserDefinedText' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, bShowBorder) == 0x000B40, "Member 'ABP_Creative_Billboard_C::bShowBorder' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, BackgroundColor) == 0x000B44, "Member 'ABP_Creative_Billboard_C::BackgroundColor' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, HorizontalTextAlignment) == 0x000B54, "Member 'ABP_Creative_Billboard_C::HorizontalTextAlignment' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, TextSize) == 0x000B58, "Member 'ABP_Creative_Billboard_C::TextSize' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, ViewDistance) == 0x000B5C, "Member 'ABP_Creative_Billboard_C::ViewDistance' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, bAlwaysFaceCamera) == 0x000B60, "Member 'ABP_Creative_Billboard_C::bAlwaysFaceCamera' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, WasInRangeLastCheck) == 0x000B61, "Member 'ABP_Creative_Billboard_C::WasInRangeLastCheck' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, BackgroundColorOverride) == 0x000B64, "Member 'ABP_Creative_Billboard_C::BackgroundColorOverride' has a wrong offset!");
-static_assert(offsetof(ABP_Creative_Billboard_C, TextColor) == 0x000B68, "Member 'ABP_Creative_Billboard_C::TextColor' has a wrong offset!");
 
 }
 

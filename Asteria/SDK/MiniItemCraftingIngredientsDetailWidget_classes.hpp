@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MiniItemCraftingIngredientsDetailWidget.MiniItemCraftingIngredientsDetailWidget_C
-// 0x0010 (0x0290 - 0x0280)
+// 0x0010 (0x02F0 - 0x02E0)
 class UMiniItemCraftingIngredientsDetailWidget_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMiniCraftingIngredientList_C*          MiniCraftingIngredientList;                        // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMiniCraftingIngredientList_C*          MiniCraftingIngredientList;                        // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void GetRecipeItemQuantityPairs(class UFortItem* Item, TArray<struct FFortItemQuantityPair>* Pairs);
@@ -42,10 +42,6 @@ public:
 		return GetDefaultObjImpl<UMiniItemCraftingIngredientsDetailWidget_C>();
 	}
 };
-static_assert(alignof(UMiniItemCraftingIngredientsDetailWidget_C) == 0x000008, "Wrong alignment on UMiniItemCraftingIngredientsDetailWidget_C");
-static_assert(sizeof(UMiniItemCraftingIngredientsDetailWidget_C) == 0x000290, "Wrong size on UMiniItemCraftingIngredientsDetailWidget_C");
-static_assert(offsetof(UMiniItemCraftingIngredientsDetailWidget_C, UberGraphFrame) == 0x000280, "Member 'UMiniItemCraftingIngredientsDetailWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMiniItemCraftingIngredientsDetailWidget_C, MiniCraftingIngredientList) == 0x000288, "Member 'UMiniItemCraftingIngredientsDetailWidget_C::MiniCraftingIngredientList' has a wrong offset!");
 
 }
 

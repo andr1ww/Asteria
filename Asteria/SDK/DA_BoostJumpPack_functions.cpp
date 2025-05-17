@@ -60,7 +60,7 @@ void ADA_BoostJumpPack_C::BPPressTrigger(class AFortDecoHelper* FortDecoHelper)
 // Function DA_BoostJumpPack.DA_BoostJumpPack_C.RaiseUsageError
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayTagContainer            FailedReason                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTagContainer&     FailedReason                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void ADA_BoostJumpPack_C::RaiseUsageError(const struct FGameplayTagContainer& FailedReason)
 {
@@ -80,7 +80,7 @@ void ADA_BoostJumpPack_C::RaiseUsageError(const struct FGameplayTagContainer& Fa
 // Function DA_BoostJumpPack.DA_BoostJumpPack_C.IsOnGround
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    bOnGround                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   bOnGround                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ADA_BoostJumpPack_C::IsOnGround(bool* bOnGround)
 {

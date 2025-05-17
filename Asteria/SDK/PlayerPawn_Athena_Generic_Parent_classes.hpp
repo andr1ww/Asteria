@@ -10,40 +10,44 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C
-// 0x00D0 (0x2A60 - 0x2990)
+// 0x0100 (0x3840 - 0x3740)
 class APlayerPawn_Athena_Generic_Parent_C : public AFortPlayerPawnAthena
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2990(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class UMaterialInterface*>             Default_Weapon_Materials;                          // 0x2998(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnBackpackMaterials;                             // 0x29A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnHatMaterials;                                  // 0x29B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnHeadMaterials;                                 // 0x29C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnBodyMaterials;                                 // 0x29D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnCharmMaterials;                                // 0x29E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnFaceMaterials;                                 // 0x29F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInterface*>             PawnLegsMaterials;                                 // 0x2A08(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInterface*>             PawnTorsoMaterials;                                // 0x2A18(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UPostProcessComponent*                  PlayerPostProcessFX;                               // 0x2A28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class USkeletalMeshComponent*>         SkeletalMeshes;                                    // 0x2A30(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UMaterialInstanceDynamic*>       PawnMaterials_ALL;                                 // 0x2A40(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TMulticastInlineDelegate<void(class AFortPlayerPawnAthena* JumpingPlayer)> ShootingTargetReactToJump;                         // 0x2A50(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x3740(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UMaterialInterface*>             Default_Weapon_Materials;                          // 0x3748(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnBackpackMaterials;                             // 0x3758(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnHatMaterials;                                  // 0x3768(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnHeadMaterials;                                 // 0x3778(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnBodyMaterials;                                 // 0x3788(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnCharmMaterials;                                // 0x3798(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnFaceMaterials;                                 // 0x37A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInterface*>             PawnLegsMaterials;                                 // 0x37B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInterface*>             PawnTorsoMaterials;                                // 0x37C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UPostProcessComponent*                  PlayerPostProcessFX;                               // 0x37D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class USkeletalMeshComponent*>         SkeletalMeshes;                                    // 0x37E0(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnMaterials_ALL;                                 // 0x37F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class AFortPlayerPawnAthena* JumpingPlayer)> ShootingTargetReactToJump; // 0x3800(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class AActor* SelfActor, class AActor* OtherActor, const struct FVector& NormalImpulse, const struct FHitResult& Hit)> OnPlayHit; // 0x3810(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnEnteredVehicleDispatcher;                        // 0x3820(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnExitedVehicleDispatcher;                         // 0x3830(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent(int32 EntryPoint);
 	void K2_OnEndCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust);
 	void K2_OnStartCrouch(float HalfHeightAdjust, float ScaledHalfHeightAdjust);
-	void OnEnteredVehicle();
-	void OnExitedVehicle();
 	void OnJumped();
+	void OnExitedVehicle();
+	void OnEnteredVehicle();
 	void ReceiveBeginPlay();
 
 public:
@@ -56,22 +60,6 @@ public:
 		return GetDefaultObjImpl<APlayerPawn_Athena_Generic_Parent_C>();
 	}
 };
-static_assert(alignof(APlayerPawn_Athena_Generic_Parent_C) == 0x000010, "Wrong alignment on APlayerPawn_Athena_Generic_Parent_C");
-static_assert(sizeof(APlayerPawn_Athena_Generic_Parent_C) == 0x002A60, "Wrong size on APlayerPawn_Athena_Generic_Parent_C");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, UberGraphFrame) == 0x002990, "Member 'APlayerPawn_Athena_Generic_Parent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, Default_Weapon_Materials) == 0x002998, "Member 'APlayerPawn_Athena_Generic_Parent_C::Default_Weapon_Materials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, PawnBackpackMaterials) == 0x0029A8, "Member 'APlayerPawn_Athena_Generic_Parent_C::PawnBackpackMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, PawnHatMaterials) == 0x0029B8, "Member 'APlayerPawn_Athena_Generic_Parent_C::PawnHatMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, PawnHeadMaterials) == 0x0029C8, "Member 'APlayerPawn_Athena_Generic_Parent_C::PawnHeadMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, PawnBodyMaterials) == 0x0029D8, "Member 'APlayerPawn_Athena_Generic_Parent_C::PawnBodyMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, PawnCharmMaterials) == 0x0029E8, "Member 'APlayerPawn_Athena_Generic_Parent_C::PawnCharmMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, PawnFaceMaterials) == 0x0029F8, "Member 'APlayerPawn_Athena_Generic_Parent_C::PawnFaceMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, PawnLegsMaterials) == 0x002A08, "Member 'APlayerPawn_Athena_Generic_Parent_C::PawnLegsMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, PawnTorsoMaterials) == 0x002A18, "Member 'APlayerPawn_Athena_Generic_Parent_C::PawnTorsoMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, PlayerPostProcessFX) == 0x002A28, "Member 'APlayerPawn_Athena_Generic_Parent_C::PlayerPostProcessFX' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, SkeletalMeshes) == 0x002A30, "Member 'APlayerPawn_Athena_Generic_Parent_C::SkeletalMeshes' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, PawnMaterials_ALL) == 0x002A40, "Member 'APlayerPawn_Athena_Generic_Parent_C::PawnMaterials_ALL' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_Parent_C, ShootingTargetReactToJump) == 0x002A50, "Member 'APlayerPawn_Athena_Generic_Parent_C::ShootingTargetReactToJump' has a wrong offset!");
 
 }
 

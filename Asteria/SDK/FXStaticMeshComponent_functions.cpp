@@ -32,7 +32,7 @@ void UFXStaticMeshComponent_C::ApplyBuildingHitEffect()
 
 
 // Function FXStaticMeshComponent.FXStaticMeshComponent_C.ApplyEffect
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialInterface*               Source_Material                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   FadeInTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

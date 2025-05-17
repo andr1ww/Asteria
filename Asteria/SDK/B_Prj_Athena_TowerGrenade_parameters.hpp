@@ -11,15 +11,15 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.ExecuteUbergraph_B_Prj_Athena_TowerGrenade
-// 0x05B0 (0x05B0 - 0x0000)
+// 0x05D0 (0x05D0 - 0x0000)
 struct B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade final
 {
 public:
@@ -32,298 +32,163 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_Hit_1;                                // 0x0030(0x0088)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	TArray<class AActor*>                         K2Node_Event_HitActors;                            // 0x00B8(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FHitResult>                     K2Node_Event_HitResults;                           // 0x00C8(0x0010)(ConstParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference)
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue;                // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E2[0x2];                                       // 0x00E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x00E8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F4[0x4];                                       // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    K2Node_Event_MyComp;                               // 0x00F8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_Other;                                // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_Event_OtherComp;                            // 0x0108(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bSelfMoved;                           // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                K2Node_Event_HitLocation;                          // 0x0114(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_Event_HitNormal;                            // 0x0120(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_Event_NormalImpulse;                        // 0x012C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_Hit;                                  // 0x0138(0x0088)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x01C0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAthenaFillFloor*                       K2Node_DynamicCast_AsAthena_Fill_Floor;            // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AAthenaSupplyDropBalloon_C*             K2Node_DynamicCast_AsAthena_Supply_Drop_Balloon;   // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1EA[0x6];                                      // 0x01EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortProjectileBase*                    K2Node_DynamicCast_AsFort_Projectile_Base;         // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortAthenaSupplyDrop*                  K2Node_DynamicCast_AsFort_Athena_Supply_Drop;      // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn;                    // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABuildingProp*                          K2Node_DynamicCast_AsBuilding_Prop;                // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_229[0x7];                                      // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue;       // 0x0230(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0239(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x023A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_23B[0x1];                                      // 0x023B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_242[0x2];                                      // 0x0242(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0244(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X;                            // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x025C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GridSnap_Float_ReturnValue;               // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GridSnap_Float_ReturnValue_1;             // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_2;        // 0x0268(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0274(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Map_Find_Value;                           // 0x0280(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0284(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_285[0x3];                                      // 0x0285(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0288(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                K2Node_CustomEvent_Hit_Location;                   // 0x0294(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x02A0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_VSizeSquared_ReturnValue;                 // 0x02AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Square_ReturnValue;                       // 0x02B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetTimeSeconds_ReturnValue;               // 0x02B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2B9[0x3];                                      // 0x02B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetTimeSeconds_ReturnValue_1;             // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x02C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2C6[0x2];                                      // 0x02C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x02C8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x02D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2D5[0x3];                                      // 0x02D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Map_Find_Value_1;                         // 0x02D8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x02E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x02E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2E6[0x2];                                      // 0x02E6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x02E8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_3;           // 0x02F4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_4;           // 0x0300(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_5;           // 0x030C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EEvaluateCurveTableResult                     CallFunc_EvaluateCurveTableRow_OutResult;          // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_EvaluateCurveTableRow_OutXY;              // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x0328(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0334(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_2;        // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0340(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_349[0x3];                                      // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x034C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0350(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0354(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0355(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0356(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_357[0x1];                                      // 0x0357(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x035C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x035D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_35E[0x2];                                      // 0x035E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_Array_Get_Item_1;                         // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0368(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x036C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x036D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_36E[0x2];                                      // 0x036E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GridSnap_Float_ReturnValue_2;             // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0374(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_6;           // 0x0380(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38C[0x4];                                      // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0390(0x0030)(IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x03C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3C1[0x3];                                      // 0x03C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x03C4(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x044C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x044D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_44E[0x2];                                      // 0x044E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FHitResult>                     CallFunc_BoxTraceMulti_OutHits;                    // 0x0450(0x0010)(ZeroConstructor, ReferenceParm, ContainsInstancedReference)
-	bool                                          CallFunc_BoxTraceMulti_ReturnValue;                // 0x0460(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         CallFunc_GetActorTeam_ReturnValue;                 // 0x0461(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_462[0x2];                                      // 0x0462(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_Array_Get_Item_2;                         // 0x0464(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x04EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x04F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x04F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4F2[0x2];                                      // 0x04F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x04F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x04F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x04FC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0508(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0514(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0520(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52C[0x4];                                      // 0x052C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0538(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0540(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0548(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0550(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0554(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0558(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0564(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0570(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_571[0x7];                                      // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABuildingActor*                         K2Node_DynamicCast_AsBuilding_Actor;               // 0x0578(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_581[0x7];                                      // 0x0581(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EFortTeamAffiliation>                  K2Node_MakeArray_Array;                            // 0x0588(0x0010)(ZeroConstructor, ReferenceParm)
-	uint8                                         CallFunc_GetActorTeam_ReturnValue_1;               // 0x0598(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_Event_Hit_1;                                // 0x0030(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         K2Node_Event_HitActors;                            // 0x00C0(0x0010)(ConstParm, ReferenceParm, HasGetValueTypeHash)
+	TArray<struct FHitResult>                     K2Node_Event_HitResults;                           // 0x00D0(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue;                // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_EA[0x2];                                       // 0x00EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x00F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimitiveComponent*                    K2Node_Event_MyComp;                               // 0x0100(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_Other;                                // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_Event_OtherComp;                            // 0x0110(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bSelfMoved;                           // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_119[0x3];                                      // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                K2Node_Event_HitLocation;                          // 0x011C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_Event_HitNormal;                            // 0x0128(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_Event_NormalImpulse;                        // 0x0134(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_Event_Hit;                                  // 0x0140(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x01CC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AAthenaFillFloor*                       K2Node_DynamicCast_AsAthena_Fill_Floor;            // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1E1[0x7];                                      // 0x01E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AAthenaSupplyDropBalloon_C*             K2Node_DynamicCast_AsAthena_Supply_Drop_Balloon;   // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1F2[0x6];                                      // 0x01F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortProjectileBase*                    K2Node_DynamicCast_AsFort_Projectile_Base;         // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortAthenaSupplyDrop*                  K2Node_DynamicCast_AsFort_Athena_Supply_Drop;      // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn;                    // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABuildingProp*                          K2Node_DynamicCast_AsBuilding_Prop;                // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue;       // 0x0238(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0242(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_243[0x1];                                      // 0x0243(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_24A[0x2];                                      // 0x024A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x024C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x025C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GridSnap_Float_ReturnValue;               // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GridSnap_Float_ReturnValue_1;             // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_2;        // 0x0270(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x027C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Map_Find_Value;                           // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x028C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_28D[0x3];                                      // 0x028D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0290(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                K2Node_CustomEvent_Hit_Location;                   // 0x029C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x02A8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_VSizeSquared_ReturnValue;                 // 0x02B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Square_ReturnValue;                       // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetTimeSeconds_ReturnValue;               // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C1[0x3];                                      // 0x02C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetTimeSeconds_ReturnValue_1;             // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x02CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2CE[0x2];                                      // 0x02CE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x02D0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x02DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2DD[0x3];                                      // 0x02DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Map_Find_Value_1;                         // 0x02E0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x02EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x02ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2EE[0x2];                                      // 0x02EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x02F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_3;           // 0x02FC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_4;           // 0x0308(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_5;           // 0x0314(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEvaluateCurveTableResult                     CallFunc_EvaluateCurveTableRow_OutResult;          // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_321[0x3];                                      // 0x0321(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_EvaluateCurveTableRow_OutXY;              // 0x0324(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_329[0x7];                                      // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x0330(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_2;        // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0344(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_351[0x3];                                      // 0x0351(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0354(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x035C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x035D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x035E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_35F[0x1];                                      // 0x035F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0360(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0364(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0365(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_366[0x2];                                      // 0x0366(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_Array_Get_Item_1;                         // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0374(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0375(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_376[0x2];                                      // 0x0376(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GridSnap_Float_ReturnValue_2;             // 0x0378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x037C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_6;           // 0x0388(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_394[0xC];                                      // 0x0394(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x03A0(0x0030)(IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3D1[0x3];                                      // 0x03D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetActorTransform_SweepHitResult;      // 0x03D4(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorTransform_ReturnValue;         // 0x0460(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x0461(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_462[0x6];                                      // 0x0462(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FHitResult>                     CallFunc_BoxTraceMulti_OutHits;                    // 0x0468(0x0010)(ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_BoxTraceMulti_ReturnValue;                // 0x0478(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_GetActorTeam_ReturnValue;                 // 0x0479(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_47A[0x2];                                      // 0x047A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_Array_Get_Item_2;                         // 0x047C(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0508(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x050C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x050D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_50E[0x2];                                      // 0x050E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0510(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0514(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0518(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0524(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0530(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x053C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0548(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0550(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0558(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0560(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0568(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x056C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0570(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x057C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0588(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_589[0x7];                                      // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABuildingActor*                         K2Node_DynamicCast_AsBuilding_Actor;               // 0x0590(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0598(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_599[0x7];                                      // 0x0599(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EFortTeamAffiliation>                  K2Node_MakeArray_Array_1;                          // 0x05A0(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<EFortTeamAffiliation>                  K2Node_MakeArray_Array;                            // 0x05A0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetActorTeam_ReturnValue_1;               // 0x05B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5B1[0x7];                                      // 0x05B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EFortTeamAffiliation>                  K2Node_MakeArray_Array_1;                          // 0x05B8(0x0010)(ReferenceParm, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade) == 0x000010, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade) == 0x0005B0, "Wrong size on B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, EntryPoint) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000018, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, Temp_bool_IsClosed_Variable) == 0x000020, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, Temp_int_Loop_Counter_Variable) == 0x000024, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Add_IntInt_ReturnValue) == 0x000028, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, Temp_int_Array_Index_Variable) == 0x00002C, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_Hit_1) == 0x000030, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_Hit_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_HitActors) == 0x0000B8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_HitActors' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_HitResults) == 0x0000C8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_HitResults' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_GetInstigator_ReturnValue) == 0x0000D8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_GetInstigator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_IsLocallyControlled_ReturnValue) == 0x0000E0, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, Temp_bool_Has_Been_Initd_Variable) == 0x0000E1, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, Temp_int_Array_Index_Variable_1) == 0x0000E4, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_K2_GetActorLocation_ReturnValue) == 0x0000E8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_MyComp) == 0x0000F8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_MyComp' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_Other) == 0x000100, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_Other' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_OtherComp) == 0x000108, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_OtherComp' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_bSelfMoved) == 0x000110, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_bSelfMoved' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_HitLocation) == 0x000114, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_HitLocation' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_HitNormal) == 0x000120, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_HitNormal' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_NormalImpulse) == 0x00012C, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_NormalImpulse' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_Hit) == 0x000138, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_Hit' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0001C0, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_AsAthena_Fill_Floor) == 0x0001D0, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_AsAthena_Fill_Floor' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_bSuccess) == 0x0001D8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_AsAthena_Supply_Drop_Balloon) == 0x0001E0, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_AsAthena_Supply_Drop_Balloon' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_bSuccess_1) == 0x0001E8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Not_PreBool_ReturnValue) == 0x0001E9, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_AsFort_Projectile_Base) == 0x0001F0, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_AsFort_Projectile_Base' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_bSuccess_2) == 0x0001F8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_AsFort_Athena_Supply_Drop) == 0x000200, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_AsFort_Athena_Supply_Drop' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_bSuccess_3) == 0x000208, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_AsFort_Pawn) == 0x000210, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_AsFort_Pawn' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_bSuccess_4) == 0x000218, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_AsBuilding_Prop) == 0x000220, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_AsBuilding_Prop' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_bSuccess_5) == 0x000228, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_SpawnEmitterAtLocation_ReturnValue) == 0x000230, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_SpawnEmitterAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BooleanOR_ReturnValue) == 0x000238, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BooleanOR_ReturnValue_1) == 0x000239, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BooleanOR_ReturnValue_2) == 0x00023A, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, Temp_int_Array_Index_Variable_2) == 0x00023C, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BooleanOR_ReturnValue_3) == 0x000240, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BooleanAND_ReturnValue) == 0x000241, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000244, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakVector_X) == 0x000250, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakVector_Y) == 0x000254, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakVector_Z) == 0x000258, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x00025C, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_GridSnap_Float_ReturnValue) == 0x000260, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_GridSnap_Float_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_GridSnap_Float_ReturnValue_1) == 0x000264, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_GridSnap_Float_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_K2_GetActorLocation_ReturnValue_2) == 0x000268, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_K2_GetActorLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Add_VectorVector_ReturnValue) == 0x000274, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Map_Find_Value) == 0x000280, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Map_Find_ReturnValue) == 0x000284, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_MakeRotator_ReturnValue) == 0x000288, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_CustomEvent_Hit_Location) == 0x000294, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_CustomEvent_Hit_Location' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Subtract_VectorVector_ReturnValue_1) == 0x0002A0, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Subtract_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_VSizeSquared_ReturnValue) == 0x0002AC, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_VSizeSquared_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Square_ReturnValue) == 0x0002B0, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Square_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_GetTimeSeconds_ReturnValue) == 0x0002B4, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_GetTimeSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Greater_FloatFloat_ReturnValue) == 0x0002B8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x0002BC, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_GetTimeSeconds_ReturnValue_1) == 0x0002C0, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_GetTimeSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x0002C4, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BooleanAND_ReturnValue_1) == 0x0002C5, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Add_VectorVector_ReturnValue_1) == 0x0002C8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, Temp_bool_True_if_break_was_hit_Variable) == 0x0002D4, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Map_Find_Value_1) == 0x0002D8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Map_Find_ReturnValue_1) == 0x0002E4, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Not_PreBool_ReturnValue_1) == 0x0002E5, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Add_VectorVector_ReturnValue_2) == 0x0002E8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Add_VectorVector_ReturnValue_3) == 0x0002F4, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Add_VectorVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Add_VectorVector_ReturnValue_4) == 0x000300, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Add_VectorVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Add_VectorVector_ReturnValue_5) == 0x00030C, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Add_VectorVector_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_EvaluateCurveTableRow_OutResult) == 0x000318, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_EvaluateCurveTableRow_OutResult' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_EvaluateCurveTableRow_OutXY) == 0x00031C, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_EvaluateCurveTableRow_OutXY' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_SwitchEnum_CmpSuccess) == 0x000320, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_SpawnSoundAttached_ReturnValue) == 0x000328, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, Temp_int_Loop_Counter_Variable_1) == 0x000330, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Add_IntInt_ReturnValue_1) == 0x000334, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Subtract_FloatFloat_ReturnValue_2) == 0x000338, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Subtract_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, Temp_int_Loop_Counter_Variable_2) == 0x00033C, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Array_Get_Item) == 0x000340, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_IsValid_ReturnValue) == 0x000348, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Array_Length_ReturnValue) == 0x00034C, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Array_Length_ReturnValue_1) == 0x000350, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Less_IntInt_ReturnValue) == 0x000354, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Greater_IntInt_ReturnValue) == 0x000355, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BooleanAND_ReturnValue_2) == 0x000356, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Add_IntInt_ReturnValue_2) == 0x000358, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_Event_EndPlayReason) == 0x00035C, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_SwitchEnum_CmpSuccess_1) == 0x00035D, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Array_Get_Item_1) == 0x000360, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Array_Length_ReturnValue_2) == 0x000368, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Less_IntInt_ReturnValue_1) == 0x00036C, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_IsDedicatedServer_ReturnValue) == 0x00036D, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_GridSnap_Float_ReturnValue_2) == 0x000370, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_GridSnap_Float_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_MakeVector_ReturnValue) == 0x000374, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Add_VectorVector_ReturnValue_6) == 0x000380, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Add_VectorVector_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_MakeTransform_ReturnValue) == 0x000390, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, Temp_bool_Has_Been_Initd_Variable_1) == 0x0003C0, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::Temp_bool_Has_Been_Initd_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_K2_SetActorTransform_SweepHitResult) == 0x0003C4, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_K2_SetActorTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_K2_SetActorTransform_ReturnValue) == 0x00044C, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_K2_SetActorTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, Temp_bool_IsClosed_Variable_1) == 0x00044D, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BoxTraceMulti_OutHits) == 0x000450, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BoxTraceMulti_OutHits' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BoxTraceMulti_ReturnValue) == 0x000460, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BoxTraceMulti_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_GetActorTeam_ReturnValue) == 0x000461, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_GetActorTeam_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Array_Get_Item_2) == 0x000464, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Array_Length_ReturnValue_3) == 0x0004EC, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_bBlockingHit) == 0x0004F0, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_bInitialOverlap) == 0x0004F1, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_Time) == 0x0004F4, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_Distance) == 0x0004F8, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_Location) == 0x0004FC, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_ImpactPoint) == 0x000508, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_Normal) == 0x000514, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_ImpactNormal) == 0x000520, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_PhysMat) == 0x000530, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_HitActor) == 0x000538, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_HitComponent) == 0x000540, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_HitBoneName) == 0x000548, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_HitItem) == 0x000550, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_FaceIndex) == 0x000554, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_TraceStart) == 0x000558, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_BreakHitResult_TraceEnd) == 0x000564, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_Less_IntInt_ReturnValue_2) == 0x000570, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_AsBuilding_Actor) == 0x000578, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_AsBuilding_Actor' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_DynamicCast_bSuccess_6) == 0x000580, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_MakeArray_Array) == 0x000588, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, CallFunc_GetActorTeam_ReturnValue_1) == 0x000598, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::CallFunc_GetActorTeam_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade, K2Node_MakeArray_Array_1) == 0x0005A0, "Member 'B_Prj_Athena_TowerGrenade_C_ExecuteUbergraph_B_Prj_Athena_TowerGrenade::K2Node_MakeArray_Array_1' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)
@@ -332,9 +197,6 @@ struct B_Prj_Athena_TowerGrenade_C_ReceiveEndPlay final
 public:
 	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_ReceiveEndPlay");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_ReceiveEndPlay) == 0x000001, "Wrong size on B_Prj_Athena_TowerGrenade_C_ReceiveEndPlay");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.Handle Bounce
 // 0x000C (0x000C - 0x0000)
@@ -343,12 +205,9 @@ struct B_Prj_Athena_TowerGrenade_C_Handle_Bounce final
 public:
 	struct FVector                                Hit_Location;                                      // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_Handle_Bounce) == 0x000004, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_Handle_Bounce");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_Handle_Bounce) == 0x00000C, "Wrong size on B_Prj_Athena_TowerGrenade_C_Handle_Bounce");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_Handle_Bounce, Hit_Location) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_Handle_Bounce::Hit_Location' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.ReceiveHit
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct B_Prj_Athena_TowerGrenade_C_ReceiveHit final
 {
 public:
@@ -360,42 +219,25 @@ public:
 	struct FVector                                HitLocation;                                       // 0x001C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                HitNormal;                                         // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                NormalImpulse;                                     // 0x0034(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             Hit;                                               // 0x0040(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             Hit;                                               // 0x0040(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_ReceiveHit) == 0x000008, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_ReceiveHit");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_ReceiveHit) == 0x0000C8, "Wrong size on B_Prj_Athena_TowerGrenade_C_ReceiveHit");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ReceiveHit, MyComp) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_ReceiveHit::MyComp' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ReceiveHit, Other) == 0x000008, "Member 'B_Prj_Athena_TowerGrenade_C_ReceiveHit::Other' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ReceiveHit, OtherComp) == 0x000010, "Member 'B_Prj_Athena_TowerGrenade_C_ReceiveHit::OtherComp' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ReceiveHit, bSelfMoved) == 0x000018, "Member 'B_Prj_Athena_TowerGrenade_C_ReceiveHit::bSelfMoved' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ReceiveHit, HitLocation) == 0x00001C, "Member 'B_Prj_Athena_TowerGrenade_C_ReceiveHit::HitLocation' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ReceiveHit, HitNormal) == 0x000028, "Member 'B_Prj_Athena_TowerGrenade_C_ReceiveHit::HitNormal' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ReceiveHit, NormalImpulse) == 0x000034, "Member 'B_Prj_Athena_TowerGrenade_C_ReceiveHit::NormalImpulse' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ReceiveHit, Hit) == 0x000040, "Member 'B_Prj_Athena_TowerGrenade_C_ReceiveHit::Hit' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.OnExploded
 // 0x0020 (0x0020 - 0x0000)
 struct B_Prj_Athena_TowerGrenade_C_OnExploded final
 {
 public:
-	TArray<class AActor*>                         HitActors;                                         // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FHitResult>                     HitResults;                                        // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference)
+	TArray<class AActor*>                         HitActors;                                         // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	TArray<struct FHitResult>                     HitResults;                                        // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_OnExploded) == 0x000008, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_OnExploded");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_OnExploded) == 0x000020, "Wrong size on B_Prj_Athena_TowerGrenade_C_OnExploded");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_OnExploded, HitActors) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_OnExploded::HitActors' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_OnExploded, HitResults) == 0x000010, "Member 'B_Prj_Athena_TowerGrenade_C_OnExploded::HitResults' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.OnStop
-// 0x0088 (0x0088 - 0x0000)
+// 0x008C (0x008C - 0x0000)
 struct B_Prj_Athena_TowerGrenade_C_OnStop final
 {
 public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             Hit;                                               // 0x0000(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_OnStop) == 0x000004, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_OnStop");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_OnStop) == 0x000088, "Wrong size on B_Prj_Athena_TowerGrenade_C_OnStop");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_OnStop, Hit) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_OnStop::Hit' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.UserConstructionScript
 // 0x0001 (0x0001 - 0x0000)
@@ -404,26 +246,22 @@ struct B_Prj_Athena_TowerGrenade_C_UserConstructionScript final
 public:
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_UserConstructionScript) == 0x000001, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_UserConstructionScript");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_UserConstructionScript) == 0x000001, "Wrong size on B_Prj_Athena_TowerGrenade_C_UserConstructionScript");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_UserConstructionScript, CallFunc_IsDedicatedServer_ReturnValue) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_UserConstructionScript::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.SetBaseDestination
 // 0x0150 (0x0150 - 0x0000)
 struct B_Prj_Athena_TowerGrenade_C_SetBaseDestination final
 {
 public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8A[0x2];                                       // 0x008A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0094(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x00A0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x00AC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x00B8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             Hit;                                               // 0x0000(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_8E[0x2];                                       // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0098(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x00A4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x00B0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x00BC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -446,37 +284,6 @@ public:
 	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0144(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination) == 0x000008, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_SetBaseDestination");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination) == 0x000150, "Wrong size on B_Prj_Athena_TowerGrenade_C_SetBaseDestination");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, Hit) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::Hit' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_bBlockingHit) == 0x000088, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_bInitialOverlap) == 0x000089, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_Time) == 0x00008C, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_Distance) == 0x000090, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_Location) == 0x000094, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_ImpactPoint) == 0x0000A0, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_Normal) == 0x0000AC, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_ImpactNormal) == 0x0000B8, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_PhysMat) == 0x0000C8, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_HitActor) == 0x0000D0, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_HitComponent) == 0x0000D8, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_HitBoneName) == 0x0000E0, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_HitItem) == 0x0000E8, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_FaceIndex) == 0x0000EC, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_TraceStart) == 0x0000F0, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakHitResult_TraceEnd) == 0x0000FC, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000108, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_Add_VectorVector_ReturnValue) == 0x000114, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakVector_X) == 0x000120, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakVector_Y) == 0x000124, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_BreakVector_Z) == 0x000128, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_HasAuthority_ReturnValue) == 0x00012C, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000130, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_GridSnap_Float_ReturnValue) == 0x000134, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_GridSnap_Float_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_GridSnap_Float_ReturnValue_1) == 0x000138, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_GridSnap_Float_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_GridSnap_Float_ReturnValue_2) == 0x00013C, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_GridSnap_Float_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x000140, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SetBaseDestination, CallFunc_MakeVector_ReturnValue) == 0x000144, "Member 'B_Prj_Athena_TowerGrenade_C_SetBaseDestination::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.CreateBaseSection
 // 0x0170 (0x0170 - 0x0000)
@@ -485,9 +292,9 @@ struct B_Prj_Athena_TowerGrenade_C_CreateBaseSection final
 public:
 	struct FVector                                ReferenceLocation;                                 // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UClass*>                         BGAClassArray;                                     // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FVector>                        BGALocationArray;                                  // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FRotator>                       BGARotationArray;                                  // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class UClass*>                         BGAClassArray;                                     // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	TArray<struct FVector>                        BGALocationArray;                                  // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	TArray<struct FRotator>                       BGARotationArray;                                  // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	class UBuildingStructuralSupportSystem*       CallFunc_GetBuildingStructuralSupportSystem_BuildingStructuralSupportSystem; // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -535,50 +342,6 @@ public:
 	bool                                          CallFunc_IsWorldLocValid_ReturnValue_1;            // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection) == 0x000010, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_CreateBaseSection");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection) == 0x000170, "Wrong size on B_Prj_Athena_TowerGrenade_C_CreateBaseSection");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, ReferenceLocation) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::ReferenceLocation' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, BGAClassArray) == 0x000010, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::BGAClassArray' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, BGALocationArray) == 0x000020, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::BGALocationArray' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, BGARotationArray) == 0x000030, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::BGARotationArray' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_GetBuildingStructuralSupportSystem_BuildingStructuralSupportSystem) == 0x000040, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_GetBuildingStructuralSupportSystem_BuildingStructuralSupportSystem' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Array_Length_ReturnValue_1) == 0x00004C, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Greater_IntInt_ReturnValue) == 0x000050, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Subtract_IntInt_ReturnValue) == 0x000054, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_GetOwner_ReturnValue) == 0x000058, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_GetFortPlayerControllerFromActor_ReturnValue) == 0x000060, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_GetFortPlayerControllerFromActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_CanPlaceClassInstances_ReturnValue) == 0x000068, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_CanPlaceClassInstances_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Map_Find_Value) == 0x00006C, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Map_Find_ReturnValue) == 0x000078, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_GetOwner_ReturnValue_1) == 0x000080, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Map_Find_Value_1) == 0x000088, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Map_Find_ReturnValue_1) == 0x00008C, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1) == 0x000090, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_GetActorTeam_ReturnValue) == 0x000098, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_GetActorTeam_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, Temp_int_Variable) == 0x00009C, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Add_IntInt_ReturnValue) == 0x0000A0, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Array_Get_Item) == 0x0000A8, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_BreakRotator_Roll) == 0x0000B0, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_BreakRotator_Pitch) == 0x0000B4, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_BreakRotator_Yaw) == 0x0000B8, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_RotateAngleAxis_ReturnValue) == 0x0000BC, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Add_FloatFloat_ReturnValue) == 0x0000C8, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Add_VectorVector_ReturnValue) == 0x0000CC, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_MakeRotator_ReturnValue) == 0x0000D8, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Add_VectorVector_ReturnValue_1) == 0x0000E4, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_MakeTransform_ReturnValue) == 0x0000F0, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000120, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000128, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_FinishSpawningActor_ReturnValue) == 0x000130, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, K2Node_DynamicCast_AsBuilding_SMActor) == 0x000138, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::K2Node_DynamicCast_AsBuilding_SMActor' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, K2Node_DynamicCast_bSuccess) == 0x000140, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000144, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Add_VectorVector_ReturnValue_2) == 0x000150, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_Add_VectorVector_ReturnValue_3) == 0x00015C, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_Add_VectorVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_IsWorldLocValid_ReturnValue) == 0x000168, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_IsWorldLocValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_IsWorldLocValid_ReturnValue_1) == 0x000169, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_IsWorldLocValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CreateBaseSection, CallFunc_BooleanAND_ReturnValue) == 0x00016A, "Member 'B_Prj_Athena_TowerGrenade_C_CreateBaseSection::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.DestroyActorsInGridCell
 // 0x00F0 (0x00F0 - 0x0000)
@@ -622,48 +385,16 @@ public:
 	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell) == 0x000008, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell) == 0x0000F0, "Wrong size on B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CellLocation) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CellLocation' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, DestroyFloorsQuickly) == 0x00000C, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::DestroyFloorsQuickly' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, Temp_int_Array_Index_Variable) == 0x000018, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, Temp_int_Array_Index_Variable_1) == 0x00001C, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, Temp_int_Array_Index_Variable_2) == 0x000020, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, Temp_int_Loop_Counter_Variable_1) == 0x000024, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, K2Node_MakeStruct_BuildingGridActorFilter) == 0x000028, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::K2Node_MakeStruct_BuildingGridActorFilter' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Add_IntInt_ReturnValue_1) == 0x00002C, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, Temp_int_Loop_Counter_Variable_2) == 0x000030, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_GetBuildingStructuralSupportSystem_BuildingStructuralSupportSystem) == 0x000038, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_GetBuildingStructuralSupportSystem_BuildingStructuralSupportSystem' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_K2_GetBuildingActorsInGridCell_OutActorsInGridCell) == 0x000040, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_K2_GetBuildingActorsInGridCell_OutActorsInGridCell' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_K2_GetBuildingActorsInGridCell_ReturnValue) == 0x000070, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_K2_GetBuildingActorsInGridCell_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Add_IntInt_ReturnValue_2) == 0x000074, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Get_Item) == 0x000078, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Length_ReturnValue) == 0x00008C, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Less_IntInt_ReturnValue) == 0x000090, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Add_ReturnValue) == 0x000094, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Add_ReturnValue_1) == 0x000098, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Get_Item_1) == 0x00009C, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Length_ReturnValue_1) == 0x0000B4, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000B8, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Add_ReturnValue_2) == 0x0000BC, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Add_ReturnValue_3) == 0x0000C0, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Get_Item_2) == 0x0000C4, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Length_ReturnValue_2) == 0x0000DC, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Less_IntInt_ReturnValue_2) == 0x0000E0, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Add_ReturnValue_4) == 0x0000E4, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell, CallFunc_Array_Add_ReturnValue_5) == 0x0000E8, "Member 'B_Prj_Athena_TowerGrenade_C_DestroyActorsInGridCell::CallFunc_Array_Add_ReturnValue_5' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.ClearAndBuild
 // 0x0088 (0x0088 - 0x0000)
 struct B_Prj_Athena_TowerGrenade_C_ClearAndBuild final
 {
 public:
-	TArray<struct FVector>                        ClearedGridCells;                                  // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<class UClass*>                         BGAClassArray;                                     // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FVector>                        BGALocationArray;                                  // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FRotator>                       BGARotationArray;                                  // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FVector>                        ClearedGridCells;                                  // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	TArray<class UClass*>                         BGAClassArray;                                     // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	TArray<struct FVector>                        BGALocationArray;                                  // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	TArray<struct FRotator>                       BGARotationArray;                                  // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	bool                                          DestroyFloorsQuickly;                              // 0x0040(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -679,23 +410,6 @@ public:
 	struct FVector                                CallFunc_RotateAngleAxis_ReturnValue;              // 0x006C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0078(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild) == 0x000008, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_ClearAndBuild");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild) == 0x000088, "Wrong size on B_Prj_Athena_TowerGrenade_C_ClearAndBuild");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, ClearedGridCells) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::ClearedGridCells' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, BGAClassArray) == 0x000010, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::BGAClassArray' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, BGALocationArray) == 0x000020, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::BGALocationArray' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, BGARotationArray) == 0x000030, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::BGARotationArray' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, DestroyFloorsQuickly) == 0x000040, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::DestroyFloorsQuickly' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, Temp_int_Loop_Counter_Variable) == 0x000044, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, CallFunc_Add_IntInt_ReturnValue) == 0x00004C, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, CallFunc_Less_IntInt_ReturnValue) == 0x000050, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, Temp_int_Array_Index_Variable) == 0x000054, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, CallFunc_Array_Get_Item) == 0x000058, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, CallFunc_Map_Find_Value) == 0x000064, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, CallFunc_Map_Find_ReturnValue) == 0x000068, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, CallFunc_RotateAngleAxis_ReturnValue) == 0x00006C, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_ClearAndBuild, CallFunc_Add_VectorVector_ReturnValue) == 0x000078, "Member 'B_Prj_Athena_TowerGrenade_C_ClearAndBuild::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.SpawnTires
 // 0x0290 (0x0290 - 0x0000)
@@ -735,18 +449,17 @@ public:
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x00B0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_SphereTraceSingle_OutHit;                 // 0x00C0(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_SphereTraceSingle_ReturnValue;            // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x014A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_14B[0x1];                                      // 0x014B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0154(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0160(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x016C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0178(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_SphereTraceSingle_OutHit;                 // 0x00C0(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_SphereTraceSingle_ReturnValue;            // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x014D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x014E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_14F[0x1];                                      // 0x014F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0158(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0164(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0170(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x017C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0198(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -777,77 +490,13 @@ public:
 	bool                                          CallFunc_IsWorldLocValid_ReturnValue_1;            // 0x0281(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0282(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_SpawnTires) == 0x000010, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_SpawnTires");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_SpawnTires) == 0x000290, "Wrong size on B_Prj_Athena_TowerGrenade_C_SpawnTires");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, ReferenceLocation) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::ReferenceLocation' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, TireHitLocation) == 0x00000C, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::TireHitLocation' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, b_TireHitTerrain) == 0x000018, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::b_TireHitTerrain' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_GetBuildingStructuralSupportSystem_BuildingStructuralSupportSystem) == 0x000020, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_GetBuildingStructuralSupportSystem_BuildingStructuralSupportSystem' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_GetOwner_ReturnValue) == 0x000028, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_GetFortPlayerControllerFromActor_ReturnValue) == 0x000030, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_GetFortPlayerControllerFromActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_CanPlaceClassInstances_ReturnValue) == 0x000038, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_CanPlaceClassInstances_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Array_Length_ReturnValue) == 0x00003C, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Greater_IntInt_ReturnValue) == 0x000040, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Array_Length_ReturnValue_1) == 0x000044, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Subtract_IntInt_ReturnValue) == 0x000048, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Map_Find_Value) == 0x00004C, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Map_Find_ReturnValue) == 0x000058, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, Temp_int_Variable) == 0x00005C, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Map_Find_Value_1) == 0x000060, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Map_Find_ReturnValue_1) == 0x000064, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Array_Get_Item) == 0x000068, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakRotator_Roll) == 0x000070, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakRotator_Pitch) == 0x000074, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakRotator_Yaw) == 0x000078, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_RotateAngleAxis_ReturnValue) == 0x00007C, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Add_FloatFloat_ReturnValue) == 0x000088, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Add_VectorVector_ReturnValue) == 0x00008C, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_MakeRotator_ReturnValue) == 0x000098, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Add_VectorVector_ReturnValue_1) == 0x0000A4, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Add_VectorVector_ReturnValue_2) == 0x0000B0, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000BC, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_SphereTraceSingle_OutHit) == 0x0000C0, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_SphereTraceSingle_OutHit' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_SphereTraceSingle_ReturnValue) == 0x000148, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_SphereTraceSingle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_bBlockingHit) == 0x000149, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_bInitialOverlap) == 0x00014A, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_Time) == 0x00014C, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_Distance) == 0x000150, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_Location) == 0x000154, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_ImpactPoint) == 0x000160, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_Normal) == 0x00016C, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_ImpactNormal) == 0x000178, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_PhysMat) == 0x000188, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_HitActor) == 0x000190, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_HitComponent) == 0x000198, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_HitBoneName) == 0x0001A0, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_HitItem) == 0x0001A8, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_FaceIndex) == 0x0001AC, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_TraceStart) == 0x0001B0, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BreakHitResult_TraceEnd) == 0x0001BC, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Add_IntInt_ReturnValue) == 0x0001C8, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_GetDisplayName_ReturnValue) == 0x0001D0, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Concat_StrStr_ReturnValue) == 0x0001E0, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0001F0, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, Temp_bool_Variable) == 0x0001FC, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, K2Node_Select_Default) == 0x000200, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_MakeTransform_ReturnValue) == 0x000210, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000240, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_FinishSpawningActor_ReturnValue) == 0x000248, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, K2Node_DynamicCast_AsBuilding_Actor) == 0x000250, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::K2Node_DynamicCast_AsBuilding_Actor' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, K2Node_DynamicCast_bSuccess) == 0x000258, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_K2_GetActorLocation_ReturnValue) == 0x00025C, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Add_VectorVector_ReturnValue_3) == 0x000268, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Add_VectorVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_Add_VectorVector_ReturnValue_4) == 0x000274, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_Add_VectorVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_IsWorldLocValid_ReturnValue) == 0x000280, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_IsWorldLocValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_IsWorldLocValid_ReturnValue_1) == 0x000281, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_IsWorldLocValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_SpawnTires, CallFunc_BooleanAND_ReturnValue) == 0x000282, "Member 'B_Prj_Athena_TowerGrenade_C_SpawnTires::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.HandleProps
 // 0x0080 (0x0080 - 0x0000)
 struct B_Prj_Athena_TowerGrenade_C_HandleProps final
 {
 public:
-	TArray<class AActor*>                         Array;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class AActor*>                         Array;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -873,26 +522,6 @@ public:
 	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_HandleProps) == 0x000008, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_HandleProps");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_HandleProps) == 0x000080, "Wrong size on B_Prj_Athena_TowerGrenade_C_HandleProps");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, Array) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::Array' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, CallFunc_Less_IntInt_ReturnValue) == 0x00001C, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, Temp_int_Array_Index_Variable) == 0x000020, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, CallFunc_Array_Get_Item) == 0x000028, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, K2Node_DynamicCast_AsBuilding_Prop_Big_Health) == 0x000030, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::K2Node_DynamicCast_AsBuilding_Prop_Big_Health' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, K2Node_DynamicCast_AsTiered_Chest_Athena) == 0x000040, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::K2Node_DynamicCast_AsTiered_Chest_Athena' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, K2Node_DynamicCast_AsBuilding_Actor) == 0x000050, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::K2Node_DynamicCast_AsBuilding_Actor' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, K2Node_DynamicCast_bSuccess_2) == 0x000058, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, K2Node_DynamicCast_AsBP_Damage_Balloon_Athena) == 0x000060, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::K2Node_DynamicCast_AsBP_Damage_Balloon_Athena' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, K2Node_DynamicCast_bSuccess_3) == 0x000068, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, K2Node_DynamicCast_AsBuilding_Prop) == 0x000070, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::K2Node_DynamicCast_AsBuilding_Prop' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, K2Node_DynamicCast_bSuccess_4) == 0x000078, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_HandleProps, CallFunc_Array_Add_ReturnValue) == 0x00007C, "Member 'B_Prj_Athena_TowerGrenade_C_HandleProps::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C.CalculateCardinalDirection
 // 0x0030 (0x0030 - 0x0000)
@@ -911,18 +540,6 @@ public:
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_1;    // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue_2;    // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection) == 0x000008, "Wrong alignment on B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection");
-static_assert(sizeof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection) == 0x000030, "Wrong size on B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection, CallFunc_GetInstigator_ReturnValue) == 0x000000, "Member 'B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection::CallFunc_GetInstigator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection, CallFunc_GetActorForwardVector_ReturnValue) == 0x000008, "Member 'B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection, CallFunc_BreakVector_X) == 0x000014, "Member 'B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection, CallFunc_BreakVector_Y) == 0x000018, "Member 'B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection, CallFunc_BreakVector_Z) == 0x00001C, "Member 'B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection, CallFunc_Abs_ReturnValue) == 0x000020, "Member 'B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000024, "Member 'B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection, CallFunc_Abs_ReturnValue_1) == 0x000028, "Member 'B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection, CallFunc_GreaterEqual_FloatFloat_ReturnValue_1) == 0x00002C, "Member 'B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection::CallFunc_GreaterEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection, CallFunc_GreaterEqual_FloatFloat_ReturnValue_2) == 0x00002D, "Member 'B_Prj_Athena_TowerGrenade_C_CalculateCardinalDirection::CallFunc_GreaterEqual_FloatFloat_ReturnValue_2' has a wrong offset!");
 
 }
 

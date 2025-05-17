@@ -17,43 +17,41 @@
 namespace SDK
 {
 
-// Function ChallengeInGameTreeEntry_Header.ChallengeInGameTreeEntry_Header_C.OnMouseLeave
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Function ChallengeInGameTreeEntry_Header.ChallengeInGameTreeEntry_Header_C.ExecuteUbergraph_ChallengeInGameTreeEntry_Header
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UChallengeInGameTreeEntry_Header_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
+void UChallengeInGameTreeEntry_Header_C::ExecuteUbergraph_ChallengeInGameTreeEntry_Header(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ChallengeInGameTreeEntry_Header_C", "OnMouseLeave");
+		Func = Class->GetFunction("ChallengeInGameTreeEntry_Header_C", "ExecuteUbergraph_ChallengeInGameTreeEntry_Header");
 
-	Params::ChallengeInGameTreeEntry_Header_C_OnMouseLeave Parms{};
+	Params::ChallengeInGameTreeEntry_Header_C_ExecuteUbergraph_ChallengeInGameTreeEntry_Header Parms{};
 
-	Parms.MouseEvent = std::move(MouseEvent);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ChallengeInGameTreeEntry_Header.ChallengeInGameTreeEntry_Header_C.OnMouseEnter
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
+// Function ChallengeInGameTreeEntry_Header.ChallengeInGameTreeEntry_Header_C.OnChallengeSetEstablished
+// (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FFortChallengeSetStyle&    DisplayStyle                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UChallengeInGameTreeEntry_Header_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+void UChallengeInGameTreeEntry_Header_C::OnChallengeSetEstablished(const struct FFortChallengeSetStyle& DisplayStyle)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ChallengeInGameTreeEntry_Header_C", "OnMouseEnter");
+		Func = Class->GetFunction("ChallengeInGameTreeEntry_Header_C", "OnChallengeSetEstablished");
 
-	Params::ChallengeInGameTreeEntry_Header_C_OnMouseEnter Parms{};
+	Params::ChallengeInGameTreeEntry_Header_C_OnChallengeSetEstablished Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
+	Parms.DisplayStyle = std::move(DisplayStyle);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -79,41 +77,43 @@ void UChallengeInGameTreeEntry_Header_C::BP_OnItemExpansionChanged(bool bIsExpan
 }
 
 
-// Function ChallengeInGameTreeEntry_Header.ChallengeInGameTreeEntry_Header_C.OnChallengeSetEstablished
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// Function ChallengeInGameTreeEntry_Header.ChallengeInGameTreeEntry_Header_C.OnMouseLeave
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FFortChallengeSetStyle           DisplayStyle                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UChallengeInGameTreeEntry_Header_C::OnChallengeSetEstablished(const struct FFortChallengeSetStyle& DisplayStyle)
+void UChallengeInGameTreeEntry_Header_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ChallengeInGameTreeEntry_Header_C", "OnChallengeSetEstablished");
+		Func = Class->GetFunction("ChallengeInGameTreeEntry_Header_C", "OnMouseLeave");
 
-	Params::ChallengeInGameTreeEntry_Header_C_OnChallengeSetEstablished Parms{};
+	Params::ChallengeInGameTreeEntry_Header_C_OnMouseLeave Parms{};
 
-	Parms.DisplayStyle = std::move(DisplayStyle);
+	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ChallengeInGameTreeEntry_Header.ChallengeInGameTreeEntry_Header_C.ExecuteUbergraph_ChallengeInGameTreeEntry_Header
-// (Final, UbergraphFunction, HasDefaults)
+// Function ChallengeInGameTreeEntry_Header.ChallengeInGameTreeEntry_Header_C.OnMouseEnter
+// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UChallengeInGameTreeEntry_Header_C::ExecuteUbergraph_ChallengeInGameTreeEntry_Header(int32 EntryPoint)
+void UChallengeInGameTreeEntry_Header_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ChallengeInGameTreeEntry_Header_C", "ExecuteUbergraph_ChallengeInGameTreeEntry_Header");
+		Func = Class->GetFunction("ChallengeInGameTreeEntry_Header_C", "OnMouseEnter");
 
-	Params::ChallengeInGameTreeEntry_Header_C_ExecuteUbergraph_ChallengeInGameTreeEntry_Header Parms{};
+	Params::ChallengeInGameTreeEntry_Header_C_OnMouseEnter Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

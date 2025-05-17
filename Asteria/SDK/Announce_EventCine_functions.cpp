@@ -17,29 +17,15 @@
 namespace SDK
 {
 
-// Function Announce_EventCine.Announce_EventCine_C.OnStateEntered_2FC6E2894145586A1A4AF69426273130
-// (BlueprintCallable, BlueprintEvent)
+// Function Announce_EventCine.Announce_EventCine_C.OnClientAnnouncementStop
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 
-void AAnnounce_EventCine_C::OnStateEntered_2FC6E2894145586A1A4AF69426273130()
+void AAnnounce_EventCine_C::OnClientAnnouncementStop()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Announce_EventCine_C", "OnStateEntered_2FC6E2894145586A1A4AF69426273130");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Announce_EventCine.Announce_EventCine_C.OnStateEntered_132DA3B4468BA1009280CFB4D4C2D0AC
-// (BlueprintCallable, BlueprintEvent)
-
-void AAnnounce_EventCine_C::OnStateEntered_132DA3B4468BA1009280CFB4D4C2D0AC()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Announce_EventCine_C", "OnStateEntered_132DA3B4468BA1009280CFB4D4C2D0AC");
+		Func = Class->GetFunction("Announce_EventCine_C", "OnClientAnnouncementStop");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -59,40 +45,12 @@ void AAnnounce_EventCine_C::OnPlayerSkippedCutscene()
 }
 
 
-// Function Announce_EventCine.Announce_EventCine_C.OnClientAnnouncementStop
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
-
-void AAnnounce_EventCine_C::OnClientAnnouncementStop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Announce_EventCine_C", "OnClientAnnouncementStop");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Announce_EventCine.Announce_EventCine_C.OnClientAnnouncementStart
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
-
-void AAnnounce_EventCine_C::OnClientAnnouncementStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Announce_EventCine_C", "OnClientAnnouncementStart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Announce_EventCine.Announce_EventCine_C.HandleClientEvent_CinematicFinishedPlaying
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          EventSource                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          EventFocus                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FFortClientEvent                 ClientEvent                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// const struct FFortClientEvent&          ClientEvent                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
 void AAnnounce_EventCine_C::HandleClientEvent_CinematicFinishedPlaying(class UObject* EventSource, class UObject* EventFocus, const struct FFortClientEvent& ClientEvent)
 {
@@ -120,6 +78,20 @@ void AAnnounce_EventCine_C::HandleAllowSkip()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Announce_EventCine_C", "HandleAllowSkip");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Announce_EventCine.Announce_EventCine_C.OnEnteredCinematicState
+// (Event, Protected, BlueprintEvent)
+
+void AAnnounce_EventCine_C::OnEnteredCinematicState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Announce_EventCine_C", "OnEnteredCinematicState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

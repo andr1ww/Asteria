@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BattleMapBaseNode.BP_BattleMapBaseNode_C
-// 0x0010 (0x0370 - 0x0360)
+// 0x0010 (0x0358 - 0x0348)
 class ABP_BattleMapBaseNode_C : public ABattleMapNode
 {
 public:
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0368(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0350(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,10 +34,6 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapBaseNode_C>();
 	}
 };
-static_assert(alignof(ABP_BattleMapBaseNode_C) == 0x000008, "Wrong alignment on ABP_BattleMapBaseNode_C");
-static_assert(sizeof(ABP_BattleMapBaseNode_C) == 0x000370, "Wrong size on ABP_BattleMapBaseNode_C");
-static_assert(offsetof(ABP_BattleMapBaseNode_C, StaticMesh) == 0x000360, "Member 'ABP_BattleMapBaseNode_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_BattleMapBaseNode_C, DefaultSceneRoot) == 0x000368, "Member 'ABP_BattleMapBaseNode_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

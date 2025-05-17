@@ -17,57 +17,112 @@
 namespace SDK
 {
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.InitCurrency
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.ExecuteUbergraph_StoreMain_OfferDetails
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UStoreMain_OfferDetails_C::ExecuteUbergraph_StoreMain_OfferDetails(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "ExecuteUbergraph_StoreMain_OfferDetails");
+
+	Params::StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_OfferDetails_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.BP_OnOfferSet
+// (Event, Public, BlueprintEvent)
+
+void UStoreMain_OfferDetails_C::BP_OnOfferSet()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "BP_OnOfferSet");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.OnPurchasingStarted
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_OfferDetails_C::OnPurchasingStarted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "OnPurchasingStarted");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.ResetPurchaseButtonText
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_OfferDetails_C::ResetPurchaseButtonText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "ResetPurchaseButtonText");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.HandleBack
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UStoreMain_OfferDetails_C::HandleBack(bool* PassThrough)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "HandleBack");
+
+	Params::StoreMain_OfferDetails_C_HandleBack Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PassThrough != nullptr)
+		*PassThrough = Parms.PassThrough;
+}
+
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.Init
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UStoreMain_OfferDetails_C::InitCurrency()
+void UStoreMain_OfferDetails_C::Init()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetails_C", "InitCurrency");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.InitStoreTypeVisuals
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UStoreMain_OfferDetails_C::InitStoreTypeVisuals()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetails_C", "InitStoreTypeVisuals");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.UnregisterInput
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UStoreMain_OfferDetails_C::UnregisterInput()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetails_C", "UnregisterInput");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.RegisterInput
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UStoreMain_OfferDetails_C::RegisterInput()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetails_C", "RegisterInput");
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "Init");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -87,132 +142,165 @@ void UStoreMain_OfferDetails_C::PopDetails()
 }
 
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.Init
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.RegisterInput
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UStoreMain_OfferDetails_C::Init()
+void UStoreMain_OfferDetails_C::RegisterInput()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetails_C", "Init");
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "RegisterInput");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.HandleBack
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.UnregisterInput
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UStoreMain_OfferDetails_C::UnregisterInput()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "UnregisterInput");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.InitStoreTypeVisuals
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UStoreMain_OfferDetails_C::InitStoreTypeVisuals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "InitStoreTypeVisuals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.InitCurrency
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UStoreMain_OfferDetails_C::InitCurrency()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "InitCurrency");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.GetCurrencyABAssetFromQuantity
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   Quantity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortMtxOfferData**               DataAsset                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UStoreMain_OfferDetails_C::HandleBack(bool* PassThrough)
+void UStoreMain_OfferDetails_C::GetCurrencyABAssetFromQuantity(int32 Quantity, class UFortMtxOfferData** DataAsset)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetails_C", "HandleBack");
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "GetCurrencyABAssetFromQuantity");
 
-	Params::StoreMain_OfferDetails_C_HandleBack Parms{};
+	Params::StoreMain_OfferDetails_C_GetCurrencyABAssetFromQuantity Parms{};
+
+	Parms.Quantity = Quantity;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (PassThrough != nullptr)
-		*PassThrough = Parms.PassThrough;
+	if (DataAsset != nullptr)
+		*DataAsset = Parms.DataAsset;
 }
 
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.HandlePurchaseComplete
-// (BlueprintCallable, BlueprintEvent)
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.IsGiftingStorefrontOffer
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    bSuccess                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-void UStoreMain_OfferDetails_C::HandlePurchaseComplete(bool bSuccess)
+bool UStoreMain_OfferDetails_C::IsGiftingStorefrontOffer()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetails_C", "HandlePurchaseComplete");
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "IsGiftingStorefrontOffer");
 
-	Params::StoreMain_OfferDetails_C_HandlePurchaseComplete Parms{};
+	Params::StoreMain_OfferDetails_C_IsGiftingStorefrontOffer Parms{};
 
-	Parms.bSuccess = bSuccess;
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.SetPurchaseButtonText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      ButtonText                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UStoreMain_OfferDetails_C::SetPurchaseButtonText(const class FText& ButtonText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "SetPurchaseButtonText");
+
+	Params::StoreMain_OfferDetails_C_SetPurchaseButtonText Parms{};
+
+	Parms.ButtonText = std::move(ButtonText);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.InitDetailAttributes
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UStoreMain_OfferDetails_C::Construct()
+void UStoreMain_OfferDetails_C::InitDetailAttributes()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetails_C", "Construct");
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "InitDetailAttributes");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.UpdatePurchaseButton
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UStoreMain_OfferDetails_C::BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+void UStoreMain_OfferDetails_C::UpdatePurchaseButton()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetails_C", "BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "UpdatePurchaseButton");
 
-	Params::StoreMain_OfferDetails_C_BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.SetupCurrencyImage
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UStoreMain_OfferDetails_C::BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+void UStoreMain_OfferDetails_C::SetupCurrencyImage()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetails_C", "BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("StoreMain_OfferDetails_C", "SetupCurrencyImage");
 
-	Params::StoreMain_OfferDetails_C_BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.ExecuteUbergraph_StoreMain_OfferDetails
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UStoreMain_OfferDetails_C::ExecuteUbergraph_StoreMain_OfferDetails(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetails_C", "ExecuteUbergraph_StoreMain_OfferDetails");
-
-	Params::StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

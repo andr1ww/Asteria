@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<USmasherStrength01_C>();
 	}
 };
-static_assert(alignof(USmasherStrength01_C) == 0x000008, "Wrong alignment on USmasherStrength01_C");
-static_assert(sizeof(USmasherStrength01_C) == 0x000068, "Wrong size on USmasherStrength01_C");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_Bandage.GA_Athena_Bandage_C
-// 0x0000 (0x0A88 - 0x0A88)
+// 0x0000 (0x0BE0 - 0x0BE0)
 class UGA_Athena_Bandage_C final : public UGA_Athena_MedConsumable_Parent_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_Bandage_C>();
 	}
 };
-static_assert(alignof(UGA_Athena_Bandage_C) == 0x000008, "Wrong alignment on UGA_Athena_Bandage_C");
-static_assert(sizeof(UGA_Athena_Bandage_C) == 0x000A88, "Wrong size on UGA_Athena_Bandage_C");
 
 }
 

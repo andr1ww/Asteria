@@ -19,41 +19,43 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventLeaderboardEntry.EventLeaderboardEntry_C
-// 0x0090 (0x0BE0 - 0x0B50)
+// 0x00B8 (0x0C68 - 0x0BB0)
 class UEventLeaderboardEntry_C final : public UFortEventLeaderboardEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Selected;                                          // 0x0B58(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_IsPlayer;                             // 0x0B60(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_Zebra;                                // 0x0B68(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_TeamLine1;                         // 0x0B70(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_TeamLine2;                         // 0x0B78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_Rank;                         // 0x0B80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_TeamSize;                     // 0x0B88(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_NationalAffiliation;                         // 0x0B90(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_OnlineStatus;                                // 0x0B98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Qualified;                                   // 0x0BA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_SelectedBG;                                  // 0x0BA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_OnlineStatus;                              // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_QualifiedContent;                          // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_Rank;                                         // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_Score;                                        // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_Team;                                         // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          isZebra;                                           // 0x0BD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          isPlayer;                                          // 0x0BD9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BB0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Selected;                                          // 0x0BB8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_IsPlayer;                             // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_Zebra;                                // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_TeamLine1;                         // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_TeamLine2;                         // 0x0BD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_Rank;                         // 0x0BE0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_TeamSize;                     // 0x0BE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_OnlineStatus;                                // 0x0BF0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Qualified;                                   // 0x0BF8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_SelectedBG;                                  // 0x0C00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_OnlineStatus;                              // 0x0C08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_QualifiedContent;                          // 0x0C10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_Rank;                                         // 0x0C18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_Rank_First;                                   // 0x0C20(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_Score;                                        // 0x0C28(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_Team;                                         // 0x0C30(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          isZebra;                                           // 0x0C38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsPlayer;                                          // 0x0C39(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C3A[0x6];                                      // 0x0C3A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UDataTable>              TEMPDatatableIdentities;                           // 0x0C40(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void SetTeamDisplayNames(class UFortEventLeaderboardEntryData* Entry_Data);
-	void SetEntryDetails(class UFortEventLeaderboardEntryData* EntryData);
-	void PreConstruct(bool IsDesignTime);
-	void OnListItemObjectSet(class UObject* ListItemObject);
-	void BP_OnSelected();
-	void BP_OnDeselected();
-	void EventStyleEntry();
-	void EventColorize();
-	void OnTeammateDisplayNameAdded(const class UFortEventLeaderboardEntryData* LeaderboardEntryData);
 	void ExecuteUbergraph_EventLeaderboardEntry(int32 EntryPoint);
+	void OnTeammateDisplayNameAdded(const class UFortEventLeaderboardEntryData* LeaderboardEntryData);
+	void EventColorize();
+	void EventStyleEntry();
+	void BP_OnDeselected();
+	void BP_OnSelected();
+	void OnListItemObjectSet(class UObject* ListItemObject);
+	void PreConstruct(bool IsDesignTime);
+	void SetEntryDetails(class UFortEventLeaderboardEntryData* EntryData);
+	void SetTeamDisplayNames(class UFortEventLeaderboardEntryData* Entry_Data);
 
 public:
 	static class UClass* StaticClass()
@@ -65,27 +67,6 @@ public:
 		return GetDefaultObjImpl<UEventLeaderboardEntry_C>();
 	}
 };
-static_assert(alignof(UEventLeaderboardEntry_C) == 0x000008, "Wrong alignment on UEventLeaderboardEntry_C");
-static_assert(sizeof(UEventLeaderboardEntry_C) == 0x000BE0, "Wrong size on UEventLeaderboardEntry_C");
-static_assert(offsetof(UEventLeaderboardEntry_C, UberGraphFrame) == 0x000B50, "Member 'UEventLeaderboardEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, Selected) == 0x000B58, "Member 'UEventLeaderboardEntry_C::Selected' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, CommonBorder_IsPlayer) == 0x000B60, "Member 'UEventLeaderboardEntry_C::CommonBorder_IsPlayer' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, CommonBorder_Zebra) == 0x000B68, "Member 'UEventLeaderboardEntry_C::CommonBorder_Zebra' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, CommonTextBlock_TeamLine1) == 0x000B70, "Member 'UEventLeaderboardEntry_C::CommonTextBlock_TeamLine1' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, CommonTextBlock_TeamLine2) == 0x000B78, "Member 'UEventLeaderboardEntry_C::CommonTextBlock_TeamLine2' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, CommonWidgetSwitcher_Rank) == 0x000B80, "Member 'UEventLeaderboardEntry_C::CommonWidgetSwitcher_Rank' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, CommonWidgetSwitcher_TeamSize) == 0x000B88, "Member 'UEventLeaderboardEntry_C::CommonWidgetSwitcher_TeamSize' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, Image_NationalAffiliation) == 0x000B90, "Member 'UEventLeaderboardEntry_C::Image_NationalAffiliation' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, Image_OnlineStatus) == 0x000B98, "Member 'UEventLeaderboardEntry_C::Image_OnlineStatus' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, Image_Qualified) == 0x000BA0, "Member 'UEventLeaderboardEntry_C::Image_Qualified' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, Image_SelectedBG) == 0x000BA8, "Member 'UEventLeaderboardEntry_C::Image_SelectedBG' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, Overlay_OnlineStatus) == 0x000BB0, "Member 'UEventLeaderboardEntry_C::Overlay_OnlineStatus' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, Overlay_QualifiedContent) == 0x000BB8, "Member 'UEventLeaderboardEntry_C::Overlay_QualifiedContent' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, Text_Rank) == 0x000BC0, "Member 'UEventLeaderboardEntry_C::Text_Rank' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, Text_Score) == 0x000BC8, "Member 'UEventLeaderboardEntry_C::Text_Score' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, Text_Team) == 0x000BD0, "Member 'UEventLeaderboardEntry_C::Text_Team' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, isZebra) == 0x000BD8, "Member 'UEventLeaderboardEntry_C::isZebra' has a wrong offset!");
-static_assert(offsetof(UEventLeaderboardEntry_C, isPlayer) == 0x000BD9, "Member 'UEventLeaderboardEntry_C::isPlayer' has a wrong offset!");
 
 }
 

@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SpeechBubbleWidget.SpeechBubbleWidget_C
-// 0x0010 (0x0248 - 0x0238)
+// 0x0010 (0x0298 - 0x0288)
 class USpeechBubbleWidget_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       BubbleText;                                        // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       BubbleText;                                        // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_SpeechBubbleWidget(int32 EntryPoint);
@@ -39,10 +39,6 @@ public:
 		return GetDefaultObjImpl<USpeechBubbleWidget_C>();
 	}
 };
-static_assert(alignof(USpeechBubbleWidget_C) == 0x000008, "Wrong alignment on USpeechBubbleWidget_C");
-static_assert(sizeof(USpeechBubbleWidget_C) == 0x000248, "Wrong size on USpeechBubbleWidget_C");
-static_assert(offsetof(USpeechBubbleWidget_C, UberGraphFrame) == 0x000238, "Member 'USpeechBubbleWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USpeechBubbleWidget_C, BubbleText) == 0x000240, "Member 'USpeechBubbleWidget_C::BubbleText' has a wrong offset!");
 
 }
 

@@ -10,58 +10,65 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Athena_PlayerController.Athena_PlayerController_C
-// 0x0090 (0x3070 - 0x2FE0)
+// 0x00D0 (0x3AE0 - 0x3A10)
 class AAthena_PlayerController_C final : public AFortPlayerControllerAthena
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2FE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        ListenerOverride;                                  // 0x2FE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        VictoryRoyaleAudio;                                // 0x2FF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        VictoryRoyaleMusic;                                // 0x2FF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             VictoryRoyaleMenuMusicAsset;                       // 0x3000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  BladeWielderTag;                                   // 0x3008(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	EFortItemType                                 InteractingItemType;                               // 0x3028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3029[0x7];                                     // 0x3029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  InteractionTags;                                   // 0x3030(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMulticastInlineDelegate<void(class APawn* PossessedPawn)> PawnPossessedDispatcher;                           // 0x3050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	float                                         PermissionRecheckTime;                             // 0x3060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3064[0x4];                                     // 0x3064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           PermissionsRecheckTimerHandle;                     // 0x3068(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x3A10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UUnderwaterAudioComponent_C*            UnderwaterAudioComponent;                          // 0x3A18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        ListenerOverride;                                  // 0x3A20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        VictoryRoyaleAudio;                                // 0x3A28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        VictoryRoyaleMusic1;                               // 0x3A30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             CurrentMusic;                                      // 0x3A38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  BladeWielderTag;                                   // 0x3A40(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	EFortItemType                                 InteractingItemType;                               // 0x3A60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A61[0x7];                                     // 0x3A61(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  InteractionTags;                                   // 0x3A68(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void(class APawn* PossessedPawn)> PawnPossessedDispatcher;              // 0x3A88(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FTimerHandle                           PermissionsRecheckTimerHandle;                     // 0x3A98(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         LobbyMusicOnVictoryDelayTime;                      // 0x3AA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3AA4[0x4];                                     // 0x3AA4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundMix*                              CamUnderwaterSoundMix;                             // 0x3AA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             CamUnderwaterLoopSound;                            // 0x3AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CamUnderwaterAudio;                                // 0x3AB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             CamUnderwaterStartSound;                           // 0x3AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             CamUnderwaterStopSound;                            // 0x3AC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        VictoryRoyaleMusic2;                               // 0x3AD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool Is_Creative_Mode();
-	void SetupPermissionRecheckTimer();
-	void LeftAllVolumes(bool* bLeftVolumes);
-	void UserConstructionScript();
-	void OnLoaded_F82CC70840156DFAFAF85EB0D93E5E2D(class UObject* Loaded);
-	void OnReady_B4409EAB4038578B1EBA9DB1586489B9(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void Start_Victory_Royale_Music();
-	void OnMusicPackLoaded(const class UAthenaMusicPackItemDefinition* NewMusicPack);
-	void OnLeaveVolume(class AFortVolume* Volume);
-	void OnEnterVolume(class AFortVolume* Volume);
-	void HandlePermissions(class AFortVolume* Volume);
-	void GrantItem(TSoftObjectPtr<class UFortWorldItemDefinition> Item);
-	void RevokeItem(TSoftObjectPtr<class UFortWorldItemDefinition> Item);
-	void PermissionsChanged();
-	void OnLocalInteraction(class AActor* ReceivingActor);
-	void RemoveItem();
-	void RevokeCreativeTool();
-	void ReactToPawnPossession(class APawn* PossessedPawn);
-	void PlayWinEffects(class APawn* FinisherPawn, const class UFortWeaponItemDefinition* FinishingWeapon, EDeathCause DeathCause, bool bAudioOnly);
-	void ReceiveBeginPlay();
-	void ReplicateRotationScaleReset();
 	void ExecuteUbergraph_Athena_PlayerController(int32 EntryPoint);
+	void Change_Music(class USoundBase* New_Music, float StartTime);
+	void Handle_Victory_Royale_Audio(bool Audio_Only);
+	void K2_OnEnterVolume(class AFortVolume* Volume);
+	void K2_OnLeaveVolume(class AFortVolume* Volume);
+	void ReplicateRotationScaleReset();
+	void ReactToPawnPossession(class APawn* PossessedPawn);
+	void ReceiveBeginPlay();
+	void PlayWinEffects(class APawn* FinisherPawn, const class UFortWeaponItemDefinition* FinishingWeapon, EDeathCause DeathCause, bool bAudioOnly);
+	void RemoveItem();
+	void OnLocalInteraction(class AActor* ReceivingActor);
+	void RevokeItem(TSoftObjectPtr<class UFortWorldItemDefinition> Item);
+	void GrantItem(TSoftObjectPtr<class UFortWorldItemDefinition> Item);
+	void OnMusicPackLoaded(const class UAthenaMusicPackItemDefinition* NewMusicPack, float StartTimeOffset);
+	void Start_Victory_Royale_Music();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void OnReady_B4409EAB4038578B1EBA9DB1586489B9(class AFortGameStateAthena* GameState, const class UFortPlaylist* Playlist, const struct FGameplayTagContainer& PlaylistContextTags);
+	void OnLoaded_F82CC70840156DFAFAF85EB0D93E5E2D(class UObject* Loaded);
+	void UserConstructionScript();
+	void LeftAllVolumes(bool* bLeftVolumes);
+	void SetupPermissionRecheckTimer();
+	bool Is_Creative_Mode();
+	void FadeAudioComponents(class UAudioComponent* NewMusicComponent, class UAudioComponent* PreviousMusicComponent, class USoundBase* Music, float StartTime);
 
 public:
 	static class UClass* StaticClass()
@@ -73,19 +80,6 @@ public:
 		return GetDefaultObjImpl<AAthena_PlayerController_C>();
 	}
 };
-static_assert(alignof(AAthena_PlayerController_C) == 0x000008, "Wrong alignment on AAthena_PlayerController_C");
-static_assert(sizeof(AAthena_PlayerController_C) == 0x003070, "Wrong size on AAthena_PlayerController_C");
-static_assert(offsetof(AAthena_PlayerController_C, UberGraphFrame) == 0x002FE0, "Member 'AAthena_PlayerController_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AAthena_PlayerController_C, ListenerOverride) == 0x002FE8, "Member 'AAthena_PlayerController_C::ListenerOverride' has a wrong offset!");
-static_assert(offsetof(AAthena_PlayerController_C, VictoryRoyaleAudio) == 0x002FF0, "Member 'AAthena_PlayerController_C::VictoryRoyaleAudio' has a wrong offset!");
-static_assert(offsetof(AAthena_PlayerController_C, VictoryRoyaleMusic) == 0x002FF8, "Member 'AAthena_PlayerController_C::VictoryRoyaleMusic' has a wrong offset!");
-static_assert(offsetof(AAthena_PlayerController_C, VictoryRoyaleMenuMusicAsset) == 0x003000, "Member 'AAthena_PlayerController_C::VictoryRoyaleMenuMusicAsset' has a wrong offset!");
-static_assert(offsetof(AAthena_PlayerController_C, BladeWielderTag) == 0x003008, "Member 'AAthena_PlayerController_C::BladeWielderTag' has a wrong offset!");
-static_assert(offsetof(AAthena_PlayerController_C, InteractingItemType) == 0x003028, "Member 'AAthena_PlayerController_C::InteractingItemType' has a wrong offset!");
-static_assert(offsetof(AAthena_PlayerController_C, InteractionTags) == 0x003030, "Member 'AAthena_PlayerController_C::InteractionTags' has a wrong offset!");
-static_assert(offsetof(AAthena_PlayerController_C, PawnPossessedDispatcher) == 0x003050, "Member 'AAthena_PlayerController_C::PawnPossessedDispatcher' has a wrong offset!");
-static_assert(offsetof(AAthena_PlayerController_C, PermissionRecheckTime) == 0x003060, "Member 'AAthena_PlayerController_C::PermissionRecheckTime' has a wrong offset!");
-static_assert(offsetof(AAthena_PlayerController_C, PermissionsRecheckTimerHandle) == 0x003068, "Member 'AAthena_PlayerController_C::PermissionsRecheckTimerHandle' has a wrong offset!");
 
 }
 

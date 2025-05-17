@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PBWA_BG_Floor.PBWA_BG_Floor_C
-// 0x0000 (0x0AE0 - 0x0AE0)
+// 0x0000 (0x0B70 - 0x0B70)
 class APBWA_BG_Floor_C final : public ABuildingFloor
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<APBWA_BG_Floor_C>();
 	}
 };
-static_assert(alignof(APBWA_BG_Floor_C) == 0x000008, "Wrong alignment on APBWA_BG_Floor_C");
-static_assert(sizeof(APBWA_BG_Floor_C) == 0x000AE0, "Wrong size on APBWA_BG_Floor_C");
 
 }
 

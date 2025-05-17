@@ -35,8 +35,8 @@ void UIconTabButton_C::Play_Hover_Sound()
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    ChangeColorWhenSelected                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FSlateColor                      SelectedColor                                          (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FSlateColor                      UnselectedColor                                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateColor&               SelectedColor                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateColor&               UnselectedColor                                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UIconTabButton_C::SetChangeIconColorWhenSelected(bool ChangeColorWhenSelected, const struct FSlateColor& SelectedColor, const struct FSlateColor& UnselectedColor)
 {
@@ -114,7 +114,7 @@ void UIconTabButton_C::ShowText()
 // Function IconTabButton.IconTabButton_C.Set Icon
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSlateBrush                      IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UIconTabButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
 {
@@ -134,7 +134,7 @@ void UIconTabButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
 // Function IconTabButton.IconTabButton_C.Set Text
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UIconTabButton_C::Set_Text(const class FText& ButtonText_0)
 {
@@ -174,7 +174,7 @@ void UIconTabButton_C::PreConstruct(bool IsDesignTime)
 // Function IconTabButton.IconTabButton_C.SetTabLabelInfo
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FFortTabButtonLabelInfo          TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FFortTabButtonLabelInfo&   TabLabelInfo                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UIconTabButton_C::SetTabLabelInfo(const struct FFortTabButtonLabelInfo& TabLabelInfo)
 {

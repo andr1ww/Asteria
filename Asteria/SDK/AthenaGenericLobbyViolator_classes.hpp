@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaGenericLobbyViolator.AthenaGenericLobbyViolator_C
-// 0x0010 (0x0240 - 0x0230)
+// 0x0010 (0x0270 - 0x0260)
 class UAthenaGenericLobbyViolator_C final : public UUserWidget
 {
 public:
-	class UCommonTextBlock*                       ModeName;                                          // 0x0230(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       SubText;                                           // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ModeName;                                          // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SubText;                                           // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void SetGamemodeName(const class FText& Name_0, const class FText& SubText_0);
@@ -37,10 +37,6 @@ public:
 		return GetDefaultObjImpl<UAthenaGenericLobbyViolator_C>();
 	}
 };
-static_assert(alignof(UAthenaGenericLobbyViolator_C) == 0x000008, "Wrong alignment on UAthenaGenericLobbyViolator_C");
-static_assert(sizeof(UAthenaGenericLobbyViolator_C) == 0x000240, "Wrong size on UAthenaGenericLobbyViolator_C");
-static_assert(offsetof(UAthenaGenericLobbyViolator_C, ModeName) == 0x000230, "Member 'UAthenaGenericLobbyViolator_C::ModeName' has a wrong offset!");
-static_assert(offsetof(UAthenaGenericLobbyViolator_C, SubText) == 0x000238, "Member 'UAthenaGenericLobbyViolator_C::SubText' has a wrong offset!");
 
 }
 

@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Rotator_Normal_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_Rotator_Normal_C) == 0x000008, "Wrong alignment on UButtonStyle_Rotator_Normal_C");
-static_assert(sizeof(UButtonStyle_Rotator_Normal_C) == 0x000570, "Wrong size on UButtonStyle_Rotator_Normal_C");
 
 }
 

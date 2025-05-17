@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_PlayerHealthDamage_CameraLensEffect.B_PlayerHealthDamage_CameraLensEffect_C
-// 0x0010 (0x0310 - 0x0300)
+// 0x0010 (0x02F0 - 0x02E0)
 #pragma pack(push, 0x1)
 class alignas(0x10) AB_PlayerHealthDamage_CameraLensEffect_C : public AEmitterCameraLensEffectBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_B_PlayerHealthDamage_CameraLensEffect(int32 EntryPoint);
@@ -40,9 +40,6 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(AB_PlayerHealthDamage_CameraLensEffect_C) == 0x000010, "Wrong alignment on AB_PlayerHealthDamage_CameraLensEffect_C");
-static_assert(sizeof(AB_PlayerHealthDamage_CameraLensEffect_C) == 0x000310, "Wrong size on AB_PlayerHealthDamage_CameraLensEffect_C");
-static_assert(offsetof(AB_PlayerHealthDamage_CameraLensEffect_C, UberGraphFrame) == 0x000300, "Member 'AB_PlayerHealthDamage_CameraLensEffect_C::UberGraphFrame' has a wrong offset!");
 
 }
 

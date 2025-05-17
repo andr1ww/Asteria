@@ -10,69 +10,67 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "GameSubCatalog_structs.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaDirectAcquisitionOfferPurchasedOverlay.AthenaDirectAcquisitionOfferPurchasedOverlay_C
-// 0x00F0 (0x05C8 - 0x04D8)
-class UAthenaDirectAcquisitionOfferPurchasedOverlay_C final : public UFortStoreFrontOfferDetailsWidgetBase
+// 0x0190 (0x08E8 - 0x0758)
+class UAthenaDirectAcquisitionOfferPurchasedOverlay_C final : public UFortPurchaseOverlayModal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Purchased___Bundle_Item____FAST;                   // 0x04E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Successfully_Purchased___Bundle_Item_;             // 0x04E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Bundle_Blur__out_;                                 // 0x04F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Bundle_Blur__loop_;                                // 0x04F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Purchased___Bundle_Item_;                          // 0x0500(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Purchased_;                                        // 0x0508(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                BorderItemNAme;                                    // 0x0510(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HBoxMiniCards1;                                    // 0x0518(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HBoxMiniCards2;                                    // 0x0520(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HBoxMiniCards3;                                    // 0x0528(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HBoxMiniCards4;                                    // 0x0530(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HBoxSuccessfullyPurchased;                         // 0x0538(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ImageRarityFlare;                                  // 0x0540(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortMultiSizeItemCard*                 ItemCard;                                          // 0x0548(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlayMainItem;                                   // 0x0550(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 RarityGlow;                                        // 0x0558(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBoxMiniBundleItems;                            // 0x0560(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextName;                                          // 0x0568(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         QuantityPurchased;                                 // 0x0570(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	int32                                         Bundle_Item_Index;                                 // 0x0574(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FPurchasedItemInfo>             Purchased_Bundle_Items;                            // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn)
-	int32                                         BundleMiniGrid___Column;                           // 0x0588(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BundleMiniGrid___Row;                              // 0x058C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortReceivedItemLootInfo              Fort_Received_Loot_Info_Struct;                    // 0x0590(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<class UBundleItemMiniCardWidget_C*>    Bundle_Mini_Item_Cards;                            // 0x05B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0758(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       SuccessfullyRefundedBundleItem;                    // 0x0760(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Refunded;                                          // 0x0768(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Purchased___Bundle_Item____FAST;                   // 0x0770(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Successfully_Purchased___Bundle_Item_;             // 0x0778(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Bundle_Blur__out_;                                 // 0x0780(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Bundle_Blur__loop_;                                // 0x0788(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Purchased___Bundle_Item_;                          // 0x0790(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Purchased_;                                        // 0x0798(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                BorderItemNAme;                                    // 0x07A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HBoxMiniCards1;                                    // 0x07A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HBoxMiniCards2;                                    // 0x07B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HBoxMiniCards3;                                    // 0x07B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HBoxMiniCards4;                                    // 0x07C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ImageRarityFlare;                                  // 0x07C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortCosmeticItemCard_C*                ItemCard;                                          // 0x07D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               OverlayMainItem;                                   // 0x07D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 RarityGlow;                                        // 0x07E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBoxMiniBundleItems;                            // 0x07E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextName;                                          // 0x07F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int32                                         Bundle_Item_Index;                                 // 0x07F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BundleMiniGrid___Column;                           // 0x07FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BundleMiniGrid___Row;                              // 0x0800(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_804[0x4];                                      // 0x0804(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortReceivedItemLootInfo              Fort_Received_Loot_Info_Struct;                    // 0x0808(0x00C8)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class UBundleItemMiniCardWidget_C*>    Bundle_Mini_Item_Cards;                            // 0x08D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          BundleBlurPlayed;                                  // 0x08E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void Mini_Bundle_Item_Location(int32 Bundle_Item_Index_0, class UHorizontalBox** HBox_Row);
-	void Bundle_Item_Anim_Speed(float* Speed);
-	void Get_Bundle_Info_from_Item_Def(class UFortAccountItemDefinition* Item_Definition, struct FBundledItemInfo* Bundled_Item_Info, bool* bFoundItem);
-	void PopScreen();
-	void HandleBack(bool* PassThrough);
-	void UpdateFromOffer(class UFortAccountItemDefinition* Item_Definition);
-	void OnOfferSet();
-	void OnActivated();
-	void Construct();
-	void WidgetAnimationEvt_Purchased__K2Node_WidgetAnimationEvent_0();
-	void Remove_Widget_and_Return_to_Last_Menu();
-	void Show_Next_Item();
-	void BundleBlurOut();
-	void WidgetAnimationEvt_Purchased___Bundle_Item__K2Node_WidgetAnimationEvent_2();
-	void WidgetAnimationEvt_Purchased___Bundle_Item____FAST_K2Node_WidgetAnimationEvent_1();
-	void Init_Bundle_Layout();
-	void Populate_Bundle_Mini_Cards();
-	void Show_Bundle_Mini_Item_Card();
 	void ExecuteUbergraph_AthenaDirectAcquisitionOfferPurchasedOverlay(int32 EntryPoint);
+	void Destruct();
+	void BP_OnOfferSet();
+	void InitBundleLayout();
+	void WidgetAnimationEvt_Refunded_K2Node_WidgetAnimationEvent_3();
+	void Show_Bundle_Mini_Item_Card();
+	void Populate_Bundle_Mini_Cards();
+	void WidgetAnimationEvt_Purchased___Bundle_Item____FAST_K2Node_WidgetAnimationEvent_1();
+	void WidgetAnimationEvt_Purchased___Bundle_Item__K2Node_WidgetAnimationEvent_2();
+	void BundleBlurOut();
+	void Show_Next_Item();
+	void WidgetAnimationEvt_Purchased__K2Node_WidgetAnimationEvent_0();
+	void UpdateFromOffer(class UFortAccountItemDefinition* Item_Definition);
+	void HandleBack(bool* PassThrough);
+	void Get_Bundle_Info_from_Item_Def(class UFortAccountItemDefinition* Item_Definition, struct FBundledItemInfo* Bundled_Item_Info, bool* bFoundItem);
+	void Bundle_Item_Anim_Speed(float* Speed);
+	void Mini_Bundle_Item_Location(int32 Bundle_Item_Index_0, class UHorizontalBox** HBox_Row);
 
 public:
 	static class UClass* StaticClass()
@@ -84,34 +82,6 @@ public:
 		return GetDefaultObjImpl<UAthenaDirectAcquisitionOfferPurchasedOverlay_C>();
 	}
 };
-static_assert(alignof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C) == 0x000008, "Wrong alignment on UAthenaDirectAcquisitionOfferPurchasedOverlay_C");
-static_assert(sizeof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C) == 0x0005C8, "Wrong size on UAthenaDirectAcquisitionOfferPurchasedOverlay_C");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, UberGraphFrame) == 0x0004D8, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, Purchased___Bundle_Item____FAST) == 0x0004E0, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::Purchased___Bundle_Item____FAST' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, Successfully_Purchased___Bundle_Item_) == 0x0004E8, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::Successfully_Purchased___Bundle_Item_' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, Bundle_Blur__out_) == 0x0004F0, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::Bundle_Blur__out_' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, Bundle_Blur__loop_) == 0x0004F8, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::Bundle_Blur__loop_' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, Purchased___Bundle_Item_) == 0x000500, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::Purchased___Bundle_Item_' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, Purchased_) == 0x000508, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::Purchased_' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, BorderItemNAme) == 0x000510, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::BorderItemNAme' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, HBoxMiniCards1) == 0x000518, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::HBoxMiniCards1' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, HBoxMiniCards2) == 0x000520, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::HBoxMiniCards2' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, HBoxMiniCards3) == 0x000528, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::HBoxMiniCards3' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, HBoxMiniCards4) == 0x000530, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::HBoxMiniCards4' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, HBoxSuccessfullyPurchased) == 0x000538, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::HBoxSuccessfullyPurchased' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, ImageRarityFlare) == 0x000540, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::ImageRarityFlare' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, ItemCard) == 0x000548, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::ItemCard' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, OverlayMainItem) == 0x000550, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::OverlayMainItem' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, RarityGlow) == 0x000558, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::RarityGlow' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, SizeBoxMiniBundleItems) == 0x000560, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::SizeBoxMiniBundleItems' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, TextName) == 0x000568, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::TextName' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, QuantityPurchased) == 0x000570, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::QuantityPurchased' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, Bundle_Item_Index) == 0x000574, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::Bundle_Item_Index' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, Purchased_Bundle_Items) == 0x000578, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::Purchased_Bundle_Items' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, BundleMiniGrid___Column) == 0x000588, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::BundleMiniGrid___Column' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, BundleMiniGrid___Row) == 0x00058C, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::BundleMiniGrid___Row' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, Fort_Received_Loot_Info_Struct) == 0x000590, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::Fort_Received_Loot_Info_Struct' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOfferPurchasedOverlay_C, Bundle_Mini_Item_Cards) == 0x0005B8, "Member 'UAthenaDirectAcquisitionOfferPurchasedOverlay_C::Bundle_Mini_Item_Cards' has a wrong offset!");
 
 }
 

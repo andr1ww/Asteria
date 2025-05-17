@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass StoreSelectionPopup.StoreSelectionPopup_C
-// 0x0020 (0x0368 - 0x0348)
+// 0x0020 (0x0498 - 0x0478)
 class UStoreSelectionPopup_C final : public UFortMtxStoreSelectionPopup
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class ULightbox_C*                            Lightbox;                                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       StorePrompt_Header;                                // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x0480(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 SpeedLines;                                        // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       StorePrompt_Header;                                // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnActivated();
 	void ExecuteUbergraph_StoreSelectionPopup(int32 EntryPoint);
+	void BP_OnActivated();
 
 public:
 	static class UClass* StaticClass()
@@ -41,12 +41,6 @@ public:
 		return GetDefaultObjImpl<UStoreSelectionPopup_C>();
 	}
 };
-static_assert(alignof(UStoreSelectionPopup_C) == 0x000008, "Wrong alignment on UStoreSelectionPopup_C");
-static_assert(sizeof(UStoreSelectionPopup_C) == 0x000368, "Wrong size on UStoreSelectionPopup_C");
-static_assert(offsetof(UStoreSelectionPopup_C, UberGraphFrame) == 0x000348, "Member 'UStoreSelectionPopup_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UStoreSelectionPopup_C, Intro) == 0x000350, "Member 'UStoreSelectionPopup_C::Intro' has a wrong offset!");
-static_assert(offsetof(UStoreSelectionPopup_C, Lightbox) == 0x000358, "Member 'UStoreSelectionPopup_C::Lightbox' has a wrong offset!");
-static_assert(offsetof(UStoreSelectionPopup_C, StorePrompt_Header) == 0x000360, "Member 'UStoreSelectionPopup_C::StorePrompt_Header' has a wrong offset!");
 
 }
 

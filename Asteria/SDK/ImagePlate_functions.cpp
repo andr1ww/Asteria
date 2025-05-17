@@ -39,7 +39,7 @@ void UImagePlateComponent::OnRenderTextureChanged()
 // Function ImagePlate.ImagePlateComponent.SetImagePlate
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FImagePlateParameters            Plate_0                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FImagePlateParameters&     Plate_0                                                (Parm, NoDestructor, NativeAccessSpecifierPublic)
 
 void UImagePlateComponent::SetImagePlate(const struct FImagePlateParameters& Plate_0)
 {

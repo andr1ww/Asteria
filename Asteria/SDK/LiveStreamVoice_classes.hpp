@@ -18,9 +18,12 @@ namespace SDK
 {
 
 // Class LiveStreamVoice.LiveStreamVoiceChannel
-// 0x0000 (0x0080 - 0x0080)
-class ULiveStreamVoiceChannel final : public UVoiceChannel
+// 0x0010 (0x0080 - 0x0070)
+class ULiveStreamVoiceChannel final : public UChannel
 {
+public:
+	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -31,15 +34,15 @@ public:
 		return GetDefaultObjImpl<ULiveStreamVoiceChannel>();
 	}
 };
-static_assert(alignof(ULiveStreamVoiceChannel) == 0x000008, "Wrong alignment on ULiveStreamVoiceChannel");
-static_assert(sizeof(ULiveStreamVoiceChannel) == 0x000080, "Wrong size on ULiveStreamVoiceChannel");
 
 // Class LiveStreamVoice.LiveStreamVoiceSubsystem
-// 0x0018 (0x0048 - 0x0030)
+// 0x0030 (0x0060 - 0x0030)
 class ULiveStreamVoiceSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	struct FVoiceSettings                         PlaybackSettings;                                  // 0x0030(0x0018)(NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVoiceSettings                         PlaybackSettings;                                  // 0x0038(0x0018)(NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClearVoiceSettings();
@@ -56,9 +59,6 @@ public:
 		return GetDefaultObjImpl<ULiveStreamVoiceSubsystem>();
 	}
 };
-static_assert(alignof(ULiveStreamVoiceSubsystem) == 0x000008, "Wrong alignment on ULiveStreamVoiceSubsystem");
-static_assert(sizeof(ULiveStreamVoiceSubsystem) == 0x000048, "Wrong size on ULiveStreamVoiceSubsystem");
-static_assert(offsetof(ULiveStreamVoiceSubsystem, PlaybackSettings) == 0x000030, "Member 'ULiveStreamVoiceSubsystem::PlaybackSettings' has a wrong offset!");
 
 }
 

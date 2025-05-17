@@ -19,16 +19,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass SunDirectionandColorSet.SunDirectionandColorSet_C
-// 0x0048 (0x0288 - 0x0240)
+// 0x0048 (0x0268 - 0x0220)
 class ASunDirectionandColorSet_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        Scene;                                             // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UArrowComponent*                        Arrow;                                             // 0x0250(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                SunLightVector;                                    // 0x0258(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SunLightColor;                                     // 0x0264(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMaterialParameterInfo                 Material_COllection;                               // 0x0274(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        Scene;                                             // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UArrowComponent*                        Arrow;                                             // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                SunLightVector;                                    // 0x0238(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SunLightColor;                                     // 0x0244(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMaterialParameterInfo                 Material_COllection;                               // 0x0254(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
@@ -46,14 +46,6 @@ public:
 		return GetDefaultObjImpl<ASunDirectionandColorSet_C>();
 	}
 };
-static_assert(alignof(ASunDirectionandColorSet_C) == 0x000008, "Wrong alignment on ASunDirectionandColorSet_C");
-static_assert(sizeof(ASunDirectionandColorSet_C) == 0x000288, "Wrong size on ASunDirectionandColorSet_C");
-static_assert(offsetof(ASunDirectionandColorSet_C, UberGraphFrame) == 0x000240, "Member 'ASunDirectionandColorSet_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ASunDirectionandColorSet_C, Scene) == 0x000248, "Member 'ASunDirectionandColorSet_C::Scene' has a wrong offset!");
-static_assert(offsetof(ASunDirectionandColorSet_C, Arrow) == 0x000250, "Member 'ASunDirectionandColorSet_C::Arrow' has a wrong offset!");
-static_assert(offsetof(ASunDirectionandColorSet_C, SunLightVector) == 0x000258, "Member 'ASunDirectionandColorSet_C::SunLightVector' has a wrong offset!");
-static_assert(offsetof(ASunDirectionandColorSet_C, SunLightColor) == 0x000264, "Member 'ASunDirectionandColorSet_C::SunLightColor' has a wrong offset!");
-static_assert(offsetof(ASunDirectionandColorSet_C, Material_COllection) == 0x000274, "Member 'ASunDirectionandColorSet_C::Material_COllection' has a wrong offset!");
 
 }
 

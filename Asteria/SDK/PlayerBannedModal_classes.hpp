@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_structs.hpp"
 #include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
@@ -20,36 +20,37 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PlayerBannedModal.PlayerBannedModal_C
-// 0x0110 (0x0458 - 0x0348)
+// 0x00F8 (0x0570 - 0x0478)
 class UPlayerBannedModal_C final : public UFortPlayerBanned
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             BanMessage;                                        // 0x0350(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      CloseButton;                                       // 0x0358(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       disclaimer;                                        // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Severe;                                      // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULightbox_C*                            Lightbox;                                          // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TimeRemaining;                                     // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Title;                                             // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Triangles_1;                                       // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Triangles_2;                                       // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Triangles_3;                                       // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_SeverityImage;                      // 0x03A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          AckSucceeded;                                      // 0x03A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   BanInformation;                                    // 0x03B0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMulticastInlineDelegate<void()>              OnCloseSucceeded;                                  // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	int32                                         TryCount;                                          // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsWarning;                                        // 0x03DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3DD[0x3];                                      // 0x03DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMcpBanInfo                            McpBanInfo;                                        // 0x03E0(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   BanType;                                           // 0x0438(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bIsCompetitiveBan;                                 // 0x0450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             BanMessage;                                        // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      CloseButton;                                       // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       disclaimer;                                        // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Severe;                                      // 0x0498(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULightbox_C*                            Lightbox;                                          // 0x04A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TimeRemaining;                                     // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Title;                                             // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Triangles_1;                                       // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Triangles_2;                                       // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Triangles_3;                                       // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_SeverityImage;                      // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          AckSucceeded;                                      // 0x04D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4D9[0x7];                                      // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   BanInformation;                                    // 0x04E0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void()>              OnCloseSucceeded;                                  // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	int32                                         TryCount;                                          // 0x0508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsWarning;                                        // 0x050C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_50D[0x3];                                      // 0x050D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMcpBanInfo                            McpBanInfo;                                        // 0x0510(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   BanType;                                           // 0x0550(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bIsCompetitiveBan;                                 // 0x0568(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsTeamingWithCheaterBan;                          // 0x0569(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_PlayerBannedModal(int32 EntryPoint);
-	void OnActivated();
+	void BP_OnActivated();
 	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void UpdateText(const class FText& Title_0, const class FText& Content);
 	void DisableButton(bool DisableButton_0);
@@ -69,28 +70,6 @@ public:
 		return GetDefaultObjImpl<UPlayerBannedModal_C>();
 	}
 };
-static_assert(alignof(UPlayerBannedModal_C) == 0x000008, "Wrong alignment on UPlayerBannedModal_C");
-static_assert(sizeof(UPlayerBannedModal_C) == 0x000458, "Wrong size on UPlayerBannedModal_C");
-static_assert(offsetof(UPlayerBannedModal_C, UberGraphFrame) == 0x000348, "Member 'UPlayerBannedModal_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, BanMessage) == 0x000350, "Member 'UPlayerBannedModal_C::BanMessage' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, CloseButton) == 0x000358, "Member 'UPlayerBannedModal_C::CloseButton' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, disclaimer) == 0x000360, "Member 'UPlayerBannedModal_C::disclaimer' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, Image_Severe) == 0x000368, "Member 'UPlayerBannedModal_C::Image_Severe' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, Lightbox) == 0x000370, "Member 'UPlayerBannedModal_C::Lightbox' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, TimeRemaining) == 0x000378, "Member 'UPlayerBannedModal_C::TimeRemaining' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, Title) == 0x000380, "Member 'UPlayerBannedModal_C::Title' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, Triangles_1) == 0x000388, "Member 'UPlayerBannedModal_C::Triangles_1' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, Triangles_2) == 0x000390, "Member 'UPlayerBannedModal_C::Triangles_2' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, Triangles_3) == 0x000398, "Member 'UPlayerBannedModal_C::Triangles_3' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, WidgetSwitcher_SeverityImage) == 0x0003A0, "Member 'UPlayerBannedModal_C::WidgetSwitcher_SeverityImage' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, AckSucceeded) == 0x0003A8, "Member 'UPlayerBannedModal_C::AckSucceeded' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, BanInformation) == 0x0003B0, "Member 'UPlayerBannedModal_C::BanInformation' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, OnCloseSucceeded) == 0x0003C8, "Member 'UPlayerBannedModal_C::OnCloseSucceeded' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, TryCount) == 0x0003D8, "Member 'UPlayerBannedModal_C::TryCount' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, bIsWarning) == 0x0003DC, "Member 'UPlayerBannedModal_C::bIsWarning' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, McpBanInfo) == 0x0003E0, "Member 'UPlayerBannedModal_C::McpBanInfo' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, BanType) == 0x000438, "Member 'UPlayerBannedModal_C::BanType' has a wrong offset!");
-static_assert(offsetof(UPlayerBannedModal_C, bIsCompetitiveBan) == 0x000450, "Member 'UPlayerBannedModal_C::bIsCompetitiveBan' has a wrong offset!");
 
 }
 

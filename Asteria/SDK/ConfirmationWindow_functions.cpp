@@ -17,245 +17,82 @@
 namespace SDK
 {
 
-// Function ConfirmationWindow.ConfirmationWindow_C.ExecuteUbergraph_ConfirmationWindow
-// (Final, UbergraphFunction)
+// Function ConfirmationWindow.ConfirmationWindow_C.HandleConfigureDeclineButton
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UCommonButton*                    New_Button                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UConfirmationWindow_C::ExecuteUbergraph_ConfirmationWindow(int32 EntryPoint)
+void UConfirmationWindow_C::HandleConfigureDeclineButton(class UCommonButton* New_Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "ExecuteUbergraph_ConfirmationWindow");
+		Func = Class->GetFunction("ConfirmationWindow_C", "HandleConfigureDeclineButton");
 
-	Params::ConfirmationWindow_C_ExecuteUbergraph_ConfirmationWindow Parms{};
+	Params::ConfirmationWindow_C_HandleConfigureDeclineButton Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.New_Button = New_Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ConfirmationWindow.ConfirmationWindow_C.BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
+// Function ConfirmationWindow.ConfirmationWindow_C.ConfigureConfirmationButton
+// (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FConfirmationDialogAction& Action                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    bSimpleConfirm                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UConfirmationWindow_C::BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+void UConfirmationWindow_C::ConfigureConfirmationButton(class UCommonButton* Button, const struct FConfirmationDialogAction& Action, bool bSimpleConfirm)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("ConfirmationWindow_C", "ConfigureConfirmationButton");
 
-	Params::ConfirmationWindow_C_BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+	Params::ConfirmationWindow_C_ConfigureConfirmationButton Parms{};
 
 	Parms.Button = Button;
+	Parms.Action = std::move(Action);
+	Parms.bSimpleConfirm = bSimpleConfirm;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ConfirmationWindow.ConfirmationWindow_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UConfirmationWindow_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UConfirmationWindow_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "PreConstruct");
-
-	Params::ConfirmationWindow_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.OnBeginOutro
-// (Event, Public, BlueprintEvent)
-
-void UConfirmationWindow_C::OnBeginOutro()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "OnBeginOutro");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.OnBeginIntro
-// (Event, Public, BlueprintEvent)
-
-void UConfirmationWindow_C::OnBeginIntro()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "OnBeginIntro");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.HandleOutroEnded
-// (BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::HandleOutroEnded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "HandleOutroEnded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.HandleIntroEnded
-// (BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::HandleIntroEnded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "HandleIntroEnded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UConfirmationWindow_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.SetDescription
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortDialogDescription_NUI       NewDescription                                         (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-
-void UConfirmationWindow_C::SetDescription(const struct FFortDialogDescription_NUI& NewDescription)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "SetDescription");
-
-	Params::ConfirmationWindow_C_SetDescription Parms{};
-
-	Parms.NewDescription = std::move(NewDescription);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::Initialize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "Initialize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.AddConfirmButtons
+// Function ConfirmationWindow.ConfirmationWindow_C.PlayShowSound
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UConfirmationWindow_C::AddConfirmButtons()
+void UConfirmationWindow_C::PlayShowSound()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "AddConfirmButtons");
+		Func = Class->GetFunction("ConfirmationWindow_C", "PlayShowSound");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ConfirmationWindow.ConfirmationWindow_C.AddDeclineButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::AddDeclineButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "AddDeclineButton");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.DeclineActionClicked
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function ConfirmationWindow.ConfirmationWindow_C.TapToClose
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UConfirmationWindow_C::DeclineActionClicked(class UCommonButton* Button)
+struct FEventReply UConfirmationWindow_C::TapToClose(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "DeclineActionClicked");
+		Func = Class->GetFunction("ConfirmationWindow_C", "TapToClose");
 
-	Params::ConfirmationWindow_C_DeclineActionClicked Parms{};
+	Params::ConfirmationWindow_C_TapToClose Parms{};
 
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.IsSimpleConfirmAction
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool UConfirmationWindow_C::IsSimpleConfirmAction()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "IsSimpleConfirmAction");
-
-	Params::ConfirmationWindow_C_IsSimpleConfirmAction Parms{};
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -263,65 +100,17 @@ bool UConfirmationWindow_C::IsSimpleConfirmAction()
 }
 
 
-// Function ConfirmationWindow.ConfirmationWindow_C.ConfirmActionClicked
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ConfirmationWindow.ConfirmationWindow_C.SetupNonInteractiveContent
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UConfirmationWindow_C::ConfirmActionClicked(class UCommonButton* Button)
+void UConfirmationWindow_C::SetupNonInteractiveContent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "ConfirmActionClicked");
+		Func = Class->GetFunction("ConfirmationWindow_C", "SetupNonInteractiveContent");
 
-	Params::ConfirmationWindow_C_ConfirmActionClicked Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.HasAnyConfirmAction
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool UConfirmationWindow_C::HasAnyConfirmAction()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "HasAnyConfirmAction");
-
-	Params::ConfirmationWindow_C_HasAnyConfirmAction Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.AddSingleConfirmButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FConfirmationDialogAction        ConfirmDialogAction                                    (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                                    UseInputAction                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UConfirmationWindow_C::AddSingleConfirmButton(const struct FConfirmationDialogAction& ConfirmDialogAction, bool UseInputAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "AddSingleConfirmButton");
-
-	Params::ConfirmationWindow_C_AddSingleConfirmButton Parms{};
-
-	Parms.ConfirmDialogAction = std::move(ConfirmDialogAction);
-	Parms.UseInputAction = UseInputAction;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -350,313 +139,103 @@ struct FDataTableRowHandle UConfirmationWindow_C::GetInputAction(class FName Row
 }
 
 
-// Function ConfirmationWindow.ConfirmationWindow_C.GetResultName
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UIconTextButton_C*                ConfirmButton                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             ResultName                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ConfirmationWindow.ConfirmationWindow_C.Initialize
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UConfirmationWindow_C::GetResultName(class UIconTextButton_C* ConfirmButton, class FName* ResultName)
+void UConfirmationWindow_C::Initialize()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "GetResultName");
-
-	Params::ConfirmationWindow_C_GetResultName Parms{};
-
-	Parms.ConfirmButton = ConfirmButton;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ResultName != nullptr)
-		*ResultName = Parms.ResultName;
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.KillCurrentConfirmation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::KillCurrentConfirmation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "KillCurrentConfirmation");
+		Func = Class->GetFunction("ConfirmationWindow_C", "Initialize");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ConfirmationWindow.ConfirmationWindow_C.Deinitialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function ConfirmationWindow.ConfirmationWindow_C.OnBeginOutro
+// (Event, Protected, BlueprintEvent)
 
-void UConfirmationWindow_C::Deinitialize()
+void UConfirmationWindow_C::OnBeginOutro()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "Deinitialize");
+		Func = Class->GetFunction("ConfirmationWindow_C", "OnBeginOutro");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ConfirmationWindow.ConfirmationWindow_C.SetupMainIcon
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::SetupMainIcon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "SetupMainIcon");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.SetupTitleAndDescription
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::SetupTitleAndDescription()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "SetupTitleAndDescription");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.SetupLeft
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::SetupLeft()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "SetupLeft");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.Set Hover Description
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button_to_Hover                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UConfirmationWindow_C::Set_Hover_Description(class UCommonButton* Button_to_Hover)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "Set Hover Description");
-
-	Params::ConfirmationWindow_C_Set_Hover_Description Parms{};
-
-	Parms.Button_to_Hover = Button_to_Hover;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.GetLatentActionWaitHandle
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FFortDialogExternalLatentActionHandleLatentActionHandle                                     (Parm, OutParm, NoDestructor)
-
-void UConfirmationWindow_C::GetLatentActionWaitHandle(struct FFortDialogExternalLatentActionHandle* LatentActionHandle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "GetLatentActionWaitHandle");
-
-	Params::ConfirmationWindow_C_GetLatentActionWaitHandle Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (LatentActionHandle != nullptr)
-		*LatentActionHandle = std::move(Parms.LatentActionHandle);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.StopWaitingForLatentAction
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::StopWaitingForLatentAction()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "StopWaitingForLatentAction");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.OnWaitForExternalLatentAction
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortDialogExternalLatentActionHandleLatentActionHandle                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-
-void UConfirmationWindow_C::OnWaitForExternalLatentAction(const struct FFortDialogExternalLatentActionHandle& LatentActionHandle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "OnWaitForExternalLatentAction");
-
-	Params::ConfirmationWindow_C_OnWaitForExternalLatentAction Parms{};
-
-	Parms.LatentActionHandle = std::move(LatentActionHandle);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.ClickButtonIfBot
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::ClickButtonIfBot()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "ClickButtonIfBot");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.SetupNonInteractiveContent
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::SetupNonInteractiveContent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "SetupNonInteractiveContent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.SetupLeftAdditionalContent
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::SetupLeftAdditionalContent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "SetupLeftAdditionalContent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.SetupAdditionalContent
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::SetupAdditionalContent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "SetupAdditionalContent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.CloseConfirmation
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::CloseConfirmation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "CloseConfirmation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.CenterFirstButton
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::CenterFirstButton()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "CenterFirstButton");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.TapToClose
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-struct FEventReply UConfirmationWindow_C::TapToClose(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "TapToClose");
-
-	Params::ConfirmationWindow_C_TapToClose Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.PlayShowSound
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UConfirmationWindow_C::PlayShowSound()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "PlayShowSound");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ConfirmationWindow.ConfirmationWindow_C.CancelActionClicked
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function ConfirmationWindow.ConfirmationWindow_C.ConfigureDeclineButton
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UConfirmationWindow_C::CancelActionClicked(class UCommonButton* Button)
+void UConfirmationWindow_C::ConfigureDeclineButton(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ConfirmationWindow_C", "CancelActionClicked");
+		Func = Class->GetFunction("ConfirmationWindow_C", "ConfigureDeclineButton");
 
-	Params::ConfirmationWindow_C_CancelActionClicked Parms{};
+	Params::ConfirmationWindow_C_ConfigureDeclineButton Parms{};
 
 	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ConfirmationWindow.ConfirmationWindow_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UConfirmationWindow_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ConfirmationWindow_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ConfirmationWindow.ConfirmationWindow_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UConfirmationWindow_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ConfirmationWindow_C", "BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+
+	Params::ConfirmationWindow_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ConfirmationWindow.ConfirmationWindow_C.ExecuteUbergraph_ConfirmationWindow
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UConfirmationWindow_C::ExecuteUbergraph_ConfirmationWindow(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ConfirmationWindow_C", "ExecuteUbergraph_ConfirmationWindow");
+
+	Params::ConfirmationWindow_C_ExecuteUbergraph_ConfirmationWindow Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

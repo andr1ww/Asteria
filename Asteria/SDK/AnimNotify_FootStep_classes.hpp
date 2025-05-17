@@ -36,9 +36,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_FootStep_C>();
 	}
 };
-static_assert(alignof(UAnimNotify_FootStep_C) == 0x000008, "Wrong alignment on UAnimNotify_FootStep_C");
-static_assert(sizeof(UAnimNotify_FootStep_C) == 0x000040, "Wrong size on UAnimNotify_FootStep_C");
-static_assert(offsetof(UAnimNotify_FootStep_C, FootIndex) == 0x000038, "Member 'UAnimNotify_FootStep_C::FootIndex' has a wrong offset!");
 
 }
 

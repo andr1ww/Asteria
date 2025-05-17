@@ -12,24 +12,34 @@
 
 #include "Engine_structs.hpp"
 #include "B_Prj_Athena_Grenade_Base_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C
-// 0x0010 (0x0768 - 0x0758)
+// 0x0028 (0x0968 - 0x0940)
 class AB_Prj_Athena_FragGrenade_C final : public AB_Prj_Athena_Grenade_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_Prj_Athena_FragGrenade_C;         // 0x0758(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBP_SurfaceTypeSoundComponent_C*        BP_SurfaceTypeSoundComponent;                      // 0x0760(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_Prj_Athena_FragGrenade_C;         // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBP_SurfaceTypeSoundComponent_C*        BP_SurfaceTypeSoundComponent;                      // 0x0948(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         PreExploWarning_PreExplo_E5859FFE443F57359EC2C0AB73DFA4CD; // 0x0950(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            PreExploWarning__Direction_E5859FFE443F57359EC2C0AB73DFA4CD; // 0x0954(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_955[0x3];                                      // 0x0955(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     PreExploWarning;                                   // 0x0958(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           FeedbackCue;                                       // 0x0960(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_Prj_Athena_FragGrenade(int32 EntryPoint);
+	void Pre_Explo_Audio_Tell();
+	void ReceiveBeginPlay();
 	void OnBounce(const struct FHitResult& Hit);
 	void OnExploded(const TArray<class AActor*>& HitActors, const TArray<struct FHitResult>& HitResults);
 	void FuseEnded();
+	void PreExploWarning__UpdateFunc();
+	void PreExploWarning__FinishedFunc();
 
 public:
 	static class UClass* StaticClass()
@@ -41,10 +51,6 @@ public:
 		return GetDefaultObjImpl<AB_Prj_Athena_FragGrenade_C>();
 	}
 };
-static_assert(alignof(AB_Prj_Athena_FragGrenade_C) == 0x000008, "Wrong alignment on AB_Prj_Athena_FragGrenade_C");
-static_assert(sizeof(AB_Prj_Athena_FragGrenade_C) == 0x000768, "Wrong size on AB_Prj_Athena_FragGrenade_C");
-static_assert(offsetof(AB_Prj_Athena_FragGrenade_C, UberGraphFrame_B_Prj_Athena_FragGrenade_C) == 0x000758, "Member 'AB_Prj_Athena_FragGrenade_C::UberGraphFrame_B_Prj_Athena_FragGrenade_C' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_FragGrenade_C, BP_SurfaceTypeSoundComponent) == 0x000760, "Member 'AB_Prj_Athena_FragGrenade_C::BP_SurfaceTypeSoundComponent' has a wrong offset!");
 
 }
 

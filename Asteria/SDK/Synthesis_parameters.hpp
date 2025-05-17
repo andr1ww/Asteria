@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "Synthesis_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
@@ -17,38 +18,69 @@
 namespace SDK::Params
 {
 
-// Function Synthesis.SourceEffectEnvelopeFollowerPreset.RegisterEnvelopeFollowerListener
-// 0x0008 (0x0008 - 0x0000)
-struct SourceEffectEnvelopeFollowerPreset_RegisterEnvelopeFollowerListener final
+// Function Synthesis.SourceEffectChorusPreset.SetDepthModulator
+// 0x0010 (0x0010 - 0x0000)
+struct SourceEffectChorusPreset_SetDepthModulator final
 {
 public:
-	class UEnvelopeFollowerListener*              EnvelopeFollowerListener;                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoundModulationDestinationSettings    InModulatorSettings;                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectEnvelopeFollowerPreset_RegisterEnvelopeFollowerListener) == 0x000008, "Wrong alignment on SourceEffectEnvelopeFollowerPreset_RegisterEnvelopeFollowerListener");
-static_assert(sizeof(SourceEffectEnvelopeFollowerPreset_RegisterEnvelopeFollowerListener) == 0x000008, "Wrong size on SourceEffectEnvelopeFollowerPreset_RegisterEnvelopeFollowerListener");
-static_assert(offsetof(SourceEffectEnvelopeFollowerPreset_RegisterEnvelopeFollowerListener, EnvelopeFollowerListener) == 0x000000, "Member 'SourceEffectEnvelopeFollowerPreset_RegisterEnvelopeFollowerListener::EnvelopeFollowerListener' has a wrong offset!");
 
-// Function Synthesis.SourceEffectEnvelopeFollowerPreset.SetSettings
-// 0x000C (0x000C - 0x0000)
-struct SourceEffectEnvelopeFollowerPreset_SetSettings final
+// Function Synthesis.SourceEffectChorusPreset.SetDryModulator
+// 0x0010 (0x0010 - 0x0000)
+struct SourceEffectChorusPreset_SetDryModulator final
 {
 public:
-	struct FSourceEffectEnvelopeFollowerSettings  InSettings;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSoundModulationDestinationSettings    InModulatorSettings;                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectEnvelopeFollowerPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectEnvelopeFollowerPreset_SetSettings");
-static_assert(sizeof(SourceEffectEnvelopeFollowerPreset_SetSettings) == 0x00000C, "Wrong size on SourceEffectEnvelopeFollowerPreset_SetSettings");
-static_assert(offsetof(SourceEffectEnvelopeFollowerPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectEnvelopeFollowerPreset_SetSettings::InSettings' has a wrong offset!");
 
-// Function Synthesis.SourceEffectEnvelopeFollowerPreset.UnregisterEnvelopeFollowerListener
-// 0x0008 (0x0008 - 0x0000)
-struct SourceEffectEnvelopeFollowerPreset_UnregisterEnvelopeFollowerListener final
+// Function Synthesis.SourceEffectChorusPreset.SetFeedbackModulator
+// 0x0010 (0x0010 - 0x0000)
+struct SourceEffectChorusPreset_SetFeedbackModulator final
 {
 public:
-	class UEnvelopeFollowerListener*              EnvelopeFollowerListener;                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoundModulationDestinationSettings    InModulatorSettings;                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectEnvelopeFollowerPreset_UnregisterEnvelopeFollowerListener) == 0x000008, "Wrong alignment on SourceEffectEnvelopeFollowerPreset_UnregisterEnvelopeFollowerListener");
-static_assert(sizeof(SourceEffectEnvelopeFollowerPreset_UnregisterEnvelopeFollowerListener) == 0x000008, "Wrong size on SourceEffectEnvelopeFollowerPreset_UnregisterEnvelopeFollowerListener");
-static_assert(offsetof(SourceEffectEnvelopeFollowerPreset_UnregisterEnvelopeFollowerListener, EnvelopeFollowerListener) == 0x000000, "Member 'SourceEffectEnvelopeFollowerPreset_UnregisterEnvelopeFollowerListener::EnvelopeFollowerListener' has a wrong offset!");
+
+// Function Synthesis.SourceEffectChorusPreset.SetFrequencyModulator
+// 0x0010 (0x0010 - 0x0000)
+struct SourceEffectChorusPreset_SetFrequencyModulator final
+{
+public:
+	struct FSoundModulationDestinationSettings    InModulatorSettings;                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SourceEffectChorusPreset.SetSettings
+// 0x0090 (0x0090 - 0x0000)
+struct SourceEffectChorusPreset_SetSettings final
+{
+public:
+	struct FSourceEffectChorusSettings            InSettings;                                        // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SourceEffectChorusPreset.SetSpreadModulator
+// 0x0010 (0x0010 - 0x0000)
+struct SourceEffectChorusPreset_SetSpreadModulator final
+{
+public:
+	struct FSoundModulationDestinationSettings    InModulatorSettings;                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SourceEffectChorusPreset.SetWetModulator
+// 0x0010 (0x0010 - 0x0000)
+struct SourceEffectChorusPreset_SetWetModulator final
+{
+public:
+	struct FSoundModulationDestinationSettings    InModulatorSettings;                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings
+// 0x0028 (0x0028 - 0x0000)
+struct SourceEffectDynamicsProcessorPreset_SetSettings final
+{
+public:
+	struct FSourceEffectDynamicsProcessorSettings InSettings;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
 
 // Function Synthesis.ModularSynthLibrary.AddModularSynthPresetToBankAsset
 // 0x00F8 (0x00F8 - 0x0000)
@@ -59,11 +91,6 @@ public:
 	struct FModularSynthPreset                    Preset;                                            // 0x0008(0x00E0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FString                                 PresetName;                                        // 0x00E8(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthLibrary_AddModularSynthPresetToBankAsset) == 0x000008, "Wrong alignment on ModularSynthLibrary_AddModularSynthPresetToBankAsset");
-static_assert(sizeof(ModularSynthLibrary_AddModularSynthPresetToBankAsset) == 0x0000F8, "Wrong size on ModularSynthLibrary_AddModularSynthPresetToBankAsset");
-static_assert(offsetof(ModularSynthLibrary_AddModularSynthPresetToBankAsset, InBank) == 0x000000, "Member 'ModularSynthLibrary_AddModularSynthPresetToBankAsset::InBank' has a wrong offset!");
-static_assert(offsetof(ModularSynthLibrary_AddModularSynthPresetToBankAsset, Preset) == 0x000008, "Member 'ModularSynthLibrary_AddModularSynthPresetToBankAsset::Preset' has a wrong offset!");
-static_assert(offsetof(ModularSynthLibrary_AddModularSynthPresetToBankAsset, PresetName) == 0x0000E8, "Member 'ModularSynthLibrary_AddModularSynthPresetToBankAsset::PresetName' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.CreatePatch
 // 0x0020 (0x0020 - 0x0000)
@@ -72,17 +99,11 @@ struct ModularSynthComponent_CreatePatch final
 public:
 	ESynth1PatchSource                            PatchSource;                                       // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSynth1PatchCable>              PatchCables;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FSynth1PatchCable>              PatchCables;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableByDefault;                                  // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPatchId                               ReturnValue;                                       // 0x001C(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_CreatePatch) == 0x000008, "Wrong alignment on ModularSynthComponent_CreatePatch");
-static_assert(sizeof(ModularSynthComponent_CreatePatch) == 0x000020, "Wrong size on ModularSynthComponent_CreatePatch");
-static_assert(offsetof(ModularSynthComponent_CreatePatch, PatchSource) == 0x000000, "Member 'ModularSynthComponent_CreatePatch::PatchSource' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_CreatePatch, PatchCables) == 0x000008, "Member 'ModularSynthComponent_CreatePatch::PatchCables' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_CreatePatch, bEnableByDefault) == 0x000018, "Member 'ModularSynthComponent_CreatePatch::bEnableByDefault' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_CreatePatch, ReturnValue) == 0x00001C, "Member 'ModularSynthComponent_CreatePatch::ReturnValue' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.NoteOff
 // 0x0008 (0x0008 - 0x0000)
@@ -94,11 +115,6 @@ public:
 	bool                                          bKillAllNotes;                                     // 0x0005(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ModularSynthComponent_NoteOff) == 0x000004, "Wrong alignment on ModularSynthComponent_NoteOff");
-static_assert(sizeof(ModularSynthComponent_NoteOff) == 0x000008, "Wrong size on ModularSynthComponent_NoteOff");
-static_assert(offsetof(ModularSynthComponent_NoteOff, Note) == 0x000000, "Member 'ModularSynthComponent_NoteOff::Note' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_NoteOff, bAllNotesOff) == 0x000004, "Member 'ModularSynthComponent_NoteOff::bAllNotesOff' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_NoteOff, bKillAllNotes) == 0x000005, "Member 'ModularSynthComponent_NoteOff::bKillAllNotes' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.NoteOn
 // 0x000C (0x000C - 0x0000)
@@ -109,11 +125,6 @@ public:
 	int32                                         Velocity;                                          // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Duration;                                          // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_NoteOn) == 0x000004, "Wrong alignment on ModularSynthComponent_NoteOn");
-static_assert(sizeof(ModularSynthComponent_NoteOn) == 0x00000C, "Wrong size on ModularSynthComponent_NoteOn");
-static_assert(offsetof(ModularSynthComponent_NoteOn, Note) == 0x000000, "Member 'ModularSynthComponent_NoteOn::Note' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_NoteOn, Velocity) == 0x000004, "Member 'ModularSynthComponent_NoteOn::Velocity' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_NoteOn, Duration) == 0x000008, "Member 'ModularSynthComponent_NoteOn::Duration' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetAttackTime
 // 0x0004 (0x0004 - 0x0000)
@@ -122,9 +133,6 @@ struct ModularSynthComponent_SetAttackTime final
 public:
 	float                                         AttackTimeMsec;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetAttackTime) == 0x000004, "Wrong alignment on ModularSynthComponent_SetAttackTime");
-static_assert(sizeof(ModularSynthComponent_SetAttackTime) == 0x000004, "Wrong size on ModularSynthComponent_SetAttackTime");
-static_assert(offsetof(ModularSynthComponent_SetAttackTime, AttackTimeMsec) == 0x000000, "Member 'ModularSynthComponent_SetAttackTime::AttackTimeMsec' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetChorusDepth
 // 0x0004 (0x0004 - 0x0000)
@@ -133,9 +141,6 @@ struct ModularSynthComponent_SetChorusDepth final
 public:
 	float                                         Depth;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetChorusDepth) == 0x000004, "Wrong alignment on ModularSynthComponent_SetChorusDepth");
-static_assert(sizeof(ModularSynthComponent_SetChorusDepth) == 0x000004, "Wrong size on ModularSynthComponent_SetChorusDepth");
-static_assert(offsetof(ModularSynthComponent_SetChorusDepth, Depth) == 0x000000, "Member 'ModularSynthComponent_SetChorusDepth::Depth' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetChorusEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -144,9 +149,6 @@ struct ModularSynthComponent_SetChorusEnabled final
 public:
 	bool                                          EnableChorus;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetChorusEnabled) == 0x000001, "Wrong alignment on ModularSynthComponent_SetChorusEnabled");
-static_assert(sizeof(ModularSynthComponent_SetChorusEnabled) == 0x000001, "Wrong size on ModularSynthComponent_SetChorusEnabled");
-static_assert(offsetof(ModularSynthComponent_SetChorusEnabled, EnableChorus) == 0x000000, "Member 'ModularSynthComponent_SetChorusEnabled::EnableChorus' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetChorusFeedback
 // 0x0004 (0x0004 - 0x0000)
@@ -155,9 +157,6 @@ struct ModularSynthComponent_SetChorusFeedback final
 public:
 	float                                         Feedback;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetChorusFeedback) == 0x000004, "Wrong alignment on ModularSynthComponent_SetChorusFeedback");
-static_assert(sizeof(ModularSynthComponent_SetChorusFeedback) == 0x000004, "Wrong size on ModularSynthComponent_SetChorusFeedback");
-static_assert(offsetof(ModularSynthComponent_SetChorusFeedback, Feedback) == 0x000000, "Member 'ModularSynthComponent_SetChorusFeedback::Feedback' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetChorusFrequency
 // 0x0004 (0x0004 - 0x0000)
@@ -166,9 +165,6 @@ struct ModularSynthComponent_SetChorusFrequency final
 public:
 	float                                         Frequency;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetChorusFrequency) == 0x000004, "Wrong alignment on ModularSynthComponent_SetChorusFrequency");
-static_assert(sizeof(ModularSynthComponent_SetChorusFrequency) == 0x000004, "Wrong size on ModularSynthComponent_SetChorusFrequency");
-static_assert(offsetof(ModularSynthComponent_SetChorusFrequency, Frequency) == 0x000000, "Member 'ModularSynthComponent_SetChorusFrequency::Frequency' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetDecayTime
 // 0x0004 (0x0004 - 0x0000)
@@ -177,9 +173,6 @@ struct ModularSynthComponent_SetDecayTime final
 public:
 	float                                         DecayTimeMsec;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetDecayTime) == 0x000004, "Wrong alignment on ModularSynthComponent_SetDecayTime");
-static_assert(sizeof(ModularSynthComponent_SetDecayTime) == 0x000004, "Wrong size on ModularSynthComponent_SetDecayTime");
-static_assert(offsetof(ModularSynthComponent_SetDecayTime, DecayTimeMsec) == 0x000000, "Member 'ModularSynthComponent_SetDecayTime::DecayTimeMsec' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetEnableLegato
 // 0x0001 (0x0001 - 0x0000)
@@ -188,9 +181,6 @@ struct ModularSynthComponent_SetEnableLegato final
 public:
 	bool                                          LegatoEnabled;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetEnableLegato) == 0x000001, "Wrong alignment on ModularSynthComponent_SetEnableLegato");
-static_assert(sizeof(ModularSynthComponent_SetEnableLegato) == 0x000001, "Wrong size on ModularSynthComponent_SetEnableLegato");
-static_assert(offsetof(ModularSynthComponent_SetEnableLegato, LegatoEnabled) == 0x000000, "Member 'ModularSynthComponent_SetEnableLegato::LegatoEnabled' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetEnablePatch
 // 0x0008 (0x0008 - 0x0000)
@@ -202,11 +192,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ModularSynthComponent_SetEnablePatch) == 0x000004, "Wrong alignment on ModularSynthComponent_SetEnablePatch");
-static_assert(sizeof(ModularSynthComponent_SetEnablePatch) == 0x000008, "Wrong size on ModularSynthComponent_SetEnablePatch");
-static_assert(offsetof(ModularSynthComponent_SetEnablePatch, PatchId) == 0x000000, "Member 'ModularSynthComponent_SetEnablePatch::PatchId' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetEnablePatch, bIsEnabled) == 0x000004, "Member 'ModularSynthComponent_SetEnablePatch::bIsEnabled' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetEnablePatch, ReturnValue) == 0x000005, "Member 'ModularSynthComponent_SetEnablePatch::ReturnValue' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetEnablePolyphony
 // 0x0001 (0x0001 - 0x0000)
@@ -215,9 +200,6 @@ struct ModularSynthComponent_SetEnablePolyphony final
 public:
 	bool                                          bEnablePolyphony;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetEnablePolyphony) == 0x000001, "Wrong alignment on ModularSynthComponent_SetEnablePolyphony");
-static_assert(sizeof(ModularSynthComponent_SetEnablePolyphony) == 0x000001, "Wrong size on ModularSynthComponent_SetEnablePolyphony");
-static_assert(offsetof(ModularSynthComponent_SetEnablePolyphony, bEnablePolyphony) == 0x000000, "Member 'ModularSynthComponent_SetEnablePolyphony::bEnablePolyphony' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetEnableRetrigger
 // 0x0001 (0x0001 - 0x0000)
@@ -226,9 +208,6 @@ struct ModularSynthComponent_SetEnableRetrigger final
 public:
 	bool                                          RetriggerEnabled;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetEnableRetrigger) == 0x000001, "Wrong alignment on ModularSynthComponent_SetEnableRetrigger");
-static_assert(sizeof(ModularSynthComponent_SetEnableRetrigger) == 0x000001, "Wrong size on ModularSynthComponent_SetEnableRetrigger");
-static_assert(offsetof(ModularSynthComponent_SetEnableRetrigger, RetriggerEnabled) == 0x000000, "Member 'ModularSynthComponent_SetEnableRetrigger::RetriggerEnabled' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetEnableUnison
 // 0x0001 (0x0001 - 0x0000)
@@ -237,9 +216,6 @@ struct ModularSynthComponent_SetEnableUnison final
 public:
 	bool                                          EnableUnison;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetEnableUnison) == 0x000001, "Wrong alignment on ModularSynthComponent_SetEnableUnison");
-static_assert(sizeof(ModularSynthComponent_SetEnableUnison) == 0x000001, "Wrong size on ModularSynthComponent_SetEnableUnison");
-static_assert(offsetof(ModularSynthComponent_SetEnableUnison, EnableUnison) == 0x000000, "Member 'ModularSynthComponent_SetEnableUnison::EnableUnison' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetFilterAlgorithm
 // 0x0001 (0x0001 - 0x0000)
@@ -248,9 +224,6 @@ struct ModularSynthComponent_SetFilterAlgorithm final
 public:
 	ESynthFilterAlgorithm                         FilterAlgorithm;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetFilterAlgorithm) == 0x000001, "Wrong alignment on ModularSynthComponent_SetFilterAlgorithm");
-static_assert(sizeof(ModularSynthComponent_SetFilterAlgorithm) == 0x000001, "Wrong size on ModularSynthComponent_SetFilterAlgorithm");
-static_assert(offsetof(ModularSynthComponent_SetFilterAlgorithm, FilterAlgorithm) == 0x000000, "Member 'ModularSynthComponent_SetFilterAlgorithm::FilterAlgorithm' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetFilterFrequency
 // 0x0004 (0x0004 - 0x0000)
@@ -259,9 +232,6 @@ struct ModularSynthComponent_SetFilterFrequency final
 public:
 	float                                         FilterFrequencyHz;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetFilterFrequency) == 0x000004, "Wrong alignment on ModularSynthComponent_SetFilterFrequency");
-static_assert(sizeof(ModularSynthComponent_SetFilterFrequency) == 0x000004, "Wrong size on ModularSynthComponent_SetFilterFrequency");
-static_assert(offsetof(ModularSynthComponent_SetFilterFrequency, FilterFrequencyHz) == 0x000000, "Member 'ModularSynthComponent_SetFilterFrequency::FilterFrequencyHz' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetFilterFrequencyMod
 // 0x0004 (0x0004 - 0x0000)
@@ -270,9 +240,6 @@ struct ModularSynthComponent_SetFilterFrequencyMod final
 public:
 	float                                         FilterFrequencyHz;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetFilterFrequencyMod) == 0x000004, "Wrong alignment on ModularSynthComponent_SetFilterFrequencyMod");
-static_assert(sizeof(ModularSynthComponent_SetFilterFrequencyMod) == 0x000004, "Wrong size on ModularSynthComponent_SetFilterFrequencyMod");
-static_assert(offsetof(ModularSynthComponent_SetFilterFrequencyMod, FilterFrequencyHz) == 0x000000, "Member 'ModularSynthComponent_SetFilterFrequencyMod::FilterFrequencyHz' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetFilterQ
 // 0x0004 (0x0004 - 0x0000)
@@ -281,9 +248,6 @@ struct ModularSynthComponent_SetFilterQ final
 public:
 	float                                         FilterQ;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetFilterQ) == 0x000004, "Wrong alignment on ModularSynthComponent_SetFilterQ");
-static_assert(sizeof(ModularSynthComponent_SetFilterQ) == 0x000004, "Wrong size on ModularSynthComponent_SetFilterQ");
-static_assert(offsetof(ModularSynthComponent_SetFilterQ, FilterQ) == 0x000000, "Member 'ModularSynthComponent_SetFilterQ::FilterQ' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetFilterQMod
 // 0x0004 (0x0004 - 0x0000)
@@ -292,9 +256,6 @@ struct ModularSynthComponent_SetFilterQMod final
 public:
 	float                                         FilterQ;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetFilterQMod) == 0x000004, "Wrong alignment on ModularSynthComponent_SetFilterQMod");
-static_assert(sizeof(ModularSynthComponent_SetFilterQMod) == 0x000004, "Wrong size on ModularSynthComponent_SetFilterQMod");
-static_assert(offsetof(ModularSynthComponent_SetFilterQMod, FilterQ) == 0x000000, "Member 'ModularSynthComponent_SetFilterQMod::FilterQ' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetFilterType
 // 0x0001 (0x0001 - 0x0000)
@@ -303,9 +264,6 @@ struct ModularSynthComponent_SetFilterType final
 public:
 	ESynthFilterType                              FilterType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetFilterType) == 0x000001, "Wrong alignment on ModularSynthComponent_SetFilterType");
-static_assert(sizeof(ModularSynthComponent_SetFilterType) == 0x000001, "Wrong size on ModularSynthComponent_SetFilterType");
-static_assert(offsetof(ModularSynthComponent_SetFilterType, FilterType) == 0x000000, "Member 'ModularSynthComponent_SetFilterType::FilterType' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetGainDb
 // 0x0004 (0x0004 - 0x0000)
@@ -314,9 +272,6 @@ struct ModularSynthComponent_SetGainDb final
 public:
 	float                                         GainDb;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetGainDb) == 0x000004, "Wrong alignment on ModularSynthComponent_SetGainDb");
-static_assert(sizeof(ModularSynthComponent_SetGainDb) == 0x000004, "Wrong size on ModularSynthComponent_SetGainDb");
-static_assert(offsetof(ModularSynthComponent_SetGainDb, GainDb) == 0x000000, "Member 'ModularSynthComponent_SetGainDb::GainDb' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetLFOFrequency
 // 0x0008 (0x0008 - 0x0000)
@@ -326,10 +281,6 @@ public:
 	int32                                         LFOIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FrequencyHz;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetLFOFrequency) == 0x000004, "Wrong alignment on ModularSynthComponent_SetLFOFrequency");
-static_assert(sizeof(ModularSynthComponent_SetLFOFrequency) == 0x000008, "Wrong size on ModularSynthComponent_SetLFOFrequency");
-static_assert(offsetof(ModularSynthComponent_SetLFOFrequency, LFOIndex) == 0x000000, "Member 'ModularSynthComponent_SetLFOFrequency::LFOIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetLFOFrequency, FrequencyHz) == 0x000004, "Member 'ModularSynthComponent_SetLFOFrequency::FrequencyHz' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetLFOFrequencyMod
 // 0x0008 (0x0008 - 0x0000)
@@ -339,10 +290,6 @@ public:
 	int32                                         LFOIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FrequencyModHz;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetLFOFrequencyMod) == 0x000004, "Wrong alignment on ModularSynthComponent_SetLFOFrequencyMod");
-static_assert(sizeof(ModularSynthComponent_SetLFOFrequencyMod) == 0x000008, "Wrong size on ModularSynthComponent_SetLFOFrequencyMod");
-static_assert(offsetof(ModularSynthComponent_SetLFOFrequencyMod, LFOIndex) == 0x000000, "Member 'ModularSynthComponent_SetLFOFrequencyMod::LFOIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetLFOFrequencyMod, FrequencyModHz) == 0x000004, "Member 'ModularSynthComponent_SetLFOFrequencyMod::FrequencyModHz' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetLFOGain
 // 0x0008 (0x0008 - 0x0000)
@@ -352,10 +299,6 @@ public:
 	int32                                         LFOIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Gain;                                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetLFOGain) == 0x000004, "Wrong alignment on ModularSynthComponent_SetLFOGain");
-static_assert(sizeof(ModularSynthComponent_SetLFOGain) == 0x000008, "Wrong size on ModularSynthComponent_SetLFOGain");
-static_assert(offsetof(ModularSynthComponent_SetLFOGain, LFOIndex) == 0x000000, "Member 'ModularSynthComponent_SetLFOGain::LFOIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetLFOGain, Gain) == 0x000004, "Member 'ModularSynthComponent_SetLFOGain::Gain' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetLFOGainMod
 // 0x0008 (0x0008 - 0x0000)
@@ -365,10 +308,6 @@ public:
 	int32                                         LFOIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         GainMod;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetLFOGainMod) == 0x000004, "Wrong alignment on ModularSynthComponent_SetLFOGainMod");
-static_assert(sizeof(ModularSynthComponent_SetLFOGainMod) == 0x000008, "Wrong size on ModularSynthComponent_SetLFOGainMod");
-static_assert(offsetof(ModularSynthComponent_SetLFOGainMod, LFOIndex) == 0x000000, "Member 'ModularSynthComponent_SetLFOGainMod::LFOIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetLFOGainMod, GainMod) == 0x000004, "Member 'ModularSynthComponent_SetLFOGainMod::GainMod' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetLFOMode
 // 0x0008 (0x0008 - 0x0000)
@@ -379,10 +318,6 @@ public:
 	ESynthLFOMode                                 LFOMode;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ModularSynthComponent_SetLFOMode) == 0x000004, "Wrong alignment on ModularSynthComponent_SetLFOMode");
-static_assert(sizeof(ModularSynthComponent_SetLFOMode) == 0x000008, "Wrong size on ModularSynthComponent_SetLFOMode");
-static_assert(offsetof(ModularSynthComponent_SetLFOMode, LFOIndex) == 0x000000, "Member 'ModularSynthComponent_SetLFOMode::LFOIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetLFOMode, LFOMode) == 0x000004, "Member 'ModularSynthComponent_SetLFOMode::LFOMode' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetLFOPatch
 // 0x0008 (0x0008 - 0x0000)
@@ -393,10 +328,6 @@ public:
 	ESynthLFOPatchType                            LFOPatchType;                                      // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ModularSynthComponent_SetLFOPatch) == 0x000004, "Wrong alignment on ModularSynthComponent_SetLFOPatch");
-static_assert(sizeof(ModularSynthComponent_SetLFOPatch) == 0x000008, "Wrong size on ModularSynthComponent_SetLFOPatch");
-static_assert(offsetof(ModularSynthComponent_SetLFOPatch, LFOIndex) == 0x000000, "Member 'ModularSynthComponent_SetLFOPatch::LFOIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetLFOPatch, LFOPatchType) == 0x000004, "Member 'ModularSynthComponent_SetLFOPatch::LFOPatchType' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetLFOType
 // 0x0008 (0x0008 - 0x0000)
@@ -407,10 +338,6 @@ public:
 	ESynthLFOType                                 LFOType;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ModularSynthComponent_SetLFOType) == 0x000004, "Wrong alignment on ModularSynthComponent_SetLFOType");
-static_assert(sizeof(ModularSynthComponent_SetLFOType) == 0x000008, "Wrong size on ModularSynthComponent_SetLFOType");
-static_assert(offsetof(ModularSynthComponent_SetLFOType, LFOIndex) == 0x000000, "Member 'ModularSynthComponent_SetLFOType::LFOIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetLFOType, LFOType) == 0x000004, "Member 'ModularSynthComponent_SetLFOType::LFOType' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetModEnvAttackTime
 // 0x0004 (0x0004 - 0x0000)
@@ -419,9 +346,6 @@ struct ModularSynthComponent_SetModEnvAttackTime final
 public:
 	float                                         AttackTimeMsec;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetModEnvAttackTime) == 0x000004, "Wrong alignment on ModularSynthComponent_SetModEnvAttackTime");
-static_assert(sizeof(ModularSynthComponent_SetModEnvAttackTime) == 0x000004, "Wrong size on ModularSynthComponent_SetModEnvAttackTime");
-static_assert(offsetof(ModularSynthComponent_SetModEnvAttackTime, AttackTimeMsec) == 0x000000, "Member 'ModularSynthComponent_SetModEnvAttackTime::AttackTimeMsec' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetModEnvBiasInvert
 // 0x0001 (0x0001 - 0x0000)
@@ -430,9 +354,6 @@ struct ModularSynthComponent_SetModEnvBiasInvert final
 public:
 	bool                                          bInvert;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetModEnvBiasInvert) == 0x000001, "Wrong alignment on ModularSynthComponent_SetModEnvBiasInvert");
-static_assert(sizeof(ModularSynthComponent_SetModEnvBiasInvert) == 0x000001, "Wrong size on ModularSynthComponent_SetModEnvBiasInvert");
-static_assert(offsetof(ModularSynthComponent_SetModEnvBiasInvert, bInvert) == 0x000000, "Member 'ModularSynthComponent_SetModEnvBiasInvert::bInvert' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetModEnvBiasPatch
 // 0x0001 (0x0001 - 0x0000)
@@ -441,9 +362,6 @@ struct ModularSynthComponent_SetModEnvBiasPatch final
 public:
 	ESynthModEnvBiasPatch                         InPatchType;                                       // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetModEnvBiasPatch) == 0x000001, "Wrong alignment on ModularSynthComponent_SetModEnvBiasPatch");
-static_assert(sizeof(ModularSynthComponent_SetModEnvBiasPatch) == 0x000001, "Wrong size on ModularSynthComponent_SetModEnvBiasPatch");
-static_assert(offsetof(ModularSynthComponent_SetModEnvBiasPatch, InPatchType) == 0x000000, "Member 'ModularSynthComponent_SetModEnvBiasPatch::InPatchType' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetModEnvDecayTime
 // 0x0004 (0x0004 - 0x0000)
@@ -452,9 +370,6 @@ struct ModularSynthComponent_SetModEnvDecayTime final
 public:
 	float                                         DecayTimeMsec;                                     // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetModEnvDecayTime) == 0x000004, "Wrong alignment on ModularSynthComponent_SetModEnvDecayTime");
-static_assert(sizeof(ModularSynthComponent_SetModEnvDecayTime) == 0x000004, "Wrong size on ModularSynthComponent_SetModEnvDecayTime");
-static_assert(offsetof(ModularSynthComponent_SetModEnvDecayTime, DecayTimeMsec) == 0x000000, "Member 'ModularSynthComponent_SetModEnvDecayTime::DecayTimeMsec' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetModEnvDepth
 // 0x0004 (0x0004 - 0x0000)
@@ -463,9 +378,6 @@ struct ModularSynthComponent_SetModEnvDepth final
 public:
 	float                                         Depth;                                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetModEnvDepth) == 0x000004, "Wrong alignment on ModularSynthComponent_SetModEnvDepth");
-static_assert(sizeof(ModularSynthComponent_SetModEnvDepth) == 0x000004, "Wrong size on ModularSynthComponent_SetModEnvDepth");
-static_assert(offsetof(ModularSynthComponent_SetModEnvDepth, Depth) == 0x000000, "Member 'ModularSynthComponent_SetModEnvDepth::Depth' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetModEnvInvert
 // 0x0001 (0x0001 - 0x0000)
@@ -474,9 +386,6 @@ struct ModularSynthComponent_SetModEnvInvert final
 public:
 	bool                                          bInvert;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetModEnvInvert) == 0x000001, "Wrong alignment on ModularSynthComponent_SetModEnvInvert");
-static_assert(sizeof(ModularSynthComponent_SetModEnvInvert) == 0x000001, "Wrong size on ModularSynthComponent_SetModEnvInvert");
-static_assert(offsetof(ModularSynthComponent_SetModEnvInvert, bInvert) == 0x000000, "Member 'ModularSynthComponent_SetModEnvInvert::bInvert' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetModEnvPatch
 // 0x0001 (0x0001 - 0x0000)
@@ -485,9 +394,6 @@ struct ModularSynthComponent_SetModEnvPatch final
 public:
 	ESynthModEnvPatch                             InPatchType;                                       // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetModEnvPatch) == 0x000001, "Wrong alignment on ModularSynthComponent_SetModEnvPatch");
-static_assert(sizeof(ModularSynthComponent_SetModEnvPatch) == 0x000001, "Wrong size on ModularSynthComponent_SetModEnvPatch");
-static_assert(offsetof(ModularSynthComponent_SetModEnvPatch, InPatchType) == 0x000000, "Member 'ModularSynthComponent_SetModEnvPatch::InPatchType' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetModEnvReleaseTime
 // 0x0004 (0x0004 - 0x0000)
@@ -496,9 +402,6 @@ struct ModularSynthComponent_SetModEnvReleaseTime final
 public:
 	float                                         Release;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetModEnvReleaseTime) == 0x000004, "Wrong alignment on ModularSynthComponent_SetModEnvReleaseTime");
-static_assert(sizeof(ModularSynthComponent_SetModEnvReleaseTime) == 0x000004, "Wrong size on ModularSynthComponent_SetModEnvReleaseTime");
-static_assert(offsetof(ModularSynthComponent_SetModEnvReleaseTime, Release) == 0x000000, "Member 'ModularSynthComponent_SetModEnvReleaseTime::Release' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetModEnvSustainGain
 // 0x0004 (0x0004 - 0x0000)
@@ -507,9 +410,6 @@ struct ModularSynthComponent_SetModEnvSustainGain final
 public:
 	float                                         SustainGain;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetModEnvSustainGain) == 0x000004, "Wrong alignment on ModularSynthComponent_SetModEnvSustainGain");
-static_assert(sizeof(ModularSynthComponent_SetModEnvSustainGain) == 0x000004, "Wrong size on ModularSynthComponent_SetModEnvSustainGain");
-static_assert(offsetof(ModularSynthComponent_SetModEnvSustainGain, SustainGain) == 0x000000, "Member 'ModularSynthComponent_SetModEnvSustainGain::SustainGain' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetOscCents
 // 0x0008 (0x0008 - 0x0000)
@@ -519,10 +419,6 @@ public:
 	int32                                         OscIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Cents;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetOscCents) == 0x000004, "Wrong alignment on ModularSynthComponent_SetOscCents");
-static_assert(sizeof(ModularSynthComponent_SetOscCents) == 0x000008, "Wrong size on ModularSynthComponent_SetOscCents");
-static_assert(offsetof(ModularSynthComponent_SetOscCents, OscIndex) == 0x000000, "Member 'ModularSynthComponent_SetOscCents::OscIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetOscCents, Cents) == 0x000004, "Member 'ModularSynthComponent_SetOscCents::Cents' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetOscFrequencyMod
 // 0x0008 (0x0008 - 0x0000)
@@ -532,10 +428,6 @@ public:
 	int32                                         OscIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OscFreqMod;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetOscFrequencyMod) == 0x000004, "Wrong alignment on ModularSynthComponent_SetOscFrequencyMod");
-static_assert(sizeof(ModularSynthComponent_SetOscFrequencyMod) == 0x000008, "Wrong size on ModularSynthComponent_SetOscFrequencyMod");
-static_assert(offsetof(ModularSynthComponent_SetOscFrequencyMod, OscIndex) == 0x000000, "Member 'ModularSynthComponent_SetOscFrequencyMod::OscIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetOscFrequencyMod, OscFreqMod) == 0x000004, "Member 'ModularSynthComponent_SetOscFrequencyMod::OscFreqMod' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetOscGain
 // 0x0008 (0x0008 - 0x0000)
@@ -545,10 +437,6 @@ public:
 	int32                                         OscIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OscGain;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetOscGain) == 0x000004, "Wrong alignment on ModularSynthComponent_SetOscGain");
-static_assert(sizeof(ModularSynthComponent_SetOscGain) == 0x000008, "Wrong size on ModularSynthComponent_SetOscGain");
-static_assert(offsetof(ModularSynthComponent_SetOscGain, OscIndex) == 0x000000, "Member 'ModularSynthComponent_SetOscGain::OscIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetOscGain, OscGain) == 0x000004, "Member 'ModularSynthComponent_SetOscGain::OscGain' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetOscGainMod
 // 0x0008 (0x0008 - 0x0000)
@@ -558,10 +446,6 @@ public:
 	int32                                         OscIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OscGainMod;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetOscGainMod) == 0x000004, "Wrong alignment on ModularSynthComponent_SetOscGainMod");
-static_assert(sizeof(ModularSynthComponent_SetOscGainMod) == 0x000008, "Wrong size on ModularSynthComponent_SetOscGainMod");
-static_assert(offsetof(ModularSynthComponent_SetOscGainMod, OscIndex) == 0x000000, "Member 'ModularSynthComponent_SetOscGainMod::OscIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetOscGainMod, OscGainMod) == 0x000004, "Member 'ModularSynthComponent_SetOscGainMod::OscGainMod' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetOscOctave
 // 0x0008 (0x0008 - 0x0000)
@@ -571,10 +455,6 @@ public:
 	int32                                         OscIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Octave;                                            // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetOscOctave) == 0x000004, "Wrong alignment on ModularSynthComponent_SetOscOctave");
-static_assert(sizeof(ModularSynthComponent_SetOscOctave) == 0x000008, "Wrong size on ModularSynthComponent_SetOscOctave");
-static_assert(offsetof(ModularSynthComponent_SetOscOctave, OscIndex) == 0x000000, "Member 'ModularSynthComponent_SetOscOctave::OscIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetOscOctave, Octave) == 0x000004, "Member 'ModularSynthComponent_SetOscOctave::Octave' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetOscPulsewidth
 // 0x0008 (0x0008 - 0x0000)
@@ -584,10 +464,6 @@ public:
 	int32                                         OscIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Pulsewidth;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetOscPulsewidth) == 0x000004, "Wrong alignment on ModularSynthComponent_SetOscPulsewidth");
-static_assert(sizeof(ModularSynthComponent_SetOscPulsewidth) == 0x000008, "Wrong size on ModularSynthComponent_SetOscPulsewidth");
-static_assert(offsetof(ModularSynthComponent_SetOscPulsewidth, OscIndex) == 0x000000, "Member 'ModularSynthComponent_SetOscPulsewidth::OscIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetOscPulsewidth, Pulsewidth) == 0x000004, "Member 'ModularSynthComponent_SetOscPulsewidth::Pulsewidth' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetOscSemitones
 // 0x0008 (0x0008 - 0x0000)
@@ -597,10 +473,6 @@ public:
 	int32                                         OscIndex;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Semitones;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetOscSemitones) == 0x000004, "Wrong alignment on ModularSynthComponent_SetOscSemitones");
-static_assert(sizeof(ModularSynthComponent_SetOscSemitones) == 0x000008, "Wrong size on ModularSynthComponent_SetOscSemitones");
-static_assert(offsetof(ModularSynthComponent_SetOscSemitones, OscIndex) == 0x000000, "Member 'ModularSynthComponent_SetOscSemitones::OscIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetOscSemitones, Semitones) == 0x000004, "Member 'ModularSynthComponent_SetOscSemitones::Semitones' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetOscSync
 // 0x0001 (0x0001 - 0x0000)
@@ -609,9 +481,6 @@ struct ModularSynthComponent_SetOscSync final
 public:
 	bool                                          bIsSynced;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetOscSync) == 0x000001, "Wrong alignment on ModularSynthComponent_SetOscSync");
-static_assert(sizeof(ModularSynthComponent_SetOscSync) == 0x000001, "Wrong size on ModularSynthComponent_SetOscSync");
-static_assert(offsetof(ModularSynthComponent_SetOscSync, bIsSynced) == 0x000000, "Member 'ModularSynthComponent_SetOscSync::bIsSynced' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetOscType
 // 0x0008 (0x0008 - 0x0000)
@@ -622,10 +491,6 @@ public:
 	ESynth1OscType                                OscType;                                           // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(ModularSynthComponent_SetOscType) == 0x000004, "Wrong alignment on ModularSynthComponent_SetOscType");
-static_assert(sizeof(ModularSynthComponent_SetOscType) == 0x000008, "Wrong size on ModularSynthComponent_SetOscType");
-static_assert(offsetof(ModularSynthComponent_SetOscType, OscIndex) == 0x000000, "Member 'ModularSynthComponent_SetOscType::OscIndex' has a wrong offset!");
-static_assert(offsetof(ModularSynthComponent_SetOscType, OscType) == 0x000004, "Member 'ModularSynthComponent_SetOscType::OscType' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetPan
 // 0x0004 (0x0004 - 0x0000)
@@ -634,9 +499,6 @@ struct ModularSynthComponent_SetPan final
 public:
 	float                                         Pan;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetPan) == 0x000004, "Wrong alignment on ModularSynthComponent_SetPan");
-static_assert(sizeof(ModularSynthComponent_SetPan) == 0x000004, "Wrong size on ModularSynthComponent_SetPan");
-static_assert(offsetof(ModularSynthComponent_SetPan, Pan) == 0x000000, "Member 'ModularSynthComponent_SetPan::Pan' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetPitchBend
 // 0x0004 (0x0004 - 0x0000)
@@ -645,9 +507,6 @@ struct ModularSynthComponent_SetPitchBend final
 public:
 	float                                         PitchBend;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetPitchBend) == 0x000004, "Wrong alignment on ModularSynthComponent_SetPitchBend");
-static_assert(sizeof(ModularSynthComponent_SetPitchBend) == 0x000004, "Wrong size on ModularSynthComponent_SetPitchBend");
-static_assert(offsetof(ModularSynthComponent_SetPitchBend, PitchBend) == 0x000000, "Member 'ModularSynthComponent_SetPitchBend::PitchBend' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetPortamento
 // 0x0004 (0x0004 - 0x0000)
@@ -656,9 +515,6 @@ struct ModularSynthComponent_SetPortamento final
 public:
 	float                                         Portamento;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetPortamento) == 0x000004, "Wrong alignment on ModularSynthComponent_SetPortamento");
-static_assert(sizeof(ModularSynthComponent_SetPortamento) == 0x000004, "Wrong size on ModularSynthComponent_SetPortamento");
-static_assert(offsetof(ModularSynthComponent_SetPortamento, Portamento) == 0x000000, "Member 'ModularSynthComponent_SetPortamento::Portamento' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetReleaseTime
 // 0x0004 (0x0004 - 0x0000)
@@ -667,9 +523,6 @@ struct ModularSynthComponent_SetReleaseTime final
 public:
 	float                                         ReleaseTimeMsec;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetReleaseTime) == 0x000004, "Wrong alignment on ModularSynthComponent_SetReleaseTime");
-static_assert(sizeof(ModularSynthComponent_SetReleaseTime) == 0x000004, "Wrong size on ModularSynthComponent_SetReleaseTime");
-static_assert(offsetof(ModularSynthComponent_SetReleaseTime, ReleaseTimeMsec) == 0x000000, "Member 'ModularSynthComponent_SetReleaseTime::ReleaseTimeMsec' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetSpread
 // 0x0004 (0x0004 - 0x0000)
@@ -678,9 +531,6 @@ struct ModularSynthComponent_SetSpread final
 public:
 	float                                         Spread;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetSpread) == 0x000004, "Wrong alignment on ModularSynthComponent_SetSpread");
-static_assert(sizeof(ModularSynthComponent_SetSpread) == 0x000004, "Wrong size on ModularSynthComponent_SetSpread");
-static_assert(offsetof(ModularSynthComponent_SetSpread, Spread) == 0x000000, "Member 'ModularSynthComponent_SetSpread::Spread' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayFeedback
 // 0x0004 (0x0004 - 0x0000)
@@ -689,9 +539,6 @@ struct ModularSynthComponent_SetStereoDelayFeedback final
 public:
 	float                                         DelayFeedback;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetStereoDelayFeedback) == 0x000004, "Wrong alignment on ModularSynthComponent_SetStereoDelayFeedback");
-static_assert(sizeof(ModularSynthComponent_SetStereoDelayFeedback) == 0x000004, "Wrong size on ModularSynthComponent_SetStereoDelayFeedback");
-static_assert(offsetof(ModularSynthComponent_SetStereoDelayFeedback, DelayFeedback) == 0x000000, "Member 'ModularSynthComponent_SetStereoDelayFeedback::DelayFeedback' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayIsEnabled
 // 0x0001 (0x0001 - 0x0000)
@@ -700,9 +547,6 @@ struct ModularSynthComponent_SetStereoDelayIsEnabled final
 public:
 	bool                                          StereoDelayEnabled;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetStereoDelayIsEnabled) == 0x000001, "Wrong alignment on ModularSynthComponent_SetStereoDelayIsEnabled");
-static_assert(sizeof(ModularSynthComponent_SetStereoDelayIsEnabled) == 0x000001, "Wrong size on ModularSynthComponent_SetStereoDelayIsEnabled");
-static_assert(offsetof(ModularSynthComponent_SetStereoDelayIsEnabled, StereoDelayEnabled) == 0x000000, "Member 'ModularSynthComponent_SetStereoDelayIsEnabled::StereoDelayEnabled' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayMode
 // 0x0001 (0x0001 - 0x0000)
@@ -711,9 +555,6 @@ struct ModularSynthComponent_SetStereoDelayMode final
 public:
 	ESynthStereoDelayMode                         StereoDelayMode;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetStereoDelayMode) == 0x000001, "Wrong alignment on ModularSynthComponent_SetStereoDelayMode");
-static_assert(sizeof(ModularSynthComponent_SetStereoDelayMode) == 0x000001, "Wrong size on ModularSynthComponent_SetStereoDelayMode");
-static_assert(offsetof(ModularSynthComponent_SetStereoDelayMode, StereoDelayMode) == 0x000000, "Member 'ModularSynthComponent_SetStereoDelayMode::StereoDelayMode' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayRatio
 // 0x0004 (0x0004 - 0x0000)
@@ -722,9 +563,6 @@ struct ModularSynthComponent_SetStereoDelayRatio final
 public:
 	float                                         DelayRatio;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetStereoDelayRatio) == 0x000004, "Wrong alignment on ModularSynthComponent_SetStereoDelayRatio");
-static_assert(sizeof(ModularSynthComponent_SetStereoDelayRatio) == 0x000004, "Wrong size on ModularSynthComponent_SetStereoDelayRatio");
-static_assert(offsetof(ModularSynthComponent_SetStereoDelayRatio, DelayRatio) == 0x000000, "Member 'ModularSynthComponent_SetStereoDelayRatio::DelayRatio' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayTime
 // 0x0004 (0x0004 - 0x0000)
@@ -733,9 +571,6 @@ struct ModularSynthComponent_SetStereoDelayTime final
 public:
 	float                                         DelayTimeMsec;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetStereoDelayTime) == 0x000004, "Wrong alignment on ModularSynthComponent_SetStereoDelayTime");
-static_assert(sizeof(ModularSynthComponent_SetStereoDelayTime) == 0x000004, "Wrong size on ModularSynthComponent_SetStereoDelayTime");
-static_assert(offsetof(ModularSynthComponent_SetStereoDelayTime, DelayTimeMsec) == 0x000000, "Member 'ModularSynthComponent_SetStereoDelayTime::DelayTimeMsec' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetStereoDelayWetlevel
 // 0x0004 (0x0004 - 0x0000)
@@ -744,9 +579,6 @@ struct ModularSynthComponent_SetStereoDelayWetlevel final
 public:
 	float                                         DelayWetlevel;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetStereoDelayWetlevel) == 0x000004, "Wrong alignment on ModularSynthComponent_SetStereoDelayWetlevel");
-static_assert(sizeof(ModularSynthComponent_SetStereoDelayWetlevel) == 0x000004, "Wrong size on ModularSynthComponent_SetStereoDelayWetlevel");
-static_assert(offsetof(ModularSynthComponent_SetStereoDelayWetlevel, DelayWetlevel) == 0x000000, "Member 'ModularSynthComponent_SetStereoDelayWetlevel::DelayWetlevel' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetSustainGain
 // 0x0004 (0x0004 - 0x0000)
@@ -755,9 +587,6 @@ struct ModularSynthComponent_SetSustainGain final
 public:
 	float                                         SustainGain;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetSustainGain) == 0x000004, "Wrong alignment on ModularSynthComponent_SetSustainGain");
-static_assert(sizeof(ModularSynthComponent_SetSustainGain) == 0x000004, "Wrong size on ModularSynthComponent_SetSustainGain");
-static_assert(offsetof(ModularSynthComponent_SetSustainGain, SustainGain) == 0x000000, "Member 'ModularSynthComponent_SetSustainGain::SustainGain' has a wrong offset!");
 
 // Function Synthesis.ModularSynthComponent.SetSynthPreset
 // 0x00E0 (0x00E0 - 0x0000)
@@ -766,42 +595,54 @@ struct ModularSynthComponent_SetSynthPreset final
 public:
 	struct FModularSynthPreset                    SynthPreset;                                       // 0x0000(0x00E0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(ModularSynthComponent_SetSynthPreset) == 0x000008, "Wrong alignment on ModularSynthComponent_SetSynthPreset");
-static_assert(sizeof(ModularSynthComponent_SetSynthPreset) == 0x0000E0, "Wrong size on ModularSynthComponent_SetSynthPreset");
-static_assert(offsetof(ModularSynthComponent_SetSynthPreset, SynthPreset) == 0x000000, "Member 'ModularSynthComponent_SetSynthPreset::SynthPreset' has a wrong offset!");
+
+// Function Synthesis.SourceEffectBitCrusherPreset.SetBitModulator
+// 0x0010 (0x0010 - 0x0000)
+struct SourceEffectBitCrusherPreset_SetBitModulator final
+{
+public:
+	struct FSoundModulationDestinationSettings    InModulatorSettings;                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SourceEffectBitCrusherPreset.SetSampleRateModulator
+// 0x0010 (0x0010 - 0x0000)
+struct SourceEffectBitCrusherPreset_SetSampleRateModulator final
+{
+public:
+	struct FSoundModulationDestinationSettings    InModulatorSettings;                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
 
 // Function Synthesis.SourceEffectBitCrusherPreset.SetSettings
-// 0x0008 (0x0008 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct SourceEffectBitCrusherPreset_SetSettings final
 {
 public:
-	struct FSourceEffectBitCrusherSettings        InSettings;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSourceEffectBitCrusherSettings        InSettings;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectBitCrusherPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectBitCrusherPreset_SetSettings");
-static_assert(sizeof(SourceEffectBitCrusherPreset_SetSettings) == 0x000008, "Wrong size on SourceEffectBitCrusherPreset_SetSettings");
-static_assert(offsetof(SourceEffectBitCrusherPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectBitCrusherPreset_SetSettings::InSettings' has a wrong offset!");
 
-// Function Synthesis.SourceEffectChorusPreset.SetSettings
-// 0x0018 (0x0018 - 0x0000)
-struct SourceEffectChorusPreset_SetSettings final
+// Function Synthesis.SourceEffectEnvelopeFollowerPreset.RegisterEnvelopeFollowerListener
+// 0x0008 (0x0008 - 0x0000)
+struct SourceEffectEnvelopeFollowerPreset_RegisterEnvelopeFollowerListener final
 {
 public:
-	struct FSourceEffectChorusSettings            InSettings;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UEnvelopeFollowerListener*              EnvelopeFollowerListener;                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectChorusPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectChorusPreset_SetSettings");
-static_assert(sizeof(SourceEffectChorusPreset_SetSettings) == 0x000018, "Wrong size on SourceEffectChorusPreset_SetSettings");
-static_assert(offsetof(SourceEffectChorusPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectChorusPreset_SetSettings::InSettings' has a wrong offset!");
 
-// Function Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings
-// 0x0028 (0x0028 - 0x0000)
-struct SourceEffectDynamicsProcessorPreset_SetSettings final
+// Function Synthesis.SourceEffectEnvelopeFollowerPreset.SetSettings
+// 0x000C (0x000C - 0x0000)
+struct SourceEffectEnvelopeFollowerPreset_SetSettings final
 {
 public:
-	struct FSourceEffectDynamicsProcessorSettings InSettings;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSourceEffectEnvelopeFollowerSettings  InSettings;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectDynamicsProcessorPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectDynamicsProcessorPreset_SetSettings");
-static_assert(sizeof(SourceEffectDynamicsProcessorPreset_SetSettings) == 0x000028, "Wrong size on SourceEffectDynamicsProcessorPreset_SetSettings");
-static_assert(offsetof(SourceEffectDynamicsProcessorPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectDynamicsProcessorPreset_SetSettings::InSettings' has a wrong offset!");
+
+// Function Synthesis.SourceEffectEnvelopeFollowerPreset.UnregisterEnvelopeFollowerListener
+// 0x0008 (0x0008 - 0x0000)
+struct SourceEffectEnvelopeFollowerPreset_UnregisterEnvelopeFollowerListener final
+{
+public:
+	class UEnvelopeFollowerListener*              EnvelopeFollowerListener;                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function Synthesis.SourceEffectEQPreset.SetSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -810,42 +651,38 @@ struct SourceEffectEQPreset_SetSettings final
 public:
 	struct FSourceEffectEQSettings                InSettings;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectEQPreset_SetSettings) == 0x000008, "Wrong alignment on SourceEffectEQPreset_SetSettings");
-static_assert(sizeof(SourceEffectEQPreset_SetSettings) == 0x000010, "Wrong size on SourceEffectEQPreset_SetSettings");
-static_assert(offsetof(SourceEffectEQPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectEQPreset_SetSettings::InSettings' has a wrong offset!");
 
 // Function Synthesis.SourceEffectFilterPreset.SetSettings
-// 0x000C (0x000C - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct SourceEffectFilterPreset_SetSettings final
 {
 public:
-	struct FSourceEffectFilterSettings            InSettings;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSourceEffectFilterSettings            InSettings;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectFilterPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectFilterPreset_SetSettings");
-static_assert(sizeof(SourceEffectFilterPreset_SetSettings) == 0x00000C, "Wrong size on SourceEffectFilterPreset_SetSettings");
-static_assert(offsetof(SourceEffectFilterPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectFilterPreset_SetSettings::InSettings' has a wrong offset!");
 
 // Function Synthesis.SourceEffectFoldbackDistortionPreset.SetSettings
 // 0x000C (0x000C - 0x0000)
 struct SourceEffectFoldbackDistortionPreset_SetSettings final
 {
 public:
-	struct FSourceEffectFoldbackDistortionSettings InSettings;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSourceEffectFoldbackDistortionSettings InSettings;                                       // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectFoldbackDistortionPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectFoldbackDistortionPreset_SetSettings");
-static_assert(sizeof(SourceEffectFoldbackDistortionPreset_SetSettings) == 0x00000C, "Wrong size on SourceEffectFoldbackDistortionPreset_SetSettings");
-static_assert(offsetof(SourceEffectFoldbackDistortionPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectFoldbackDistortionPreset_SetSettings::InSettings' has a wrong offset!");
+
+// Function Synthesis.SourceEffectMidSideSpreaderPreset.SetSettings
+// 0x0008 (0x0008 - 0x0000)
+struct SourceEffectMidSideSpreaderPreset_SetSettings final
+{
+public:
+	struct FSourceEffectMidSideSpreaderSettings   InSettings;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
 
 // Function Synthesis.SourceEffectPannerPreset.SetSettings
-// 0x0004 (0x0004 - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct SourceEffectPannerPreset_SetSettings final
 {
 public:
-	struct FSourceEffectPannerSettings            InSettings;                                        // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSourceEffectPannerSettings            InSettings;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectPannerPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectPannerPreset_SetSettings");
-static_assert(sizeof(SourceEffectPannerPreset_SetSettings) == 0x000004, "Wrong size on SourceEffectPannerPreset_SetSettings");
-static_assert(offsetof(SourceEffectPannerPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectPannerPreset_SetSettings::InSettings' has a wrong offset!");
 
 // Function Synthesis.SourceEffectPhaserPreset.SetSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -854,20 +691,14 @@ struct SourceEffectPhaserPreset_SetSettings final
 public:
 	struct FSourceEffectPhaserSettings            InSettings;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectPhaserPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectPhaserPreset_SetSettings");
-static_assert(sizeof(SourceEffectPhaserPreset_SetSettings) == 0x000010, "Wrong size on SourceEffectPhaserPreset_SetSettings");
-static_assert(offsetof(SourceEffectPhaserPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectPhaserPreset_SetSettings::InSettings' has a wrong offset!");
 
 // Function Synthesis.SourceEffectRingModulationPreset.SetSettings
-// 0x0014 (0x0014 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct SourceEffectRingModulationPreset_SetSettings final
 {
 public:
-	struct FSourceEffectRingModulationSettings    InSettings;                                        // 0x0000(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSourceEffectRingModulationSettings    InSettings;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectRingModulationPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectRingModulationPreset_SetSettings");
-static_assert(sizeof(SourceEffectRingModulationPreset_SetSettings) == 0x000014, "Wrong size on SourceEffectRingModulationPreset_SetSettings");
-static_assert(offsetof(SourceEffectRingModulationPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectRingModulationPreset_SetSettings::InSettings' has a wrong offset!");
 
 // Function Synthesis.SourceEffectSimpleDelayPreset.SetSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -876,20 +707,14 @@ struct SourceEffectSimpleDelayPreset_SetSettings final
 public:
 	struct FSourceEffectSimpleDelaySettings       InSettings;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectSimpleDelayPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectSimpleDelayPreset_SetSettings");
-static_assert(sizeof(SourceEffectSimpleDelayPreset_SetSettings) == 0x000018, "Wrong size on SourceEffectSimpleDelayPreset_SetSettings");
-static_assert(offsetof(SourceEffectSimpleDelayPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectSimpleDelayPreset_SetSettings::InSettings' has a wrong offset!");
 
 // Function Synthesis.SourceEffectStereoDelayPreset.SetSettings
-// 0x0014 (0x0014 - 0x0000)
+// 0x0024 (0x0024 - 0x0000)
 struct SourceEffectStereoDelayPreset_SetSettings final
 {
 public:
-	struct FSourceEffectStereoDelaySettings       InSettings;                                        // 0x0000(0x0014)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSourceEffectStereoDelaySettings       InSettings;                                        // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectStereoDelayPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectStereoDelayPreset_SetSettings");
-static_assert(sizeof(SourceEffectStereoDelayPreset_SetSettings) == 0x000014, "Wrong size on SourceEffectStereoDelayPreset_SetSettings");
-static_assert(offsetof(SourceEffectStereoDelayPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectStereoDelayPreset_SetSettings::InSettings' has a wrong offset!");
 
 // Function Synthesis.SourceEffectWaveShaperPreset.SetSettings
 // 0x0008 (0x0008 - 0x0000)
@@ -898,9 +723,22 @@ struct SourceEffectWaveShaperPreset_SetSettings final
 public:
 	struct FSourceEffectWaveShaperSettings        InSettings;                                        // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SourceEffectWaveShaperPreset_SetSettings) == 0x000004, "Wrong alignment on SourceEffectWaveShaperPreset_SetSettings");
-static_assert(sizeof(SourceEffectWaveShaperPreset_SetSettings) == 0x000008, "Wrong size on SourceEffectWaveShaperPreset_SetSettings");
-static_assert(offsetof(SourceEffectWaveShaperPreset_SetSettings, InSettings) == 0x000000, "Member 'SourceEffectWaveShaperPreset_SetSettings::InSettings' has a wrong offset!");
+
+// Function Synthesis.SubmixEffectConvolutionReverbPreset.SetImpulseResponse
+// 0x0008 (0x0008 - 0x0000)
+struct SubmixEffectConvolutionReverbPreset_SetImpulseResponse final
+{
+public:
+	class UAudioImpulseResponse*                  InImpulseResponse;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SubmixEffectConvolutionReverbPreset.SetSettings
+// 0x0020 (0x0020 - 0x0000)
+struct SubmixEffectConvolutionReverbPreset_SetSettings final
+{
+public:
+	struct FSubmixEffectConvolutionReverbSettings InSettings;                                        // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
 
 // Function Synthesis.SubmixEffectDelayPreset.GetMaxDelayInMilliseconds
 // 0x0004 (0x0004 - 0x0000)
@@ -909,9 +747,6 @@ struct SubmixEffectDelayPreset_GetMaxDelayInMilliseconds final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectDelayPreset_GetMaxDelayInMilliseconds) == 0x000004, "Wrong alignment on SubmixEffectDelayPreset_GetMaxDelayInMilliseconds");
-static_assert(sizeof(SubmixEffectDelayPreset_GetMaxDelayInMilliseconds) == 0x000004, "Wrong size on SubmixEffectDelayPreset_GetMaxDelayInMilliseconds");
-static_assert(offsetof(SubmixEffectDelayPreset_GetMaxDelayInMilliseconds, ReturnValue) == 0x000000, "Member 'SubmixEffectDelayPreset_GetMaxDelayInMilliseconds::ReturnValue' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectDelayPreset.SetDelay
 // 0x0004 (0x0004 - 0x0000)
@@ -920,9 +755,6 @@ struct SubmixEffectDelayPreset_SetDelay final
 public:
 	float                                         Length;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectDelayPreset_SetDelay) == 0x000004, "Wrong alignment on SubmixEffectDelayPreset_SetDelay");
-static_assert(sizeof(SubmixEffectDelayPreset_SetDelay) == 0x000004, "Wrong size on SubmixEffectDelayPreset_SetDelay");
-static_assert(offsetof(SubmixEffectDelayPreset_SetDelay, Length) == 0x000000, "Member 'SubmixEffectDelayPreset_SetDelay::Length' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectDelayPreset.SetInterpolationTime
 // 0x0004 (0x0004 - 0x0000)
@@ -931,9 +763,6 @@ struct SubmixEffectDelayPreset_SetInterpolationTime final
 public:
 	float                                         Time;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectDelayPreset_SetInterpolationTime) == 0x000004, "Wrong alignment on SubmixEffectDelayPreset_SetInterpolationTime");
-static_assert(sizeof(SubmixEffectDelayPreset_SetInterpolationTime) == 0x000004, "Wrong size on SubmixEffectDelayPreset_SetInterpolationTime");
-static_assert(offsetof(SubmixEffectDelayPreset_SetInterpolationTime, Time) == 0x000000, "Member 'SubmixEffectDelayPreset_SetInterpolationTime::Time' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectDelayPreset.SetSettings
 // 0x000C (0x000C - 0x0000)
@@ -942,9 +771,6 @@ struct SubmixEffectDelayPreset_SetSettings final
 public:
 	struct FSubmixEffectDelaySettings             InSettings;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectDelayPreset_SetSettings) == 0x000004, "Wrong alignment on SubmixEffectDelayPreset_SetSettings");
-static_assert(sizeof(SubmixEffectDelayPreset_SetSettings) == 0x00000C, "Wrong size on SubmixEffectDelayPreset_SetSettings");
-static_assert(offsetof(SubmixEffectDelayPreset_SetSettings, InSettings) == 0x000000, "Member 'SubmixEffectDelayPreset_SetSettings::InSettings' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterAlgorithm
 // 0x0001 (0x0001 - 0x0000)
@@ -953,9 +779,6 @@ struct SubmixEffectFilterPreset_SetFilterAlgorithm final
 public:
 	ESubmixFilterAlgorithm                        InAlgorithm;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectFilterPreset_SetFilterAlgorithm) == 0x000001, "Wrong alignment on SubmixEffectFilterPreset_SetFilterAlgorithm");
-static_assert(sizeof(SubmixEffectFilterPreset_SetFilterAlgorithm) == 0x000001, "Wrong size on SubmixEffectFilterPreset_SetFilterAlgorithm");
-static_assert(offsetof(SubmixEffectFilterPreset_SetFilterAlgorithm, InAlgorithm) == 0x000000, "Member 'SubmixEffectFilterPreset_SetFilterAlgorithm::InAlgorithm' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequency
 // 0x0004 (0x0004 - 0x0000)
@@ -964,9 +787,6 @@ struct SubmixEffectFilterPreset_SetFilterCutoffFrequency final
 public:
 	float                                         InFrequency;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectFilterPreset_SetFilterCutoffFrequency) == 0x000004, "Wrong alignment on SubmixEffectFilterPreset_SetFilterCutoffFrequency");
-static_assert(sizeof(SubmixEffectFilterPreset_SetFilterCutoffFrequency) == 0x000004, "Wrong size on SubmixEffectFilterPreset_SetFilterCutoffFrequency");
-static_assert(offsetof(SubmixEffectFilterPreset_SetFilterCutoffFrequency, InFrequency) == 0x000000, "Member 'SubmixEffectFilterPreset_SetFilterCutoffFrequency::InFrequency' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterCutoffFrequencyMod
 // 0x0004 (0x0004 - 0x0000)
@@ -975,9 +795,6 @@ struct SubmixEffectFilterPreset_SetFilterCutoffFrequencyMod final
 public:
 	float                                         InFrequency;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectFilterPreset_SetFilterCutoffFrequencyMod) == 0x000004, "Wrong alignment on SubmixEffectFilterPreset_SetFilterCutoffFrequencyMod");
-static_assert(sizeof(SubmixEffectFilterPreset_SetFilterCutoffFrequencyMod) == 0x000004, "Wrong size on SubmixEffectFilterPreset_SetFilterCutoffFrequencyMod");
-static_assert(offsetof(SubmixEffectFilterPreset_SetFilterCutoffFrequencyMod, InFrequency) == 0x000000, "Member 'SubmixEffectFilterPreset_SetFilterCutoffFrequencyMod::InFrequency' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterQ
 // 0x0004 (0x0004 - 0x0000)
@@ -986,9 +803,6 @@ struct SubmixEffectFilterPreset_SetFilterQ final
 public:
 	float                                         InQ;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectFilterPreset_SetFilterQ) == 0x000004, "Wrong alignment on SubmixEffectFilterPreset_SetFilterQ");
-static_assert(sizeof(SubmixEffectFilterPreset_SetFilterQ) == 0x000004, "Wrong size on SubmixEffectFilterPreset_SetFilterQ");
-static_assert(offsetof(SubmixEffectFilterPreset_SetFilterQ, InQ) == 0x000000, "Member 'SubmixEffectFilterPreset_SetFilterQ::InQ' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterQMod
 // 0x0004 (0x0004 - 0x0000)
@@ -997,9 +811,6 @@ struct SubmixEffectFilterPreset_SetFilterQMod final
 public:
 	float                                         InQ;                                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectFilterPreset_SetFilterQMod) == 0x000004, "Wrong alignment on SubmixEffectFilterPreset_SetFilterQMod");
-static_assert(sizeof(SubmixEffectFilterPreset_SetFilterQMod) == 0x000004, "Wrong size on SubmixEffectFilterPreset_SetFilterQMod");
-static_assert(offsetof(SubmixEffectFilterPreset_SetFilterQMod, InQ) == 0x000000, "Member 'SubmixEffectFilterPreset_SetFilterQMod::InQ' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectFilterPreset.SetFilterType
 // 0x0001 (0x0001 - 0x0000)
@@ -1008,9 +819,6 @@ struct SubmixEffectFilterPreset_SetFilterType final
 public:
 	ESubmixFilterType                             InType;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectFilterPreset_SetFilterType) == 0x000001, "Wrong alignment on SubmixEffectFilterPreset_SetFilterType");
-static_assert(sizeof(SubmixEffectFilterPreset_SetFilterType) == 0x000001, "Wrong size on SubmixEffectFilterPreset_SetFilterType");
-static_assert(offsetof(SubmixEffectFilterPreset_SetFilterType, InType) == 0x000000, "Member 'SubmixEffectFilterPreset_SetFilterType::InType' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectFilterPreset.SetSettings
 // 0x000C (0x000C - 0x0000)
@@ -1019,9 +827,6 @@ struct SubmixEffectFilterPreset_SetSettings final
 public:
 	struct FSubmixEffectFilterSettings            InSettings;                                        // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectFilterPreset_SetSettings) == 0x000004, "Wrong alignment on SubmixEffectFilterPreset_SetSettings");
-static_assert(sizeof(SubmixEffectFilterPreset_SetSettings) == 0x00000C, "Wrong size on SubmixEffectFilterPreset_SetSettings");
-static_assert(offsetof(SubmixEffectFilterPreset_SetSettings, InSettings) == 0x000000, "Member 'SubmixEffectFilterPreset_SetSettings::InSettings' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectFlexiverbPreset.SetSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -1030,9 +835,22 @@ struct SubmixEffectFlexiverbPreset_SetSettings final
 public:
 	struct FSubmixEffectFlexiverbSettings         InSettings;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectFlexiverbPreset_SetSettings) == 0x000004, "Wrong alignment on SubmixEffectFlexiverbPreset_SetSettings");
-static_assert(sizeof(SubmixEffectFlexiverbPreset_SetSettings) == 0x000010, "Wrong size on SubmixEffectFlexiverbPreset_SetSettings");
-static_assert(offsetof(SubmixEffectFlexiverbPreset_SetSettings, InSettings) == 0x000000, "Member 'SubmixEffectFlexiverbPreset_SetSettings::InSettings' has a wrong offset!");
+
+// Function Synthesis.SubmixEffectMultibandCompressorPreset.SetSettings
+// 0x0020 (0x0020 - 0x0000)
+struct SubmixEffectMultibandCompressorPreset_SetSettings final
+{
+public:
+	struct FSubmixEffectMultibandCompressorSettings InSettings;                                      // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SubmixEffectStereoDelayPreset.SetSettings
+// 0x0024 (0x0024 - 0x0000)
+struct SubmixEffectStereoDelayPreset_SetSettings final
+{
+public:
+	struct FSubmixEffectStereoDelaySettings       InSettings;                                        // 0x0000(0x0024)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
 
 // Function Synthesis.SubmixEffectTapDelayPreset.AddTap
 // 0x0004 (0x0004 - 0x0000)
@@ -1041,9 +859,6 @@ struct SubmixEffectTapDelayPreset_AddTap final
 public:
 	int32                                         TapId;                                             // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectTapDelayPreset_AddTap) == 0x000004, "Wrong alignment on SubmixEffectTapDelayPreset_AddTap");
-static_assert(sizeof(SubmixEffectTapDelayPreset_AddTap) == 0x000004, "Wrong size on SubmixEffectTapDelayPreset_AddTap");
-static_assert(offsetof(SubmixEffectTapDelayPreset_AddTap, TapId) == 0x000000, "Member 'SubmixEffectTapDelayPreset_AddTap::TapId' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectTapDelayPreset.GetMaxDelayInMilliseconds
 // 0x0004 (0x0004 - 0x0000)
@@ -1052,9 +867,6 @@ struct SubmixEffectTapDelayPreset_GetMaxDelayInMilliseconds final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectTapDelayPreset_GetMaxDelayInMilliseconds) == 0x000004, "Wrong alignment on SubmixEffectTapDelayPreset_GetMaxDelayInMilliseconds");
-static_assert(sizeof(SubmixEffectTapDelayPreset_GetMaxDelayInMilliseconds) == 0x000004, "Wrong size on SubmixEffectTapDelayPreset_GetMaxDelayInMilliseconds");
-static_assert(offsetof(SubmixEffectTapDelayPreset_GetMaxDelayInMilliseconds, ReturnValue) == 0x000000, "Member 'SubmixEffectTapDelayPreset_GetMaxDelayInMilliseconds::ReturnValue' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectTapDelayPreset.GetTap
 // 0x001C (0x001C - 0x0000)
@@ -1064,21 +876,14 @@ public:
 	int32                                         TapId;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTapDelayInfo                          TapInfo;                                           // 0x0004(0x0018)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectTapDelayPreset_GetTap) == 0x000004, "Wrong alignment on SubmixEffectTapDelayPreset_GetTap");
-static_assert(sizeof(SubmixEffectTapDelayPreset_GetTap) == 0x00001C, "Wrong size on SubmixEffectTapDelayPreset_GetTap");
-static_assert(offsetof(SubmixEffectTapDelayPreset_GetTap, TapId) == 0x000000, "Member 'SubmixEffectTapDelayPreset_GetTap::TapId' has a wrong offset!");
-static_assert(offsetof(SubmixEffectTapDelayPreset_GetTap, TapInfo) == 0x000004, "Member 'SubmixEffectTapDelayPreset_GetTap::TapInfo' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectTapDelayPreset.GetTapIds
 // 0x0010 (0x0010 - 0x0000)
 struct SubmixEffectTapDelayPreset_GetTapIds final
 {
 public:
-	TArray<int32>                                 TapIds;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 TapIds;                                            // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectTapDelayPreset_GetTapIds) == 0x000008, "Wrong alignment on SubmixEffectTapDelayPreset_GetTapIds");
-static_assert(sizeof(SubmixEffectTapDelayPreset_GetTapIds) == 0x000010, "Wrong size on SubmixEffectTapDelayPreset_GetTapIds");
-static_assert(offsetof(SubmixEffectTapDelayPreset_GetTapIds, TapIds) == 0x000000, "Member 'SubmixEffectTapDelayPreset_GetTapIds::TapIds' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectTapDelayPreset.RemoveTap
 // 0x0004 (0x0004 - 0x0000)
@@ -1087,9 +892,6 @@ struct SubmixEffectTapDelayPreset_RemoveTap final
 public:
 	int32                                         TapId;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectTapDelayPreset_RemoveTap) == 0x000004, "Wrong alignment on SubmixEffectTapDelayPreset_RemoveTap");
-static_assert(sizeof(SubmixEffectTapDelayPreset_RemoveTap) == 0x000004, "Wrong size on SubmixEffectTapDelayPreset_RemoveTap");
-static_assert(offsetof(SubmixEffectTapDelayPreset_RemoveTap, TapId) == 0x000000, "Member 'SubmixEffectTapDelayPreset_RemoveTap::TapId' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectTapDelayPreset.SetInterpolationTime
 // 0x0004 (0x0004 - 0x0000)
@@ -1098,9 +900,6 @@ struct SubmixEffectTapDelayPreset_SetInterpolationTime final
 public:
 	float                                         Time;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectTapDelayPreset_SetInterpolationTime) == 0x000004, "Wrong alignment on SubmixEffectTapDelayPreset_SetInterpolationTime");
-static_assert(sizeof(SubmixEffectTapDelayPreset_SetInterpolationTime) == 0x000004, "Wrong size on SubmixEffectTapDelayPreset_SetInterpolationTime");
-static_assert(offsetof(SubmixEffectTapDelayPreset_SetInterpolationTime, Time) == 0x000000, "Member 'SubmixEffectTapDelayPreset_SetInterpolationTime::Time' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectTapDelayPreset.SetSettings
 // 0x0018 (0x0018 - 0x0000)
@@ -1109,9 +908,6 @@ struct SubmixEffectTapDelayPreset_SetSettings final
 public:
 	struct FSubmixEffectTapDelaySettings          InSettings;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectTapDelayPreset_SetSettings) == 0x000008, "Wrong alignment on SubmixEffectTapDelayPreset_SetSettings");
-static_assert(sizeof(SubmixEffectTapDelayPreset_SetSettings) == 0x000018, "Wrong size on SubmixEffectTapDelayPreset_SetSettings");
-static_assert(offsetof(SubmixEffectTapDelayPreset_SetSettings, InSettings) == 0x000000, "Member 'SubmixEffectTapDelayPreset_SetSettings::InSettings' has a wrong offset!");
 
 // Function Synthesis.SubmixEffectTapDelayPreset.SetTap
 // 0x001C (0x001C - 0x0000)
@@ -1121,10 +917,6 @@ public:
 	int32                                         TapId;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTapDelayInfo                          TapInfo;                                           // 0x0004(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SubmixEffectTapDelayPreset_SetTap) == 0x000004, "Wrong alignment on SubmixEffectTapDelayPreset_SetTap");
-static_assert(sizeof(SubmixEffectTapDelayPreset_SetTap) == 0x00001C, "Wrong size on SubmixEffectTapDelayPreset_SetTap");
-static_assert(offsetof(SubmixEffectTapDelayPreset_SetTap, TapId) == 0x000000, "Member 'SubmixEffectTapDelayPreset_SetTap::TapId' has a wrong offset!");
-static_assert(offsetof(SubmixEffectTapDelayPreset_SetTap, TapInfo) == 0x000004, "Member 'SubmixEffectTapDelayPreset_SetTap::TapInfo' has a wrong offset!");
 
 // Function Synthesis.Synth2DSlider.SetIndentHandle
 // 0x0001 (0x0001 - 0x0000)
@@ -1133,9 +925,6 @@ struct Synth2DSlider_SetIndentHandle final
 public:
 	bool                                          InValue;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(Synth2DSlider_SetIndentHandle) == 0x000001, "Wrong alignment on Synth2DSlider_SetIndentHandle");
-static_assert(sizeof(Synth2DSlider_SetIndentHandle) == 0x000001, "Wrong size on Synth2DSlider_SetIndentHandle");
-static_assert(offsetof(Synth2DSlider_SetIndentHandle, InValue) == 0x000000, "Member 'Synth2DSlider_SetIndentHandle::InValue' has a wrong offset!");
 
 // Function Synthesis.Synth2DSlider.SetLocked
 // 0x0001 (0x0001 - 0x0000)
@@ -1144,9 +933,6 @@ struct Synth2DSlider_SetLocked final
 public:
 	bool                                          InValue;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(Synth2DSlider_SetLocked) == 0x000001, "Wrong alignment on Synth2DSlider_SetLocked");
-static_assert(sizeof(Synth2DSlider_SetLocked) == 0x000001, "Wrong size on Synth2DSlider_SetLocked");
-static_assert(offsetof(Synth2DSlider_SetLocked, InValue) == 0x000000, "Member 'Synth2DSlider_SetLocked::InValue' has a wrong offset!");
 
 // Function Synthesis.Synth2DSlider.SetSliderHandleColor
 // 0x0010 (0x0010 - 0x0000)
@@ -1155,9 +941,6 @@ struct Synth2DSlider_SetSliderHandleColor final
 public:
 	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(Synth2DSlider_SetSliderHandleColor) == 0x000004, "Wrong alignment on Synth2DSlider_SetSliderHandleColor");
-static_assert(sizeof(Synth2DSlider_SetSliderHandleColor) == 0x000010, "Wrong size on Synth2DSlider_SetSliderHandleColor");
-static_assert(offsetof(Synth2DSlider_SetSliderHandleColor, InValue) == 0x000000, "Member 'Synth2DSlider_SetSliderHandleColor::InValue' has a wrong offset!");
 
 // Function Synthesis.Synth2DSlider.SetStepSize
 // 0x0004 (0x0004 - 0x0000)
@@ -1166,9 +949,6 @@ struct Synth2DSlider_SetStepSize final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(Synth2DSlider_SetStepSize) == 0x000004, "Wrong alignment on Synth2DSlider_SetStepSize");
-static_assert(sizeof(Synth2DSlider_SetStepSize) == 0x000004, "Wrong size on Synth2DSlider_SetStepSize");
-static_assert(offsetof(Synth2DSlider_SetStepSize, InValue) == 0x000000, "Member 'Synth2DSlider_SetStepSize::InValue' has a wrong offset!");
 
 // Function Synthesis.Synth2DSlider.SetValue
 // 0x0008 (0x0008 - 0x0000)
@@ -1177,9 +957,6 @@ struct Synth2DSlider_SetValue final
 public:
 	struct FVector2D                              InValue;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(Synth2DSlider_SetValue) == 0x000004, "Wrong alignment on Synth2DSlider_SetValue");
-static_assert(sizeof(Synth2DSlider_SetValue) == 0x000008, "Wrong size on Synth2DSlider_SetValue");
-static_assert(offsetof(Synth2DSlider_SetValue, InValue) == 0x000000, "Member 'Synth2DSlider_SetValue::InValue' has a wrong offset!");
 
 // Function Synthesis.Synth2DSlider.GetValue
 // 0x0008 (0x0008 - 0x0000)
@@ -1188,9 +965,6 @@ struct Synth2DSlider_GetValue final
 public:
 	struct FVector2D                              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(Synth2DSlider_GetValue) == 0x000004, "Wrong alignment on Synth2DSlider_GetValue");
-static_assert(sizeof(Synth2DSlider_GetValue) == 0x000008, "Wrong size on Synth2DSlider_GetValue");
-static_assert(offsetof(Synth2DSlider_GetValue, ReturnValue) == 0x000000, "Member 'Synth2DSlider_GetValue::ReturnValue' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.NoteOff
 // 0x0008 (0x0008 - 0x0000)
@@ -1201,10 +975,6 @@ public:
 	bool                                          bKill;                                             // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GranularSynth_NoteOff) == 0x000004, "Wrong alignment on GranularSynth_NoteOff");
-static_assert(sizeof(GranularSynth_NoteOff) == 0x000008, "Wrong size on GranularSynth_NoteOff");
-static_assert(offsetof(GranularSynth_NoteOff, Note) == 0x000000, "Member 'GranularSynth_NoteOff::Note' has a wrong offset!");
-static_assert(offsetof(GranularSynth_NoteOff, bKill) == 0x000004, "Member 'GranularSynth_NoteOff::bKill' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.NoteOn
 // 0x000C (0x000C - 0x0000)
@@ -1215,11 +985,6 @@ public:
 	int32                                         Velocity;                                          // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Duration;                                          // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_NoteOn) == 0x000004, "Wrong alignment on GranularSynth_NoteOn");
-static_assert(sizeof(GranularSynth_NoteOn) == 0x00000C, "Wrong size on GranularSynth_NoteOn");
-static_assert(offsetof(GranularSynth_NoteOn, Note) == 0x000000, "Member 'GranularSynth_NoteOn::Note' has a wrong offset!");
-static_assert(offsetof(GranularSynth_NoteOn, Velocity) == 0x000004, "Member 'GranularSynth_NoteOn::Velocity' has a wrong offset!");
-static_assert(offsetof(GranularSynth_NoteOn, Duration) == 0x000008, "Member 'GranularSynth_NoteOn::Duration' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetAttackTime
 // 0x0004 (0x0004 - 0x0000)
@@ -1228,9 +993,6 @@ struct GranularSynth_SetAttackTime final
 public:
 	float                                         AttackTimeMsec;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetAttackTime) == 0x000004, "Wrong alignment on GranularSynth_SetAttackTime");
-static_assert(sizeof(GranularSynth_SetAttackTime) == 0x000004, "Wrong size on GranularSynth_SetAttackTime");
-static_assert(offsetof(GranularSynth_SetAttackTime, AttackTimeMsec) == 0x000000, "Member 'GranularSynth_SetAttackTime::AttackTimeMsec' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetDecayTime
 // 0x0004 (0x0004 - 0x0000)
@@ -1239,9 +1001,6 @@ struct GranularSynth_SetDecayTime final
 public:
 	float                                         DecayTimeMsec;                                     // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetDecayTime) == 0x000004, "Wrong alignment on GranularSynth_SetDecayTime");
-static_assert(sizeof(GranularSynth_SetDecayTime) == 0x000004, "Wrong size on GranularSynth_SetDecayTime");
-static_assert(offsetof(GranularSynth_SetDecayTime, DecayTimeMsec) == 0x000000, "Member 'GranularSynth_SetDecayTime::DecayTimeMsec' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetGrainDuration
 // 0x000C (0x000C - 0x0000)
@@ -1251,10 +1010,6 @@ public:
 	float                                         BaseDurationMsec;                                  // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              DurationRange;                                     // 0x0004(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetGrainDuration) == 0x000004, "Wrong alignment on GranularSynth_SetGrainDuration");
-static_assert(sizeof(GranularSynth_SetGrainDuration) == 0x00000C, "Wrong size on GranularSynth_SetGrainDuration");
-static_assert(offsetof(GranularSynth_SetGrainDuration, BaseDurationMsec) == 0x000000, "Member 'GranularSynth_SetGrainDuration::BaseDurationMsec' has a wrong offset!");
-static_assert(offsetof(GranularSynth_SetGrainDuration, DurationRange) == 0x000004, "Member 'GranularSynth_SetGrainDuration::DurationRange' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetGrainEnvelopeType
 // 0x0001 (0x0001 - 0x0000)
@@ -1263,9 +1018,6 @@ struct GranularSynth_SetGrainEnvelopeType final
 public:
 	EGranularSynthEnvelopeType                    EnvelopeType;                                      // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetGrainEnvelopeType) == 0x000001, "Wrong alignment on GranularSynth_SetGrainEnvelopeType");
-static_assert(sizeof(GranularSynth_SetGrainEnvelopeType) == 0x000001, "Wrong size on GranularSynth_SetGrainEnvelopeType");
-static_assert(offsetof(GranularSynth_SetGrainEnvelopeType, EnvelopeType) == 0x000000, "Member 'GranularSynth_SetGrainEnvelopeType::EnvelopeType' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetGrainPan
 // 0x000C (0x000C - 0x0000)
@@ -1275,10 +1027,6 @@ public:
 	float                                         BasePan;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              PanRange;                                          // 0x0004(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetGrainPan) == 0x000004, "Wrong alignment on GranularSynth_SetGrainPan");
-static_assert(sizeof(GranularSynth_SetGrainPan) == 0x00000C, "Wrong size on GranularSynth_SetGrainPan");
-static_assert(offsetof(GranularSynth_SetGrainPan, BasePan) == 0x000000, "Member 'GranularSynth_SetGrainPan::BasePan' has a wrong offset!");
-static_assert(offsetof(GranularSynth_SetGrainPan, PanRange) == 0x000004, "Member 'GranularSynth_SetGrainPan::PanRange' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetGrainPitch
 // 0x000C (0x000C - 0x0000)
@@ -1288,10 +1036,6 @@ public:
 	float                                         BasePitch;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              PitchRange;                                        // 0x0004(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetGrainPitch) == 0x000004, "Wrong alignment on GranularSynth_SetGrainPitch");
-static_assert(sizeof(GranularSynth_SetGrainPitch) == 0x00000C, "Wrong size on GranularSynth_SetGrainPitch");
-static_assert(offsetof(GranularSynth_SetGrainPitch, BasePitch) == 0x000000, "Member 'GranularSynth_SetGrainPitch::BasePitch' has a wrong offset!");
-static_assert(offsetof(GranularSynth_SetGrainPitch, PitchRange) == 0x000004, "Member 'GranularSynth_SetGrainPitch::PitchRange' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetGrainProbability
 // 0x0004 (0x0004 - 0x0000)
@@ -1300,9 +1044,6 @@ struct GranularSynth_SetGrainProbability final
 public:
 	float                                         InGrainProbability;                                // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetGrainProbability) == 0x000004, "Wrong alignment on GranularSynth_SetGrainProbability");
-static_assert(sizeof(GranularSynth_SetGrainProbability) == 0x000004, "Wrong size on GranularSynth_SetGrainProbability");
-static_assert(offsetof(GranularSynth_SetGrainProbability, InGrainProbability) == 0x000000, "Member 'GranularSynth_SetGrainProbability::InGrainProbability' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetGrainsPerSecond
 // 0x0004 (0x0004 - 0x0000)
@@ -1311,9 +1052,6 @@ struct GranularSynth_SetGrainsPerSecond final
 public:
 	float                                         InGrainsPerSecond;                                 // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetGrainsPerSecond) == 0x000004, "Wrong alignment on GranularSynth_SetGrainsPerSecond");
-static_assert(sizeof(GranularSynth_SetGrainsPerSecond) == 0x000004, "Wrong size on GranularSynth_SetGrainsPerSecond");
-static_assert(offsetof(GranularSynth_SetGrainsPerSecond, InGrainsPerSecond) == 0x000000, "Member 'GranularSynth_SetGrainsPerSecond::InGrainsPerSecond' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetGrainVolume
 // 0x000C (0x000C - 0x0000)
@@ -1323,10 +1061,6 @@ public:
 	float                                         BaseVolume;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              VolumeRange;                                       // 0x0004(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetGrainVolume) == 0x000004, "Wrong alignment on GranularSynth_SetGrainVolume");
-static_assert(sizeof(GranularSynth_SetGrainVolume) == 0x00000C, "Wrong size on GranularSynth_SetGrainVolume");
-static_assert(offsetof(GranularSynth_SetGrainVolume, BaseVolume) == 0x000000, "Member 'GranularSynth_SetGrainVolume::BaseVolume' has a wrong offset!");
-static_assert(offsetof(GranularSynth_SetGrainVolume, VolumeRange) == 0x000004, "Member 'GranularSynth_SetGrainVolume::VolumeRange' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetPlaybackSpeed
 // 0x0004 (0x0004 - 0x0000)
@@ -1335,9 +1069,6 @@ struct GranularSynth_SetPlaybackSpeed final
 public:
 	float                                         InPlayheadRate;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetPlaybackSpeed) == 0x000004, "Wrong alignment on GranularSynth_SetPlaybackSpeed");
-static_assert(sizeof(GranularSynth_SetPlaybackSpeed) == 0x000004, "Wrong size on GranularSynth_SetPlaybackSpeed");
-static_assert(offsetof(GranularSynth_SetPlaybackSpeed, InPlayheadRate) == 0x000000, "Member 'GranularSynth_SetPlaybackSpeed::InPlayheadRate' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetPlayheadTime
 // 0x000C (0x000C - 0x0000)
@@ -1349,11 +1080,6 @@ public:
 	EGranularSynthSeekType                        SeekType;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GranularSynth_SetPlayheadTime) == 0x000004, "Wrong alignment on GranularSynth_SetPlayheadTime");
-static_assert(sizeof(GranularSynth_SetPlayheadTime) == 0x00000C, "Wrong size on GranularSynth_SetPlayheadTime");
-static_assert(offsetof(GranularSynth_SetPlayheadTime, InPositionSec) == 0x000000, "Member 'GranularSynth_SetPlayheadTime::InPositionSec' has a wrong offset!");
-static_assert(offsetof(GranularSynth_SetPlayheadTime, LerpTimeSec) == 0x000004, "Member 'GranularSynth_SetPlayheadTime::LerpTimeSec' has a wrong offset!");
-static_assert(offsetof(GranularSynth_SetPlayheadTime, SeekType) == 0x000008, "Member 'GranularSynth_SetPlayheadTime::SeekType' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetReleaseTimeMsec
 // 0x0004 (0x0004 - 0x0000)
@@ -1362,9 +1088,6 @@ struct GranularSynth_SetReleaseTimeMsec final
 public:
 	float                                         ReleaseTimeMsec;                                   // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetReleaseTimeMsec) == 0x000004, "Wrong alignment on GranularSynth_SetReleaseTimeMsec");
-static_assert(sizeof(GranularSynth_SetReleaseTimeMsec) == 0x000004, "Wrong size on GranularSynth_SetReleaseTimeMsec");
-static_assert(offsetof(GranularSynth_SetReleaseTimeMsec, ReleaseTimeMsec) == 0x000000, "Member 'GranularSynth_SetReleaseTimeMsec::ReleaseTimeMsec' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetScrubMode
 // 0x0001 (0x0001 - 0x0000)
@@ -1373,9 +1096,6 @@ struct GranularSynth_SetScrubMode final
 public:
 	bool                                          bScrubMode;                                        // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetScrubMode) == 0x000001, "Wrong alignment on GranularSynth_SetScrubMode");
-static_assert(sizeof(GranularSynth_SetScrubMode) == 0x000001, "Wrong size on GranularSynth_SetScrubMode");
-static_assert(offsetof(GranularSynth_SetScrubMode, bScrubMode) == 0x000000, "Member 'GranularSynth_SetScrubMode::bScrubMode' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetSoundWave
 // 0x0008 (0x0008 - 0x0000)
@@ -1384,9 +1104,6 @@ struct GranularSynth_SetSoundWave final
 public:
 	class USoundWave*                             InSoundWave;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetSoundWave) == 0x000008, "Wrong alignment on GranularSynth_SetSoundWave");
-static_assert(sizeof(GranularSynth_SetSoundWave) == 0x000008, "Wrong size on GranularSynth_SetSoundWave");
-static_assert(offsetof(GranularSynth_SetSoundWave, InSoundWave) == 0x000000, "Member 'GranularSynth_SetSoundWave::InSoundWave' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.SetSustainGain
 // 0x0004 (0x0004 - 0x0000)
@@ -1395,9 +1112,6 @@ struct GranularSynth_SetSustainGain final
 public:
 	float                                         SustainGain;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_SetSustainGain) == 0x000004, "Wrong alignment on GranularSynth_SetSustainGain");
-static_assert(sizeof(GranularSynth_SetSustainGain) == 0x000004, "Wrong size on GranularSynth_SetSustainGain");
-static_assert(offsetof(GranularSynth_SetSustainGain, SustainGain) == 0x000000, "Member 'GranularSynth_SetSustainGain::SustainGain' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.GetCurrentPlayheadTime
 // 0x0004 (0x0004 - 0x0000)
@@ -1406,9 +1120,6 @@ struct GranularSynth_GetCurrentPlayheadTime final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_GetCurrentPlayheadTime) == 0x000004, "Wrong alignment on GranularSynth_GetCurrentPlayheadTime");
-static_assert(sizeof(GranularSynth_GetCurrentPlayheadTime) == 0x000004, "Wrong size on GranularSynth_GetCurrentPlayheadTime");
-static_assert(offsetof(GranularSynth_GetCurrentPlayheadTime, ReturnValue) == 0x000000, "Member 'GranularSynth_GetCurrentPlayheadTime::ReturnValue' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.GetSampleDuration
 // 0x0004 (0x0004 - 0x0000)
@@ -1417,9 +1128,6 @@ struct GranularSynth_GetSampleDuration final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_GetSampleDuration) == 0x000004, "Wrong alignment on GranularSynth_GetSampleDuration");
-static_assert(sizeof(GranularSynth_GetSampleDuration) == 0x000004, "Wrong size on GranularSynth_GetSampleDuration");
-static_assert(offsetof(GranularSynth_GetSampleDuration, ReturnValue) == 0x000000, "Member 'GranularSynth_GetSampleDuration::ReturnValue' has a wrong offset!");
 
 // Function Synthesis.GranularSynth.IsLoaded
 // 0x0001 (0x0001 - 0x0000)
@@ -1428,9 +1136,415 @@ struct GranularSynth_IsLoaded final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GranularSynth_IsLoaded) == 0x000001, "Wrong alignment on GranularSynth_IsLoaded");
-static_assert(sizeof(GranularSynth_IsLoaded) == 0x000001, "Wrong size on GranularSynth_IsLoaded");
-static_assert(offsetof(GranularSynth_IsLoaded, ReturnValue) == 0x000000, "Member 'GranularSynth_IsLoaded::ReturnValue' has a wrong offset!");
+
+// Function Synthesis.SynthComponentMonoWaveTable.GetCurveTangent
+// 0x0008 (0x0008 - 0x0000)
+struct SynthComponentMonoWaveTable_GetCurveTangent final
+{
+public:
+	int32                                         TableIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.GetNumTableEntries
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_GetNumTableEntries final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.NoteOff
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_NoteOff final
+{
+public:
+	float                                         InMidiNote;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.NoteOn
+// 0x0008 (0x0008 - 0x0000)
+struct SynthComponentMonoWaveTable_NoteOn final
+{
+public:
+	float                                         InMidiNote;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InVelocity;                                        // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.RefreshWaveTable
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_RefreshWaveTable final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeAttackTime
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetAmpEnvelopeAttackTime final
+{
+public:
+	float                                         InAttackTimeMsec;                                  // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeBiasDepth
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetAmpEnvelopeBiasDepth final
+{
+public:
+	float                                         InDepth;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeBiasInvert
+// 0x0001 (0x0001 - 0x0000)
+struct SynthComponentMonoWaveTable_SetAmpEnvelopeBiasInvert final
+{
+public:
+	bool                                          bInBiasInvert;                                     // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeDecayTime
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetAmpEnvelopeDecayTime final
+{
+public:
+	float                                         InDecayTimeMsec;                                   // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeDepth
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetAmpEnvelopeDepth final
+{
+public:
+	float                                         InDepth;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeInvert
+// 0x0001 (0x0001 - 0x0000)
+struct SynthComponentMonoWaveTable_SetAmpEnvelopeInvert final
+{
+public:
+	bool                                          bInInvert;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeReleaseTime
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetAmpEnvelopeReleaseTime final
+{
+public:
+	float                                         InReleaseTimeMsec;                                 // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetAmpEnvelopeSustainGain
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetAmpEnvelopeSustainGain final
+{
+public:
+	float                                         InSustainGain;                                     // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetCurveInterpolationType
+// 0x000C (0x000C - 0x0000)
+struct SynthComponentMonoWaveTable_SetCurveInterpolationType final
+{
+public:
+	ECurveInterpolationType                       InterpolationType;                                 // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TableIndex;                                        // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetCurveTangent
+// 0x000C (0x000C - 0x0000)
+struct SynthComponentMonoWaveTable_SetCurveTangent final
+{
+public:
+	int32                                         TableIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InNewTangent;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetCurveValue
+// 0x0010 (0x0010 - 0x0000)
+struct SynthComponentMonoWaveTable_SetCurveValue final
+{
+public:
+	int32                                         TableIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         KeyframeIndex;                                     // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NewValue;                                          // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeAttackTime
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetFilterEnvelopeAttackTime final
+{
+public:
+	float                                         InAttackTimeMsec;                                  // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeBiasDepth
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetFilterEnvelopeBiasDepth final
+{
+public:
+	float                                         InDepth;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeBiasInvert
+// 0x0001 (0x0001 - 0x0000)
+struct SynthComponentMonoWaveTable_SetFilterEnvelopeBiasInvert final
+{
+public:
+	bool                                          bInBiasInvert;                                     // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeDepth
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetFilterEnvelopeDepth final
+{
+public:
+	float                                         InDepth;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeInvert
+// 0x0001 (0x0001 - 0x0000)
+struct SynthComponentMonoWaveTable_SetFilterEnvelopeInvert final
+{
+public:
+	bool                                          bInInvert;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopenDecayTime
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetFilterEnvelopenDecayTime final
+{
+public:
+	float                                         InDecayTimeMsec;                                   // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeReleaseTime
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetFilterEnvelopeReleaseTime final
+{
+public:
+	float                                         InReleaseTimeMsec;                                 // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetFilterEnvelopeSustainGain
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetFilterEnvelopeSustainGain final
+{
+public:
+	float                                         InSustainGain;                                     // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetFrequency
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetFrequency final
+{
+public:
+	float                                         FrequencyHz;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetFrequencyPitchBend
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetFrequencyPitchBend final
+{
+public:
+	float                                         FrequencyOffsetCents;                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetFrequencyWithMidiNote
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetFrequencyWithMidiNote final
+{
+public:
+	float                                         InMidiNote;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetLowPassFilterResonance
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetLowPassFilterResonance final
+{
+public:
+	float                                         InNewQ;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeAttackTime
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetPositionEnvelopeAttackTime final
+{
+public:
+	float                                         InAttackTimeMsec;                                  // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeBiasDepth
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetPositionEnvelopeBiasDepth final
+{
+public:
+	float                                         InDepth;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeBiasInvert
+// 0x0001 (0x0001 - 0x0000)
+struct SynthComponentMonoWaveTable_SetPositionEnvelopeBiasInvert final
+{
+public:
+	bool                                          bInBiasInvert;                                     // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeDecayTime
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetPositionEnvelopeDecayTime final
+{
+public:
+	float                                         InDecayTimeMsec;                                   // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeDepth
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetPositionEnvelopeDepth final
+{
+public:
+	float                                         InDepth;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeInvert
+// 0x0001 (0x0001 - 0x0000)
+struct SynthComponentMonoWaveTable_SetPositionEnvelopeInvert final
+{
+public:
+	bool                                          bInInvert;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeReleaseTime
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetPositionEnvelopeReleaseTime final
+{
+public:
+	float                                         InReleaseTimeMsec;                                 // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetPositionEnvelopeSustainGain
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetPositionEnvelopeSustainGain final
+{
+public:
+	float                                         InSustainGain;                                     // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoDepth
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetPosLfoDepth final
+{
+public:
+	float                                         InLfoDepth;                                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoFrequency
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetPosLfoFrequency final
+{
+public:
+	float                                         InLfoFrequency;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetPosLfoType
+// 0x0001 (0x0001 - 0x0000)
+struct SynthComponentMonoWaveTable_SetPosLfoType final
+{
+public:
+	ESynthLFOType                                 InLfoType;                                         // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetSustainPedalState
+// 0x0001 (0x0001 - 0x0000)
+struct SynthComponentMonoWaveTable_SetSustainPedalState final
+{
+public:
+	bool                                          InSustainPedalState;                               // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.SetWaveTablePosition
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_SetWaveTablePosition final
+{
+public:
+	float                                         InPosition;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.GetKeyFrameValuesForTable
+// 0x0018 (0x0018 - 0x0000)
+struct SynthComponentMonoWaveTable_GetKeyFrameValuesForTable final
+{
+public:
+	float                                         TableIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMonoWaveTable.GetMaxTableIndex
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentMonoWaveTable_GetMaxTableIndex final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMoto.GetRPMRange
+// 0x0008 (0x0008 - 0x0000)
+struct SynthComponentMoto_GetRPMRange final
+{
+public:
+	float                                         OutMinRPM;                                         // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutMaxRPM;                                         // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMoto.SetRPM
+// 0x0008 (0x0008 - 0x0000)
+struct SynthComponentMoto_SetRPM final
+{
+public:
+	float                                         InRPM;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InTimeSec;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMoto.SetSettings
+// 0x0068 (0x0068 - 0x0000)
+struct SynthComponentMoto_SetSettings final
+{
+public:
+	struct FMotoSynthRuntimeSettings              InSettings;                                        // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentMoto.IsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct SynthComponentMoto_IsEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentToneGenerator.SetFrequency
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentToneGenerator_SetFrequency final
+{
+public:
+	float                                         InFrequency;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthComponentToneGenerator.SetVolume
+// 0x0004 (0x0004 - 0x0000)
+struct SynthComponentToneGenerator_SetVolume final
+{
+public:
+	float                                         InVolume;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function Synthesis.SynthSamplePlayer.SeekToTime
 // 0x0008 (0x0008 - 0x0000)
@@ -1442,11 +1556,6 @@ public:
 	bool                                          bWrap;                                             // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(SynthSamplePlayer_SeekToTime) == 0x000004, "Wrong alignment on SynthSamplePlayer_SeekToTime");
-static_assert(sizeof(SynthSamplePlayer_SeekToTime) == 0x000008, "Wrong size on SynthSamplePlayer_SeekToTime");
-static_assert(offsetof(SynthSamplePlayer_SeekToTime, TimeSec) == 0x000000, "Member 'SynthSamplePlayer_SeekToTime::TimeSec' has a wrong offset!");
-static_assert(offsetof(SynthSamplePlayer_SeekToTime, SeekType) == 0x000004, "Member 'SynthSamplePlayer_SeekToTime::SeekType' has a wrong offset!");
-static_assert(offsetof(SynthSamplePlayer_SeekToTime, bWrap) == 0x000005, "Member 'SynthSamplePlayer_SeekToTime::bWrap' has a wrong offset!");
 
 // Function Synthesis.SynthSamplePlayer.SetPitch
 // 0x0008 (0x0008 - 0x0000)
@@ -1456,10 +1565,6 @@ public:
 	float                                         InPitch;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TimeSec;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthSamplePlayer_SetPitch) == 0x000004, "Wrong alignment on SynthSamplePlayer_SetPitch");
-static_assert(sizeof(SynthSamplePlayer_SetPitch) == 0x000008, "Wrong size on SynthSamplePlayer_SetPitch");
-static_assert(offsetof(SynthSamplePlayer_SetPitch, InPitch) == 0x000000, "Member 'SynthSamplePlayer_SetPitch::InPitch' has a wrong offset!");
-static_assert(offsetof(SynthSamplePlayer_SetPitch, TimeSec) == 0x000004, "Member 'SynthSamplePlayer_SetPitch::TimeSec' has a wrong offset!");
 
 // Function Synthesis.SynthSamplePlayer.SetScrubMode
 // 0x0001 (0x0001 - 0x0000)
@@ -1468,9 +1573,6 @@ struct SynthSamplePlayer_SetScrubMode final
 public:
 	bool                                          bScrubMode;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthSamplePlayer_SetScrubMode) == 0x000001, "Wrong alignment on SynthSamplePlayer_SetScrubMode");
-static_assert(sizeof(SynthSamplePlayer_SetScrubMode) == 0x000001, "Wrong size on SynthSamplePlayer_SetScrubMode");
-static_assert(offsetof(SynthSamplePlayer_SetScrubMode, bScrubMode) == 0x000000, "Member 'SynthSamplePlayer_SetScrubMode::bScrubMode' has a wrong offset!");
 
 // Function Synthesis.SynthSamplePlayer.SetScrubTimeWidth
 // 0x0004 (0x0004 - 0x0000)
@@ -1479,9 +1581,6 @@ struct SynthSamplePlayer_SetScrubTimeWidth final
 public:
 	float                                         InScrubTimeWidthSec;                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthSamplePlayer_SetScrubTimeWidth) == 0x000004, "Wrong alignment on SynthSamplePlayer_SetScrubTimeWidth");
-static_assert(sizeof(SynthSamplePlayer_SetScrubTimeWidth) == 0x000004, "Wrong size on SynthSamplePlayer_SetScrubTimeWidth");
-static_assert(offsetof(SynthSamplePlayer_SetScrubTimeWidth, InScrubTimeWidthSec) == 0x000000, "Member 'SynthSamplePlayer_SetScrubTimeWidth::InScrubTimeWidthSec' has a wrong offset!");
 
 // Function Synthesis.SynthSamplePlayer.SetSoundWave
 // 0x0008 (0x0008 - 0x0000)
@@ -1490,9 +1589,6 @@ struct SynthSamplePlayer_SetSoundWave final
 public:
 	class USoundWave*                             InSoundWave;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthSamplePlayer_SetSoundWave) == 0x000008, "Wrong alignment on SynthSamplePlayer_SetSoundWave");
-static_assert(sizeof(SynthSamplePlayer_SetSoundWave) == 0x000008, "Wrong size on SynthSamplePlayer_SetSoundWave");
-static_assert(offsetof(SynthSamplePlayer_SetSoundWave, InSoundWave) == 0x000000, "Member 'SynthSamplePlayer_SetSoundWave::InSoundWave' has a wrong offset!");
 
 // Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressPercent
 // 0x0004 (0x0004 - 0x0000)
@@ -1501,9 +1597,6 @@ struct SynthSamplePlayer_GetCurrentPlaybackProgressPercent final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthSamplePlayer_GetCurrentPlaybackProgressPercent) == 0x000004, "Wrong alignment on SynthSamplePlayer_GetCurrentPlaybackProgressPercent");
-static_assert(sizeof(SynthSamplePlayer_GetCurrentPlaybackProgressPercent) == 0x000004, "Wrong size on SynthSamplePlayer_GetCurrentPlaybackProgressPercent");
-static_assert(offsetof(SynthSamplePlayer_GetCurrentPlaybackProgressPercent, ReturnValue) == 0x000000, "Member 'SynthSamplePlayer_GetCurrentPlaybackProgressPercent::ReturnValue' has a wrong offset!");
 
 // Function Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressTime
 // 0x0004 (0x0004 - 0x0000)
@@ -1512,9 +1605,6 @@ struct SynthSamplePlayer_GetCurrentPlaybackProgressTime final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthSamplePlayer_GetCurrentPlaybackProgressTime) == 0x000004, "Wrong alignment on SynthSamplePlayer_GetCurrentPlaybackProgressTime");
-static_assert(sizeof(SynthSamplePlayer_GetCurrentPlaybackProgressTime) == 0x000004, "Wrong size on SynthSamplePlayer_GetCurrentPlaybackProgressTime");
-static_assert(offsetof(SynthSamplePlayer_GetCurrentPlaybackProgressTime, ReturnValue) == 0x000000, "Member 'SynthSamplePlayer_GetCurrentPlaybackProgressTime::ReturnValue' has a wrong offset!");
 
 // Function Synthesis.SynthSamplePlayer.GetSampleDuration
 // 0x0004 (0x0004 - 0x0000)
@@ -1523,9 +1613,6 @@ struct SynthSamplePlayer_GetSampleDuration final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthSamplePlayer_GetSampleDuration) == 0x000004, "Wrong alignment on SynthSamplePlayer_GetSampleDuration");
-static_assert(sizeof(SynthSamplePlayer_GetSampleDuration) == 0x000004, "Wrong size on SynthSamplePlayer_GetSampleDuration");
-static_assert(offsetof(SynthSamplePlayer_GetSampleDuration, ReturnValue) == 0x000000, "Member 'SynthSamplePlayer_GetSampleDuration::ReturnValue' has a wrong offset!");
 
 // Function Synthesis.SynthSamplePlayer.IsLoaded
 // 0x0001 (0x0001 - 0x0000)
@@ -1534,9 +1621,32 @@ struct SynthSamplePlayer_IsLoaded final
 public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthSamplePlayer_IsLoaded) == 0x000001, "Wrong alignment on SynthSamplePlayer_IsLoaded");
-static_assert(sizeof(SynthSamplePlayer_IsLoaded) == 0x000001, "Wrong size on SynthSamplePlayer_IsLoaded");
-static_assert(offsetof(SynthSamplePlayer_IsLoaded, ReturnValue) == 0x000000, "Member 'SynthSamplePlayer_IsLoaded::ReturnValue' has a wrong offset!");
+
+// Function Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLinearFrequency
+// 0x0018 (0x0018 - 0x0000)
+struct SynthesisUtilitiesBlueprintFunctionLibrary_GetLinearFrequency final
+{
+public:
+	float                                         InLogFrequencyValue;                               // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InDomainMin;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InDomainMax;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InRangeMin;                                        // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InRangeMax;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary.GetLogFrequency
+// 0x0018 (0x0018 - 0x0000)
+struct SynthesisUtilitiesBlueprintFunctionLibrary_GetLogFrequency final
+{
+public:
+	float                                         InLinearValue;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InDomainMin;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InDomainMax;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InRangeMin;                                        // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InRangeMax;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function Synthesis.SynthKnob.SetLocked
 // 0x0001 (0x0001 - 0x0000)
@@ -1545,9 +1655,6 @@ struct SynthKnob_SetLocked final
 public:
 	bool                                          InValue;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthKnob_SetLocked) == 0x000001, "Wrong alignment on SynthKnob_SetLocked");
-static_assert(sizeof(SynthKnob_SetLocked) == 0x000001, "Wrong size on SynthKnob_SetLocked");
-static_assert(offsetof(SynthKnob_SetLocked, InValue) == 0x000000, "Member 'SynthKnob_SetLocked::InValue' has a wrong offset!");
 
 // Function Synthesis.SynthKnob.SetStepSize
 // 0x0004 (0x0004 - 0x0000)
@@ -1556,9 +1663,6 @@ struct SynthKnob_SetStepSize final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthKnob_SetStepSize) == 0x000004, "Wrong alignment on SynthKnob_SetStepSize");
-static_assert(sizeof(SynthKnob_SetStepSize) == 0x000004, "Wrong size on SynthKnob_SetStepSize");
-static_assert(offsetof(SynthKnob_SetStepSize, InValue) == 0x000000, "Member 'SynthKnob_SetStepSize::InValue' has a wrong offset!");
 
 // Function Synthesis.SynthKnob.SetValue
 // 0x0004 (0x0004 - 0x0000)
@@ -1567,9 +1671,6 @@ struct SynthKnob_SetValue final
 public:
 	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthKnob_SetValue) == 0x000004, "Wrong alignment on SynthKnob_SetValue");
-static_assert(sizeof(SynthKnob_SetValue) == 0x000004, "Wrong size on SynthKnob_SetValue");
-static_assert(offsetof(SynthKnob_SetValue, InValue) == 0x000000, "Member 'SynthKnob_SetValue::InValue' has a wrong offset!");
 
 // Function Synthesis.SynthKnob.GetValue
 // 0x0004 (0x0004 - 0x0000)
@@ -1578,9 +1679,6 @@ struct SynthKnob_GetValue final
 public:
 	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(SynthKnob_GetValue) == 0x000004, "Wrong alignment on SynthKnob_GetValue");
-static_assert(sizeof(SynthKnob_GetValue) == 0x000004, "Wrong size on SynthKnob_GetValue");
-static_assert(offsetof(SynthKnob_GetValue, ReturnValue) == 0x000000, "Member 'SynthKnob_GetValue::ReturnValue' has a wrong offset!");
 
 }
 

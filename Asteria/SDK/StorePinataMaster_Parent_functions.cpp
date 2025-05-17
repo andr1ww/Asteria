@@ -31,20 +31,6 @@ void AStorePinataMaster_Parent_C::InitiatePinata()
 }
 
 
-// Function StorePinataMaster_Parent.StorePinataMaster_Parent_C.CameraTransitionComplete
-// (BlueprintCallable, BlueprintEvent)
-
-void AStorePinataMaster_Parent_C::CameraTransitionComplete()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StorePinataMaster_Parent_C", "CameraTransitionComplete");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function StorePinataMaster_Parent.StorePinataMaster_Parent_C.CameraResetComplete
 // (BlueprintCallable, BlueprintEvent)
 
@@ -54,6 +40,20 @@ void AStorePinataMaster_Parent_C::CameraResetComplete()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("StorePinataMaster_Parent_C", "CameraResetComplete");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StorePinataMaster_Parent.StorePinataMaster_Parent_C.CameraTransitionComplete
+// (BlueprintCallable, BlueprintEvent)
+
+void AStorePinataMaster_Parent_C::CameraTransitionComplete()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StorePinataMaster_Parent_C", "CameraTransitionComplete");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

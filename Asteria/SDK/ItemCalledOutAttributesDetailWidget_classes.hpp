@@ -10,32 +10,32 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemCalledOutAttributesDetailWidget.ItemCalledOutAttributesDetailWidget_C
-// 0x0028 (0x02A8 - 0x0280)
+// 0x0028 (0x0308 - 0x02E0)
 class UItemCalledOutAttributesDetailWidget_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFortItemCategoryIndicator*             AmmoTypeIndicator;                                 // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWrapBox*                               ContainerWrapBox;                                  // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UStatsListItemWIdget_C*>         StatWidgets;                                       // 0x0298(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFortItemCategoryIndicator*             AmmoTypeIndicator;                                 // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWrapBox*                               ContainerWrapBox;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UStatsListItemWIdget_C*>         StatWidgets;                                       // 0x02F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
 
 public:
-	void Clear_Stats();
-	void UpdateStats();
-	void GetDisplayAttributesToCallOut(TArray<struct FFortDisplayAttribute>* Attributes);
-	void HandlePostDifferentItemToDetailSet();
-	void HandleItemToDetailChangedBP();
 	void ExecuteUbergraph_ItemCalledOutAttributesDetailWidget(int32 EntryPoint);
+	void HandleItemToDetailChangedBP();
+	void HandlePostDifferentItemToDetailSet();
+	void GetDisplayAttributesToCallOut(TArray<struct FFortDisplayAttribute>* Attributes);
+	void UpdateStats();
+	void Clear_Stats();
 
 public:
 	static class UClass* StaticClass()
@@ -47,12 +47,6 @@ public:
 		return GetDefaultObjImpl<UItemCalledOutAttributesDetailWidget_C>();
 	}
 };
-static_assert(alignof(UItemCalledOutAttributesDetailWidget_C) == 0x000008, "Wrong alignment on UItemCalledOutAttributesDetailWidget_C");
-static_assert(sizeof(UItemCalledOutAttributesDetailWidget_C) == 0x0002A8, "Wrong size on UItemCalledOutAttributesDetailWidget_C");
-static_assert(offsetof(UItemCalledOutAttributesDetailWidget_C, UberGraphFrame) == 0x000280, "Member 'UItemCalledOutAttributesDetailWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UItemCalledOutAttributesDetailWidget_C, AmmoTypeIndicator) == 0x000288, "Member 'UItemCalledOutAttributesDetailWidget_C::AmmoTypeIndicator' has a wrong offset!");
-static_assert(offsetof(UItemCalledOutAttributesDetailWidget_C, ContainerWrapBox) == 0x000290, "Member 'UItemCalledOutAttributesDetailWidget_C::ContainerWrapBox' has a wrong offset!");
-static_assert(offsetof(UItemCalledOutAttributesDetailWidget_C, StatWidgets) == 0x000298, "Member 'UItemCalledOutAttributesDetailWidget_C::StatWidgets' has a wrong offset!");
 
 }
 

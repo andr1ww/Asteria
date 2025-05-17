@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UB_RiftImpact_CameraShake_C>();
 	}
 };
-static_assert(alignof(UB_RiftImpact_CameraShake_C) == 0x000008, "Wrong alignment on UB_RiftImpact_CameraShake_C");
-static_assert(sizeof(UB_RiftImpact_CameraShake_C) == 0x000160, "Wrong size on UB_RiftImpact_CameraShake_C");
 
 }
 

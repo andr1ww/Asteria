@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // Enum VectorVM.EVectorVMOp
-// NumValues: 0x005A
+// NumValues: 0x0060
 enum class EVectorVMOp : uint8
 {
 	done                                     = 0,
@@ -95,19 +95,25 @@ enum class EVectorVMOp : uint8
 	b2f                                      = 74,
 	i2b                                      = 75,
 	b2i                                      = 76,
-	inputdata_32bit                          = 77,
-	inputdata_noadvance_32bit                = 78,
-	outputdata_32bit                         = 79,
-	acquireindex                             = 80,
-	external_func_call                       = 81,
-	exec_index                               = 82,
-	noise2D                                  = 83,
-	noise3D                                  = 84,
-	enter_stat_scope                         = 85,
-	exit_stat_scope                          = 86,
-	update_id                                = 87,
-	acquire_id                               = 88,
-	NumOpcodes                               = 89,
+	inputdata_float                          = 77,
+	inputdata_int32                          = 78,
+	inputdata_half                           = 79,
+	inputdata_noadvance_float                = 80,
+	inputdata_noadvance_int32                = 81,
+	inputdata_noadvance_half                 = 82,
+	outputdata_float                         = 83,
+	outputdata_int32                         = 84,
+	outputdata_half                          = 85,
+	acquireindex                             = 86,
+	external_func_call                       = 87,
+	exec_index                               = 88,
+	noise2D                                  = 89,
+	noise3D                                  = 90,
+	enter_stat_scope                         = 91,
+	exit_stat_scope                          = 92,
+	update_id                                = 93,
+	acquire_id                               = 94,
+	NumOpcodes                               = 95,
 };
 
 // Enum VectorVM.EVectorVMOperandLocation

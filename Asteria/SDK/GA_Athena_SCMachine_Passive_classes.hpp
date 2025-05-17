@@ -10,22 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C
-// 0x0020 (0x0960 - 0x0940)
+// 0x0020 (0x0AC8 - 0x0AA8)
 class UGA_Athena_SCMachine_Passive_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawnAthena*                  PlayerPawn;                                        // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                SpawnZOffset;                                      // 0x0950(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawnAthena*                  PlayerPawn;                                        // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                SpawnZOffset;                                      // 0x0AB8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Athena_SCMachine_Passive(int32 EntryPoint);
@@ -45,11 +45,6 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_SCMachine_Passive_C>();
 	}
 };
-static_assert(alignof(UGA_Athena_SCMachine_Passive_C) == 0x000008, "Wrong alignment on UGA_Athena_SCMachine_Passive_C");
-static_assert(sizeof(UGA_Athena_SCMachine_Passive_C) == 0x000960, "Wrong size on UGA_Athena_SCMachine_Passive_C");
-static_assert(offsetof(UGA_Athena_SCMachine_Passive_C, UberGraphFrame) == 0x000940, "Member 'UGA_Athena_SCMachine_Passive_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_SCMachine_Passive_C, PlayerPawn) == 0x000948, "Member 'UGA_Athena_SCMachine_Passive_C::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_SCMachine_Passive_C, SpawnZOffset) == 0x000950, "Member 'UGA_Athena_SCMachine_Passive_C::SpawnZOffset' has a wrong offset!");
 
 }
 

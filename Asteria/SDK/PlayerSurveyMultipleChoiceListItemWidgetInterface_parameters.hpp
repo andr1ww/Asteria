@@ -23,9 +23,6 @@ struct PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetChoiceData final
 public:
 	struct FFortPlayerSurveyQuestionChoice        Value;                                             // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetChoiceData) == 0x000008, "Wrong alignment on PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetChoiceData");
-static_assert(sizeof(PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetChoiceData) == 0x000018, "Wrong size on PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetChoiceData");
-static_assert(offsetof(PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetChoiceData, Value) == 0x000000, "Member 'PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetChoiceData::Value' has a wrong offset!");
 
 // Function PlayerSurveyMultipleChoiceListItemWidgetInterface.PlayerSurveyMultipleChoiceListItemWidgetInterface_C.SetIndex
 // 0x0004 (0x0004 - 0x0000)
@@ -34,9 +31,6 @@ struct PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetIndex final
 public:
 	int32                                         Value;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetIndex) == 0x000004, "Wrong alignment on PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetIndex");
-static_assert(sizeof(PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetIndex) == 0x000004, "Wrong size on PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetIndex");
-static_assert(offsetof(PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetIndex, Value) == 0x000000, "Member 'PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetIndex::Value' has a wrong offset!");
 
 }
 

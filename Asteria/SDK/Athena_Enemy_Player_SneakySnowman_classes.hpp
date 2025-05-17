@@ -10,30 +10,30 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Athena_Enemy_Player_SneakySnowman.Athena_Enemy_Player_SneakySnowman_C
-// 0x0070 (0x0B80 - 0x0B10)
+// 0x0070 (0x0C48 - 0x0BD8)
 class AAthena_Enemy_Player_SneakySnowman_C final : public ABuildingProp
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   SM_SneakySnowman;                                  // 0x0B18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          Effects;                                           // 0x0B20(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B21[0x3];                                      // 0x0B21(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   EnemySnowmanHolster;                               // 0x0B24(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B2C[0x4];                                      // 0x0B2C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0B30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TotalDamage;                                       // 0x0B38(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B3C[0x4];                                      // 0x0B3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         MaxHealth;                                         // 0x0B40(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         SnowmanDuration;                                   // 0x0B60(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   SM_SneakySnowman;                                  // 0x0BE0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          Effects;                                           // 0x0BE8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BE9[0x3];                                      // 0x0BE9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   EnemySnowmanHolster;                               // 0x0BEC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BF4[0x4];                                      // 0x0BF4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0BF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TotalDamage;                                       // 0x0C00(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C04[0x4];                                      // 0x0C04(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         MaxHealth;                                         // 0x0C08(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         SnowmanDuration;                                   // 0x0C28(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_Athena_Enemy_Player_SneakySnowman(int32 EntryPoint);
@@ -50,16 +50,6 @@ public:
 		return GetDefaultObjImpl<AAthena_Enemy_Player_SneakySnowman_C>();
 	}
 };
-static_assert(alignof(AAthena_Enemy_Player_SneakySnowman_C) == 0x000008, "Wrong alignment on AAthena_Enemy_Player_SneakySnowman_C");
-static_assert(sizeof(AAthena_Enemy_Player_SneakySnowman_C) == 0x000B80, "Wrong size on AAthena_Enemy_Player_SneakySnowman_C");
-static_assert(offsetof(AAthena_Enemy_Player_SneakySnowman_C, UberGraphFrame) == 0x000B10, "Member 'AAthena_Enemy_Player_SneakySnowman_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AAthena_Enemy_Player_SneakySnowman_C, SM_SneakySnowman) == 0x000B18, "Member 'AAthena_Enemy_Player_SneakySnowman_C::SM_SneakySnowman' has a wrong offset!");
-static_assert(offsetof(AAthena_Enemy_Player_SneakySnowman_C, Effects) == 0x000B20, "Member 'AAthena_Enemy_Player_SneakySnowman_C::Effects' has a wrong offset!");
-static_assert(offsetof(AAthena_Enemy_Player_SneakySnowman_C, EnemySnowmanHolster) == 0x000B24, "Member 'AAthena_Enemy_Player_SneakySnowman_C::EnemySnowmanHolster' has a wrong offset!");
-static_assert(offsetof(AAthena_Enemy_Player_SneakySnowman_C, PlayerPawn) == 0x000B30, "Member 'AAthena_Enemy_Player_SneakySnowman_C::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(AAthena_Enemy_Player_SneakySnowman_C, TotalDamage) == 0x000B38, "Member 'AAthena_Enemy_Player_SneakySnowman_C::TotalDamage' has a wrong offset!");
-static_assert(offsetof(AAthena_Enemy_Player_SneakySnowman_C, MaxHealth) == 0x000B40, "Member 'AAthena_Enemy_Player_SneakySnowman_C::MaxHealth' has a wrong offset!");
-static_assert(offsetof(AAthena_Enemy_Player_SneakySnowman_C, SnowmanDuration) == 0x000B60, "Member 'AAthena_Enemy_Player_SneakySnowman_C::SnowmanDuration' has a wrong offset!");
 
 }
 

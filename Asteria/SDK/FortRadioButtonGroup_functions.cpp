@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function FortRadioButtonGroup.FortRadioButtonGroup_C.ExecuteUbergraph_FortRadioButtonGroup
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UFortRadioButtonGroup_C::ExecuteUbergraph_FortRadioButtonGroup(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortRadioButtonGroup_C", "ExecuteUbergraph_FortRadioButtonGroup");
+
+	Params::FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function FortRadioButtonGroup.FortRadioButtonGroup_C.UpdateButtons
 // (BlueprintCallable, BlueprintEvent)
 
@@ -26,6 +46,20 @@ void UFortRadioButtonGroup_C::UpdateButtons()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("FortRadioButtonGroup_C", "UpdateButtons");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function FortRadioButtonGroup.FortRadioButtonGroup_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UFortRadioButtonGroup_C::Destruct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortRadioButtonGroup_C", "Destruct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -53,20 +87,6 @@ void UFortRadioButtonGroup_C::OnButtonClicked_Bind(class UCommonButton* Associat
 }
 
 
-// Function FortRadioButtonGroup.FortRadioButtonGroup_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UFortRadioButtonGroup_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortRadioButtonGroup_C", "Destruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function FortRadioButtonGroup.FortRadioButtonGroup_C.CenterOnWidget
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -78,26 +98,6 @@ void UFortRadioButtonGroup_C::CenterOnWidget()
 		Func = Class->GetFunction("FortRadioButtonGroup_C", "CenterOnWidget");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FortRadioButtonGroup.FortRadioButtonGroup_C.ExecuteUbergraph_FortRadioButtonGroup
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UFortRadioButtonGroup_C::ExecuteUbergraph_FortRadioButtonGroup(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortRadioButtonGroup_C", "ExecuteUbergraph_FortRadioButtonGroup");
-
-	Params::FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -46,7 +46,7 @@ void UUACNetworkComponent::SendClientHello(uint32 SessionKey)
 // (Net, NetReliable, Native, Event, Protected, NetClient)
 // Parameters:
 // uint8                                   Type                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<uint8>                           Packet                                                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    Packet                                                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UUACNetworkComponent::SendPacketToClient(uint8 Type, const TArray<uint8>& Packet)
 {
@@ -73,7 +73,7 @@ void UUACNetworkComponent::SendPacketToClient(uint8 Type, const TArray<uint8>& P
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
 // uint8                                   Type                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<uint8>                           Packet                                                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    Packet                                                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UUACNetworkComponent::SendPacketToServer(uint8 Type, const TArray<uint8>& Packet)
 {

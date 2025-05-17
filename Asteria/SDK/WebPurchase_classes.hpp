@@ -11,29 +11,26 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUI_classes.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WebPurchase.WebPurchase_C
-// 0x0028 (0x0348 - 0x0320)
-class UWebPurchase_C final : public UCommonActivatablePanel
+// 0x0020 (0x0470 - 0x0450)
+class UWebPurchase_C final : public UFortWebPurchaseScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCircularThrobber*                      Throbber;                                          // 0x0328(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                WebContent;                                        // 0x0330(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    BackAction;                                        // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0450(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCircularThrobber*                      Throbber;                                          // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    BackAction;                                        // 0x0460(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
-	void ExecuteUbergraph_WebPurchase(int32 EntryPoint);
-	void OnActivated();
-	void Display(class UWidget* WebWidget, const class FString& AttemptedMTXOfferId);
-	void Dismiss();
-	void BindDelegates();
 	void HandleBack(bool* bPassThrough);
+	void BindDelegates();
+	void BP_OnActivated();
+	void ExecuteUbergraph_WebPurchase(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -45,12 +42,6 @@ public:
 		return GetDefaultObjImpl<UWebPurchase_C>();
 	}
 };
-static_assert(alignof(UWebPurchase_C) == 0x000008, "Wrong alignment on UWebPurchase_C");
-static_assert(sizeof(UWebPurchase_C) == 0x000348, "Wrong size on UWebPurchase_C");
-static_assert(offsetof(UWebPurchase_C, UberGraphFrame) == 0x000320, "Member 'UWebPurchase_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWebPurchase_C, Throbber) == 0x000328, "Member 'UWebPurchase_C::Throbber' has a wrong offset!");
-static_assert(offsetof(UWebPurchase_C, WebContent) == 0x000330, "Member 'UWebPurchase_C::WebContent' has a wrong offset!");
-static_assert(offsetof(UWebPurchase_C, BackAction) == 0x000338, "Member 'UWebPurchase_C::BackAction' has a wrong offset!");
 
 }
 

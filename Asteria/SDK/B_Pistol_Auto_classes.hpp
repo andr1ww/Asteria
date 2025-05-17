@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Pistol_Auto.B_Pistol_Auto_C
-// 0x0000 (0x0DA8 - 0x0DA8)
+// 0x0000 (0x1310 - 0x1310)
 class AB_Pistol_Auto_C : public AB_Pistol_Generic_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<AB_Pistol_Auto_C>();
 	}
 };
-static_assert(alignof(AB_Pistol_Auto_C) == 0x000008, "Wrong alignment on AB_Pistol_Auto_C");
-static_assert(sizeof(AB_Pistol_Auto_C) == 0x000DA8, "Wrong size on AB_Pistol_Auto_C");
 
 }
 

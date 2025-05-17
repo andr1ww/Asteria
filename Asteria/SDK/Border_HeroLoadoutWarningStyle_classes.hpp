@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UBorder_HeroLoadoutWarningStyle_C>();
 	}
 };
-static_assert(alignof(UBorder_HeroLoadoutWarningStyle_C) == 0x000008, "Wrong alignment on UBorder_HeroLoadoutWarningStyle_C");
-static_assert(sizeof(UBorder_HeroLoadoutWarningStyle_C) == 0x0000B0, "Wrong size on UBorder_HeroLoadoutWarningStyle_C");
 
 }
 

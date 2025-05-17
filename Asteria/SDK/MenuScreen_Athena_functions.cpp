@@ -17,63 +17,98 @@
 namespace SDK
 {
 
-// Function MenuScreen_Athena.MenuScreen_Athena_C.ExecuteUbergraph_MenuScreen_Athena
-// (Final, UbergraphFunction)
+// Function MenuScreen_Athena.MenuScreen_Athena_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
-void UMenuScreen_Athena_C::ExecuteUbergraph_MenuScreen_Athena(int32 EntryPoint)
+void UMenuScreen_Athena_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MenuScreen_Athena_C", "ExecuteUbergraph_MenuScreen_Athena");
+		Func = Class->GetFunction("MenuScreen_Athena_C", "AnimGraph");
 
-	Params::MenuScreen_Athena_C_ExecuteUbergraph_MenuScreen_Athena Parms{};
+	Params::MenuScreen_Athena_C_AnimGraph Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
+}
+
+
+// Function MenuScreen_Athena.MenuScreen_Athena_C.HidePropsForBlend
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAnimMontage*                     NewMontage                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMenuScreen_Athena_C::HidePropsForBlend(class UAnimMontage* NewMontage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MenuScreen_Athena_C", "HidePropsForBlend");
+
+	Params::MenuScreen_Athena_C_HidePropsForBlend Parms{};
+
+	Parms.NewMontage = NewMontage;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function MenuScreen_Athena.MenuScreen_Athena_C.AnimNotify_LobbySkydive_Gliding
+// Function MenuScreen_Athena.MenuScreen_Athena_C.AnimNotify_playFacialAnim
 // (BlueprintCallable, BlueprintEvent)
 
-void UMenuScreen_Athena_C::AnimNotify_LobbySkydive_Gliding()
+void UMenuScreen_Athena_C::AnimNotify_playFacialAnim()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MenuScreen_Athena_C", "AnimNotify_LobbySkydive_Gliding");
+		Func = Class->GetFunction("MenuScreen_Athena_C", "AnimNotify_playFacialAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MenuScreen_Athena.MenuScreen_Athena_C.AnimNotify_LobbySkydive_Diving
+// Function MenuScreen_Athena.MenuScreen_Athena_C.UserFocus
 // (BlueprintCallable, BlueprintEvent)
 
-void UMenuScreen_Athena_C::AnimNotify_LobbySkydive_Diving()
+void UMenuScreen_Athena_C::UserFocus()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MenuScreen_Athena_C", "AnimNotify_LobbySkydive_Diving");
+		Func = Class->GetFunction("MenuScreen_Athena_C", "UserFocus");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MenuScreen_Athena.MenuScreen_Athena_C.BlueprintInitializeAnimation
-// (Event, Public, BlueprintEvent)
+// Function MenuScreen_Athena.MenuScreen_Athena_C.AnimNotify_LeftB
+// (BlueprintCallable, BlueprintEvent)
 
-void UMenuScreen_Athena_C::BlueprintInitializeAnimation()
+void UMenuScreen_Athena_C::AnimNotify_LeftB()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MenuScreen_Athena_C", "BlueprintInitializeAnimation");
+		Func = Class->GetFunction("MenuScreen_Athena_C", "AnimNotify_LeftB");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MenuScreen_Athena.MenuScreen_Athena_C.EvaluateGraphExposedInputs_ExecuteUbergraph_MenuScreen_Athena_AnimGraphNode_LayeredBoneBlend_8D2B60D44BBADFD01AC9A6BF39472D0B
+// (BlueprintEvent)
+
+void UMenuScreen_Athena_C::EvaluateGraphExposedInputs_ExecuteUbergraph_MenuScreen_Athena_AnimGraphNode_LayeredBoneBlend_8D2B60D44BBADFD01AC9A6BF39472D0B()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MenuScreen_Athena_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_MenuScreen_Athena_AnimGraphNode_LayeredBoneBlend_8D2B60D44BBADFD01AC9A6BF39472D0B");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -99,59 +134,107 @@ void UMenuScreen_Athena_C::BlueprintUpdateAnimation(float DeltaTimeX)
 }
 
 
-// Function MenuScreen_Athena.MenuScreen_Athena_C.AnimNotify_LeftB
-// (BlueprintCallable, BlueprintEvent)
+// Function MenuScreen_Athena.MenuScreen_Athena_C.BlueprintInitializeAnimation
+// (Event, Public, BlueprintEvent)
 
-void UMenuScreen_Athena_C::AnimNotify_LeftB()
+void UMenuScreen_Athena_C::BlueprintInitializeAnimation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MenuScreen_Athena_C", "AnimNotify_LeftB");
+		Func = Class->GetFunction("MenuScreen_Athena_C", "BlueprintInitializeAnimation");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MenuScreen_Athena.MenuScreen_Athena_C.AnimNotify_playFacialAnim
+// Function MenuScreen_Athena.MenuScreen_Athena_C.AnimNotify_LobbySkydive_Diving
 // (BlueprintCallable, BlueprintEvent)
 
-void UMenuScreen_Athena_C::AnimNotify_playFacialAnim()
+void UMenuScreen_Athena_C::AnimNotify_LobbySkydive_Diving()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MenuScreen_Athena_C", "AnimNotify_playFacialAnim");
+		Func = Class->GetFunction("MenuScreen_Athena_C", "AnimNotify_LobbySkydive_Diving");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MenuScreen_Athena.MenuScreen_Athena_C.EvaluateGraphExposedInputs_ExecuteUbergraph_MenuScreen_Athena_AnimGraphNode_LayeredBoneBlend_8D2B60D44BBADFD01AC9A6BF39472D0B
-// (BlueprintEvent)
+// Function MenuScreen_Athena.MenuScreen_Athena_C.AnimNotify_LobbySkydive_Gliding
+// (BlueprintCallable, BlueprintEvent)
 
-void UMenuScreen_Athena_C::EvaluateGraphExposedInputs_ExecuteUbergraph_MenuScreen_Athena_AnimGraphNode_LayeredBoneBlend_8D2B60D44BBADFD01AC9A6BF39472D0B()
+void UMenuScreen_Athena_C::AnimNotify_LobbySkydive_Gliding()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MenuScreen_Athena_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_MenuScreen_Athena_AnimGraphNode_LayeredBoneBlend_8D2B60D44BBADFD01AC9A6BF39472D0B");
+		Func = Class->GetFunction("MenuScreen_Athena_C", "AnimNotify_LobbySkydive_Gliding");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MenuScreen_Athena.MenuScreen_Athena_C.UserFocus
+// Function MenuScreen_Athena.MenuScreen_Athena_C.OnMontageStarted_Event_HideProps
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAnimMontage*                     Montage                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMenuScreen_Athena_C::UserFocus()
+void UMenuScreen_Athena_C::OnMontageStarted_Event_HideProps(class UAnimMontage* Montage)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MenuScreen_Athena_C", "UserFocus");
+		Func = Class->GetFunction("MenuScreen_Athena_C", "OnMontageStarted_Event_HideProps");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::MenuScreen_Athena_C_OnMontageStarted_Event_HideProps Parms{};
+
+	Parms.Montage = Montage;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MenuScreen_Athena.MenuScreen_Athena_C.OnMontageBlendingOut_Event_HideProps
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAnimMontage*                     Montage                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bInterrupted                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UMenuScreen_Athena_C::OnMontageBlendingOut_Event_HideProps(class UAnimMontage* Montage, bool bInterrupted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MenuScreen_Athena_C", "OnMontageBlendingOut_Event_HideProps");
+
+	Params::MenuScreen_Athena_C_OnMontageBlendingOut_Event_HideProps Parms{};
+
+	Parms.Montage = Montage;
+	Parms.bInterrupted = bInterrupted;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MenuScreen_Athena.MenuScreen_Athena_C.ExecuteUbergraph_MenuScreen_Athena
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMenuScreen_Athena_C::ExecuteUbergraph_MenuScreen_Athena(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MenuScreen_Athena_C", "ExecuteUbergraph_MenuScreen_Athena");
+
+	Params::MenuScreen_Athena_C_ExecuteUbergraph_MenuScreen_Athena Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

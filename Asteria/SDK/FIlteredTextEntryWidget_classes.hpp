@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "Slate_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
@@ -19,18 +21,53 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass FIlteredTextEntryWidget.FilteredTextEntryWidget_C
-// 0x0018 (0x0278 - 0x0260)
+// 0x08E0 (0x0D10 - 0x0430)
 class UFilteredTextEntryWidget_C final : public UFortEditableFilteredCountedTextBox
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Error;                                             // 0x0268(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ErrorText;                                         // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0430(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Error;                                             // 0x0438(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_Prompt;                            // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ErrorText;                                         // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_Info;                                // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_119;                                         // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Selected;                                    // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    InputActionWidget;                                 // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_InputAction;                               // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               WarningImage;                                      // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bUseOverrideStyle;                                 // 0x0480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_481[0x7];                                      // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEditableTextBoxStyle                  OverrideStyle;                                     // 0x0488(0x07F0)(Edit, BlueprintVisible, ExposeOnSpawn)
+	bool                                          bHideValidationInfo;                               // 0x0C78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	ETextJustify                                  Justification;                                     // 0x0C79(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          ShowTextPrompt;                                    // 0x0C7A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_C7B[0x5];                                      // 0x0C7B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 PromptTextStyle;                                   // 0x0C80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class FText                                   PromptText;                                        // 0x0C88(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	TMulticastInlineDelegate<void(class FText Text)> OnTextChanged;                                  // 0x0CA0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bUseHintText;                                      // 0x0CB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_CB1[0x7];                                      // 0x0CB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   HintText;                                          // 0x0CB8(0x0018)(Edit, BlueprintVisible)
+	TMulticastInlineDelegate<void(class FText Text, bool BadText)> OnSanitizedTextReady;             // 0x0CD0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnTextCommitByEnter;                               // 0x0CE0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          SanitizedTextReady;                                // 0x0CF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_CF1[0x7];                                      // 0x0CF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnTextCommitted;                                   // 0x0CF8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
-	void OnDirtyTextAttempted(bool bIsBadText);
 	void ExecuteUbergraph_FilteredTextEntryWidget(int32 EntryPoint);
+	void BndEvt__EditText_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature(const class FText& Text, ETextCommit CommitMethod);
+	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
+	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void BndEvt__EditText_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text);
+	void PreConstruct(bool IsDesignTime);
+	void OnDirtyTextAttempted(bool bIsBadText, bool bAdditionalValidationFailed);
+	void Construct();
+	void UpdateConfiguration(bool bOverrideStyle, bool bHideValidation, ETextJustify TextJustification, bool bShouldShowTextPrompt, const class FText& PromptDisplayText, class UClass* TextStyle);
+	void SetTextFocus();
+	void HandleShowPrompt(const class FText& CurrentText);
+	void GetCurrentText(class FText* Text);
+	void GetErrorText(bool Additional_Validator_Failed, class FText* Appropriate_Text);
 
 public:
 	static class UClass* StaticClass()
@@ -42,11 +79,6 @@ public:
 		return GetDefaultObjImpl<UFilteredTextEntryWidget_C>();
 	}
 };
-static_assert(alignof(UFilteredTextEntryWidget_C) == 0x000008, "Wrong alignment on UFilteredTextEntryWidget_C");
-static_assert(sizeof(UFilteredTextEntryWidget_C) == 0x000278, "Wrong size on UFilteredTextEntryWidget_C");
-static_assert(offsetof(UFilteredTextEntryWidget_C, UberGraphFrame) == 0x000260, "Member 'UFilteredTextEntryWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UFilteredTextEntryWidget_C, Error) == 0x000268, "Member 'UFilteredTextEntryWidget_C::Error' has a wrong offset!");
-static_assert(offsetof(UFilteredTextEntryWidget_C, ErrorText) == 0x000270, "Member 'UFilteredTextEntryWidget_C::ErrorText' has a wrong offset!");
 
 }
 

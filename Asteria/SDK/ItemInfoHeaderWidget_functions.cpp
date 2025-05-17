@@ -17,207 +17,81 @@
 namespace SDK
 {
 
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.GetAlternateNameForItem
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.ExecuteUbergraph_ItemInfoHeaderWidget
+// (Final, UbergraphFunction)
 // Parameters:
-// class UFortItemDefinition*              ItemDef                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class FText UItemInfoHeaderWidget_C::GetAlternateNameForItem(class UFortItemDefinition* ItemDef)
+void UItemInfoHeaderWidget_C::ExecuteUbergraph_ItemInfoHeaderWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "GetAlternateNameForItem");
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "ExecuteUbergraph_ItemInfoHeaderWidget");
 
-	Params::ItemInfoHeaderWidget_C_GetAlternateNameForItem Parms{};
+	Params::ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget Parms{};
 
-	Parms.ItemDef = ItemDef;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.HasValidItemDefinition
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    HasValidDescription                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UItemInfoHeaderWidget_C::HasValidItemDefinition(bool* HasValidDescription)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "HasValidItemDefinition");
-
-	Params::ItemInfoHeaderWidget_C_HasValidItemDefinition Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (HasValidDescription != nullptr)
-		*HasValidDescription = Parms.HasValidDescription;
-}
-
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateColorRarity
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortColorPalette                Colors                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-
-void UItemInfoHeaderWidget_C::UpdateColorRarity(const struct FFortColorPalette& Colors)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateColorRarity");
-
-	Params::ItemInfoHeaderWidget_C_UpdateColorRarity Parms{};
-
-	Parms.Colors = std::move(Colors);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.OverrideHeaderAndDiscription
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             Hearder                                                (BlueprintVisible, BlueprintReadOnly, Parm)
-// class FText                             Desciption                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-// class FText                             ItemType                                               (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                                    bUseAlternateHeaderBG                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.OnItemDefinitionChanged
+// (Event, Protected, BlueprintEvent)
 
-void UItemInfoHeaderWidget_C::OverrideHeaderAndDiscription(const class FText& Hearder, const class FText& Desciption, const class FText& ItemType, bool bUseAlternateHeaderBG)
+void UItemInfoHeaderWidget_C::OnItemDefinitionChanged()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "OverrideHeaderAndDiscription");
-
-	Params::ItemInfoHeaderWidget_C_OverrideHeaderAndDiscription Parms{};
-
-	Parms.Hearder = std::move(Hearder);
-	Parms.Desciption = std::move(Desciption);
-	Parms.ItemType = std::move(ItemType);
-	Parms.bUseAlternateHeaderBG = bUseAlternateHeaderBG;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateDetailVisibility
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UItemInfoHeaderWidget_C::UpdateDetailVisibility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateDetailVisibility");
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "OnItemDefinitionChanged");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.SetScrollWidget
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UItemInfoHeaderWidget_C::SetScrollWidget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "SetScrollWidget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateLocked
-// (Private, BlueprintCallable, BlueprintEvent)
-
-void UItemInfoHeaderWidget_C::UpdateLocked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateLocked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.SetLocked
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ShouldShowLocked                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class FText                             LockReason                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UItemInfoHeaderWidget_C::SetLocked(bool ShouldShowLocked, const class FText& LockReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "SetLocked");
-
-	Params::ItemInfoHeaderWidget_C_SetLocked Parms{};
-
-	Parms.ShouldShowLocked = ShouldShowLocked;
-	Parms.LockReason = std::move(LockReason);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.SetRemainingQuantity
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ShouldShowRemainingQuantity                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   NewRemainingQuantity                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UItemInfoHeaderWidget_C::SetRemainingQuantity(bool ShouldShowRemainingQuantity, int32 NewRemainingQuantity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "SetRemainingQuantity");
-
-	Params::ItemInfoHeaderWidget_C_SetRemainingQuantity Parms{};
-
-	Parms.ShouldShowRemainingQuantity = ShouldShowRemainingQuantity;
-	Parms.NewRemainingQuantity = NewRemainingQuantity;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateRemainingQuantity
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.Update
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortItemDefinition*              ItemDefinition_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Quantity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UItemInfoHeaderWidget_C::UpdateRemainingQuantity()
+void UItemInfoHeaderWidget_C::Update(class UFortItemDefinition* ItemDefinition_0, int32 Quantity)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateRemainingQuantity");
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "Update");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::ItemInfoHeaderWidget_C_Update Parms{};
+
+	Parms.ItemDefinition_0 = ItemDefinition_0;
+	Parms.Quantity = Quantity;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateCard
-// (Private, BlueprintCallable, BlueprintEvent)
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateNameText
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortItemDefinition*              ItemDefinition_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Quantity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UItemInfoHeaderWidget_C::UpdateCard()
+void UItemInfoHeaderWidget_C::UpdateNameText(class UFortItemDefinition* ItemDefinition_0, int32 Quantity)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateCard");
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateNameText");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::ItemInfoHeaderWidget_C_UpdateNameText Parms{};
+
+	Parms.ItemDefinition_0 = ItemDefinition_0;
+	Parms.Quantity = Quantity;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -247,81 +121,209 @@ void UItemInfoHeaderWidget_C::Setup(bool ShouldShowCard, EFortItemCardSize CardS
 }
 
 
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateNameText
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortItemDefinition*              ItemDefinition_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Quantity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateCard
+// (Private, BlueprintCallable, BlueprintEvent)
 
-void UItemInfoHeaderWidget_C::UpdateNameText(class UFortItemDefinition* ItemDefinition_0, int32 Quantity)
+void UItemInfoHeaderWidget_C::UpdateCard()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateNameText");
-
-	Params::ItemInfoHeaderWidget_C_UpdateNameText Parms{};
-
-	Parms.ItemDefinition_0 = ItemDefinition_0;
-	Parms.Quantity = Quantity;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.Update
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortItemDefinition*              ItemDefinition_0                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Quantity                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UItemInfoHeaderWidget_C::Update(class UFortItemDefinition* ItemDefinition_0, int32 Quantity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "Update");
-
-	Params::ItemInfoHeaderWidget_C_Update Parms{};
-
-	Parms.ItemDefinition_0 = ItemDefinition_0;
-	Parms.Quantity = Quantity;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.OnItemDefinitionChanged
-// (Event, Protected, BlueprintEvent)
-
-void UItemInfoHeaderWidget_C::OnItemDefinitionChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "OnItemDefinitionChanged");
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateCard");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.ExecuteUbergraph_ItemInfoHeaderWidget
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateRemainingQuantity
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UItemInfoHeaderWidget_C::ExecuteUbergraph_ItemInfoHeaderWidget(int32 EntryPoint)
+void UItemInfoHeaderWidget_C::UpdateRemainingQuantity()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "ExecuteUbergraph_ItemInfoHeaderWidget");
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateRemainingQuantity");
 
-	Params::ItemInfoHeaderWidget_C_ExecuteUbergraph_ItemInfoHeaderWidget Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.SetRemainingQuantity
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ShouldShowRemainingQuantity                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   NewRemainingQuantity                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UItemInfoHeaderWidget_C::SetRemainingQuantity(bool ShouldShowRemainingQuantity, int32 NewRemainingQuantity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "SetRemainingQuantity");
+
+	Params::ItemInfoHeaderWidget_C_SetRemainingQuantity Parms{};
+
+	Parms.ShouldShowRemainingQuantity = ShouldShowRemainingQuantity;
+	Parms.NewRemainingQuantity = NewRemainingQuantity;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.SetLocked
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ShouldShowLocked                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const class FText&                      LockReason                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UItemInfoHeaderWidget_C::SetLocked(bool ShouldShowLocked, const class FText& LockReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "SetLocked");
+
+	Params::ItemInfoHeaderWidget_C_SetLocked Parms{};
+
+	Parms.ShouldShowLocked = ShouldShowLocked;
+	Parms.LockReason = std::move(LockReason);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateLocked
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UItemInfoHeaderWidget_C::UpdateLocked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateLocked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.SetScrollWidget
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UItemInfoHeaderWidget_C::SetScrollWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "SetScrollWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateDetailVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UItemInfoHeaderWidget_C::UpdateDetailVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateDetailVisibility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.OverrideHeaderAndDescription
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      Header                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      Description                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      ItemType                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    bUseAlternateHeaderBG                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// EFortRarity                             Rarity                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UItemInfoHeaderWidget_C::OverrideHeaderAndDescription(const class FText& Header, const class FText& Description, const class FText& ItemType, bool bUseAlternateHeaderBG, EFortRarity Rarity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "OverrideHeaderAndDescription");
+
+	Params::ItemInfoHeaderWidget_C_OverrideHeaderAndDescription Parms{};
+
+	Parms.Header = std::move(Header);
+	Parms.Description = std::move(Description);
+	Parms.ItemType = std::move(ItemType);
+	Parms.bUseAlternateHeaderBG = bUseAlternateHeaderBG;
+	Parms.Rarity = Rarity;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.UpdateColorRarity
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFortColorPalette&         Colors                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+
+void UItemInfoHeaderWidget_C::UpdateColorRarity(const struct FFortColorPalette& Colors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "UpdateColorRarity");
+
+	Params::ItemInfoHeaderWidget_C_UpdateColorRarity Parms{};
+
+	Parms.Colors = std::move(Colors);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.HasValidItemDefinition
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   HasValidDescription                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UItemInfoHeaderWidget_C::HasValidItemDefinition(bool* HasValidDescription)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "HasValidItemDefinition");
+
+	Params::ItemInfoHeaderWidget_C_HasValidItemDefinition Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (HasValidDescription != nullptr)
+		*HasValidDescription = Parms.HasValidDescription;
+}
+
+
+// Function ItemInfoHeaderWidget.ItemInfoHeaderWidget_C.GetAlternateNameForItem
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UFortItemDefinition*              ItemDef                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText UItemInfoHeaderWidget_C::GetAlternateNameForItem(class UFortItemDefinition* ItemDef)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemInfoHeaderWidget_C", "GetAlternateNameForItem");
+
+	Params::ItemInfoHeaderWidget_C_GetAlternateNameForItem Parms{};
+
+	Parms.ItemDef = ItemDef;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

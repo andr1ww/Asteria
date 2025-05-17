@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass KeybindWidget.KeybindWidget_C
-// 0x0000 (0x0898 - 0x0898)
+// 0x0000 (0x08E8 - 0x08E8)
 class UKeybindWidget_C final : public UFortKeybindWidget
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UKeybindWidget_C>();
 	}
 };
-static_assert(alignof(UKeybindWidget_C) == 0x000008, "Wrong alignment on UKeybindWidget_C");
-static_assert(sizeof(UKeybindWidget_C) == 0x000898, "Wrong size on UKeybindWidget_C");
 
 }
 

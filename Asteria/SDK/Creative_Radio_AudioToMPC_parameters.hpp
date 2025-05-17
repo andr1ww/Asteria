@@ -21,13 +21,9 @@ namespace SDK::Params
 struct Creative_Radio_AudioToMPC_C_OnGatheredFFTData final
 {
 public:
-	TArray<struct FChannelData>                   FFTData;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FChannelData>                   FFTData;                                           // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	float                                         OutAmplitudeAverage;                               // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Creative_Radio_AudioToMPC_C_OnGatheredFFTData) == 0x000008, "Wrong alignment on Creative_Radio_AudioToMPC_C_OnGatheredFFTData");
-static_assert(sizeof(Creative_Radio_AudioToMPC_C_OnGatheredFFTData) == 0x000018, "Wrong size on Creative_Radio_AudioToMPC_C_OnGatheredFFTData");
-static_assert(offsetof(Creative_Radio_AudioToMPC_C_OnGatheredFFTData, FFTData) == 0x000000, "Member 'Creative_Radio_AudioToMPC_C_OnGatheredFFTData::FFTData' has a wrong offset!");
-static_assert(offsetof(Creative_Radio_AudioToMPC_C_OnGatheredFFTData, OutAmplitudeAverage) == 0x000010, "Member 'Creative_Radio_AudioToMPC_C_OnGatheredFFTData::OutAmplitudeAverage' has a wrong offset!");
 
 }
 

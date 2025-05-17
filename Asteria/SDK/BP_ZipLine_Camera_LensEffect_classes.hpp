@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ZipLine_Camera_LensEffect.BP_ZipLine_Camera_LensEffect_C
-// 0x0000 (0x0300 - 0x0300)
+// 0x0000 (0x02E0 - 0x02E0)
 class ABP_ZipLine_Camera_LensEffect_C final : public AEmitterCameraLensEffectBase
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ABP_ZipLine_Camera_LensEffect_C>();
 	}
 };
-static_assert(alignof(ABP_ZipLine_Camera_LensEffect_C) == 0x000010, "Wrong alignment on ABP_ZipLine_Camera_LensEffect_C");
-static_assert(sizeof(ABP_ZipLine_Camera_LensEffect_C) == 0x000300, "Wrong size on ABP_ZipLine_Camera_LensEffect_C");
 
 }
 

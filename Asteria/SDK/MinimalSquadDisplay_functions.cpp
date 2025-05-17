@@ -17,10 +17,52 @@
 namespace SDK
 {
 
+// Function MinimalSquadDisplay.MinimalSquadDisplay_C.ExecuteUbergraph_MinimalSquadDisplay
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMinimalSquadDisplay_C::ExecuteUbergraph_MinimalSquadDisplay(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinimalSquadDisplay_C", "ExecuteUbergraph_MinimalSquadDisplay");
+
+	Params::MinimalSquadDisplay_C_ExecuteUbergraph_MinimalSquadDisplay Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MinimalSquadDisplay.MinimalSquadDisplay_C.OnSquadIsEmptyChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bSquadIsEmpty                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bMultipleSquadsPopulated                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UMinimalSquadDisplay_C::OnSquadIsEmptyChanged(bool bSquadIsEmpty, bool bMultipleSquadsPopulated)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinimalSquadDisplay_C", "OnSquadIsEmptyChanged");
+
+	Params::MinimalSquadDisplay_C_OnSquadIsEmptyChanged Parms{};
+
+	Parms.bSquadIsEmpty = bSquadIsEmpty;
+	Parms.bMultipleSquadsPopulated = bMultipleSquadsPopulated;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function MinimalSquadDisplay.MinimalSquadDisplay_C.OnSquadAssigned
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FAthenaTeamDisplayInfo           SquadStyle                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FAthenaTeamDisplayInfo&    SquadStyle                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UMinimalSquadDisplay_C::OnSquadAssigned(const struct FAthenaTeamDisplayInfo& SquadStyle)
 {
@@ -72,48 +114,6 @@ void UMinimalSquadDisplay_C::OnLoaded_1B34C3FE47597A4DBA2DA7AFCF8744FB(class UOb
 	Params::MinimalSquadDisplay_C_OnLoaded_1B34C3FE47597A4DBA2DA7AFCF8744FB Parms{};
 
 	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MinimalSquadDisplay.MinimalSquadDisplay_C.OnSquadIsEmptyChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bSquadIsEmpty                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bMultipleSquadsPopulated                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UMinimalSquadDisplay_C::OnSquadIsEmptyChanged(bool bSquadIsEmpty, bool bMultipleSquadsPopulated)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinimalSquadDisplay_C", "OnSquadIsEmptyChanged");
-
-	Params::MinimalSquadDisplay_C_OnSquadIsEmptyChanged Parms{};
-
-	Parms.bSquadIsEmpty = bSquadIsEmpty;
-	Parms.bMultipleSquadsPopulated = bMultipleSquadsPopulated;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MinimalSquadDisplay.MinimalSquadDisplay_C.ExecuteUbergraph_MinimalSquadDisplay
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMinimalSquadDisplay_C::ExecuteUbergraph_MinimalSquadDisplay(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinimalSquadDisplay_C", "ExecuteUbergraph_MinimalSquadDisplay");
-
-	Params::MinimalSquadDisplay_C_ExecuteUbergraph_MinimalSquadDisplay Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

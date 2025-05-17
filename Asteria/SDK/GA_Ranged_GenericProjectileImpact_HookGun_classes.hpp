@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "GameplayTags_structs.hpp"
-#include "Engine_structs.hpp"
 #include "GA_Ranged_GenericDamage_classes.hpp"
 
 
@@ -19,15 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Ranged_GenericProjectileImpact_HookGun.GA_Ranged_GenericProjectileImpact_HookGun_C
-// 0x0048 (0x09D0 - 0x0988)
+// 0x0038 (0x0B28 - 0x0AF0)
 class UGA_Ranged_GenericProjectileImpact_HookGun_C final : public UGA_Ranged_GenericDamage_C
 {
 public:
-	struct FGameplayTagContainer                  ChangeEquipmentTag;                                // 0x0988(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTag                           RopeActiveTag;                                     // 0x09A8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UFortQuestItemDefinition*               QuestItem;                                         // 0x09B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ObjBackendName;                                    // 0x09B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    ObjStat;                                           // 0x09C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FGameplayTagContainer                  ChangeEquipmentTag;                                // 0x0AF0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTag                           RopeActiveTag;                                     // 0x0B10(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UFortQuestItemDefinition*               QuestItem;                                         // 0x0B18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ObjBackendName;                                    // 0x0B20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void K2_CommitExecute();
@@ -44,13 +42,6 @@ public:
 		return GetDefaultObjImpl<UGA_Ranged_GenericProjectileImpact_HookGun_C>();
 	}
 };
-static_assert(alignof(UGA_Ranged_GenericProjectileImpact_HookGun_C) == 0x000008, "Wrong alignment on UGA_Ranged_GenericProjectileImpact_HookGun_C");
-static_assert(sizeof(UGA_Ranged_GenericProjectileImpact_HookGun_C) == 0x0009D0, "Wrong size on UGA_Ranged_GenericProjectileImpact_HookGun_C");
-static_assert(offsetof(UGA_Ranged_GenericProjectileImpact_HookGun_C, ChangeEquipmentTag) == 0x000988, "Member 'UGA_Ranged_GenericProjectileImpact_HookGun_C::ChangeEquipmentTag' has a wrong offset!");
-static_assert(offsetof(UGA_Ranged_GenericProjectileImpact_HookGun_C, RopeActiveTag) == 0x0009A8, "Member 'UGA_Ranged_GenericProjectileImpact_HookGun_C::RopeActiveTag' has a wrong offset!");
-static_assert(offsetof(UGA_Ranged_GenericProjectileImpact_HookGun_C, QuestItem) == 0x0009B0, "Member 'UGA_Ranged_GenericProjectileImpact_HookGun_C::QuestItem' has a wrong offset!");
-static_assert(offsetof(UGA_Ranged_GenericProjectileImpact_HookGun_C, ObjBackendName) == 0x0009B8, "Member 'UGA_Ranged_GenericProjectileImpact_HookGun_C::ObjBackendName' has a wrong offset!");
-static_assert(offsetof(UGA_Ranged_GenericProjectileImpact_HookGun_C, ObjStat) == 0x0009C0, "Member 'UGA_Ranged_GenericProjectileImpact_HookGun_C::ObjStat' has a wrong offset!");
 
 }
 

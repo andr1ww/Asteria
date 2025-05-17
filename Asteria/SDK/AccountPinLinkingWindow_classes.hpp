@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -17,12 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AccountPinLinkingWindow.AccountPinLinkingWindow_C
-// 0x0010 (0x0470 - 0x0460)
+// 0x0018 (0x05D0 - 0x05B8)
 class UAccountPinLinkingWindow_C final : public UFortAccountPinLinkingWindow
 {
 public:
-	class UCommonRichTextBlock*                   CommonRichTextBlock_84;                            // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_83;                                          // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Image_83;                                          // 0x05C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_255;                                         // 0x05C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+
+public:
+	void BndEvt__Switcher_Main_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature(class UWidget* ActiveWidget, int32 ActiveWidgetIndex);
+	void ExecuteUbergraph_AccountPinLinkingWindow(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -34,10 +40,6 @@ public:
 		return GetDefaultObjImpl<UAccountPinLinkingWindow_C>();
 	}
 };
-static_assert(alignof(UAccountPinLinkingWindow_C) == 0x000008, "Wrong alignment on UAccountPinLinkingWindow_C");
-static_assert(sizeof(UAccountPinLinkingWindow_C) == 0x000470, "Wrong size on UAccountPinLinkingWindow_C");
-static_assert(offsetof(UAccountPinLinkingWindow_C, CommonRichTextBlock_84) == 0x000460, "Member 'UAccountPinLinkingWindow_C::CommonRichTextBlock_84' has a wrong offset!");
-static_assert(offsetof(UAccountPinLinkingWindow_C, Image_83) == 0x000468, "Member 'UAccountPinLinkingWindow_C::Image_83' has a wrong offset!");
 
 }
 

@@ -97,7 +97,7 @@ void UGAT_ActiveAbility_C::SetKnockbackImmunity(bool ImmunityOn)
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAbilitySystemComponent*          AbilitySystemIn                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAbilitySystemComponent*          AbilitySystemOut                                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAbilitySystemComponent**         AbilitySystemOut                                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGAT_ActiveAbility_C::ActiveAbilitySetup(class UAbilitySystemComponent* AbilitySystemIn, class UAbilitySystemComponent** AbilitySystemOut)
 {
@@ -124,8 +124,8 @@ void UGAT_ActiveAbility_C::ActiveAbilitySetup(class UAbilitySystemComponent* Abi
 // bool                                    ShouldHolster                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    PlayEquipAnim                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    ShowDebugPrintName                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    IsWeaponHolstered                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    OperationSuccessful                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   IsWeaponHolstered                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   OperationSuccessful                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UGAT_ActiveAbility_C::SetHolsterWeaponWithName(class AFortPawn* Target_Fort_Pawn, bool ShouldHolster, bool PlayEquipAnim, bool ShowDebugPrintName, bool* IsWeaponHolstered, bool* OperationSuccessful)
 {
@@ -165,11 +165,31 @@ void UGAT_ActiveAbility_C::SendHeroAbilityActivationEvent()
 }
 
 
+// Function GAT_ActiveAbility.GAT_ActiveAbility_C.EndAbilityWithReason
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UGAT_ActiveAbility_C::EndAbilityWithReason(const class FString& Reason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GAT_ActiveAbility_C", "EndAbilityWithReason");
+
+	Params::GAT_ActiveAbility_C_EndAbilityWithReason Parms{};
+
+	Parms.Reason = std::move(Reason);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GAT_ActiveAbility.GAT_ActiveAbility_C.K2_ShouldAbilityRespondToEvent
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// struct FGameplayAbilityActorInfo        ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-// struct FGameplayEventData               Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGameplayAbilityActorInfo& ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+// const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UGAT_ActiveAbility_C::K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& Payload) const

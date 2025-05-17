@@ -37,15 +37,15 @@ void UFriendNotification_C::ExecuteUbergraph_FriendNotification(int32 EntryPoint
 }
 
 
-// Function FriendNotification.FriendNotification_C.ShowPartyInvites
+// Function FriendNotification.FriendNotification_C.ShowFriendInvites
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UFriendNotification_C::ShowPartyInvites()
+void UFriendNotification_C::ShowFriendInvites()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FriendNotification_C", "ShowPartyInvites");
+		Func = Class->GetFunction("FriendNotification_C", "ShowFriendInvites");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -60,20 +60,6 @@ void UFriendNotification_C::JoinPartyInvite()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("FriendNotification_C", "JoinPartyInvite");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function FriendNotification.FriendNotification_C.ShowFriendInvites
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UFriendNotification_C::ShowFriendInvites()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FriendNotification_C", "ShowFriendInvites");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -61,8 +61,6 @@ public:
 		return GetDefaultObjImpl<UAnalyticsBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UAnalyticsBlueprintLibrary) == 0x000008, "Wrong alignment on UAnalyticsBlueprintLibrary");
-static_assert(sizeof(UAnalyticsBlueprintLibrary) == 0x000028, "Wrong size on UAnalyticsBlueprintLibrary");
 
 }
 

@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BattleMapGroundMoveNode.BP_BattleMapGroundMoveNode_C
-// 0x0010 (0x0380 - 0x0370)
+// 0x0010 (0x0368 - 0x0358)
 class ABP_BattleMapGroundMoveNode_C final : public ABattleMapGroundMoveNode
 {
 public:
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0378(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,10 +34,6 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapGroundMoveNode_C>();
 	}
 };
-static_assert(alignof(ABP_BattleMapGroundMoveNode_C) == 0x000008, "Wrong alignment on ABP_BattleMapGroundMoveNode_C");
-static_assert(sizeof(ABP_BattleMapGroundMoveNode_C) == 0x000380, "Wrong size on ABP_BattleMapGroundMoveNode_C");
-static_assert(offsetof(ABP_BattleMapGroundMoveNode_C, StaticMesh) == 0x000370, "Member 'ABP_BattleMapGroundMoveNode_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_BattleMapGroundMoveNode_C, DefaultSceneRoot) == 0x000378, "Member 'ABP_BattleMapGroundMoveNode_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

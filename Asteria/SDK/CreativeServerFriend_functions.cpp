@@ -20,7 +20,7 @@ namespace SDK
 // Function CreativeServerFriend.CreativeServerFriend_C.InitData
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           FriendName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    FriendName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
 void UCreativeServerFriend_C::InitData(const class FString& FriendName)
 {

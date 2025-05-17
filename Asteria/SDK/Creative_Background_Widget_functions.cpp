@@ -17,30 +17,10 @@
 namespace SDK
 {
 
-// Function Creative_Background_Widget.Creative_Background_Widget_C.ExecuteUbergraph_Creative_Background_Widget
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UCreative_Background_Widget_C::ExecuteUbergraph_Creative_Background_Widget(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Creative_Background_Widget_C", "ExecuteUbergraph_Creative_Background_Widget");
-
-	Params::Creative_Background_Widget_C_ExecuteUbergraph_Creative_Background_Widget Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function Creative_Background_Widget.Creative_Background_Widget_C.SetText
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
 void UCreative_Background_Widget_C::SetText(const class FString& Text)
 {
@@ -60,7 +40,7 @@ void UCreative_Background_Widget_C::SetText(const class FString& Text)
 // Function Creative_Background_Widget.Creative_Background_Widget_C.SetBackgroundColor
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor                     Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UCreative_Background_Widget_C::SetBackgroundColor(const struct FLinearColor& Color)
 {
@@ -120,7 +100,7 @@ void UCreative_Background_Widget_C::SetTextAlignment(ETextJustify Alignment)
 // Function Creative_Background_Widget.Creative_Background_Widget_C.SetTextColor
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinearColor                     TextColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              TextColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UCreative_Background_Widget_C::SetTextColor(const struct FLinearColor& TextColor)
 {
@@ -132,6 +112,50 @@ void UCreative_Background_Widget_C::SetTextColor(const struct FLinearColor& Text
 	Params::Creative_Background_Widget_C_SetTextColor Parms{};
 
 	Parms.TextColor = std::move(TextColor);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Creative_Background_Widget.Creative_Background_Widget_C.SetTextFont
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   TextFont                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   OutlineStrength                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCreative_Background_Widget_C::SetTextFont(int32 TextFont, int32 OutlineStrength)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Background_Widget_C", "SetTextFont");
+
+	Params::Creative_Background_Widget_C_SetTextFont Parms{};
+
+	Parms.TextFont = TextFont;
+	Parms.OutlineStrength = OutlineStrength;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Creative_Background_Widget.Creative_Background_Widget_C.SetShadow
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EBillboardshadowDirection               Shadow                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   ShadowScale                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCreative_Background_Widget_C::SetShadow(EBillboardshadowDirection Shadow, float ShadowScale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Creative_Background_Widget_C", "SetShadow");
+
+	Params::Creative_Background_Widget_C_SetShadow Parms{};
+
+	Parms.Shadow = Shadow;
+	Parms.ShadowScale = ShadowScale;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

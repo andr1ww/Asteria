@@ -10,16 +10,33 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
 {
 
+// Function RewardInfoSimpleWidget.RewardInfoSimpleWidget_C.ExecuteUbergraph_RewardInfoSimpleWidget
+// 0x0068 (0x0068 - 0x0000)
+struct RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetQuantity_ReturnValue;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0018)()
+	class UFortItemDefinition*                    CallFunc_GetItemDefinitionBP_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue_1;      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              CallFunc_GetSmallPreviewImage_ReturnValue;         // 0x0038(0x0028)(HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
 // Function RewardInfoSimpleWidget.RewardInfoSimpleWidget_C.GetDisplayName
-// 0x0DF8 (0x0DF8 - 0x0000)
+// 0x1038 (0x1038 - 0x0000)
 struct RewardInfoSimpleWidget_C_GetDisplayName final
 {
 public:
@@ -120,210 +137,73 @@ public:
 	class FText                                   Temp_text_Variable_90;                             // 0x08A8(0x0018)()
 	class FText                                   Temp_text_Variable_91;                             // 0x08C0(0x0018)()
 	class FText                                   Temp_text_Variable_92;                             // 0x08D8(0x0018)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x08F0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0908(0x0040)(HasGetValueTypeHash)
-	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue;              // 0x0948(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0950(0x0018)()
-	EFortRarity                                   CallFunc_GetRarity_ReturnValue;                    // 0x0968(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_969[0x7];                                      // 0x0969(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0970(0x0040)(HasGetValueTypeHash)
-	struct FFortRarityItemData                    CallFunc_BPGetRarityData_ReturnValue;              // 0x09B0(0x0080)()
-	struct FFortRarityItemData                    CallFunc_BPGetRarityData_ReturnValue_1;            // 0x0A30(0x0080)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0AB0(0x0040)(HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0AF0(0x0040)(HasGetValueTypeHash)
-	struct FFortRarityItemData                    CallFunc_BPGetRarityData_ReturnValue_2;            // 0x0B30(0x0080)()
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0BB0(0x0010)(ZeroConstructor, ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0BC0(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0BD8(0x0040)(HasGetValueTypeHash)
-	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue_1;            // 0x0C18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortWorker*                            K2Node_DynamicCast_AsFort_Worker;                  // 0x0C20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0C28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EFortInventoryFilter                          CallFunc_GetFilterCategory_ReturnValue;            // 0x0C29(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C2A[0x6];                                      // 0x0C2A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue_2;            // 0x0C30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0C38(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C39[0x7];                                      // 0x0C39(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetTertiaryCategory_ItemCategoryText;     // 0x0C40(0x0018)()
-	struct FSlateBrush                            CallFunc_GetTertiaryCategory_ItemCategoryBrush;    // 0x0C58(0x0088)()
-	bool                                          CallFunc_GetTertiaryCategory_ReturnValue;          // 0x0CE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_CE1[0x7];                                      // 0x0CE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0CE8(0x0040)(HasGetValueTypeHash)
-	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue_3;            // 0x0D28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0D30(0x0010)(ZeroConstructor, ReferenceParm)
-	EFortItemType                                 CallFunc_GetType_ReturnValue;                      // 0x0D40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D41[0x7];                                      // 0x0D41(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0D48(0x0018)()
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0D60(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D61[0x7];                                      // 0x0D61(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue_4;            // 0x0D68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortItemType                                 CallFunc_GetType_ReturnValue_1;                    // 0x0D70(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D71[0x7];                                      // 0x0D71(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x0D78(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0D90(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x0DD0(0x0010)(ZeroConstructor, ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x0DE0(0x0018)()
+	class FText                                   Temp_text_Variable_93;                             // 0x08F0(0x0018)()
+	class FText                                   Temp_text_Variable_94;                             // 0x0908(0x0018)()
+	class FText                                   Temp_text_Variable_95;                             // 0x0920(0x0018)()
+	class FText                                   Temp_text_Variable_96;                             // 0x0938(0x0018)()
+	class FText                                   Temp_text_Variable_97;                             // 0x0950(0x0018)()
+	class FText                                   Temp_text_Variable_98;                             // 0x0968(0x0018)()
+	class FText                                   Temp_text_Variable_99;                             // 0x0980(0x0018)()
+	class FText                                   Temp_text_Variable_100;                            // 0x0998(0x0018)()
+	class FText                                   Temp_text_Variable_101;                            // 0x09B0(0x0018)()
+	class FText                                   Temp_text_Variable_102;                            // 0x09C8(0x0018)()
+	class FText                                   Temp_text_Variable_103;                            // 0x09E0(0x0018)()
+	class FText                                   Temp_text_Variable_104;                            // 0x09F8(0x0018)()
+	class FText                                   Temp_text_Variable_105;                            // 0x0A10(0x0018)()
+	class FText                                   Temp_text_Variable_106;                            // 0x0A28(0x0018)()
+	class FText                                   Temp_text_Variable_107;                            // 0x0A40(0x0018)()
+	class FText                                   Temp_text_Variable_108;                            // 0x0A58(0x0018)()
+	class FText                                   Temp_text_Variable_109;                            // 0x0A70(0x0018)()
+	class FText                                   Temp_text_Variable_110;                            // 0x0A88(0x0018)()
+	class FText                                   Temp_text_Variable_111;                            // 0x0AA0(0x0018)()
+	class FText                                   Temp_text_Variable_112;                            // 0x0AB8(0x0018)()
+	class FText                                   Temp_text_Variable_113;                            // 0x0AD0(0x0018)()
+	class FText                                   Temp_text_Variable_114;                            // 0x0AE8(0x0018)()
+	class FText                                   Temp_text_Variable_115;                            // 0x0B00(0x0018)()
+	class FText                                   Temp_text_Variable_116;                            // 0x0B18(0x0018)()
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0B30(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0B48(0x0040)(HasGetValueTypeHash)
+	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue;              // 0x0B88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0B90(0x0018)()
+	EFortRarity                                   CallFunc_GetRarity_ReturnValue;                    // 0x0BA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BA9[0x7];                                      // 0x0BA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0BB0(0x0040)(HasGetValueTypeHash)
+	struct FFortRarityItemData                    CallFunc_BPGetRarityData_ReturnValue;              // 0x0BF0(0x0080)()
+	struct FFortRarityItemData                    CallFunc_BPGetRarityData_ReturnValue_1;            // 0x0C70(0x0080)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0CF0(0x0040)(HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0D30(0x0040)(HasGetValueTypeHash)
+	struct FFortRarityItemData                    CallFunc_BPGetRarityData_ReturnValue_2;            // 0x0D70(0x0080)()
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0DF0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0E00(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0E18(0x0040)(HasGetValueTypeHash)
+	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue_1;            // 0x0E58(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortWorker*                            K2Node_DynamicCast_AsFort_Worker;                  // 0x0E60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0E68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EFortInventoryFilter                          CallFunc_GetFilterCategory_ReturnValue;            // 0x0E69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E6A[0x6];                                      // 0x0E6A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue_2;            // 0x0E70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0E78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E79[0x7];                                      // 0x0E79(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetTertiaryCategory_ItemCategoryText;     // 0x0E80(0x0018)()
+	struct FSlateBrush                            CallFunc_GetTertiaryCategory_ItemCategoryBrush;    // 0x0E98(0x0088)()
+	bool                                          CallFunc_GetTertiaryCategory_ReturnValue;          // 0x0F20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F21[0x7];                                      // 0x0F21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_5;            // 0x0F28(0x0040)(HasGetValueTypeHash)
+	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue_3;            // 0x0F68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0F70(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	EFortItemType                                 CallFunc_GetType_ReturnValue;                      // 0x0F80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F81[0x7];                                      // 0x0F81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0F88(0x0018)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0FA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_FA1[0x7];                                      // 0x0FA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue_4;            // 0x0FA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortItemType                                 CallFunc_GetType_ReturnValue_1;                    // 0x0FB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FB1[0x7];                                      // 0x0FB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0FB8(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_6;            // 0x0FD0(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_2;                          // 0x1010(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_2;                     // 0x1020(0x0018)()
 };
-static_assert(alignof(RewardInfoSimpleWidget_C_GetDisplayName) == 0x000008, "Wrong alignment on RewardInfoSimpleWidget_C_GetDisplayName");
-static_assert(sizeof(RewardInfoSimpleWidget_C_GetDisplayName) == 0x000DF8, "Wrong size on RewardInfoSimpleWidget_C_GetDisplayName");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, DisplayName) == 0x000000, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::DisplayName' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, OutName) == 0x000018, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::OutName' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_byte_Variable) == 0x000030, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable) == 0x000038, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_1) == 0x000050, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_2) == 0x000068, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_3) == 0x000080, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_4) == 0x000098, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_4' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_5) == 0x0000B0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_5' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_6) == 0x0000C8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_6' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_7) == 0x0000E0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_7' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_8) == 0x0000F8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_8' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_9) == 0x000110, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_9' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_10) == 0x000128, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_10' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_11) == 0x000140, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_11' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_12) == 0x000158, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_12' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_13) == 0x000170, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_13' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_14) == 0x000188, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_14' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_15) == 0x0001A0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_15' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_16) == 0x0001B8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_16' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_17) == 0x0001D0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_17' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_18) == 0x0001E8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_18' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_19) == 0x000200, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_19' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_20) == 0x000218, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_20' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_21) == 0x000230, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_21' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_22) == 0x000248, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_22' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_23) == 0x000260, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_23' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_24) == 0x000278, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_24' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_25) == 0x000290, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_25' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_26) == 0x0002A8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_26' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_27) == 0x0002C0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_27' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_28) == 0x0002D8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_28' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_29) == 0x0002F0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_29' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_30) == 0x000308, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_30' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_31) == 0x000320, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_31' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_32) == 0x000338, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_32' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_33) == 0x000350, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_33' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_34) == 0x000368, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_34' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_35) == 0x000380, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_35' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_36) == 0x000398, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_36' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_37) == 0x0003B0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_37' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_38) == 0x0003C8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_38' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_39) == 0x0003E0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_39' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_40) == 0x0003F8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_40' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_41) == 0x000410, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_41' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_42) == 0x000428, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_42' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_43) == 0x000440, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_43' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_44) == 0x000458, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_44' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_45) == 0x000470, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_45' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_46) == 0x000488, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_46' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_47) == 0x0004A0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_47' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_48) == 0x0004B8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_48' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_49) == 0x0004D0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_49' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_50) == 0x0004E8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_50' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_51) == 0x000500, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_51' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_52) == 0x000518, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_52' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_53) == 0x000530, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_53' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_54) == 0x000548, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_54' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_55) == 0x000560, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_55' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_56) == 0x000578, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_56' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_57) == 0x000590, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_57' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_58) == 0x0005A8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_58' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_59) == 0x0005C0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_59' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_60) == 0x0005D8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_60' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_61) == 0x0005F0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_61' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_62) == 0x000608, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_62' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_63) == 0x000620, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_63' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_64) == 0x000638, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_64' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_65) == 0x000650, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_65' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_66) == 0x000668, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_66' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_67) == 0x000680, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_67' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_68) == 0x000698, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_68' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_69) == 0x0006B0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_69' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_70) == 0x0006C8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_70' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_71) == 0x0006E0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_71' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_72) == 0x0006F8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_72' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_73) == 0x000710, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_73' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_74) == 0x000728, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_74' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_75) == 0x000740, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_75' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_76) == 0x000758, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_76' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_77) == 0x000770, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_77' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_78) == 0x000788, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_78' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_79) == 0x0007A0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_79' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_80) == 0x0007B8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_80' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_81) == 0x0007D0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_81' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_82) == 0x0007E8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_82' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_83) == 0x000800, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_83' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_84) == 0x000818, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_84' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_85) == 0x000830, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_85' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_86) == 0x000848, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_86' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_87) == 0x000860, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_87' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_88) == 0x000878, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_88' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_89) == 0x000890, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_89' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_90) == 0x0008A8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_90' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_91) == 0x0008C0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_91' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, Temp_text_Variable_92) == 0x0008D8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::Temp_text_Variable_92' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_MakeLiteralText_ReturnValue) == 0x0008F0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_MakeStruct_FormatArgumentData) == 0x000908, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetItemInstance_ReturnValue) == 0x000948, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetItemInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_MakeLiteralText_ReturnValue_1) == 0x000950, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_MakeLiteralText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetRarity_ReturnValue) == 0x000968, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetRarity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_MakeStruct_FormatArgumentData_1) == 0x000970, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_BPGetRarityData_ReturnValue) == 0x0009B0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_BPGetRarityData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_BPGetRarityData_ReturnValue_1) == 0x000A30, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_BPGetRarityData_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_MakeStruct_FormatArgumentData_2) == 0x000AB0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_MakeStruct_FormatArgumentData_3) == 0x000AF0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_BPGetRarityData_ReturnValue_2) == 0x000B30, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_BPGetRarityData_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_MakeArray_Array) == 0x000BB0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_Format_ReturnValue) == 0x000BC0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_MakeStruct_FormatArgumentData_4) == 0x000BD8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetItemInstance_ReturnValue_1) == 0x000C18, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetItemInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_DynamicCast_AsFort_Worker) == 0x000C20, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_DynamicCast_AsFort_Worker' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_DynamicCast_bSuccess) == 0x000C28, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetFilterCategory_ReturnValue) == 0x000C29, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetFilterCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetItemInstance_ReturnValue_2) == 0x000C30, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetItemInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000C38, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetTertiaryCategory_ItemCategoryText) == 0x000C40, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetTertiaryCategory_ItemCategoryText' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetTertiaryCategory_ItemCategoryBrush) == 0x000C58, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetTertiaryCategory_ItemCategoryBrush' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetTertiaryCategory_ReturnValue) == 0x000CE0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetTertiaryCategory_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_MakeStruct_FormatArgumentData_5) == 0x000CE8, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_MakeStruct_FormatArgumentData_5' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetItemInstance_ReturnValue_3) == 0x000D28, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetItemInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_MakeArray_Array_1) == 0x000D30, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetType_ReturnValue) == 0x000D40, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_Format_ReturnValue_1) == 0x000D48, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000D60, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetItemInstance_ReturnValue_4) == 0x000D68, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetItemInstance_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_GetType_ReturnValue_1) == 0x000D70, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_GetType_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_Select_Default) == 0x000D78, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_MakeStruct_FormatArgumentData_6) == 0x000D90, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_MakeStruct_FormatArgumentData_6' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, K2Node_MakeArray_Array_2) == 0x000DD0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_GetDisplayName, CallFunc_Format_ReturnValue_2) == 0x000DE0, "Member 'RewardInfoSimpleWidget_C_GetDisplayName::CallFunc_Format_ReturnValue_2' has a wrong offset!");
-
-// Function RewardInfoSimpleWidget.RewardInfoSimpleWidget_C.ExecuteUbergraph_RewardInfoSimpleWidget
-// 0x0068 (0x0068 - 0x0000)
-struct RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetQuantity_ReturnValue;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortItem*                              CallFunc_GetItemInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0018)()
-	class UFortItemDefinition*                    CallFunc_GetItemDefinitionBP_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue_1;      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UTexture2D>              CallFunc_GetSmallPreviewImage_ReturnValue;         // 0x0038(0x0028)(HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget) == 0x000008, "Wrong alignment on RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget");
-static_assert(sizeof(RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget) == 0x000068, "Wrong size on RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget");
-static_assert(offsetof(RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget, EntryPoint) == 0x000000, "Member 'RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget::EntryPoint' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget, CallFunc_GetQuantity_ReturnValue) == 0x000004, "Member 'RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget::CallFunc_GetQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget, CallFunc_GetItemInstance_ReturnValue) == 0x000008, "Member 'RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget::CallFunc_GetItemInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget, CallFunc_GetItemDefinitionBP_ReturnValue) == 0x000028, "Member 'RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget::CallFunc_GetItemDefinitionBP_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000030, "Member 'RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget, CallFunc_NotEqual_ObjectObject_ReturnValue_1) == 0x000031, "Member 'RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget::CallFunc_NotEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget, CallFunc_GetSmallPreviewImage_ReturnValue) == 0x000038, "Member 'RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget::CallFunc_GetSmallPreviewImage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget, CallFunc_BooleanAND_ReturnValue) == 0x000060, "Member 'RewardInfoSimpleWidget_C_ExecuteUbergraph_RewardInfoSimpleWidget::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 }
 

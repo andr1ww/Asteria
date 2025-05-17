@@ -10,81 +10,81 @@
 
 #include "Basic.hpp"
 
-#include "ECardinalDirection_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ECardinalDirection_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Prj_Athena_TowerGrenade.B_Prj_Athena_TowerGrenade_C
-// 0x0348 (0x0A18 - 0x06D0)
+// 0x0348 (0x0BC0 - 0x0878)
 class AB_Prj_Athena_TowerGrenade_C final : public AFortProjectileBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*               ParticleSystem;                                    // 0x06D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Mesh;                                              // 0x06E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class URotatingMovementComponent*             RotatingMovement;                                  // 0x06E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                BaseDestination;                                   // 0x06F0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6FC[0x4];                                      // 0x06FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UClass*>                         BGAClasses_0;                                      // 0x0700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                        BGALocations_0;                                    // 0x0710(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FRotator>                       BGARotations_0;                                    // 0x0720(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UParticleSystem*                        P_BuildBuilding;                                   // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Cue_CloseSound;                                    // 0x0738(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Cue_DistantSound;                                  // 0x0740(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                GridExplosionOffset;                               // 0x0748(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GridSizeXY;                                        // 0x0754(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GridSizeZ;                                         // 0x0758(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GridYOffset;                                       // 0x075C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GridZOffset;                                       // 0x0760(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECardinalDirection                            CardinalDirection;                                 // 0x0764(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_765[0x3];                                      // 0x0765(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<ECardinalDirection, float>               OrientationYawOffsets;                             // 0x0768(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TMap<ECardinalDirection, struct FVector>      OrientationLocationOffsets;                        // 0x07B8(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                        ClearedCells_0;                                    // 0x0808(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FVector                                LastBounceLocation;                                // 0x0818(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MinBounceDistance;                                 // 0x0824(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LastBounceTime;                                    // 0x0828(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MinTimeBetweenBounces;                             // 0x082C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             BounceSound;                                       // 0x0830(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BuildDelay;                                        // 0x0838(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_83C[0x4];                                      // 0x083C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UClass*>                         BGAClasses_1;                                      // 0x0840(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                         BGAClasses_2;                                      // 0x0850(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                         BGAClasses_3;                                      // 0x0860(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                        ClearedCells_1;                                    // 0x0870(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                        ClearedCells_2;                                    // 0x0880(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                        ClearedCells_3;                                    // 0x0890(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FRotator>                       BGARotations_1;                                    // 0x08A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FRotator>                       BGARotations_2;                                    // 0x08B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FRotator>                       BGARotations_3;                                    // 0x08C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                        BGALocations_1;                                    // 0x08D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                        BGALocations_2;                                    // 0x08E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                        BGALocations_3;                                    // 0x08F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                        BGALocations_Underground;                          // 0x0900(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                         BGAClasses_Underground;                            // 0x0910(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FRotator>                       BGARotations_Underground;                          // 0x0920(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                        ClearedCells_Underground;                          // 0x0930(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                         BGAClasses_Tires;                                  // 0x0940(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                        BGALocations_Tires;                                // 0x0950(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FRotator>                       BGARotations_Tires;                                // 0x0960(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TMap<ECardinalDirection, struct FVector>      OrientationDoortraceOffsets;                       // 0x0970(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FVector                                DoorTraceOffsetHigh;                               // 0x09C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DoorTraceOffsetLow;                                // 0x09CC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          b_HitTerrain;                                      // 0x09D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9D9[0x7];                                      // 0x09D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             InAirLoopSound;                                    // 0x09E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        InAirLoopComponent;                                // 0x09E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BounceTimeout;                                     // 0x09F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsDebug;                                           // 0x09F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9F5[0x3];                                      // 0x09F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         ActorsToDestroy;                                   // 0x09F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<class AActor*>                         ActorsToIgnore;                                    // 0x0A08(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0878(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               ParticleSystem;                                    // 0x0880(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Mesh;                                              // 0x0888(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class URotatingMovementComponent*             RotatingMovement;                                  // 0x0890(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                BaseDestination;                                   // 0x0898(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8A4[0x4];                                      // 0x08A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UClass*>                         BGAClasses_0;                                      // 0x08A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FVector>                        BGALocations_0;                                    // 0x08B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FRotator>                       BGARotations_0;                                    // 0x08C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UParticleSystem*                        P_BuildBuilding;                                   // 0x08D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue_CloseSound;                                    // 0x08E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Cue_DistantSound;                                  // 0x08E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                GridExplosionOffset;                               // 0x08F0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GridSizeXY;                                        // 0x08FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GridSizeZ;                                         // 0x0900(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GridYOffset;                                       // 0x0904(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GridZOffset;                                       // 0x0908(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECardinalDirection                            CardinalDirection;                                 // 0x090C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_90D[0x3];                                      // 0x090D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<ECardinalDirection, float>               OrientationYawOffsets;                             // 0x0910(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<ECardinalDirection, struct FVector>      OrientationLocationOffsets;                        // 0x0960(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FVector>                        ClearedCells_0;                                    // 0x09B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FVector                                LastBounceLocation;                                // 0x09C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MinBounceDistance;                                 // 0x09CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LastBounceTime;                                    // 0x09D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MinTimeBetweenBounces;                             // 0x09D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             BounceSound;                                       // 0x09D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BuildDelay;                                        // 0x09E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9E4[0x4];                                      // 0x09E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UClass*>                         BGAClasses_1;                                      // 0x09E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UClass*>                         BGAClasses_2;                                      // 0x09F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UClass*>                         BGAClasses_3;                                      // 0x0A08(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FVector>                        ClearedCells_1;                                    // 0x0A18(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FVector>                        ClearedCells_2;                                    // 0x0A28(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FVector>                        ClearedCells_3;                                    // 0x0A38(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FRotator>                       BGARotations_1;                                    // 0x0A48(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FRotator>                       BGARotations_2;                                    // 0x0A58(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FRotator>                       BGARotations_3;                                    // 0x0A68(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FVector>                        BGALocations_1;                                    // 0x0A78(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FVector>                        BGALocations_2;                                    // 0x0A88(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FVector>                        BGALocations_3;                                    // 0x0A98(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FVector>                        BGALocations_Underground;                          // 0x0AA8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UClass*>                         BGAClasses_Underground;                            // 0x0AB8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FRotator>                       BGARotations_Underground;                          // 0x0AC8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FVector>                        ClearedCells_Underground;                          // 0x0AD8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UClass*>                         BGAClasses_Tires;                                  // 0x0AE8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FVector>                        BGALocations_Tires;                                // 0x0AF8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FRotator>                       BGARotations_Tires;                                // 0x0B08(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TMap<ECardinalDirection, struct FVector>      OrientationDoortraceOffsets;                       // 0x0B18(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FVector                                DoorTraceOffsetHigh;                               // 0x0B68(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DoorTraceOffsetLow;                                // 0x0B74(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          b_HitTerrain;                                      // 0x0B80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B81[0x7];                                      // 0x0B81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             InAirLoopSound;                                    // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        InAirLoopComponent;                                // 0x0B90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BounceTimeout;                                     // 0x0B98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDebug;                                           // 0x0B9C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B9D[0x3];                                      // 0x0B9D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         ActorsToDestroy;                                   // 0x0BA0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class AActor*>                         ActorsToIgnore;                                    // 0x0BB0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_Prj_Athena_TowerGrenade(int32 EntryPoint);
@@ -114,63 +114,6 @@ public:
 		return GetDefaultObjImpl<AB_Prj_Athena_TowerGrenade_C>();
 	}
 };
-static_assert(alignof(AB_Prj_Athena_TowerGrenade_C) == 0x000008, "Wrong alignment on AB_Prj_Athena_TowerGrenade_C");
-static_assert(sizeof(AB_Prj_Athena_TowerGrenade_C) == 0x000A18, "Wrong size on AB_Prj_Athena_TowerGrenade_C");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, UberGraphFrame) == 0x0006D0, "Member 'AB_Prj_Athena_TowerGrenade_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, ParticleSystem) == 0x0006D8, "Member 'AB_Prj_Athena_TowerGrenade_C::ParticleSystem' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, Mesh) == 0x0006E0, "Member 'AB_Prj_Athena_TowerGrenade_C::Mesh' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, RotatingMovement) == 0x0006E8, "Member 'AB_Prj_Athena_TowerGrenade_C::RotatingMovement' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BaseDestination) == 0x0006F0, "Member 'AB_Prj_Athena_TowerGrenade_C::BaseDestination' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGAClasses_0) == 0x000700, "Member 'AB_Prj_Athena_TowerGrenade_C::BGAClasses_0' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGALocations_0) == 0x000710, "Member 'AB_Prj_Athena_TowerGrenade_C::BGALocations_0' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGARotations_0) == 0x000720, "Member 'AB_Prj_Athena_TowerGrenade_C::BGARotations_0' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, P_BuildBuilding) == 0x000730, "Member 'AB_Prj_Athena_TowerGrenade_C::P_BuildBuilding' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, Cue_CloseSound) == 0x000738, "Member 'AB_Prj_Athena_TowerGrenade_C::Cue_CloseSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, Cue_DistantSound) == 0x000740, "Member 'AB_Prj_Athena_TowerGrenade_C::Cue_DistantSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, GridExplosionOffset) == 0x000748, "Member 'AB_Prj_Athena_TowerGrenade_C::GridExplosionOffset' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, GridSizeXY) == 0x000754, "Member 'AB_Prj_Athena_TowerGrenade_C::GridSizeXY' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, GridSizeZ) == 0x000758, "Member 'AB_Prj_Athena_TowerGrenade_C::GridSizeZ' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, GridYOffset) == 0x00075C, "Member 'AB_Prj_Athena_TowerGrenade_C::GridYOffset' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, GridZOffset) == 0x000760, "Member 'AB_Prj_Athena_TowerGrenade_C::GridZOffset' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, CardinalDirection) == 0x000764, "Member 'AB_Prj_Athena_TowerGrenade_C::CardinalDirection' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, OrientationYawOffsets) == 0x000768, "Member 'AB_Prj_Athena_TowerGrenade_C::OrientationYawOffsets' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, OrientationLocationOffsets) == 0x0007B8, "Member 'AB_Prj_Athena_TowerGrenade_C::OrientationLocationOffsets' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, ClearedCells_0) == 0x000808, "Member 'AB_Prj_Athena_TowerGrenade_C::ClearedCells_0' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, LastBounceLocation) == 0x000818, "Member 'AB_Prj_Athena_TowerGrenade_C::LastBounceLocation' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, MinBounceDistance) == 0x000824, "Member 'AB_Prj_Athena_TowerGrenade_C::MinBounceDistance' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, LastBounceTime) == 0x000828, "Member 'AB_Prj_Athena_TowerGrenade_C::LastBounceTime' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, MinTimeBetweenBounces) == 0x00082C, "Member 'AB_Prj_Athena_TowerGrenade_C::MinTimeBetweenBounces' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BounceSound) == 0x000830, "Member 'AB_Prj_Athena_TowerGrenade_C::BounceSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BuildDelay) == 0x000838, "Member 'AB_Prj_Athena_TowerGrenade_C::BuildDelay' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGAClasses_1) == 0x000840, "Member 'AB_Prj_Athena_TowerGrenade_C::BGAClasses_1' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGAClasses_2) == 0x000850, "Member 'AB_Prj_Athena_TowerGrenade_C::BGAClasses_2' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGAClasses_3) == 0x000860, "Member 'AB_Prj_Athena_TowerGrenade_C::BGAClasses_3' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, ClearedCells_1) == 0x000870, "Member 'AB_Prj_Athena_TowerGrenade_C::ClearedCells_1' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, ClearedCells_2) == 0x000880, "Member 'AB_Prj_Athena_TowerGrenade_C::ClearedCells_2' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, ClearedCells_3) == 0x000890, "Member 'AB_Prj_Athena_TowerGrenade_C::ClearedCells_3' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGARotations_1) == 0x0008A0, "Member 'AB_Prj_Athena_TowerGrenade_C::BGARotations_1' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGARotations_2) == 0x0008B0, "Member 'AB_Prj_Athena_TowerGrenade_C::BGARotations_2' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGARotations_3) == 0x0008C0, "Member 'AB_Prj_Athena_TowerGrenade_C::BGARotations_3' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGALocations_1) == 0x0008D0, "Member 'AB_Prj_Athena_TowerGrenade_C::BGALocations_1' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGALocations_2) == 0x0008E0, "Member 'AB_Prj_Athena_TowerGrenade_C::BGALocations_2' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGALocations_3) == 0x0008F0, "Member 'AB_Prj_Athena_TowerGrenade_C::BGALocations_3' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGALocations_Underground) == 0x000900, "Member 'AB_Prj_Athena_TowerGrenade_C::BGALocations_Underground' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGAClasses_Underground) == 0x000910, "Member 'AB_Prj_Athena_TowerGrenade_C::BGAClasses_Underground' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGARotations_Underground) == 0x000920, "Member 'AB_Prj_Athena_TowerGrenade_C::BGARotations_Underground' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, ClearedCells_Underground) == 0x000930, "Member 'AB_Prj_Athena_TowerGrenade_C::ClearedCells_Underground' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGAClasses_Tires) == 0x000940, "Member 'AB_Prj_Athena_TowerGrenade_C::BGAClasses_Tires' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGALocations_Tires) == 0x000950, "Member 'AB_Prj_Athena_TowerGrenade_C::BGALocations_Tires' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BGARotations_Tires) == 0x000960, "Member 'AB_Prj_Athena_TowerGrenade_C::BGARotations_Tires' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, OrientationDoortraceOffsets) == 0x000970, "Member 'AB_Prj_Athena_TowerGrenade_C::OrientationDoortraceOffsets' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, DoorTraceOffsetHigh) == 0x0009C0, "Member 'AB_Prj_Athena_TowerGrenade_C::DoorTraceOffsetHigh' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, DoorTraceOffsetLow) == 0x0009CC, "Member 'AB_Prj_Athena_TowerGrenade_C::DoorTraceOffsetLow' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, b_HitTerrain) == 0x0009D8, "Member 'AB_Prj_Athena_TowerGrenade_C::b_HitTerrain' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, InAirLoopSound) == 0x0009E0, "Member 'AB_Prj_Athena_TowerGrenade_C::InAirLoopSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, InAirLoopComponent) == 0x0009E8, "Member 'AB_Prj_Athena_TowerGrenade_C::InAirLoopComponent' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, BounceTimeout) == 0x0009F0, "Member 'AB_Prj_Athena_TowerGrenade_C::BounceTimeout' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, IsDebug) == 0x0009F4, "Member 'AB_Prj_Athena_TowerGrenade_C::IsDebug' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, ActorsToDestroy) == 0x0009F8, "Member 'AB_Prj_Athena_TowerGrenade_C::ActorsToDestroy' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Athena_TowerGrenade_C, ActorsToIgnore) == 0x000A08, "Member 'AB_Prj_Athena_TowerGrenade_C::ActorsToIgnore' has a wrong offset!");
 
 }
 

@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function CMSImageSlideShow.CMSImageSlideShow_C.SetMediaURLs
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function CMSImageSlideShow.CMSImageSlideShow_C.ExecuteUbergraph_CMSImageSlideShow
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// TArray<class FString>                   MediaURLs                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCMSImageSlideShow_C::SetMediaURLs(const TArray<class FString>& MediaURLs)
+void UCMSImageSlideShow_C::ExecuteUbergraph_CMSImageSlideShow(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CMSImageSlideShow_C", "SetMediaURLs");
+		Func = Class->GetFunction("CMSImageSlideShow_C", "ExecuteUbergraph_CMSImageSlideShow");
 
-	Params::CMSImageSlideShow_C_SetMediaURLs Parms{};
+	Params::CMSImageSlideShow_C_ExecuteUbergraph_CMSImageSlideShow Parms{};
 
-	Parms.MediaURLs = std::move(MediaURLs);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -59,21 +59,21 @@ void UCMSImageSlideShow_C::BndEvt__Images_K2Node_ComponentBoundEvent_0_OnCurrent
 }
 
 
-// Function CMSImageSlideShow.CMSImageSlideShow_C.ExecuteUbergraph_CMSImageSlideShow
-// (Final, UbergraphFunction)
+// Function CMSImageSlideShow.CMSImageSlideShow_C.SetMediaURLs
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<class FString>&            MediaURLs                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
-void UCMSImageSlideShow_C::ExecuteUbergraph_CMSImageSlideShow(int32 EntryPoint)
+void UCMSImageSlideShow_C::SetMediaURLs(const TArray<class FString>& MediaURLs)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CMSImageSlideShow_C", "ExecuteUbergraph_CMSImageSlideShow");
+		Func = Class->GetFunction("CMSImageSlideShow_C", "SetMediaURLs");
 
-	Params::CMSImageSlideShow_C_ExecuteUbergraph_CMSImageSlideShow Parms{};
+	Params::CMSImageSlideShow_C_SetMediaURLs Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.MediaURLs = std::move(MediaURLs);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

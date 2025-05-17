@@ -11,29 +11,53 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaCustomizationPicker.AthenaCustomizationPicker_C
-// 0x0040 (0x03E0 - 0x03A0)
+// 0x00A0 (0x04A8 - 0x0408)
 class UAthenaCustomizationPicker_C final : public UAthenaCustomizationPicker
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       Text_FilterName;                                   // 0x03A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URichTextBlock*                         TextBlock_NoItemAvailable;                         // 0x03B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_DisplayItemAvailability;            // 0x03B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnDisableSaveButton;                               // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnEnableSaveButton;                                // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Contract;                                          // 0x0410(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Expand;                                            // 0x0418(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UPanelButton_C*                         Button_TextSearch;                                 // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFilteredTextEntryWidget_C*             EditableText_Search;                               // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_TextSearch;                                // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_FilterName;                                   // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   TextBlock_NoItemAvailable;                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VerticalBox_SearchBar;                             // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_DisplayItemAvailability;            // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnDisableSaveButton;                               // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnEnableSaveButton;                                // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool bIsSelected)> OnTextSearchSelectedChanged;                    // 0x0478(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UAthenaCustomizationPickerTileButton_C* TileButton;                                        // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           TextEntryTimer;                                    // 0x0490(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class FText NewText)> OnTextChanged;                               // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void OnNoItemsAvailableInFilter(const class FText& EmptyDisplayText);
-	void OnItemsAvailableInFilter();
-	void HandleDifferentFilterSetBP();
 	void ExecuteUbergraph_AthenaCustomizationPicker(int32 EntryPoint);
+	void On_Text_Committed(const class FText& Text, ETextCommit CommitMethod);
+	void BndEvt__Button_TextSearch_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void HandleDifferentFilterSetBP();
+	void HandleTextChanged(const class FText& Text);
+	void OnInitialized();
+	void OnSearchEnabled(bool bEnabled);
+	void OnItemsAvailableInFilter();
+	void OnNoItemsAvailableInFilter(const class FText& EmptyDisplayText);
+	void SetTextFilter(const class FText& InText, bool Clear);
+	void SetTextFilterSelectedState(bool bIsSelected);
+	void GetTextFilterSelectedState(bool* bIsSelected);
+	void HandleSearchTextFilterChanged(const class FText& Text);
+	void HandleTextEntryTimer();
+	void ResetTextSearchFilter();
+	void NavigateDownFromSearch(EUINavigation Navigation_0, class UWidget** NewParam);
 
 public:
 	static class UClass* StaticClass()
@@ -45,14 +69,6 @@ public:
 		return GetDefaultObjImpl<UAthenaCustomizationPicker_C>();
 	}
 };
-static_assert(alignof(UAthenaCustomizationPicker_C) == 0x000008, "Wrong alignment on UAthenaCustomizationPicker_C");
-static_assert(sizeof(UAthenaCustomizationPicker_C) == 0x0003E0, "Wrong size on UAthenaCustomizationPicker_C");
-static_assert(offsetof(UAthenaCustomizationPicker_C, UberGraphFrame) == 0x0003A0, "Member 'UAthenaCustomizationPicker_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationPicker_C, Text_FilterName) == 0x0003A8, "Member 'UAthenaCustomizationPicker_C::Text_FilterName' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationPicker_C, TextBlock_NoItemAvailable) == 0x0003B0, "Member 'UAthenaCustomizationPicker_C::TextBlock_NoItemAvailable' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationPicker_C, WidgetSwitcher_DisplayItemAvailability) == 0x0003B8, "Member 'UAthenaCustomizationPicker_C::WidgetSwitcher_DisplayItemAvailability' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationPicker_C, OnDisableSaveButton) == 0x0003C0, "Member 'UAthenaCustomizationPicker_C::OnDisableSaveButton' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationPicker_C, OnEnableSaveButton) == 0x0003D0, "Member 'UAthenaCustomizationPicker_C::OnEnableSaveButton' has a wrong offset!");
 
 }
 

@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ProjectileTrajectory_AthenaRed_Playset.BP_ProjectileTrajectory_AthenaRed_Playset_C
-// 0x0010 (0x0330 - 0x0320)
+// 0x0010 (0x0308 - 0x02F8)
 class ABP_ProjectileTrajectory_AthenaRed_Playset_C final : public ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_Playset_C; // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        Creative_Grenade_LoopRed_Cue;                      // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_Playset_C; // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        Creative_Grenade_LoopRed_Cue;                      // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_ProjectileTrajectory_AthenaRed_Playset(int32 EntryPoint);
-	void ReceiveBeginPlay();
 	void ReceiveDestroyed();
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()
@@ -40,10 +40,6 @@ public:
 		return GetDefaultObjImpl<ABP_ProjectileTrajectory_AthenaRed_Playset_C>();
 	}
 };
-static_assert(alignof(ABP_ProjectileTrajectory_AthenaRed_Playset_C) == 0x000008, "Wrong alignment on ABP_ProjectileTrajectory_AthenaRed_Playset_C");
-static_assert(sizeof(ABP_ProjectileTrajectory_AthenaRed_Playset_C) == 0x000330, "Wrong size on ABP_ProjectileTrajectory_AthenaRed_Playset_C");
-static_assert(offsetof(ABP_ProjectileTrajectory_AthenaRed_Playset_C, UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_Playset_C) == 0x000320, "Member 'ABP_ProjectileTrajectory_AthenaRed_Playset_C::UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_Playset_C' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_AthenaRed_Playset_C, Creative_Grenade_LoopRed_Cue) == 0x000328, "Member 'ABP_ProjectileTrajectory_AthenaRed_Playset_C::Creative_Grenade_LoopRed_Cue' has a wrong offset!");
 
 }
 

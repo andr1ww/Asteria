@@ -10,24 +10,26 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass FrontendCamera_Manage.FrontendCamera_Manage_C
-// 0x0010 (0x07F0 - 0x07E0)
+// 0x0020 (0x0800 - 0x07E0)
 class AFrontendCamera_Manage_C final : public AFortCameraBase
 {
 public:
+	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UCameraComponent*                       LoginCamera_0;                                     // 0x07E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          ChangeTimeOfDayOnActivate;                         // 0x07F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void OnDeactivated();
-	void OnActivated();
+	void OnActivated(class AFortPlayerController* PlayerController);
+	void OnDeactivated(class AFortPlayerController* PlayerController);
 	void ExecuteUbergraph_FrontendCamera_Manage(int32 EntryPoint);
 
 public:
@@ -40,10 +42,6 @@ public:
 		return GetDefaultObjImpl<AFrontendCamera_Manage_C>();
 	}
 };
-static_assert(alignof(AFrontendCamera_Manage_C) == 0x000010, "Wrong alignment on AFrontendCamera_Manage_C");
-static_assert(sizeof(AFrontendCamera_Manage_C) == 0x0007F0, "Wrong size on AFrontendCamera_Manage_C");
-static_assert(offsetof(AFrontendCamera_Manage_C, UberGraphFrame) == 0x0007E0, "Member 'AFrontendCamera_Manage_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AFrontendCamera_Manage_C, LoginCamera_0) == 0x0007E8, "Member 'AFrontendCamera_Manage_C::LoginCamera_0' has a wrong offset!");
 
 }
 

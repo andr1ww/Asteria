@@ -11,414 +11,158 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
+#include "En_ShellTypes_01_structs.hpp"
 #include "FortniteGame_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.ExecuteUbergraph_B_Ranged_Dual_Generic_Athena
-// 0x0B10 (0x0B10 - 0x0000)
+// 0x02A0 (0x02A0 - 0x0000)
 struct B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetPI_ReturnValue;                        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                Temp_object_Variable;                              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        K2Node_DynamicCast_AsParticle_System;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bPersistentFire;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bSecondaryFire;                       // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EFortReloadFXState                            K2Node_Event_ReloadStage;                          // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_MathExpression_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_MathExpression_ReturnValue_1;               // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bNewIsTargeting;                      // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AFortAIPawn*>                    CallFunc_GetAllActorsOfClass_OutActors;            // 0x0048(0x0010)(ZeroConstructor, ReferenceParm)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortAIPawn*                            CallFunc_Array_Get_Item;                           // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_Enable_Or_Disable;              // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_StencilBufferValue;             // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_73[0x5];                                       // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortAlterationItemDefinition*          K2Node_Event_NewAlteration;                        // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortCosmeticModification              K2Node_Event_CosmeticMod;                          // 0x0080(0x0558)()
-	bool                                          CallFunc_IsAssetNull_ReturnValue;                  // 0x05D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsAssetNull_ReturnValue_1;                // 0x05D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x05DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsAssetNull_ReturnValue_2;                // 0x05DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsAssetNull_ReturnValue_3;                // 0x05DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5DD[0x3];                                      // 0x05DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetLocalMagazineAmmoCount_ReturnValue;    // 0x05E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x05E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                Temp_object_Variable_1;                            // 0x05E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_UseScopeTargeting_ReturnValue;            // 0x05F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5F1[0x7];                                      // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        K2Node_DynamicCast_AsParticle_System_1;            // 0x05F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_601[0x3];                                      // 0x0601(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x0604(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue;       // 0x0610(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_CustomEvent_Loaded_1;                       // 0x0618(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UTexture2D>              CallFunc_GetSmallPreviewImage_ReturnValue;         // 0x0620(0x0028)(HasGetValueTypeHash)
-	class UTexture2D*                             CallFunc_GetOrLoadSynchronously_ReturnValue;       // 0x0648(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue;                // 0x0650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn;                    // 0x0658(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0660(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_CustomEvent_Enable_1;                       // 0x0661(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_662[0x2];                                      // 0x0662(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_TargetLimit_1;                  // 0x0664(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0668(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_66C[0x4];                                      // 0x066C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0670(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0678(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                Temp_object_Variable_2;                            // 0x0680(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_Enable;                         // 0x0688(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_689[0x3];                                      // 0x0689(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_CustomEvent_TargetLimit;                    // 0x068C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        K2Node_DynamicCast_AsParticle_System_2;            // 0x0690(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0698(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_699[0x3];                                      // 0x0699(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_SelectInt_ReturnValue_1;                  // 0x069C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_CustomEvent_Loaded_2;                       // 0x06A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsUsingFirstPersonCamera_ReturnValue;     // 0x06A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6A9[0x7];                                      // 0x06A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            CallFunc_GetInstigatorController_ReturnValue;      // 0x06B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerControllerZone*              K2Node_DynamicCast_AsFort_Player_Controller_Zone;  // 0x06B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x06C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6C1[0x7];                                      // 0x06C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWindManager*                       CallFunc_GetWindManager_ReturnValue;               // 0x06C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_1;              // 0x06D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_1;                  // 0x06D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x06E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_UseScopeTargeting_ReturnValue_1;          // 0x06E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6E2[0x6];                                      // 0x06E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetLocalViewingPlayerController_ReturnValue; // 0x06E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x06F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6F1[0x7];                                      // 0x06F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_2;              // 0x06F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_2;                  // 0x0700(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0708(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_709[0x7];                                      // 0x0709(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_3;              // 0x0710(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetLocalViewingPlayerController_ReturnValue_1; // 0x0718(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_3;                  // 0x0720(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0728(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0729(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_72A[0x6];                                      // 0x072A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_4;              // 0x0730(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_4;                  // 0x0738(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0740(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0741(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_742[0x6];                                      // 0x0742(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetLocalViewingPlayerController_ReturnValue_2; // 0x0748(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0750(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_751[0x3];                                      // 0x0751(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_1;          // 0x0754(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x0760(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_2;          // 0x0770(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_1;   // 0x077C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x078C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0790(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_791[0x3];                                      // 0x0791(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0794(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_UseScopeTargeting_ReturnValue_2;          // 0x0798(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bVisible;                             // 0x0799(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_79A[0x2];                                      // 0x079A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetRenderingDetailMode_ReturnValue;       // 0x079C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x07A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x07A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x07A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x07A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate;              // 0x07A4(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x07B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7B5[0x3];                                      // 0x07B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetFiringRate_ReturnValue;                // 0x07B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FMax_ReturnValue;                         // 0x07BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x07C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x07C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x07C8(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x07D0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue_1;         // 0x07D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                Temp_object_Variable_3;                            // 0x07E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        K2Node_DynamicCast_AsParticle_System_3;            // 0x07E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x07F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_2;          // 0x07F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7F2[0x6];                                      // 0x07F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_5;              // 0x07F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_5;                  // 0x0800(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x0808(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_809[0x3];                                      // 0x0809(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_1;            // 0x080C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_81C[0x4];                                      // 0x081C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_GetInstigator_ReturnValue_6;              // 0x0820(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_6;                  // 0x0828(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x0830(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0831(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EDualWeaponHand                               K2Node_CustomEvent_Hand;                           // 0x0832(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bPersistantFire;                // 0x0833(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_834[0x4];                                      // 0x0834(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_CustomEvent_Loaded_3;                       // 0x0838(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsUsingScopeOrFirstPersonCamera_ReturnValue; // 0x0840(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_841[0x3];                                      // 0x0841(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetRenderingDetailMode_ReturnValue_1;     // 0x0844(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0848(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0849(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x084A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x084B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	TDelegate<void(EDualWeaponHand Hand, bool bPersistantFire)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x084C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_85C[0x4];                                      // 0x085C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWeightedBlendables                    K2Node_MakeStruct_WeightedBlendables;              // 0x0860(0x0010)()
-	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x0870(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_871[0x7];                                      // 0x0871(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0878(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_3;            // 0x0880(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x0890(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0891(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_892[0xE];                                      // 0x0892(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Temp_struct_Variable;                              // 0x08A0(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
-	struct FTransform                             Temp_struct_Variable_1;                            // 0x08D0(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
-	class UPostProcessComponent*                  CallFunc_AddComponent_ReturnValue;                 // 0x0900(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                  CallFunc_AddComponent_ReturnValue_1;               // 0x0908(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_4;            // 0x0910(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x0920(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0921(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0922(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_12;                   // 0x0923(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_924[0xC];                                      // 0x0924(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x0930(0x0030)(IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0960(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x096C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0978(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_984[0xC];                                      // 0x0984(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue_1;         // 0x0990(0x0030)(IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakVector_X;                            // 0x09C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x09C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x09C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x09CC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x09D8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x09E4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x09F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X_1;                          // 0x09F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_1;                          // 0x09F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_1;                          // 0x09FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x0A00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_3;          // 0x0A04(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_2;        // 0x0A10(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_4;          // 0x0A14(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue_1;       // 0x0A20(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0A28(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue;         // 0x0A34(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_VSize_ReturnValue;                        // 0x0A40(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0A44(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_3;        // 0x0ACC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x0AD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_3;          // 0x0AD4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0AD8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_4;          // 0x0AE4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_5;          // 0x0AE8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0AEC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x0AF8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoesSocketExist_ReturnValue;              // 0x0B04(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_DoesSocketExist_ReturnValue_1;            // 0x0B05(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0B06(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EFortReloadFXState                            K2Node_Event_ReloadStage;                          // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_MathExpression_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_MathExpression_ReturnValue_1;               // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bNewIsTargeting;                      // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SetHiddenInGameOtherLocalControllersOnly_ReturnValue; // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SetHiddenInGameControllerOnly_ReturnValue; // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TArray<class AFortAIPawn*>                    CallFunc_GetAllActorsOfClass_OutActors;            // 0x0018(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_Enable_Or_Disable;              // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_CustomEvent_StencilBufferValue;             // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetLocalMagazineAmmoCount_ReturnValue;    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bPersistentFire;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bSecondaryFire;                       // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_UseScopeTargeting_ReturnValue;            // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x004C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue;       // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue;                // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn;                    // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_CustomEvent_Enable_1;                       // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_CustomEvent_TargetLimit_1;                  // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SelectInt_ReturnValue;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0088(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_Enable;                         // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_CustomEvent_TargetLimit;                    // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SelectInt_ReturnValue_1;                  // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EDualWeaponHand Hand, bool bPersistantFire)> K2Node_CreateDelegate_OutputDelegate; // 0x00A4(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          CallFunc_IsUsingFirstPersonCamera_ReturnValue;     // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AController*                            CallFunc_GetInstigatorController_ReturnValue;      // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerControllerZone*              K2Node_DynamicCast_AsFort_Player_Controller_Zone;  // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortWindManager*                       CallFunc_GetWindManager_ReturnValue;               // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue_1;              // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_1;                  // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetLocalViewingPlayerController_ReturnValue; // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_UseScopeTargeting_ReturnValue_1;          // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_FA[0x6];                                       // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue_2;              // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_2;                  // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetLocalViewingPlayerController_ReturnValue_1; // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortAIPawn*                            CallFunc_Array_Get_Item;                           // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0129(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_12A[0x6];                                      // 0x012A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue_3;              // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue_4;              // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_3;                  // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_4;                  // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetLocalViewingPlayerController_ReturnValue_2; // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_16B[0x1];                                      // 0x016B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_1;          // 0x016C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_2;          // 0x0178(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x0184(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_1;   // 0x0194(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_UseScopeTargeting_ReturnValue_2;          // 0x01A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1A5[0x3];                                      // 0x01A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetRenderingDetailMode_ReturnValue;       // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1AE[0x2];                                      // 0x01AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFiringRate_ReturnValue;                // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FMax_ReturnValue;                         // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x01C8(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x01D0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetHiddenInGameControllerOnly_ReturnValue_1; // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue_1;         // 0x01E0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue_5;              // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_5;                  // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  CallFunc_GetInstigator_ReturnValue_6;              // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn_6;                  // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EDualWeaponHand                               K2Node_CustomEvent_Hand;                           // 0x0211(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bPersistantFire;                // 0x0212(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0213(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsUsingScopeOrFirstPersonCamera_ReturnValue; // 0x0214(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_215[0x3];                                      // 0x0215(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetRenderingDetailMode_ReturnValue_1;     // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x021C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x021D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x021E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x021F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GetIsTargeting_ReturnValue;               // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GetIsTargeting_ReturnValue_1;             // 0x0221(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GetIsTargeting_ReturnValue_2;             // 0x0222(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_223[0x5];                                      // 0x0223(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              CallFunc_GetWeaponDataSmallPreviewImage_ReturnValue; // 0x0228(0x0028)(HasGetValueTypeHash)
+	class UTexture2D*                             CallFunc_GetOrLoadSynchronously_ReturnValue;       // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldPlayPersistentFireFX_ReturnValue;   // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_259[0x7];                                      // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponentBudgeted*         CallFunc_GetLeftHandWeaponMesh_ReturnValue;        // 0x0260(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0268(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_279[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponentBudgeted*         CallFunc_GetLeftHandWeaponMesh_ReturnValue_1;      // 0x0280(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponentBudgeted*         CallFunc_GetLeftHandWeaponMesh_ReturnValue_2;      // 0x0288(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortGameUserSettings*                  CallFunc_GetFortGameUserSettings_ReturnValue;      // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena) == 0x000010, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena) == 0x000B10, "Wrong size on B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, EntryPoint) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetPI_ReturnValue) == 0x000004, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetPI_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x000008, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsDedicatedServer_ReturnValue) == 0x00000C, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000010, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue) == 0x000014, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, Temp_object_Variable) == 0x000018, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsParticle_System) == 0x000020, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsParticle_System' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_Event_bPersistentFire) == 0x000029, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_Event_bPersistentFire' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_Event_bSecondaryFire) == 0x00002A, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_Event_bSecondaryFire' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_Event_ReloadStage) == 0x00002B, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_Event_ReloadStage' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Array_Length_ReturnValue) == 0x00002C, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetGameTimeInSeconds_ReturnValue) == 0x000030, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetGameTimeInSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_Loaded) == 0x000038, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_Loaded' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_MathExpression_ReturnValue) == 0x000040, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_MathExpression_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_MathExpression_ReturnValue_1) == 0x000044, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_MathExpression_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_Event_bNewIsTargeting) == 0x000045, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_Event_bNewIsTargeting' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetAllActorsOfClass_OutActors) == 0x000048, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, Temp_int_Array_Index_Variable) == 0x000058, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Array_Get_Item) == 0x000060, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_Enable_Or_Disable) == 0x000068, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_Enable_Or_Disable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_StencilBufferValue) == 0x00006C, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_StencilBufferValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_1) == 0x000070, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000071, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x000072, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_Event_NewAlteration) == 0x000078, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_Event_NewAlteration' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_Event_CosmeticMod) == 0x000080, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_Event_CosmeticMod' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsAssetNull_ReturnValue) == 0x0005D8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsAssetNull_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsAssetNull_ReturnValue_1) == 0x0005D9, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsAssetNull_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Not_PreBool_ReturnValue) == 0x0005DA, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsAssetNull_ReturnValue_2) == 0x0005DB, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsAssetNull_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsAssetNull_ReturnValue_3) == 0x0005DC, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsAssetNull_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetLocalMagazineAmmoCount_ReturnValue) == 0x0005E0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetLocalMagazineAmmoCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0005E4, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, Temp_object_Variable_1) == 0x0005E8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_UseScopeTargeting_ReturnValue) == 0x0005F0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_UseScopeTargeting_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsParticle_System_1) == 0x0005F8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsParticle_System_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess_1) == 0x000600, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetSocketLocation_ReturnValue) == 0x000604, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_SpawnEmitterAtLocation_ReturnValue) == 0x000610, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_SpawnEmitterAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_Loaded_1) == 0x000618, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_Loaded_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetSmallPreviewImage_ReturnValue) == 0x000620, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetSmallPreviewImage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetOrLoadSynchronously_ReturnValue) == 0x000648, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetOrLoadSynchronously_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetInstigator_ReturnValue) == 0x000650, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetInstigator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsFort_Pawn) == 0x000658, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsFort_Pawn' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess_2) == 0x000660, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_Enable_1) == 0x000661, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_Enable_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_TargetLimit_1) == 0x000664, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_TargetLimit_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_SelectInt_ReturnValue) == 0x000668, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_SpawnEmitterAttached_ReturnValue) == 0x000670, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_SpawnEmitterAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000678, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, Temp_object_Variable_2) == 0x000680, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::Temp_object_Variable_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_Enable) == 0x000688, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_Enable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_TargetLimit) == 0x00068C, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_TargetLimit' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsParticle_System_2) == 0x000690, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsParticle_System_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess_3) == 0x000698, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_SelectInt_ReturnValue_1) == 0x00069C, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_SelectInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_Loaded_2) == 0x0006A0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_Loaded_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsUsingFirstPersonCamera_ReturnValue) == 0x0006A8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsUsingFirstPersonCamera_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetInstigatorController_ReturnValue) == 0x0006B0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetInstigatorController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsFort_Player_Controller_Zone) == 0x0006B8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsFort_Player_Controller_Zone' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess_4) == 0x0006C0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetWindManager_ReturnValue) == 0x0006C8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetWindManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetInstigator_ReturnValue_1) == 0x0006D0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetInstigator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsFort_Pawn_1) == 0x0006D8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsFort_Pawn_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess_5) == 0x0006E0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_UseScopeTargeting_ReturnValue_1) == 0x0006E1, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_UseScopeTargeting_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetLocalViewingPlayerController_ReturnValue) == 0x0006E8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetLocalViewingPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_2) == 0x0006F0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetInstigator_ReturnValue_2) == 0x0006F8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetInstigator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsFort_Pawn_2) == 0x000700, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsFort_Pawn_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess_6) == 0x000708, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetInstigator_ReturnValue_3) == 0x000710, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetInstigator_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetLocalViewingPlayerController_ReturnValue_1) == 0x000718, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetLocalViewingPlayerController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsFort_Pawn_3) == 0x000720, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsFort_Pawn_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess_7) == 0x000728, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_3) == 0x000729, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetInstigator_ReturnValue_4) == 0x000730, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetInstigator_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsFort_Pawn_4) == 0x000738, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsFort_Pawn_4' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess_8) == 0x000740, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_4) == 0x000741, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetLocalViewingPlayerController_ReturnValue_2) == 0x000748, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetLocalViewingPlayerController_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_5) == 0x000750, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetSocketLocation_ReturnValue_1) == 0x000754, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetSocketLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x000760, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetSocketLocation_ReturnValue_2) == 0x000770, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetSocketLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Conv_VectorToLinearColor_ReturnValue_1) == 0x00077C, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Conv_VectorToLinearColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, Temp_int_Loop_Counter_Variable) == 0x00078C, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Less_IntInt_ReturnValue) == 0x000790, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Add_IntInt_ReturnValue) == 0x000794, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_UseScopeTargeting_ReturnValue_2) == 0x000798, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_UseScopeTargeting_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_Event_bVisible) == 0x000799, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_Event_bVisible' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetRenderingDetailMode_ReturnValue) == 0x00079C, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetRenderingDetailMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Greater_IntInt_ReturnValue) == 0x0007A0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BooleanAND_ReturnValue) == 0x0007A1, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_6) == 0x0007A2, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_7) == 0x0007A3, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CreateDelegate_OutputDelegate) == 0x0007A4, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_8) == 0x0007B4, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetFiringRate_ReturnValue) == 0x0007B8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetFiringRate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_FMax_ReturnValue) == 0x0007BC, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Divide_FloatFloat_ReturnValue) == 0x0007C0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x0007C4, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_K2_SetTimer_ReturnValue) == 0x0007C8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_SpawnSoundAttached_ReturnValue) == 0x0007D0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_SpawnSoundAttached_ReturnValue_1) == 0x0007D8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_SpawnSoundAttached_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, Temp_object_Variable_3) == 0x0007E0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::Temp_object_Variable_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsParticle_System_3) == 0x0007E8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsParticle_System_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess_9) == 0x0007F0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess_9' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsDedicatedServer_ReturnValue_2) == 0x0007F1, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsDedicatedServer_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetInstigator_ReturnValue_5) == 0x0007F8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetInstigator_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsFort_Pawn_5) == 0x000800, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsFort_Pawn_5' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess_10) == 0x000808, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess_10' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CreateDelegate_OutputDelegate_1) == 0x00080C, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetInstigator_ReturnValue_6) == 0x000820, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetInstigator_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_AsFort_Pawn_6) == 0x000828, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_AsFort_Pawn_6' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_DynamicCast_bSuccess_11) == 0x000830, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_DynamicCast_bSuccess_11' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000831, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_Hand) == 0x000832, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_Hand' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_bPersistantFire) == 0x000833, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_bPersistantFire' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CustomEvent_Loaded_3) == 0x000838, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CustomEvent_Loaded_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsUsingScopeOrFirstPersonCamera_ReturnValue) == 0x000840, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsUsingScopeOrFirstPersonCamera_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetRenderingDetailMode_ReturnValue_1) == 0x000844, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetRenderingDetailMode_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Not_PreBool_ReturnValue_1) == 0x000848, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000849, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BooleanAND_ReturnValue_1) == 0x00084A, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x00084B, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CreateDelegate_OutputDelegate_2) == 0x00084C, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_MakeStruct_WeightedBlendables) == 0x000860, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_MakeStruct_WeightedBlendables' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_9) == 0x000870, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetMaterial_ReturnValue) == 0x000878, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CreateDelegate_OutputDelegate_3) == 0x000880, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_10) == 0x000890, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BooleanAND_ReturnValue_2) == 0x000891, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, Temp_struct_Variable) == 0x0008A0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, Temp_struct_Variable_1) == 0x0008D0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_AddComponent_ReturnValue) == 0x000900, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_AddComponent_ReturnValue_1) == 0x000908, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_AddComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, K2Node_CreateDelegate_OutputDelegate_4) == 0x000910, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_11) == 0x000920, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, Temp_bool_Has_Been_Initd_Variable) == 0x000921, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, Temp_bool_IsClosed_Variable) == 0x000922, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_IsValid_ReturnValue_12) == 0x000923, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetSocketTransform_ReturnValue) == 0x000930, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetSocketTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakTransform_Location) == 0x000960, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakTransform_Rotation) == 0x00096C, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakTransform_Scale) == 0x000978, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetSocketTransform_ReturnValue_1) == 0x000990, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetSocketTransform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakVector_X) == 0x0009C0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakVector_Y) == 0x0009C4, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakVector_Z) == 0x0009C8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakTransform_Location_1) == 0x0009CC, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakTransform_Rotation_1) == 0x0009D8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakTransform_Scale_1) == 0x0009E4, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Add_FloatFloat_ReturnValue) == 0x0009F0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakVector_X_1) == 0x0009F4, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakVector_Y_1) == 0x0009F8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BreakVector_Z_1) == 0x0009FC, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x000A00, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetSocketLocation_ReturnValue_3) == 0x000A04, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetSocketLocation_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x000A10, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_GetSocketLocation_ReturnValue_4) == 0x000A14, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_GetSocketLocation_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_SpawnEmitterAttached_ReturnValue_1) == 0x000A20, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_SpawnEmitterAttached_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000A28, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Conv_VectorToRotator_ReturnValue) == 0x000A34, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Conv_VectorToRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_VSize_ReturnValue) == 0x000A40, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x000A44, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x000ACC, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Divide_FloatFloat_ReturnValue_2) == 0x000AD0, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Divide_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Divide_FloatFloat_ReturnValue_3) == 0x000AD4, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Divide_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_MakeVector_ReturnValue) == 0x000AD8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Divide_FloatFloat_ReturnValue_4) == 0x000AE4, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Divide_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_Divide_FloatFloat_ReturnValue_5) == 0x000AE8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_Divide_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_MakeVector_ReturnValue_1) == 0x000AEC, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_MakeVector_ReturnValue_2) == 0x000AF8, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_DoesSocketExist_ReturnValue) == 0x000B04, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_DoesSocketExist_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_DoesSocketExist_ReturnValue_1) == 0x000B05, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_DoesSocketExist_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena, CallFunc_BooleanAND_ReturnValue_3) == 0x000B06, "Member 'B_Ranged_Dual_Generic_Athena_C_ExecuteUbergraph_B_Ranged_Dual_Generic_Athena::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.HandFired
 // 0x0002 (0x0002 - 0x0000)
@@ -428,21 +172,6 @@ public:
 	EDualWeaponHand                               Hand;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bPersistantFire;                                   // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_HandFired) == 0x000001, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_HandFired");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_HandFired) == 0x000002, "Wrong size on B_Ranged_Dual_Generic_Athena_C_HandFired");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_HandFired, Hand) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_HandFired::Hand' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_HandFired, bPersistantFire) == 0x000001, "Member 'B_Ranged_Dual_Generic_Athena_C_HandFired::bPersistantFire' has a wrong offset!");
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnWeaponVisibilityChanged
-// 0x0001 (0x0001 - 0x0000)
-struct B_Ranged_Dual_Generic_Athena_C_OnWeaponVisibilityChanged final
-{
-public:
-	bool                                          bVisible;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_OnWeaponVisibilityChanged) == 0x000001, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_OnWeaponVisibilityChanged");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_OnWeaponVisibilityChanged) == 0x000001, "Wrong size on B_Ranged_Dual_Generic_Athena_C_OnWeaponVisibilityChanged");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_OnWeaponVisibilityChanged, bVisible) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_OnWeaponVisibilityChanged::bVisible' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.SetWeaponPierceThrough_ClientRep
 // 0x0008 (0x0008 - 0x0000)
@@ -453,10 +182,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TargetLimit;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough_ClientRep) == 0x000004, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough_ClientRep");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough_ClientRep) == 0x000008, "Wrong size on B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough_ClientRep");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough_ClientRep, Enable) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough_ClientRep::Enable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough_ClientRep, TargetLimit) == 0x000004, "Member 'B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough_ClientRep::TargetLimit' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.SetWeaponPierceThrough
 // 0x0008 (0x0008 - 0x0000)
@@ -467,32 +192,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TargetLimit;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough) == 0x000004, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough) == 0x000008, "Wrong size on B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough, Enable) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough::Enable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough, TargetLimit) == 0x000004, "Member 'B_Ranged_Dual_Generic_Athena_C_SetWeaponPierceThrough::TargetLimit' has a wrong offset!");
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnInitCosmeticAlterations
-// 0x0558 (0x0558 - 0x0000)
-struct B_Ranged_Dual_Generic_Athena_C_OnInitCosmeticAlterations final
-{
-public:
-	struct FFortCosmeticModification              CosmeticMod;                                       // 0x0000(0x0558)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_OnInitCosmeticAlterations) == 0x000008, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_OnInitCosmeticAlterations");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_OnInitCosmeticAlterations) == 0x000558, "Wrong size on B_Ranged_Dual_Generic_Athena_C_OnInitCosmeticAlterations");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_OnInitCosmeticAlterations, CosmeticMod) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_OnInitCosmeticAlterations::CosmeticMod' has a wrong offset!");
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnInitAlteration
-// 0x0008 (0x0008 - 0x0000)
-struct B_Ranged_Dual_Generic_Athena_C_OnInitAlteration final
-{
-public:
-	class UFortAlterationItemDefinition*          NewAlteration;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_OnInitAlteration) == 0x000008, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_OnInitAlteration");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_OnInitAlteration) == 0x000008, "Wrong size on B_Ranged_Dual_Generic_Athena_C_OnInitAlteration");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_OnInitAlteration, NewAlteration) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_OnInitAlteration::NewAlteration' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.Update Enemy Custom Depths
 // 0x0008 (0x0008 - 0x0000)
@@ -503,10 +202,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         StencilBufferValue_0;                              // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_Update_Enemy_Custom_Depths) == 0x000004, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_Update_Enemy_Custom_Depths");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_Update_Enemy_Custom_Depths) == 0x000008, "Wrong size on B_Ranged_Dual_Generic_Athena_C_Update_Enemy_Custom_Depths");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_Update_Enemy_Custom_Depths, Enable_Or_Disable) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_Update_Enemy_Custom_Depths::Enable_Or_Disable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_Update_Enemy_Custom_Depths, StencilBufferValue_0) == 0x000004, "Member 'B_Ranged_Dual_Generic_Athena_C_Update_Enemy_Custom_Depths::StencilBufferValue_0' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnSetTargeting
 // 0x0001 (0x0001 - 0x0000)
@@ -515,9 +210,6 @@ struct B_Ranged_Dual_Generic_Athena_C_OnSetTargeting final
 public:
 	bool                                          bNewIsTargeting;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_OnSetTargeting) == 0x000001, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_OnSetTargeting");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_OnSetTargeting) == 0x000001, "Wrong size on B_Ranged_Dual_Generic_Athena_C_OnSetTargeting");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_OnSetTargeting, bNewIsTargeting) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_OnSetTargeting::bNewIsTargeting' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnPlayReloadFX
 // 0x0001 (0x0001 - 0x0000)
@@ -526,9 +218,6 @@ struct B_Ranged_Dual_Generic_Athena_C_OnPlayReloadFX final
 public:
 	EFortReloadFXState                            ReloadStage;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_OnPlayReloadFX) == 0x000001, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_OnPlayReloadFX");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_OnPlayReloadFX) == 0x000001, "Wrong size on B_Ranged_Dual_Generic_Athena_C_OnPlayReloadFX");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_OnPlayReloadFX, ReloadStage) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_OnPlayReloadFX::ReloadStage' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnPlayWeaponFireFX
 // 0x0002 (0x0002 - 0x0000)
@@ -538,86 +227,28 @@ public:
 	bool                                          bPersistentFire;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          bSecondaryFire;                                    // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_OnPlayWeaponFireFX) == 0x000001, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_OnPlayWeaponFireFX");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_OnPlayWeaponFireFX) == 0x000002, "Wrong size on B_Ranged_Dual_Generic_Athena_C_OnPlayWeaponFireFX");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_OnPlayWeaponFireFX, bPersistentFire) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_OnPlayWeaponFireFX::bPersistentFire' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_OnPlayWeaponFireFX, bSecondaryFire) == 0x000001, "Member 'B_Ranged_Dual_Generic_Athena_C_OnPlayWeaponFireFX::bSecondaryFire' has a wrong offset!");
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnLoaded_DB8A0F544A576B8684A07E865C728884
-// 0x0008 (0x0008 - 0x0000)
-struct B_Ranged_Dual_Generic_Athena_C_OnLoaded_DB8A0F544A576B8684A07E865C728884 final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_DB8A0F544A576B8684A07E865C728884) == 0x000008, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_OnLoaded_DB8A0F544A576B8684A07E865C728884");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_DB8A0F544A576B8684A07E865C728884) == 0x000008, "Wrong size on B_Ranged_Dual_Generic_Athena_C_OnLoaded_DB8A0F544A576B8684A07E865C728884");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_DB8A0F544A576B8684A07E865C728884, Loaded) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_OnLoaded_DB8A0F544A576B8684A07E865C728884::Loaded' has a wrong offset!");
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045
-// 0x0008 (0x0008 - 0x0000)
-struct B_Ranged_Dual_Generic_Athena_C_OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045 final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045) == 0x000008, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045) == 0x000008, "Wrong size on B_Ranged_Dual_Generic_Athena_C_OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045, Loaded) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045::Loaded' has a wrong offset!");
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnLoaded_A20154E74163905534EAA7A226A4D20B
-// 0x0008 (0x0008 - 0x0000)
-struct B_Ranged_Dual_Generic_Athena_C_OnLoaded_A20154E74163905534EAA7A226A4D20B final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_A20154E74163905534EAA7A226A4D20B) == 0x000008, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_OnLoaded_A20154E74163905534EAA7A226A4D20B");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_A20154E74163905534EAA7A226A4D20B) == 0x000008, "Wrong size on B_Ranged_Dual_Generic_Athena_C_OnLoaded_A20154E74163905534EAA7A226A4D20B");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_A20154E74163905534EAA7A226A4D20B, Loaded) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_OnLoaded_A20154E74163905534EAA7A226A4D20B::Loaded' has a wrong offset!");
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnLoaded_468C8A744AA43D411B8A218EDC703167
-// 0x0008 (0x0008 - 0x0000)
-struct B_Ranged_Dual_Generic_Athena_C_OnLoaded_468C8A744AA43D411B8A218EDC703167 final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_468C8A744AA43D411B8A218EDC703167) == 0x000008, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_OnLoaded_468C8A744AA43D411B8A218EDC703167");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_468C8A744AA43D411B8A218EDC703167) == 0x000008, "Wrong size on B_Ranged_Dual_Generic_Athena_C_OnLoaded_468C8A744AA43D411B8A218EDC703167");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_OnLoaded_468C8A744AA43D411B8A218EDC703167, Loaded) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_OnLoaded_468C8A744AA43D411B8A218EDC703167::Loaded' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.UserConstructionScript
-// 0x0050 (0x0050 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct B_Ranged_Dual_Generic_Athena_C_UserConstructionScript final
 {
 public:
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_1;       // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_2;       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Temp_struct_Variable;                              // 0x0010(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
-	class UParticleSystemComponent*               CallFunc_AddComponent_ReturnValue;                 // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_3;       // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class USkeletalMeshComponentBudgeted*         CallFunc_GetLeftHandWeaponMesh_ReturnValue;        // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetMuzzleSocketName_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetMuzzleSocketName_ReturnValue_1;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_GetMuzzleSocketName_ReturnValue_2;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_1;       // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_2;       // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Temp_struct_Variable;                              // 0x0030(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
+	class UParticleSystemComponent*               CallFunc_AddComponent_ReturnValue;                 // 0x0060(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_3;       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript) == 0x000010, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_UserConstructionScript");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript) == 0x000050, "Wrong size on B_Ranged_Dual_Generic_Athena_C_UserConstructionScript");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_UserConstructionScript::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000004, "Member 'B_Ranged_Dual_Generic_Athena_C_UserConstructionScript::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000005, "Member 'B_Ranged_Dual_Generic_Athena_C_UserConstructionScript::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript, CallFunc_K2_AttachToComponent_ReturnValue_1) == 0x000006, "Member 'B_Ranged_Dual_Generic_Athena_C_UserConstructionScript::CallFunc_K2_AttachToComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript, CallFunc_IsValid_ReturnValue) == 0x000007, "Member 'B_Ranged_Dual_Generic_Athena_C_UserConstructionScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript, CallFunc_K2_AttachToComponent_ReturnValue_2) == 0x000008, "Member 'B_Ranged_Dual_Generic_Athena_C_UserConstructionScript::CallFunc_K2_AttachToComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript, Temp_struct_Variable) == 0x000010, "Member 'B_Ranged_Dual_Generic_Athena_C_UserConstructionScript::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript, CallFunc_AddComponent_ReturnValue) == 0x000040, "Member 'B_Ranged_Dual_Generic_Athena_C_UserConstructionScript::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript, CallFunc_BooleanOR_ReturnValue) == 0x000048, "Member 'B_Ranged_Dual_Generic_Athena_C_UserConstructionScript::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript, CallFunc_BooleanOR_ReturnValue_1) == 0x000049, "Member 'B_Ranged_Dual_Generic_Athena_C_UserConstructionScript::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UserConstructionScript, CallFunc_K2_AttachToComponent_ReturnValue_3) == 0x00004A, "Member 'B_Ranged_Dual_Generic_Athena_C_UserConstructionScript::CallFunc_K2_AttachToComponent_ReturnValue_3' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.AddRandomScale
 // 0x004C (0x004C - 0x0000)
@@ -638,19 +269,6 @@ public:
 	float                                         CallFunc_RandomFloatInRange_ReturnValue_4;         // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue_3;                 // 0x0040(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale) == 0x000004, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_AddRandomScale");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale) == 0x00004C, "Wrong size on B_Ranged_Dual_Generic_Athena_C_AddRandomScale");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale, OffHand) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_AddRandomScale::OffHand' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale, CallFunc_RandomFloatInRange_ReturnValue) == 0x000004, "Member 'B_Ranged_Dual_Generic_Athena_C_AddRandomScale::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale, CallFunc_MakeVector_ReturnValue) == 0x000008, "Member 'B_Ranged_Dual_Generic_Athena_C_AddRandomScale::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale, CallFunc_RandomFloatInRange_ReturnValue_1) == 0x000014, "Member 'B_Ranged_Dual_Generic_Athena_C_AddRandomScale::CallFunc_RandomFloatInRange_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale, CallFunc_MakeVector_ReturnValue_1) == 0x000018, "Member 'B_Ranged_Dual_Generic_Athena_C_AddRandomScale::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale, CallFunc_RandomFloatInRange_ReturnValue_2) == 0x000024, "Member 'B_Ranged_Dual_Generic_Athena_C_AddRandomScale::CallFunc_RandomFloatInRange_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale, CallFunc_MakeVector_ReturnValue_2) == 0x000028, "Member 'B_Ranged_Dual_Generic_Athena_C_AddRandomScale::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale, CallFunc_RandomFloatInRange_ReturnValue_3) == 0x000034, "Member 'B_Ranged_Dual_Generic_Athena_C_AddRandomScale::CallFunc_RandomFloatInRange_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000038, "Member 'B_Ranged_Dual_Generic_Athena_C_AddRandomScale::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale, CallFunc_RandomFloatInRange_ReturnValue_4) == 0x00003C, "Member 'B_Ranged_Dual_Generic_Athena_C_AddRandomScale::CallFunc_RandomFloatInRange_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_AddRandomScale, CallFunc_MakeVector_ReturnValue_3) == 0x000040, "Member 'B_Ranged_Dual_Generic_Athena_C_AddRandomScale::CallFunc_MakeVector_ReturnValue_3' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.Muzzle Flash FX
 // 0x0008 (0x0008 - 0x0000)
@@ -663,13 +281,6 @@ public:
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX) == 0x000004, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX) == 0x000008, "Wrong size on B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX, Persistent_Fire) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX::Persistent_Fire' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX, OffHand) == 0x000001, "Member 'B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX::OffHand' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX, CallFunc_IsUsingScope_ReturnValue) == 0x000002, "Member 'B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX::CallFunc_IsUsingScope_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX, CallFunc_Not_PreBool_ReturnValue) == 0x000003, "Member 'B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX, CallFunc_GetGameTimeInSeconds_ReturnValue) == 0x000004, "Member 'B_Ranged_Dual_Generic_Athena_C_Muzzle_Flash_FX::CallFunc_GetGameTimeInSeconds_ReturnValue' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.Muzzle Play Reload FX
 // 0x0002 (0x0002 - 0x0000)
@@ -679,86 +290,143 @@ public:
 	EFortReloadFXState                            Selection;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_Muzzle_Play_Reload_FX) == 0x000001, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_Muzzle_Play_Reload_FX");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_Muzzle_Play_Reload_FX) == 0x000002, "Wrong size on B_Ranged_Dual_Generic_Athena_C_Muzzle_Play_Reload_FX");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_Muzzle_Play_Reload_FX, Selection) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_Muzzle_Play_Reload_FX::Selection' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_Muzzle_Play_Reload_FX, K2Node_SwitchEnum_CmpSuccess) == 0x000001, "Member 'B_Ranged_Dual_Generic_Athena_C_Muzzle_Play_Reload_FX::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.UpdateShellEmittersFX
-// 0x0020 (0x0020 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX final
 {
 public:
-	class UParticleSystemComponent*               PS;                                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Max_ReturnValue;                          // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UFXSystemComponent*                     Target;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<En_ShellTypes_01>                      Keys_to_Check;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<class FName>                           Values_to_Run_Through;                             // 0x0018(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldPlayPersistentFireFX_ReturnValue;   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_ShouldPlayPersistentFireFX_ReturnValue_1; // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2B[0x5];                                       // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<En_ShellTypes_01>                      CallFunc_Map_Keys_Keys;                            // 0x0030(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_Map_Values_Values;                        // 0x0040(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetShellReloadCounter_ReturnValue;        // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Max_ReturnValue;                          // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x0064(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	En_ShellTypes_01                              CallFunc_Array_Get_Item_1;                         // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0094(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_Value;                           // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x009E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x009F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         K2Node_Select_Default;                             // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable;                               // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable_1;                             // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	En_ShellTypes_01                              CallFunc_Array_Get_Item_2;                         // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Array_Get_Item_3;                         // 0x00BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_Value_1;                         // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         K2Node_Select_Default_1;                           // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D6[0x2];                                       // 0x00D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Select_Default_2;                           // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX) == 0x000008, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX) == 0x000020, "Wrong size on B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, PS) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::PS' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_Max_ReturnValue) == 0x000008, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_Max_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_Conv_IntToFloat_ReturnValue) == 0x00000C, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_Not_PreBool_ReturnValue) == 0x000010, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_Not_PreBool_ReturnValue_1) == 0x000011, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_Not_PreBool_ReturnValue_2) == 0x000012, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_Not_PreBool_ReturnValue_3) == 0x000013, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_Not_PreBool_ReturnValue_4) == 0x000014, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_BooleanAND_ReturnValue) == 0x000015, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_BooleanAND_ReturnValue_1) == 0x000016, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_BooleanAND_ReturnValue_2) == 0x000017, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_BooleanAND_ReturnValue_3) == 0x000018, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_BooleanAND_ReturnValue_4) == 0x000019, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_BooleanAND_ReturnValue_5) == 0x00001A, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_BooleanAND_ReturnValue_6) == 0x00001B, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_BooleanAND_ReturnValue_7) == 0x00001C, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX, CallFunc_BooleanAND_ReturnValue_8) == 0x00001D, "Member 'B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX::CallFunc_BooleanAND_ReturnValue_8' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.SetupShellFX
-// 0x0014 (0x0014 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct B_Ranged_Dual_Generic_Athena_C_SetupShellFX final
 {
 public:
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_DoesSocketExist_ReturnValue;              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_FloatToVector_ReturnValue;           // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_1;       // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          OffHand;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               ShellsToUpdate;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetNumericCVar_OutValue;                  // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetNumericCVar_ReturnValue;               // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_FMax_ReturnValue;                         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponentBudgeted*         CallFunc_GetLeftHandWeaponMesh_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue_1;       // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0044(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_FloatToVector_ReturnValue;           // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_SetupShellFX) == 0x000004, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_SetupShellFX");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_SetupShellFX) == 0x000014, "Wrong size on B_Ranged_Dual_Generic_Athena_C_SetupShellFX");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetupShellFX, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_SetupShellFX::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetupShellFX, CallFunc_DoesSocketExist_ReturnValue) == 0x000001, "Member 'B_Ranged_Dual_Generic_Athena_C_SetupShellFX::CallFunc_DoesSocketExist_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetupShellFX, CallFunc_Conv_FloatToVector_ReturnValue) == 0x000004, "Member 'B_Ranged_Dual_Generic_Athena_C_SetupShellFX::CallFunc_Conv_FloatToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetupShellFX, K2Node_SwitchEnum_CmpSuccess) == 0x000010, "Member 'B_Ranged_Dual_Generic_Athena_C_SetupShellFX::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetupShellFX, CallFunc_K2_AttachToComponent_ReturnValue_1) == 0x000011, "Member 'B_Ranged_Dual_Generic_Athena_C_SetupShellFX::CallFunc_K2_AttachToComponent_ReturnValue_1' has a wrong offset!");
+
+// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.DeactivateShellsFX
+// 0x00F0 (0x00F0 - 0x0000)
+struct B_Ranged_Dual_Generic_Athena_C_DeactivateShellsFX final
+{
+public:
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActive_ReturnValue;                     // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           CallFunc_Map_Values_Values;                        // 0x0030(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4D[0x3];                                       // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsActive_ReturnValue_1;                   // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Array_Get_Item_1;                         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_Map_Values_Values_1;                      // 0x0090(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Array_Get_Item_2;                         // 0x00A4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_Array_Get_Item_3;                         // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue_1;          // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.ActivateShellsFX
-// 0x0002 (0x0002 - 0x0000)
+// 0x0004 (0x0004 - 0x0000)
 struct B_Ranged_Dual_Generic_Athena_C_ActivateShellsFX final
 {
 public:
 	bool                                          Bool;                                              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          OffHand;                                           // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_ActivateShellsFX) == 0x000001, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_ActivateShellsFX");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_ActivateShellsFX) == 0x000002, "Wrong size on B_Ranged_Dual_Generic_Athena_C_ActivateShellsFX");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ActivateShellsFX, Bool) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_ActivateShellsFX::Bool' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ActivateShellsFX, OffHand) == 0x000001, "Member 'B_Ranged_Dual_Generic_Athena_C_ActivateShellsFX::OffHand' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.ActivateReloadSmokeFX
 // 0x0002 (0x0002 - 0x0000)
@@ -768,10 +436,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_ActivateReloadSmokeFX) == 0x000001, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_ActivateReloadSmokeFX");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_ActivateReloadSmokeFX) == 0x000002, "Wrong size on B_Ranged_Dual_Generic_Athena_C_ActivateReloadSmokeFX");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ActivateReloadSmokeFX, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_ActivateReloadSmokeFX::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ActivateReloadSmokeFX, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'B_Ranged_Dual_Generic_Athena_C_ActivateReloadSmokeFX::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.DeactivateReloadSmokeFX
 // 0x0002 (0x0002 - 0x0000)
@@ -781,10 +445,6 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_DeactivateReloadSmokeFX) == 0x000001, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_DeactivateReloadSmokeFX");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_DeactivateReloadSmokeFX) == 0x000002, "Wrong size on B_Ranged_Dual_Generic_Athena_C_DeactivateReloadSmokeFX");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_DeactivateReloadSmokeFX, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_DeactivateReloadSmokeFX::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_DeactivateReloadSmokeFX, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'B_Ranged_Dual_Generic_Athena_C_DeactivateReloadSmokeFX::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.ActivateOrDeactivateWindParticle
 // 0x0001 (0x0001 - 0x0000)
@@ -793,9 +453,6 @@ struct B_Ranged_Dual_Generic_Athena_C_ActivateOrDeactivateWindParticle final
 public:
 	bool                                          bNewActive;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_ActivateOrDeactivateWindParticle) == 0x000001, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_ActivateOrDeactivateWindParticle");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_ActivateOrDeactivateWindParticle) == 0x000001, "Wrong size on B_Ranged_Dual_Generic_Athena_C_ActivateOrDeactivateWindParticle");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ActivateOrDeactivateWindParticle, bNewActive) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_ActivateOrDeactivateWindParticle::bNewActive' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.HideReticle
 // 0x0018 (0x0018 - 0x0000)
@@ -806,11 +463,6 @@ public:
 	class AFortPlayerControllerZone*              K2Node_DynamicCast_AsFort_Player_Controller_Zone;  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_HideReticle) == 0x000008, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_HideReticle");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_HideReticle) == 0x000018, "Wrong size on B_Ranged_Dual_Generic_Athena_C_HideReticle");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_HideReticle, CallFunc_GetInstigatorController_ReturnValue) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_HideReticle::CallFunc_GetInstigatorController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_HideReticle, K2Node_DynamicCast_AsFort_Player_Controller_Zone) == 0x000008, "Member 'B_Ranged_Dual_Generic_Athena_C_HideReticle::K2Node_DynamicCast_AsFort_Player_Controller_Zone' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_HideReticle, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'B_Ranged_Dual_Generic_Athena_C_HideReticle::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.ShowReticle
 // 0x0018 (0x0018 - 0x0000)
@@ -821,48 +473,14 @@ public:
 	class AFortPlayerControllerZone*              K2Node_DynamicCast_AsFort_Player_Controller_Zone;  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_ShowReticle) == 0x000008, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_ShowReticle");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_ShowReticle) == 0x000018, "Wrong size on B_Ranged_Dual_Generic_Athena_C_ShowReticle");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ShowReticle, CallFunc_GetInstigatorController_ReturnValue) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_ShowReticle::CallFunc_GetInstigatorController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ShowReticle, K2Node_DynamicCast_AsFort_Player_Controller_Zone) == 0x000008, "Member 'B_Ranged_Dual_Generic_Athena_C_ShowReticle::K2Node_DynamicCast_AsFort_Player_Controller_Zone' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_ShowReticle, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'B_Ranged_Dual_Generic_Athena_C_ShowReticle::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.SetActiveAlterationIdleParticles
-// 0x0004 (0x0004 - 0x0000)
-struct B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles final
-{
-public:
-	bool                                          Active;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Reset;                                             // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles) == 0x000001, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles) == 0x000004, "Wrong size on B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles, Active) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles::Active' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles, Reset) == 0x000001, "Member 'B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles::Reset' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles, CallFunc_IsDedicatedServer_ReturnValue) == 0x000002, "Member 'B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles, CallFunc_IsValid_ReturnValue) == 0x000003, "Member 'B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.SetPostProcessParams
-// 0x000C (0x000C - 0x0000)
+// 0x0004 (0x0004 - 0x0000)
 struct B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams final
 {
 public:
 	float                                         InputPin;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Lerp_ReturnValue;                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams) == 0x000004, "Wrong alignment on B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams");
-static_assert(sizeof(B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams) == 0x00000C, "Wrong size on B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams, InputPin) == 0x000000, "Member 'B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams::InputPin' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams, CallFunc_IsValid_ReturnValue_1) == 0x000005, "Member 'B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams, CallFunc_BooleanAND_ReturnValue) == 0x000006, "Member 'B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams, CallFunc_Lerp_ReturnValue) == 0x000008, "Member 'B_Ranged_Dual_Generic_Athena_C_SetPostProcessParams::CallFunc_Lerp_ReturnValue' has a wrong offset!");
 
 }
 

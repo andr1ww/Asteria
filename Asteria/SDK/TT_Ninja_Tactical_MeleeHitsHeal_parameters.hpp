@@ -26,12 +26,6 @@ public:
 	class UGA_Ninja_Tactical_MeleeHitsHeal_C*     K2Node_DynamicCast_AsGA_Ninja_Tactical_Melee_Hits_Heal; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal) == 0x000008, "Wrong alignment on TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal");
-static_assert(sizeof(TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal) == 0x000020, "Wrong size on TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal, AbilityInstance) == 0x000000, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal::AbilityInstance' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal, Context) == 0x000008, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal::Context' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal, K2Node_DynamicCast_AsGA_Ninja_Tactical_Melee_Hits_Heal) == 0x000010, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal::K2Node_DynamicCast_AsGA_Ninja_Tactical_Melee_Hits_Heal' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_InitializeAbilityInstanceInternal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function TT_Ninja_Tactical_MeleeHitsHeal.TT_Ninja_Tactical_MeleeHitsHeal_C.GetTextForTokenFromAbilityInstanceInternal
 // 0x0068 (0x0068 - 0x0000)
@@ -53,20 +47,6 @@ public:
 	int32                                         CallFunc_Round_ReturnValue;                        // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0050(0x0018)()
 };
-static_assert(alignof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal) == 0x000008, "Wrong alignment on TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal");
-static_assert(sizeof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal) == 0x000068, "Wrong size on TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, AbilityInstance) == 0x000000, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::AbilityInstance' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, Tag) == 0x000008, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::Tag' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, Context) == 0x000010, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::Context' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, Token) == 0x000018, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::Token' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, OutText) == 0x000020, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::OutText' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, ReturnValue) == 0x000038, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::ReturnValue' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, GameplayTagsK2Node_SwitchGameplayTag_CmpSuccess) == 0x000039, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::GameplayTagsK2Node_SwitchGameplayTag_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, K2Node_DynamicCast_AsGA_Ninja_Tactical_Melee_Hits_Heal) == 0x000040, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::K2Node_DynamicCast_AsGA_Ninja_Tactical_Melee_Hits_Heal' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, CallFunc_IsValid_ReturnValue) == 0x000049, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, CallFunc_Round_ReturnValue) == 0x00004C, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::CallFunc_Round_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal, CallFunc_Conv_IntToText_ReturnValue) == 0x000050, "Member 'TT_Ninja_Tactical_MeleeHitsHeal_C_GetTextForTokenFromAbilityInstanceInternal::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 }
 

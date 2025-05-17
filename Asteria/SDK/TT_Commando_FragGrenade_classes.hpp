@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TT_Commando_FragGrenade.TT_Commando_FragGrenade_C
-// 0x0000 (0x0168 - 0x0168)
+// 0x0000 (0x0180 - 0x0180)
 class UTT_Commando_FragGrenade_C final : public UFortGameplayAbilityTooltip
 {
 public:
@@ -35,8 +35,6 @@ public:
 		return GetDefaultObjImpl<UTT_Commando_FragGrenade_C>();
 	}
 };
-static_assert(alignof(UTT_Commando_FragGrenade_C) == 0x000008, "Wrong alignment on UTT_Commando_FragGrenade_C");
-static_assert(sizeof(UTT_Commando_FragGrenade_C) == 0x000168, "Wrong size on UTT_Commando_FragGrenade_C");
 
 }
 

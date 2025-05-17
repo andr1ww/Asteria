@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function EventTeamMatchHistoryEntry.EventTeamMatchHistoryEntry_C.OnListItemObjectSet
-// 0x0008 (0x0008 - 0x0000)
-struct EventTeamMatchHistoryEntry_C_OnListItemObjectSet final
-{
-public:
-	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(EventTeamMatchHistoryEntry_C_OnListItemObjectSet) == 0x000008, "Wrong alignment on EventTeamMatchHistoryEntry_C_OnListItemObjectSet");
-static_assert(sizeof(EventTeamMatchHistoryEntry_C_OnListItemObjectSet) == 0x000008, "Wrong size on EventTeamMatchHistoryEntry_C_OnListItemObjectSet");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'EventTeamMatchHistoryEntry_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
-
 // Function EventTeamMatchHistoryEntry.EventTeamMatchHistoryEntry_C.ExecuteUbergraph_EventTeamMatchHistoryEntry
 // 0x0068 (0x0068 - 0x0000)
 struct EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry final
@@ -48,20 +37,14 @@ public:
 	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           K2Node_Select_Default;                             // 0x0054(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry) == 0x000008, "Wrong alignment on EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry");
-static_assert(sizeof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry) == 0x000068, "Wrong size on EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, EntryPoint) == 0x000000, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::EntryPoint' has a wrong offset!");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, Temp_bool_Variable) == 0x000004, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, Temp_struct_Variable) == 0x000008, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, Temp_struct_Variable_1) == 0x000018, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, CallFunc_PlayAnimationReverse_ReturnValue) == 0x000028, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::CallFunc_PlayAnimationReverse_ReturnValue' has a wrong offset!");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, CallFunc_PlayAnimationForward_ReturnValue) == 0x000030, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, K2Node_Event_ListItemObject) == 0x000038, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::K2Node_Event_ListItemObject' has a wrong offset!");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, K2Node_DynamicCast_AsFort_Event_Team_Match_History_Entry_Data) == 0x000040, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::K2Node_DynamicCast_AsFort_Event_Team_Match_History_Entry_Data' has a wrong offset!");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, CallFunc_Percent_IntInt_ReturnValue) == 0x00004C, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::CallFunc_Percent_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000050, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry, K2Node_Select_Default) == 0x000054, "Member 'EventTeamMatchHistoryEntry_C_ExecuteUbergraph_EventTeamMatchHistoryEntry::K2Node_Select_Default' has a wrong offset!");
+
+// Function EventTeamMatchHistoryEntry.EventTeamMatchHistoryEntry_C.OnListItemObjectSet
+// 0x0008 (0x0008 - 0x0000)
+struct EventTeamMatchHistoryEntry_C_OnListItemObjectSet final
+{
+public:
+	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 }
 

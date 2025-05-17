@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BattleMapTeamFlightdge.BP_BattleMapTeamFlightdge_C
-// 0x0000 (0x0280 - 0x0280)
+// 0x0000 (0x0288 - 0x0288)
 class ABP_BattleMapTeamFlightdge_C final : public ABP_BattleMapBaseEdge_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapTeamFlightdge_C>();
 	}
 };
-static_assert(alignof(ABP_BattleMapTeamFlightdge_C) == 0x000008, "Wrong alignment on ABP_BattleMapTeamFlightdge_C");
-static_assert(sizeof(ABP_BattleMapTeamFlightdge_C) == 0x000280, "Wrong size on ABP_BattleMapTeamFlightdge_C");
 
 }
 

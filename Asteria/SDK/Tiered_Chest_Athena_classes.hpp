@@ -10,53 +10,64 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Tiered_Chest_Athena.Tiered_Chest_Athena_C
-// 0x00B0 (0x0D00 - 0x0C50)
+// 0x00E0 (0x0E08 - 0x0D28)
 class ATiered_Chest_Athena_C final : public ABuildingContainer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*               P_Loot_Chest_Aura_Athena;                          // 0x0C58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   S_Chest_SmokeSheet;                                // 0x0C60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   TrasureLight;                                      // 0x0C68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        Chest_Ambient_Sound;                               // 0x0C70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         MobileSelectedTL_LerpInteactoIcon_EEB30EBE433E8977EDA63DB381EAF0C8; // 0x0C78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MobileSelectedTL_LerpObject_EEB30EBE433E8977EDA63DB381EAF0C8; // 0x0C7C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            MobileSelectedTL__Direction_EEB30EBE433E8977EDA63DB381EAF0C8; // 0x0C80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C81[0x7];                                      // 0x0C81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     MobileSelectedTL;                                  // 0x0C88(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MobileOnInteractTL_LERP_9BD788A146DACD005BAF94BEBEDAB584; // 0x0C90(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            MobileOnInteractTL__Direction_9BD788A146DACD005BAF94BEBEDAB584; // 0x0C94(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C95[0x3];                                      // 0x0C95(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     MobileOnInteractTL;                                // 0x0C98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Loot_Effect;                                       // 0x0CA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SpecialChestOpenSound;                             // 0x0CA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       MIDs;                                              // 0x0CB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	float                                         MobileWiggleAmount;                                // 0x0CC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC4[0x4];                                      // 0x0CC4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           ChimeTimer;                                        // 0x0CC8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         ChestChimeVisualUpdate;                            // 0x0CD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CD4[0x4];                                      // 0x0CD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     MobileInteractionMaterial;                         // 0x0CD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   MobileInteractIcon;                                // 0x0CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                MobileInteractIconLocation;                        // 0x0CE8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                MobileInteractIconScale;                           // 0x0CF4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               P_Loot_Chest_Aura_Athena;                          // 0x0D30(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   S_Chest_SmokeSheet;                                // 0x0D38(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   TreasureLight;                                     // 0x0D40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Chest_Ambient_Sound;                               // 0x0D48(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_0_Time_C3D8BC62418047EE3E783F89FAF8EEB6;  // 0x0D50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_0__Direction_C3D8BC62418047EE3E783F89FAF8EEB6; // 0x0D54(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D55[0x3];                                      // 0x0D55(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_0;                                        // 0x0D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MobileSelectedTL_LerpInteactoIcon_EEB30EBE433E8977EDA63DB381EAF0C8; // 0x0D60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MobileSelectedTL_LerpObject_EEB30EBE433E8977EDA63DB381EAF0C8; // 0x0D64(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            MobileSelectedTL__Direction_EEB30EBE433E8977EDA63DB381EAF0C8; // 0x0D68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D69[0x7];                                      // 0x0D69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     MobileSelectedTL;                                  // 0x0D70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MobileOnInteractTL_LERP_9BD788A146DACD005BAF94BEBEDAB584; // 0x0D78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            MobileOnInteractTL__Direction_9BD788A146DACD005BAF94BEBEDAB584; // 0x0D7C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D7D[0x3];                                      // 0x0D7D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     MobileOnInteractTL;                                // 0x0D80(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Loot_Effect;                                       // 0x0D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SpecialChestOpenSound;                             // 0x0D90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       MIDs;                                              // 0x0D98(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	float                                         MobileWiggleAmount;                                // 0x0DA8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ChestChimeVisualUpdate;                            // 0x0DAC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     MobileInteractionMaterial;                         // 0x0DB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   MobileInteractIcon;                                // 0x0DB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                MobileInteractIconLocation;                        // 0x0DC0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                MobileInteractIconScale;                           // 0x0DCC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Open_Chest_Sound;                                  // 0x0DD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        P_Loot_Chest_Opened_FX;                            // 0x0DE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               NewVar_0;                                          // 0x0DE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               NewVar_1;                                          // 0x0DF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        Galileo_Chest_Open_FX;                             // 0x0DF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         OpenFX_Rotation;                                   // 0x0E00(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Tiered_Chest_Athena(int32 EntryPoint);
+	void PlayChestOpeningTimeline();
+	void SpawnChestOpenVFX();
+	void DetermineVFXRotation();
+	void HideChestOpenableCosmetics();
 	void OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
 	void OnBeginSearch();
 	void DisableBacchusHighlight();
 	void EnableBacchusHighlight();
-	void Chime_Visual();
 	void Mobile_OnDisconnect();
 	void Mobile_OnInteract();
 	void Mobile_Outline_Off();
@@ -65,6 +76,8 @@ public:
 	void ReceiveDestroyed();
 	void ReceiveBeginPlay();
 	void OnLoot();
+	void Timeline_0__UpdateFunc();
+	void Timeline_0__FinishedFunc();
 	void MobileSelectedTL__UpdateFunc();
 	void MobileSelectedTL__FinishedFunc();
 	void MobileOnInteractTL__UpdateFunc();
@@ -78,7 +91,7 @@ public:
 	void SetVisibleMobileInteractIcon(bool Visible);
 	void OnSetCustomDepthStencilValue(const TArray<class UPrimitiveComponent*>& PrimComponents, bool bUseCustomDepth, int32 StencilValue, bool* bOutConsume);
 
-	bool BlueprintCanInteract(const class AFortPawn* InteractingPawn) const;
+	bool BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const;
 
 public:
 	static class UClass* StaticClass()
@@ -90,30 +103,6 @@ public:
 		return GetDefaultObjImpl<ATiered_Chest_Athena_C>();
 	}
 };
-static_assert(alignof(ATiered_Chest_Athena_C) == 0x000008, "Wrong alignment on ATiered_Chest_Athena_C");
-static_assert(sizeof(ATiered_Chest_Athena_C) == 0x000D00, "Wrong size on ATiered_Chest_Athena_C");
-static_assert(offsetof(ATiered_Chest_Athena_C, UberGraphFrame) == 0x000C50, "Member 'ATiered_Chest_Athena_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, P_Loot_Chest_Aura_Athena) == 0x000C58, "Member 'ATiered_Chest_Athena_C::P_Loot_Chest_Aura_Athena' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, S_Chest_SmokeSheet) == 0x000C60, "Member 'ATiered_Chest_Athena_C::S_Chest_SmokeSheet' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, TrasureLight) == 0x000C68, "Member 'ATiered_Chest_Athena_C::TrasureLight' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, Chest_Ambient_Sound) == 0x000C70, "Member 'ATiered_Chest_Athena_C::Chest_Ambient_Sound' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileSelectedTL_LerpInteactoIcon_EEB30EBE433E8977EDA63DB381EAF0C8) == 0x000C78, "Member 'ATiered_Chest_Athena_C::MobileSelectedTL_LerpInteactoIcon_EEB30EBE433E8977EDA63DB381EAF0C8' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileSelectedTL_LerpObject_EEB30EBE433E8977EDA63DB381EAF0C8) == 0x000C7C, "Member 'ATiered_Chest_Athena_C::MobileSelectedTL_LerpObject_EEB30EBE433E8977EDA63DB381EAF0C8' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileSelectedTL__Direction_EEB30EBE433E8977EDA63DB381EAF0C8) == 0x000C80, "Member 'ATiered_Chest_Athena_C::MobileSelectedTL__Direction_EEB30EBE433E8977EDA63DB381EAF0C8' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileSelectedTL) == 0x000C88, "Member 'ATiered_Chest_Athena_C::MobileSelectedTL' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileOnInteractTL_LERP_9BD788A146DACD005BAF94BEBEDAB584) == 0x000C90, "Member 'ATiered_Chest_Athena_C::MobileOnInteractTL_LERP_9BD788A146DACD005BAF94BEBEDAB584' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileOnInteractTL__Direction_9BD788A146DACD005BAF94BEBEDAB584) == 0x000C94, "Member 'ATiered_Chest_Athena_C::MobileOnInteractTL__Direction_9BD788A146DACD005BAF94BEBEDAB584' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileOnInteractTL) == 0x000C98, "Member 'ATiered_Chest_Athena_C::MobileOnInteractTL' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, Loot_Effect) == 0x000CA0, "Member 'ATiered_Chest_Athena_C::Loot_Effect' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, SpecialChestOpenSound) == 0x000CA8, "Member 'ATiered_Chest_Athena_C::SpecialChestOpenSound' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MIDs) == 0x000CB0, "Member 'ATiered_Chest_Athena_C::MIDs' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileWiggleAmount) == 0x000CC0, "Member 'ATiered_Chest_Athena_C::MobileWiggleAmount' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, ChimeTimer) == 0x000CC8, "Member 'ATiered_Chest_Athena_C::ChimeTimer' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, ChestChimeVisualUpdate) == 0x000CD0, "Member 'ATiered_Chest_Athena_C::ChestChimeVisualUpdate' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileInteractionMaterial) == 0x000CD8, "Member 'ATiered_Chest_Athena_C::MobileInteractionMaterial' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileInteractIcon) == 0x000CE0, "Member 'ATiered_Chest_Athena_C::MobileInteractIcon' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileInteractIconLocation) == 0x000CE8, "Member 'ATiered_Chest_Athena_C::MobileInteractIconLocation' has a wrong offset!");
-static_assert(offsetof(ATiered_Chest_Athena_C, MobileInteractIconScale) == 0x000CF4, "Member 'ATiered_Chest_Athena_C::MobileInteractIconScale' has a wrong offset!");
 
 }
 

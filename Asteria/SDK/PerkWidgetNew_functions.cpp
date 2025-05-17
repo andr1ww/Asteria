@@ -79,7 +79,7 @@ class UWidget* UPerkWidgetNew_C::Get_OverlayAbilityPerk_ToolTipWidget()
 // bool                                    bUseLegacyFixedSizeIcons_0                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // EFortBrushSize                          IconSize_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bUseLargeFormatName_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FFortUIPerk                      Perk_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortUIPerk&               Perk_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                                    ShowMouseTooltips                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    bInShowBadges                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // float                                   WrapTextAt                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -124,7 +124,7 @@ void UPerkWidgetNew_C::HighlightBadge()
 // Function PerkWidgetNew.PerkWidgetNew_C.GetPerkStat
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FTooltipStat                     TooltipStat                                            (Parm, OutParm, HasGetValueTypeHash)
+// struct FTooltipStat*                    TooltipStat                                            (Parm, OutParm, HasGetValueTypeHash)
 
 void UPerkWidgetNew_C::GetPerkStat(struct FTooltipStat* TooltipStat)
 {
@@ -201,7 +201,7 @@ void UPerkWidgetNew_C::InitializeText()
 // Function PerkWidgetNew.PerkWidgetNew_C.ShouldFadePerk
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UPerkWidgetNew_C::ShouldFadePerk(bool* Result)
 {
@@ -222,7 +222,7 @@ void UPerkWidgetNew_C::ShouldFadePerk(bool* Result)
 // Function PerkWidgetNew.PerkWidgetNew_C.GetHighlightColor
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FLinearColor                     Color                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FLinearColor*                    Color                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UPerkWidgetNew_C::GetHighlightColor(struct FLinearColor* Color)
 {
@@ -243,7 +243,7 @@ void UPerkWidgetNew_C::GetHighlightColor(struct FLinearColor* Color)
 // Function PerkWidgetNew.PerkWidgetNew_C.GetTierAbilityBrush
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FSlateBrush                      SlateBrush                                             (Parm, OutParm)
+// struct FSlateBrush*                     SlateBrush                                             (Parm, OutParm)
 
 void UPerkWidgetNew_C::GetTierAbilityBrush(struct FSlateBrush* SlateBrush)
 {
@@ -312,7 +312,7 @@ void UPerkWidgetNew_C::PreConstruct(bool IsDesignTime)
 // Function PerkWidgetNew.PerkWidgetNew_C.OnCombinedTooltipDescriptionReady
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// class FText                             Description                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      Description                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UPerkWidgetNew_C::OnCombinedTooltipDescriptionReady(const class FText& Description)
 {

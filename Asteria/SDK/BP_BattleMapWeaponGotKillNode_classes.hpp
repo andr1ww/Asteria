@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BattleMapWeaponGotKillNode.BP_BattleMapWeaponGotKillNode_C
-// 0x0000 (0x0370 - 0x0370)
+// 0x0000 (0x0358 - 0x0358)
 class ABP_BattleMapWeaponGotKillNode_C final : public ABP_BattleMapBaseNode_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapWeaponGotKillNode_C>();
 	}
 };
-static_assert(alignof(ABP_BattleMapWeaponGotKillNode_C) == 0x000008, "Wrong alignment on ABP_BattleMapWeaponGotKillNode_C");
-static_assert(sizeof(ABP_BattleMapWeaponGotKillNode_C) == 0x000370, "Wrong size on ABP_BattleMapWeaponGotKillNode_C");
 
 }
 

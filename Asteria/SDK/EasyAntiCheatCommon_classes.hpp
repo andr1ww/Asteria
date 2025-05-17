@@ -17,15 +17,15 @@ namespace SDK
 {
 
 // Class EasyAntiCheatCommon.EasyAntiCheatNetComponent
-// 0x0008 (0x00E0 - 0x00D8)
+// 0x0008 (0x00B8 - 0x00B0)
 class UEasyAntiCheatNetComponent final : public UActorComponent
 {
 public:
-	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void ClientMessage(const TArray<uint8>& MESSAGE);
-	void ServerMessage(const TArray<uint8>& MESSAGE);
+	void ClientMessage(const TArray<uint8>& Message);
+	void ServerMessage(const TArray<uint8>& Message);
 
 public:
 	static class UClass* StaticClass()
@@ -37,8 +37,6 @@ public:
 		return GetDefaultObjImpl<UEasyAntiCheatNetComponent>();
 	}
 };
-static_assert(alignof(UEasyAntiCheatNetComponent) == 0x000008, "Wrong alignment on UEasyAntiCheatNetComponent");
-static_assert(sizeof(UEasyAntiCheatNetComponent) == 0x0000E0, "Wrong size on UEasyAntiCheatNetComponent");
 
 }
 

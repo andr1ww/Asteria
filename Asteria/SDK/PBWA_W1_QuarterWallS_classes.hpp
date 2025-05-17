@@ -11,25 +11,15 @@
 #include "Basic.hpp"
 
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass PBWA_W1_QuarterWallS.PBWA_W1_QuarterWallS_C
-// 0x0008 (0x0C50 - 0x0C48)
+// 0x0000 (0x0CD0 - 0x0CD0)
 class APBWA_W1_QuarterWallS_C final : public ABuildingWall
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void ExecuteUbergraph_PBWA_W1_QuarterWallS(int32 EntryPoint);
-	void GameplayCue_Abilities_Activation_Generic_BannerWallBuff2(EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters);
-	void GameplayCue_Abilities_Activation_Generic_BannerWallBuff1(EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters);
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -40,9 +30,6 @@ public:
 		return GetDefaultObjImpl<APBWA_W1_QuarterWallS_C>();
 	}
 };
-static_assert(alignof(APBWA_W1_QuarterWallS_C) == 0x000008, "Wrong alignment on APBWA_W1_QuarterWallS_C");
-static_assert(sizeof(APBWA_W1_QuarterWallS_C) == 0x000C50, "Wrong size on APBWA_W1_QuarterWallS_C");
-static_assert(offsetof(APBWA_W1_QuarterWallS_C, UberGraphFrame) == 0x000C48, "Member 'APBWA_W1_QuarterWallS_C::UberGraphFrame' has a wrong offset!");
 
 }
 

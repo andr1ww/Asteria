@@ -37,6 +37,40 @@ void ADA_AshtonPack_C::ExecuteUbergraph_DA_AshtonPack(int32 EntryPoint)
 }
 
 
+// Function DA_AshtonPack.DA_AshtonPack_C.Landed
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void ADA_AshtonPack_C::Landed(const struct FHitResult& Hit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DA_AshtonPack_C", "Landed");
+
+	Params::DA_AshtonPack_C_Landed Parms{};
+
+	Parms.Hit = std::move(Hit);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function DA_AshtonPack.DA_AshtonPack_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ADA_AshtonPack_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DA_AshtonPack_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function DA_AshtonPack.DA_AshtonPack_C.BPPressSecondaryFire
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -74,40 +108,6 @@ void ADA_AshtonPack_C::BPPressTrigger(class AFortDecoHelper* FortDecoHelper)
 	Parms.FortDecoHelper = FortDecoHelper;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DA_AshtonPack.DA_AshtonPack_C.Landed
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FHitResult                       Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void ADA_AshtonPack_C::Landed(const struct FHitResult& Hit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DA_AshtonPack_C", "Landed");
-
-	Params::DA_AshtonPack_C_Landed Parms{};
-
-	Parms.Hit = std::move(Hit);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function DA_AshtonPack.DA_AshtonPack_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ADA_AshtonPack_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DA_AshtonPack_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -19,19 +19,19 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MatchmakingRegionAndPool.MatchmakingRegionAndPool_C
-// 0x0028 (0x0258 - 0x0230)
+// 0x0028 (0x0290 - 0x0268)
 class UMatchmakingRegionAndPool_C final : public UMatchmakingRegionAndPoolBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0230(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       ClassicModeText;                                   // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        IBMSwitcher;                                       // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         InputRegion;                                       // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       RegionText;                                        // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0268(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       ClassicModeText;                                   // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        IBMSwitcher;                                       // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         InputRegion;                                       // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       RegionText;                                        // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ExecuteUbergraph_MatchmakingRegionAndPool(int32 EntryPoint);
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 public:
 	static class UClass* StaticClass()
@@ -43,13 +43,6 @@ public:
 		return GetDefaultObjImpl<UMatchmakingRegionAndPool_C>();
 	}
 };
-static_assert(alignof(UMatchmakingRegionAndPool_C) == 0x000008, "Wrong alignment on UMatchmakingRegionAndPool_C");
-static_assert(sizeof(UMatchmakingRegionAndPool_C) == 0x000258, "Wrong size on UMatchmakingRegionAndPool_C");
-static_assert(offsetof(UMatchmakingRegionAndPool_C, UberGraphFrame) == 0x000230, "Member 'UMatchmakingRegionAndPool_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMatchmakingRegionAndPool_C, ClassicModeText) == 0x000238, "Member 'UMatchmakingRegionAndPool_C::ClassicModeText' has a wrong offset!");
-static_assert(offsetof(UMatchmakingRegionAndPool_C, IBMSwitcher) == 0x000240, "Member 'UMatchmakingRegionAndPool_C::IBMSwitcher' has a wrong offset!");
-static_assert(offsetof(UMatchmakingRegionAndPool_C, InputRegion) == 0x000248, "Member 'UMatchmakingRegionAndPool_C::InputRegion' has a wrong offset!");
-static_assert(offsetof(UMatchmakingRegionAndPool_C, RegionText) == 0x000250, "Member 'UMatchmakingRegionAndPool_C::RegionText' has a wrong offset!");
 
 }
 

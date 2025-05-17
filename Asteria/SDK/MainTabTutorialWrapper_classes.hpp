@@ -10,24 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MainTabTutorialWrapper.MainTabTutorialWrapper_C
-// 0x0028 (0x0280 - 0x0258)
+// 0x0028 (0x02D0 - 0x02A8)
 class UMainTabTutorialWrapper_C final : public UFortBangWrapper_NUI
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0258(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       TutorialGlow;                                      // 0x0260(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UTutorialToastWidget_C*                 TutorialToastWidget;                               // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USoundBase*                             Play_Callout_Sound;                                // 0x0270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCommonButton*                          ParentButton;                                      // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       TutorialGlow;                                      // 0x02B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UTutorialToastWidget_C*                 TutorialToastWidget;                               // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USoundBase*                             Play_Callout_Sound;                                // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonButton*                          ParentButton;                                      // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void TutorialWrapperFinished();
@@ -53,13 +53,6 @@ public:
 		return GetDefaultObjImpl<UMainTabTutorialWrapper_C>();
 	}
 };
-static_assert(alignof(UMainTabTutorialWrapper_C) == 0x000008, "Wrong alignment on UMainTabTutorialWrapper_C");
-static_assert(sizeof(UMainTabTutorialWrapper_C) == 0x000280, "Wrong size on UMainTabTutorialWrapper_C");
-static_assert(offsetof(UMainTabTutorialWrapper_C, UberGraphFrame) == 0x000258, "Member 'UMainTabTutorialWrapper_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMainTabTutorialWrapper_C, TutorialGlow) == 0x000260, "Member 'UMainTabTutorialWrapper_C::TutorialGlow' has a wrong offset!");
-static_assert(offsetof(UMainTabTutorialWrapper_C, TutorialToastWidget) == 0x000268, "Member 'UMainTabTutorialWrapper_C::TutorialToastWidget' has a wrong offset!");
-static_assert(offsetof(UMainTabTutorialWrapper_C, Play_Callout_Sound) == 0x000270, "Member 'UMainTabTutorialWrapper_C::Play_Callout_Sound' has a wrong offset!");
-static_assert(offsetof(UMainTabTutorialWrapper_C, ParentButton) == 0x000278, "Member 'UMainTabTutorialWrapper_C::ParentButton' has a wrong offset!");
 
 }
 

@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function StoreSelectionPopup.StoreSelectionPopup_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UStoreSelectionPopup_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreSelectionPopup_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function StoreSelectionPopup.StoreSelectionPopup_C.ExecuteUbergraph_StoreSelectionPopup
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UStoreSelectionPopup_C::ExecuteUbergraph_StoreSelectionPopup(int32 EntryPoi
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreSelectionPopup.StoreSelectionPopup_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UStoreSelectionPopup_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreSelectionPopup_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

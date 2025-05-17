@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UItemCardPowerRatingTextStyle_M_C>();
 	}
 };
-static_assert(alignof(UItemCardPowerRatingTextStyle_M_C) == 0x000008, "Wrong alignment on UItemCardPowerRatingTextStyle_M_C");
-static_assert(sizeof(UItemCardPowerRatingTextStyle_M_C) == 0x000148, "Wrong size on UItemCardPowerRatingTextStyle_M_C");
 
 }
 

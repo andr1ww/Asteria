@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ShowdownEventEmptySpacer.ShowdownEventEmptySpacer_C
-// 0x0000 (0x0230 - 0x0230)
+// 0x0000 (0x0260 - 0x0260)
 class UShowdownEventEmptySpacer_C final : public UUserWidget
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UShowdownEventEmptySpacer_C>();
 	}
 };
-static_assert(alignof(UShowdownEventEmptySpacer_C) == 0x000008, "Wrong alignment on UShowdownEventEmptySpacer_C");
-static_assert(sizeof(UShowdownEventEmptySpacer_C) == 0x000230, "Wrong size on UShowdownEventEmptySpacer_C");
 
 }
 

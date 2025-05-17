@@ -42,23 +42,6 @@ public:
 	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UTexture2D>              K2Node_Select_Default;                             // 0x01F0(0x0028)(HasGetValueTypeHash)
 };
-static_assert(alignof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage) == 0x000008, "Wrong alignment on HeroLoadoutActiveAbilityDetailRow_C_GetTierImage");
-static_assert(sizeof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage) == 0x000218, "Wrong size on HeroLoadoutActiveAbilityDetailRow_C_GetTierImage");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, NewParam) == 0x000000, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::NewParam' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_byte_Variable) == 0x000028, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_softobject_Variable) == 0x000030, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_softobject_Variable' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_softobject_Variable_1) == 0x000058, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_softobject_Variable_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_softobject_Variable_2) == 0x000080, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_softobject_Variable_2' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_softobject_Variable_3) == 0x0000A8, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_softobject_Variable_3' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_softobject_Variable_4) == 0x0000D0, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_softobject_Variable_4' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_softobject_Variable_5) == 0x0000F8, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_softobject_Variable_5' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_softobject_Variable_6) == 0x000120, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_softobject_Variable_6' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_softobject_Variable_7) == 0x000148, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_softobject_Variable_7' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_softobject_Variable_8) == 0x000170, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_softobject_Variable_8' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_softobject_Variable_9) == 0x000198, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_softobject_Variable_9' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, Temp_softobject_Variable_10) == 0x0001C0, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::Temp_softobject_Variable_10' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, CallFunc_GetAbilityKitUnlockTierForHero_ReturnValue) == 0x0001E8, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::CallFunc_GetAbilityKitUnlockTierForHero_ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetTierImage, K2Node_Select_Default) == 0x0001F0, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetTierImage::K2Node_Select_Default' has a wrong offset!");
 
 // Function HeroLoadoutActiveAbilityDetailRow.HeroLoadoutActiveAbilityDetailRow_C.SetDisplayState
 // 0x0003 (0x0003 - 0x0000)
@@ -69,11 +52,6 @@ public:
 	bool                                          ShowDescription;                                   // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          UseVerboseDescription_0;                           // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(HeroLoadoutActiveAbilityDetailRow_C_SetDisplayState) == 0x000001, "Wrong alignment on HeroLoadoutActiveAbilityDetailRow_C_SetDisplayState");
-static_assert(sizeof(HeroLoadoutActiveAbilityDetailRow_C_SetDisplayState) == 0x000003, "Wrong size on HeroLoadoutActiveAbilityDetailRow_C_SetDisplayState");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_SetDisplayState, ShowName) == 0x000000, "Member 'HeroLoadoutActiveAbilityDetailRow_C_SetDisplayState::ShowName' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_SetDisplayState, ShowDescription) == 0x000001, "Member 'HeroLoadoutActiveAbilityDetailRow_C_SetDisplayState::ShowDescription' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_SetDisplayState, UseVerboseDescription_0) == 0x000002, "Member 'HeroLoadoutActiveAbilityDetailRow_C_SetDisplayState::UseVerboseDescription_0' has a wrong offset!");
 
 // Function HeroLoadoutActiveAbilityDetailRow.HeroLoadoutActiveAbilityDetailRow_C.SetAbilityKit
 // 0x0008 (0x0008 - 0x0000)
@@ -82,9 +60,6 @@ struct HeroLoadoutActiveAbilityDetailRow_C_SetAbilityKit final
 public:
 	class UFortAbilityKit*                        AbilityKit_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(HeroLoadoutActiveAbilityDetailRow_C_SetAbilityKit) == 0x000008, "Wrong alignment on HeroLoadoutActiveAbilityDetailRow_C_SetAbilityKit");
-static_assert(sizeof(HeroLoadoutActiveAbilityDetailRow_C_SetAbilityKit) == 0x000008, "Wrong size on HeroLoadoutActiveAbilityDetailRow_C_SetAbilityKit");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_SetAbilityKit, AbilityKit_0) == 0x000000, "Member 'HeroLoadoutActiveAbilityDetailRow_C_SetAbilityKit::AbilityKit_0' has a wrong offset!");
 
 // Function HeroLoadoutActiveAbilityDetailRow.HeroLoadoutActiveAbilityDetailRow_C.IsAbilityUnlocked
 // 0x0002 (0x0002 - 0x0000)
@@ -94,10 +69,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsAbilityKitUnlockedForHero_ReturnValue;  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(HeroLoadoutActiveAbilityDetailRow_C_IsAbilityUnlocked) == 0x000001, "Wrong alignment on HeroLoadoutActiveAbilityDetailRow_C_IsAbilityUnlocked");
-static_assert(sizeof(HeroLoadoutActiveAbilityDetailRow_C_IsAbilityUnlocked) == 0x000002, "Wrong size on HeroLoadoutActiveAbilityDetailRow_C_IsAbilityUnlocked");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_IsAbilityUnlocked, ReturnValue) == 0x000000, "Member 'HeroLoadoutActiveAbilityDetailRow_C_IsAbilityUnlocked::ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_IsAbilityUnlocked, CallFunc_IsAbilityKitUnlockedForHero_ReturnValue) == 0x000001, "Member 'HeroLoadoutActiveAbilityDetailRow_C_IsAbilityUnlocked::CallFunc_IsAbilityKitUnlockedForHero_ReturnValue' has a wrong offset!");
 
 // Function HeroLoadoutActiveAbilityDetailRow.HeroLoadoutActiveAbilityDetailRow_C.GetAbilityKit
 // 0x0008 (0x0008 - 0x0000)
@@ -106,9 +77,6 @@ struct HeroLoadoutActiveAbilityDetailRow_C_GetAbilityKit final
 public:
 	class UFortAbilityKit*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(HeroLoadoutActiveAbilityDetailRow_C_GetAbilityKit) == 0x000008, "Wrong alignment on HeroLoadoutActiveAbilityDetailRow_C_GetAbilityKit");
-static_assert(sizeof(HeroLoadoutActiveAbilityDetailRow_C_GetAbilityKit) == 0x000008, "Wrong size on HeroLoadoutActiveAbilityDetailRow_C_GetAbilityKit");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_GetAbilityKit, ReturnValue) == 0x000000, "Member 'HeroLoadoutActiveAbilityDetailRow_C_GetAbilityKit::ReturnValue' has a wrong offset!");
 
 // Function HeroLoadoutActiveAbilityDetailRow.HeroLoadoutActiveAbilityDetailRow_C.SetHero
 // 0x0008 (0x0008 - 0x0000)
@@ -117,9 +85,6 @@ struct HeroLoadoutActiveAbilityDetailRow_C_SetHero final
 public:
 	class UFortHero*                              Hero;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(HeroLoadoutActiveAbilityDetailRow_C_SetHero) == 0x000008, "Wrong alignment on HeroLoadoutActiveAbilityDetailRow_C_SetHero");
-static_assert(sizeof(HeroLoadoutActiveAbilityDetailRow_C_SetHero) == 0x000008, "Wrong size on HeroLoadoutActiveAbilityDetailRow_C_SetHero");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_SetHero, Hero) == 0x000000, "Member 'HeroLoadoutActiveAbilityDetailRow_C_SetHero::Hero' has a wrong offset!");
 
 // Function HeroLoadoutActiveAbilityDetailRow.HeroLoadoutActiveAbilityDetailRow_C.UpdateTextStyles
 // 0x0018 (0x0018 - 0x0000)
@@ -134,14 +99,6 @@ public:
 	class UClass*                                 K2Node_Select_Default;                             // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 K2Node_Select_Default_1;                           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles) == 0x000008, "Wrong alignment on HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles");
-static_assert(sizeof(HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles) == 0x000018, "Wrong size on HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles, Temp_bool_Variable) == 0x000000, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles, CallFunc_IsAbilityUnlocked_ReturnValue) == 0x000001, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles::CallFunc_IsAbilityUnlocked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles, CallFunc_IsAbilityUnlocked_ReturnValue_1) == 0x000002, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles::CallFunc_IsAbilityUnlocked_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles, Temp_bool_Variable_1) == 0x000003, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles, K2Node_Select_Default) == 0x000008, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles, K2Node_Select_Default_1) == 0x000010, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateTextStyles::K2Node_Select_Default_1' has a wrong offset!");
 
 // Function HeroLoadoutActiveAbilityDetailRow.HeroLoadoutActiveAbilityDetailRow_C.UpdateFromState
 // 0x02B0 (0x02B0 - 0x0000)
@@ -186,39 +143,6 @@ public:
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x0290(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_Select_Default_3;                           // 0x02A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState) == 0x000008, "Wrong alignment on HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState");
-static_assert(sizeof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState) == 0x0002B0, "Wrong size on HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, LockedVisibility) == 0x000000, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::LockedVisibility' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, Temp_bool_Variable) == 0x000001, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_IsAbilityUnlocked_ReturnValue) == 0x000002, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_IsAbilityUnlocked_ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_GetTierImage_NewParam) == 0x000008, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_GetTierImage_NewParam' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_IsAbilityUnlocked_ReturnValue_1) == 0x000030, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_IsAbilityUnlocked_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_GetAbilityKit_ReturnValue) == 0x000038, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_GetAbilityKit_ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_GetAbilityKit_ReturnValue_1) == 0x000040, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_GetAbilityKit_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_IsValid_ReturnValue) == 0x000048, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_IsValid_ReturnValue_1) == 0x000049, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_GetAbilityKit_ReturnValue_2) == 0x000050, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_GetAbilityKit_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_IsValid_ReturnValue_2) == 0x000058, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_GetContext_ReturnValue) == 0x000060, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_GetContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_NoResourceBrush_ReturnValue) == 0x000068, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_NoResourceBrush_ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_ResizeBrush_ResizedBrush) == 0x0000F0, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_ResizeBrush_ResizedBrush' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_ResizeBrush_ResizedBrush_1) == 0x000178, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_ResizeBrush_ResizedBrush_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, Temp_bool_Variable_1) == 0x000200, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, Temp_byte_Variable) == 0x000201, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, Temp_byte_Variable_1) == 0x000202, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, Temp_bool_Variable_2) == 0x000203, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, K2Node_Select_Default) == 0x000204, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_GetOwningPlayer_ReturnValue) == 0x000208, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_SpawnTooltipContextWithSource_ReturnValue) == 0x000210, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_SpawnTooltipContextWithSource_ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, Temp_text_Variable) == 0x000218, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_GetCombinedDescription_OutDescription) == 0x000230, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_GetCombinedDescription_OutDescription' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, CallFunc_GetCombinedDescription_ReturnValue) == 0x000248, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::CallFunc_GetCombinedDescription_ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, Temp_bool_Variable_3) == 0x000249, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, K2Node_Select_Default_1) == 0x000250, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, Temp_struct_Variable) == 0x000268, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, K2Node_Select_Default_2) == 0x000278, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, Temp_struct_Variable_1) == 0x000290, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState, K2Node_Select_Default_3) == 0x0002A0, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromState::K2Node_Select_Default_3' has a wrong offset!");
 
 // Function HeroLoadoutActiveAbilityDetailRow.HeroLoadoutActiveAbilityDetailRow_C.UpdateFromStyle
 // 0x0028 (0x0028 - 0x0000)
@@ -237,17 +161,6 @@ public:
 	class UWidget*                                K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle) == 0x000008, "Wrong alignment on HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle");
-static_assert(sizeof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle) == 0x000028, "Wrong size on HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle, Temp_byte_Variable) == 0x000000, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle, Temp_byte_Variable_1) == 0x000001, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle, Temp_bool_Variable) == 0x000002, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle, CallFunc_GetStandardBrushSize_ReturnValue) == 0x000004, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle::CallFunc_GetStandardBrushSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle, CallFunc_BreakVector2D_X) == 0x00000C, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle, CallFunc_BreakVector2D_Y) == 0x000010, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle, Temp_bool_Variable_1) == 0x000014, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle, K2Node_Select_Default) == 0x000018, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle, K2Node_Select_Default_1) == 0x000020, "Member 'HeroLoadoutActiveAbilityDetailRow_C_UpdateFromStyle::K2Node_Select_Default_1' has a wrong offset!");
 
 // Function HeroLoadoutActiveAbilityDetailRow.HeroLoadoutActiveAbilityDetailRow_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -256,9 +169,6 @@ struct HeroLoadoutActiveAbilityDetailRow_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(HeroLoadoutActiveAbilityDetailRow_C_PreConstruct) == 0x000001, "Wrong alignment on HeroLoadoutActiveAbilityDetailRow_C_PreConstruct");
-static_assert(sizeof(HeroLoadoutActiveAbilityDetailRow_C_PreConstruct) == 0x000001, "Wrong size on HeroLoadoutActiveAbilityDetailRow_C_PreConstruct");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'HeroLoadoutActiveAbilityDetailRow_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function HeroLoadoutActiveAbilityDetailRow.HeroLoadoutActiveAbilityDetailRow_C.ExecuteUbergraph_HeroLoadoutActiveAbilityDetailRow
 // 0x0008 (0x0008 - 0x0000)
@@ -268,10 +178,6 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(HeroLoadoutActiveAbilityDetailRow_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailRow) == 0x000004, "Wrong alignment on HeroLoadoutActiveAbilityDetailRow_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailRow");
-static_assert(sizeof(HeroLoadoutActiveAbilityDetailRow_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailRow) == 0x000008, "Wrong size on HeroLoadoutActiveAbilityDetailRow_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailRow");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailRow, EntryPoint) == 0x000000, "Member 'HeroLoadoutActiveAbilityDetailRow_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailRow::EntryPoint' has a wrong offset!");
-static_assert(offsetof(HeroLoadoutActiveAbilityDetailRow_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailRow, K2Node_Event_IsDesignTime) == 0x000004, "Member 'HeroLoadoutActiveAbilityDetailRow_C_ExecuteUbergraph_HeroLoadoutActiveAbilityDetailRow::K2Node_Event_IsDesignTime' has a wrong offset!");
 
 }
 

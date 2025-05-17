@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Athena_GameMode.Athena_GameMode_C
-// 0x0008 (0x1248 - 0x1240)
-class AAthena_GameMode_C final : public AFortGameModeAthena
+// 0x0008 (0x1578 - 0x1570)
+class AAthena_GameMode_C final : public AFortGameModeBR
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x1240(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x1570(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,9 +33,6 @@ public:
 		return GetDefaultObjImpl<AAthena_GameMode_C>();
 	}
 };
-static_assert(alignof(AAthena_GameMode_C) == 0x000008, "Wrong alignment on AAthena_GameMode_C");
-static_assert(sizeof(AAthena_GameMode_C) == 0x001248, "Wrong size on AAthena_GameMode_C");
-static_assert(offsetof(AAthena_GameMode_C, DefaultSceneRoot) == 0x001240, "Member 'AAthena_GameMode_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

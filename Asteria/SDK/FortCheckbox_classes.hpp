@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass FortCheckbox.FortCheckbox_C
-// 0x0040 (0x0278 - 0x0238)
+// 0x0040 (0x02C8 - 0x0288)
 class UFortCheckbox_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UButton*                                CheckButton;                                       // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Checked;                                     // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Unchecked;                                   // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        Switcher_CheckBox;                                 // 0x0258(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          Selected;                                          // 0x0260(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnClicked;                                         // 0x0268(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UButton*                                CheckButton;                                       // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Checked;                                     // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Unchecked;                                   // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Switcher_CheckBox;                                 // 0x02A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          Selected;                                          // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2B1[0x7];                                      // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnClicked;                                         // 0x02B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_FortCheckbox(int32 EntryPoint);
@@ -49,15 +49,6 @@ public:
 		return GetDefaultObjImpl<UFortCheckbox_C>();
 	}
 };
-static_assert(alignof(UFortCheckbox_C) == 0x000008, "Wrong alignment on UFortCheckbox_C");
-static_assert(sizeof(UFortCheckbox_C) == 0x000278, "Wrong size on UFortCheckbox_C");
-static_assert(offsetof(UFortCheckbox_C, UberGraphFrame) == 0x000238, "Member 'UFortCheckbox_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UFortCheckbox_C, CheckButton) == 0x000240, "Member 'UFortCheckbox_C::CheckButton' has a wrong offset!");
-static_assert(offsetof(UFortCheckbox_C, Image_Checked) == 0x000248, "Member 'UFortCheckbox_C::Image_Checked' has a wrong offset!");
-static_assert(offsetof(UFortCheckbox_C, Image_Unchecked) == 0x000250, "Member 'UFortCheckbox_C::Image_Unchecked' has a wrong offset!");
-static_assert(offsetof(UFortCheckbox_C, Switcher_CheckBox) == 0x000258, "Member 'UFortCheckbox_C::Switcher_CheckBox' has a wrong offset!");
-static_assert(offsetof(UFortCheckbox_C, Selected) == 0x000260, "Member 'UFortCheckbox_C::Selected' has a wrong offset!");
-static_assert(offsetof(UFortCheckbox_C, OnClicked) == 0x000268, "Member 'UFortCheckbox_C::OnClicked' has a wrong offset!");
 
 }
 

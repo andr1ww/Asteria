@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UMissionGen_Creative_Vigilante_C>();
 	}
 };
-static_assert(alignof(UMissionGen_Creative_Vigilante_C) == 0x000008, "Wrong alignment on UMissionGen_Creative_Vigilante_C");
-static_assert(sizeof(UMissionGen_Creative_Vigilante_C) == 0x0006C0, "Wrong size on UMissionGen_Creative_Vigilante_C");
 
 }
 

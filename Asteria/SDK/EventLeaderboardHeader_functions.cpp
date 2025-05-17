@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function EventLeaderboardHeader.EventLeaderboardHeader_C.RefreshDataBP
-// (Event, Protected, BlueprintEvent)
-
-void UEventLeaderboardHeader_C::RefreshDataBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardHeader_C", "RefreshDataBP");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function EventLeaderboardHeader.EventLeaderboardHeader_C.ExecuteUbergraph_EventLeaderboardHeader
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -48,6 +34,20 @@ void UEventLeaderboardHeader_C::ExecuteUbergraph_EventLeaderboardHeader(int32 En
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventLeaderboardHeader.EventLeaderboardHeader_C.RefreshDataBP
+// (Event, Protected, BlueprintEvent)
+
+void UEventLeaderboardHeader_C::RefreshDataBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardHeader_C", "RefreshDataBP");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -20,7 +20,7 @@ namespace SDK
 // Function ItemDetailsHeaderItemDisplayText.ItemDetailsHeaderItemDisplayText_C.GetDisplayName
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class FText                             DisplayName                                            (Parm, OutParm)
+// class FText*                            DisplayName                                            (Parm, OutParm)
 
 void UItemDetailsHeaderItemDisplayText_C::GetDisplayName(class FText* DisplayName)
 {

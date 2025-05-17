@@ -10,47 +10,28 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-
 
 namespace SDK::Params
 {
 
 // Function BP_HoverDronePawn.BP_HoverDronePawn_C.ExecuteUbergraph_BP_HoverDronePawn
-// 0x0048 (0x0048 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            K2Node_Event_NewController;                        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AController*                            K2Node_Event_OldController;                        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetAltitude_ReturnValue;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetWindVolumeFromAltitude_Volume;         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FInterpTo_ReturnValue;                    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_VSize_ReturnValue;                        // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MapRangeClamped_ReturnValue;              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FInterpTo_ReturnValue_1;                  // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetAltitude_ReturnValue;                  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetWorldDeltaSeconds_ReturnValue_1;       // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetWindVolumeFromAltitude_Volume;         // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FInterpTo_ReturnValue;                    // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AController*                            K2Node_Event_NewController;                        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AController*                            K2Node_Event_OldController;                        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MapRangeClamped_ReturnValue;              // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FInterpTo_ReturnValue_1;                  // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn) == 0x000008, "Wrong alignment on BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn");
-static_assert(sizeof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn) == 0x000048, "Wrong size on BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, EntryPoint) == 0x000000, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x000004, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, K2Node_Event_DeltaSeconds) == 0x000008, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, K2Node_Event_NewController) == 0x000010, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::K2Node_Event_NewController' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, K2Node_Event_OldController) == 0x000018, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::K2Node_Event_OldController' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, CallFunc_GetAltitude_ReturnValue) == 0x000020, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::CallFunc_GetAltitude_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, CallFunc_GetWorldDeltaSeconds_ReturnValue_1) == 0x000024, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::CallFunc_GetWorldDeltaSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, CallFunc_GetWindVolumeFromAltitude_Volume) == 0x000028, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::CallFunc_GetWindVolumeFromAltitude_Volume' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, CallFunc_FInterpTo_ReturnValue) == 0x00002C, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::CallFunc_FInterpTo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, CallFunc_GetVelocity_ReturnValue) == 0x000030, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::CallFunc_GetVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, CallFunc_VSize_ReturnValue) == 0x00003C, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, CallFunc_MapRangeClamped_ReturnValue) == 0x000040, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn, CallFunc_FInterpTo_ReturnValue_1) == 0x000044, "Member 'BP_HoverDronePawn_C_ExecuteUbergraph_BP_HoverDronePawn::CallFunc_FInterpTo_ReturnValue_1' has a wrong offset!");
 
 // Function BP_HoverDronePawn.BP_HoverDronePawn_C.ReceiveUnpossessed
 // 0x0008 (0x0008 - 0x0000)
@@ -59,9 +40,6 @@ struct BP_HoverDronePawn_C_ReceiveUnpossessed final
 public:
 	class AController*                            OldController;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HoverDronePawn_C_ReceiveUnpossessed) == 0x000008, "Wrong alignment on BP_HoverDronePawn_C_ReceiveUnpossessed");
-static_assert(sizeof(BP_HoverDronePawn_C_ReceiveUnpossessed) == 0x000008, "Wrong size on BP_HoverDronePawn_C_ReceiveUnpossessed");
-static_assert(offsetof(BP_HoverDronePawn_C_ReceiveUnpossessed, OldController) == 0x000000, "Member 'BP_HoverDronePawn_C_ReceiveUnpossessed::OldController' has a wrong offset!");
 
 // Function BP_HoverDronePawn.BP_HoverDronePawn_C.ReceivePossessed
 // 0x0008 (0x0008 - 0x0000)
@@ -70,9 +48,6 @@ struct BP_HoverDronePawn_C_ReceivePossessed final
 public:
 	class AController*                            NewController;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HoverDronePawn_C_ReceivePossessed) == 0x000008, "Wrong alignment on BP_HoverDronePawn_C_ReceivePossessed");
-static_assert(sizeof(BP_HoverDronePawn_C_ReceivePossessed) == 0x000008, "Wrong size on BP_HoverDronePawn_C_ReceivePossessed");
-static_assert(offsetof(BP_HoverDronePawn_C_ReceivePossessed, NewController) == 0x000000, "Member 'BP_HoverDronePawn_C_ReceivePossessed::NewController' has a wrong offset!");
 
 // Function BP_HoverDronePawn.BP_HoverDronePawn_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -81,9 +56,6 @@ struct BP_HoverDronePawn_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HoverDronePawn_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_HoverDronePawn_C_ReceiveTick");
-static_assert(sizeof(BP_HoverDronePawn_C_ReceiveTick) == 0x000004, "Wrong size on BP_HoverDronePawn_C_ReceiveTick");
-static_assert(offsetof(BP_HoverDronePawn_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_HoverDronePawn_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function BP_HoverDronePawn.BP_HoverDronePawn_C.SetWindAudioEnabled
 // 0x0020 (0x0020 - 0x0000)
@@ -99,14 +71,6 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAudioComponent*                        CallFunc_SpawnSound2D_ReturnValue_1;               // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HoverDronePawn_C_SetWindAudioEnabled) == 0x000008, "Wrong alignment on BP_HoverDronePawn_C_SetWindAudioEnabled");
-static_assert(sizeof(BP_HoverDronePawn_C_SetWindAudioEnabled) == 0x000020, "Wrong size on BP_HoverDronePawn_C_SetWindAudioEnabled");
-static_assert(offsetof(BP_HoverDronePawn_C_SetWindAudioEnabled, Enabled) == 0x000000, "Member 'BP_HoverDronePawn_C_SetWindAudioEnabled::Enabled' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_SetWindAudioEnabled, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'BP_HoverDronePawn_C_SetWindAudioEnabled::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_SetWindAudioEnabled, CallFunc_IsValid_ReturnValue_1) == 0x000002, "Member 'BP_HoverDronePawn_C_SetWindAudioEnabled::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_SetWindAudioEnabled, CallFunc_SpawnSound2D_ReturnValue) == 0x000008, "Member 'BP_HoverDronePawn_C_SetWindAudioEnabled::CallFunc_SpawnSound2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_SetWindAudioEnabled, CallFunc_IsValid_ReturnValue_2) == 0x000010, "Member 'BP_HoverDronePawn_C_SetWindAudioEnabled::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_SetWindAudioEnabled, CallFunc_SpawnSound2D_ReturnValue_1) == 0x000018, "Member 'BP_HoverDronePawn_C_SetWindAudioEnabled::CallFunc_SpawnSound2D_ReturnValue_1' has a wrong offset!");
 
 // Function BP_HoverDronePawn.BP_HoverDronePawn_C.GetWindVolumeFromAltitude
 // 0x000C (0x000C - 0x0000)
@@ -117,11 +81,6 @@ public:
 	float                                         Volume;                                            // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_MapRangeClamped_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HoverDronePawn_C_GetWindVolumeFromAltitude) == 0x000004, "Wrong alignment on BP_HoverDronePawn_C_GetWindVolumeFromAltitude");
-static_assert(sizeof(BP_HoverDronePawn_C_GetWindVolumeFromAltitude) == 0x00000C, "Wrong size on BP_HoverDronePawn_C_GetWindVolumeFromAltitude");
-static_assert(offsetof(BP_HoverDronePawn_C_GetWindVolumeFromAltitude, Altitude) == 0x000000, "Member 'BP_HoverDronePawn_C_GetWindVolumeFromAltitude::Altitude' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_GetWindVolumeFromAltitude, Volume) == 0x000004, "Member 'BP_HoverDronePawn_C_GetWindVolumeFromAltitude::Volume' has a wrong offset!");
-static_assert(offsetof(BP_HoverDronePawn_C_GetWindVolumeFromAltitude, CallFunc_MapRangeClamped_ReturnValue) == 0x000008, "Member 'BP_HoverDronePawn_C_GetWindVolumeFromAltitude::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
 
 }
 

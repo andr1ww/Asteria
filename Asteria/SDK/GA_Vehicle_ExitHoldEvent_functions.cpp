@@ -57,10 +57,24 @@ void UGA_Vehicle_ExitHoldEvent_C::K2_OnEndAbility(bool bWasCancelled)
 }
 
 
+// Function GA_Vehicle_ExitHoldEvent.GA_Vehicle_ExitHoldEvent_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Vehicle_ExitHoldEvent_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Vehicle_ExitHoldEvent_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_Vehicle_ExitHoldEvent.GA_Vehicle_ExitHoldEvent_C.EventReceived_209BF560404B83EBEAA8DD8090C443AC
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayEventData               Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UGA_Vehicle_ExitHoldEvent_C::EventReceived_209BF560404B83EBEAA8DD8090C443AC(const struct FGameplayEventData& Payload)
 {
@@ -80,7 +94,7 @@ void UGA_Vehicle_ExitHoldEvent_C::EventReceived_209BF560404B83EBEAA8DD8090C443AC
 // Function GA_Vehicle_ExitHoldEvent.GA_Vehicle_ExitHoldEvent_C.EventReceived_7AE1D485464AEC7EB429C3877D33AF69
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayEventData               Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UGA_Vehicle_ExitHoldEvent_C::EventReceived_7AE1D485464AEC7EB429C3877D33AF69(const struct FGameplayEventData& Payload)
 {
@@ -94,20 +108,6 @@ void UGA_Vehicle_ExitHoldEvent_C::EventReceived_7AE1D485464AEC7EB429C3877D33AF69
 	Parms.Payload = std::move(Payload);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Vehicle_ExitHoldEvent.GA_Vehicle_ExitHoldEvent_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Vehicle_ExitHoldEvent_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Vehicle_ExitHoldEvent_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

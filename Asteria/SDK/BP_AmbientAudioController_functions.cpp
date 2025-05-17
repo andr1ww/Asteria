@@ -37,66 +37,6 @@ void UBP_AmbientAudioController_C::ExecuteUbergraph_BP_AmbientAudioController(in
 }
 
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.Set Storm Amb Layer Enabled
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Enabled                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UBP_AmbientAudioController_C::Set_Storm_Amb_Layer_Enabled(bool Enabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "Set Storm Amb Layer Enabled");
-
-	Params::BP_AmbientAudioController_C_Set_Storm_Amb_Layer_Enabled Parms{};
-
-	Parms.Enabled = Enabled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.On Game Phase Step Change
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EAthenaGamePhaseStep                    GamePhaseStep                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_AmbientAudioController_C::On_Game_Phase_Step_Change(EAthenaGamePhaseStep GamePhaseStep)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "On Game Phase Step Change");
-
-	Params::BP_AmbientAudioController_C_On_Game_Phase_Step_Change Parms{};
-
-	Parms.GamePhaseStep = GamePhaseStep;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.On Game Phase Change
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EAthenaGamePhase                        GamePhase                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_AmbientAudioController_C::On_Game_Phase_Change(EAthenaGamePhase GamePhase)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "On Game Phase Change");
-
-	Params::BP_AmbientAudioController_C_On_Game_Phase_Change Parms{};
-
-	Parms.GamePhase = GamePhase;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_AmbientAudioController.BP_AmbientAudioController_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -182,8 +122,8 @@ void UBP_AmbientAudioController_C::ReceiveBeginPlay()
 // Function BP_AmbientAudioController.BP_AmbientAudioController_C.Trace
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Start                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Direction                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Start                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Direction                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UBP_AmbientAudioController_C::Trace(const struct FVector& Start, const struct FVector& Direction)
@@ -204,26 +144,6 @@ bool UBP_AmbientAudioController_C::Trace(const struct FVector& Start, const stru
 }
 
 
-// Function BP_AmbientAudioController.BP_AmbientAudioController_C.SetIndoorMixEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Enabled                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UBP_AmbientAudioController_C::SetIndoorMixEnabled(bool Enabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AmbientAudioController_C", "SetIndoorMixEnabled");
-
-	Params::BP_AmbientAudioController_C_SetIndoorMixEnabled Parms{};
-
-	Parms.Enabled = Enabled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_AmbientAudioController.BP_AmbientAudioController_C.SetTargetLPFFreq
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -241,6 +161,20 @@ void UBP_AmbientAudioController_C::SetTargetLPFFreq(float Target)
 	Parms.Target = Target;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AmbientAudioController.BP_AmbientAudioController_C.UpdateSnowSetupBP
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_AmbientAudioController_C::UpdateSnowSetupBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AmbientAudioController_C", "UpdateSnowSetupBP");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

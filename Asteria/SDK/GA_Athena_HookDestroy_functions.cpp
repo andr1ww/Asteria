@@ -65,6 +65,40 @@ void UGA_Athena_HookDestroy_C::K2_ActivateAbility()
 }
 
 
+// Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnSync_A7AA33494F9F686A79A026809EAEF410
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_HookDestroy_C::OnSync_A7AA33494F9F686A79A026809EAEF410()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_HookDestroy_C", "OnSync_A7AA33494F9F686A79A026809EAEF410");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.EventReceived_1B71851D49048B6433DA75B0D6007B6E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UGA_Athena_HookDestroy_C::EventReceived_1B71851D49048B6433DA75B0D6007B6E(const struct FGameplayEventData& Payload)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_HookDestroy_C", "EventReceived_1B71851D49048B6433DA75B0D6007B6E");
+
+	Params::GA_Athena_HookDestroy_C_EventReceived_1B71851D49048B6433DA75B0D6007B6E Parms{};
+
+	Parms.Payload = std::move(Payload);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnCompleted_7CDAB77949F908D1F388AB845AE6C282
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -268,7 +302,7 @@ void UGA_Athena_HookDestroy_C::OnNotifyEnd_28C962BC449D96C668F3C4BE36E6CA62(clas
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.EventReceived_3FEADD91456C78D266936684DE918289
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayEventData               Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UGA_Athena_HookDestroy_C::EventReceived_3FEADD91456C78D266936684DE918289(const struct FGameplayEventData& Payload)
 {
@@ -388,7 +422,7 @@ void UGA_Athena_HookDestroy_C::OnNotifyEnd_556AB31A412041E7414C21AA5F4A70CC(clas
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.EventReceived_056D82C6464BB95E4DA717BEB307DB74
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayEventData               Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UGA_Athena_HookDestroy_C::EventReceived_056D82C6464BB95E4DA717BEB307DB74(const struct FGameplayEventData& Payload)
 {
@@ -523,7 +557,7 @@ void UGA_Athena_HookDestroy_C::OnRep_AmmoReserves()
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                                   PitchAngle                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             SectionName                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName*                            SectionName                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGA_Athena_HookDestroy_C::PickGrappleMontage(float PitchAngle, class FName* SectionName)
 {
@@ -560,6 +594,20 @@ void UGA_Athena_HookDestroy_C::K2_OnEndAbility(bool bWasCancelled)
 	Parms.bWasCancelled = bWasCancelled;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnRep_BadgerGrapeDelayFailsafe
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_HookDestroy_C::OnRep_BadgerGrapeDelayFailsafe()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_HookDestroy_C", "OnRep_BadgerGrapeDelayFailsafe");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

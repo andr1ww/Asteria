@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
@@ -18,15 +17,9 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BasicNotification.BasicNotification_C
-// 0x0088 (0x0128 - 0x00A0)
+// 0x0000 (0x00D0 - 0x00D0)
 class UBasicNotification_C final : public UFortUINotification
 {
-public:
-	struct FSlateBrush                            Image;                                             // 0x00A0(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
-
-public:
-	class UTexture2D* GetImageOverride();
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -37,9 +30,6 @@ public:
 		return GetDefaultObjImpl<UBasicNotification_C>();
 	}
 };
-static_assert(alignof(UBasicNotification_C) == 0x000008, "Wrong alignment on UBasicNotification_C");
-static_assert(sizeof(UBasicNotification_C) == 0x000128, "Wrong size on UBasicNotification_C");
-static_assert(offsetof(UBasicNotification_C, Image) == 0x0000A0, "Member 'UBasicNotification_C::Image' has a wrong offset!");
 
 }
 

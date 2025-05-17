@@ -19,16 +19,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemPerksListDetailWidget.ItemPerksListDetailWidget_C
-// 0x0020 (0x02A0 - 0x0280)
+// 0x0020 (0x0300 - 0x02E0)
 class UItemPerksListDetailWidget_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPerksList_C*                           PerksList;                                         // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               RootBox;                                           // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          ShowActiveAbilitiesOnly;                           // 0x0298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_299[0x3];                                      // 0x0299(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WrapPerkTextAt;                                    // 0x029C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UPerksList_C*                           PerksList;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               RootBox;                                           // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          ShowActiveAbilitiesOnly;                           // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2F9[0x3];                                      // 0x02F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         WrapPerkTextAt;                                    // 0x02FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SetState(EFortPerksWidgetState InState, class UFortHero* InEvolutionOption);
@@ -46,13 +46,6 @@ public:
 		return GetDefaultObjImpl<UItemPerksListDetailWidget_C>();
 	}
 };
-static_assert(alignof(UItemPerksListDetailWidget_C) == 0x000008, "Wrong alignment on UItemPerksListDetailWidget_C");
-static_assert(sizeof(UItemPerksListDetailWidget_C) == 0x0002A0, "Wrong size on UItemPerksListDetailWidget_C");
-static_assert(offsetof(UItemPerksListDetailWidget_C, UberGraphFrame) == 0x000280, "Member 'UItemPerksListDetailWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UItemPerksListDetailWidget_C, PerksList) == 0x000288, "Member 'UItemPerksListDetailWidget_C::PerksList' has a wrong offset!");
-static_assert(offsetof(UItemPerksListDetailWidget_C, RootBox) == 0x000290, "Member 'UItemPerksListDetailWidget_C::RootBox' has a wrong offset!");
-static_assert(offsetof(UItemPerksListDetailWidget_C, ShowActiveAbilitiesOnly) == 0x000298, "Member 'UItemPerksListDetailWidget_C::ShowActiveAbilitiesOnly' has a wrong offset!");
-static_assert(offsetof(UItemPerksListDetailWidget_C, WrapPerkTextAt) == 0x00029C, "Member 'UItemPerksListDetailWidget_C::WrapPerkTextAt' has a wrong offset!");
 
 }
 

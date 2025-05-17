@@ -19,18 +19,21 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass BP_AssaultRifle_FrontClip_BackAction.BP_AssaultRifle_FrontClip_BackAction_C
-// 0x0090 (0x02F8 - 0x0268)
+// 0x00A0 (0x0360 - 0x02C0)
 class UBP_AssaultRifle_FrontClip_BackAction_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root_093BD79B4AD87188F29729836AA06276; // 0x0278(0x0020)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose_A31555D842D75C0905B639846DA94151; // 0x0298(0x0018)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_6E68D2AF43B0D536C012ED82940BED48; // 0x02B0(0x0048)()
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02D0(0x0030)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x0300(0x0018)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0318(0x0048)()
 
 public:
 	void ExecuteUbergraph_BP_AssaultRifle_FrontClip_BackAction(int32 EntryPoint);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -42,12 +45,6 @@ public:
 		return GetDefaultObjImpl<UBP_AssaultRifle_FrontClip_BackAction_C>();
 	}
 };
-static_assert(alignof(UBP_AssaultRifle_FrontClip_BackAction_C) == 0x000008, "Wrong alignment on UBP_AssaultRifle_FrontClip_BackAction_C");
-static_assert(sizeof(UBP_AssaultRifle_FrontClip_BackAction_C) == 0x0002F8, "Wrong size on UBP_AssaultRifle_FrontClip_BackAction_C");
-static_assert(offsetof(UBP_AssaultRifle_FrontClip_BackAction_C, UberGraphFrame) == 0x000270, "Member 'UBP_AssaultRifle_FrontClip_BackAction_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_AssaultRifle_FrontClip_BackAction_C, AnimGraphNode_Root_093BD79B4AD87188F29729836AA06276) == 0x000278, "Member 'UBP_AssaultRifle_FrontClip_BackAction_C::AnimGraphNode_Root_093BD79B4AD87188F29729836AA06276' has a wrong offset!");
-static_assert(offsetof(UBP_AssaultRifle_FrontClip_BackAction_C, AnimGraphNode_LocalRefPose_A31555D842D75C0905B639846DA94151) == 0x000298, "Member 'UBP_AssaultRifle_FrontClip_BackAction_C::AnimGraphNode_LocalRefPose_A31555D842D75C0905B639846DA94151' has a wrong offset!");
-static_assert(offsetof(UBP_AssaultRifle_FrontClip_BackAction_C, AnimGraphNode_Slot_6E68D2AF43B0D536C012ED82940BED48) == 0x0002B0, "Member 'UBP_AssaultRifle_FrontClip_BackAction_C::AnimGraphNode_Slot_6E68D2AF43B0D536C012ED82940BED48' has a wrong offset!");
 
 }
 

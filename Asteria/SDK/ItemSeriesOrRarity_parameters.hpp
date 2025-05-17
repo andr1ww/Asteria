@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "FortniteGame_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -49,29 +49,6 @@ public:
 	bool                                          Temp_bool_Variable_2;                              // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x0182(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ItemSeriesOrRarity_C_UpdateItemDefinition) == 0x000008, "Wrong alignment on ItemSeriesOrRarity_C_UpdateItemDefinition");
-static_assert(sizeof(ItemSeriesOrRarity_C_UpdateItemDefinition) == 0x000188, "Wrong size on ItemSeriesOrRarity_C_UpdateItemDefinition");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, ItemDefinition) == 0x000000, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::ItemDefinition' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, Temp_text_Variable) == 0x000008, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, CallFunc_GetRarityOrSeriesColors_ReturnValue) == 0x000020, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::CallFunc_GetRarityOrSeriesColors_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, K2Node_MakeStruct_SlateColor) == 0x000070, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, CallFunc_IsValid_ReturnValue) == 0x000098, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, K2Node_MakeStruct_SlateColor_1) == 0x0000A0, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, CallFunc_GetRarity_ReturnValue) == 0x0000C8, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::CallFunc_GetRarity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, CallFunc_IsValid_ReturnValue_1) == 0x0000C9, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, CallFunc_BPGetRarityData_ReturnValue) == 0x0000D0, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::CallFunc_BPGetRarityData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, CallFunc_IsValid_ReturnValue_2) == 0x000150, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, CallFunc_IsValid_ReturnValue_3) == 0x000151, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, CallFunc_Not_PreBool_ReturnValue) == 0x000152, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, Temp_bool_Variable) == 0x000153, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, Temp_bool_Variable_1) == 0x000154, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, CallFunc_BooleanAND_ReturnValue) == 0x000155, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, K2Node_Select_Default) == 0x000158, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, Temp_byte_Variable) == 0x000170, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, K2Node_Select_Default_1) == 0x000178, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, Temp_byte_Variable_1) == 0x000180, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, Temp_bool_Variable_2) == 0x000181, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(ItemSeriesOrRarity_C_UpdateItemDefinition, K2Node_Select_Default_2) == 0x000182, "Member 'ItemSeriesOrRarity_C_UpdateItemDefinition::K2Node_Select_Default_2' has a wrong offset!");
 
 }
 

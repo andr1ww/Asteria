@@ -10,56 +10,72 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_ThrowConsumable.GA_ThrowConsumable_C
-// 0x0178 (0x0AB8 - 0x0940)
+// 0x0380 (0x0E28 - 0x0AA8)
 class UGA_ThrowConsumable_C : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AbilityKeyPressed;                                 // 0x0950(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          InThrowWindup;                                     // 0x0951(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_952[0x2];                                      // 0x0952(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AdditionalThrowAngle;                              // 0x0954(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MaxTossPitch;                                      // 0x0958(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                GrenadeTargetingOriginOffset;                      // 0x095C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                GrenadeTargetingOriginOffset_Crouched;             // 0x0968(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_974[0x4];                                      // 0x0974(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortProjectileBase*                    SpawnedProjectile;                                 // 0x0978(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 Proj_ThrownProjectile;                             // 0x0980(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFortGameplayEffectContainerSpec       ExplosionEffectContainerSpec;                      // 0x0988(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         ProjectileSpeed;                                   // 0x0A10(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         ProjectileGravityScale;                            // 0x0A30(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         TrajectoryUpdateInterval;                          // 0x0A50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           EC_DefaultExplosion;                               // 0x0A54(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A5C[0x4];                                      // 0x0A5C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           CookMonage;                                        // 0x0A60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           ThrowMontage;                                      // 0x0A68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           GC_OnThrow;                                        // 0x0A70(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_ProjectileTrajectory_C*             TrajectoryIndicator;                               // 0x0A78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 TrajectoryIndicatorClass;                          // 0x0A80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortProjectileBase*                    DummyProjectile;                                   // 0x0A88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyMaxSpeed;                                     // 0x0A90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyGravity;                                      // 0x0A94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyExtent;                                       // 0x0A98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DummyTimestep;                                     // 0x0A9C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_InWindup;                                       // 0x0AA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            Handle_GE_InWindup;                                // 0x0AA8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          SpawnedOnEquip;                                    // 0x0AB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AbilityKeyPressed;                                 // 0x0AB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          InThrowWindup;                                     // 0x0AB9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_ABA[0x2];                                      // 0x0ABA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AdditionalThrowAngle;                              // 0x0ABC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MaxTossPitch;                                      // 0x0AC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                GrenadeTargetingOriginOffset;                      // 0x0AC4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                GrenadeTargetingOriginOffset_Crouched;             // 0x0AD0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_ADC[0x4];                                      // 0x0ADC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortProjectileBase*                    SpawnedProjectile;                                 // 0x0AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 Proj_ThrownProjectile;                             // 0x0AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         ProjectileSpeed;                                   // 0x0AF0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         ProjectileGravityScale;                            // 0x0B10(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         TrajectoryUpdateInterval;                          // 0x0B30(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B34[0x4];                                      // 0x0B34(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           CookMonage;                                        // 0x0B38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           ThrowMontage;                                      // 0x0B40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           GC_OnThrow;                                        // 0x0B48(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_ProjectileTrajectory_C*             TrajectoryIndicator;                               // 0x0B50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 TrajectoryIndicatorClass;                          // 0x0B58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortProjectileBase*                    DummyProjectile;                                   // 0x0B60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyMaxSpeed;                                     // 0x0B68(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyGravity;                                      // 0x0B6C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyExtent;                                       // 0x0B70(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DummyTimeStep;                                     // 0x0B74(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   TrajectoryCollisionProfileName;                    // 0x0B78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_InWindup;                                       // 0x0B80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                GrenadeTargetingOriginOffsetWater;                 // 0x0B88(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FActiveGameplayEffectHandle            Handle_GE_InWindup;                                // 0x0B94(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           EC_DefaultExplosion;                               // 0x0B9C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         ExplosionEffectLevel;                              // 0x0BA4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFortGameplayEffectContainerSpec       ExplosionEffectContainerSpec;                      // 0x0BA8(0x00B8)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          SpawnedOnEquip;                                    // 0x0C60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C61[0x3];                                      // 0x0C61(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           EC_DefaultHit;                                     // 0x0C64(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         HitEffectLevel;                                    // 0x0C6C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFortGameplayEffectContainerSpec       HitEffectContainerSpec;                            // 0x0C70(0x00B8)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMulticastInlineDelegate<void()>              OnProjectileSpawn;                                 // 0x0D28(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          HasAdditionalExplosion;                            // 0x0D38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D39[0x3];                                      // 0x0D39(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           EC_AdditionalExplosion;                            // 0x0D3C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         AdditionalExplodeLevel;                            // 0x0D44(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFortGameplayEffectContainerSpec       AdditionalContainerSpec;                           // 0x0D48(0x00B8)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTagContainer                  QuestCreditTargetTag;                              // 0x0E00(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	int32                                         DummyMaxSteps;                                     // 0x0E20(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_ThrowConsumable(int32 EntryPoint);
+	void ThrowMontageStarted();
 	void UpdateTrajectory();
 	void CleanupTrajectoryIndicatorOnUnequip();
 	void K2_ActivateAbility();
@@ -77,18 +93,21 @@ public:
 	void Cancelled_01C5B37D48E3DC6F82DDC58640CE2A27(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void Completed_01C5B37D48E3DC6F82DDC58640CE2A27(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void PrethrowSetup();
-	void SpawnThrownProjectile(class UClass* ProjectileClass_0, const struct FVector& ProjectileSpawnLocation, const struct FRotator& ProjectileSpawnDirection, const struct FFortGameplayEffectContainerSpec& ExplosionEffectContainerSpec_0, float ProjectileInitialSpeed, float ProjectileGravityScale_0, class AFortProjectileBase** SpawnedProjectile_0);
+	void SpawnThrownProjectile(class UClass* ProjectileClass_0, const struct FVector& ProjectileSpawnLocation, const struct FRotator& ProjectileSpawnDirection, const struct FFortGameplayEffectContainerSpec& HitEffectContainerSpec_0, const struct FFortGameplayEffectContainerSpec& ExplosionEffectContainerSpec_0, float ProjectileInitialSpeed, float ProjectileGravityScale_0, class AFortProjectileBase** SpawnedProjectile_0);
 	void OnProjectileSpawned(class AFortProjectileBase* SpawnedProjectile_0);
 	void OnProjectileSetup();
 	void SetupDummyProjectile();
 	void UpdateTrajectorySpline();
 	void PostThrowCleanup();
 	void CleanupTrajectory();
+	void GetProjectileInitialSpeedToUse(float* ProjectileSpeedToUse);
+	void GetProjectileInitialGravityScaleToUse(float* GravityScaleToUse);
+	void GetProjectileTrajectoryPoints(TArray<struct FVector>* OutSplinePoints, TArray<struct FVector>* OutSplineTangents, struct FHitResult* OutHitResult);
 	class AFortProjectileTrajectory* SpawnTrajectoryIndicator(bool bSpawnOnEquip);
 
 	void GetSpawnLocationAndRotation(struct FVector* Location, struct FRotator* Rotation) const;
 	void GetOwningPlayer(class AFortPlayerPawn** Player_Pawn) const;
-	void GetProjectileTrajectoryPoints(TArray<struct FVector>* OutSplinePoints, TArray<struct FVector>* OutSplineTangents, struct FHitResult* OutHitResult) const;
+	void GetProjectileAdditionalThrowAngleToUse(float* AdditionalThrowAngleToUse) const;
 	TSubclassOf<class AFortProjectileTrajectory> GetProjectileTrajectoryActor() const;
 	bool ShouldOnlyShowTrajectoryOnUse() const;
 
@@ -102,36 +121,6 @@ public:
 		return GetDefaultObjImpl<UGA_ThrowConsumable_C>();
 	}
 };
-static_assert(alignof(UGA_ThrowConsumable_C) == 0x000008, "Wrong alignment on UGA_ThrowConsumable_C");
-static_assert(sizeof(UGA_ThrowConsumable_C) == 0x000AB8, "Wrong size on UGA_ThrowConsumable_C");
-static_assert(offsetof(UGA_ThrowConsumable_C, UberGraphFrame) == 0x000940, "Member 'UGA_ThrowConsumable_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, PlayerPawn) == 0x000948, "Member 'UGA_ThrowConsumable_C::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, AbilityKeyPressed) == 0x000950, "Member 'UGA_ThrowConsumable_C::AbilityKeyPressed' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, InThrowWindup) == 0x000951, "Member 'UGA_ThrowConsumable_C::InThrowWindup' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, AdditionalThrowAngle) == 0x000954, "Member 'UGA_ThrowConsumable_C::AdditionalThrowAngle' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, MaxTossPitch) == 0x000958, "Member 'UGA_ThrowConsumable_C::MaxTossPitch' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, GrenadeTargetingOriginOffset) == 0x00095C, "Member 'UGA_ThrowConsumable_C::GrenadeTargetingOriginOffset' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, GrenadeTargetingOriginOffset_Crouched) == 0x000968, "Member 'UGA_ThrowConsumable_C::GrenadeTargetingOriginOffset_Crouched' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, SpawnedProjectile) == 0x000978, "Member 'UGA_ThrowConsumable_C::SpawnedProjectile' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, Proj_ThrownProjectile) == 0x000980, "Member 'UGA_ThrowConsumable_C::Proj_ThrownProjectile' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, ExplosionEffectContainerSpec) == 0x000988, "Member 'UGA_ThrowConsumable_C::ExplosionEffectContainerSpec' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, ProjectileSpeed) == 0x000A10, "Member 'UGA_ThrowConsumable_C::ProjectileSpeed' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, ProjectileGravityScale) == 0x000A30, "Member 'UGA_ThrowConsumable_C::ProjectileGravityScale' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, TrajectoryUpdateInterval) == 0x000A50, "Member 'UGA_ThrowConsumable_C::TrajectoryUpdateInterval' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, EC_DefaultExplosion) == 0x000A54, "Member 'UGA_ThrowConsumable_C::EC_DefaultExplosion' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, CookMonage) == 0x000A60, "Member 'UGA_ThrowConsumable_C::CookMonage' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, ThrowMontage) == 0x000A68, "Member 'UGA_ThrowConsumable_C::ThrowMontage' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, GC_OnThrow) == 0x000A70, "Member 'UGA_ThrowConsumable_C::GC_OnThrow' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, TrajectoryIndicator) == 0x000A78, "Member 'UGA_ThrowConsumable_C::TrajectoryIndicator' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, TrajectoryIndicatorClass) == 0x000A80, "Member 'UGA_ThrowConsumable_C::TrajectoryIndicatorClass' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, DummyProjectile) == 0x000A88, "Member 'UGA_ThrowConsumable_C::DummyProjectile' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, DummyMaxSpeed) == 0x000A90, "Member 'UGA_ThrowConsumable_C::DummyMaxSpeed' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, DummyGravity) == 0x000A94, "Member 'UGA_ThrowConsumable_C::DummyGravity' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, DummyExtent) == 0x000A98, "Member 'UGA_ThrowConsumable_C::DummyExtent' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, DummyTimestep) == 0x000A9C, "Member 'UGA_ThrowConsumable_C::DummyTimestep' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, GE_InWindup) == 0x000AA0, "Member 'UGA_ThrowConsumable_C::GE_InWindup' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, Handle_GE_InWindup) == 0x000AA8, "Member 'UGA_ThrowConsumable_C::Handle_GE_InWindup' has a wrong offset!");
-static_assert(offsetof(UGA_ThrowConsumable_C, SpawnedOnEquip) == 0x000AB0, "Member 'UGA_ThrowConsumable_C::SpawnedOnEquip' has a wrong offset!");
 
 }
 

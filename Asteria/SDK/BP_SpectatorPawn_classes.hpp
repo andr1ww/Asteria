@@ -10,25 +10,26 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SpectatorPawn.BP_SpectatorPawn_C
-// 0x0020 (0x0378 - 0x0358)
+// 0x0028 (0x0360 - 0x0338)
 class ABP_SpectatorPawn_C final : public AFortReplaySpectatorPawnBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0358(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          bIsTargetSkydiving;                                // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bIsTargetParachuting;                              // 0x0361(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bIsSkydivingAudioEnabled;                          // 0x0362(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_363[0x5];                                      // 0x0363(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             CurrentSkydivingSound;                             // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        SkydivingAudioLoop;                                // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0338(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          bIsTargetSkydiving;                                // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsTargetParachuting;                              // 0x0341(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsSkydivingAudioEnabled;                          // 0x0342(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_343[0x5];                                      // 0x0343(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             CurrentSkydivingSound;                             // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SkydivingAudioLoop;                                // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawnAthena*                  Current_Player_Pawn;                               // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_SpectatorPawn(int32 EntryPoint);
@@ -47,14 +48,6 @@ public:
 		return GetDefaultObjImpl<ABP_SpectatorPawn_C>();
 	}
 };
-static_assert(alignof(ABP_SpectatorPawn_C) == 0x000008, "Wrong alignment on ABP_SpectatorPawn_C");
-static_assert(sizeof(ABP_SpectatorPawn_C) == 0x000378, "Wrong size on ABP_SpectatorPawn_C");
-static_assert(offsetof(ABP_SpectatorPawn_C, UberGraphFrame) == 0x000358, "Member 'ABP_SpectatorPawn_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, bIsTargetSkydiving) == 0x000360, "Member 'ABP_SpectatorPawn_C::bIsTargetSkydiving' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, bIsTargetParachuting) == 0x000361, "Member 'ABP_SpectatorPawn_C::bIsTargetParachuting' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, bIsSkydivingAudioEnabled) == 0x000362, "Member 'ABP_SpectatorPawn_C::bIsSkydivingAudioEnabled' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, CurrentSkydivingSound) == 0x000368, "Member 'ABP_SpectatorPawn_C::CurrentSkydivingSound' has a wrong offset!");
-static_assert(offsetof(ABP_SpectatorPawn_C, SkydivingAudioLoop) == 0x000370, "Member 'ABP_SpectatorPawn_C::SkydivingAudioLoop' has a wrong offset!");
 
 }
 

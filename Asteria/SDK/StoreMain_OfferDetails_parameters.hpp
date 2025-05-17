@@ -13,15 +13,110 @@
 #include "FortniteUI_structs.hpp"
 #include "UMG_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
 
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.ExecuteUbergraph_StoreMain_OfferDetails
+// 0x0010 (0x0010 - 0x0000)
+struct StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortRuntimeOptions*                    CallFunc_GetRuntimeOptions_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.HandleBack
+// 0x0001 (0x0001 - 0x0000)
+struct StoreMain_OfferDetails_C_HandleBack final
+{
+public:
+	bool                                          PassThrough;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.Init
+// 0x0120 (0x0120 - 0x0000)
+struct StoreMain_OfferDetails_C_Init final
+{
+public:
+	class UFortMtxOfferData*                      DisplayAsset;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortMtxOfferData*                      CallFunc_GetOfferDisplayAsset_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_1;               // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_2;               // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetTotalQuantity_ReturnValue;             // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetTotalQuantity_ReturnValue_1;           // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortMtxOfferData*                      CallFunc_GetCurrencyABAssetFromQuantity_DataAsset; // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortMtxOfferData*                      CallFunc_GetCurrencyABAssetFromQuantity_DataAsset_1; // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EFortMtxStoreOfferType                        CallFunc_GetFortStoreOfferType_ReturnValue;        // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0043(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EFortMtxStoreOfferType                        CallFunc_GetFortStoreOfferType_ReturnValue_1;      // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetSalePriceFromLastAppStore_SalePrice;   // 0x0048(0x0018)()
+	bool                                          CallFunc_GetSalePriceFromLastAppStore_ReturnValue; // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_1;         // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortExperimentContext*                 CallFunc_GetContext_ReturnValue;                   // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldShowNewVBuckColorsJuly2019_ReturnValue; // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortExperimentContext*                 CallFunc_GetContext_ReturnValue_1;                 // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_ShouldShowNewVBuckColorsJuly2019_ReturnValue_1; // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x009A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x009B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_3;               // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetNormalPrice_ReturnValue;               // 0x00A8(0x0018)()
+	class FText                                   CallFunc_GetName_ReturnValue;                      // 0x00C0(0x0018)()
+	class UMaterialInterface*                     Temp_object_Variable;                              // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     Temp_object_Variable_1;                            // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_2;         // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortExperimentContext*                 CallFunc_GetContext_ReturnValue_2;                 // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldShowNewVBuckCoinAssetsJuly2019_ReturnValue; // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     K2Node_Select_Default_1;                           // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_3;         // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.RegisterInput
+// 0x0020 (0x0020 - 0x0000)
+struct StoreMain_OfferDetails_C_RegisterInput final
+{
+public:
+	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor)
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle;              // 0x0010(0x0010)(NoDestructor)
+};
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.InitStoreTypeVisuals
+// 0x0018 (0x0018 - 0x0000)
+struct StoreMain_OfferDetails_C_InitStoreTypeVisuals final
+{
+public:
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortMtxStoreOfferType                        CallFunc_GetFortStoreOfferType_ReturnValue;        // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
 // Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.InitCurrency
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct StoreMain_OfferDetails_C_InitCurrency final
 {
 public:
@@ -33,121 +128,69 @@ public:
 	bool                                          Temp_bool_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_1;               // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetBonusQuantity_ReturnValue;             // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetTotalQuantity_ReturnValue;             // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_2;               // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_3;               // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortRuntimeOptions*                    CallFunc_GetRuntimeOptions_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_1;               // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetBonusQuantity_ReturnValue;             // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetTotalQuantity_ReturnValue;             // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_2;               // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_GetDescription_ReturnValue;               // 0x0040(0x0018)()
-	int32                                         CallFunc_GetBonusQuantity_ReturnValue_1;           // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetBaseQuantity_ReturnValue;              // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0060(0x0018)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0078(0x0018)()
-	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_4;               // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetTotalQuantity_ReturnValue_1;           // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_2;             // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_3;               // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_4;               // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetBonusQuantity_ReturnValue_1;           // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetTotalQuantity_ReturnValue_1;           // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0070(0x0018)()
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_2;             // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetBaseQuantity_ReturnValue;              // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x0090(0x0018)()
+	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(StoreMain_OfferDetails_C_InitCurrency) == 0x000008, "Wrong alignment on StoreMain_OfferDetails_C_InitCurrency");
-static_assert(sizeof(StoreMain_OfferDetails_C_InitCurrency) == 0x0000A0, "Wrong size on StoreMain_OfferDetails_C_InitCurrency");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, Temp_byte_Variable) == 0x000000, "Member 'StoreMain_OfferDetails_C_InitCurrency::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, Temp_byte_Variable_1) == 0x000001, "Member 'StoreMain_OfferDetails_C_InitCurrency::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, Temp_bool_Variable) == 0x000002, "Member 'StoreMain_OfferDetails_C_InitCurrency::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, Temp_byte_Variable_2) == 0x000003, "Member 'StoreMain_OfferDetails_C_InitCurrency::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, Temp_byte_Variable_3) == 0x000004, "Member 'StoreMain_OfferDetails_C_InitCurrency::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, Temp_bool_Variable_1) == 0x000005, "Member 'StoreMain_OfferDetails_C_InitCurrency::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, Temp_byte_Variable_4) == 0x000006, "Member 'StoreMain_OfferDetails_C_InitCurrency::Temp_byte_Variable_4' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, Temp_byte_Variable_5) == 0x000007, "Member 'StoreMain_OfferDetails_C_InitCurrency::Temp_byte_Variable_5' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, Temp_bool_Variable_2) == 0x000008, "Member 'StoreMain_OfferDetails_C_InitCurrency::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_GetOfferInfo_ReturnValue) == 0x000010, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_GetOfferInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_GetOfferInfo_ReturnValue_1) == 0x000018, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_GetOfferInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_GetBonusQuantity_ReturnValue) == 0x000020, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_GetBonusQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_GetTotalQuantity_ReturnValue) == 0x000024, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_GetTotalQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_Greater_IntInt_ReturnValue) == 0x000028, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000029, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, K2Node_Select_Default) == 0x00002A, "Member 'StoreMain_OfferDetails_C_InitCurrency::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, K2Node_Select_Default_1) == 0x00002B, "Member 'StoreMain_OfferDetails_C_InitCurrency::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_GetOfferInfo_ReturnValue_2) == 0x000030, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_GetOfferInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_GetOfferInfo_ReturnValue_3) == 0x000038, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_GetOfferInfo_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_GetDescription_ReturnValue) == 0x000040, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_GetDescription_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_GetBonusQuantity_ReturnValue_1) == 0x000058, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_GetBonusQuantity_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_GetBaseQuantity_ReturnValue) == 0x00005C, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_GetBaseQuantity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_Conv_IntToText_ReturnValue) == 0x000060, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000078, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_GetOfferInfo_ReturnValue_4) == 0x000090, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_GetOfferInfo_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_GetTotalQuantity_ReturnValue_1) == 0x000098, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_GetTotalQuantity_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, CallFunc_Greater_IntInt_ReturnValue_2) == 0x00009C, "Member 'StoreMain_OfferDetails_C_InitCurrency::CallFunc_Greater_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitCurrency, K2Node_Select_Default_2) == 0x00009D, "Member 'StoreMain_OfferDetails_C_InitCurrency::K2Node_Select_Default_2' has a wrong offset!");
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.InitStoreTypeVisuals
-// 0x0018 (0x0018 - 0x0000)
-struct StoreMain_OfferDetails_C_InitStoreTypeVisuals final
-{
-public:
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EFortMtxStoreOfferType                        CallFunc_GetFortStoreOfferType_ReturnValue;        // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(StoreMain_OfferDetails_C_InitStoreTypeVisuals) == 0x000008, "Wrong alignment on StoreMain_OfferDetails_C_InitStoreTypeVisuals");
-static_assert(sizeof(StoreMain_OfferDetails_C_InitStoreTypeVisuals) == 0x000018, "Wrong size on StoreMain_OfferDetails_C_InitStoreTypeVisuals");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, Temp_byte_Variable) == 0x000000, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, Temp_byte_Variable_1) == 0x000001, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, Temp_bool_Variable) == 0x000002, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, Temp_byte_Variable_2) == 0x000003, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, Temp_byte_Variable_3) == 0x000004, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, CallFunc_GetOfferInfo_ReturnValue) == 0x000008, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::CallFunc_GetOfferInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, Temp_bool_Variable_1) == 0x000010, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, CallFunc_GetFortStoreOfferType_ReturnValue) == 0x000011, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::CallFunc_GetFortStoreOfferType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000012, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000013, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, K2Node_Select_Default) == 0x000014, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_InitStoreTypeVisuals, K2Node_Select_Default_1) == 0x000015, "Member 'StoreMain_OfferDetails_C_InitStoreTypeVisuals::K2Node_Select_Default_1' has a wrong offset!");
-
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.RegisterInput
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.GetCurrencyABAssetFromQuantity
 // 0x0020 (0x0020 - 0x0000)
-struct StoreMain_OfferDetails_C_RegisterInput final
+struct StoreMain_OfferDetails_C_GetCurrencyABAssetFromQuantity final
 {
 public:
-	TDelegate<void(bool* bPassThrough)>           K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor)
-	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle;              // 0x0010(0x0010)(NoDestructor)
+	int32                                         Quantity;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortMtxOfferData*                      DataAsset;                                         // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortMtxOfferData*                      CallFunc_Map_Find_Value;                           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(StoreMain_OfferDetails_C_RegisterInput) == 0x000008, "Wrong alignment on StoreMain_OfferDetails_C_RegisterInput");
-static_assert(sizeof(StoreMain_OfferDetails_C_RegisterInput) == 0x000020, "Wrong size on StoreMain_OfferDetails_C_RegisterInput");
-static_assert(offsetof(StoreMain_OfferDetails_C_RegisterInput, K2Node_CreateDelegate_OutputDelegate) == 0x000000, "Member 'StoreMain_OfferDetails_C_RegisterInput::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_RegisterInput, K2Node_MakeStruct_DataTableRowHandle) == 0x000010, "Member 'StoreMain_OfferDetails_C_RegisterInput::K2Node_MakeStruct_DataTableRowHandle' has a wrong offset!");
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.PopDetails
-// 0x0008 (0x0008 - 0x0000)
-struct StoreMain_OfferDetails_C_PopDetails final
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.IsGiftingStorefrontOffer
+// 0x0018 (0x0018 - 0x0000)
+struct StoreMain_OfferDetails_C_IsGiftingStorefrontOffer final
 {
 public:
-	class UFortUIManagerWidget_NUI*               CallFunc_GetUIManagerWidget_ReturnValue;           // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue;                 // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsGiftingStorefrontOffer_ReturnValue;     // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(StoreMain_OfferDetails_C_PopDetails) == 0x000008, "Wrong alignment on StoreMain_OfferDetails_C_PopDetails");
-static_assert(sizeof(StoreMain_OfferDetails_C_PopDetails) == 0x000008, "Wrong size on StoreMain_OfferDetails_C_PopDetails");
-static_assert(offsetof(StoreMain_OfferDetails_C_PopDetails, CallFunc_GetUIManagerWidget_ReturnValue) == 0x000000, "Member 'StoreMain_OfferDetails_C_PopDetails::CallFunc_GetUIManagerWidget_ReturnValue' has a wrong offset!");
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.Init
-// 0x01C0 (0x01C0 - 0x0000)
-struct StoreMain_OfferDetails_C_Init final
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.SetPurchaseButtonText
+// 0x0028 (0x0028 - 0x0000)
+struct StoreMain_OfferDetails_C_SetPurchaseButtonText final
+{
+public:
+	class FText                                   ButtonText;                                        // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UIconTextButton_C*                      K2Node_DynamicCast_AsIcon_Text_Button;             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.InitDetailAttributes
+// 0x0070 (0x0070 - 0x0000)
+struct StoreMain_OfferDetails_C_InitDetailAttributes final
 {
 public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -155,158 +198,54 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue;                 // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_1;               // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFortMtxDetailsAttribute>       CallFunc_GetDetailsAttributes_ReturnValue;         // 0x0020(0x0010)(ZeroConstructor, ReferenceParm)
-	class FText                                   CallFunc_GetSalePrice_SalePrice;                   // 0x0030(0x0018)()
-	bool                                          CallFunc_GetSalePrice_ReturnValue;                 // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortMtxDetailsAttribute               CallFunc_Array_Get_Item;                           // 0x0050(0x0030)()
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetNormalPrice_ReturnValue;               // 0x0088(0x0018)()
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetName_ReturnValue;                      // 0x00A8(0x0018)()
-	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_2;               // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortMtxGradient                       CallFunc_GetGradient_ReturnValue;                  // 0x00CC(0x0020)(NoDestructor)
-	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_3;               // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_GetBackground_ReturnValue;                // 0x00F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateBrush                            CallFunc_GetDetailsImage_ReturnValue;              // 0x0108(0x0088)()
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0192(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_193[0x5];                                      // 0x0193(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStoreMain_OfferDetailsAttribute_C*     CallFunc_Create_ReturnValue;                       // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue;        // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_1;         // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortMtxOfferData*                      CallFunc_GetOfferDisplayAsset_ReturnValue;         // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStoreMain_OfferDetailsAttribute_C*     CallFunc_Create_ReturnValue;                       // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFortMtxDetailsAttribute               CallFunc_Array_Get_Item;                           // 0x0030(0x0030)()
+	class UVerticalBoxSlot*                       CallFunc_AddChildToVerticalBox_ReturnValue;        // 0x0060(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(StoreMain_OfferDetails_C_Init) == 0x000008, "Wrong alignment on StoreMain_OfferDetails_C_Init");
-static_assert(sizeof(StoreMain_OfferDetails_C_Init) == 0x0001C0, "Wrong size on StoreMain_OfferDetails_C_Init");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, Temp_int_Array_Index_Variable) == 0x000000, "Member 'StoreMain_OfferDetails_C_Init::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'StoreMain_OfferDetails_C_Init::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetOfferInfo_ReturnValue) == 0x000010, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetOfferInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetOfferInfo_ReturnValue_1) == 0x000018, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetOfferInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetDetailsAttributes_ReturnValue) == 0x000020, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetDetailsAttributes_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetSalePrice_SalePrice) == 0x000030, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetSalePrice_SalePrice' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetSalePrice_ReturnValue) == 0x000048, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetSalePrice_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_Array_Get_Item) == 0x000050, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_Array_Length_ReturnValue) == 0x000080, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetNormalPrice_ReturnValue) == 0x000088, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetNormalPrice_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_Less_IntInt_ReturnValue) == 0x0000A0, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetName_ReturnValue) == 0x0000A8, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetOfferInfo_ReturnValue_2) == 0x0000C0, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetOfferInfo_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, Temp_byte_Variable) == 0x0000C8, "Member 'StoreMain_OfferDetails_C_Init::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetGradient_ReturnValue) == 0x0000CC, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetGradient_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetOfferInfo_ReturnValue_3) == 0x0000F0, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetOfferInfo_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetBackground_ReturnValue) == 0x0000F8, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetBackground_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetDetailsImage_ReturnValue) == 0x000108, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetDetailsImage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, Temp_byte_Variable_1) == 0x000190, "Member 'StoreMain_OfferDetails_C_Init::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, Temp_bool_Variable) == 0x000191, "Member 'StoreMain_OfferDetails_C_Init::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, K2Node_Select_Default) == 0x000192, "Member 'StoreMain_OfferDetails_C_Init::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000198, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetOwningPlayer_ReturnValue) == 0x0001A0, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_Create_ReturnValue) == 0x0001A8, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_AddChildToVerticalBox_ReturnValue) == 0x0001B0, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_AddChildToVerticalBox_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_Init, CallFunc_GetDynamicMaterial_ReturnValue_1) == 0x0001B8, "Member 'StoreMain_OfferDetails_C_Init::CallFunc_GetDynamicMaterial_ReturnValue_1' has a wrong offset!");
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.HandleBack
-// 0x0001 (0x0001 - 0x0000)
-struct StoreMain_OfferDetails_C_HandleBack final
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.UpdatePurchaseButton
+// 0x0068 (0x0068 - 0x0000)
+struct StoreMain_OfferDetails_C_UpdatePurchaseButton final
 {
 public:
-	bool                                          PassThrough;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Temp_text_Variable;                                // 0x0008(0x0018)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0020(0x0018)()
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue;                 // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UIconTextButton_C*                      K2Node_DynamicCast_AsIcon_Text_Button;             // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_AreGrantedItemsOwned_ReturnValue;         // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x0050(0x0018)()
 };
-static_assert(alignof(StoreMain_OfferDetails_C_HandleBack) == 0x000001, "Wrong alignment on StoreMain_OfferDetails_C_HandleBack");
-static_assert(sizeof(StoreMain_OfferDetails_C_HandleBack) == 0x000001, "Wrong size on StoreMain_OfferDetails_C_HandleBack");
-static_assert(offsetof(StoreMain_OfferDetails_C_HandleBack, PassThrough) == 0x000000, "Member 'StoreMain_OfferDetails_C_HandleBack::PassThrough' has a wrong offset!");
 
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.HandlePurchaseComplete
-// 0x0001 (0x0001 - 0x0000)
-struct StoreMain_OfferDetails_C_HandlePurchaseComplete final
+// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.SetupCurrencyImage
+// 0x0068 (0x0068 - 0x0000)
+struct StoreMain_OfferDetails_C_SetupCurrencyImage final
 {
 public:
-	bool                                          bSuccess;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UFortAccountItemDefinition*             PriceItem;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              CallFunc_GetSmallPreviewImage_ReturnValue;         // 0x0010(0x0028)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue;                 // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetPriceItem_RequiredItemCount;           // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortAccountItemDefinition*             CallFunc_GetPriceItem_ReturnValue;                 // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue_1;               // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPriceInRealMoney_ReturnValue;           // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(StoreMain_OfferDetails_C_HandlePurchaseComplete) == 0x000001, "Wrong alignment on StoreMain_OfferDetails_C_HandlePurchaseComplete");
-static_assert(sizeof(StoreMain_OfferDetails_C_HandlePurchaseComplete) == 0x000001, "Wrong size on StoreMain_OfferDetails_C_HandlePurchaseComplete");
-static_assert(offsetof(StoreMain_OfferDetails_C_HandlePurchaseComplete, bSuccess) == 0x000000, "Member 'StoreMain_OfferDetails_C_HandlePurchaseComplete::bSuccess' has a wrong offset!");
-
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct StoreMain_OfferDetails_C_BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature final
-{
-public:
-	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(StoreMain_OfferDetails_C_BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on StoreMain_OfferDetails_C_BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature");
-static_assert(sizeof(StoreMain_OfferDetails_C_BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on StoreMain_OfferDetails_C_BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature");
-static_assert(offsetof(StoreMain_OfferDetails_C_BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature, Button) == 0x000000, "Member 'StoreMain_OfferDetails_C_BndEvt__PurchaseButton_K2Node_ComponentBoundEvent_16_CommonButtonClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct StoreMain_OfferDetails_C_BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature final
-{
-public:
-	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(StoreMain_OfferDetails_C_BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on StoreMain_OfferDetails_C_BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
-static_assert(sizeof(StoreMain_OfferDetails_C_BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on StoreMain_OfferDetails_C_BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
-static_assert(offsetof(StoreMain_OfferDetails_C_BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature, Button) == 0x000000, "Member 'StoreMain_OfferDetails_C_BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function StoreMain_OfferDetails.StoreMain_OfferDetails_C.ExecuteUbergraph_StoreMain_OfferDetails
-// 0x0080 (0x0080 - 0x0000)
-struct StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonButton*                          K2Node_ComponentBoundEvent_Button;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortStoreContext*                      CallFunc_GetContext_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortMcpContext*                        CallFunc_GetContext_ReturnValue_1;                 // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool bSuccess)>                K2Node_CreateDelegate_OutputDelegate;              // 0x002C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortStoreContext*                      CallFunc_GetContext_ReturnValue_2;                 // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortUINavigationManager*               CallFunc_GetUINavigationManager_ReturnValue;       // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HandleBack_Passthrough;                   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsMobileGame_ReturnValue;                 // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonButton*                          K2Node_ComponentBoundEvent_Button_1;               // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortStoreFrontOfferInfo*               CallFunc_GetOfferInfo_ReturnValue;                 // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetOfferId_ReturnValue;                   // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails) == 0x000008, "Wrong alignment on StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails");
-static_assert(sizeof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails) == 0x000080, "Wrong size on StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, EntryPoint) == 0x000000, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::EntryPoint' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, K2Node_ComponentBoundEvent_Button) == 0x000008, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, Temp_bool_Variable) == 0x000010, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, Temp_byte_Variable) == 0x000011, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, Temp_byte_Variable_1) == 0x000012, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, CallFunc_GetContext_ReturnValue) == 0x000018, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::CallFunc_GetContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, CallFunc_GetContext_ReturnValue_1) == 0x000020, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::CallFunc_GetContext_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, K2Node_CustomEvent_bSuccess) == 0x000028, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::K2Node_CustomEvent_bSuccess' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, K2Node_CreateDelegate_OutputDelegate) == 0x00002C, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, CallFunc_GetContext_ReturnValue_2) == 0x000040, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::CallFunc_GetContext_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, CallFunc_GetUINavigationManager_ReturnValue) == 0x000048, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::CallFunc_GetUINavigationManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, CallFunc_HandleBack_Passthrough) == 0x000050, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::CallFunc_HandleBack_Passthrough' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, CallFunc_IsMobileGame_ReturnValue) == 0x000051, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::CallFunc_IsMobileGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, K2Node_ComponentBoundEvent_Button_1) == 0x000058, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, K2Node_Select_Default) == 0x000060, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, CallFunc_GetOfferInfo_ReturnValue) == 0x000068, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::CallFunc_GetOfferInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails, CallFunc_GetOfferId_ReturnValue) == 0x000070, "Member 'StoreMain_OfferDetails_C_ExecuteUbergraph_StoreMain_OfferDetails::CallFunc_GetOfferId_ReturnValue' has a wrong offset!");
 
 }
 

@@ -10,26 +10,26 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass ImpactNumbers.ImpactNumbers_C
-// 0x0028 (0x04B8 - 0x0490)
+// 0x0028 (0x0460 - 0x0438)
 class AImpactNumbers_C final : public AFortDamageNumbersActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0490(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         Spacing_percentage_for_1s;                         // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FontYSize_0;                                       // 0x04A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FontXSize_0;                                       // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Number_Spacing_Multiplier;                         // 0x04AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Number_of_number_rotations;                        // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         Spacing_percentage_for_1s;                         // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FontYSize_0;                                       // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FontXSize_0;                                       // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Number_Spacing_Multiplier;                         // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Number_of_number_rotations;                        // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_ImpactNumbers(int32 EntryPoint);
@@ -46,15 +46,6 @@ public:
 		return GetDefaultObjImpl<AImpactNumbers_C>();
 	}
 };
-static_assert(alignof(AImpactNumbers_C) == 0x000008, "Wrong alignment on AImpactNumbers_C");
-static_assert(sizeof(AImpactNumbers_C) == 0x0004B8, "Wrong size on AImpactNumbers_C");
-static_assert(offsetof(AImpactNumbers_C, UberGraphFrame) == 0x000490, "Member 'AImpactNumbers_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AImpactNumbers_C, DefaultSceneRoot) == 0x000498, "Member 'AImpactNumbers_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AImpactNumbers_C, Spacing_percentage_for_1s) == 0x0004A0, "Member 'AImpactNumbers_C::Spacing_percentage_for_1s' has a wrong offset!");
-static_assert(offsetof(AImpactNumbers_C, FontYSize_0) == 0x0004A4, "Member 'AImpactNumbers_C::FontYSize_0' has a wrong offset!");
-static_assert(offsetof(AImpactNumbers_C, FontXSize_0) == 0x0004A8, "Member 'AImpactNumbers_C::FontXSize_0' has a wrong offset!");
-static_assert(offsetof(AImpactNumbers_C, Number_Spacing_Multiplier) == 0x0004AC, "Member 'AImpactNumbers_C::Number_Spacing_Multiplier' has a wrong offset!");
-static_assert(offsetof(AImpactNumbers_C, Number_of_number_rotations) == 0x0004B0, "Member 'AImpactNumbers_C::Number_of_number_rotations' has a wrong offset!");
 
 }
 

@@ -11,55 +11,46 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function BP_VictoryDrone.BP_VictoryDrone_C.ExecuteUbergraph_BP_VictoryDrone
-// 0x0070 (0x0070 - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic;    // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0004(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable;                               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Temp_object_Variable;                              // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAnimMontage*                           K2Node_CustomEvent_Montage;                        // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_bInterrupted;                   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_K2_GetScalarParameterValue_ReturnValue;   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0044(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable_1;                             // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x004C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic;    // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_K2_GetScalarParameterValue_ReturnValue;   // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_1;                              // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7A[0x2];                                       // 0x007A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Select_Default;                             // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             K2Node_Select_Default_1;                           // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone) == 0x000008, "Wrong alignment on BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone");
-static_assert(sizeof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone) == 0x000070, "Wrong size on BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, EntryPoint) == 0x000000, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, CallFunc_GetMaterial_ReturnValue) == 0x000008, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, K2Node_DynamicCast_AsMaterial_Instance_Dynamic) == 0x000010, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::K2Node_DynamicCast_AsMaterial_Instance_Dynamic' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, K2Node_CustomEvent_Montage) == 0x000020, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::K2Node_CustomEvent_Montage' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, K2Node_CustomEvent_bInterrupted) == 0x000028, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::K2Node_CustomEvent_bInterrupted' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, CallFunc_K2_GetScalarParameterValue_ReturnValue) == 0x00002C, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::CallFunc_K2_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, K2Node_Event_DeltaSeconds) == 0x000034, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000038, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000044, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, CallFunc_BreakRotator_Roll) == 0x000050, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, CallFunc_BreakRotator_Pitch) == 0x000054, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, CallFunc_BreakRotator_Yaw) == 0x000058, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, CallFunc_MakeRotator_ReturnValue) == 0x00005C, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone, CallFunc_K2_SetActorRotation_ReturnValue) == 0x000068, "Member 'BP_VictoryDrone_C_ExecuteUbergraph_BP_VictoryDrone::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
 
 // Function BP_VictoryDrone.BP_VictoryDrone_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -68,9 +59,6 @@ struct BP_VictoryDrone_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_VictoryDrone_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_VictoryDrone_C_ReceiveTick");
-static_assert(sizeof(BP_VictoryDrone_C_ReceiveTick) == 0x000004, "Wrong size on BP_VictoryDrone_C_ReceiveTick");
-static_assert(offsetof(BP_VictoryDrone_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_VictoryDrone_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function BP_VictoryDrone.BP_VictoryDrone_C.OnSpawnOutAnimEnded
 // 0x0010 (0x0010 - 0x0000)
@@ -80,82 +68,45 @@ public:
 	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bInterrupted;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_VictoryDrone_C_OnSpawnOutAnimEnded) == 0x000008, "Wrong alignment on BP_VictoryDrone_C_OnSpawnOutAnimEnded");
-static_assert(sizeof(BP_VictoryDrone_C_OnSpawnOutAnimEnded) == 0x000010, "Wrong size on BP_VictoryDrone_C_OnSpawnOutAnimEnded");
-static_assert(offsetof(BP_VictoryDrone_C_OnSpawnOutAnimEnded, Montage) == 0x000000, "Member 'BP_VictoryDrone_C_OnSpawnOutAnimEnded::Montage' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_OnSpawnOutAnimEnded, bInterrupted) == 0x000008, "Member 'BP_VictoryDrone_C_OnSpawnOutAnimEnded::bInterrupted' has a wrong offset!");
-
-// Function BP_VictoryDrone.BP_VictoryDrone_C.InitDrone
-// 0x0010 (0x0010 - 0x0000)
-struct BP_VictoryDrone_C_InitDrone final
-{
-public:
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_AttachTo_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_VictoryDrone_C_InitDrone) == 0x000008, "Wrong alignment on BP_VictoryDrone_C_InitDrone");
-static_assert(sizeof(BP_VictoryDrone_C_InitDrone) == 0x000010, "Wrong size on BP_VictoryDrone_C_InitDrone");
-static_assert(offsetof(BP_VictoryDrone_C_InitDrone, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000000, "Member 'BP_VictoryDrone_C_InitDrone::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_InitDrone, CallFunc_K2_AttachTo_ReturnValue) == 0x000008, "Member 'BP_VictoryDrone_C_InitDrone::CallFunc_K2_AttachTo_ReturnValue' has a wrong offset!");
 
 // Function BP_VictoryDrone.BP_VictoryDrone_C.PlaySpawnAnim
-// 0x00B0 (0x00B0 - 0x0000)
+// 0x00D0 (0x00D0 - 0x0000)
 struct BP_VictoryDrone_C_PlaySpawnAnim final
 {
 public:
 	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         NewLocalVar_0;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAnimationAsset*                        Temp_object_Variable;                              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_1;                              // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue_1;       // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue_2;       // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimationAsset*                        Temp_object_Variable_1;                            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimationAsset*                        Temp_object_Variable_2;                            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimationAsset*                        Temp_object_Variable_1;                            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimationAsset*                        Temp_object_Variable_2;                            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue;       // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_2;                              // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimationAsset*                        Temp_object_Variable_3;                            // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimationAsset*                        Temp_object_Variable_4;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimationAsset*                        K2Node_Select_Default;                             // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_BoolToString_ReturnValue;            // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UAnimationAsset*                        K2Node_Select_Default_1;                           // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimationAsset*                        K2Node_Select_Default_2;                           // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimationAsset*                        K2Node_Select_Default_3;                           // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UAnimMontage* Montage, bool bInterrupted)> K2Node_CreateDelegate_OutputDelegate;              // 0x00A0(0x0010)(ZeroConstructor, NoDestructor)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_1;          // 0x0058(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue_1;     // 0x0068(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue_1;       // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue_2;       // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimationAsset*                        Temp_object_Variable_3;                            // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimationAsset*                        Temp_object_Variable_4;                            // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimationAsset*                        K2Node_Select_Default;                             // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UAnimMontage* Montage, bool bInterrupted)> K2Node_CreateDelegate_OutputDelegate; // 0x00A4(0x0010)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimationAsset*                        K2Node_Select_Default_1;                           // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimationAsset*                        K2Node_Select_Default_2;                           // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimationAsset*                        K2Node_Select_Default_3;                           // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_VictoryDrone_C_PlaySpawnAnim) == 0x000008, "Wrong alignment on BP_VictoryDrone_C_PlaySpawnAnim");
-static_assert(sizeof(BP_VictoryDrone_C_PlaySpawnAnim) == 0x0000B0, "Wrong size on BP_VictoryDrone_C_PlaySpawnAnim");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, Montage) == 0x000000, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::Montage' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, NewLocalVar_0) == 0x000008, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::NewLocalVar_0' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, Temp_bool_Variable) == 0x00000C, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, Temp_object_Variable) == 0x000010, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, Temp_bool_Variable_1) == 0x000019, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, CallFunc_IsValid_ReturnValue_1) == 0x00001A, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, CallFunc_SpawnEmitterAttached_ReturnValue) == 0x000020, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::CallFunc_SpawnEmitterAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, CallFunc_SpawnEmitterAttached_ReturnValue_1) == 0x000028, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::CallFunc_SpawnEmitterAttached_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, CallFunc_SpawnEmitterAttached_ReturnValue_2) == 0x000030, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::CallFunc_SpawnEmitterAttached_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, Temp_object_Variable_1) == 0x000038, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, Temp_object_Variable_2) == 0x000040, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::Temp_object_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, Temp_bool_Variable_2) == 0x000048, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, Temp_object_Variable_3) == 0x000050, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::Temp_object_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, CallFunc_GetAnimInstance_ReturnValue) == 0x000058, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, Temp_object_Variable_4) == 0x000060, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::Temp_object_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, Temp_bool_Variable_3) == 0x000068, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, K2Node_Select_Default) == 0x000070, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, CallFunc_Conv_BoolToString_ReturnValue) == 0x000078, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::CallFunc_Conv_BoolToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, K2Node_Select_Default_1) == 0x000088, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, K2Node_Select_Default_2) == 0x000090, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, K2Node_Select_Default_3) == 0x000098, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(BP_VictoryDrone_C_PlaySpawnAnim, K2Node_CreateDelegate_OutputDelegate) == 0x0000A0, "Member 'BP_VictoryDrone_C_PlaySpawnAnim::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 
 // Function BP_VictoryDrone.BP_VictoryDrone_C.NotifyTeleportFinishedTriggered
 // 0x0001 (0x0001 - 0x0000)
@@ -164,9 +115,54 @@ struct BP_VictoryDrone_C_NotifyTeleportFinishedTriggered final
 public:
 	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_VictoryDrone_C_NotifyTeleportFinishedTriggered) == 0x000001, "Wrong alignment on BP_VictoryDrone_C_NotifyTeleportFinishedTriggered");
-static_assert(sizeof(BP_VictoryDrone_C_NotifyTeleportFinishedTriggered) == 0x000001, "Wrong size on BP_VictoryDrone_C_NotifyTeleportFinishedTriggered");
-static_assert(offsetof(BP_VictoryDrone_C_NotifyTeleportFinishedTriggered, CallFunc_HasAuthority_ReturnValue) == 0x000000, "Member 'BP_VictoryDrone_C_NotifyTeleportFinishedTriggered::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
+
+// Function BP_VictoryDrone.BP_VictoryDrone_C.NPC FX Parameters
+// 0x04A0 (0x04A0 - 0x0000)
+struct BP_VictoryDrone_C_NPC_FX_Parameters final
+{
+public:
+	TArray<struct FParticleSysParam>              Instance_Parameters;                               // 0x0000(0x0010)(Parm, OutParm, HasGetValueTypeHash)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam;                // 0x0010(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_1;              // 0x0090(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_2;              // 0x0110(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_3;              // 0x0190(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_4;              // 0x0210(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_5;              // 0x0290(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_6;              // 0x0310(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_7;              // 0x0390(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_8;              // 0x0410(0x0080)(IsPlainOldData, NoDestructor)
+	TArray<struct FParticleSysParam>              K2Node_MakeArray_Array;                            // 0x0490(0x0010)(ReferenceParm, HasGetValueTypeHash)
+};
+
+// Function BP_VictoryDrone.BP_VictoryDrone_C.Decoy FX Parameters
+// 0x04A0 (0x04A0 - 0x0000)
+struct BP_VictoryDrone_C_Decoy_FX_Parameters final
+{
+public:
+	TArray<struct FParticleSysParam>              Instance_Parameters;                               // 0x0000(0x0010)(Parm, OutParm, HasGetValueTypeHash)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam;                // 0x0010(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_1;              // 0x0090(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_2;              // 0x0110(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_3;              // 0x0190(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_4;              // 0x0210(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_5;              // 0x0290(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_6;              // 0x0310(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_7;              // 0x0390(0x0080)(IsPlainOldData, NoDestructor)
+	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_8;              // 0x0410(0x0080)(IsPlainOldData, NoDestructor)
+	TArray<struct FParticleSysParam>              K2Node_MakeArray_Array;                            // 0x0490(0x0010)(ReferenceParm, HasGetValueTypeHash)
+};
+
+// Function BP_VictoryDrone.BP_VictoryDrone_C.Added Death Audio
+// 0x0020 (0x0020 - 0x0000)
+struct BP_VictoryDrone_C_Added_Death_Audio final
+{
+public:
+	class USoundBase*                             Sound_to_Spawn;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x000C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_SpawnSoundAtLocation_ReturnValue;         // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 }
 

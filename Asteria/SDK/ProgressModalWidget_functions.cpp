@@ -17,23 +17,28 @@
 namespace SDK
 {
 
-// Function ProgressModalWidget.ProgressModalWidget_C.ExecuteUbergraph_ProgressModalWidget
-// (Final, UbergraphFunction, HasDefaults)
+// Function ProgressModalWidget.ProgressModalWidget_C.OnAnalogValueChanged
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FAnalogInputEvent&         InAnalogInputEvent                                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UProgressModalWidget_C::ExecuteUbergraph_ProgressModalWidget(int32 EntryPoint)
+struct FEventReply UProgressModalWidget_C::OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "ExecuteUbergraph_ProgressModalWidget");
+		Func = Class->GetFunction("ProgressModalWidget_C", "OnAnalogValueChanged");
 
-	Params::ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget Parms{};
+	Params::ProgressModalWidget_C_OnAnalogValueChanged Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InAnalogInputEvent = std::move(InAnalogInputEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -46,20 +51,6 @@ void UProgressModalWidget_C::Construct()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ProgressModalWidget_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ProgressModalWidget.ProgressModalWidget_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UProgressModalWidget_C::Destruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "Destruct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,47 +84,8 @@ void UProgressModalWidget_C::HandleOutroEnded()
 }
 
 
-// Function ProgressModalWidget.ProgressModalWidget_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UProgressModalWidget_C::Initialize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "Initialize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ProgressModalWidget.ProgressModalWidget_C.OnAnalogValueChanged
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FAnalogInputEvent                InAnalogInputEvent                                     (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
-
-struct FEventReply UProgressModalWidget_C::OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "OnAnalogValueChanged");
-
-	Params::ProgressModalWidget_C_OnAnalogValueChanged Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InAnalogInputEvent = std::move(InAnalogInputEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ProgressModalWidget.ProgressModalWidget_C.OnBeginIntro
-// (Event, Public, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 
 void UProgressModalWidget_C::OnBeginIntro()
 {
@@ -147,7 +99,7 @@ void UProgressModalWidget_C::OnBeginIntro()
 
 
 // Function ProgressModalWidget.ProgressModalWidget_C.OnBeginOutro
-// (Event, Public, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 
 void UProgressModalWidget_C::OnBeginOutro()
 {
@@ -160,61 +112,35 @@ void UProgressModalWidget_C::OnBeginOutro()
 }
 
 
-// Function ProgressModalWidget.ProgressModalWidget_C.SetDescription
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             InDescription                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// Function ProgressModalWidget.ProgressModalWidget_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UProgressModalWidget_C::SetDescription(const class FText& InDescription)
+void UProgressModalWidget_C::Destruct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "SetDescription");
+		Func = Class->GetFunction("ProgressModalWidget_C", "Destruct");
 
-	Params::ProgressModalWidget_C_SetDescription Parms{};
-
-	Parms.InDescription = std::move(InDescription);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ProgressModalWidget.ProgressModalWidget_C.SetIcon
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function ProgressModalWidget.ProgressModalWidget_C.ExecuteUbergraph_ProgressModalWidget
+// (Final, UbergraphFunction)
 // Parameters:
-// struct FSlateBrush                      InIcon                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UProgressModalWidget_C::SetIcon(const struct FSlateBrush& InIcon)
+void UProgressModalWidget_C::ExecuteUbergraph_ProgressModalWidget(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "SetIcon");
+		Func = Class->GetFunction("ProgressModalWidget_C", "ExecuteUbergraph_ProgressModalWidget");
 
-	Params::ProgressModalWidget_C_SetIcon Parms{};
+	Params::ProgressModalWidget_C_ExecuteUbergraph_ProgressModalWidget Parms{};
 
-	Parms.InIcon = std::move(InIcon);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ProgressModalWidget.ProgressModalWidget_C.SetTitle
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             InTitle                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UProgressModalWidget_C::SetTitle(const class FText& InTitle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ProgressModalWidget_C", "SetTitle");
-
-	Params::ProgressModalWidget_C_SetTitle Parms{};
-
-	Parms.InTitle = std::move(InTitle);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

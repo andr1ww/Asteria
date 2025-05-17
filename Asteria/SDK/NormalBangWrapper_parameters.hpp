@@ -39,20 +39,6 @@ public:
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0030(0x0018)()
 };
-static_assert(alignof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper) == 0x000008, "Wrong alignment on NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper");
-static_assert(sizeof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper) == 0x000048, "Wrong size on NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, EntryPoint) == 0x000000, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::EntryPoint' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, K2Node_Event_bEnabled) == 0x000004, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::K2Node_Event_bEnabled' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, K2Node_Event_Count) == 0x000008, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::K2Node_Event_Count' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, Temp_bool_Variable) == 0x00000C, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, Temp_byte_Variable) == 0x00000D, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, Temp_byte_Variable_1) == 0x00000E, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, K2Node_Select_Default) == 0x00000F, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, K2Node_Event_TutorialObjectiveName) == 0x000010, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::K2Node_Event_TutorialObjectiveName' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, K2Node_Event_TutorialType) == 0x000018, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::K2Node_Event_TutorialType' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, CallFunc_PlayAnimation_ReturnValue) == 0x000020, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, K2Node_Event_IsDesignTime) == 0x000028, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper, CallFunc_Conv_IntToText_ReturnValue) == 0x000030, "Member 'NormalBangWrapper_C_ExecuteUbergraph_NormalBangWrapper::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
 
 // Function NormalBangWrapper.NormalBangWrapper_C.OnBangStateChanged
 // 0x0008 (0x0008 - 0x0000)
@@ -63,10 +49,6 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Count_0;                                           // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NormalBangWrapper_C_OnBangStateChanged) == 0x000004, "Wrong alignment on NormalBangWrapper_C_OnBangStateChanged");
-static_assert(sizeof(NormalBangWrapper_C_OnBangStateChanged) == 0x000008, "Wrong size on NormalBangWrapper_C_OnBangStateChanged");
-static_assert(offsetof(NormalBangWrapper_C_OnBangStateChanged, bEnabled) == 0x000000, "Member 'NormalBangWrapper_C_OnBangStateChanged::bEnabled' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_OnBangStateChanged, Count_0) == 0x000004, "Member 'NormalBangWrapper_C_OnBangStateChanged::Count_0' has a wrong offset!");
 
 // Function NormalBangWrapper.NormalBangWrapper_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
@@ -75,9 +57,6 @@ struct NormalBangWrapper_C_PreConstruct final
 public:
 	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(NormalBangWrapper_C_PreConstruct) == 0x000001, "Wrong alignment on NormalBangWrapper_C_PreConstruct");
-static_assert(sizeof(NormalBangWrapper_C_PreConstruct) == 0x000001, "Wrong size on NormalBangWrapper_C_PreConstruct");
-static_assert(offsetof(NormalBangWrapper_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'NormalBangWrapper_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function NormalBangWrapper.NormalBangWrapper_C.OnStartCallout
 // 0x000C (0x000C - 0x0000)
@@ -87,10 +66,6 @@ public:
 	class FName                                   TutorialObjectiveName;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETutorialType                                 TutorialType;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NormalBangWrapper_C_OnStartCallout) == 0x000004, "Wrong alignment on NormalBangWrapper_C_OnStartCallout");
-static_assert(sizeof(NormalBangWrapper_C_OnStartCallout) == 0x00000C, "Wrong size on NormalBangWrapper_C_OnStartCallout");
-static_assert(offsetof(NormalBangWrapper_C_OnStartCallout, TutorialObjectiveName) == 0x000000, "Member 'NormalBangWrapper_C_OnStartCallout::TutorialObjectiveName' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_OnStartCallout, TutorialType) == 0x000008, "Member 'NormalBangWrapper_C_OnStartCallout::TutorialType' has a wrong offset!");
 
 // Function NormalBangWrapper.NormalBangWrapper_C.SetTutorialBorderStyle
 // 0x0008 (0x0008 - 0x0000)
@@ -99,9 +74,6 @@ struct NormalBangWrapper_C_SetTutorialBorderStyle final
 public:
 	class UClass*                                 BorderStyle;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NormalBangWrapper_C_SetTutorialBorderStyle) == 0x000008, "Wrong alignment on NormalBangWrapper_C_SetTutorialBorderStyle");
-static_assert(sizeof(NormalBangWrapper_C_SetTutorialBorderStyle) == 0x000008, "Wrong size on NormalBangWrapper_C_SetTutorialBorderStyle");
-static_assert(offsetof(NormalBangWrapper_C_SetTutorialBorderStyle, BorderStyle) == 0x000000, "Member 'NormalBangWrapper_C_SetTutorialBorderStyle::BorderStyle' has a wrong offset!");
 
 // Function NormalBangWrapper.NormalBangWrapper_C.Update Bang Icon Version
 // 0x0024 (0x0024 - 0x0000)
@@ -122,19 +94,6 @@ public:
 	int32                                         K2Node_Select_Default;                             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_Select_Default_1;                           // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NormalBangWrapper_C_Update_Bang_Icon_Version) == 0x000004, "Wrong alignment on NormalBangWrapper_C_Update_Bang_Icon_Version");
-static_assert(sizeof(NormalBangWrapper_C_Update_Bang_Icon_Version) == 0x000024, "Wrong size on NormalBangWrapper_C_Update_Bang_Icon_Version");
-static_assert(offsetof(NormalBangWrapper_C_Update_Bang_Icon_Version, InCount) == 0x000000, "Member 'NormalBangWrapper_C_Update_Bang_Icon_Version::InCount' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_Update_Bang_Icon_Version, Temp_int_Variable) == 0x000004, "Member 'NormalBangWrapper_C_Update_Bang_Icon_Version::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_Update_Bang_Icon_Version, Temp_int_Variable_1) == 0x000008, "Member 'NormalBangWrapper_C_Update_Bang_Icon_Version::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_Update_Bang_Icon_Version, Temp_bool_Variable) == 0x00000C, "Member 'NormalBangWrapper_C_Update_Bang_Icon_Version::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_Update_Bang_Icon_Version, Temp_int_Variable_2) == 0x000010, "Member 'NormalBangWrapper_C_Update_Bang_Icon_Version::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_Update_Bang_Icon_Version, Temp_int_Variable_3) == 0x000014, "Member 'NormalBangWrapper_C_Update_Bang_Icon_Version::Temp_int_Variable_3' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_Update_Bang_Icon_Version, Temp_bool_Variable_1) == 0x000018, "Member 'NormalBangWrapper_C_Update_Bang_Icon_Version::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_Update_Bang_Icon_Version, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000019, "Member 'NormalBangWrapper_C_Update_Bang_Icon_Version::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_Update_Bang_Icon_Version, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x00001A, "Member 'NormalBangWrapper_C_Update_Bang_Icon_Version::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_Update_Bang_Icon_Version, K2Node_Select_Default) == 0x00001C, "Member 'NormalBangWrapper_C_Update_Bang_Icon_Version::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_Update_Bang_Icon_Version, K2Node_Select_Default_1) == 0x000020, "Member 'NormalBangWrapper_C_Update_Bang_Icon_Version::K2Node_Select_Default_1' has a wrong offset!");
 
 // Function NormalBangWrapper.NormalBangWrapper_C.Adjust Bang Image Translation
 // 0x0008 (0x0008 - 0x0000)
@@ -143,9 +102,6 @@ struct NormalBangWrapper_C_Adjust_Bang_Image_Translation final
 public:
 	struct FVector2D                              Translation;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NormalBangWrapper_C_Adjust_Bang_Image_Translation) == 0x000004, "Wrong alignment on NormalBangWrapper_C_Adjust_Bang_Image_Translation");
-static_assert(sizeof(NormalBangWrapper_C_Adjust_Bang_Image_Translation) == 0x000008, "Wrong size on NormalBangWrapper_C_Adjust_Bang_Image_Translation");
-static_assert(offsetof(NormalBangWrapper_C_Adjust_Bang_Image_Translation, Translation) == 0x000000, "Member 'NormalBangWrapper_C_Adjust_Bang_Image_Translation::Translation' has a wrong offset!");
 
 // Function NormalBangWrapper.NormalBangWrapper_C.TriggerIntro
 // 0x0010 (0x0010 - 0x0000)
@@ -155,10 +111,6 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NormalBangWrapper_C_TriggerIntro) == 0x000008, "Wrong alignment on NormalBangWrapper_C_TriggerIntro");
-static_assert(sizeof(NormalBangWrapper_C_TriggerIntro) == 0x000010, "Wrong size on NormalBangWrapper_C_TriggerIntro");
-static_assert(offsetof(NormalBangWrapper_C_TriggerIntro, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'NormalBangWrapper_C_TriggerIntro::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_TriggerIntro, CallFunc_PlayAnimation_ReturnValue_1) == 0x000008, "Member 'NormalBangWrapper_C_TriggerIntro::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
 
 // Function NormalBangWrapper.NormalBangWrapper_C.InitialReset
 // 0x0018 (0x0018 - 0x0000)
@@ -170,12 +122,6 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NormalBangWrapper_C_InitialReset) == 0x000008, "Wrong alignment on NormalBangWrapper_C_InitialReset");
-static_assert(sizeof(NormalBangWrapper_C_InitialReset) == 0x000018, "Wrong size on NormalBangWrapper_C_InitialReset");
-static_assert(offsetof(NormalBangWrapper_C_InitialReset, CallFunc_GetEndTime_ReturnValue) == 0x000000, "Member 'NormalBangWrapper_C_InitialReset::CallFunc_GetEndTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_InitialReset, CallFunc_GetEndTime_ReturnValue_1) == 0x000004, "Member 'NormalBangWrapper_C_InitialReset::CallFunc_GetEndTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_InitialReset, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'NormalBangWrapper_C_InitialReset::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_InitialReset, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'NormalBangWrapper_C_InitialReset::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
 
 // Function NormalBangWrapper.NormalBangWrapper_C.SetShouldSuppressBang
 // 0x0005 (0x0005 - 0x0000)
@@ -188,13 +134,6 @@ public:
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NormalBangWrapper_C_SetShouldSuppressBang) == 0x000001, "Wrong alignment on NormalBangWrapper_C_SetShouldSuppressBang");
-static_assert(sizeof(NormalBangWrapper_C_SetShouldSuppressBang) == 0x000005, "Wrong size on NormalBangWrapper_C_SetShouldSuppressBang");
-static_assert(offsetof(NormalBangWrapper_C_SetShouldSuppressBang, ShouldSuppressBang_0) == 0x000000, "Member 'NormalBangWrapper_C_SetShouldSuppressBang::ShouldSuppressBang_0' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_SetShouldSuppressBang, Temp_bool_Variable) == 0x000001, "Member 'NormalBangWrapper_C_SetShouldSuppressBang::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_SetShouldSuppressBang, Temp_byte_Variable) == 0x000002, "Member 'NormalBangWrapper_C_SetShouldSuppressBang::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_SetShouldSuppressBang, Temp_byte_Variable_1) == 0x000003, "Member 'NormalBangWrapper_C_SetShouldSuppressBang::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(NormalBangWrapper_C_SetShouldSuppressBang, K2Node_Select_Default) == 0x000004, "Member 'NormalBangWrapper_C_SetShouldSuppressBang::K2Node_Select_Default' has a wrong offset!");
 
 }
 

@@ -97,39 +97,11 @@ void UAthenaLobbyPlayerPanel_C::OnHasBattlePassUpdated(bool bHasBattlePass)
 }
 
 
-// Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.Cancel
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UAthenaLobbyPlayerPanel_C::Cancel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaLobbyPlayerPanel_C", "Cancel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.Focus
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UAthenaLobbyPlayerPanel_C::Focus()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaLobbyPlayerPanel_C", "Focus");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function AthenaLobbyPlayerPanel.AthenaLobbyPlayerPanel_C.OnMouseButtonDown_0
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
 struct FEventReply UAthenaLobbyPlayerPanel_C::OnMouseButtonDown_0(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)

@@ -18,18 +18,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_Instance_PlaysetGrenadeWithTrajectory.GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C
-// 0x0010 (0x0C90 - 0x0C80)
-class UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C : public UGA_Athena_PlaysetGrenadeWithTrajectory_C
+// 0x0010 (0x0EA0 - 0x0E90)
+class UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C final : public UGA_Athena_PlaysetGrenadeWithTrajectory_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C; // 0x0C80(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UFortPlaysetItemDefinition*             PlaysetData;                                       // 0x0C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C; // 0x0E90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        Throw_Loop_Sound;                                  // 0x0E98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Athena_Instance_PlaysetGrenadeWithTrajectory(int32 EntryPoint);
-	void GetActivePlaysetData(class UFortPlaysetItemDefinition** OutData);
 	void SetActivePlaysetOnPlayer();
 	void SetPlaysetData(class AFortProjectileBase* Projectile_Reference);
+	void K2_OnEndAbility(bool bWasCancelled);
+	void K2_ActivateAbility();
+	void GetActivePlaysetData(class UFortPlaysetItemDefinition** OutData);
 
 public:
 	static class UClass* StaticClass()
@@ -41,10 +43,6 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C>();
 	}
 };
-static_assert(alignof(UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C) == 0x000008, "Wrong alignment on UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C");
-static_assert(sizeof(UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C) == 0x000C90, "Wrong size on UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C");
-static_assert(offsetof(UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C, UberGraphFrame_GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C) == 0x000C80, "Member 'UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C::UberGraphFrame_GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C, PlaysetData) == 0x000C88, "Member 'UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C::PlaysetData' has a wrong offset!");
 
 }
 

@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BPI_Building_Actor_Destroyed.BPI_Building_Actor_Destroyed_C
-// 0x0000 (0x0028 - 0x0028)
-class IBPI_Building_Actor_Destroyed_C final : public IInterface
+// 0x0000 (0x0000 - 0x0000)
+class IBPI_Building_Actor_Destroyed_C final
 {
 public:
 	void Event_Building_Actor_Destroyed();
@@ -32,9 +32,16 @@ public:
 	{
 		return GetDefaultObjImpl<IBPI_Building_Actor_Destroyed_C>();
 	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
 };
-static_assert(alignof(IBPI_Building_Actor_Destroyed_C) == 0x000008, "Wrong alignment on IBPI_Building_Actor_Destroyed_C");
-static_assert(sizeof(IBPI_Building_Actor_Destroyed_C) == 0x000028, "Wrong size on IBPI_Building_Actor_Destroyed_C");
 
 }
 

@@ -17,40 +17,23 @@
 namespace SDK
 {
 
-// Function DeadzoneAdjustment.DeadzoneAdjustment_C.DoCustomNavigation_0
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function DeadzoneAdjustment.DeadzoneAdjustment_C.ExecuteUbergraph_DeadzoneAdjustment
+// (Final, UbergraphFunction)
 // Parameters:
-// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class UWidget* UDeadzoneAdjustment_C::DoCustomNavigation_0(EUINavigation Navigation_0)
+void UDeadzoneAdjustment_C::ExecuteUbergraph_DeadzoneAdjustment(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DeadzoneAdjustment_C", "DoCustomNavigation_0");
+		Func = Class->GetFunction("DeadzoneAdjustment_C", "ExecuteUbergraph_DeadzoneAdjustment");
 
-	Params::DeadzoneAdjustment_C_DoCustomNavigation_0 Parms{};
+	Params::DeadzoneAdjustment_C_ExecuteUbergraph_DeadzoneAdjustment Parms{};
 
-	Parms.Navigation_0 = Navigation_0;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function DeadzoneAdjustment.DeadzoneAdjustment_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UDeadzoneAdjustment_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DeadzoneAdjustment_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -74,23 +57,40 @@ void UDeadzoneAdjustment_C::OnValueChanged_Bind(float Value)
 }
 
 
-// Function DeadzoneAdjustment.DeadzoneAdjustment_C.ExecuteUbergraph_DeadzoneAdjustment
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function DeadzoneAdjustment.DeadzoneAdjustment_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UDeadzoneAdjustment_C::ExecuteUbergraph_DeadzoneAdjustment(int32 EntryPoint)
+void UDeadzoneAdjustment_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DeadzoneAdjustment_C", "ExecuteUbergraph_DeadzoneAdjustment");
+		Func = Class->GetFunction("DeadzoneAdjustment_C", "Construct");
 
-	Params::DeadzoneAdjustment_C_ExecuteUbergraph_DeadzoneAdjustment Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function DeadzoneAdjustment.DeadzoneAdjustment_C.DoCustomNavigation_0
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UDeadzoneAdjustment_C::DoCustomNavigation_0(EUINavigation Navigation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DeadzoneAdjustment_C", "DoCustomNavigation_0");
+
+	Params::DeadzoneAdjustment_C_DoCustomNavigation_0 Parms{};
+
+	Parms.Navigation_0 = Navigation_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

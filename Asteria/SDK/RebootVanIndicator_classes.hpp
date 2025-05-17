@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass RebootVanIndicator.RebootVanIndicator_C
-// 0x0040 (0x0498 - 0x0458)
+// 0x0040 (0x0508 - 0x04C8)
 class URebootVanIndicator_C final : public UAthenaRebootVanIndicator
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0458(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0460(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                Border_Nameplate;                                  // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Icon;                                              // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_RebootIcon;                                  // 0x0478(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_SmallIndicator;                              // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Van;                                         // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USpacer*                                IndicatorSpacer;                                   // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x04D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                Border_Nameplate;                                  // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon;                                              // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_RebootIcon;                                  // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_SmallIndicator;                              // 0x04F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Van;                                         // 0x04F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USpacer*                                IndicatorSpacer;                                   // 0x0500(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_RebootVanIndicator(int32 EntryPoint);
@@ -45,16 +45,6 @@ public:
 		return GetDefaultObjImpl<URebootVanIndicator_C>();
 	}
 };
-static_assert(alignof(URebootVanIndicator_C) == 0x000008, "Wrong alignment on URebootVanIndicator_C");
-static_assert(sizeof(URebootVanIndicator_C) == 0x000498, "Wrong size on URebootVanIndicator_C");
-static_assert(offsetof(URebootVanIndicator_C, UberGraphFrame) == 0x000458, "Member 'URebootVanIndicator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(URebootVanIndicator_C, Intro) == 0x000460, "Member 'URebootVanIndicator_C::Intro' has a wrong offset!");
-static_assert(offsetof(URebootVanIndicator_C, Border_Nameplate) == 0x000468, "Member 'URebootVanIndicator_C::Border_Nameplate' has a wrong offset!");
-static_assert(offsetof(URebootVanIndicator_C, Icon) == 0x000470, "Member 'URebootVanIndicator_C::Icon' has a wrong offset!");
-static_assert(offsetof(URebootVanIndicator_C, Image_RebootIcon) == 0x000478, "Member 'URebootVanIndicator_C::Image_RebootIcon' has a wrong offset!");
-static_assert(offsetof(URebootVanIndicator_C, Image_SmallIndicator) == 0x000480, "Member 'URebootVanIndicator_C::Image_SmallIndicator' has a wrong offset!");
-static_assert(offsetof(URebootVanIndicator_C, Image_Van) == 0x000488, "Member 'URebootVanIndicator_C::Image_Van' has a wrong offset!");
-static_assert(offsetof(URebootVanIndicator_C, IndicatorSpacer) == 0x000490, "Member 'URebootVanIndicator_C::IndicatorSpacer' has a wrong offset!");
 
 }
 

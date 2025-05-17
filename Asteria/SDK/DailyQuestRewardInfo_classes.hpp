@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass DailyQuestRewardInfo.DailyQuestRewardInfo_C
-// 0x0000 (0x02C0 - 0x02C0)
+// 0x0000 (0x0310 - 0x0310)
 class UDailyQuestRewardInfo_C final : public UFortRewardInfoWidget
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UDailyQuestRewardInfo_C>();
 	}
 };
-static_assert(alignof(UDailyQuestRewardInfo_C) == 0x000008, "Wrong alignment on UDailyQuestRewardInfo_C");
-static_assert(sizeof(UDailyQuestRewardInfo_C) == 0x0002C0, "Wrong size on UDailyQuestRewardInfo_C");
 
 }
 

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "ToyAngleSelectorInfo_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "CoreUObject_structs.hpp"
@@ -19,223 +20,152 @@ namespace SDK::Params
 {
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.ExecuteUbergraph_GA_Athena_HookDestroy
-// 0x0680 (0x0680 - 0x0000)
+// 0x0830 (0x0830 - 0x0000)
 struct GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_CustomEvent_NotifyName_15;                  // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate;              // 0x000C(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   Temp_name_Variable;                                // 0x001C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FGameplayEventData& Payload)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0024(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayEventData                     K2Node_CustomEvent_Payload_1;                      // 0x0038(0x00B0)()
-	struct FGameplayEventData                     Temp_struct_Variable;                              // 0x00E8(0x00B0)()
-	class UAbilityTask_WaitGameplayEvent*         CallFunc_WaitGameplayEvent_ReturnValue;            // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_Prj_Hook_Athena_C*                   K2Node_DynamicCast_AsB_Prj_Hook_Athena;            // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1B1[0x3];                                      // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_2;            // 0x01B4(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_14;                  // 0x01C4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_PickGrappleMontage_SectionName;           // 0x01CC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_CustomEvent_NotifyName_13;                  // 0x01D4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_3;            // 0x01DC(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_12;                  // 0x01EC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_4;            // 0x01F4(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_11;                  // 0x0204(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_5;            // 0x020C(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_10;                  // 0x021C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_6;            // 0x0224(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   Temp_name_Variable_1;                              // 0x0234(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FGameplayEventData& Payload)> K2Node_CreateDelegate_OutputDelegate_7;            // 0x023C(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayEventData                     K2Node_CustomEvent_Payload;                        // 0x0250(0x00B0)()
-	struct FGameplayEventData                     Temp_struct_Variable_1;                            // 0x0300(0x00B0)()
-	class UAbilityTask_WaitGameplayEvent*         CallFunc_WaitGameplayEvent_ReturnValue_1;          // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3B9[0x3];                                      // 0x03B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_8;            // 0x03BC(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_9;                   // 0x03CC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_CustomEvent_NotifyName_8;                   // 0x03D4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_9;            // 0x03DC(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_7;                   // 0x03EC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_10;           // 0x03F4(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_6;                   // 0x0404(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_11;           // 0x040C(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_5;                   // 0x041C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_12;           // 0x0424(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   Temp_name_Variable_2;                              // 0x0434(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_13;           // 0x043C(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_4;                   // 0x044C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_CustomEvent_NotifyName_3;                   // 0x0454(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_14;           // 0x045C(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_2;                   // 0x046C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_15;           // 0x0474(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_1;                   // 0x0484(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_16;           // 0x048C(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName;                     // 0x049C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_17;           // 0x04A4(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   Temp_name_Variable_3;                              // 0x04B4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_CustomEvent_NotifyName_16;                  // 0x04BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x04C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x04C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_CommitAbility_ReturnValue;             // 0x04C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4C7[0x1];                                      // 0x04C7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWeapon*                            CallFunc_GetCurrentSourceWeapon_ReturnValue;       // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGuid                                  CallFunc_GetInventoryGUID_ReturnValue;             // 0x04D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue; // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_K2_RemoveItemFromPlayerByGuid_ReturnValue; // 0x04E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_18;           // 0x04EC(0x0010)(ZeroConstructor, NoDestructor)
-	class FName                                   K2Node_CustomEvent_NotifyName_19;                  // 0x04FC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_504[0x4];                                      // 0x0504(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue; // 0x0508(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0510(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_511[0x7];                                      // 0x0511(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityActorInfo              CallFunc_GetActorInfo_ReturnValue;                 // 0x0518(0x0040)(ContainsInstancedReference)
-	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1; // 0x0558(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0560(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0568(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_569[0x7];                                      // 0x0569(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayAbilityTargetDataHandle       CallFunc_AbilityTargetDataFromActor_ReturnValue;   // 0x0570(0x0028)()
-	TArray<struct FActiveGameplayEffectHandle>    CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x0598(0x0010)(ZeroConstructor, ReferenceParm)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x05A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5A9[0x3];                                      // 0x05A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetLocalMagazineAmmoCount_ReturnValue;    // 0x05AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x05B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5B1[0x3];                                      // 0x05B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_19;           // 0x05B4(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_20;           // 0x05C4(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_5D4[0x4];                                      // 0x05D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_2; // 0x05D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x05E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5E1[0x3];                                      // 0x05E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   K2Node_CustomEvent_NotifyName_17;                  // 0x05E4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EC[0x4];                                      // 0x05EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWeapon*                            CallFunc_GetCurrentSourceWeapon_ReturnValue_1;     // 0x05F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x05F8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue;    // 0x0600(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortAbilitySystemComponent*            K2Node_DynamicCast_AsFort_Ability_System_Component; // 0x0608(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0610(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_611[0x7];                                      // 0x0611(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_Hookgun_Athena_C*                    K2Node_DynamicCast_AsB_Hookgun_Athena;             // 0x0618(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0620(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_621[0x3];                                      // 0x0621(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_21;           // 0x0624(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_634[0x4];                                      // 0x0634(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortAthenaVehicle*                     CallFunc_GetVehicle_ReturnValue;                   // 0x0638(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortAthenaJackalVehicle*               K2Node_DynamicCast_AsFort_Athena_Jackal_Vehicle;   // 0x0640(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_649[0x7];                                      // 0x0649(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_3; // 0x0650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0658(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0659(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_65A[0x6];                                      // 0x065A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           CallFunc_GetCurrentMontage_ReturnValue;            // 0x0660(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           CallFunc_GetCurrentMontage_ReturnValue_1;          // 0x0668(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0670(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x0671(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_672[0x2];                                      // 0x0672(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   K2Node_CustomEvent_NotifyName_18;                  // 0x0674(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable;                                // 0x0004(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayEventData                     K2Node_CustomEvent_Payload_2;                      // 0x0010(0x00B0)()
+	TDelegate<void(const struct FGameplayEventData& Payload)> K2Node_CreateDelegate_OutputDelegate;  // 0x00C0(0x0010)(ZeroConstructor, NoDestructor)
+	struct FGameplayEventData                     Temp_struct_Variable;                              // 0x00D0(0x00B0)()
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_1;            // 0x0180(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_CustomEvent_NotifyName_14;                  // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_Prj_Hook_Athena_C*                   K2Node_DynamicCast_AsB_Prj_Hook_Athena;            // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1A1[0x3];                                      // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_2;            // 0x01A4(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   CallFunc_PickGrappleMontage_SectionName;           // 0x01B4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_CustomEvent_NotifyName_13;                  // 0x01BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_CustomEvent_NotifyName_12;                  // 0x01C4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_3;            // 0x01CC(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_CustomEvent_NotifyName_11;                  // 0x01DC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_4;            // 0x01E4(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_CustomEvent_NotifyName_10;                  // 0x01F4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_5;            // 0x01FC(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   Temp_name_Variable_1;                              // 0x020C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FGameplayEventData& Payload)> K2Node_CreateDelegate_OutputDelegate_6; // 0x0214(0x0010)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_224[0x4];                                      // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayEventData                     K2Node_CustomEvent_Payload_1;                      // 0x0228(0x00B0)()
+	struct FGameplayEventData                     Temp_struct_Variable_1;                            // 0x02D8(0x00B0)()
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_7;            // 0x0388(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_CustomEvent_NotifyName_9;                   // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_CustomEvent_NotifyName_8;                   // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_8;            // 0x03A8(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_CustomEvent_NotifyName_7;                   // 0x03B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_9;            // 0x03C0(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_CustomEvent_NotifyName_6;                   // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_10;           // 0x03D8(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_CustomEvent_NotifyName_5;                   // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_11;           // 0x03F0(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   Temp_name_Variable_2;                              // 0x0400(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_12;           // 0x0408(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_CustomEvent_NotifyName_4;                   // 0x0418(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_CustomEvent_NotifyName_3;                   // 0x0420(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_13;           // 0x0428(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_CustomEvent_NotifyName_2;                   // 0x0438(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_14;           // 0x0440(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_CustomEvent_NotifyName_1;                   // 0x0450(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_15;           // 0x0458(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   K2Node_CustomEvent_NotifyName;                     // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_16;           // 0x0470(0x0010)(ZeroConstructor, NoDestructor)
+	class FName                                   Temp_name_Variable_3;                              // 0x0480(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FGameplayEventData& Payload)> K2Node_CreateDelegate_OutputDelegate_17; // 0x0488(0x0010)(ZeroConstructor, NoDestructor)
+	struct FGameplayEventData                     K2Node_CustomEvent_Payload;                        // 0x0498(0x00B0)()
+	struct FGameplayEventData                     Temp_struct_Variable_2;                            // 0x0548(0x00B0)()
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_18;           // 0x05F8(0x0010)(ZeroConstructor, NoDestructor)
+	class UAbilityTask_NetworkSyncPoint*          CallFunc_WaitNetSync_ReturnValue;                  // 0x0608(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0610(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0611(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0612(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0613(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_19;           // 0x0614(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x0624(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x0625(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_626[0x2];                                      // 0x0626(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   K2Node_CustomEvent_NotifyName_15;                  // 0x0628(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayAbilityActorInfo              CallFunc_GetActorInfo_ReturnValue;                 // 0x0630(0x0048)(ContainsInstancedReference)
+	bool                                          CallFunc_IsServer_ReturnValue_1;                   // 0x0678(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_679[0x7];                                      // 0x0679(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0680(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0688(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_689[0x7];                                      // 0x0689(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayAbilityTargetDataHandle       CallFunc_AbilityTargetDataFromActor_ReturnValue;   // 0x0690(0x0028)()
+	TArray<struct FActiveGameplayEffectHandle>    CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue; // 0x06B8(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FName                                   K2Node_CustomEvent_NotifyName_18;                  // 0x06C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortWeapon*                            CallFunc_GetCurrentSourceWeapon_ReturnValue;       // 0x06D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGuid                                  CallFunc_GetInventoryGUID_ReturnValue;             // 0x06D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerController*                  CallFunc_GetFortPlayerControllerFromActor_ReturnValue; // 0x06E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_K2_RemoveItemFromPlayerByGuid_ReturnValue; // 0x06F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6F4[0x4];                                      // 0x06F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue; // 0x06F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_20;           // 0x0700(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_711[0x7];                                      // 0x0711(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1; // 0x0718(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetLocalMagazineAmmoCount_ReturnValue;    // 0x0720(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0724(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0725(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_726[0x2];                                      // 0x0726(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   K2Node_CustomEvent_NotifyName_19;                  // 0x0728(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_21;           // 0x0730(0x0010)(ZeroConstructor, NoDestructor)
+	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_2; // 0x0740(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0748(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_749[0x3];                                      // 0x0749(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   K2Node_CustomEvent_NotifyName_16;                  // 0x074C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_754[0x4];                                      // 0x0754(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortWeapon*                            CallFunc_GetCurrentSourceWeapon_ReturnValue_1;     // 0x0758(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0760(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue;    // 0x0768(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortAbilitySystemComponent*            K2Node_DynamicCast_AsFort_Ability_System_Component; // 0x0770(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0778(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_779[0x7];                                      // 0x0779(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_Hookgun_Athena_C*                    K2Node_DynamicCast_AsB_Hookgun_Athena;             // 0x0780(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0788(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_789[0x3];                                      // 0x0789(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_22;           // 0x078C(0x0010)(ZeroConstructor, NoDestructor)
+	uint8                                         Pad_79C[0x4];                                      // 0x079C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetVehicleActor_ReturnValue;              // 0x07A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortAthenaJackalVehicle*               K2Node_DynamicCast_AsFort_Athena_Jackal_Vehicle;   // 0x07A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x07B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7B1[0x7];                                      // 0x07B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_3; // 0x07B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x07C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x07C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7C2[0x6];                                      // 0x07C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           CallFunc_GetCurrentMontage_ReturnValue;            // 0x07C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           CallFunc_GetCurrentMontage_ReturnValue_1;          // 0x07D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x07D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x07D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7DA[0x2];                                      // 0x07DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   K2Node_CustomEvent_NotifyName_17;                  // 0x07DC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class FName NotifyName)>       K2Node_CreateDelegate_OutputDelegate_23;           // 0x07E4(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          CallFunc_K2_CommitAbility_ReturnValue;             // 0x07F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7F5[0x3];                                      // 0x07F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x07F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEvaluateCurveTableResult                     CallFunc_EvaluateCurveTableRow_OutResult;          // 0x07FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7FD[0x3];                                      // 0x07FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_EvaluateCurveTableRow_OutXY;              // 0x0800(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0804(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_805[0x3];                                      // 0x0805(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_WaitGameplayEvent*         CallFunc_WaitGameplayEvent_ReturnValue;            // 0x0808(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0810(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0811(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_812[0x6];                                      // 0x0812(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_WaitGameplayEvent*         CallFunc_WaitGameplayEvent_ReturnValue_1;          // 0x0818(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAbilityTask_WaitGameplayEvent*         CallFunc_WaitGameplayEvent_ReturnValue_2;          // 0x0820(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0828(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0829(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy) == 0x000008, "Wrong alignment on GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy");
-static_assert(sizeof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy) == 0x000680, "Wrong size on GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, EntryPoint) == 0x000000, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::EntryPoint' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_15) == 0x000004, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_15' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate) == 0x00000C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, Temp_name_Variable) == 0x00001C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_1) == 0x000024, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_Payload_1) == 0x000038, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_Payload_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, Temp_struct_Variable) == 0x0000E8, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_WaitGameplayEvent_ReturnValue) == 0x000198, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_WaitGameplayEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_IsValid_ReturnValue) == 0x0001A0, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_DynamicCast_AsB_Prj_Hook_Athena) == 0x0001A8, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_DynamicCast_AsB_Prj_Hook_Athena' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_DynamicCast_bSuccess) == 0x0001B0, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_2) == 0x0001B4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_14) == 0x0001C4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_14' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_PickGrappleMontage_SectionName) == 0x0001CC, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_PickGrappleMontage_SectionName' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_13) == 0x0001D4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_13' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_3) == 0x0001DC, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_12) == 0x0001EC, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_12' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_4) == 0x0001F4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_11) == 0x000204, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_11' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_5) == 0x00020C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_10) == 0x00021C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_10' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_6) == 0x000224, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, Temp_name_Variable_1) == 0x000234, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::Temp_name_Variable_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_7) == 0x00023C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_Payload) == 0x000250, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_Payload' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, Temp_struct_Variable_1) == 0x000300, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_WaitGameplayEvent_ReturnValue_1) == 0x0003B0, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_WaitGameplayEvent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_IsValid_ReturnValue_1) == 0x0003B8, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_8) == 0x0003BC, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_9) == 0x0003CC, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_9' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_8) == 0x0003D4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_8' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_9) == 0x0003DC, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_7) == 0x0003EC, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_7' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_10) == 0x0003F4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_6) == 0x000404, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_6' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_11) == 0x00040C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_5) == 0x00041C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_5' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_12) == 0x000424, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, Temp_name_Variable_2) == 0x000434, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::Temp_name_Variable_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_13) == 0x00043C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_4) == 0x00044C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_4' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_3) == 0x000454, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_3' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_14) == 0x00045C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_2) == 0x00046C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_15) == 0x000474, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_1) == 0x000484, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_16) == 0x00048C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName) == 0x00049C, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_17) == 0x0004A4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, Temp_name_Variable_3) == 0x0004B4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::Temp_name_Variable_3' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_16) == 0x0004BC, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_16' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, Temp_bool_IsClosed_Variable) == 0x0004C4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, Temp_bool_Has_Been_Initd_Variable) == 0x0004C5, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_K2_CommitAbility_ReturnValue) == 0x0004C6, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_K2_CommitAbility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_GetCurrentSourceWeapon_ReturnValue) == 0x0004C8, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_GetCurrentSourceWeapon_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_GetInventoryGUID_ReturnValue) == 0x0004D0, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_GetInventoryGUID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_GetFortPlayerControllerFromActor_ReturnValue) == 0x0004E0, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_GetFortPlayerControllerFromActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_K2_RemoveItemFromPlayerByGuid_ReturnValue) == 0x0004E8, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_K2_RemoveItemFromPlayerByGuid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_18) == 0x0004EC, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_19) == 0x0004FC, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_19' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue) == 0x000508, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_IsValid_ReturnValue_2) == 0x000510, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_GetActorInfo_ReturnValue) == 0x000518, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_GetActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1) == 0x000558, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_DynamicCast_AsFort_Player_Pawn) == 0x000560, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_DynamicCast_AsFort_Player_Pawn' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_DynamicCast_bSuccess_1) == 0x000568, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_AbilityTargetDataFromActor_ReturnValue) == 0x000570, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_AbilityTargetDataFromActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue) == 0x000598, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_IsValid_ReturnValue_3) == 0x0005A8, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_GetLocalMagazineAmmoCount_ReturnValue) == 0x0005AC, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_GetLocalMagazineAmmoCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x0005B0, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_19) == 0x0005B4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_20) == 0x0005C4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_20' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_2) == 0x0005D8, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_IsValid_ReturnValue_4) == 0x0005E0, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_17) == 0x0005E4, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_17' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_GetCurrentSourceWeapon_ReturnValue_1) == 0x0005F0, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_GetCurrentSourceWeapon_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_SpawnEmitterAttached_ReturnValue) == 0x0005F8, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_SpawnEmitterAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_GetAbilitySystemComponent_ReturnValue) == 0x000600, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_GetAbilitySystemComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_DynamicCast_AsFort_Ability_System_Component) == 0x000608, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_DynamicCast_AsFort_Ability_System_Component' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_DynamicCast_bSuccess_2) == 0x000610, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_DynamicCast_AsB_Hookgun_Athena) == 0x000618, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_DynamicCast_AsB_Hookgun_Athena' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_DynamicCast_bSuccess_3) == 0x000620, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CreateDelegate_OutputDelegate_21) == 0x000624, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CreateDelegate_OutputDelegate_21' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_GetVehicle_ReturnValue) == 0x000638, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_GetVehicle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_DynamicCast_AsFort_Athena_Jackal_Vehicle) == 0x000640, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_DynamicCast_AsFort_Athena_Jackal_Vehicle' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_DynamicCast_bSuccess_4) == 0x000648, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_3) == 0x000650, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_Not_PreBool_ReturnValue) == 0x000658, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_IsValid_ReturnValue_5) == 0x000659, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_GetCurrentMontage_ReturnValue) == 0x000660, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_GetCurrentMontage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_GetCurrentMontage_ReturnValue_1) == 0x000668, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_GetCurrentMontage_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000670, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x000671, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy, K2Node_CustomEvent_NotifyName_18) == 0x000674, "Member 'GA_Athena_HookDestroy_C_ExecuteUbergraph_GA_Athena_HookDestroy::K2Node_CustomEvent_NotifyName_18' has a wrong offset!");
+
+// Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.EventReceived_1B71851D49048B6433DA75B0D6007B6E
+// 0x00B0 (0x00B0 - 0x0000)
+struct GA_Athena_HookDestroy_C_EventReceived_1B71851D49048B6433DA75B0D6007B6E final
+{
+public:
+	struct FGameplayEventData                     Payload;                                           // 0x0000(0x00B0)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnCompleted_7CDAB77949F908D1F388AB845AE6C282
 // 0x0008 (0x0008 - 0x0000)
@@ -244,9 +174,6 @@ struct GA_Athena_HookDestroy_C_OnCompleted_7CDAB77949F908D1F388AB845AE6C282 fina
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnCompleted_7CDAB77949F908D1F388AB845AE6C282) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnCompleted_7CDAB77949F908D1F388AB845AE6C282");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnCompleted_7CDAB77949F908D1F388AB845AE6C282) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnCompleted_7CDAB77949F908D1F388AB845AE6C282");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnCompleted_7CDAB77949F908D1F388AB845AE6C282, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnCompleted_7CDAB77949F908D1F388AB845AE6C282::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnBlendOut_7CDAB77949F908D1F388AB845AE6C282
 // 0x0008 (0x0008 - 0x0000)
@@ -255,9 +182,6 @@ struct GA_Athena_HookDestroy_C_OnBlendOut_7CDAB77949F908D1F388AB845AE6C282 final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnBlendOut_7CDAB77949F908D1F388AB845AE6C282) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnBlendOut_7CDAB77949F908D1F388AB845AE6C282");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnBlendOut_7CDAB77949F908D1F388AB845AE6C282) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnBlendOut_7CDAB77949F908D1F388AB845AE6C282");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnBlendOut_7CDAB77949F908D1F388AB845AE6C282, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnBlendOut_7CDAB77949F908D1F388AB845AE6C282::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnInterrupted_7CDAB77949F908D1F388AB845AE6C282
 // 0x0008 (0x0008 - 0x0000)
@@ -266,9 +190,6 @@ struct GA_Athena_HookDestroy_C_OnInterrupted_7CDAB77949F908D1F388AB845AE6C282 fi
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnInterrupted_7CDAB77949F908D1F388AB845AE6C282) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnInterrupted_7CDAB77949F908D1F388AB845AE6C282");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnInterrupted_7CDAB77949F908D1F388AB845AE6C282) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnInterrupted_7CDAB77949F908D1F388AB845AE6C282");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnInterrupted_7CDAB77949F908D1F388AB845AE6C282, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnInterrupted_7CDAB77949F908D1F388AB845AE6C282::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnNotifyBegin_7CDAB77949F908D1F388AB845AE6C282
 // 0x0008 (0x0008 - 0x0000)
@@ -277,9 +198,6 @@ struct GA_Athena_HookDestroy_C_OnNotifyBegin_7CDAB77949F908D1F388AB845AE6C282 fi
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnNotifyBegin_7CDAB77949F908D1F388AB845AE6C282) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnNotifyBegin_7CDAB77949F908D1F388AB845AE6C282");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnNotifyBegin_7CDAB77949F908D1F388AB845AE6C282) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnNotifyBegin_7CDAB77949F908D1F388AB845AE6C282");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnNotifyBegin_7CDAB77949F908D1F388AB845AE6C282, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnNotifyBegin_7CDAB77949F908D1F388AB845AE6C282::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnNotifyEnd_7CDAB77949F908D1F388AB845AE6C282
 // 0x0008 (0x0008 - 0x0000)
@@ -288,9 +206,6 @@ struct GA_Athena_HookDestroy_C_OnNotifyEnd_7CDAB77949F908D1F388AB845AE6C282 fina
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnNotifyEnd_7CDAB77949F908D1F388AB845AE6C282) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnNotifyEnd_7CDAB77949F908D1F388AB845AE6C282");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnNotifyEnd_7CDAB77949F908D1F388AB845AE6C282) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnNotifyEnd_7CDAB77949F908D1F388AB845AE6C282");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnNotifyEnd_7CDAB77949F908D1F388AB845AE6C282, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnNotifyEnd_7CDAB77949F908D1F388AB845AE6C282::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnCompleted_28C962BC449D96C668F3C4BE36E6CA62
 // 0x0008 (0x0008 - 0x0000)
@@ -299,9 +214,6 @@ struct GA_Athena_HookDestroy_C_OnCompleted_28C962BC449D96C668F3C4BE36E6CA62 fina
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnCompleted_28C962BC449D96C668F3C4BE36E6CA62) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnCompleted_28C962BC449D96C668F3C4BE36E6CA62");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnCompleted_28C962BC449D96C668F3C4BE36E6CA62) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnCompleted_28C962BC449D96C668F3C4BE36E6CA62");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnCompleted_28C962BC449D96C668F3C4BE36E6CA62, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnCompleted_28C962BC449D96C668F3C4BE36E6CA62::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnBlendOut_28C962BC449D96C668F3C4BE36E6CA62
 // 0x0008 (0x0008 - 0x0000)
@@ -310,9 +222,6 @@ struct GA_Athena_HookDestroy_C_OnBlendOut_28C962BC449D96C668F3C4BE36E6CA62 final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnBlendOut_28C962BC449D96C668F3C4BE36E6CA62) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnBlendOut_28C962BC449D96C668F3C4BE36E6CA62");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnBlendOut_28C962BC449D96C668F3C4BE36E6CA62) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnBlendOut_28C962BC449D96C668F3C4BE36E6CA62");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnBlendOut_28C962BC449D96C668F3C4BE36E6CA62, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnBlendOut_28C962BC449D96C668F3C4BE36E6CA62::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnInterrupted_28C962BC449D96C668F3C4BE36E6CA62
 // 0x0008 (0x0008 - 0x0000)
@@ -321,9 +230,6 @@ struct GA_Athena_HookDestroy_C_OnInterrupted_28C962BC449D96C668F3C4BE36E6CA62 fi
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnInterrupted_28C962BC449D96C668F3C4BE36E6CA62) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnInterrupted_28C962BC449D96C668F3C4BE36E6CA62");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnInterrupted_28C962BC449D96C668F3C4BE36E6CA62) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnInterrupted_28C962BC449D96C668F3C4BE36E6CA62");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnInterrupted_28C962BC449D96C668F3C4BE36E6CA62, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnInterrupted_28C962BC449D96C668F3C4BE36E6CA62::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnNotifyBegin_28C962BC449D96C668F3C4BE36E6CA62
 // 0x0008 (0x0008 - 0x0000)
@@ -332,9 +238,6 @@ struct GA_Athena_HookDestroy_C_OnNotifyBegin_28C962BC449D96C668F3C4BE36E6CA62 fi
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnNotifyBegin_28C962BC449D96C668F3C4BE36E6CA62) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnNotifyBegin_28C962BC449D96C668F3C4BE36E6CA62");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnNotifyBegin_28C962BC449D96C668F3C4BE36E6CA62) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnNotifyBegin_28C962BC449D96C668F3C4BE36E6CA62");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnNotifyBegin_28C962BC449D96C668F3C4BE36E6CA62, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnNotifyBegin_28C962BC449D96C668F3C4BE36E6CA62::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnNotifyEnd_28C962BC449D96C668F3C4BE36E6CA62
 // 0x0008 (0x0008 - 0x0000)
@@ -343,9 +246,6 @@ struct GA_Athena_HookDestroy_C_OnNotifyEnd_28C962BC449D96C668F3C4BE36E6CA62 fina
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnNotifyEnd_28C962BC449D96C668F3C4BE36E6CA62) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnNotifyEnd_28C962BC449D96C668F3C4BE36E6CA62");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnNotifyEnd_28C962BC449D96C668F3C4BE36E6CA62) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnNotifyEnd_28C962BC449D96C668F3C4BE36E6CA62");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnNotifyEnd_28C962BC449D96C668F3C4BE36E6CA62, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnNotifyEnd_28C962BC449D96C668F3C4BE36E6CA62::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.EventReceived_3FEADD91456C78D266936684DE918289
 // 0x00B0 (0x00B0 - 0x0000)
@@ -354,9 +254,6 @@ struct GA_Athena_HookDestroy_C_EventReceived_3FEADD91456C78D266936684DE918289 fi
 public:
 	struct FGameplayEventData                     Payload;                                           // 0x0000(0x00B0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_EventReceived_3FEADD91456C78D266936684DE918289) == 0x000008, "Wrong alignment on GA_Athena_HookDestroy_C_EventReceived_3FEADD91456C78D266936684DE918289");
-static_assert(sizeof(GA_Athena_HookDestroy_C_EventReceived_3FEADD91456C78D266936684DE918289) == 0x0000B0, "Wrong size on GA_Athena_HookDestroy_C_EventReceived_3FEADD91456C78D266936684DE918289");
-static_assert(offsetof(GA_Athena_HookDestroy_C_EventReceived_3FEADD91456C78D266936684DE918289, Payload) == 0x000000, "Member 'GA_Athena_HookDestroy_C_EventReceived_3FEADD91456C78D266936684DE918289::Payload' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnCompleted_556AB31A412041E7414C21AA5F4A70CC
 // 0x0008 (0x0008 - 0x0000)
@@ -365,9 +262,6 @@ struct GA_Athena_HookDestroy_C_OnCompleted_556AB31A412041E7414C21AA5F4A70CC fina
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnCompleted_556AB31A412041E7414C21AA5F4A70CC) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnCompleted_556AB31A412041E7414C21AA5F4A70CC");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnCompleted_556AB31A412041E7414C21AA5F4A70CC) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnCompleted_556AB31A412041E7414C21AA5F4A70CC");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnCompleted_556AB31A412041E7414C21AA5F4A70CC, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnCompleted_556AB31A412041E7414C21AA5F4A70CC::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnBlendOut_556AB31A412041E7414C21AA5F4A70CC
 // 0x0008 (0x0008 - 0x0000)
@@ -376,9 +270,6 @@ struct GA_Athena_HookDestroy_C_OnBlendOut_556AB31A412041E7414C21AA5F4A70CC final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnBlendOut_556AB31A412041E7414C21AA5F4A70CC) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnBlendOut_556AB31A412041E7414C21AA5F4A70CC");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnBlendOut_556AB31A412041E7414C21AA5F4A70CC) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnBlendOut_556AB31A412041E7414C21AA5F4A70CC");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnBlendOut_556AB31A412041E7414C21AA5F4A70CC, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnBlendOut_556AB31A412041E7414C21AA5F4A70CC::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnInterrupted_556AB31A412041E7414C21AA5F4A70CC
 // 0x0008 (0x0008 - 0x0000)
@@ -387,9 +278,6 @@ struct GA_Athena_HookDestroy_C_OnInterrupted_556AB31A412041E7414C21AA5F4A70CC fi
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnInterrupted_556AB31A412041E7414C21AA5F4A70CC) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnInterrupted_556AB31A412041E7414C21AA5F4A70CC");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnInterrupted_556AB31A412041E7414C21AA5F4A70CC) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnInterrupted_556AB31A412041E7414C21AA5F4A70CC");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnInterrupted_556AB31A412041E7414C21AA5F4A70CC, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnInterrupted_556AB31A412041E7414C21AA5F4A70CC::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnNotifyBegin_556AB31A412041E7414C21AA5F4A70CC
 // 0x0008 (0x0008 - 0x0000)
@@ -398,9 +286,6 @@ struct GA_Athena_HookDestroy_C_OnNotifyBegin_556AB31A412041E7414C21AA5F4A70CC fi
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnNotifyBegin_556AB31A412041E7414C21AA5F4A70CC) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnNotifyBegin_556AB31A412041E7414C21AA5F4A70CC");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnNotifyBegin_556AB31A412041E7414C21AA5F4A70CC) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnNotifyBegin_556AB31A412041E7414C21AA5F4A70CC");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnNotifyBegin_556AB31A412041E7414C21AA5F4A70CC, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnNotifyBegin_556AB31A412041E7414C21AA5F4A70CC::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnNotifyEnd_556AB31A412041E7414C21AA5F4A70CC
 // 0x0008 (0x0008 - 0x0000)
@@ -409,9 +294,6 @@ struct GA_Athena_HookDestroy_C_OnNotifyEnd_556AB31A412041E7414C21AA5F4A70CC fina
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnNotifyEnd_556AB31A412041E7414C21AA5F4A70CC) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnNotifyEnd_556AB31A412041E7414C21AA5F4A70CC");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnNotifyEnd_556AB31A412041E7414C21AA5F4A70CC) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnNotifyEnd_556AB31A412041E7414C21AA5F4A70CC");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnNotifyEnd_556AB31A412041E7414C21AA5F4A70CC, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnNotifyEnd_556AB31A412041E7414C21AA5F4A70CC::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.EventReceived_056D82C6464BB95E4DA717BEB307DB74
 // 0x00B0 (0x00B0 - 0x0000)
@@ -420,9 +302,6 @@ struct GA_Athena_HookDestroy_C_EventReceived_056D82C6464BB95E4DA717BEB307DB74 fi
 public:
 	struct FGameplayEventData                     Payload;                                           // 0x0000(0x00B0)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_EventReceived_056D82C6464BB95E4DA717BEB307DB74) == 0x000008, "Wrong alignment on GA_Athena_HookDestroy_C_EventReceived_056D82C6464BB95E4DA717BEB307DB74");
-static_assert(sizeof(GA_Athena_HookDestroy_C_EventReceived_056D82C6464BB95E4DA717BEB307DB74) == 0x0000B0, "Wrong size on GA_Athena_HookDestroy_C_EventReceived_056D82C6464BB95E4DA717BEB307DB74");
-static_assert(offsetof(GA_Athena_HookDestroy_C_EventReceived_056D82C6464BB95E4DA717BEB307DB74, Payload) == 0x000000, "Member 'GA_Athena_HookDestroy_C_EventReceived_056D82C6464BB95E4DA717BEB307DB74::Payload' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnCompleted_CB1C85E64FAE092AD81A04933C6C3263
 // 0x0008 (0x0008 - 0x0000)
@@ -431,9 +310,6 @@ struct GA_Athena_HookDestroy_C_OnCompleted_CB1C85E64FAE092AD81A04933C6C3263 fina
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnCompleted_CB1C85E64FAE092AD81A04933C6C3263) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnCompleted_CB1C85E64FAE092AD81A04933C6C3263");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnCompleted_CB1C85E64FAE092AD81A04933C6C3263) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnCompleted_CB1C85E64FAE092AD81A04933C6C3263");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnCompleted_CB1C85E64FAE092AD81A04933C6C3263, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnCompleted_CB1C85E64FAE092AD81A04933C6C3263::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnBlendOut_CB1C85E64FAE092AD81A04933C6C3263
 // 0x0008 (0x0008 - 0x0000)
@@ -442,9 +318,6 @@ struct GA_Athena_HookDestroy_C_OnBlendOut_CB1C85E64FAE092AD81A04933C6C3263 final
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnBlendOut_CB1C85E64FAE092AD81A04933C6C3263) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnBlendOut_CB1C85E64FAE092AD81A04933C6C3263");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnBlendOut_CB1C85E64FAE092AD81A04933C6C3263) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnBlendOut_CB1C85E64FAE092AD81A04933C6C3263");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnBlendOut_CB1C85E64FAE092AD81A04933C6C3263, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnBlendOut_CB1C85E64FAE092AD81A04933C6C3263::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnInterrupted_CB1C85E64FAE092AD81A04933C6C3263
 // 0x0008 (0x0008 - 0x0000)
@@ -453,9 +326,6 @@ struct GA_Athena_HookDestroy_C_OnInterrupted_CB1C85E64FAE092AD81A04933C6C3263 fi
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnInterrupted_CB1C85E64FAE092AD81A04933C6C3263) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnInterrupted_CB1C85E64FAE092AD81A04933C6C3263");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnInterrupted_CB1C85E64FAE092AD81A04933C6C3263) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnInterrupted_CB1C85E64FAE092AD81A04933C6C3263");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnInterrupted_CB1C85E64FAE092AD81A04933C6C3263, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnInterrupted_CB1C85E64FAE092AD81A04933C6C3263::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnNotifyBegin_CB1C85E64FAE092AD81A04933C6C3263
 // 0x0008 (0x0008 - 0x0000)
@@ -464,9 +334,6 @@ struct GA_Athena_HookDestroy_C_OnNotifyBegin_CB1C85E64FAE092AD81A04933C6C3263 fi
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnNotifyBegin_CB1C85E64FAE092AD81A04933C6C3263) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnNotifyBegin_CB1C85E64FAE092AD81A04933C6C3263");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnNotifyBegin_CB1C85E64FAE092AD81A04933C6C3263) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnNotifyBegin_CB1C85E64FAE092AD81A04933C6C3263");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnNotifyBegin_CB1C85E64FAE092AD81A04933C6C3263, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnNotifyBegin_CB1C85E64FAE092AD81A04933C6C3263::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.OnNotifyEnd_CB1C85E64FAE092AD81A04933C6C3263
 // 0x0008 (0x0008 - 0x0000)
@@ -475,9 +342,6 @@ struct GA_Athena_HookDestroy_C_OnNotifyEnd_CB1C85E64FAE092AD81A04933C6C3263 fina
 public:
 	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_OnNotifyEnd_CB1C85E64FAE092AD81A04933C6C3263) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_OnNotifyEnd_CB1C85E64FAE092AD81A04933C6C3263");
-static_assert(sizeof(GA_Athena_HookDestroy_C_OnNotifyEnd_CB1C85E64FAE092AD81A04933C6C3263) == 0x000008, "Wrong size on GA_Athena_HookDestroy_C_OnNotifyEnd_CB1C85E64FAE092AD81A04933C6C3263");
-static_assert(offsetof(GA_Athena_HookDestroy_C_OnNotifyEnd_CB1C85E64FAE092AD81A04933C6C3263, NotifyName) == 0x000000, "Member 'GA_Athena_HookDestroy_C_OnNotifyEnd_CB1C85E64FAE092AD81A04933C6C3263::NotifyName' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.PickGrappleMontage
 // 0x0038 (0x0038 - 0x0000)
@@ -497,20 +361,6 @@ public:
 	bool                                          CallFunc_GreaterEqual_FloatFloat_ReturnValue;      // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0037(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_PickGrappleMontage) == 0x000004, "Wrong alignment on GA_Athena_HookDestroy_C_PickGrappleMontage");
-static_assert(sizeof(GA_Athena_HookDestroy_C_PickGrappleMontage) == 0x000038, "Wrong size on GA_Athena_HookDestroy_C_PickGrappleMontage");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, PitchAngle) == 0x000000, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::PitchAngle' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, SectionName) == 0x000004, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::SectionName' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, CallFunc_ClampAngle_ReturnValue) == 0x000010, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::CallFunc_ClampAngle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, Temp_int_Loop_Counter_Variable) == 0x000014, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, CallFunc_Add_IntInt_ReturnValue) == 0x000018, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, CallFunc_Array_Get_Item) == 0x00001C, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, CallFunc_Less_IntInt_ReturnValue) == 0x000034, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000035, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000036, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_PickGrappleMontage, CallFunc_BooleanAND_ReturnValue) == 0x000037, "Member 'GA_Athena_HookDestroy_C_PickGrappleMontage::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function GA_Athena_HookDestroy.GA_Athena_HookDestroy_C.K2_OnEndAbility
 // 0x0020 (0x0020 - 0x0000)
@@ -523,12 +373,6 @@ public:
 	class UFortAbilitySystemComponent*            K2Node_DynamicCast_AsFort_Ability_System_Component; // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GA_Athena_HookDestroy_C_K2_OnEndAbility) == 0x000008, "Wrong alignment on GA_Athena_HookDestroy_C_K2_OnEndAbility");
-static_assert(sizeof(GA_Athena_HookDestroy_C_K2_OnEndAbility) == 0x000020, "Wrong size on GA_Athena_HookDestroy_C_K2_OnEndAbility");
-static_assert(offsetof(GA_Athena_HookDestroy_C_K2_OnEndAbility, bWasCancelled) == 0x000000, "Member 'GA_Athena_HookDestroy_C_K2_OnEndAbility::bWasCancelled' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_K2_OnEndAbility, CallFunc_GetAbilitySystemComponent_ReturnValue) == 0x000008, "Member 'GA_Athena_HookDestroy_C_K2_OnEndAbility::CallFunc_GetAbilitySystemComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_K2_OnEndAbility, K2Node_DynamicCast_AsFort_Ability_System_Component) == 0x000010, "Member 'GA_Athena_HookDestroy_C_K2_OnEndAbility::K2Node_DynamicCast_AsFort_Ability_System_Component' has a wrong offset!");
-static_assert(offsetof(GA_Athena_HookDestroy_C_K2_OnEndAbility, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GA_Athena_HookDestroy_C_K2_OnEndAbility::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 }
 

@@ -85,20 +85,6 @@ void UPlayerSurveyPanelContentsAnswerRatingWidget_C::HandleButtonFocused(int32 B
 }
 
 
-// Function PlayerSurveyPanelContentsAnswerRatingWidget.PlayerSurveyPanelContentsAnswerRatingWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UPlayerSurveyPanelContentsAnswerRatingWidget_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyPanelContentsAnswerRatingWidget_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PlayerSurveyPanelContentsAnswerRatingWidget.PlayerSurveyPanelContentsAnswerRatingWidget_C.HandleButtonClicked
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -133,34 +119,6 @@ void UPlayerSurveyPanelContentsAnswerRatingWidget_C::OnInitialized()
 }
 
 
-// Function PlayerSurveyPanelContentsAnswerRatingWidget.PlayerSurveyPanelContentsAnswerRatingWidget_C.UpdateText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UPlayerSurveyPanelContentsAnswerRatingWidget_C::UpdateText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyPanelContentsAnswerRatingWidget_C", "UpdateText");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerSurveyPanelContentsAnswerRatingWidget.PlayerSurveyPanelContentsAnswerRatingWidget_C.UpdateRatingButtons
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UPlayerSurveyPanelContentsAnswerRatingWidget_C::UpdateRatingButtons()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyPanelContentsAnswerRatingWidget_C", "UpdateRatingButtons");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function PlayerSurveyPanelContentsAnswerRatingWidget.PlayerSurveyPanelContentsAnswerRatingWidget_C.GetDefaultFocusedWidgetPostDummy
 // (Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -184,28 +142,8 @@ class UWidget* UPlayerSurveyPanelContentsAnswerRatingWidget_C::GetDefaultFocused
 }
 
 
-// Function PlayerSurveyPanelContentsAnswerRatingWidget.PlayerSurveyPanelContentsAnswerRatingWidget_C.HandlePlayerRequestAnswer
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   AnswerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UPlayerSurveyPanelContentsAnswerRatingWidget_C::HandlePlayerRequestAnswer(int32 AnswerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyPanelContentsAnswerRatingWidget_C", "HandlePlayerRequestAnswer");
-
-	Params::PlayerSurveyPanelContentsAnswerRatingWidget_C_HandlePlayerRequestAnswer Parms{};
-
-	Parms.AnswerIndex = AnswerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function PlayerSurveyPanelContentsAnswerRatingWidget.PlayerSurveyPanelContentsAnswerRatingWidget_C.GetDefaultFocusedWidget
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

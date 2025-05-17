@@ -52,9 +52,9 @@ void UBP_SurfaceTypeSoundComponent_C::Test_Delay()
 
 
 // Function BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.PlaySound
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Location_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Location_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UBP_SurfaceTypeSoundComponent_C::PlaySound(const struct FVector& Location_0)
 {
@@ -104,27 +104,6 @@ void UBP_SurfaceTypeSoundComponent_C::ActuallyPlaySound()
 		Func = Class->GetFunction("BP_SurfaceTypeSoundComponent_C", "ActuallyPlaySound");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.GetTimeDelayFromDistance
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// float                                   Delay                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_SurfaceTypeSoundComponent_C::GetTimeDelayFromDistance(float* Delay)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SurfaceTypeSoundComponent_C", "GetTimeDelayFromDistance");
-
-	Params::BP_SurfaceTypeSoundComponent_C_GetTimeDelayFromDistance Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Delay != nullptr)
-		*Delay = Parms.Delay;
 }
 
 }

@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SignInWidget.SignInWidget_C
-// 0x0030 (0x03C0 - 0x0390)
+// 0x0030 (0x04E0 - 0x04B0)
 class USignInWidget_C final : public UFortSignInWidget
 {
 public:
-	class UNamedSlot*                             ButtonSlot;                                        // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonLazyImage*                       CommonLazyImage_0;                                 // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           ContentBox;                                        // 0x03A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEmergencyNoticeWidget_C*               EmergencyNoticeWidget;                             // 0x03A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    LoginInputAction;                                  // 0x03B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class UNamedSlot*                             ButtonSlot;                                        // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonLazyImage*                       CommonLazyImage_0;                                 // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           ContentBox;                                        // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEmergencyNoticeWidget_C*               EmergencyNoticeWidget;                             // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    LoginInputAction;                                  // 0x04D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
 	static class UClass* StaticClass()
@@ -38,13 +38,6 @@ public:
 		return GetDefaultObjImpl<USignInWidget_C>();
 	}
 };
-static_assert(alignof(USignInWidget_C) == 0x000008, "Wrong alignment on USignInWidget_C");
-static_assert(sizeof(USignInWidget_C) == 0x0003C0, "Wrong size on USignInWidget_C");
-static_assert(offsetof(USignInWidget_C, ButtonSlot) == 0x000390, "Member 'USignInWidget_C::ButtonSlot' has a wrong offset!");
-static_assert(offsetof(USignInWidget_C, CommonLazyImage_0) == 0x000398, "Member 'USignInWidget_C::CommonLazyImage_0' has a wrong offset!");
-static_assert(offsetof(USignInWidget_C, ContentBox) == 0x0003A0, "Member 'USignInWidget_C::ContentBox' has a wrong offset!");
-static_assert(offsetof(USignInWidget_C, EmergencyNoticeWidget) == 0x0003A8, "Member 'USignInWidget_C::EmergencyNoticeWidget' has a wrong offset!");
-static_assert(offsetof(USignInWidget_C, LoginInputAction) == 0x0003B0, "Member 'USignInWidget_C::LoginInputAction' has a wrong offset!");
 
 }
 

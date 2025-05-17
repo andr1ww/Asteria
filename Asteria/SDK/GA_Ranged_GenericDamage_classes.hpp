@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Ranged_GenericDamage.GA_Ranged_GenericDamage_C
-// 0x0010 (0x0988 - 0x0978)
+// 0x0010 (0x0AF0 - 0x0AE0)
 class UGA_Ranged_GenericDamage_C : public UFortGameplayAbility_RangedWeapon
 {
 public:
-	struct FGameplayTag                           GT_EventWeaponFire;                                // 0x0978(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          ManualFireEvent;                                   // 0x0980(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FGameplayTag                           GT_EventWeaponFire;                                // 0x0AE0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          ManualFireEvent;                                   // 0x0AE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void K2_CommitExecute();
@@ -39,10 +39,6 @@ public:
 		return GetDefaultObjImpl<UGA_Ranged_GenericDamage_C>();
 	}
 };
-static_assert(alignof(UGA_Ranged_GenericDamage_C) == 0x000008, "Wrong alignment on UGA_Ranged_GenericDamage_C");
-static_assert(sizeof(UGA_Ranged_GenericDamage_C) == 0x000988, "Wrong size on UGA_Ranged_GenericDamage_C");
-static_assert(offsetof(UGA_Ranged_GenericDamage_C, GT_EventWeaponFire) == 0x000978, "Member 'UGA_Ranged_GenericDamage_C::GT_EventWeaponFire' has a wrong offset!");
-static_assert(offsetof(UGA_Ranged_GenericDamage_C, ManualFireEvent) == 0x000980, "Member 'UGA_Ranged_GenericDamage_C::ManualFireEvent' has a wrong offset!");
 
 }
 

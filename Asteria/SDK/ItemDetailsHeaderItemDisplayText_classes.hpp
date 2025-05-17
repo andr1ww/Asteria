@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
@@ -20,12 +19,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemDetailsHeaderItemDisplayText.ItemDetailsHeaderItemDisplayText_C
-// 0x0010 (0x0290 - 0x0280)
+// 0x0010 (0x02F0 - 0x02E0)
 class UItemDetailsHeaderItemDisplayText_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       ItemDisplayName;                                   // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       ItemDisplayName;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void GetDisplayName(class FText* DisplayName);
@@ -43,10 +42,6 @@ public:
 		return GetDefaultObjImpl<UItemDetailsHeaderItemDisplayText_C>();
 	}
 };
-static_assert(alignof(UItemDetailsHeaderItemDisplayText_C) == 0x000008, "Wrong alignment on UItemDetailsHeaderItemDisplayText_C");
-static_assert(sizeof(UItemDetailsHeaderItemDisplayText_C) == 0x000290, "Wrong size on UItemDetailsHeaderItemDisplayText_C");
-static_assert(offsetof(UItemDetailsHeaderItemDisplayText_C, UberGraphFrame) == 0x000280, "Member 'UItemDetailsHeaderItemDisplayText_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UItemDetailsHeaderItemDisplayText_C, ItemDisplayName) == 0x000288, "Member 'UItemDetailsHeaderItemDisplayText_C::ItemDisplayName' has a wrong offset!");
 
 }
 

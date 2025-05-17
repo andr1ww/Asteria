@@ -14,27 +14,30 @@
 namespace SDK::Params
 {
 
-// Function AthenaLockedStyleNotification.AthenaLockedStyleNotification_C.SetLockedStyleDescription
-// 0x0018 (0x0018 - 0x0000)
-struct AthenaLockedStyleNotification_C_SetLockedStyleDescription final
+// Function AthenaLockedStyleNotification.AthenaLockedStyleNotification_C.OnUnlockingInfoSet
+// 0x0001 (0x0001 - 0x0000)
+struct AthenaLockedStyleNotification_C_OnUnlockingInfoSet final
 {
 public:
-	class FText                                   LockedStyleDescription;                            // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          bShowProgression;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(AthenaLockedStyleNotification_C_SetLockedStyleDescription) == 0x000008, "Wrong alignment on AthenaLockedStyleNotification_C_SetLockedStyleDescription");
-static_assert(sizeof(AthenaLockedStyleNotification_C_SetLockedStyleDescription) == 0x000018, "Wrong size on AthenaLockedStyleNotification_C_SetLockedStyleDescription");
-static_assert(offsetof(AthenaLockedStyleNotification_C_SetLockedStyleDescription, LockedStyleDescription) == 0x000000, "Member 'AthenaLockedStyleNotification_C_SetLockedStyleDescription::LockedStyleDescription' has a wrong offset!");
 
 // Function AthenaLockedStyleNotification.AthenaLockedStyleNotification_C.ExecuteUbergraph_AthenaLockedStyleNotification
-// 0x0004 (0x0004 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct AthenaLockedStyleNotification_C_ExecuteUbergraph_AthenaLockedStyleNotification final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          K2Node_Event_bShowProgression;                     // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0030(0x0010)(ZeroConstructor, NoDestructor)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(AthenaLockedStyleNotification_C_ExecuteUbergraph_AthenaLockedStyleNotification) == 0x000004, "Wrong alignment on AthenaLockedStyleNotification_C_ExecuteUbergraph_AthenaLockedStyleNotification");
-static_assert(sizeof(AthenaLockedStyleNotification_C_ExecuteUbergraph_AthenaLockedStyleNotification) == 0x000004, "Wrong size on AthenaLockedStyleNotification_C_ExecuteUbergraph_AthenaLockedStyleNotification");
-static_assert(offsetof(AthenaLockedStyleNotification_C_ExecuteUbergraph_AthenaLockedStyleNotification, EntryPoint) == 0x000000, "Member 'AthenaLockedStyleNotification_C_ExecuteUbergraph_AthenaLockedStyleNotification::EntryPoint' has a wrong offset!");
 
 }
 

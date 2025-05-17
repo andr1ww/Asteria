@@ -11,6 +11,7 @@
 #include <string>
 #include <stdexcept>
 #include <iostream>
+#include "UtfN.hpp"
 
 namespace UC
 {	
@@ -225,6 +226,51 @@ namespace UC
 		inline const ValueType& Value() const { return Second; }
 	};
 
+	class FMemory
+	{
+	public:
+		static __forceinline void* InternalRealloc(void* _a1, __int64 _a2, unsigned int _a3) {
+			return ((void* (*)(void*, __int64, unsigned int)) (*(uint64_t*)(__readgsqword(0x60) + 0x10) + 0x340f390))(_a1, _a2, _a3);
+		}
+
+		template<typename T = void>
+		static inline T* Realloc(void* Ptr, uint64 Size, uint32 Alignment = 0x0)
+		{
+			return (T*)InternalRealloc(Ptr, Size, Alignment);
+		}
+
+		template<typename T>
+		static inline T* ReallocForType(void* Ptr, uint64 Count)
+		{
+			return (T*)InternalRealloc(Ptr, Count * sizeof(T), alignof(T));
+		}
+
+
+		template<typename T = void>
+		static inline T* Malloc(uint64 Size, uint32 Alignment = 0x0)
+		{
+			return Realloc<T>(nullptr, Size, Alignment);
+		}
+
+		template<typename T>
+		static inline T* MallocForType(uint64 Count)
+		{
+			return ReallocForType<T>(nullptr, Count);
+		}
+
+		static inline void Free(void* ptr)
+		{
+			Realloc(ptr, 0, 0);
+		}
+
+		template<typename T>
+		static inline void FreeForType(T* ptr)
+		{
+			ReallocForType<T>(ptr, 0);
+		}
+	};
+
+	
 	template<typename ArrayElementType>
 	class TArray
 	{
@@ -267,18 +313,44 @@ namespace UC
 		inline const ArrayElementType& GetUnsafe(int32 Index) const { return Data[Index]; }
 
 	public:
-		/* Adds to the array if there is still space for one more element */
-		inline bool Add(const ArrayElementType& Element)
+		inline void ResizeTo(int32_t NewMax)
 		{
-			if (GetSlack() <= 0)
-				return false;
-
-			Data[NumElements] = Element;
-			NumElements++;
-
-			return true;
+			Data = (ArrayElementType*)realloc(Data, (MaxElements = NewMax) * sizeof(ArrayElementType));
 		}
 
+		inline void Reserve(const int Num)
+		{
+			Data = (ArrayElementType*)FMemory::Realloc(Data, (MaxElements = Num + NumElements) * sizeof(ArrayElementType), 0);
+		}
+
+		inline ArrayElementType& Add(const ArrayElementType& Element)
+		{
+			Reserve(1);
+
+			Data[NumElements] = Element;
+			++NumElements;
+
+			return Data[NumElements - 1];
+		}
+
+		
+		template <class PT>
+ArrayElementType* Search(PT Predicate) {
+			for (auto& v : *this) {
+				if (Predicate(v)) return &v;
+			}
+			return nullptr;
+		}
+
+		template <class PT>
+int32_t SearchIndex(PT Predicate) {
+			for (int32_t i = 0; i < Num(); i++) {
+				if (Predicate(Data[i])) return i;
+			}
+			return -1;
+		}
+
+		
 		inline bool Remove(int32 Index)
 		{
 			if (!IsValidIndex(Index))
@@ -303,9 +375,19 @@ namespace UC
 				memset(Data, 0, NumElements * ElementSize);
 		}
 
+		inline void Free()
+		{
+			if (Data)
+				VirtualFree(Data, 0, MEM_RELEASE);
+			MaxElements = 0;
+			NumElements = 0;
+		}
+
 	public:
 		inline int32 Num() const { return NumElements; }
 		inline int32 Max() const { return MaxElements; }
+
+		inline const ArrayElementType* GetDataPtr() const { return Data; }
 
 		inline bool IsValidIndex(int32 Index) const { return Data && Index >= 0 && Index < NumElements; }
 
@@ -347,9 +429,7 @@ namespace UC
 		{
 			if (*this)
 			{
-				std::wstring WData(Data);
-#pragma warning(suppress: 4244)
-				return std::string(WData.begin(), WData.end());
+				return UtfN::Utf16StringToUtf8String<std::string>(Data, NumElements  - 1); // Exclude null-terminator
 			}
 
 			return "";
@@ -558,11 +638,8 @@ namespace UC
 	public:
 		using ElementType = TPair<KeyElementType, ValueElementType>;
 
-	private:
+	public:
 		TSet<ElementType> Elements;
-
-	private:
-		inline void VerifyIndex(int32 Index) const { if (!IsValidIndex(Index)) throw std::out_of_range("Index was out of range!"); }
 
 	public:
 		inline int32 NumAllocated() const { return Elements.NumAllocated(); }
@@ -585,20 +662,50 @@ namespace UC
 				if (Equals(It->Key(), Key))
 					return It;
 			}
-		
+
 			return end(*this);
 		}
 
+		template<typename NewValueType>
+		operator TMap<KeyElementType, NewValueType*>()
+		{
+			return *(TMap<KeyElementType, NewValueType*> *) this;
+		}
+
+		template<typename NewValueType>
+		operator TMap<KeyElementType, NewValueType*>() const
+		{
+			return *(TMap<KeyElementType, NewValueType*> *) this;
+		}
+
+		template <class PT>
+		ValueElementType* Search(PT Predicate) {
+			for (auto& [k, v] : *this) {
+				if (Predicate(k, v)) return &v;
+			}
+			return nullptr;
+		}
+
+
+		template <class PT>
+		KeyElementType* SearchForKey(PT Predicate) {
+			for (auto& [k, v] : *this) {
+				if (Predicate(k, v)) return &k;
+			}
+			return nullptr;
+		}
+
+
 	public:
-		inline       ElementType& operator[] (int32 Index)       { return Elements[Index]; }
+		inline       ElementType& operator[] (int32 Index) { return Elements[Index]; }
 		inline const ElementType& operator[] (int32 Index) const { return Elements[Index]; }
 
 		inline bool operator==(const TMap<KeyElementType, ValueElementType>& Other) const { return Elements == Other.Elements; }
 		inline bool operator!=(const TMap<KeyElementType, ValueElementType>& Other) const { return Elements != Other.Elements; }
 
 	public:
-		template<typename KeyType, typename ValueType> friend Iterators::TMapIterator<KeyType, ValueType> begin(const TMap& Map);
-		template<typename KeyType, typename ValueType> friend Iterators::TMapIterator<KeyType, ValueType> end  (const TMap& Map);
+		inline Iterators::TMapIterator<KeyElementType, ValueElementType> begin() { return Iterators::TMapIterator<KeyElementType, ValueElementType>(*this, GetAllocationFlags(), 0); }
+		inline Iterators::TMapIterator<KeyElementType, ValueElementType> end() { return Iterators::TMapIterator<KeyElementType, ValueElementType>(*this, GetAllocationFlags(), NumAllocated()); }
 	};
 
 	namespace Iterators

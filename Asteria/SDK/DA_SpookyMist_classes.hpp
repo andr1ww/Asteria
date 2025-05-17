@@ -10,35 +10,35 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass DA_SpookyMist.DA_SpookyMist_C
-// 0x0040 (0x09F0 - 0x09B0)
+// 0x0040 (0x0D80 - 0x0D40)
 class ADA_SpookyMist_C final : public AFortCustomizableAbilityDecoTool
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          CanCancelAbility;                                  // 0x09B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9B9[0x7];                                      // 0x09B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CanCancelTimer;                                    // 0x09C0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         CancelDelay;                                       // 0x09C8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x09E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          CanCancelAbility;                                  // 0x0D48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D49[0x7];                                      // 0x0D49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CanCancelTimer;                                    // 0x0D50(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         CancelDelay;                                       // 0x0D58(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0D78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_DA_SpookyMist(int32 EntryPoint);
-	void BPOnUnEquip();
-	void BPPressSecondaryFire(class AFortDecoHelper* FortDecoHelper);
-	void BPPressTrigger(class AFortDecoHelper* FortDecoHelper);
-	void BPReleaseSecondaryFire(class AFortDecoHelper* FortDecoHelper);
-	void CanCancel();
 	void On_DBNO();
 	void ReceiveBeginPlay();
+	void CanCancel();
+	void BPReleaseSecondaryFire(class AFortDecoHelper* FortDecoHelper);
+	void BPOnUnEquip();
+	void BPPressTrigger(class AFortDecoHelper* FortDecoHelper);
+	void BPPressSecondaryFire(class AFortDecoHelper* FortDecoHelper);
 
 public:
 	static class UClass* StaticClass()
@@ -50,13 +50,6 @@ public:
 		return GetDefaultObjImpl<ADA_SpookyMist_C>();
 	}
 };
-static_assert(alignof(ADA_SpookyMist_C) == 0x000008, "Wrong alignment on ADA_SpookyMist_C");
-static_assert(sizeof(ADA_SpookyMist_C) == 0x0009F0, "Wrong size on ADA_SpookyMist_C");
-static_assert(offsetof(ADA_SpookyMist_C, UberGraphFrame) == 0x0009B0, "Member 'ADA_SpookyMist_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ADA_SpookyMist_C, CanCancelAbility) == 0x0009B8, "Member 'ADA_SpookyMist_C::CanCancelAbility' has a wrong offset!");
-static_assert(offsetof(ADA_SpookyMist_C, CanCancelTimer) == 0x0009C0, "Member 'ADA_SpookyMist_C::CanCancelTimer' has a wrong offset!");
-static_assert(offsetof(ADA_SpookyMist_C, CancelDelay) == 0x0009C8, "Member 'ADA_SpookyMist_C::CancelDelay' has a wrong offset!");
-static_assert(offsetof(ADA_SpookyMist_C, PlayerPawn) == 0x0009E8, "Member 'ADA_SpookyMist_C::PlayerPawn' has a wrong offset!");
 
 }
 

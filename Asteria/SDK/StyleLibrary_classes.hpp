@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "FortniteGame_structs.hpp"
+#include "EFortUIThemeColor_structs.hpp"
 #include "FortniteUI_structs.hpp"
 #include "EFortUITheme_structs.hpp"
-#include "EFortUIThemeColor_structs.hpp"
 
 
 namespace SDK
@@ -26,22 +26,23 @@ namespace SDK
 class UStyleLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void Get_Theme_Color(const struct FFortUIStylesheet& StyleSheet, EFortUITheme Theme_Type, EFortUIThemeColor Color_Type, class UObject* __WorldContext, struct FLinearColor* Theme_Color);
-	static void Get_Theme(const struct FFortUIStylesheet& StyleSheet, EFortUITheme Theme_Type, class UObject* __WorldContext, struct FFortUITheme* Theme);
-	static void Get_Standard_Icon_Size(const struct FFortUIStylesheet& StyleSheet, EFortBrushSize Brush_Size, class UObject* __WorldContext, struct FVector2D* Icon_Size);
-	static void Get_Item_Icon_Size(const struct FFortUIStylesheet& StyleSheet, EFortBrushSize Brush_Size, class UObject* __WorldContext, struct FVector2D* Icon_Size);
-	static void Get_Buff_Color(const struct FFortUIStylesheet& StyleSheet, class UObject* __WorldContext, struct FLinearColor* Color);
-	static void Get_Debuff_Color(const struct FFortUIStylesheet& StyleSheet, class UObject* __WorldContext, struct FLinearColor* Color);
-	static void Get_Item_Size(const struct FFortUIStylesheet& StyleSheet, EFortBrushSize Brush_Size, class UObject* __WorldContext, struct FVector2D* Item_Size);
-	static void Get_Unique_Color(const struct FFortUIStylesheet& StyleSheet, class UObject* __WorldContext, struct FLinearColor* Color);
-	static void Get_Fire_Elemental_Color(const struct FFortUIStylesheet& StyleSheet, class UObject* __WorldContext, struct FLinearColor* Color);
-	static void Get_Ice_Elemental_Color(const struct FFortUIStylesheet& StyleSheet, class UObject* __WorldContext, struct FLinearColor* Color);
-	static void Get_Bolt_Elemental_Color(const struct FFortUIStylesheet& StyleSheet, class UObject* __WorldContext, struct FLinearColor* Color);
-	static void Get_Base___Buff_Colors(EFortStatValueDisplayType Display_Type, EFortBuffState Buff_State, const struct FFortUIStylesheet& StyleSheet, class UObject* __WorldContext, struct FLinearColor* Base, struct FLinearColor* Buff);
-	static void ResizeBrush(EFortBrushSize BrushSize, const struct FSlateBrush& BaseBrush, class UObject* __WorldContext, struct FSlateBrush* ResizedBrush);
-	static void Get_HarvestWeakPoint_Color(const struct FFortUIStylesheet& StyleSheet, class UObject* __WorldContext, struct FLinearColor* StyleSheetOut);
-	static void Get_Conning_Color_From_Difficulty_Value(int32 Player_Account_Level, float Content_Difficulty_Level, class UObject* __WorldContext, struct FLinearColor* Difficulty_Linear_Color, bool* Success, class FText* ToolTipText, int32* DifficultyValue);
+	static void Get_Conning_Color_From_Homebase_Rating(int32 HomeBaseRating, int32 DifficultyLevel, class UObject* __WorldContext, struct FLinearColor* DifficultyColor);
 	static void Get_Conning_Color_For_Specific_Difficulty(int32 Difficulty_Value, class UObject* __WorldContext, struct FLinearColor* Difficulty_Linear_Color, bool* Invalid);
+	static void Get_Conning_Color_From_Difficulty_Value(int32 Player_Account_Level, float Content_Difficulty_Level, class UObject* __WorldContext, struct FLinearColor* Difficulty_Linear_Color, bool* Success, class FText* ToolTipText, int32* DifficultyValue);
+	static void Get_HarvestWeakPoint_Color(const struct FFortUIStylesheet& Stylesheet, class UObject* __WorldContext, struct FLinearColor* StyleSheetOut);
+	static void ResizeBrush(EFortBrushSize BrushSize, const struct FSlateBrush& BaseBrush, class UObject* __WorldContext, struct FSlateBrush* ResizedBrush);
+	static void Get_Base___Buff_Colors(EFortStatValueDisplayType Display_Type, EFortBuffState Buff_State, const struct FFortUIStylesheet& Stylesheet, class UObject* __WorldContext, struct FLinearColor* Base, struct FLinearColor* Buff);
+	static void Get_Bolt_Elemental_Color(const struct FFortUIStylesheet& Stylesheet, class UObject* __WorldContext, struct FLinearColor* Color);
+	static void Get_Ice_Elemental_Color(const struct FFortUIStylesheet& Stylesheet, class UObject* __WorldContext, struct FLinearColor* Color);
+	static void Get_Fire_Elemental_Color(const struct FFortUIStylesheet& Stylesheet, class UObject* __WorldContext, struct FLinearColor* Color);
+	static void Get_Unique_Color(const struct FFortUIStylesheet& Stylesheet, class UObject* __WorldContext, struct FLinearColor* Color);
+	static void Get_Item_Size(const struct FFortUIStylesheet& Stylesheet, EFortBrushSize Brush_Size, class UObject* __WorldContext, struct FVector2D* Item_Size);
+	static void Get_Debuff_Color(const struct FFortUIStylesheet& Stylesheet, class UObject* __WorldContext, struct FLinearColor* Color);
+	static void Get_Buff_Color(const struct FFortUIStylesheet& Stylesheet, class UObject* __WorldContext, struct FLinearColor* Color);
+	static void Get_Item_Icon_Size(const struct FFortUIStylesheet& Stylesheet, EFortBrushSize Brush_Size, class UObject* __WorldContext, struct FVector2D* Icon_Size);
+	static void Get_Standard_Icon_Size(const struct FFortUIStylesheet& Stylesheet, EFortBrushSize Brush_Size, class UObject* __WorldContext, struct FVector2D* Icon_Size);
+	static void Get_Theme(const struct FFortUIStylesheet& Stylesheet, EFortUITheme Theme_Type, class UObject* __WorldContext, struct FFortUITheme* Theme);
+	static void Get_Theme_Color(const struct FFortUIStylesheet& Stylesheet, EFortUITheme Theme_Type, EFortUIThemeColor Color_Type, class UObject* __WorldContext, struct FLinearColor* Theme_Color);
 
 public:
 	static class UClass* StaticClass()
@@ -53,8 +54,6 @@ public:
 		return GetDefaultObjImpl<UStyleLibrary_C>();
 	}
 };
-static_assert(alignof(UStyleLibrary_C) == 0x000008, "Wrong alignment on UStyleLibrary_C");
-static_assert(sizeof(UStyleLibrary_C) == 0x000028, "Wrong size on UStyleLibrary_C");
 
 }
 

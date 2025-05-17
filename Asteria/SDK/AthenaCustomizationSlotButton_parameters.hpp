@@ -10,97 +10,107 @@
 
 #include "Basic.hpp"
 
-#include "FortniteUI_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.SetCardSizeAndSlotImage
-// 0x0230 (0x0230 - 0x0000)
-struct AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage final
-{
-public:
-	EFortItemCardSize                             CardSize;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            SlotImage;                                         // 0x0008(0x0088)(BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FVector2D                              Temp_struct_Variable;                              // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable_1;                            // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable_2;                            // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable_3;                            // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable_4;                            // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortItemCardSize                             Temp_byte_Variable;                                // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              Temp_struct_Variable_5;                            // 0x00BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable_6;                            // 0x00C4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable_7;                            // 0x00CC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable_8;                            // 0x00D4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable_9;                            // 0x00DC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable_10;                           // 0x00E4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable_11;                           // 0x00EC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortItemCardSize                             Temp_byte_Variable_1;                              // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              K2Node_Select_Default;                             // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0100(0x0088)()
-	struct FVector2D                              Temp_struct_Variable_12;                           // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              Temp_struct_Variable_13;                           // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortItemCardSize                             Temp_byte_Variable_2;                              // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              K2Node_Select_Default_1;                           // 0x019C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            K2Node_Select_Default_2;                           // 0x01A8(0x0088)(ConstParm)
-};
-static_assert(alignof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage) == 0x000008, "Wrong alignment on AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage");
-static_assert(sizeof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage) == 0x000230, "Wrong size on AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, CardSize) == 0x000000, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::CardSize' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, SlotImage) == 0x000008, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::SlotImage' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable) == 0x000090, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_1) == 0x000098, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_2) == 0x0000A0, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_2' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_3) == 0x0000A8, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_3' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_4) == 0x0000B0, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_4' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_byte_Variable) == 0x0000B8, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_5) == 0x0000BC, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_5' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_6) == 0x0000C4, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_6' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_7) == 0x0000CC, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_7' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_8) == 0x0000D4, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_8' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_9) == 0x0000DC, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_9' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_10) == 0x0000E4, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_10' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_11) == 0x0000EC, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_11' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_byte_Variable_1) == 0x0000F4, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, K2Node_Select_Default) == 0x0000F8, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, K2Node_MakeStruct_SlateBrush) == 0x000100, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::K2Node_MakeStruct_SlateBrush' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_12) == 0x000188, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_12' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_struct_Variable_13) == 0x000190, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_struct_Variable_13' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, Temp_byte_Variable_2) == 0x000198, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, K2Node_Select_Default_1) == 0x00019C, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage, K2Node_Select_Default_2) == 0x0001A8, "Member 'AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage::K2Node_Select_Default_2' has a wrong offset!");
-
-// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct AthenaCustomizationSlotButton_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(AthenaCustomizationSlotButton_C_PreConstruct) == 0x000001, "Wrong alignment on AthenaCustomizationSlotButton_C_PreConstruct");
-static_assert(sizeof(AthenaCustomizationSlotButton_C_PreConstruct) == 0x000001, "Wrong size on AthenaCustomizationSlotButton_C_PreConstruct");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'AthenaCustomizationSlotButton_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
 // Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.ExecuteUbergraph_AthenaCustomizationSlotButton
-// 0x0008 (0x0008 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct AthenaCustomizationSlotButton_C_ExecuteUbergraph_AthenaCustomizationSlotButton final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bInAttachableCosmeticAvailable;       // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bInActive;                            // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GetCustomizationSlotActiveState_bOutAttachableCosmeticAvailable; // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GetCustomizationSlotActiveState_bOutActive; // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              K2Node_Event_Image;                                // 0x0010(0x0028)(ConstParm, HasGetValueTypeHash)
+	float                                         K2Node_Event_Width;                                // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bShouldWarn;                          // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(AthenaCustomizationSlotButton_C_ExecuteUbergraph_AthenaCustomizationSlotButton) == 0x000004, "Wrong alignment on AthenaCustomizationSlotButton_C_ExecuteUbergraph_AthenaCustomizationSlotButton");
-static_assert(sizeof(AthenaCustomizationSlotButton_C_ExecuteUbergraph_AthenaCustomizationSlotButton) == 0x000008, "Wrong size on AthenaCustomizationSlotButton_C_ExecuteUbergraph_AthenaCustomizationSlotButton");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_ExecuteUbergraph_AthenaCustomizationSlotButton, EntryPoint) == 0x000000, "Member 'AthenaCustomizationSlotButton_C_ExecuteUbergraph_AthenaCustomizationSlotButton::EntryPoint' has a wrong offset!");
-static_assert(offsetof(AthenaCustomizationSlotButton_C_ExecuteUbergraph_AthenaCustomizationSlotButton, K2Node_Event_IsDesignTime) == 0x000004, "Member 'AthenaCustomizationSlotButton_C_ExecuteUbergraph_AthenaCustomizationSlotButton::K2Node_Event_IsDesignTime' has a wrong offset!");
+
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.OnUpdateExclusiveWarning
+// 0x0001 (0x0001 - 0x0000)
+struct AthenaCustomizationSlotButton_C_OnUpdateExclusiveWarning final
+{
+public:
+	bool                                          bShouldWarn;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.OnCardImageAndWidthChanged
+// 0x0030 (0x0030 - 0x0000)
+struct AthenaCustomizationSlotButton_C_OnCardImageAndWidthChanged final
+{
+public:
+	TSoftObjectPtr<class UTexture2D>              Image;                                             // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
+	float                                         Width;                                             // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.OnCustomizationSlotActiveStateChanged
+// 0x0002 (0x0002 - 0x0000)
+struct AthenaCustomizationSlotButton_C_OnCustomizationSlotActiveStateChanged final
+{
+public:
+	bool                                          bInAttachableCosmeticAvailable;                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bInActive;                                         // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.HandleActiveStateChanged
+// 0x0008 (0x0008 - 0x0000)
+struct AthenaCustomizationSlotButton_C_HandleActiveStateChanged final
+{
+public:
+	bool                                          CosmeticAvailable;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Active;                                            // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsSlotFilled_ReturnValue;                 // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.GetSlotDebugName
+// 0x0050 (0x0050 - 0x0000)
+struct AthenaCustomizationSlotButton_C_GetSlotDebugName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+};
+
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.HandleWidthChanged
+// 0x0070 (0x0070 - 0x0000)
+struct AthenaCustomizationSlotButton_C_HandleWidthChanged final
+{
+public:
+	float                                         Width;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bWidthExceedsThreshold;                            // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default;                             // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0020(0x0050)(HasGetValueTypeHash)
+};
 
 }
 

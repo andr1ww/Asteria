@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Right_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_Right_C) == 0x000008, "Wrong alignment on UButtonStyle_Right_C");
-static_assert(sizeof(UButtonStyle_Right_C) == 0x000570, "Wrong size on UButtonStyle_Right_C");
 
 }
 

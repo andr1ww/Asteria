@@ -10,63 +10,113 @@
 
 #include "Basic.hpp"
 
-#include "LiveLinkInterface_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "LiveLinkInterface_structs.hpp"
 
 
 namespace SDK
 {
 
-// Class LiveLinkInterface.LiveLinkSourceSettings
-// 0x0010 (0x0038 - 0x0028)
-class ULiveLinkSourceSettings : public UObject
+// Class LiveLinkInterface.LiveLinkFrameInterpolationProcessor
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkFrameInterpolationProcessor : public UObject
 {
 public:
-	ELiveLinkSourceMode                           Mode;                                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLiveLinkInterpolationSettings         InterpolationSettings;                             // 0x002C(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FLiveLinkTimeSynchronizationSettings   TimeSynchronizationSettings;                       // 0x0030(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkFrameInterpolationProcessor">();
+	}
+	static class ULiveLinkFrameInterpolationProcessor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkFrameInterpolationProcessor>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkFrameTranslator
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkFrameTranslator : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkFrameTranslator">();
+	}
+	static class ULiveLinkFrameTranslator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkFrameTranslator>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkRole
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkRole : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkRole">();
+	}
+	static class ULiveLinkRole* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkRole>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkBasicRole
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkBasicRole : public ULiveLinkRole
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkBasicRole">();
+	}
+	static class ULiveLinkBasicRole* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkBasicRole>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkTransformRole
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkTransformRole : public ULiveLinkBasicRole
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkTransformRole">();
+	}
+	static class ULiveLinkTransformRole* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkTransformRole>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkVirtualSubject
+// 0x00B0 (0x00D8 - 0x0028)
+class ULiveLinkVirtualSubject : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class ULiveLinkRole>              Role;                                              // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FLiveLinkSubjectName>           Subjects;                                          // 0x0038(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class ULiveLinkFrameTranslator*>       FrameTranslators;                                  // 0x0048(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_58[0x80];                                      // 0x0058(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LiveLinkSourceSettings">();
+		return StaticClassImpl<"LiveLinkVirtualSubject">();
 	}
-	static class ULiveLinkSourceSettings* GetDefaultObj()
+	static class ULiveLinkVirtualSubject* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULiveLinkSourceSettings>();
+		return GetDefaultObjImpl<ULiveLinkVirtualSubject>();
 	}
 };
-static_assert(alignof(ULiveLinkSourceSettings) == 0x000008, "Wrong alignment on ULiveLinkSourceSettings");
-static_assert(sizeof(ULiveLinkSourceSettings) == 0x000038, "Wrong size on ULiveLinkSourceSettings");
-static_assert(offsetof(ULiveLinkSourceSettings, Mode) == 0x000028, "Member 'ULiveLinkSourceSettings::Mode' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSourceSettings, InterpolationSettings) == 0x00002C, "Member 'ULiveLinkSourceSettings::InterpolationSettings' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSourceSettings, TimeSynchronizationSettings) == 0x000030, "Member 'ULiveLinkSourceSettings::TimeSynchronizationSettings' has a wrong offset!");
-
-// Class LiveLinkInterface.LiveLinkCurveRemapSettings
-// 0x0050 (0x0088 - 0x0038)
-class ULiveLinkCurveRemapSettings final : public ULiveLinkSourceSettings
-{
-public:
-	struct FLiveLinkCurveConversionSettings       CurveConversionSettings;                           // 0x0038(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"LiveLinkCurveRemapSettings">();
-	}
-	static class ULiveLinkCurveRemapSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULiveLinkCurveRemapSettings>();
-	}
-};
-static_assert(alignof(ULiveLinkCurveRemapSettings) == 0x000008, "Wrong alignment on ULiveLinkCurveRemapSettings");
-static_assert(sizeof(ULiveLinkCurveRemapSettings) == 0x000088, "Wrong size on ULiveLinkCurveRemapSettings");
-static_assert(offsetof(ULiveLinkCurveRemapSettings, CurveConversionSettings) == 0x000038, "Member 'ULiveLinkCurveRemapSettings::CurveConversionSettings' has a wrong offset!");
 
 // Class LiveLinkInterface.LiveLinkSourceFactory
 // 0x0000 (0x0028 - 0x0028)
-class ULiveLinkSourceFactory final : public UObject
+class ULiveLinkSourceFactory : public UObject
 {
 public:
 	static class UClass* StaticClass()
@@ -78,8 +128,142 @@ public:
 		return GetDefaultObjImpl<ULiveLinkSourceFactory>();
 	}
 };
-static_assert(alignof(ULiveLinkSourceFactory) == 0x000008, "Wrong alignment on ULiveLinkSourceFactory");
-static_assert(sizeof(ULiveLinkSourceFactory) == 0x000028, "Wrong size on ULiveLinkSourceFactory");
+
+// Class LiveLinkInterface.LiveLinkFramePreProcessor
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkFramePreProcessor : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkFramePreProcessor">();
+	}
+	static class ULiveLinkFramePreProcessor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkFramePreProcessor>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkSourceSettings
+// 0x0070 (0x0098 - 0x0028)
+class ULiveLinkSourceSettings : public UObject
+{
+public:
+	ELiveLinkSourceMode                           Mode;                                              // 0x0028(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLiveLinkSourceBufferManagementSettings BufferSettings;                                   // 0x0030(0x0050)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class FString                                 ConnectionString;                                  // 0x0080(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ULiveLinkSourceFactory>     Factory;                                           // 0x0090(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkSourceSettings">();
+	}
+	static class ULiveLinkSourceSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkSourceSettings>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkAnimationRole
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkAnimationRole final : public ULiveLinkBasicRole
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkAnimationRole">();
+	}
+	static class ULiveLinkAnimationRole* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkAnimationRole>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkCameraRole
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkCameraRole final : public ULiveLinkTransformRole
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkCameraRole">();
+	}
+	static class ULiveLinkCameraRole* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkCameraRole>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkController
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkController final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkController">();
+	}
+	static class ULiveLinkController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkController>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkCurveRemapSettings
+// 0x0050 (0x00E8 - 0x0098)
+class ULiveLinkCurveRemapSettings final : public ULiveLinkSourceSettings
+{
+public:
+	struct FLiveLinkCurveConversionSettings       CurveConversionSettings;                           // 0x0098(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkCurveRemapSettings">();
+	}
+	static class ULiveLinkCurveRemapSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkCurveRemapSettings>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkLightRole
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkLightRole final : public ULiveLinkTransformRole
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkLightRole">();
+	}
+	static class ULiveLinkLightRole* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkLightRole>();
+	}
+};
+
+// Class LiveLinkInterface.LiveLinkSubjectSettings
+// 0x0030 (0x0058 - 0x0028)
+class ULiveLinkSubjectSettings final : public UObject
+{
+public:
+	TArray<class ULiveLinkFramePreProcessor*>     PreProcessors;                                     // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULiveLinkFrameInterpolationProcessor*   InterpolationProcessor;                            // 0x0038(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class ULiveLinkFrameTranslator*>       Translators;                                       // 0x0040(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ULiveLinkRole>              Role;                                              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkSubjectSettings">();
+	}
+	static class ULiveLinkSubjectSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkSubjectSettings>();
+	}
+};
 
 }
 

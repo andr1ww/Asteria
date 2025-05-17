@@ -23,7 +23,7 @@ namespace SDK
 // class AFortPlayerController*            InPlayerControlle                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UFortQuestItemDefinition*         InQuestItemRef                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    PlayerHasQuest                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   PlayerHasQuest                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaQuestFunctionLibrary_C::Athena_HasQuest(class AFortPlayerController* InPlayerControlle, class UFortQuestItemDefinition* InQuestItemRef, class UObject* __WorldContext, bool* PlayerHasQuest)
 {
@@ -51,8 +51,8 @@ void UAthenaQuestFunctionLibrary_C::Athena_HasQuest(class AFortPlayerController*
 // class AFortPlayerController*            InPlayerControlle                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UFortQuestItemDefinition*         InQuestItemRef                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    HasQuest                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    QuestCompleted                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   HasQuest                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   QuestCompleted                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaQuestFunctionLibrary_C::Athena_HasPlayerCompletedQuest(class AFortPlayerController* InPlayerControlle, class UFortQuestItemDefinition* InQuestItemRef, class UObject* __WorldContext, bool* HasQuest, bool* QuestCompleted)
 {
@@ -84,9 +84,9 @@ void UAthenaQuestFunctionLibrary_C::Athena_HasPlayerCompletedQuest(class AFortPl
 // class UFortQuestItemDefinition*         InQuestItemRef                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             ObjectiveBackendName                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    QuestIsValid                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    QuestCompleted                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    ObjectiveCompleted                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   QuestIsValid                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   QuestCompleted                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   ObjectiveCompleted                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaQuestFunctionLibrary_C::Athena_CheckQuestAndObjectiveCompletion(class AFortPlayerController* InPlayerControlle, class UFortQuestItemDefinition* InQuestItemRef, class FName ObjectiveBackendName, class UObject* __WorldContext, bool* QuestIsValid, bool* QuestCompleted, bool* ObjectiveCompleted)
 {
@@ -115,13 +115,53 @@ void UAthenaQuestFunctionLibrary_C::Athena_CheckQuestAndObjectiveCompletion(clas
 }
 
 
+// Function AthenaQuestFunctionLibrary.AthenaQuestFunctionLibrary_C.Athena_CheckQuestAndObjectiveCompletionMP
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class AFortPlayerController*>&   InPlayerControlle                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// class UFortQuestItemDefinition*         InQuestItemRef                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             ObjectiveBackendName                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   QuestIsValid                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   QuestCompleted                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   ObjectiveCompleted                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaQuestFunctionLibrary_C::Athena_CheckQuestAndObjectiveCompletionMP(TArray<class AFortPlayerController*>& InPlayerControlle, class UFortQuestItemDefinition* InQuestItemRef, class FName ObjectiveBackendName, class UObject* __WorldContext, bool* QuestIsValid, bool* QuestCompleted, bool* ObjectiveCompleted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AthenaQuestFunctionLibrary_C", "Athena_CheckQuestAndObjectiveCompletionMP");
+
+	Params::AthenaQuestFunctionLibrary_C_Athena_CheckQuestAndObjectiveCompletionMP Parms{};
+
+	Parms.InPlayerControlle = std::move(InPlayerControlle);
+	Parms.InQuestItemRef = InQuestItemRef;
+	Parms.ObjectiveBackendName = ObjectiveBackendName;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	InPlayerControlle = std::move(Parms.InPlayerControlle);
+
+	if (QuestIsValid != nullptr)
+		*QuestIsValid = Parms.QuestIsValid;
+
+	if (QuestCompleted != nullptr)
+		*QuestCompleted = Parms.QuestCompleted;
+
+	if (ObjectiveCompleted != nullptr)
+		*ObjectiveCompleted = Parms.ObjectiveCompleted;
+}
+
+
 // Function AthenaQuestFunctionLibrary.AthenaQuestFunctionLibrary_C.Athena_GiveQuestUpdateToPlayers
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFortQuestItemDefinition*         InQuestItemRef                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             ObjectiveBackendName                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FDataTableRowHandle              ObjectiveStatEvent                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// TArray<class AFortPlayerController*>    PlayerControllersForUpdate                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const struct FDataTableRowHandle&       ObjectiveStatEvent                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// TArray<class AFortPlayerController*>&   PlayerControllersForUpdate                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UAthenaQuestFunctionLibrary_C::Athena_GiveQuestUpdateToPlayers(class UFortQuestItemDefinition* InQuestItemRef, class FName ObjectiveBackendName, const struct FDataTableRowHandle& ObjectiveStatEvent, TArray<class AFortPlayerController*>& PlayerControllersForUpdate, class UObject* __WorldContext)
@@ -150,11 +190,11 @@ void UAthenaQuestFunctionLibrary_C::Athena_GiveQuestUpdateToPlayers(class UFortQ
 // Parameters:
 // class AFortPlayerController*            FortPlayerControllerAthena                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UFortQuestItemDefinition*         ObjectiveItem                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FDataTableRowHandle              ObjectiveStat                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FDataTableRowHandle&       ObjectiveStat                                          (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   QuestCountAchieved                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   QuestCountRequired                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CountSuccessfullyReturned                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32*                                  QuestCountAchieved                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  QuestCountRequired                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   CountSuccessfullyReturned                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaQuestFunctionLibrary_C::Athena_QuestObjectiveCounter(class AFortPlayerController* FortPlayerControllerAthena, class UFortQuestItemDefinition* ObjectiveItem, const struct FDataTableRowHandle& ObjectiveStat, class UObject* __WorldContext, int32* QuestCountAchieved, int32* QuestCountRequired, bool* CountSuccessfullyReturned)
 {
@@ -188,7 +228,7 @@ void UAthenaQuestFunctionLibrary_C::Athena_QuestObjectiveCounter(class AFortPlay
 // Parameters:
 // class AGameStateBase*                   InGameState                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CanCompleteQuest                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   CanCompleteQuest                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaQuestFunctionLibrary_C::Athena_CheckCreativeMode(class AGameStateBase* InGameState, class UObject* __WorldContext, bool* CanCompleteQuest)
 {
@@ -212,7 +252,7 @@ void UAthenaQuestFunctionLibrary_C::Athena_CheckCreativeMode(class AGameStateBas
 // Function AthenaQuestFunctionLibrary.AthenaQuestFunctionLibrary_C.Athena_IsCreativeOrPlaygroundPlaylist
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayTagContainer            TagContainer                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTagContainer&     TagContainer                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
@@ -242,9 +282,10 @@ bool UAthenaQuestFunctionLibrary_C::Athena_IsCreativeOrPlaygroundPlaylist(const 
 // class UParticleSystem*                  Success_Particles                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UForceFeedbackEffect*             Success_Shake                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           QuestActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerPawn*                  PlayerPawn                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaQuestFunctionLibrary_C::Athena_PlayQuestRewardFeedback(bool PlayFX_onPlayer_, class USoundBase* Success_Sound, class UParticleSystem* Success_Particles, class UForceFeedbackEffect* Success_Shake, class AActor* QuestActor, class UObject* __WorldContext)
+void UAthenaQuestFunctionLibrary_C::Athena_PlayQuestRewardFeedback(bool PlayFX_onPlayer_, class USoundBase* Success_Sound, class UParticleSystem* Success_Particles, class UForceFeedbackEffect* Success_Shake, class AActor* QuestActor, class AFortPlayerPawn* PlayerPawn, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -258,6 +299,7 @@ void UAthenaQuestFunctionLibrary_C::Athena_PlayQuestRewardFeedback(bool PlayFX_o
 	Parms.Success_Particles = Success_Particles;
 	Parms.Success_Shake = Success_Shake;
 	Parms.QuestActor = QuestActor;
+	Parms.PlayerPawn = PlayerPawn;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
@@ -270,8 +312,8 @@ void UAthenaQuestFunctionLibrary_C::Athena_PlayQuestRewardFeedback(bool PlayFX_o
 // class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             ObjectiveBackendName                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsAssistingObjective                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    bIsValidPlayerController                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   bIsAssistingObjective                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   bIsValidPlayerController                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaQuestFunctionLibrary_C::Athena_PartyAssistCheck(class AFortPlayerController* PlayerController, class FName ObjectiveBackendName, class UObject* __WorldContext, bool* bIsAssistingObjective, bool* bIsValidPlayerController)
 {
@@ -300,10 +342,10 @@ void UAthenaQuestFunctionLibrary_C::Athena_PartyAssistCheck(class AFortPlayerCon
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayTagContainer            TagsToCheck                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGameplayTagContainer&     TagsToCheck                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                                    OnlyExactMatch                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bDidActorHaveTags                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   bDidActorHaveTags                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UAthenaQuestFunctionLibrary_C::Athena_CheckActorHasTags(class AActor* TargetActor, const struct FGameplayTagContainer& TagsToCheck, bool OnlyExactMatch, class UObject* __WorldContext, bool* bDidActorHaveTags)
 {

@@ -11,23 +11,30 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaLockedStyleNotification.AthenaLockedStyleNotification_C
-// 0x0010 (0x0240 - 0x0230)
-class UAthenaLockedStyleNotification_C final : public UUserWidget
+// 0x0030 (0x0318 - 0x02E8)
+class UAthenaLockedStyleNotification_C final : public UAthenaCosmeticUnlockingInfo
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0230(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       DescriptionText;                                   // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       DataUpdate;                                        // 0x02F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro;                                             // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_ProgressInfo;                              // 0x0300(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_StaticText;                                // 0x0308(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Switcher_LockedInfo;                               // 0x0310(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetLockedStyleDescription(const class FText& LockedStyleDescription);
-	void Construct();
+	void OnUnlockingInfoSet(bool bShowProgression);
+	void RequestUpdateAnim();
+	void RequestIntroAnim();
+	void RequestOutroAnim();
+	void OutroFinished();
 	void ExecuteUbergraph_AthenaLockedStyleNotification(int32 EntryPoint);
 
 public:
@@ -40,10 +47,6 @@ public:
 		return GetDefaultObjImpl<UAthenaLockedStyleNotification_C>();
 	}
 };
-static_assert(alignof(UAthenaLockedStyleNotification_C) == 0x000008, "Wrong alignment on UAthenaLockedStyleNotification_C");
-static_assert(sizeof(UAthenaLockedStyleNotification_C) == 0x000240, "Wrong size on UAthenaLockedStyleNotification_C");
-static_assert(offsetof(UAthenaLockedStyleNotification_C, UberGraphFrame) == 0x000230, "Member 'UAthenaLockedStyleNotification_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaLockedStyleNotification_C, DescriptionText) == 0x000238, "Member 'UAthenaLockedStyleNotification_C::DescriptionText' has a wrong offset!");
 
 }
 

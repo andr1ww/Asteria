@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TracerGeneric.TracerGeneric_C
-// 0x0000 (0x02D8 - 0x02D8)
+// 0x0000 (0x02B8 - 0x02B8)
 class ATracerGeneric_C final : public AFortTracerBase
 {
 public:
@@ -33,8 +33,6 @@ public:
 		return GetDefaultObjImpl<ATracerGeneric_C>();
 	}
 };
-static_assert(alignof(ATracerGeneric_C) == 0x000008, "Wrong alignment on ATracerGeneric_C");
-static_assert(sizeof(ATracerGeneric_C) == 0x0002D8, "Wrong size on ATracerGeneric_C");
 
 }
 

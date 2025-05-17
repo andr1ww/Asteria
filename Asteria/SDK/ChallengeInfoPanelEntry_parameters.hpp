@@ -24,11 +24,6 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ChallengeInfoPanelEntry_C_ExecuteUbergraph_ChallengeInfoPanelEntry) == 0x000008, "Wrong alignment on ChallengeInfoPanelEntry_C_ExecuteUbergraph_ChallengeInfoPanelEntry");
-static_assert(sizeof(ChallengeInfoPanelEntry_C_ExecuteUbergraph_ChallengeInfoPanelEntry) == 0x000018, "Wrong size on ChallengeInfoPanelEntry_C_ExecuteUbergraph_ChallengeInfoPanelEntry");
-static_assert(offsetof(ChallengeInfoPanelEntry_C_ExecuteUbergraph_ChallengeInfoPanelEntry, EntryPoint) == 0x000000, "Member 'ChallengeInfoPanelEntry_C_ExecuteUbergraph_ChallengeInfoPanelEntry::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ChallengeInfoPanelEntry_C_ExecuteUbergraph_ChallengeInfoPanelEntry, CallFunc_PlayAnimationForward_ReturnValue) == 0x000008, "Member 'ChallengeInfoPanelEntry_C_ExecuteUbergraph_ChallengeInfoPanelEntry::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ChallengeInfoPanelEntry_C_ExecuteUbergraph_ChallengeInfoPanelEntry, CallFunc_PlayAnimation_ReturnValue) == 0x000010, "Member 'ChallengeInfoPanelEntry_C_ExecuteUbergraph_ChallengeInfoPanelEntry::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 
 }
 

@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UTargeting3PCamera_VeryShortRange_C>();
 	}
 };
-static_assert(alignof(UTargeting3PCamera_VeryShortRange_C) == 0x000008, "Wrong alignment on UTargeting3PCamera_VeryShortRange_C");
-static_assert(sizeof(UTargeting3PCamera_VeryShortRange_C) == 0x000138, "Wrong size on UTargeting3PCamera_VeryShortRange_C");
 
 }
 

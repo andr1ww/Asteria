@@ -17,105 +17,65 @@
 namespace SDK
 {
 
-// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.HandleClear
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.ExecuteUbergraph_GamepadCustomActionSelectorPanel_v3
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGamepadCustomActionSelectorPanel_v3_C::HandleClear(bool* PassThrough)
+void UGamepadCustomActionSelectorPanel_v3_C::ExecuteUbergraph_GamepadCustomActionSelectorPanel_v3(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "HandleClear");
+		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "ExecuteUbergraph_GamepadCustomActionSelectorPanel_v3");
 
-	Params::GamepadCustomActionSelectorPanel_v3_C_HandleClear Parms{};
+	Params::GamepadCustomActionSelectorPanel_v3_C_ExecuteUbergraph_GamepadCustomActionSelectorPanel_v3 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (PassThrough != nullptr)
-		*PassThrough = Parms.PassThrough;
 }
 
 
-// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.CreateCustomListItem
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             ActionName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFortInputActionGroup                   InputActionGroup                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UGamepadKeyTextButton_C*          ReturnItem                                             (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.BndEvt__Button_Clear_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UGamepadCustomActionSelectorPanel_v3_C::CreateCustomListItem(class FName ActionName, EFortInputActionGroup InputActionGroup, class UGamepadKeyTextButton_C** ReturnItem)
+void UGamepadCustomActionSelectorPanel_v3_C::BndEvt__Button_Clear_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "CreateCustomListItem");
-
-	Params::GamepadCustomActionSelectorPanel_v3_C_CreateCustomListItem Parms{};
-
-	Parms.ActionName = ActionName;
-	Parms.InputActionGroup = InputActionGroup;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ReturnItem != nullptr)
-		*ReturnItem = Parms.ReturnItem;
-}
-
-
-// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.HandleBack
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UGamepadCustomActionSelectorPanel_v3_C::HandleBack(bool* PassThrough)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "HandleBack");
-
-	Params::GamepadCustomActionSelectorPanel_v3_C_HandleBack Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PassThrough != nullptr)
-		*PassThrough = Parms.PassThrough;
-}
-
-
-// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UGamepadCustomActionSelectorPanel_v3_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "Construct");
+		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "BndEvt__Button_Clear_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.UpdatePanel
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class UFortOptionsMenuInputData*>InputData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.BP_OnDeactivated
+// (Event, Protected, BlueprintEvent)
 
-void UGamepadCustomActionSelectorPanel_v3_C::UpdatePanel(const TArray<class UFortOptionsMenuInputData*>& InputData)
+void UGamepadCustomActionSelectorPanel_v3_C::BP_OnDeactivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "UpdatePanel");
+		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "BP_OnDeactivated");
 
-	Params::GamepadCustomActionSelectorPanel_v3_C_UpdatePanel Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InputData = std::move(InputData);
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UGamepadCustomActionSelectorPanel_v3_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -139,65 +99,105 @@ void UGamepadCustomActionSelectorPanel_v3_C::BP_OnItemClicked_Bind(class UObject
 }
 
 
-// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UGamepadCustomActionSelectorPanel_v3_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.OnDeactivated
-// (Event, Protected, BlueprintEvent)
-
-void UGamepadCustomActionSelectorPanel_v3_C::OnDeactivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "OnDeactivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.BndEvt__Button_Clear_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UGamepadCustomActionSelectorPanel_v3_C::BndEvt__Button_Clear_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "BndEvt__Button_Clear_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.ExecuteUbergraph_GamepadCustomActionSelectorPanel_v3
-// (Final, UbergraphFunction)
+// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.UpdatePanel
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<class UFortOptionsMenuInputData*>&InputData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
-void UGamepadCustomActionSelectorPanel_v3_C::ExecuteUbergraph_GamepadCustomActionSelectorPanel_v3(int32 EntryPoint)
+void UGamepadCustomActionSelectorPanel_v3_C::UpdatePanel(const TArray<class UFortOptionsMenuInputData*>& InputData)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "ExecuteUbergraph_GamepadCustomActionSelectorPanel_v3");
+		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "UpdatePanel");
 
-	Params::GamepadCustomActionSelectorPanel_v3_C_ExecuteUbergraph_GamepadCustomActionSelectorPanel_v3 Parms{};
+	Params::GamepadCustomActionSelectorPanel_v3_C_UpdatePanel Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InputData = std::move(InputData);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UGamepadCustomActionSelectorPanel_v3_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.HandleBack
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGamepadCustomActionSelectorPanel_v3_C::HandleBack(bool* PassThrough)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "HandleBack");
+
+	Params::GamepadCustomActionSelectorPanel_v3_C_HandleBack Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PassThrough != nullptr)
+		*PassThrough = Parms.PassThrough;
+}
+
+
+// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.CreateCustomListItem
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             ActionName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFortInputActionGroup                   InputActionGroup                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UGamepadKeyTextButton_C**         ReturnItem                                             (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGamepadCustomActionSelectorPanel_v3_C::CreateCustomListItem(class FName ActionName, EFortInputActionGroup InputActionGroup, class UGamepadKeyTextButton_C** ReturnItem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "CreateCustomListItem");
+
+	Params::GamepadCustomActionSelectorPanel_v3_C_CreateCustomListItem Parms{};
+
+	Parms.ActionName = ActionName;
+	Parms.InputActionGroup = InputActionGroup;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ReturnItem != nullptr)
+		*ReturnItem = Parms.ReturnItem;
+}
+
+
+// Function GamepadCustomActionSelectorPanel_v3.GamepadCustomActionSelectorPanel_v3_C.HandleClear
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGamepadCustomActionSelectorPanel_v3_C::HandleClear(bool* PassThrough)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GamepadCustomActionSelectorPanel_v3_C", "HandleClear");
+
+	Params::GamepadCustomActionSelectorPanel_v3_C_HandleClear Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PassThrough != nullptr)
+		*PassThrough = Parms.PassThrough;
 }
 
 }

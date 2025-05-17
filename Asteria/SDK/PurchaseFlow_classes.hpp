@@ -29,7 +29,7 @@ public:
 	class FString GetExternalBrowserPath(const class FString& BrowserId);
 	bool LaunchExternalBrowserUrl(const class FString& URL);
 	bool LaunchValidatedExternalBrowserUrl(const class FString& AllowedBrowserID, const class FString& URL);
-	void RECEIPT(const struct FPurchaseFlowReceiptParam& RECEIPT_0);
+	void Receipt(const struct FPurchaseFlowReceiptParam& Receipt_0);
 	void RequestClose(const class FString& CloseInfo);
 
 public:
@@ -42,8 +42,6 @@ public:
 		return GetDefaultObjImpl<UPurchaseFlowJSBridge>();
 	}
 };
-static_assert(alignof(UPurchaseFlowJSBridge) == 0x000008, "Wrong alignment on UPurchaseFlowJSBridge");
-static_assert(sizeof(UPurchaseFlowJSBridge) == 0x000038, "Wrong size on UPurchaseFlowJSBridge");
 
 }
 

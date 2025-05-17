@@ -20,8 +20,8 @@ namespace SDK
 // Function TutorialToastWidget.TutorialToastWidget_C.OnMouseButtonUp
 // (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
 struct FEventReply UTutorialToastWidget_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
@@ -45,8 +45,8 @@ struct FEventReply UTutorialToastWidget_C::OnMouseButtonUp(const struct FGeometr
 // Function TutorialToastWidget.TutorialToastWidget_C.OnMouseButtonDown
 // (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
 struct FEventReply UTutorialToastWidget_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
@@ -70,7 +70,7 @@ struct FEventReply UTutorialToastWidget_C::OnMouseButtonDown(const struct FGeome
 // Function TutorialToastWidget.TutorialToastWidget_C.SetAndShowText
 // (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UCommonTextBlock*                 TextBlock                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UTutorialToastWidget_C::SetAndShowText(const class FText& Text, class UCommonTextBlock* TextBlock)
@@ -92,7 +92,7 @@ void UTutorialToastWidget_C::SetAndShowText(const class FText& Text, class UComm
 // Function TutorialToastWidget.TutorialToastWidget_C.ShowToast
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortToastDisplayInfo            DisplayInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortToastDisplayInfo&     DisplayInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UTutorialToastWidget_C::ShowToast(const struct FFortToastDisplayInfo& DisplayInfo)
 {
@@ -132,7 +132,7 @@ void UTutorialToastWidget_C::OnLoaded_3011ADA2432D60D311EC38ADECCDDF44(class UOb
 // Function TutorialToastWidget.TutorialToastWidget_C.OnShowToast
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortToastDisplayInfo            DispalyInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortToastDisplayInfo&     DispalyInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UTutorialToastWidget_C::OnShowToast(const struct FFortToastDisplayInfo& DispalyInfo)
 {

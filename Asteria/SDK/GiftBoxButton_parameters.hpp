@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function GiftBoxButton.GiftBoxButton_C.PlayGiftSelectedAnimation
-// 0x0001 (0x0001 - 0x0000)
-struct GiftBoxButton_C_PlayGiftSelectedAnimation final
-{
-public:
-	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(GiftBoxButton_C_PlayGiftSelectedAnimation) == 0x000001, "Wrong alignment on GiftBoxButton_C_PlayGiftSelectedAnimation");
-static_assert(sizeof(GiftBoxButton_C_PlayGiftSelectedAnimation) == 0x000001, "Wrong size on GiftBoxButton_C_PlayGiftSelectedAnimation");
-static_assert(offsetof(GiftBoxButton_C_PlayGiftSelectedAnimation, bIsSelected) == 0x000000, "Member 'GiftBoxButton_C_PlayGiftSelectedAnimation::bIsSelected' has a wrong offset!");
-
 // Function GiftBoxButton.GiftBoxButton_C.ExecuteUbergraph_GiftBoxButton
 // 0x0020 (0x0020 - 0x0000)
 struct GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton final
@@ -36,12 +25,14 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bIsSelected;                          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton) == 0x000008, "Wrong alignment on GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton");
-static_assert(sizeof(GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton) == 0x000020, "Wrong size on GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton");
-static_assert(offsetof(GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton, EntryPoint) == 0x000000, "Member 'GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton::EntryPoint' has a wrong offset!");
-static_assert(offsetof(GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton, K2Node_Event_bIsSelected) == 0x000018, "Member 'GiftBoxButton_C_ExecuteUbergraph_GiftBoxButton::K2Node_Event_bIsSelected' has a wrong offset!");
+
+// Function GiftBoxButton.GiftBoxButton_C.PlayGiftSelectedAnimation
+// 0x0001 (0x0001 - 0x0000)
+struct GiftBoxButton_C_PlayGiftSelectedAnimation final
+{
+public:
+	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
 
 }
 

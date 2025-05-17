@@ -54,7 +54,7 @@ void UShowdownEventTile_C::EventMultiRoundStyle()
 // Function ShowdownEventTile.ShowdownEventTile_C.EventColorizeDispatch
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortTournamentDisplayInfo       DisplayInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortTournamentDisplayInfo&DisplayInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UShowdownEventTile_C::EventColorizeDispatch(const struct FFortTournamentDisplayInfo& DisplayInfo)
 {
@@ -74,7 +74,7 @@ void UShowdownEventTile_C::EventColorizeDispatch(const struct FFortTournamentDis
 // Function ShowdownEventTile.ShowdownEventTile_C.EventColorize
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortTournamentDisplayInfo       DisplayInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortTournamentDisplayInfo&DisplayInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UShowdownEventTile_C::EventColorize(const struct FFortTournamentDisplayInfo& DisplayInfo)
 {
@@ -114,7 +114,7 @@ void UShowdownEventTile_C::EventSetState(EFortShowdownEventState EventState)
 // Function ShowdownEventTile.ShowdownEventTile_C.OnRemovedFromFocusPath
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FFocusEvent                      InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
 void UShowdownEventTile_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFocusEvent)
 {
@@ -134,7 +134,7 @@ void UShowdownEventTile_C::OnRemovedFromFocusPath(const struct FFocusEvent& InFo
 // Function ShowdownEventTile.ShowdownEventTile_C.OnAddedToFocusPath
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FFocusEvent                      InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
 void UShowdownEventTile_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
@@ -227,6 +227,26 @@ void UShowdownEventTile_C::EventResize(bool Out)
 }
 
 
+// Function ShowdownEventTile.ShowdownEventTile_C.EventIntro
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UShowdownEventTile_C::EventIntro(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownEventTile_C", "EventIntro");
+
+	Params::ShowdownEventTile_C_EventIntro Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function ShowdownEventTile.ShowdownEventTile_C.BP_OnClicked
 // (Event, Protected, BlueprintEvent)
 
@@ -255,31 +275,11 @@ void UShowdownEventTile_C::Construct()
 }
 
 
-// Function ShowdownEventTile.ShowdownEventTile_C.EventIntro
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UShowdownEventTile_C::EventIntro(int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownEventTile_C", "EventIntro");
-
-	Params::ShowdownEventTile_C_EventIntro Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function ShowdownEventTile.ShowdownEventTile_C.SetData
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                           TournamentInfo                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           EventInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    TournamentInfo                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    EventInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
 void UShowdownEventTile_C::SetData(const class FString& TournamentInfo, const class FString& EventInfo)
 {

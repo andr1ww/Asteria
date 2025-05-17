@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UTextStyle_Header_M_YellowWhitePulse_C>();
 	}
 };
-static_assert(alignof(UTextStyle_Header_M_YellowWhitePulse_C) == 0x000008, "Wrong alignment on UTextStyle_Header_M_YellowWhitePulse_C");
-static_assert(sizeof(UTextStyle_Header_M_YellowWhitePulse_C) == 0x000148, "Wrong size on UTextStyle_Header_M_YellowWhitePulse_C");
 
 }
 

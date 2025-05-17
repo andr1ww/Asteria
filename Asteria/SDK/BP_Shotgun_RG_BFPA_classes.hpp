@@ -19,18 +19,21 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass BP_Shotgun_RG_BFPA.BP_Shotgun_RG_BFPA_C
-// 0x0090 (0x02F8 - 0x0268)
+// 0x00A0 (0x0360 - 0x02C0)
 class UBP_Shotgun_RG_BFPA_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root_447289EE478D0375649725A287B7BD4C; // 0x0278(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_76185EE8467A3505F3E23E89565E7CB8; // 0x0298(0x0048)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose_BE887AC24A08313E787615BA25555A93; // 0x02E0(0x0018)()
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02D0(0x0030)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0300(0x0048)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x0348(0x0018)()
 
 public:
 	void ExecuteUbergraph_BP_Shotgun_RG_BFPA(int32 EntryPoint);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -42,12 +45,6 @@ public:
 		return GetDefaultObjImpl<UBP_Shotgun_RG_BFPA_C>();
 	}
 };
-static_assert(alignof(UBP_Shotgun_RG_BFPA_C) == 0x000008, "Wrong alignment on UBP_Shotgun_RG_BFPA_C");
-static_assert(sizeof(UBP_Shotgun_RG_BFPA_C) == 0x0002F8, "Wrong size on UBP_Shotgun_RG_BFPA_C");
-static_assert(offsetof(UBP_Shotgun_RG_BFPA_C, UberGraphFrame) == 0x000270, "Member 'UBP_Shotgun_RG_BFPA_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_Shotgun_RG_BFPA_C, AnimGraphNode_Root_447289EE478D0375649725A287B7BD4C) == 0x000278, "Member 'UBP_Shotgun_RG_BFPA_C::AnimGraphNode_Root_447289EE478D0375649725A287B7BD4C' has a wrong offset!");
-static_assert(offsetof(UBP_Shotgun_RG_BFPA_C, AnimGraphNode_Slot_76185EE8467A3505F3E23E89565E7CB8) == 0x000298, "Member 'UBP_Shotgun_RG_BFPA_C::AnimGraphNode_Slot_76185EE8467A3505F3E23E89565E7CB8' has a wrong offset!");
-static_assert(offsetof(UBP_Shotgun_RG_BFPA_C, AnimGraphNode_LocalRefPose_BE887AC24A08313E787615BA25555A93) == 0x0002E0, "Member 'UBP_Shotgun_RG_BFPA_C::AnimGraphNode_LocalRefPose_BE887AC24A08313E787615BA25555A93' has a wrong offset!");
 
 }
 

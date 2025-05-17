@@ -59,6 +59,16 @@ void Asteria::Finder::InitializeExitHook()
 	DetourAttach(reinterpret_cast<void**>(&UnsafeEnvironmentPopup), Asteria::Finder::UnsafeEnvironmentPopupHook);
 	DetourTransactionCommit();
 
+	uint8_t* address = reinterpret_cast<uint8_t*>(*reinterpret_cast<uint64_t*>(__readgsqword(0x60) + 0x10) + 0x1C50160);
+	auto Sig = Memcury::Scanner::FindPattern("E8 ? ? ? ? 48 8B 4D ? 48 85 C9 74 ? E8 ? ? ? ? 48 8B 4D ? 48 85 C9 74 ? E8 ? ? ? ? 4C 8B 7C 24 ? 4C 8B B4 24").RelativeOffset(1).Get();
+	if (Sig) {
+		address = reinterpret_cast<uint8_t*>(Sig);
+	}
+	DWORD og;
+	VirtualProtect(address, sizeof(uint8_t), PAGE_EXECUTE_READWRITE, &og);
+	*address = 0xC3;
+	VirtualProtect(address, sizeof(uint8_t), og, &og);
+
 	DetourTransactionBegin();
 	DetourUpdateThread(GetCurrentThread());
 	DetourAttach(reinterpret_cast<void**>(&RequestExit), Asteria::Finder::RequestExitHook);

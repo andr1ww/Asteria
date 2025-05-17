@@ -17,55 +17,29 @@
 namespace SDK
 {
 
-// Function ItemUIFunctionLibrary.ItemUIFunctionLibrary_C.ParseLevelRequiredFromString
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString                           inString                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   outInt                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UItemUIFunctionLibrary_C::ParseLevelRequiredFromString(const class FString& inString, class UObject* __WorldContext, int32* outInt)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ItemUIFunctionLibrary_C", "ParseLevelRequiredFromString");
-
-	Params::ItemUIFunctionLibrary_C_ParseLevelRequiredFromString Parms{};
-
-	Parms.inString = std::move(inString);
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (outInt != nullptr)
-		*outInt = Parms.outInt;
-}
-
-
-// Function ItemUIFunctionLibrary.ItemUIFunctionLibrary_C.Convert Tier To Integer
+// Function ItemUIFunctionLibrary.ItemUIFunctionLibrary_C.IsNullItem
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// EFortItemTier                           Tier                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          ItemObject                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Numeric_Tier                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Is_Null_Item                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UItemUIFunctionLibrary_C::Convert_Tier_To_Integer(EFortItemTier Tier, class UObject* __WorldContext, int32* Numeric_Tier)
+void UItemUIFunctionLibrary_C::IsNullItem(class UObject* ItemObject, class UObject* __WorldContext, bool* Is_Null_Item)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ItemUIFunctionLibrary_C", "Convert Tier To Integer");
+		Func = StaticClass()->GetFunction("ItemUIFunctionLibrary_C", "IsNullItem");
 
-	Params::ItemUIFunctionLibrary_C_Convert_Tier_To_Integer Parms{};
+	Params::ItemUIFunctionLibrary_C_IsNullItem Parms{};
 
-	Parms.Tier = Tier;
+	Parms.ItemObject = ItemObject;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Numeric_Tier != nullptr)
-		*Numeric_Tier = Parms.Numeric_Tier;
+	if (Is_Null_Item != nullptr)
+		*Is_Null_Item = Parms.Is_Null_Item;
 }
 
 
@@ -76,7 +50,7 @@ void UItemUIFunctionLibrary_C::Convert_Tier_To_Integer(EFortItemTier Tier, class
 // int32                                   Min_Fractional_Digits                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Max_Fractional_Digits                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             Formatted_Value                                        (Parm, OutParm)
+// class FText*                            Formatted_Value                                        (Parm, OutParm)
 
 void UItemUIFunctionLibrary_C::Truncate_Integer_Value(int32 Value, int32 Min_Fractional_Digits, int32 Max_Fractional_Digits, class UObject* __WorldContext, class FText* Formatted_Value)
 {
@@ -99,29 +73,55 @@ void UItemUIFunctionLibrary_C::Truncate_Integer_Value(int32 Value, int32 Min_Fra
 }
 
 
-// Function ItemUIFunctionLibrary.ItemUIFunctionLibrary_C.IsNullItem
+// Function ItemUIFunctionLibrary.ItemUIFunctionLibrary_C.Convert Tier To Integer
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UObject*                          ItemObject                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFortItemTier                           Tier                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Is_Null_Item                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32*                                  Numeric_Tier                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UItemUIFunctionLibrary_C::IsNullItem(class UObject* ItemObject, class UObject* __WorldContext, bool* Is_Null_Item)
+void UItemUIFunctionLibrary_C::Convert_Tier_To_Integer(EFortItemTier Tier, class UObject* __WorldContext, int32* Numeric_Tier)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("ItemUIFunctionLibrary_C", "IsNullItem");
+		Func = StaticClass()->GetFunction("ItemUIFunctionLibrary_C", "Convert Tier To Integer");
 
-	Params::ItemUIFunctionLibrary_C_IsNullItem Parms{};
+	Params::ItemUIFunctionLibrary_C_Convert_Tier_To_Integer Parms{};
 
-	Parms.ItemObject = ItemObject;
+	Parms.Tier = Tier;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Is_Null_Item != nullptr)
-		*Is_Null_Item = Parms.Is_Null_Item;
+	if (Numeric_Tier != nullptr)
+		*Numeric_Tier = Parms.Numeric_Tier;
+}
+
+
+// Function ItemUIFunctionLibrary.ItemUIFunctionLibrary_C.ParseLevelRequiredFromString
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    inString                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  outInt                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UItemUIFunctionLibrary_C::ParseLevelRequiredFromString(const class FString& inString, class UObject* __WorldContext, int32* outInt)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ItemUIFunctionLibrary_C", "ParseLevelRequiredFromString");
+
+	Params::ItemUIFunctionLibrary_C_ParseLevelRequiredFromString Parms{};
+
+	Parms.inString = std::move(inString);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (outInt != nullptr)
+		*outInt = Parms.outInt;
 }
 
 }

@@ -20,16 +20,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PlayerSurveyPanelContentsAnswerMultipleChoiceWidget.PlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C
-// 0x0048 (0x02C8 - 0x0280)
+// 0x0048 (0x0398 - 0x0350)
 class UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C final : public UFortPlayerSurveyButtonGroupMultipleChoiceAnswerWidgetBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UDynamicEntryBox*                       ChoicesEntryBox;                                   // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonHierarchicalScrollBox*           ChoicesScrollBox;                                  // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                DummyButton;                                       // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class UCommonButton*>                  ChoiceButtons;                                     // 0x02A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class FText                                   Text_Subtitle;                                     // 0x02B0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UDynamicEntryBox*                       ChoicesEntryBox;                                   // 0x0358(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonHierarchicalScrollBox*           ChoicesScrollBox;                                  // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                DummyButton;                                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class UCommonButton*>                  ChoiceButtons;                                     // 0x0370(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	class FText                                   Text_Subtitle;                                     // 0x0380(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_PlayerSurveyPanelContentsAnswerMultipleChoiceWidget(int32 EntryPoint);
@@ -58,14 +58,6 @@ public:
 		return GetDefaultObjImpl<UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C>();
 	}
 };
-static_assert(alignof(UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C) == 0x000008, "Wrong alignment on UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C");
-static_assert(sizeof(UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C) == 0x0002C8, "Wrong size on UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C, UberGraphFrame) == 0x000280, "Member 'UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C, ChoicesEntryBox) == 0x000288, "Member 'UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::ChoicesEntryBox' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C, ChoicesScrollBox) == 0x000290, "Member 'UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::ChoicesScrollBox' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C, DummyButton) == 0x000298, "Member 'UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::DummyButton' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C, ChoiceButtons) == 0x0002A0, "Member 'UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::ChoiceButtons' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C, Text_Subtitle) == 0x0002B0, "Member 'UPlayerSurveyPanelContentsAnswerMultipleChoiceWidget_C::Text_Subtitle' has a wrong offset!");
 
 }
 

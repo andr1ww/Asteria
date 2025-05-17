@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_UtilityGrenade_WithTrajectory.GA_Athena_UtilityGrenade_WithTrajectory_C
-// 0x0000 (0x0C58 - 0x0C58)
+// 0x0000 (0x0E68 - 0x0E68)
 class UGA_Athena_UtilityGrenade_WithTrajectory_C : public UGA_Athena_Grenade_WithTrajectory_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_UtilityGrenade_WithTrajectory_C>();
 	}
 };
-static_assert(alignof(UGA_Athena_UtilityGrenade_WithTrajectory_C) == 0x000008, "Wrong alignment on UGA_Athena_UtilityGrenade_WithTrajectory_C");
-static_assert(sizeof(UGA_Athena_UtilityGrenade_WithTrajectory_C) == 0x000C58, "Wrong size on UGA_Athena_UtilityGrenade_WithTrajectory_C");
 
 }
 

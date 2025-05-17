@@ -10,28 +10,28 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Loop_Hot_Feet_Environmental.GCN_Loop_Hot_Feet_Environmental_C
-// 0x0060 (0x07F0 - 0x0790)
+// 0x0060 (0x0820 - 0x07C0)
 class AGCN_Loop_Hot_Feet_Environmental_C final : public AFortGameplayCueNotify_Loop
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0790(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        TargetPlayer;                                      // 0x0798(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UParticleSystemComponent*>       SpawnedEmitters;                                   // 0x07A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class USoundBase*                             SC_Footstep_Local;                                 // 0x07B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SC_Footstep_Remote;                                // 0x07B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SC_Collision;                                      // 0x07C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortCollisionAudioComponent*           CollisionAudioComp;                                // 0x07C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UAudioComponent*>                SpawnedAudioComps;                                 // 0x07D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class USoundBase*                             SC_OnJumpOrBeginFalling;                           // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SC_OnLand;                                         // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        TargetPlayer;                                      // 0x07C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UParticleSystemComponent*>       SpawnedEmitters;                                   // 0x07D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	class USoundBase*                             SC_Footstep_Local;                                 // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SC_Footstep_Remote;                                // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SC_Collision;                                      // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortCollisionAudioComponent*           CollisionAudioComp;                                // 0x07F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UAudioComponent*>                SpawnedAudioComps;                                 // 0x0800(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	class USoundBase*                             SC_OnJumpOrBeginFalling;                           // 0x0810(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SC_OnLand;                                         // 0x0818(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GCN_Loop_Hot_Feet_Environmental(int32 EntryPoint);
@@ -54,18 +54,6 @@ public:
 		return GetDefaultObjImpl<AGCN_Loop_Hot_Feet_Environmental_C>();
 	}
 };
-static_assert(alignof(AGCN_Loop_Hot_Feet_Environmental_C) == 0x000008, "Wrong alignment on AGCN_Loop_Hot_Feet_Environmental_C");
-static_assert(sizeof(AGCN_Loop_Hot_Feet_Environmental_C) == 0x0007F0, "Wrong size on AGCN_Loop_Hot_Feet_Environmental_C");
-static_assert(offsetof(AGCN_Loop_Hot_Feet_Environmental_C, UberGraphFrame) == 0x000790, "Member 'AGCN_Loop_Hot_Feet_Environmental_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Hot_Feet_Environmental_C, TargetPlayer) == 0x000798, "Member 'AGCN_Loop_Hot_Feet_Environmental_C::TargetPlayer' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Hot_Feet_Environmental_C, SpawnedEmitters) == 0x0007A0, "Member 'AGCN_Loop_Hot_Feet_Environmental_C::SpawnedEmitters' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Hot_Feet_Environmental_C, SC_Footstep_Local) == 0x0007B0, "Member 'AGCN_Loop_Hot_Feet_Environmental_C::SC_Footstep_Local' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Hot_Feet_Environmental_C, SC_Footstep_Remote) == 0x0007B8, "Member 'AGCN_Loop_Hot_Feet_Environmental_C::SC_Footstep_Remote' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Hot_Feet_Environmental_C, SC_Collision) == 0x0007C0, "Member 'AGCN_Loop_Hot_Feet_Environmental_C::SC_Collision' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Hot_Feet_Environmental_C, CollisionAudioComp) == 0x0007C8, "Member 'AGCN_Loop_Hot_Feet_Environmental_C::CollisionAudioComp' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Hot_Feet_Environmental_C, SpawnedAudioComps) == 0x0007D0, "Member 'AGCN_Loop_Hot_Feet_Environmental_C::SpawnedAudioComps' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Hot_Feet_Environmental_C, SC_OnJumpOrBeginFalling) == 0x0007E0, "Member 'AGCN_Loop_Hot_Feet_Environmental_C::SC_OnJumpOrBeginFalling' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Hot_Feet_Environmental_C, SC_OnLand) == 0x0007E8, "Member 'AGCN_Loop_Hot_Feet_Environmental_C::SC_OnLand' has a wrong offset!");
 
 }
 

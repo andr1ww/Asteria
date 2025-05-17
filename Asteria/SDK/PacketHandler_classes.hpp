@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "PacketHandler_structs.hpp"
 
 
 namespace SDK
@@ -31,36 +30,13 @@ public:
 		return GetDefaultObjImpl<UHandlerComponentFactory>();
 	}
 };
-static_assert(alignof(UHandlerComponentFactory) == 0x000008, "Wrong alignment on UHandlerComponentFactory");
-static_assert(sizeof(UHandlerComponentFactory) == 0x000028, "Wrong size on UHandlerComponentFactory");
-
-// Class PacketHandler.NetAnalyticsAggregatorConfig
-// 0x0010 (0x0038 - 0x0028)
-class UNetAnalyticsAggregatorConfig final : public UObject
-{
-public:
-	TArray<struct FNetAnalyticsDataConfig>        NetAnalyticsData;                                  // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NetAnalyticsAggregatorConfig">();
-	}
-	static class UNetAnalyticsAggregatorConfig* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNetAnalyticsAggregatorConfig>();
-	}
-};
-static_assert(alignof(UNetAnalyticsAggregatorConfig) == 0x000008, "Wrong alignment on UNetAnalyticsAggregatorConfig");
-static_assert(sizeof(UNetAnalyticsAggregatorConfig) == 0x000038, "Wrong size on UNetAnalyticsAggregatorConfig");
-static_assert(offsetof(UNetAnalyticsAggregatorConfig, NetAnalyticsData) == 0x000028, "Member 'UNetAnalyticsAggregatorConfig::NetAnalyticsData' has a wrong offset!");
 
 // Class PacketHandler.PacketHandlerProfileConfig
 // 0x0010 (0x0038 - 0x0028)
 class UPacketHandlerProfileConfig final : public UObject
 {
 public:
-	TArray<class FString>                         Components;                                        // 0x0028(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         Components;                                        // 0x0028(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -72,9 +48,6 @@ public:
 		return GetDefaultObjImpl<UPacketHandlerProfileConfig>();
 	}
 };
-static_assert(alignof(UPacketHandlerProfileConfig) == 0x000008, "Wrong alignment on UPacketHandlerProfileConfig");
-static_assert(sizeof(UPacketHandlerProfileConfig) == 0x000038, "Wrong size on UPacketHandlerProfileConfig");
-static_assert(offsetof(UPacketHandlerProfileConfig, Components) == 0x000028, "Member 'UPacketHandlerProfileConfig::Components' has a wrong offset!");
 
 }
 

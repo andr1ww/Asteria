@@ -37,37 +37,31 @@ void AB_Pickups_Default_C::ExecuteUbergraph_B_Pickups_Default(int32 EntryPoint)
 }
 
 
-// Function B_Pickups_Default.B_Pickups_Default_C.Setup Light
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function B_Pickups_Default.B_Pickups_Default_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AB_Pickups_Default_C::Setup_Light()
+void AB_Pickups_Default_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Default_C", "Setup Light");
+		Func = Class->GetFunction("B_Pickups_Default_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function B_Pickups_Default.B_Pickups_Default_C.Set Initial BKGD Param
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UMaterialInstanceDynamic*         Mid                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function B_Pickups_Default.B_Pickups_Default_C.HideBackgroundAndSpotlight
+// (BlueprintCallable, BlueprintEvent)
 
-void AB_Pickups_Default_C::Set_Initial_BKGD_Param(class UMaterialInstanceDynamic* Mid)
+void AB_Pickups_Default_C::HideBackgroundAndSpotlight()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Default_C", "Set Initial BKGD Param");
+		Func = Class->GetFunction("B_Pickups_Default_C", "HideBackgroundAndSpotlight");
 
-	Params::B_Pickups_Default_C_Set_Initial_BKGD_Param Parms{};
-
-	Parms.Mid = Mid;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -113,17 +107,37 @@ void AB_Pickups_Default_C::UserConstructionScript()
 }
 
 
-// Function B_Pickups_Default.B_Pickups_Default_C.Randomize Mesh Rotation for BR
+// Function B_Pickups_Default.B_Pickups_Default_C.Setup Light
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void AB_Pickups_Default_C::Randomize_Mesh_Rotation_for_BR()
+void AB_Pickups_Default_C::Setup_Light()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Pickups_Default_C", "Randomize Mesh Rotation for BR");
+		Func = Class->GetFunction("B_Pickups_Default_C", "Setup Light");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Pickups_Default.B_Pickups_Default_C.Set Initial BKGD Param
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMaterialInstanceDynamic*         Mid                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Pickups_Default_C::Set_Initial_BKGD_Param(class UMaterialInstanceDynamic* Mid)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Pickups_Default_C", "Set Initial BKGD Param");
+
+	Params::B_Pickups_Default_C_Set_Initial_BKGD_Param Parms{};
+
+	Parms.Mid = Mid;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

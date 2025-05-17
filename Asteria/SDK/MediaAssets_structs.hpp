@@ -15,9 +15,10 @@ namespace SDK
 {
 
 // Enum MediaAssets.EMediaWebcamCaptureDeviceFilter
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EMediaWebcamCaptureDeviceFilter : uint8
 {
+	None                                     = 0,
 	DepthSensor                              = 1,
 	Front                                    = 2,
 	Rear                                     = 4,
@@ -26,9 +27,10 @@ enum class EMediaWebcamCaptureDeviceFilter : uint8
 };
 
 // Enum MediaAssets.EMediaVideoCaptureDeviceFilter
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EMediaVideoCaptureDeviceFilter : uint8
 {
+	None                                     = 0,
 	Card                                     = 1,
 	Software                                 = 2,
 	Unknown                                  = 4,
@@ -37,9 +39,10 @@ enum class EMediaVideoCaptureDeviceFilter : uint8
 };
 
 // Enum MediaAssets.EMediaAudioCaptureDeviceFilter
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EMediaAudioCaptureDeviceFilter : uint8
 {
+	None                                     = 0,
 	Card                                     = 1,
 	Microphone                               = 2,
 	Software                                 = 4,
@@ -82,6 +85,26 @@ enum class EMediaSoundChannels : uint32
 	EMediaSoundChannels_MAX                  = 3,
 };
 
+// Enum MediaAssets.MediaTextureOrientation
+// NumValues: 0x0005
+enum class EMediaTextureOrientation : uint8
+{
+	MTORI_Original                           = 0,
+	MTORI_CW90                               = 1,
+	MTORI_CW180                              = 2,
+	MTORI_CW270                              = 3,
+	MTORI_MAX                                = 4,
+};
+
+// Enum MediaAssets.MediaTextureOutputFormat
+// NumValues: 0x0003
+enum class EMediaTextureOutputFormat : uint8
+{
+	MTOF_Default                             = 0,
+	MTOF_SRGB_LINOUT                         = 1,
+	MTOF_MAX                                 = 2,
+};
+
 // ScriptStruct MediaAssets.MediaCaptureDevice
 // 0x0028 (0x0028 - 0x0000)
 struct FMediaCaptureDevice final
@@ -90,10 +113,6 @@ public:
 	class FText                                   DisplayName;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Transient, NativeAccessSpecifierPublic)
 	class FString                                 URL;                                               // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMediaCaptureDevice) == 0x000008, "Wrong alignment on FMediaCaptureDevice");
-static_assert(sizeof(FMediaCaptureDevice) == 0x000028, "Wrong size on FMediaCaptureDevice");
-static_assert(offsetof(FMediaCaptureDevice, DisplayName) == 0x000000, "Member 'FMediaCaptureDevice::DisplayName' has a wrong offset!");
-static_assert(offsetof(FMediaCaptureDevice, URL) == 0x000018, "Member 'FMediaCaptureDevice::URL' has a wrong offset!");
 
 // ScriptStruct MediaAssets.MediaSoundComponentSpectralData
 // 0x0008 (0x0008 - 0x0000)
@@ -103,10 +122,6 @@ public:
 	float                                         FrequencyHz;                                       // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Magnitude;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMediaSoundComponentSpectralData) == 0x000004, "Wrong alignment on FMediaSoundComponentSpectralData");
-static_assert(sizeof(FMediaSoundComponentSpectralData) == 0x000008, "Wrong size on FMediaSoundComponentSpectralData");
-static_assert(offsetof(FMediaSoundComponentSpectralData, FrequencyHz) == 0x000000, "Member 'FMediaSoundComponentSpectralData::FrequencyHz' has a wrong offset!");
-static_assert(offsetof(FMediaSoundComponentSpectralData, Magnitude) == 0x000004, "Member 'FMediaSoundComponentSpectralData::Magnitude' has a wrong offset!");
 
 }
 

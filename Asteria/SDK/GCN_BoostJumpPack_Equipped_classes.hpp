@@ -21,11 +21,11 @@ namespace SDK
 class UGCN_BoostJumpPack_Equipped_C final : public UFortGameplayCueNotify_Simple
 {
 public:
-	bool OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters) const;
-	float GetMaxFuel(class APlayerPawn_Athena_C* PlayerPawn) const;
-	float GetFuel(class APlayerPawn_Athena_C* PlayerPawn) const;
-	void GetFuelPercent(class APlayerPawn_Athena_C* PlayerPawn, float* Fuel_Percent) const;
 	bool WhileActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters) const;
+	void GetFuelPercent(class APlayerPawn_Athena_C* PlayerPawn, float* Fuel_Percent) const;
+	float GetFuel(class APlayerPawn_Athena_C* PlayerPawn) const;
+	float GetMaxFuel(class APlayerPawn_Athena_C* PlayerPawn) const;
+	bool OnExecute(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters) const;
 
 public:
 	static class UClass* StaticClass()
@@ -37,8 +37,6 @@ public:
 		return GetDefaultObjImpl<UGCN_BoostJumpPack_Equipped_C>();
 	}
 };
-static_assert(alignof(UGCN_BoostJumpPack_Equipped_C) == 0x000008, "Wrong alignment on UGCN_BoostJumpPack_Equipped_C");
-static_assert(sizeof(UGCN_BoostJumpPack_Equipped_C) == 0x000080, "Wrong size on UGCN_BoostJumpPack_Equipped_C");
 
 }
 

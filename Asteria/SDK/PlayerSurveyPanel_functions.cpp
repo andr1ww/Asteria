@@ -37,71 +37,43 @@ void UPlayerSurveyPanel_C::ExecuteUbergraph_PlayerSurveyPanel(int32 EntryPoint)
 }
 
 
-// Function PlayerSurveyPanel.PlayerSurveyPanel_C.BndEvt__PlayerSurveyPanelContents_K2Node_ComponentBoundEvent_0_OnSurveyEnded__DelegateSignature
-// (BlueprintEvent)
-
-void UPlayerSurveyPanel_C::BndEvt__PlayerSurveyPanelContents_K2Node_ComponentBoundEvent_0_OnSurveyEnded__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyPanel_C", "BndEvt__PlayerSurveyPanelContents_K2Node_ComponentBoundEvent_0_OnSurveyEnded__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerSurveyPanel.PlayerSurveyPanel_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UPlayerSurveyPanel_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyPanel_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerSurveyPanel.PlayerSurveyPanel_C.HandleSurveyChanged
+// Function PlayerSurveyPanel.PlayerSurveyPanel_C.OnPlayerSurveyEnded
 // (Event, Protected, BlueprintEvent)
 
-void UPlayerSurveyPanel_C::HandleSurveyChanged()
+void UPlayerSurveyPanel_C::OnPlayerSurveyEnded()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyPanel_C", "HandleSurveyChanged");
+		Func = Class->GetFunction("PlayerSurveyPanel_C", "OnPlayerSurveyEnded");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function PlayerSurveyPanel.PlayerSurveyPanel_C.IntroDone
+// Function PlayerSurveyPanel.PlayerSurveyPanel_C.StartIntro_BP
+// (Event, Public, BlueprintEvent)
+
+void UPlayerSurveyPanel_C::StartIntro_BP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerSurveyPanel_C", "StartIntro_BP");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PlayerSurveyPanel.PlayerSurveyPanel_C.StartIntro
 // (BlueprintCallable, BlueprintEvent)
 
-void UPlayerSurveyPanel_C::IntroDone()
+void UPlayerSurveyPanel_C::StartIntro()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyPanel_C", "IntroDone");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PlayerSurveyPanel.PlayerSurveyPanel_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UPlayerSurveyPanel_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyPanel_C", "OnActivated");
+		Func = Class->GetFunction("PlayerSurveyPanel_C", "StartIntro");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -121,15 +93,15 @@ void UPlayerSurveyPanel_C::OutroDone()
 }
 
 
-// Function PlayerSurveyPanel.PlayerSurveyPanel_C.StartIntro
-// (BlueprintCallable, BlueprintEvent)
+// Function PlayerSurveyPanel.PlayerSurveyPanel_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UPlayerSurveyPanel_C::StartIntro()
+void UPlayerSurveyPanel_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyPanel_C", "StartIntro");
+		Func = Class->GetFunction("PlayerSurveyPanel_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

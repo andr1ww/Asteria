@@ -37,6 +37,42 @@ void UGA_BoostJumpPack_C::ExecuteUbergraph_GA_BoostJumpPack(int32 EntryPoint)
 }
 
 
+// Function GA_BoostJumpPack.GA_BoostJumpPack_C.OnEnterVehicle
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_BoostJumpPack_C::OnEnterVehicle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_BoostJumpPack_C", "OnEnterVehicle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_BoostJumpPack.GA_BoostJumpPack_C.OnSavedPawnChanged 
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortPlayerPawn*                  PreviousPawn                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerPawn*                  NewPawn                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_BoostJumpPack_C::OnSavedPawnChanged_(class AFortPlayerPawn* PreviousPawn, class AFortPlayerPawn* NewPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_BoostJumpPack_C", "OnSavedPawnChanged ");
+
+	Params::GA_BoostJumpPack_C_OnSavedPawnChanged_ Parms{};
+
+	Parms.PreviousPawn = PreviousPawn;
+	Parms.NewPawn = NewPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.Delay_ProcessAbilityStateMachine
 // (BlueprintCallable, BlueprintEvent)
 
@@ -76,7 +112,7 @@ void UGA_BoostJumpPack_C::OnCurrentStateChanged(EJumpBoostPackState InPreviousSt
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.K2_ActivateAbilityFromEvent
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FGameplayEventData               EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UGA_BoostJumpPack_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
 {
@@ -96,7 +132,7 @@ void UGA_BoostJumpPack_C::K2_ActivateAbilityFromEvent(const struct FGameplayEven
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.OnPawnLanded
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FHitResult                       Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FHitResult&                Hit                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
 void UGA_BoostJumpPack_C::OnPawnLanded(const struct FHitResult& Hit)
 {
@@ -131,8 +167,8 @@ void UGA_BoostJumpPack_C::On_Reached_Jump_Apex()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AFortPlayerPawn*                  Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AFortPlayerPawn*                  Pawn_Out                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Jump_Height                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortPlayerPawn**                 Pawn_Out                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         Jump_Height                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGA_BoostJumpPack_C::SetJumpHeight(class AFortPlayerPawn* Pawn, class AFortPlayerPawn** Pawn_Out, struct FVector* Jump_Height)
 {
@@ -172,7 +208,7 @@ void UGA_BoostJumpPack_C::HandleBoostJump()
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.SetupTransitionVariables
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayTag                     Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
 void UGA_BoostJumpPack_C::SetupTransitionVariables(const struct FGameplayTag& Tag)
 {
@@ -192,7 +228,7 @@ void UGA_BoostJumpPack_C::SetupTransitionVariables(const struct FGameplayTag& Ta
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.DetermineStateToTransitionTo
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// Enum_BoostJumpStates                    BoostState                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Enum_BoostJumpStates*                   BoostState                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGA_BoostJumpPack_C::DetermineStateToTransitionTo(Enum_BoostJumpStates* BoostState)
 {
@@ -227,7 +263,7 @@ void UGA_BoostJumpPack_C::ProcessAbilityStateMachine()
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.TransitionFromBoost
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// Enum_BoostJumpStates                    TargetBoostState                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Enum_BoostJumpStates*                   TargetBoostState                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGA_BoostJumpPack_C::TransitionFromBoost(Enum_BoostJumpStates* TargetBoostState)
 {
@@ -248,7 +284,7 @@ void UGA_BoostJumpPack_C::TransitionFromBoost(Enum_BoostJumpStates* TargetBoostS
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.TransitionFromHovering
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// Enum_BoostJumpStates                    TargetBoostState                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Enum_BoostJumpStates*                   TargetBoostState                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGA_BoostJumpPack_C::TransitionFromHovering(Enum_BoostJumpStates* TargetBoostState)
 {
@@ -269,7 +305,7 @@ void UGA_BoostJumpPack_C::TransitionFromHovering(Enum_BoostJumpStates* TargetBoo
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.TransitionFromFalling
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// Enum_BoostJumpStates                    TargetBoostState                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Enum_BoostJumpStates*                   TargetBoostState                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGA_BoostJumpPack_C::TransitionFromFalling(Enum_BoostJumpStates* TargetBoostState)
 {
@@ -289,15 +325,21 @@ void UGA_BoostJumpPack_C::TransitionFromFalling(Enum_BoostJumpStates* TargetBoos
 
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.ResetTransitionVariables
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bForceEndHovering                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UGA_BoostJumpPack_C::ResetTransitionVariables()
+void UGA_BoostJumpPack_C::ResetTransitionVariables(bool bForceEndHovering)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GA_BoostJumpPack_C", "ResetTransitionVariables");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GA_BoostJumpPack_C_ResetTransitionVariables Parms{};
+
+	Parms.bForceEndHovering = bForceEndHovering;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -331,15 +373,21 @@ void UGA_BoostJumpPack_C::HandleFalling()
 
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.HandleIdle
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bForceEndHovering                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UGA_BoostJumpPack_C::HandleIdle()
+void UGA_BoostJumpPack_C::HandleIdle(bool bForceEndHovering)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GA_BoostJumpPack_C", "HandleIdle");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GA_BoostJumpPack_C_HandleIdle Parms{};
+
+	Parms.bForceEndHovering = bForceEndHovering;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -538,7 +586,7 @@ void UGA_BoostJumpPack_C::Stop_Regen_Effect()
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.ProcessTriggerData
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayTag                     TagOne                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              TagOne                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 
 void UGA_BoostJumpPack_C::ProcessTriggerData(const struct FGameplayTag& TagOne)
 {
@@ -670,7 +718,7 @@ void UGA_BoostJumpPack_C::Handle_Jetpack_Equipped()
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.TransitionFromIdle
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// Enum_BoostJumpStates                    TargetBoostState                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Enum_BoostJumpStates*                   TargetBoostState                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGA_BoostJumpPack_C::TransitionFromIdle(Enum_BoostJumpStates* TargetBoostState) const
 {
@@ -691,7 +739,7 @@ void UGA_BoostJumpPack_C::TransitionFromIdle(Enum_BoostJumpStates* TargetBoostSt
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.GetFuel
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// float                                   Fuel                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  Fuel                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGA_BoostJumpPack_C::GetFuel(float* Fuel) const
 {
@@ -712,7 +760,7 @@ void UGA_BoostJumpPack_C::GetFuel(float* Fuel) const
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.GetMaxFuel
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// float                                   MaxFuel                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  MaxFuel                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGA_BoostJumpPack_C::GetMaxFuel(float* MaxFuel) const
 {
@@ -733,8 +781,8 @@ void UGA_BoostJumpPack_C::GetMaxFuel(float* MaxFuel) const
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.K2_ShouldAbilityRespondToEvent
 // (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// struct FGameplayAbilityActorInfo        ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-// struct FGameplayEventData               Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGameplayAbilityActorInfo& ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+// const struct FGameplayEventData&        Payload                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UGA_BoostJumpPack_C::K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& Payload) const
@@ -778,7 +826,7 @@ bool UGA_BoostJumpPack_C::IsBoostAllowed() const
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.IsCurrentlyDead
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// struct FGameplayTag                     TagOne                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              TagOne                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UGA_BoostJumpPack_C::IsCurrentlyDead(const struct FGameplayTag& TagOne) const
@@ -824,7 +872,7 @@ class AFortPlayerPawn* UGA_BoostJumpPack_C::Get_Player_Pawn(class UObject* Objec
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.Reasons To Reset on Transition
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// struct FGameplayTag                     Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UGA_BoostJumpPack_C::Reasons_To_Reset_on_Transition(const struct FGameplayTag& Tag) const
@@ -847,11 +895,12 @@ bool UGA_BoostJumpPack_C::Reasons_To_Reset_on_Transition(const struct FGameplayT
 // Function GA_BoostJumpPack.GA_BoostJumpPack_C.K2_CanActivateAbility
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// struct FGameplayAbilityActorInfo        ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-// struct FGameplayTagContainer            RelevantTags                                           (Parm, OutParm)
+// const struct FGameplayAbilityActorInfo& ActorInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+// const struct FGameplayAbilitySpecHandle&Handle                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// struct FGameplayTagContainer*           RelevantTags                                           (Parm, OutParm)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool UGA_BoostJumpPack_C::K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, struct FGameplayTagContainer* RelevantTags) const
+bool UGA_BoostJumpPack_C::K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayAbilitySpecHandle& Handle, struct FGameplayTagContainer* RelevantTags) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -861,11 +910,32 @@ bool UGA_BoostJumpPack_C::K2_CanActivateAbility(const struct FGameplayAbilityAct
 	Params::GA_BoostJumpPack_C_K2_CanActivateAbility Parms{};
 
 	Parms.ActorInfo = std::move(ActorInfo);
+	Parms.Handle = std::move(Handle);
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	if (RelevantTags != nullptr)
 		*RelevantTags = std::move(Parms.RelevantTags);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GA_BoostJumpPack.GA_BoostJumpPack_C.NotInHidingSpot
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UGA_BoostJumpPack_C::NotInHidingSpot() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_BoostJumpPack_C", "NotInHidingSpot");
+
+	Params::GA_BoostJumpPack_C_NotInHidingSpot Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
 }

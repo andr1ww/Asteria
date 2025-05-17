@@ -10,41 +10,41 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Loop_GhostMode.GCN_Loop_GhostMode_C
-// 0x0058 (0x07E8 - 0x0790)
+// 0x0050 (0x0810 - 0x07C0)
 class AGCN_Loop_GhostMode_C final : public AFortGameplayCueNotify_Loop
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0790(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         FadeMaterialsTL_Lerp_D7B0BAAD47F48403BE23B98F38D8CA3E; // 0x0798(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            FadeMaterialsTL__Direction_D7B0BAAD47F48403BE23B98F38D8CA3E; // 0x079C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79D[0x3];                                      // 0x079D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     FadeMaterialsTL;                                   // 0x07A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInterface*>             PawnMaterials;                                     // 0x07A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
-	struct FLinearColor                           HitGlowColor;                                      // 0x07B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           HotGlowOuterColor;                                 // 0x07C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         HitGlowFresnelBrightness;                          // 0x07D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         HitGlowFresnelExponent;                            // 0x07DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Phased;                                         // 0x07E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         FadeMaterialsTL_Lerp_D7B0BAAD47F48403BE23B98F38D8CA3E; // 0x07C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            FadeMaterialsTL__Direction_D7B0BAAD47F48403BE23B98F38D8CA3E; // 0x07CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7CD[0x3];                                      // 0x07CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     FadeMaterialsTL;                                   // 0x07D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           HitGlowColor;                                      // 0x07D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           HotGlowOuterColor;                                 // 0x07E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         HitGlowFresnelBrightness;                          // 0x07F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         HitGlowFresnelExponent;                            // 0x07FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerPawn_Athena_C*                   Target_Player;                                     // 0x0800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Glow__;                                            // 0x0808(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Glow_Priority;                                     // 0x080C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void GetCharacterPartTypeMaterials(class AFortPlayerPawn* Fort_Player_Pawn, EFortCustomPartType PartType);
-	void FadeMaterialsTL__FinishedFunc();
-	void FadeMaterialsTL__UpdateFunc();
-	void OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents);
-	void OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
-	void FadeMaterialsIn();
-	void FadeMaterialsOut();
 	void ExecuteUbergraph_GCN_Loop_GhostMode(int32 EntryPoint);
+	void FadeMaterialsOut();
+	void FadeMaterialsIn();
+	void OnRemoval(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents, class UCameraShake* BurstCameraShakeInstance, class ADecalActor* BurstDecalInstance);
+	void OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents);
+	void FadeMaterialsTL__UpdateFunc();
+	void FadeMaterialsTL__FinishedFunc();
+	void Highlight_Lerp(float Alpha, struct FPawnHighlight* Highlight);
 
 public:
 	static class UClass* StaticClass()
@@ -56,18 +56,6 @@ public:
 		return GetDefaultObjImpl<AGCN_Loop_GhostMode_C>();
 	}
 };
-static_assert(alignof(AGCN_Loop_GhostMode_C) == 0x000008, "Wrong alignment on AGCN_Loop_GhostMode_C");
-static_assert(sizeof(AGCN_Loop_GhostMode_C) == 0x0007E8, "Wrong size on AGCN_Loop_GhostMode_C");
-static_assert(offsetof(AGCN_Loop_GhostMode_C, UberGraphFrame) == 0x000790, "Member 'AGCN_Loop_GhostMode_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_GhostMode_C, FadeMaterialsTL_Lerp_D7B0BAAD47F48403BE23B98F38D8CA3E) == 0x000798, "Member 'AGCN_Loop_GhostMode_C::FadeMaterialsTL_Lerp_D7B0BAAD47F48403BE23B98F38D8CA3E' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_GhostMode_C, FadeMaterialsTL__Direction_D7B0BAAD47F48403BE23B98F38D8CA3E) == 0x00079C, "Member 'AGCN_Loop_GhostMode_C::FadeMaterialsTL__Direction_D7B0BAAD47F48403BE23B98F38D8CA3E' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_GhostMode_C, FadeMaterialsTL) == 0x0007A0, "Member 'AGCN_Loop_GhostMode_C::FadeMaterialsTL' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_GhostMode_C, PawnMaterials) == 0x0007A8, "Member 'AGCN_Loop_GhostMode_C::PawnMaterials' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_GhostMode_C, HitGlowColor) == 0x0007B8, "Member 'AGCN_Loop_GhostMode_C::HitGlowColor' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_GhostMode_C, HotGlowOuterColor) == 0x0007C8, "Member 'AGCN_Loop_GhostMode_C::HotGlowOuterColor' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_GhostMode_C, HitGlowFresnelBrightness) == 0x0007D8, "Member 'AGCN_Loop_GhostMode_C::HitGlowFresnelBrightness' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_GhostMode_C, HitGlowFresnelExponent) == 0x0007DC, "Member 'AGCN_Loop_GhostMode_C::HitGlowFresnelExponent' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_GhostMode_C, Is_Phased) == 0x0007E0, "Member 'AGCN_Loop_GhostMode_C::Is_Phased' has a wrong offset!");
 
 }
 

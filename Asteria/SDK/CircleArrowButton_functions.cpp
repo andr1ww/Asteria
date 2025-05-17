@@ -17,25 +17,65 @@
 namespace SDK
 {
 
-// Function CircleArrowButton.CircleArrowButton_C.UpdateArrowColor
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function CircleArrowButton.CircleArrowButton_C.ExecuteUbergraph_CircleArrowButton
+// (Final, UbergraphFunction)
 // Parameters:
-// struct FLinearColor                     Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     HoverColor_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCircleArrowButton_C::UpdateArrowColor(const struct FLinearColor& Color, const struct FLinearColor& HoverColor_0)
+void UCircleArrowButton_C::ExecuteUbergraph_CircleArrowButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CircleArrowButton_C", "UpdateArrowColor");
+		Func = Class->GetFunction("CircleArrowButton_C", "ExecuteUbergraph_CircleArrowButton");
 
-	Params::CircleArrowButton_C_UpdateArrowColor Parms{};
+	Params::CircleArrowButton_C_ExecuteUbergraph_CircleArrowButton Parms{};
 
-	Parms.Color = std::move(Color);
-	Parms.HoverColor_0 = std::move(HoverColor_0);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CircleArrowButton.CircleArrowButton_C.BP_OnClicked
+// (Event, Protected, BlueprintEvent)
+
+void UCircleArrowButton_C::BP_OnClicked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CircleArrowButton_C", "BP_OnClicked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CircleArrowButton.CircleArrowButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UCircleArrowButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CircleArrowButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CircleArrowButton.CircleArrowButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UCircleArrowButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CircleArrowButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -59,63 +99,23 @@ void UCircleArrowButton_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function CircleArrowButton.CircleArrowButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UCircleArrowButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CircleArrowButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CircleArrowButton.CircleArrowButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UCircleArrowButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CircleArrowButton_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CircleArrowButton.CircleArrowButton_C.BP_OnClicked
-// (Event, Protected, BlueprintEvent)
-
-void UCircleArrowButton_C::BP_OnClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CircleArrowButton_C", "BP_OnClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CircleArrowButton.CircleArrowButton_C.ExecuteUbergraph_CircleArrowButton
-// (Final, UbergraphFunction)
+// Function CircleArrowButton.CircleArrowButton_C.UpdateArrowColor
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              Color                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              HoverColor_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCircleArrowButton_C::ExecuteUbergraph_CircleArrowButton(int32 EntryPoint)
+void UCircleArrowButton_C::UpdateArrowColor(const struct FLinearColor& Color, const struct FLinearColor& HoverColor_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CircleArrowButton_C", "ExecuteUbergraph_CircleArrowButton");
+		Func = Class->GetFunction("CircleArrowButton_C", "UpdateArrowColor");
 
-	Params::CircleArrowButton_C_ExecuteUbergraph_CircleArrowButton Parms{};
+	Params::CircleArrowButton_C_UpdateArrowColor Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Color = std::move(Color);
+	Parms.HoverColor_0 = std::move(HoverColor_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

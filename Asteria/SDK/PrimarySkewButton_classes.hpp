@@ -18,20 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PrimarySkewButton.PrimarySkewButton_C
-// 0x0050 (0x0B98 - 0x0B48)
+// 0x0050 (0x0BF0 - 0x0BA0)
 class UPrimarySkewButton_C final : public UCommonButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Pressed;                                           // 0x0B50(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover;                                             // 0x0B58(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0B60(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_ButtonTop;                                   // 0x0B68(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Shadow;                                      // 0x0B70(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          ToUpper;                                           // 0x0B78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          XL;                                                // 0x0B79(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B7A[0x6];                                      // 0x0B7A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   ButtonNameText;                                    // 0x0B80(0x0018)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Pressed;                                           // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BB0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_ButtonTop;                                   // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Shadow;                                      // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          ToUpper;                                           // 0x0BD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          XL;                                                // 0x0BD1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BD2[0x6];                                      // 0x0BD2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ButtonNameText;                                    // 0x0BD8(0x0018)(Edit, BlueprintVisible)
 
 public:
 	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
@@ -54,17 +54,6 @@ public:
 		return GetDefaultObjImpl<UPrimarySkewButton_C>();
 	}
 };
-static_assert(alignof(UPrimarySkewButton_C) == 0x000008, "Wrong alignment on UPrimarySkewButton_C");
-static_assert(sizeof(UPrimarySkewButton_C) == 0x000B98, "Wrong size on UPrimarySkewButton_C");
-static_assert(offsetof(UPrimarySkewButton_C, UberGraphFrame) == 0x000B48, "Member 'UPrimarySkewButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPrimarySkewButton_C, Pressed) == 0x000B50, "Member 'UPrimarySkewButton_C::Pressed' has a wrong offset!");
-static_assert(offsetof(UPrimarySkewButton_C, Hover) == 0x000B58, "Member 'UPrimarySkewButton_C::Hover' has a wrong offset!");
-static_assert(offsetof(UPrimarySkewButton_C, CenterButtonTextWidget) == 0x000B60, "Member 'UPrimarySkewButton_C::CenterButtonTextWidget' has a wrong offset!");
-static_assert(offsetof(UPrimarySkewButton_C, Image_ButtonTop) == 0x000B68, "Member 'UPrimarySkewButton_C::Image_ButtonTop' has a wrong offset!");
-static_assert(offsetof(UPrimarySkewButton_C, Image_Shadow) == 0x000B70, "Member 'UPrimarySkewButton_C::Image_Shadow' has a wrong offset!");
-static_assert(offsetof(UPrimarySkewButton_C, ToUpper) == 0x000B78, "Member 'UPrimarySkewButton_C::ToUpper' has a wrong offset!");
-static_assert(offsetof(UPrimarySkewButton_C, XL) == 0x000B79, "Member 'UPrimarySkewButton_C::XL' has a wrong offset!");
-static_assert(offsetof(UPrimarySkewButton_C, ButtonNameText) == 0x000B80, "Member 'UPrimarySkewButton_C::ButtonNameText' has a wrong offset!");
 
 }
 

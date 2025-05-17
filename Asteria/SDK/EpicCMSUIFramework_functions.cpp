@@ -20,7 +20,7 @@ namespace SDK
 // Function EpicCMSUIFramework.EpicCMSImage.SetMediaURL
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           MediaUrl                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    MediaUrl                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UEpicCMSImage::SetMediaURL(const class FString& MediaUrl)
 {
@@ -191,7 +191,7 @@ void UEpicCMSTileCarousel::PreviousPage()
 // Function EpicCMSUIFramework.EpicCMSTileCarousel.SetCurrentPageByIndex
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// int32                                   PageIndex                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             PageIndex                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UEpicCMSTileCarousel::SetCurrentPageByIndex(const int32 PageIndex)
 {

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayAbilities_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -51,7 +51,7 @@ public:
 	struct FParticleSysParam                      K2Node_MakeStruct_ParticleSysParam_6;              // 0x0390(0x0080)(IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FParticleSysParam>              K2Node_MakeArray_Array;                            // 0x0418(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<struct FParticleSysParam>              K2Node_MakeArray_Array;                            // 0x0418(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	float                                         Temp_float_Variable;                               // 0x0428(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x042C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x042D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -86,57 +86,6 @@ public:
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0588(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_VSize_ReturnValue;                        // 0x0594(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad) == 0x000010, "Wrong alignment on Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad");
-static_assert(sizeof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad) == 0x0005A0, "Wrong size on Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, EntryPoint) == 0x000000, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_BreakVector_X) == 0x000004, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_BreakVector_Y) == 0x000008, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_BreakVector_Z) == 0x00000C, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000010, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000014, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_MakeVector_ReturnValue) == 0x000018, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_MakeVector_ReturnValue_1) == 0x000024, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000030, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x00003C, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_MakeStruct_ParticleSysParam) == 0x000050, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_MakeStruct_ParticleSysParam' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_MakeStruct_ParticleSysParam_1) == 0x0000D0, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_MakeStruct_ParticleSysParam_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_Multiply_VectorVector_ReturnValue_2) == 0x000150, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_Multiply_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_Multiply_VectorVector_ReturnValue_3) == 0x00015C, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_Multiply_VectorVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_MakeStruct_ParticleSysParam_2) == 0x000170, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_MakeStruct_ParticleSysParam_2' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_MakeStruct_ParticleSysParam_3) == 0x0001F0, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_MakeStruct_ParticleSysParam_3' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_MakeStruct_ParticleSysParam_4) == 0x000270, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_MakeStruct_ParticleSysParam_4' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_IsValid_ReturnValue) == 0x0002F0, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_MakeStruct_ParticleSysParam_5) == 0x000300, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_MakeStruct_ParticleSysParam_5' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, Temp_bool_IsClosed_Variable) == 0x000380, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_IsDedicatedServer_ReturnValue) == 0x000381, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_MakeStruct_ParticleSysParam_6) == 0x000390, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_MakeStruct_ParticleSysParam_6' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x000410, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_MakeArray_Array) == 0x000418, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, Temp_float_Variable) == 0x000428, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::Temp_float_Variable' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x00042C, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, Temp_bool_Has_Been_Initd_Variable) == 0x00042D, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000430, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x00043C, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_GameplayCueEvent_EventType) == 0x000448, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_GameplayCueEvent_EventType' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_GameplayCueEvent_Parameters) == 0x000450, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_GameplayCueEvent_Parameters' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_IsValid_ReturnValue_1) == 0x000508, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_SwitchEnum_CmpSuccess) == 0x000509, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_SpawnEmitterAttached_ReturnValue) == 0x000510, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_SpawnEmitterAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000518, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_K2_GetActorLocation_ReturnValue_2) == 0x000524, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_K2_GetActorLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_K2_GetActorLocation_ReturnValue_3) == 0x000530, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_K2_GetActorLocation_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_DynamicCast_AsFort_Athena_SKVehicle) == 0x000540, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_DynamicCast_AsFort_Athena_SKVehicle' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_DynamicCast_bSuccess) == 0x000548, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_DynamicCast_AsFort_Player_Pawn_Athena) == 0x000550, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_DynamicCast_AsFort_Player_Pawn_Athena' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, K2Node_DynamicCast_bSuccess_1) == 0x000558, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_SpawnEmitterAttached_ReturnValue_1) == 0x000560, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_SpawnEmitterAttached_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_GetValueAtLevel_ReturnValue) == 0x000568, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_GetValueAtLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_Greater_FloatFloat_ReturnValue) == 0x00056C, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_GetPlayerCameraManager_ReturnValue) == 0x000570, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_GetPlayerCameraManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_IsValid_ReturnValue_2) == 0x000578, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_GetCameraLocation_ReturnValue) == 0x00057C, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_GetCameraLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000588, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad, CallFunc_VSize_ReturnValue) == 0x000594, "Member 'Trap_Floor_BouncePad_C_ExecuteUbergraph_Trap_Floor_BouncePad::CallFunc_VSize_ReturnValue' has a wrong offset!");
 
 // Function Trap_Floor_BouncePad.Trap_Floor_BouncePad_C.GameplayCue.Abilities.Activation.Traps.ActivateTrap
 // 0x00C0 (0x00C0 - 0x0000)
@@ -147,10 +96,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-static_assert(alignof(Trap_Floor_BouncePad_C_GameplayCue_Abilities_Activation_Traps_ActivateTrap) == 0x000008, "Wrong alignment on Trap_Floor_BouncePad_C_GameplayCue_Abilities_Activation_Traps_ActivateTrap");
-static_assert(sizeof(Trap_Floor_BouncePad_C_GameplayCue_Abilities_Activation_Traps_ActivateTrap) == 0x0000C0, "Wrong size on Trap_Floor_BouncePad_C_GameplayCue_Abilities_Activation_Traps_ActivateTrap");
-static_assert(offsetof(Trap_Floor_BouncePad_C_GameplayCue_Abilities_Activation_Traps_ActivateTrap, EventType) == 0x000000, "Member 'Trap_Floor_BouncePad_C_GameplayCue_Abilities_Activation_Traps_ActivateTrap::EventType' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_GameplayCue_Abilities_Activation_Traps_ActivateTrap, Parameters) == 0x000008, "Member 'Trap_Floor_BouncePad_C_GameplayCue_Abilities_Activation_Traps_ActivateTrap::Parameters' has a wrong offset!");
 
 // Function Trap_Floor_BouncePad.Trap_Floor_BouncePad_C.PlayerLaunch
 // 0x0090 (0x0090 - 0x0000)
@@ -158,113 +103,65 @@ struct Trap_Floor_BouncePad_C_PlayerLaunch final
 {
 public:
 	class AFortPlayerPawn*                        Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x000C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_2;            // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MirrorVectorByNormal_ReturnValue;         // 0x002C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X;                            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_ClampVectorSize_ReturnValue;              // 0x0068(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0008(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0014(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MirrorVectorByNormal_ReturnValue;         // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_2;            // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_ClampVectorSize_ReturnValue;              // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0068(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0074(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_ClampVectorSize_ReturnValue_1;            // 0x0080(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Trap_Floor_BouncePad_C_PlayerLaunch) == 0x000008, "Wrong alignment on Trap_Floor_BouncePad_C_PlayerLaunch");
-static_assert(sizeof(Trap_Floor_BouncePad_C_PlayerLaunch) == 0x000090, "Wrong size on Trap_Floor_BouncePad_C_PlayerLaunch");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, Player) == 0x000000, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::Player' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_GetValueAtLevel_ReturnValue) == 0x000008, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_GetValueAtLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_GetVelocity_ReturnValue) == 0x00000C, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_GetVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_GetValueAtLevel_ReturnValue_1) == 0x000018, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_GetValueAtLevel_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_GetValueAtLevel_ReturnValue_2) == 0x00001C, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_GetValueAtLevel_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_GetForwardVector_ReturnValue) == 0x000020, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_MirrorVectorByNormal_ReturnValue) == 0x00002C, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_MirrorVectorByNormal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_GetForwardVector_ReturnValue_1) == 0x000038, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_GetForwardVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_BreakVector_X) == 0x000044, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_BreakVector_Y) == 0x000048, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_BreakVector_Z) == 0x00004C, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000050, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_MakeVector_ReturnValue) == 0x00005C, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_ClampVectorSize_ReturnValue) == 0x000068, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_ClampVectorSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_Add_VectorVector_ReturnValue) == 0x000074, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerLaunch, CallFunc_ClampVectorSize_ReturnValue_1) == 0x000080, "Member 'Trap_Floor_BouncePad_C_PlayerLaunch::CallFunc_ClampVectorSize_ReturnValue_1' has a wrong offset!");
 
 // Function Trap_Floor_BouncePad.Trap_Floor_BouncePad_C.VehicleLaunch
-// 0x00F8 (0x00F8 - 0x0000)
+// 0x0110 (0x0110 - 0x0000)
 struct Trap_Floor_BouncePad_C_VehicleLaunch final
 {
 public:
-	class AFortAthenaVehicle*                     Vehicle;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AFortPlayerPawn*>                CallFunc_GetAllPassengers_ReturnValue;             // 0x0018(0x0010)(ZeroConstructor, ReferenceParm)
-	class USkeletalMeshComponent*                 K2Node_DynamicCast_AsSkeletal_Mesh_Component;      // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TScriptInterface<class IFortVehicleInterface> VehicleInterface;                                  // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AFortPlayerPawn*>                CallFunc_GetAllPassengers_ReturnValue;             // 0x0018(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetMass_ReturnValue;                      // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0040(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0060(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x006C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MirrorVectorByNormal_ReturnValue;         // 0x0078(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_2;            // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0090(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue_1;       // 0x00A0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00AC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x00B8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X;                            // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00D0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x00DC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_ClampVectorSize_ReturnValue;              // 0x00E8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetVehicleVelocity_ReturnValue;           // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetVehicleActorPtr_ReturnValue;           // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawn*                        CallFunc_Array_Get_Item;                           // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 K2Node_DynamicCast_AsSkeletal_Mesh_Component;      // 0x0060(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetMass_ReturnValue;                      // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0078(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x0084(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MirrorVectorByNormal_ReturnValue;         // 0x0090(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_2;            // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x00A8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue_1;       // 0x00B8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00C4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x00D0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00E8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x00F4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_ClampVectorSize_ReturnValue;              // 0x0100(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Trap_Floor_BouncePad_C_VehicleLaunch) == 0x000008, "Wrong alignment on Trap_Floor_BouncePad_C_VehicleLaunch");
-static_assert(sizeof(Trap_Floor_BouncePad_C_VehicleLaunch) == 0x0000F8, "Wrong size on Trap_Floor_BouncePad_C_VehicleLaunch");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, Vehicle) == 0x000000, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::Vehicle' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, Temp_int_Loop_Counter_Variable) == 0x000008, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000010, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_GetAllPassengers_ReturnValue) == 0x000018, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_GetAllPassengers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, K2Node_DynamicCast_AsSkeletal_Mesh_Component) == 0x000028, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::K2Node_DynamicCast_AsSkeletal_Mesh_Component' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_Array_Length_ReturnValue) == 0x000034, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_GetMass_ReturnValue) == 0x000038, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_GetMass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_Less_IntInt_ReturnValue) == 0x00003C, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_GetVelocity_ReturnValue) == 0x000040, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_GetVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, Temp_int_Array_Index_Variable) == 0x00004C, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_Array_Get_Item) == 0x000050, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_SpawnEmitterAttached_ReturnValue) == 0x000058, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_SpawnEmitterAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_GetForwardVector_ReturnValue) == 0x000060, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_GetForwardVector_ReturnValue_1) == 0x00006C, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_GetForwardVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_MirrorVectorByNormal_ReturnValue) == 0x000078, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_MirrorVectorByNormal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_GetValueAtLevel_ReturnValue) == 0x000084, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_GetValueAtLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_GetValueAtLevel_ReturnValue_1) == 0x000088, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_GetValueAtLevel_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_GetValueAtLevel_ReturnValue_2) == 0x00008C, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_GetValueAtLevel_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000090, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x00009C, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_Multiply_VectorFloat_ReturnValue_1) == 0x0000A0, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_Multiply_VectorFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_Add_VectorVector_ReturnValue) == 0x0000AC, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_Add_VectorVector_ReturnValue_1) == 0x0000B8, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_BreakVector_X) == 0x0000C4, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_BreakVector_Y) == 0x0000C8, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_BreakVector_Z) == 0x0000CC, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_MakeVector_ReturnValue) == 0x0000D0, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_Add_VectorVector_ReturnValue_2) == 0x0000DC, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_VehicleLaunch, CallFunc_ClampVectorSize_ReturnValue) == 0x0000E8, "Member 'Trap_Floor_BouncePad_C_VehicleLaunch::CallFunc_ClampVectorSize_ReturnValue' has a wrong offset!");
 
 // Function Trap_Floor_BouncePad.Trap_Floor_BouncePad_C.PlayerApplyGameplayEffects
 // 0x0038 (0x0038 - 0x0000)
@@ -279,58 +176,30 @@ public:
 	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_3; // 0x0028(0x0008)(NoDestructor, HasGetValueTypeHash)
 	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_4; // 0x0030(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects) == 0x000008, "Wrong alignment on Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects");
-static_assert(sizeof(Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects) == 0x000038, "Wrong size on Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects, CallFunc_GetAbilitySystemComponent_ReturnValue) == 0x000000, "Member 'Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects::CallFunc_GetAbilitySystemComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects, CallFunc_GetAbilitySystemComponent_ReturnValue_1) == 0x000008, "Member 'Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects::CallFunc_GetAbilitySystemComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue) == 0x000010, "Member 'Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_1) == 0x000018, "Member 'Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_2) == 0x000020, "Member 'Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_3) == 0x000028, "Member 'Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_4) == 0x000030, "Member 'Trap_Floor_BouncePad_C_PlayerApplyGameplayEffects::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_4' has a wrong offset!");
 
 // Function Trap_Floor_BouncePad.Trap_Floor_BouncePad_C.DeimosLaunch
 // 0x0098 (0x0098 - 0x0000)
 struct Trap_Floor_BouncePad_C_DeimosLaunch final
 {
 public:
-	class AEnemyPawn_Parent_C*                    DeimosPawn_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0008(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetValueAtLevel_ReturnValue_2;            // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x002C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MirrorVectorByNormal_ReturnValue;         // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0044(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X;                            // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_ClampVectorSize_ReturnValue;              // 0x0068(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AEnemyPawn_Parent_Deimos_C*             DeimosPawn_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0008(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0014(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MirrorVectorByNormal_ReturnValue;         // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_2;            // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_ClampVectorSize_ReturnValue;              // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0068(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0074(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_ClampVectorSize_ReturnValue_1;            // 0x0080(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x008C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Trap_Floor_BouncePad_C_DeimosLaunch) == 0x000008, "Wrong alignment on Trap_Floor_BouncePad_C_DeimosLaunch");
-static_assert(sizeof(Trap_Floor_BouncePad_C_DeimosLaunch) == 0x000098, "Wrong size on Trap_Floor_BouncePad_C_DeimosLaunch");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, DeimosPawn_0) == 0x000000, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::DeimosPawn_0' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_GetVelocity_ReturnValue) == 0x000008, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_GetVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_GetValueAtLevel_ReturnValue) == 0x000014, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_GetValueAtLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_GetValueAtLevel_ReturnValue_1) == 0x000018, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_GetValueAtLevel_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_GetValueAtLevel_ReturnValue_2) == 0x00001C, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_GetValueAtLevel_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_GetForwardVector_ReturnValue) == 0x000020, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_GetForwardVector_ReturnValue_1) == 0x00002C, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_GetForwardVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_MirrorVectorByNormal_ReturnValue) == 0x000038, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_MirrorVectorByNormal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000044, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_BreakVector_X) == 0x000050, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_BreakVector_Y) == 0x000054, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_BreakVector_Z) == 0x000058, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_MakeVector_ReturnValue) == 0x00005C, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_ClampVectorSize_ReturnValue) == 0x000068, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_ClampVectorSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_Add_VectorVector_ReturnValue) == 0x000074, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_ClampVectorSize_ReturnValue_1) == 0x000080, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_ClampVectorSize_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosLaunch, CallFunc_Add_VectorVector_ReturnValue_1) == 0x00008C, "Member 'Trap_Floor_BouncePad_C_DeimosLaunch::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
 
 // Function Trap_Floor_BouncePad.Trap_Floor_BouncePad_C.DeimosApplyGameplayEffects
 // 0x0038 (0x0038 - 0x0000)
@@ -345,70 +214,67 @@ public:
 	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_3; // 0x0028(0x0008)(NoDestructor, HasGetValueTypeHash)
 	struct FActiveGameplayEffectHandle            CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_4; // 0x0030(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects) == 0x000008, "Wrong alignment on Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects");
-static_assert(sizeof(Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects) == 0x000038, "Wrong size on Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects, CallFunc_GetAbilitySystemComponent_ReturnValue) == 0x000000, "Member 'Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects::CallFunc_GetAbilitySystemComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects, CallFunc_GetAbilitySystemComponent_ReturnValue_1) == 0x000008, "Member 'Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects::CallFunc_GetAbilitySystemComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue) == 0x000010, "Member 'Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_1) == 0x000018, "Member 'Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_2) == 0x000020, "Member 'Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_3) == 0x000028, "Member 'Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects, CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_4) == 0x000030, "Member 'Trap_Floor_BouncePad_C_DeimosApplyGameplayEffects::CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue_4' has a wrong offset!");
 
 // Function Trap_Floor_BouncePad.Trap_Floor_BouncePad_C.BP_OnTrigger
-// 0x0090 (0x0090 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct Trap_Floor_BouncePad_C_BP_OnTrigger final
 {
 public:
-	TArray<class AActor*>                         TouchingActors;                                    // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class AActor*>                         TouchingActors;                                    // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	bool                                          bOutConsumeEvent;                                  // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPhysicsPawnObject*                 K2Node_DynamicCast_AsFort_Physics_Pawn_Object;     // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortAthenaVehicle*                     CallFunc_GetVehicle_ReturnValue;                   // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInVehicle_ReturnValue;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AEnemyPawn_Parent_C*                    K2Node_DynamicCast_AsEnemy_Pawn_Parent;            // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput;    // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue;       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class AFortPlayerPawn*                        K2Node_DynamicCast_AsFort_Player_Pawn;             // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IFortVehicleInterface> CallFunc_GetVehicleUInterface_ReturnValue;         // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsInVehicle_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AEnemyPawn_Parent_Deimos_C*             K2Node_DynamicCast_AsEnemy_Pawn_Parent_Deimos;     // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortAthenaVehicle*                     K2Node_DynamicCast_AsFort_Athena_Vehicle;          // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput; // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue;       // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IFortVehicleInterface> K2Node_DynamicCast_AsFort_Vehicle_Interface;       // 0x0090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Trap_Floor_BouncePad_C_BP_OnTrigger) == 0x000008, "Wrong alignment on Trap_Floor_BouncePad_C_BP_OnTrigger");
-static_assert(sizeof(Trap_Floor_BouncePad_C_BP_OnTrigger) == 0x000090, "Wrong size on Trap_Floor_BouncePad_C_BP_OnTrigger");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, TouchingActors) == 0x000000, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::TouchingActors' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, bOutConsumeEvent) == 0x000010, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::bOutConsumeEvent' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, CallFunc_Array_Length_ReturnValue) == 0x000014, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, Temp_int_Array_Index_Variable) == 0x000018, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, CallFunc_Array_Get_Item) == 0x000020, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, K2Node_DynamicCast_AsFort_Player_Pawn) == 0x000028, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::K2Node_DynamicCast_AsFort_Player_Pawn' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, CallFunc_SpawnEmitterAttached_ReturnValue) == 0x000038, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::CallFunc_SpawnEmitterAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, CallFunc_GetVehicle_ReturnValue) == 0x000040, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::CallFunc_GetVehicle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, CallFunc_IsInVehicle_ReturnValue) == 0x000048, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::CallFunc_IsInVehicle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, K2Node_DynamicCast_AsEnemy_Pawn_Parent) == 0x000050, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::K2Node_DynamicCast_AsEnemy_Pawn_Parent' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, K2Node_DynamicCast_bSuccess_1) == 0x000058, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, CallFunc_HasMatchingGameplayTag_self_CastInput) == 0x000060, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::CallFunc_HasMatchingGameplayTag_self_CastInput' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, CallFunc_HasMatchingGameplayTag_ReturnValue) == 0x000070, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::CallFunc_HasMatchingGameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, K2Node_DynamicCast_AsFort_Athena_Vehicle) == 0x000078, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::K2Node_DynamicCast_AsFort_Athena_Vehicle' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, K2Node_DynamicCast_bSuccess_2) == 0x000080, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, Temp_int_Loop_Counter_Variable) == 0x000084, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, CallFunc_Less_IntInt_ReturnValue) == 0x000088, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Trap_Floor_BouncePad_C_BP_OnTrigger, CallFunc_Add_IntInt_ReturnValue) == 0x00008C, "Member 'Trap_Floor_BouncePad_C_BP_OnTrigger::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function Trap_Floor_BouncePad.Trap_Floor_BouncePad_C.PhysicsObjectLaunch
+// 0x0098 (0x0098 - 0x0000)
+struct Trap_Floor_BouncePad_C_PhysicsObjectLaunch final
+{
+public:
+	class AFortPhysicsPawnObject*                 PhysicsObject;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0008(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetPhysicsLinearVelocity_ReturnValue;     // 0x0014(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MirrorVectorByNormal_ReturnValue;         // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_1;            // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x004C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0058(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetValueAtLevel_ReturnValue_2;            // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_ClampVectorSize_ReturnValue;              // 0x0068(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0074(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_ClampVectorSize_ReturnValue_1;            // 0x0080(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x008C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 }
 

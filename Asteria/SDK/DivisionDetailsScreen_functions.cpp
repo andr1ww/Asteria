@@ -17,80 +17,23 @@
 namespace SDK
 {
 
-// Function DivisionDetailsScreen.DivisionDetailsScreen_C.RightShoulderButton
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function DivisionDetailsScreen.DivisionDetailsScreen_C.ExecuteUbergraph_DivisionDetailsScreen
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    Handled                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UDivisionDetailsScreen_C::RightShoulderButton(bool* Handled)
+void UDivisionDetailsScreen_C::ExecuteUbergraph_DivisionDetailsScreen(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DivisionDetailsScreen_C", "RightShoulderButton");
+		Func = Class->GetFunction("DivisionDetailsScreen_C", "ExecuteUbergraph_DivisionDetailsScreen");
 
-	Params::DivisionDetailsScreen_C_RightShoulderButton Parms{};
+	Params::DivisionDetailsScreen_C_ExecuteUbergraph_DivisionDetailsScreen Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Handled != nullptr)
-		*Handled = Parms.Handled;
-}
-
-
-// Function DivisionDetailsScreen.DivisionDetailsScreen_C.LeftShoulderButton
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Handled                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UDivisionDetailsScreen_C::LeftShoulderButton(bool* Handled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DivisionDetailsScreen_C", "LeftShoulderButton");
-
-	Params::DivisionDetailsScreen_C_LeftShoulderButton Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Handled != nullptr)
-		*Handled = Parms.Handled;
-}
-
-
-// Function DivisionDetailsScreen.DivisionDetailsScreen_C.EmptyFunction
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Handled                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UDivisionDetailsScreen_C::EmptyFunction(bool* Handled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DivisionDetailsScreen_C", "EmptyFunction");
-
-	Params::DivisionDetailsScreen_C_EmptyFunction Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Handled != nullptr)
-		*Handled = Parms.Handled;
-}
-
-
-// Function DivisionDetailsScreen.DivisionDetailsScreen_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UDivisionDetailsScreen_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("DivisionDetailsScreen_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -134,23 +77,80 @@ void UDivisionDetailsScreen_C::BndEvt__BackButton_K2Node_ComponentBoundEvent_0_C
 }
 
 
-// Function DivisionDetailsScreen.DivisionDetailsScreen_C.ExecuteUbergraph_DivisionDetailsScreen
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function DivisionDetailsScreen.DivisionDetailsScreen_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
 
-void UDivisionDetailsScreen_C::ExecuteUbergraph_DivisionDetailsScreen(int32 EntryPoint)
+void UDivisionDetailsScreen_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("DivisionDetailsScreen_C", "ExecuteUbergraph_DivisionDetailsScreen");
+		Func = Class->GetFunction("DivisionDetailsScreen_C", "BP_OnActivated");
 
-	Params::DivisionDetailsScreen_C_ExecuteUbergraph_DivisionDetailsScreen Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function DivisionDetailsScreen.DivisionDetailsScreen_C.EmptyFunction
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   Handled                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UDivisionDetailsScreen_C::EmptyFunction(bool* Handled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DivisionDetailsScreen_C", "EmptyFunction");
+
+	Params::DivisionDetailsScreen_C_EmptyFunction Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Handled != nullptr)
+		*Handled = Parms.Handled;
+}
+
+
+// Function DivisionDetailsScreen.DivisionDetailsScreen_C.LeftShoulderButton
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   Handled                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UDivisionDetailsScreen_C::LeftShoulderButton(bool* Handled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DivisionDetailsScreen_C", "LeftShoulderButton");
+
+	Params::DivisionDetailsScreen_C_LeftShoulderButton Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Handled != nullptr)
+		*Handled = Parms.Handled;
+}
+
+
+// Function DivisionDetailsScreen.DivisionDetailsScreen_C.RightShoulderButton
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   Handled                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UDivisionDetailsScreen_C::RightShoulderButton(bool* Handled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DivisionDetailsScreen_C", "RightShoulderButton");
+
+	Params::DivisionDetailsScreen_C_RightShoulderButton Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Handled != nullptr)
+		*Handled = Parms.Handled;
 }
 
 }

@@ -17,32 +17,6 @@
 namespace SDK::Params
 {
 
-// Function FortRadioButtonGroup.FortRadioButtonGroup_C.OnButtonClicked_Bind
-// 0x0010 (0x0010 - 0x0000)
-struct FortRadioButtonGroup_C_OnButtonClicked_Bind final
-{
-public:
-	class UCommonButton*                          AssociatedButton;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FortRadioButtonGroup_C_OnButtonClicked_Bind) == 0x000008, "Wrong alignment on FortRadioButtonGroup_C_OnButtonClicked_Bind");
-static_assert(sizeof(FortRadioButtonGroup_C_OnButtonClicked_Bind) == 0x000010, "Wrong size on FortRadioButtonGroup_C_OnButtonClicked_Bind");
-static_assert(offsetof(FortRadioButtonGroup_C_OnButtonClicked_Bind, AssociatedButton) == 0x000000, "Member 'FortRadioButtonGroup_C_OnButtonClicked_Bind::AssociatedButton' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_OnButtonClicked_Bind, ButtonIndex) == 0x000008, "Member 'FortRadioButtonGroup_C_OnButtonClicked_Bind::ButtonIndex' has a wrong offset!");
-
-// Function FortRadioButtonGroup.FortRadioButtonGroup_C.CenterOnWidget
-// 0x0010 (0x0010 - 0x0000)
-struct FortRadioButtonGroup_C_CenterOnWidget final
-{
-public:
-	class UFortUINavigationManager*               CallFunc_GetUINavigationManager_ReturnValue;       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UIconTextButton_C*                      CallFunc_Array_Get_Item;                           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FortRadioButtonGroup_C_CenterOnWidget) == 0x000008, "Wrong alignment on FortRadioButtonGroup_C_CenterOnWidget");
-static_assert(sizeof(FortRadioButtonGroup_C_CenterOnWidget) == 0x000010, "Wrong size on FortRadioButtonGroup_C_CenterOnWidget");
-static_assert(offsetof(FortRadioButtonGroup_C_CenterOnWidget, CallFunc_GetUINavigationManager_ReturnValue) == 0x000000, "Member 'FortRadioButtonGroup_C_CenterOnWidget::CallFunc_GetUINavigationManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_CenterOnWidget, CallFunc_Array_Get_Item) == 0x000008, "Member 'FortRadioButtonGroup_C_CenterOnWidget::CallFunc_Array_Get_Item' has a wrong offset!");
-
 // Function FortRadioButtonGroup.FortRadioButtonGroup_C.ExecuteUbergraph_FortRadioButtonGroup
 // 0x00A0 (0x00A0 - 0x0000)
 struct FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup final
@@ -65,7 +39,7 @@ public:
 	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonButton*                          K2Node_CustomEvent_AssociatedButton;               // 0x0068(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_CustomEvent_ButtonIndex;                    // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UCommonButton* AssociatedButton, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate;              // 0x0074(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void(class UCommonButton* AssociatedButton, int32 ButtonIndex)> K2Node_CreateDelegate_OutputDelegate; // 0x0074(0x0010)(ZeroConstructor, NoDestructor)
 	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonButtonGroup*                     CallFunc_SpawnObject_ReturnValue;                  // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -75,27 +49,23 @@ public:
 	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup) == 0x000008, "Wrong alignment on FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup");
-static_assert(sizeof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup) == 0x0000A0, "Wrong size on FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, EntryPoint) == 0x000000, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::EntryPoint' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, Temp_int_Array_Index_Variable) == 0x000004, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, CallFunc_Array_Get_Item) == 0x000008, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, CallFunc_Create_ReturnValue) == 0x000038, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, CallFunc_Array_Add_ReturnValue) == 0x000040, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000044, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, CallFunc_AddChild_ReturnValue) == 0x000048, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::CallFunc_AddChild_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, K2Node_DynamicCast_AsVertical_Box_Slot) == 0x000050, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::K2Node_DynamicCast_AsVertical_Box_Slot' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, K2Node_MakeStruct_SlateChildSize) == 0x00005C, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::K2Node_MakeStruct_SlateChildSize' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, K2Node_CustomEvent_AssociatedButton) == 0x000068, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::K2Node_CustomEvent_AssociatedButton' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, K2Node_CustomEvent_ButtonIndex) == 0x000070, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::K2Node_CustomEvent_ButtonIndex' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, K2Node_CreateDelegate_OutputDelegate) == 0x000074, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, CallFunc_SpawnObject_ReturnValue) == 0x000088, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::CallFunc_SpawnObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x000090, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, Temp_int_Loop_Counter_Variable) == 0x000094, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, CallFunc_Less_IntInt_ReturnValue) == 0x000098, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup, CallFunc_Add_IntInt_ReturnValue) == 0x00009C, "Member 'FortRadioButtonGroup_C_ExecuteUbergraph_FortRadioButtonGroup::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function FortRadioButtonGroup.FortRadioButtonGroup_C.OnButtonClicked_Bind
+// 0x0010 (0x0010 - 0x0000)
+struct FortRadioButtonGroup_C_OnButtonClicked_Bind final
+{
+public:
+	class UCommonButton*                          AssociatedButton;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ButtonIndex;                                       // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function FortRadioButtonGroup.FortRadioButtonGroup_C.CenterOnWidget
+// 0x0008 (0x0008 - 0x0000)
+struct FortRadioButtonGroup_C_CenterOnWidget final
+{
+public:
+	class UIconTextButton_C*                      CallFunc_Array_Get_Item;                           // 0x0000(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 }
 

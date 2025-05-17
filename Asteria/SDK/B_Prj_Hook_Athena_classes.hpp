@@ -11,69 +11,97 @@
 #include "Basic.hpp"
 
 #include "ToyAngleSelectorInfo_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Prj_Hook_Athena.B_Prj_Hook_Athena_C
-// 0x0120 (0x08A8 - 0x0788)
+// 0x02A0 (0x0BD8 - 0x0938)
 class AB_Prj_Hook_Athena_C : public AFortAttachableProjectileBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0788(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*               ParticleSystem;                                    // 0x0790(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh3;                                       // 0x0798(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AFortPawn*                              Target;                                            // 0x07A0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x07A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HookStopped;                                       // 0x07B0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7B1[0x3];                                      // 0x07B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                HitLocation;                                       // 0x07B4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AirControl;                                        // 0x07C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7C1[0x7];                                      // 0x07C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             StickSound;                                        // 0x07C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             StuckToPlayerSound;                                // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DistanceFromInstigator;                            // 0x07D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7DC[0x4];                                      // 0x07DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             TravelSound;                                       // 0x07E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FToyAngleSelectorInfo>          LaunchAngleVariations;                             // 0x07E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class AB_Hookgun_Athena_C*                    Weapon_Actor;                                      // 0x07F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_HookGunRope_C*                       Rope;                                              // 0x0800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                PreLaunchVelocity;                                 // 0x0808(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FireAImPitch;                                      // 0x0814(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DownPitchMin;                                      // 0x0818(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DownPitchMax;                                      // 0x081C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         AdditionalZ;                                       // 0x0820(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_824[0x4];                                      // 0x0824(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             YankBackSound;                                     // 0x0828(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             RopeDestroySound;                                  // 0x0830(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           RopeActiveTag;                                     // 0x0838(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           BlockIncomingPickups;                              // 0x0840(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ImpactNormal;                                      // 0x0848(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_854[0x4];                                      // 0x0854(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             StickSound2D;                                      // 0x0858(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Offset_Distance_from_Physics_Mesh;                 // 0x0860(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         OffsetDistanceFromBone;                            // 0x0864(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 StruckActor;                                       // 0x0868(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Momentum;                                          // 0x0870(0x000C)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          Launchpad;                                         // 0x087C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_87D[0x3];                                      // 0x087D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                VehicleVelocity;                                   // 0x0880(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ConsumesAmmo;                                      // 0x088C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_88D[0x3];                                      // 0x088D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         VehicleArc;                                        // 0x0890(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         JackalArc;                                         // 0x0894(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bInHoverboard;                                     // 0x0898(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_899[0x3];                                      // 0x0899(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         VehicleForceMultiplier;                            // 0x089C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         JackalForceMultiplier;                             // 0x08A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               ParticleSystem;                                    // 0x0940(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   ProjectileMesh;                                    // 0x0948(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AFortPawn*                              Target;                                            // 0x0950(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0958(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HookStopped;                                       // 0x0960(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_961[0x3];                                      // 0x0961(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                HitLocation;                                       // 0x0964(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AirControl;                                        // 0x0970(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_971[0x7];                                      // 0x0971(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Sound_Stick;                                       // 0x0978(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sound_StuckToPlayer;                               // 0x0980(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DistanceFromInstigator;                            // 0x0988(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_98C[0x4];                                      // 0x098C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Sound_Water;                                       // 0x0990(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             TravelSound;                                       // 0x0998(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FToyAngleSelectorInfo>          LaunchAngleVariations;                             // 0x09A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class AB_Hookgun_Athena_C*                    Weapon_Actor;                                      // 0x09B0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_HookGunRope_C*                       Rope;                                              // 0x09B8(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PreLaunchVelocity;                                 // 0x09C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FireAImPitch;                                      // 0x09CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DownPitchMin;                                      // 0x09D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DownPitchMax;                                      // 0x09D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         AdditionalZ;                                       // 0x09D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9DC[0x4];                                      // 0x09DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Sound_YankBack;                                    // 0x09E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sound_RopeDestroy;                                 // 0x09E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           RopeActiveTag;                                     // 0x09F0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           BlockIncomingPickups;                              // 0x09F8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ImpactNormal;                                      // 0x0A00(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A0C[0x4];                                      // 0x0A0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Sound_Stick2D;                                     // 0x0A10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Offset_Distance_from_Physics_Mesh;                 // 0x0A18(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         OffsetDistanceFromBone;                            // 0x0A1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 StruckActor;                                       // 0x0A20(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Momentum;                                          // 0x0A28(0x000C)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          Launchpad;                                         // 0x0A34(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A35[0x3];                                      // 0x0A35(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                VehicleVelocity;                                   // 0x0A38(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ConsumesAmmo;                                      // 0x0A44(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bInHoverboard;                                     // 0x0A45(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A46[0x2];                                      // 0x0A46(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Lifespan_on_Hit;                                   // 0x0A48(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GliderGrappler;                                    // 0x0A4C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A4D[0x3];                                      // 0x0A4D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  TC_VehicleIgnorePull;                              // 0x0A50(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UClass*                                 GE_RopeActive;                                     // 0x0A70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           Event_Returned;                                    // 0x0A78(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           Event_GrappleHit;                                  // 0x0A80(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  T_QuestTag;                                        // 0x0A88(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UAnimMontage*                           Anim_GrappleHoverboard;                            // 0x0AA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           Anim_Grapple;                                      // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        FX_WaterImpact;                                    // 0x0AB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        FX_Reattach;                                       // 0x0AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ArcGravityOverride;                                // 0x0AC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DoesCrouchCheck;                                   // 0x0ACC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          HasMinUpwardLaunchVelocity;                        // 0x0ACD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_ACE[0x2];                                      // 0x0ACE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinUpwardLaunchVelocity;                           // 0x0AD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AD4[0x4];                                      // 0x0AD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 LenseEffect;                                       // 0x0AD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CamShake_Grapple;                                  // 0x0AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LaunchVelocity;                                    // 0x0AE8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AF4[0x4];                                      // 0x0AF4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         Row_PlayerArc;                                     // 0x0AF8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         Row_VehicleArc;                                    // 0x0B18(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         Row_JackleArc;                                     // 0x0B38(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         Row_VehicleForceMultiplier;                        // 0x0B58(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         Row_JackleForceMultiplier;                         // 0x0B78(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         Speed;                                             // 0x0B98(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         LifeSpan;                                          // 0x0BB8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_B_Prj_Hook_Athena(int32 EntryPoint);
+	void Grapple();
+	void BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature(class AFortWaterBodyActor* WaterBody, class UFortWaterInteractionComponent* WaterInteractionComponent_0, bool bIsFirstBody);
 	void LaunchCheck();
 	void GrappleVehicle();
 	void ReceiveHit(class UPrimitiveComponent* MyComp, class AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, const struct FVector& HitLocation_0, const struct FVector& HitNormal, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
@@ -101,7 +129,6 @@ public:
 	void HandleHits(const struct FHitResult& Hit, class AActor** Target_0);
 	void IncapacitateTarget();
 	void CalculateYankForce();
-	void Grapple();
 	void OnRep_Target();
 	void OnRep_HookStopped();
 	void PickGrappleMontage(float PitchAngle, bool InHoverboard, class FName* SectionName);
@@ -115,6 +142,11 @@ public:
 	void OnRep_Momentum();
 	void HandleLaunch(bool* JumpPadding_);
 	void JackalCheck();
+	void SpawnRope(class AFortPlayerPawn* PlayerPawn_0, class AB_HookGunRope_C** RopeSpawned);
+	void GiveQuestCredit();
+	struct FVector MomentumCheck(const struct FVector& A, const struct FVector& A2);
+	float GetVehicleArc();
+	float GetVehicleLaunchMult();
 
 	void PickGrappleMontageSection(float PitchAngle, class FName* SectionName) const;
 
@@ -128,46 +160,6 @@ public:
 		return GetDefaultObjImpl<AB_Prj_Hook_Athena_C>();
 	}
 };
-static_assert(alignof(AB_Prj_Hook_Athena_C) == 0x000008, "Wrong alignment on AB_Prj_Hook_Athena_C");
-static_assert(sizeof(AB_Prj_Hook_Athena_C) == 0x0008A8, "Wrong size on AB_Prj_Hook_Athena_C");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, UberGraphFrame) == 0x000788, "Member 'AB_Prj_Hook_Athena_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, ParticleSystem) == 0x000790, "Member 'AB_Prj_Hook_Athena_C::ParticleSystem' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, StaticMesh3) == 0x000798, "Member 'AB_Prj_Hook_Athena_C::StaticMesh3' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, Target) == 0x0007A0, "Member 'AB_Prj_Hook_Athena_C::Target' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, PlayerPawn) == 0x0007A8, "Member 'AB_Prj_Hook_Athena_C::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, HookStopped) == 0x0007B0, "Member 'AB_Prj_Hook_Athena_C::HookStopped' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, HitLocation) == 0x0007B4, "Member 'AB_Prj_Hook_Athena_C::HitLocation' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, AirControl) == 0x0007C0, "Member 'AB_Prj_Hook_Athena_C::AirControl' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, StickSound) == 0x0007C8, "Member 'AB_Prj_Hook_Athena_C::StickSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, StuckToPlayerSound) == 0x0007D0, "Member 'AB_Prj_Hook_Athena_C::StuckToPlayerSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, DistanceFromInstigator) == 0x0007D8, "Member 'AB_Prj_Hook_Athena_C::DistanceFromInstigator' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, TravelSound) == 0x0007E0, "Member 'AB_Prj_Hook_Athena_C::TravelSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, LaunchAngleVariations) == 0x0007E8, "Member 'AB_Prj_Hook_Athena_C::LaunchAngleVariations' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, Weapon_Actor) == 0x0007F8, "Member 'AB_Prj_Hook_Athena_C::Weapon_Actor' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, Rope) == 0x000800, "Member 'AB_Prj_Hook_Athena_C::Rope' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, PreLaunchVelocity) == 0x000808, "Member 'AB_Prj_Hook_Athena_C::PreLaunchVelocity' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, FireAImPitch) == 0x000814, "Member 'AB_Prj_Hook_Athena_C::FireAImPitch' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, DownPitchMin) == 0x000818, "Member 'AB_Prj_Hook_Athena_C::DownPitchMin' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, DownPitchMax) == 0x00081C, "Member 'AB_Prj_Hook_Athena_C::DownPitchMax' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, AdditionalZ) == 0x000820, "Member 'AB_Prj_Hook_Athena_C::AdditionalZ' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, YankBackSound) == 0x000828, "Member 'AB_Prj_Hook_Athena_C::YankBackSound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, RopeDestroySound) == 0x000830, "Member 'AB_Prj_Hook_Athena_C::RopeDestroySound' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, RopeActiveTag) == 0x000838, "Member 'AB_Prj_Hook_Athena_C::RopeActiveTag' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, BlockIncomingPickups) == 0x000840, "Member 'AB_Prj_Hook_Athena_C::BlockIncomingPickups' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, ImpactNormal) == 0x000848, "Member 'AB_Prj_Hook_Athena_C::ImpactNormal' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, StickSound2D) == 0x000858, "Member 'AB_Prj_Hook_Athena_C::StickSound2D' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, Offset_Distance_from_Physics_Mesh) == 0x000860, "Member 'AB_Prj_Hook_Athena_C::Offset_Distance_from_Physics_Mesh' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, OffsetDistanceFromBone) == 0x000864, "Member 'AB_Prj_Hook_Athena_C::OffsetDistanceFromBone' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, StruckActor) == 0x000868, "Member 'AB_Prj_Hook_Athena_C::StruckActor' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, Momentum) == 0x000870, "Member 'AB_Prj_Hook_Athena_C::Momentum' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, Launchpad) == 0x00087C, "Member 'AB_Prj_Hook_Athena_C::Launchpad' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, VehicleVelocity) == 0x000880, "Member 'AB_Prj_Hook_Athena_C::VehicleVelocity' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, ConsumesAmmo) == 0x00088C, "Member 'AB_Prj_Hook_Athena_C::ConsumesAmmo' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, VehicleArc) == 0x000890, "Member 'AB_Prj_Hook_Athena_C::VehicleArc' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, JackalArc) == 0x000894, "Member 'AB_Prj_Hook_Athena_C::JackalArc' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, bInHoverboard) == 0x000898, "Member 'AB_Prj_Hook_Athena_C::bInHoverboard' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, VehicleForceMultiplier) == 0x00089C, "Member 'AB_Prj_Hook_Athena_C::VehicleForceMultiplier' has a wrong offset!");
-static_assert(offsetof(AB_Prj_Hook_Athena_C, JackalForceMultiplier) == 0x0008A0, "Member 'AB_Prj_Hook_Athena_C::JackalForceMultiplier' has a wrong offset!");
 
 }
 

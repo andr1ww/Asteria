@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventRegionLockMessage.EventRegionLockMessage_C
-// 0x0010 (0x05E0 - 0x05D0)
+// 0x0010 (0x06C8 - 0x06B8)
 class UEventRegionLockMessage_C final : public UFortShowdownDetailView
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class URichTextBlock*                         RichTextBlock_RegionLockMessage;                   // 0x05D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class URichTextBlock*                         RichTextBlock_RegionLockMessage;                   // 0x06C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void RefreshDataBP();
 	void ExecuteUbergraph_EventRegionLockMessage(int32 EntryPoint);
+	void RefreshDataBP();
 
 public:
 	static class UClass* StaticClass()
@@ -39,10 +39,6 @@ public:
 		return GetDefaultObjImpl<UEventRegionLockMessage_C>();
 	}
 };
-static_assert(alignof(UEventRegionLockMessage_C) == 0x000008, "Wrong alignment on UEventRegionLockMessage_C");
-static_assert(sizeof(UEventRegionLockMessage_C) == 0x0005E0, "Wrong size on UEventRegionLockMessage_C");
-static_assert(offsetof(UEventRegionLockMessage_C, UberGraphFrame) == 0x0005D0, "Member 'UEventRegionLockMessage_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventRegionLockMessage_C, RichTextBlock_RegionLockMessage) == 0x0005D8, "Member 'UEventRegionLockMessage_C::RichTextBlock_RegionLockMessage' has a wrong offset!");
 
 }
 

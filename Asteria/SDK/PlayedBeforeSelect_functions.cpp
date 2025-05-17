@@ -17,15 +17,15 @@
 namespace SDK
 {
 
-// Function PlayedBeforeSelect.PlayedBeforeSelect_C.OnActivated
-// (Event, Protected, BlueprintEvent)
+// Function PlayedBeforeSelect.PlayedBeforeSelect_C.OnActivated_1
+// (BlueprintCallable, BlueprintEvent)
 
-void UPlayedBeforeSelect_C::OnActivated()
+void UPlayedBeforeSelect_C::OnActivated_1()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayedBeforeSelect_C", "OnActivated");
+		Func = Class->GetFunction("PlayedBeforeSelect_C", "OnActivated_1");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

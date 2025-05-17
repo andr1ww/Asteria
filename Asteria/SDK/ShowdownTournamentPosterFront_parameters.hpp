@@ -12,13 +12,56 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "FortniteUI_structs.hpp"
 #include "UMG_structs.hpp"
+#include "FortniteUI_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function ShowdownTournamentPosterFront.ShowdownTournamentPosterFront_C.ExecuteUbergraph_ShowdownTournamentPosterFront
+// 0x00D8 (0x00D8 - 0x0000)
+struct ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortEventWindowEligibility                   Temp_byte_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0010(0x0018)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0028(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0050(0x0028)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0078(0x0018)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue_2;                // 0x0090(0x0018)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue_3;                // 0x00A8(0x0018)()
+	EFortEventWindowEligibility                   CallFunc_GetTournamentEligibility_ReturnValue;     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWorldCupQualifierEvent_ReturnValue;     // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C3[0x5];                                       // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                K2Node_Select_Default_1;                           // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_6;                              // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortShowdownEventState                       CallFunc_GetTournamentTimeState_ReturnValue;       // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_1;                              // 0x00D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default_2;                           // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ShowdownTournamentPosterFront.ShowdownTournamentPosterFront_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct ShowdownTournamentPosterFront_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
 
 // Function ShowdownTournamentPosterFront.ShowdownTournamentPosterFront_C.GetTournamentDateText
 // 0x0608 (0x0608 - 0x0000)
@@ -132,175 +175,9 @@ public:
 	class FText                                   K2Node_Select_Default_3;                           // 0x0570(0x0018)()
 	class FText                                   K2Node_Select_Default_4;                           // 0x0588(0x0018)()
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x05A0(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x05E0(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x05E0(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x05F0(0x0018)()
 };
-static_assert(alignof(ShowdownTournamentPosterFront_C_GetTournamentDateText) == 0x000008, "Wrong alignment on ShowdownTournamentPosterFront_C_GetTournamentDateText");
-static_assert(sizeof(ShowdownTournamentPosterFront_C_GetTournamentDateText) == 0x000608, "Wrong size on ShowdownTournamentPosterFront_C_GetTournamentDateText");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, TournamentDate) == 0x000000, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::TournamentDate' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable) == 0x000018, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_1) == 0x000030, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_bool_Variable) == 0x000048, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_2) == 0x000050, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_bool_Variable_1) == 0x000068, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_3) == 0x000070, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_int_Variable) == 0x000088, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_4) == 0x000090, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_4' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_5) == 0x0000A8, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_5' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_6) == 0x0000C0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_6' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_7) == 0x0000D8, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_7' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_8) == 0x0000F0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_8' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_9) == 0x000108, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_9' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_10) == 0x000120, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_10' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_11) == 0x000138, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_11' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_12) == 0x000150, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_12' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_13) == 0x000168, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_13' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_14) == 0x000180, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_14' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_15) == 0x000198, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_15' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_16) == 0x0001B0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_16' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_int_Variable_1) == 0x0001C8, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_17) == 0x0001D0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_17' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_18) == 0x0001E8, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_18' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_19) == 0x000200, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_19' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_20) == 0x000218, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_20' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_21) == 0x000230, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_21' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_22) == 0x000248, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_22' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_23) == 0x000260, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_23' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_24) == 0x000278, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_24' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_25) == 0x000290, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_25' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_26) == 0x0002A8, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_26' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_27) == 0x0002C0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_27' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_28) == 0x0002D8, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_28' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_text_Variable_29) == 0x0002F0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_text_Variable_29' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_GetTournamentEndTime_ReturnValue) == 0x000308, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_GetTournamentEndTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Year) == 0x000310, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Year' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Month) == 0x000314, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Month' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Day) == 0x000318, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Day' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Hour) == 0x00031C, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Hour' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Minute) == 0x000320, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Minute' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Second) == 0x000324, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Second' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Millisecond) == 0x000328, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Millisecond' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_GetTournamentBeginTime_ReturnValue) == 0x000330, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_GetTournamentBeginTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, Temp_bool_Variable_2) == 0x000338, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Year_1) == 0x00033C, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Year_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Month_1) == 0x000340, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Month_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Day_1) == 0x000344, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Day_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Hour_1) == 0x000348, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Hour_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Minute_1) == 0x00034C, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Minute_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Second_1) == 0x000350, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Second_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Millisecond_1) == 0x000354, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Millisecond_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_GetTournamentEndTime_ReturnValue_1) == 0x000358, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_GetTournamentEndTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000360, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Year_2) == 0x000364, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Year_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Month_2) == 0x000368, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Month_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Day_2) == 0x00036C, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Day_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Hour_2) == 0x000370, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Hour_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Minute_2) == 0x000374, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Minute_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Second_2) == 0x000378, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Second_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Millisecond_2) == 0x00037C, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Millisecond_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_Conv_IntToText_ReturnValue) == 0x000380, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, K2Node_Select_Default) == 0x000398, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, K2Node_MakeStruct_FormatArgumentData) == 0x0003B0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, K2Node_MakeStruct_FormatArgumentData_1) == 0x0003F0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_GetTournamentBeginTime_ReturnValue_1) == 0x000430, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_GetTournamentBeginTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_GetTournamentEndTime_ReturnValue_2) == 0x000438, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_GetTournamentEndTime_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Year_3) == 0x000440, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Year_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Month_3) == 0x000444, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Month_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Day_3) == 0x000448, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Day_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Hour_3) == 0x00044C, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Hour_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Minute_3) == 0x000450, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Minute_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Second_3) == 0x000454, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Second_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Millisecond_3) == 0x000458, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Millisecond_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Year_4) == 0x00045C, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Year_4' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Month_4) == 0x000460, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Month_4' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Day_4) == 0x000464, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Day_4' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Hour_4) == 0x000468, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Hour_4' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Minute_4) == 0x00046C, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Minute_4' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Second_4) == 0x000470, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Second_4' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Millisecond_4) == 0x000474, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Millisecond_4' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_Conv_IntToText_ReturnValue_1) == 0x000478, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_EqualEqual_IntInt_ReturnValue_1) == 0x000490, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_EqualEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, K2Node_Select_Default_1) == 0x000498, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, K2Node_MakeStruct_FormatArgumentData_2) == 0x0004B0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, K2Node_Select_Default_2) == 0x0004F0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_GetTournamentBeginTime_ReturnValue_2) == 0x000508, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_GetTournamentBeginTime_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, K2Node_MakeStruct_FormatArgumentData_3) == 0x000510, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Year_5) == 0x000550, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Year_5' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Month_5) == 0x000554, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Month_5' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Day_5) == 0x000558, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Day_5' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Hour_5) == 0x00055C, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Hour_5' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Minute_5) == 0x000560, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Minute_5' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Second_5) == 0x000564, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Second_5' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_BreakDateTime_Millisecond_5) == 0x000568, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_BreakDateTime_Millisecond_5' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, K2Node_Select_Default_3) == 0x000570, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, K2Node_Select_Default_4) == 0x000588, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, K2Node_MakeStruct_FormatArgumentData_4) == 0x0005A0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, K2Node_MakeArray_Array) == 0x0005E0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_GetTournamentDateText, CallFunc_Format_ReturnValue) == 0x0005F0, "Member 'ShowdownTournamentPosterFront_C_GetTournamentDateText::CallFunc_Format_ReturnValue' has a wrong offset!");
-
-// Function ShowdownTournamentPosterFront.ShowdownTournamentPosterFront_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct ShowdownTournamentPosterFront_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(ShowdownTournamentPosterFront_C_PreConstruct) == 0x000001, "Wrong alignment on ShowdownTournamentPosterFront_C_PreConstruct");
-static_assert(sizeof(ShowdownTournamentPosterFront_C_PreConstruct) == 0x000001, "Wrong size on ShowdownTournamentPosterFront_C_PreConstruct");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'ShowdownTournamentPosterFront_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function ShowdownTournamentPosterFront.ShowdownTournamentPosterFront_C.ExecuteUbergraph_ShowdownTournamentPosterFront
-// 0x00B8 (0x00B8 - 0x0000)
-struct ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWorldCupQualifierEvent_ReturnValue;     // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortEventWindowEligibility                   Temp_byte_Variable_2;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_4;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_6;                              // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0010(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0038(0x0028)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0060(0x0018)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x0078(0x0018)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue_2;                // 0x0090(0x0018)()
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortEventWindowEligibility                   CallFunc_GetTournamentEligibility_ReturnValue;     // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AB[0x5];                                       // 0x00AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                K2Node_Select_Default_2;                           // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront) == 0x000008, "Wrong alignment on ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront");
-static_assert(sizeof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront) == 0x0000B8, "Wrong size on ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, EntryPoint) == 0x000000, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, CallFunc_IsWorldCupQualifierEvent_ReturnValue) == 0x000004, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::CallFunc_IsWorldCupQualifierEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, Temp_bool_Variable) == 0x000005, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, Temp_byte_Variable) == 0x000006, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, Temp_byte_Variable_1) == 0x000007, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, Temp_byte_Variable_2) == 0x000008, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, Temp_byte_Variable_3) == 0x000009, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, Temp_byte_Variable_4) == 0x00000A, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::Temp_byte_Variable_4' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, Temp_byte_Variable_5) == 0x00000B, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::Temp_byte_Variable_5' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, Temp_byte_Variable_6) == 0x00000C, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::Temp_byte_Variable_6' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, Temp_bool_Variable_1) == 0x00000D, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, K2Node_Event_IsDesignTime) == 0x00000E, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, K2Node_MakeStruct_SlateColor) == 0x000010, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, K2Node_MakeStruct_SlateColor_1) == 0x000038, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, CallFunc_TextToUpper_ReturnValue) == 0x000060, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, CallFunc_TextToUpper_ReturnValue_1) == 0x000078, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::CallFunc_TextToUpper_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, CallFunc_TextToUpper_ReturnValue_2) == 0x000090, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::CallFunc_TextToUpper_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, K2Node_Select_Default) == 0x0000A8, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, CallFunc_GetTournamentEligibility_ReturnValue) == 0x0000A9, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::CallFunc_GetTournamentEligibility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, K2Node_Select_Default_1) == 0x0000AA, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront, K2Node_Select_Default_2) == 0x0000B0, "Member 'ShowdownTournamentPosterFront_C_ExecuteUbergraph_ShowdownTournamentPosterFront::K2Node_Select_Default_2' has a wrong offset!");
 
 }
 

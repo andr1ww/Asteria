@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FrontEndStore.FrontEndStore_C
-// 0x0000 (0x0258 - 0x0258)
+// 0x0000 (0x0238 - 0x0238)
 class AFrontEndStore_C final : public AFortLevelScriptActor
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<AFrontEndStore_C>();
 	}
 };
-static_assert(alignof(AFrontEndStore_C) == 0x000008, "Wrong alignment on AFrontEndStore_C");
-static_assert(sizeof(AFrontEndStore_C) == 0x000258, "Wrong size on AFrontEndStore_C");
 
 }
 

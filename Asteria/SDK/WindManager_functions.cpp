@@ -37,6 +37,28 @@ void AWindManager_C::ExecuteUbergraph_WindManager(int32 EntryPoint)
 }
 
 
+// Function WindManager.WindManager_C.Add Render To Texture Particle
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UParticleSystem*                  EmitterTemplate                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                InTransform                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor)
+
+void AWindManager_C::Add_Render_To_Texture_Particle(class UParticleSystem* EmitterTemplate, const struct FTransform& InTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WindManager_C", "Add Render To Texture Particle");
+
+	Params::WindManager_C_Add_Render_To_Texture_Particle Parms{};
+
+	Parms.EmitterTemplate = EmitterTemplate;
+	Parms.InTransform = std::move(InTransform);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WindManager.WindManager_C.Update Test
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -91,10 +113,52 @@ void AWindManager_C::Add_Wind_Component(class UPrimitiveComponent* InComponent)
 }
 
 
+// Function WindManager.WindManager_C.Register player for render to texture purposes
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              Effect_Water_Interaction_FX                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              Gameplay_Wind_INteraction_Effects                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AWindManager_C::Register_player_for_render_to_texture_purposes(class UPrimitiveComponent* Effect_Water_Interaction_FX, class UPrimitiveComponent* Gameplay_Wind_INteraction_Effects)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WindManager_C", "Register player for render to texture purposes");
+
+	Params::WindManager_C_Register_player_for_render_to_texture_purposes Parms{};
+
+	Parms.Effect_Water_Interaction_FX = Effect_Water_Interaction_FX;
+	Parms.Gameplay_Wind_INteraction_Effects = Gameplay_Wind_INteraction_Effects;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WindManager.WindManager_C.AddWindParticleSystemComponent
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UParticleSystemComponent*         ParticleSystemComponent                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AWindManager_C::AddWindParticleSystemComponent(class UParticleSystemComponent* ParticleSystemComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WindManager_C", "AddWindParticleSystemComponent");
+
+	Params::WindManager_C_AddWindParticleSystemComponent Parms{};
+
+	Parms.ParticleSystemComponent = ParticleSystemComponent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WindManager.WindManager_C.Play Water Splash Particle System At Location
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FTransform                       Particle_Transform                                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FTransform&                Particle_Transform                                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 
 void AWindManager_C::Play_Water_Splash_Particle_System_At_Location(const struct FTransform& Particle_Transform)
 {
@@ -133,10 +197,32 @@ void AWindManager_C::SpawnTestWind(float Radius, float ImpulseMagnitude)
 }
 
 
+// Function WindManager.WindManager_C.OnWindImpulseCylinderCreation
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FFortWindImpulseCylinder&  WindImpulseCylinder                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// const struct FFortWindImpulseCylinderDelta&WindImpulseCylinderDelta                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+
+void AWindManager_C::OnWindImpulseCylinderCreation(const struct FFortWindImpulseCylinder& WindImpulseCylinder, const struct FFortWindImpulseCylinderDelta& WindImpulseCylinderDelta)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WindManager_C", "OnWindImpulseCylinderCreation");
+
+	Params::WindManager_C_OnWindImpulseCylinderCreation Parms{};
+
+	Parms.WindImpulseCylinder = std::move(WindImpulseCylinder);
+	Parms.WindImpulseCylinderDelta = std::move(WindImpulseCylinderDelta);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WindManager.WindManager_C.OnWindImpulseCylinderDeltaComplete
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FFortWindImpulseCylinder         WindImpulseCylinder                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// const struct FFortWindImpulseCylinder&  WindImpulseCylinder                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
 void AWindManager_C::OnWindImpulseCylinderDeltaComplete(const struct FFortWindImpulseCylinder& WindImpulseCylinder)
 {
@@ -156,7 +242,7 @@ void AWindManager_C::OnWindImpulseCylinderDeltaComplete(const struct FFortWindIm
 // Function WindManager.WindManager_C.OnWindImpulseCylinderDeath
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FFortWindImpulseCylinder         WindImpulseCylinder                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// const struct FFortWindImpulseCylinder&  WindImpulseCylinder                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
 void AWindManager_C::OnWindImpulseCylinderDeath(const struct FFortWindImpulseCylinder& WindImpulseCylinder)
 {
@@ -173,126 +259,6 @@ void AWindManager_C::OnWindImpulseCylinderDeath(const struct FFortWindImpulseCyl
 }
 
 
-// Function WindManager.WindManager_C.OnWindImpulseCylinderCreation
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// struct FFortWindImpulseCylinder         WindImpulseCylinder                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-// struct FFortWindImpulseCylinderDelta    WindImpulseCylinderDelta                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-
-void AWindManager_C::OnWindImpulseCylinderCreation(const struct FFortWindImpulseCylinder& WindImpulseCylinder, const struct FFortWindImpulseCylinderDelta& WindImpulseCylinderDelta)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WindManager_C", "OnWindImpulseCylinderCreation");
-
-	Params::WindManager_C_OnWindImpulseCylinderCreation Parms{};
-
-	Parms.WindImpulseCylinder = std::move(WindImpulseCylinder);
-	Parms.WindImpulseCylinderDelta = std::move(WindImpulseCylinderDelta);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WindManager.WindManager_C.AddWindParticleSystemComponent
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UParticleSystemComponent*         ParticleSystemComponent                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AWindManager_C::AddWindParticleSystemComponent(class UParticleSystemComponent* ParticleSystemComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WindManager_C", "AddWindParticleSystemComponent");
-
-	Params::WindManager_C_AddWindParticleSystemComponent Parms{};
-
-	Parms.ParticleSystemComponent = ParticleSystemComponent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WindManager.WindManager_C.Register player for render to texture purposes
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              Effect_Water_Interaction_FX                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              Gameplay_Wind_INteraction_Effects                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AWindManager_C::Register_player_for_render_to_texture_purposes(class UPrimitiveComponent* Effect_Water_Interaction_FX, class UPrimitiveComponent* Gameplay_Wind_INteraction_Effects)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WindManager_C", "Register player for render to texture purposes");
-
-	Params::WindManager_C_Register_player_for_render_to_texture_purposes Parms{};
-
-	Parms.Effect_Water_Interaction_FX = Effect_Water_Interaction_FX;
-	Parms.Gameplay_Wind_INteraction_Effects = Gameplay_Wind_INteraction_Effects;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WindManager.WindManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AWindManager_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WindManager_C", "ReceiveTick");
-
-	Params::WindManager_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WindManager.WindManager_C.OnWorldReady
-// (Event, Public, BlueprintEvent)
-
-void AWindManager_C::OnWorldReady()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WindManager_C", "OnWorldReady");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WindManager.WindManager_C.Add Render To Texture Particle
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UParticleSystem*                  EmitterTemplate                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FTransform                       InTransform                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor)
-
-void AWindManager_C::Add_Render_To_Texture_Particle(class UParticleSystem* EmitterTemplate, const struct FTransform& InTransform)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WindManager_C", "Add Render To Texture Particle");
-
-	Params::WindManager_C_Add_Render_To_Texture_Particle Parms{};
-
-	Parms.EmitterTemplate = EmitterTemplate;
-	Parms.InTransform = std::move(InTransform);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WindManager.WindManager_C.UserConstructionScript
 // (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -304,40 +270,6 @@ void AWindManager_C::UserConstructionScript()
 		Func = Class->GetFunction("WindManager_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WindManager.WindManager_C.InitializeOrthoSettings
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AWindManager_C::InitializeOrthoSettings()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WindManager_C", "InitializeOrthoSettings");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WindManager.WindManager_C.SetRenderOnlyAssets
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              InComponent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AWindManager_C::SetRenderOnlyAssets(class UPrimitiveComponent* InComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WindManager_C", "SetRenderOnlyAssets");
-
-	Params::WindManager_C_SetRenderOnlyAssets Parms{};
-
-	Parms.InComponent = InComponent;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -369,8 +301,8 @@ struct FVector AWindManager_C::Calculate_Camera_Position(float Scale, class USce
 // Function WindManager.WindManager_C.UpdateStormWindCylinder
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortWindImpulseCylinder         Wind_Impulse                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FFortWindImpulseCylinderDelta    Wind_Delta                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FFortWindImpulseCylinder&  Wind_Impulse                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FFortWindImpulseCylinderDelta&Wind_Delta                                             (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
 void AWindManager_C::UpdateStormWindCylinder(const struct FFortWindImpulseCylinder& Wind_Impulse, const struct FFortWindImpulseCylinderDelta& Wind_Delta)
 {
@@ -391,7 +323,7 @@ void AWindManager_C::UpdateStormWindCylinder(const struct FFortWindImpulseCylind
 // Function WindManager.WindManager_C.RemoveWindCylinder
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortWindImpulseCylinder         WindImpulseCylinder                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// const struct FFortWindImpulseCylinder&  WindImpulseCylinder                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
 void AWindManager_C::RemoveWindCylinder(const struct FFortWindImpulseCylinder& WindImpulseCylinder)
 {
@@ -439,17 +371,17 @@ void AWindManager_C::UpdateWindDeltaCyl(float Static_Cylinder_Outer_Radius, floa
 // Parameters:
 // class UMaterialInstanceDynamic*         Mid                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Set_AnimatedCylinderCenter                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FVector                          AnimatedCylinderCenter                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   AnimatedCylinderCenter                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Set_Animating_Wind_Magnitude                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // float                                   Animating_Wind_Magnitude                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Set_Static_Wind_Magnitude                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // float                                   Static_Wind_Magnitude                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Set_CylinderCenter                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FVector                          CylinderCenter                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   CylinderCenter                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Set_WindVector                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FVector                          WindVector                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   WindVector                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Set_WindCrossVector                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FVector                          WindCrossVector                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   WindCrossVector                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Set_OverallOuterRadius                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // float                                   OverallOuterRadius                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Set_OverallInnerRadius                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -458,7 +390,7 @@ void AWindManager_C::UpdateWindDeltaCyl(float Static_Cylinder_Outer_Radius, floa
 // float                                   Wind_Still_0_or_Animating_1                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    Set_Circular_Shader_                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // float                                   Circular_Shader_                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AWindManager_C::SetWindMatVariables(class UMaterialInstanceDynamic* Mid, bool Set_AnimatedCylinderCenter, const struct FVector& AnimatedCylinderCenter, bool Set_Animating_Wind_Magnitude, float Animating_Wind_Magnitude, bool Set_Static_Wind_Magnitude, float Static_Wind_Magnitude, bool Set_CylinderCenter, const struct FVector& CylinderCenter, bool Set_WindVector, const struct FVector& WindVector, bool Set_WindCrossVector, const struct FVector& WindCrossVector, bool Set_OverallOuterRadius, float OverallOuterRadius, bool Set_OverallInnerRadius, float OverallInnerRadius, bool Set_Wind_Still_0_or_Animating_1, float Wind_Still_0_or_Animating_1, bool Set_Circular_Shader_, float Circular_Shader_, bool* NewParam)
 {
@@ -501,9 +433,9 @@ void AWindManager_C::SetWindMatVariables(class UMaterialInstanceDynamic* Mid, bo
 // Function WindManager.WindManager_C.Find Matching Wind Mesh Index And Write Bool
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Wind_location                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Storm_Cyl_Mesh_Match_0                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// int32                                   Wind_Cyl_Mesh_Array_Match_Index_0                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Wind_location                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Storm_Cyl_Mesh_Match_0                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32*                                  Wind_Cyl_Mesh_Array_Match_Index_0                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AWindManager_C::Find_Matching_Wind_Mesh_Index_And_Write_Bool(const struct FVector& Wind_location, bool* Storm_Cyl_Mesh_Match_0, int32* Wind_Cyl_Mesh_Array_Match_Index_0)
 {

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass VideoPlayerWidget.VideoPlayerWidget_C
-// 0x0000 (0x02E0 - 0x02E0)
+// 0x0000 (0x0358 - 0x0358)
 class UVideoPlayerWidget_C final : public UFortVideoPlayerWidget
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UVideoPlayerWidget_C>();
 	}
 };
-static_assert(alignof(UVideoPlayerWidget_C) == 0x000008, "Wrong alignment on UVideoPlayerWidget_C");
-static_assert(sizeof(UVideoPlayerWidget_C) == 0x0002E0, "Wrong size on UVideoPlayerWidget_C");
 
 }
 

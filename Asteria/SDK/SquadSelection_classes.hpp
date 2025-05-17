@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SquadSelection.SquadSelection_C
-// 0x0018 (0x03D8 - 0x03C0)
+// 0x0018 (0x03A0 - 0x0388)
 class USquadSelection_C final : public UFortSquadSelectionMenu
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Image_2;                                           // 0x03C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPanelButton_C*                         Mobile_CloseButton;                                // 0x03D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0388(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCloseButton_C*                         Mobile_CloseButton;                                // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_0;                                        // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnLocalPlayerParticipationChanged(bool bIsParticipating);
-	void BndEvt__Mobile_CloseButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void ExecuteUbergraph_SquadSelection(int32 EntryPoint);
+	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void OnLocalPlayerParticipationChanged(bool bIsParticipating);
 
 public:
 	static class UClass* StaticClass()
@@ -41,11 +41,6 @@ public:
 		return GetDefaultObjImpl<USquadSelection_C>();
 	}
 };
-static_assert(alignof(USquadSelection_C) == 0x000008, "Wrong alignment on USquadSelection_C");
-static_assert(sizeof(USquadSelection_C) == 0x0003D8, "Wrong size on USquadSelection_C");
-static_assert(offsetof(USquadSelection_C, UberGraphFrame) == 0x0003C0, "Member 'USquadSelection_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USquadSelection_C, Image_2) == 0x0003C8, "Member 'USquadSelection_C::Image_2' has a wrong offset!");
-static_assert(offsetof(USquadSelection_C, Mobile_CloseButton) == 0x0003D0, "Member 'USquadSelection_C::Mobile_CloseButton' has a wrong offset!");
 
 }
 

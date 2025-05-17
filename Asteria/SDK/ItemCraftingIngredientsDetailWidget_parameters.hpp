@@ -28,14 +28,6 @@ public:
 	bool                                          CallFunc_IsEmptyList_ReturnValue;                  // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget) == 0x000004, "Wrong alignment on ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget");
-static_assert(sizeof(ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget) == 0x00000C, "Wrong size on ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget");
-static_assert(offsetof(ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget, EntryPoint) == 0x000000, "Member 'ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget, Temp_bool_Variable) == 0x000004, "Member 'ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget, Temp_byte_Variable) == 0x000005, "Member 'ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget, Temp_byte_Variable_1) == 0x000006, "Member 'ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget, CallFunc_IsEmptyList_ReturnValue) == 0x000007, "Member 'ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget::CallFunc_IsEmptyList_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget, K2Node_Select_Default) == 0x000008, "Member 'ItemCraftingIngredientsDetailWidget_C_ExecuteUbergraph_ItemCraftingIngredientsDetailWidget::K2Node_Select_Default' has a wrong offset!");
 
 }
 

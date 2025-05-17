@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UBP_GCSteps_C>();
 	}
 };
-static_assert(alignof(UBP_GCSteps_C) == 0x000008, "Wrong alignment on UBP_GCSteps_C");
-static_assert(sizeof(UBP_GCSteps_C) == 0x000160, "Wrong size on UBP_GCSteps_C");
 
 }
 

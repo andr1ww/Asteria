@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CommonUI_classes.hpp"
 #include "UMG_structs.hpp"
 
@@ -20,17 +20,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Cinematic-TeamMics.Cinematic-TeamMics_C
-// 0x0230 (0x0468 - 0x0238)
+// 0x0230 (0x04B8 - 0x0288)
 class UCinematic_TeamMics_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMicIndicator_C*                        MicIndicator;                                      // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  SwitcherConnectingStranger;                        // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextBlock_6;                                       // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextPlayerName;                                    // 0x0258(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FFortTeamMemberInfo                    MemberInfo;                                        // 0x0260(0x0200)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          ShowingHealth;                                     // 0x0460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMicIndicator_C*                        MicIndicator;                                      // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  SwitcherConnectingStranger;                        // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextBlock_6;                                       // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextPlayerName;                                    // 0x02A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FFortTeamMemberInfo                    MemberInfo;                                        // 0x02B0(0x0200)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          ShowingHealth;                                     // 0x04B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_Cinematic_TeamMics(int32 EntryPoint);
@@ -47,15 +47,6 @@ public:
 		return GetDefaultObjImpl<UCinematic_TeamMics_C>();
 	}
 };
-static_assert(alignof(UCinematic_TeamMics_C) == 0x000008, "Wrong alignment on UCinematic_TeamMics_C");
-static_assert(sizeof(UCinematic_TeamMics_C) == 0x000468, "Wrong size on UCinematic_TeamMics_C");
-static_assert(offsetof(UCinematic_TeamMics_C, UberGraphFrame) == 0x000238, "Member 'UCinematic_TeamMics_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCinematic_TeamMics_C, MicIndicator) == 0x000240, "Member 'UCinematic_TeamMics_C::MicIndicator' has a wrong offset!");
-static_assert(offsetof(UCinematic_TeamMics_C, SwitcherConnectingStranger) == 0x000248, "Member 'UCinematic_TeamMics_C::SwitcherConnectingStranger' has a wrong offset!");
-static_assert(offsetof(UCinematic_TeamMics_C, TextBlock_6) == 0x000250, "Member 'UCinematic_TeamMics_C::TextBlock_6' has a wrong offset!");
-static_assert(offsetof(UCinematic_TeamMics_C, TextPlayerName) == 0x000258, "Member 'UCinematic_TeamMics_C::TextPlayerName' has a wrong offset!");
-static_assert(offsetof(UCinematic_TeamMics_C, MemberInfo) == 0x000260, "Member 'UCinematic_TeamMics_C::MemberInfo' has a wrong offset!");
-static_assert(offsetof(UCinematic_TeamMics_C, ShowingHealth) == 0x000460, "Member 'UCinematic_TeamMics_C::ShowingHealth' has a wrong offset!");
 
 }
 

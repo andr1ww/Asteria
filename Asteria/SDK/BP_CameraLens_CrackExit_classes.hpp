@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CameraLens_CrackExit.BP_CameraLens_CrackExit_C
-// 0x0010 (0x0310 - 0x0300)
+// 0x0010 (0x02F0 - 0x02E0)
 class ABP_CameraLens_CrackExit_C final : public AEmitterCameraLensEffectBase
 {
 public:
-	class UParticleSystemComponent*               Portal;                                            // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Portal;                                            // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,9 +33,6 @@ public:
 		return GetDefaultObjImpl<ABP_CameraLens_CrackExit_C>();
 	}
 };
-static_assert(alignof(ABP_CameraLens_CrackExit_C) == 0x000010, "Wrong alignment on ABP_CameraLens_CrackExit_C");
-static_assert(sizeof(ABP_CameraLens_CrackExit_C) == 0x000310, "Wrong size on ABP_CameraLens_CrackExit_C");
-static_assert(offsetof(ABP_CameraLens_CrackExit_C, Portal) == 0x000300, "Member 'ABP_CameraLens_CrackExit_C::Portal' has a wrong offset!");
 
 }
 

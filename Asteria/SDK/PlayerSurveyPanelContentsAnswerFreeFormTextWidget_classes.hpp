@@ -20,18 +20,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PlayerSurveyPanelContentsAnswerFreeFormTextWidget.PlayerSurveyPanelContentsAnswerFreeFormTextWidget_C
-// 0x0048 (0x0298 - 0x0250)
+// 0x0048 (0x0368 - 0x0320)
 class UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C final : public UFortPlayerSurveyFreeFormTextAnswerWidgetBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0250(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UMultiLineEditableTextBox*              EntryTextBox;                                      // 0x0258(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       LimitsTextBlock;                                   // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bIgnoreAnswerChange;                               // 0x0268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_269[0x7];                                      // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Text_Subtitle;                                     // 0x0270(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UClass*                                 LimitsStyle_Normal;                                // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 LimitsStyle_Overflow;                              // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UMultiLineEditableTextBox*              EntryTextBox;                                      // 0x0328(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       LimitsTextBlock;                                   // 0x0330(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bIgnoreAnswerChange;                               // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_339[0x7];                                      // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Text_Subtitle;                                     // 0x0340(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UClass*                                 LimitsStyle_Normal;                                // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 LimitsStyle_Overflow;                              // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_PlayerSurveyPanelContentsAnswerFreeFormTextWidget(int32 EntryPoint);
@@ -59,15 +59,6 @@ public:
 		return GetDefaultObjImpl<UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C>();
 	}
 };
-static_assert(alignof(UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C) == 0x000008, "Wrong alignment on UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C");
-static_assert(sizeof(UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C) == 0x000298, "Wrong size on UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C, UberGraphFrame) == 0x000250, "Member 'UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C, EntryTextBox) == 0x000258, "Member 'UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::EntryTextBox' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C, LimitsTextBlock) == 0x000260, "Member 'UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::LimitsTextBlock' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C, bIgnoreAnswerChange) == 0x000268, "Member 'UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::bIgnoreAnswerChange' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C, Text_Subtitle) == 0x000270, "Member 'UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::Text_Subtitle' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C, LimitsStyle_Normal) == 0x000288, "Member 'UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::LimitsStyle_Normal' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C, LimitsStyle_Overflow) == 0x000290, "Member 'UPlayerSurveyPanelContentsAnswerFreeFormTextWidget_C::LimitsStyle_Overflow' has a wrong offset!");
 
 }
 

@@ -21,9 +21,6 @@ struct B_Generic_Instance_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Generic_In
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_Generic_Instance_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Generic_Instance_Grenade_Playset_Athena) == 0x000004, "Wrong alignment on B_Generic_Instance_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Generic_Instance_Grenade_Playset_Athena");
-static_assert(sizeof(B_Generic_Instance_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Generic_Instance_Grenade_Playset_Athena) == 0x000004, "Wrong size on B_Generic_Instance_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Generic_Instance_Grenade_Playset_Athena");
-static_assert(offsetof(B_Generic_Instance_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Generic_Instance_Grenade_Playset_Athena, EntryPoint) == 0x000000, "Member 'B_Generic_Instance_Grenade_Playset_Athena_C_ExecuteUbergraph_B_Generic_Instance_Grenade_Playset_Athena::EntryPoint' has a wrong offset!");
 
 }
 

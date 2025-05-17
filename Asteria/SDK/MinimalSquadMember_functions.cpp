@@ -17,17 +17,63 @@
 namespace SDK
 {
 
-// Function MinimalSquadMember.MinimalSquadMember_C.SetSitOutVisuals
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function MinimalSquadMember.MinimalSquadMember_C.ExecuteUbergraph_MinimalSquadMember
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMinimalSquadMember_C::SetSitOutVisuals()
+void UMinimalSquadMember_C::ExecuteUbergraph_MinimalSquadMember(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MinimalSquadMember_C", "SetSitOutVisuals");
+		Func = Class->GetFunction("MinimalSquadMember_C", "ExecuteUbergraph_MinimalSquadMember");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::MinimalSquadMember_C_ExecuteUbergraph_MinimalSquadMember Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MinimalSquadMember.MinimalSquadMember_C.BP_OnTeamMemberEstablished
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bHasValidMember                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UMinimalSquadMember_C::BP_OnTeamMemberEstablished(bool bHasValidMember)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinimalSquadMember_C", "BP_OnTeamMemberEstablished");
+
+	Params::MinimalSquadMember_C_BP_OnTeamMemberEstablished Parms{};
+
+	Parms.bHasValidMember = bHasValidMember;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MinimalSquadMember.MinimalSquadMember_C.OnMemberGameReadinessChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EGameReadiness                          ReadyStatus                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMinimalSquadMember_C::OnMemberGameReadinessChanged(EGameReadiness ReadyStatus)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinimalSquadMember_C", "OnMemberGameReadinessChanged");
+
+	Params::MinimalSquadMember_C_OnMemberGameReadinessChanged Parms{};
+
+	Parms.ReadyStatus = ReadyStatus;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -59,6 +105,20 @@ void UMinimalSquadMember_C::SetNotReadyVisuals()
 }
 
 
+// Function MinimalSquadMember.MinimalSquadMember_C.SetSitOutVisuals
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UMinimalSquadMember_C::SetSitOutVisuals()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinimalSquadMember_C", "SetSitOutVisuals");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function MinimalSquadMember.MinimalSquadMember_C.SetEmptyVisuals
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -70,66 +130,6 @@ void UMinimalSquadMember_C::SetEmptyVisuals()
 		Func = Class->GetFunction("MinimalSquadMember_C", "SetEmptyVisuals");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MinimalSquadMember.MinimalSquadMember_C.OnMemberGameReadinessChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EGameReadiness                          ReadyStatus                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMinimalSquadMember_C::OnMemberGameReadinessChanged(EGameReadiness ReadyStatus)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinimalSquadMember_C", "OnMemberGameReadinessChanged");
-
-	Params::MinimalSquadMember_C_OnMemberGameReadinessChanged Parms{};
-
-	Parms.ReadyStatus = ReadyStatus;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MinimalSquadMember.MinimalSquadMember_C.BP_OnTeamMemberEstablished
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bHasValidMember                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UMinimalSquadMember_C::BP_OnTeamMemberEstablished(bool bHasValidMember)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinimalSquadMember_C", "BP_OnTeamMemberEstablished");
-
-	Params::MinimalSquadMember_C_BP_OnTeamMemberEstablished Parms{};
-
-	Parms.bHasValidMember = bHasValidMember;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MinimalSquadMember.MinimalSquadMember_C.ExecuteUbergraph_MinimalSquadMember
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UMinimalSquadMember_C::ExecuteUbergraph_MinimalSquadMember(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinimalSquadMember_C", "ExecuteUbergraph_MinimalSquadMember");
-
-	Params::MinimalSquadMember_C_ExecuteUbergraph_MinimalSquadMember Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

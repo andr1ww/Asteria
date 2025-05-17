@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_ConsumableSmall_HalfShield_Athena.B_ConsumableSmall_HalfShield_Athena_C
-// 0x0000 (0x0928 - 0x0928)
+// 0x0000 (0x0CC8 - 0x0CC8)
 class AB_ConsumableSmall_HalfShield_Athena_C final : public AB_UtilityItem_Generic_Athena_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<AB_ConsumableSmall_HalfShield_Athena_C>();
 	}
 };
-static_assert(alignof(AB_ConsumableSmall_HalfShield_Athena_C) == 0x000008, "Wrong alignment on AB_ConsumableSmall_HalfShield_Athena_C");
-static_assert(sizeof(AB_ConsumableSmall_HalfShield_Athena_C) == 0x000928, "Wrong size on AB_ConsumableSmall_HalfShield_Athena_C");
 
 }
 

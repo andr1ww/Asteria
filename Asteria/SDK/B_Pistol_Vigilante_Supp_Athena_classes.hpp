@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Pistol_Vigilante_Supp_Athena.B_Pistol_Vigilante_Supp_Athena_C
-// 0x0000 (0x0DA8 - 0x0DA8)
+// 0x0000 (0x1310 - 0x1310)
 class AB_Pistol_Vigilante_Supp_Athena_C final : public AB_Pistol_Generic_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<AB_Pistol_Vigilante_Supp_Athena_C>();
 	}
 };
-static_assert(alignof(AB_Pistol_Vigilante_Supp_Athena_C) == 0x000008, "Wrong alignment on AB_Pistol_Vigilante_Supp_Athena_C");
-static_assert(sizeof(AB_Pistol_Vigilante_Supp_Athena_C) == 0x000DA8, "Wrong size on AB_Pistol_Vigilante_Supp_Athena_C");
 
 }
 

@@ -10,44 +10,43 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "ECardinalDirection_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_ProjectileTrajectory_Athena_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ProjectileTrajectory_Athena_SnapBoxToGrid.BP_ProjectileTrajectory_Athena_SnapBoxToGrid_C
-// 0x0088 (0x0320 - 0x0298)
+// 0x0088 (0x02F8 - 0x0270)
 class ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C : public ABP_ProjectileTrajectory_Athena_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ProjectileTrajectory_Athena_SnapBoxToGrid_C; // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   SM_BuildingPreview;                                // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Building;                                          // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         GridSizeXY;                                        // 0x02B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GridSizeZ;                                         // 0x02B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GridYOffset;                                       // 0x02B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LastPointDist;                                     // 0x02BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         GridZOffset;                                       // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               YawOffset;                                         // 0x02C4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               LastYawOffset;                                     // 0x02D0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FVector                                GridSnapPosition;                                  // 0x02DC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LastGridSnapPosition;                              // 0x02E8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F4[0x4];                                      // 0x02F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             GridSnapSound;                                     // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECardinalDirection                            CardinalDirection;                                 // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_301[0x7];                                      // 0x0301(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMesh*                            BuildingPreviewMesh;                               // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortPlaysetItemDefinition*             CachedPlayset;                                     // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        Throw_Loop_Sound;                                  // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ProjectileTrajectory_Athena_SnapBoxToGrid_C; // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   SM_BuildingPreview;                                // 0x0278(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Building;                                          // 0x0280(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         GridSizeXY;                                        // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GridSizeZ;                                         // 0x028C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GridYOffset;                                       // 0x0290(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LastPointDist;                                     // 0x0294(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         GridZOffset;                                       // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               YawOffset;                                         // 0x029C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               LastYawOffset;                                     // 0x02A8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FVector                                GridSnapPosition;                                  // 0x02B4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LastGridSnapPosition;                              // 0x02C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             GridSnapSound;                                     // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECardinalDirection                            CardinalDirection;                                 // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D9[0x7];                                      // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMesh*                            BuildingPreviewMesh;                               // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortPlaysetItemDefinition*             CachedPlayset;                                     // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Throw_Loop_Sound;                                  // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_ProjectileTrajectory_Athena_SnapBoxToGrid(int32 EntryPoint);
-	void ReceiveDestroyed();
-	void SetTrajectorySpline(TArray<struct FVector>& SplinePoints, TArray<struct FVector>& SplineTangents);
+	void SetTrajectorySpline(const TArray<struct FVector>& SplinePoints, const TArray<struct FVector>& SplineTangents);
 	void ReceiveActorBeginOverlap(class AActor* OtherActor);
 	void ReceiveBeginPlay();
 	void UserConstructionScript();
@@ -65,25 +64,6 @@ public:
 		return GetDefaultObjImpl<ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C>();
 	}
 };
-static_assert(alignof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C) == 0x000008, "Wrong alignment on ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C");
-static_assert(sizeof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C) == 0x000320, "Wrong size on ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, UberGraphFrame_BP_ProjectileTrajectory_Athena_SnapBoxToGrid_C) == 0x000298, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::UberGraphFrame_BP_ProjectileTrajectory_Athena_SnapBoxToGrid_C' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, SM_BuildingPreview) == 0x0002A0, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::SM_BuildingPreview' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, Building) == 0x0002A8, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::Building' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, GridSizeXY) == 0x0002B0, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::GridSizeXY' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, GridSizeZ) == 0x0002B4, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::GridSizeZ' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, GridYOffset) == 0x0002B8, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::GridYOffset' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, LastPointDist) == 0x0002BC, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::LastPointDist' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, GridZOffset) == 0x0002C0, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::GridZOffset' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, YawOffset) == 0x0002C4, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::YawOffset' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, LastYawOffset) == 0x0002D0, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::LastYawOffset' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, GridSnapPosition) == 0x0002DC, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::GridSnapPosition' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, LastGridSnapPosition) == 0x0002E8, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::LastGridSnapPosition' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, GridSnapSound) == 0x0002F8, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::GridSnapSound' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, CardinalDirection) == 0x000300, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::CardinalDirection' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, BuildingPreviewMesh) == 0x000308, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::BuildingPreviewMesh' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, CachedPlayset) == 0x000310, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::CachedPlayset' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C, Throw_Loop_Sound) == 0x000318, "Member 'ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C::Throw_Loop_Sound' has a wrong offset!");
 
 }
 

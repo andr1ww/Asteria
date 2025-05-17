@@ -37,6 +37,130 @@ void ABGA_IslandPortal_C::ExecuteUbergraph_BGA_IslandPortal(int32 EntryPoint)
 }
 
 
+// Function BGA_IslandPortal.BGA_IslandPortal_C.ErrorStateChanged
+// (Event, Public, BlueprintEvent)
+
+void ABGA_IslandPortal_C::ErrorStateChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "ErrorStateChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.ServerOnInteractWithIslandPortal
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class AFortPlayerPawn*            InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_IslandPortal_C::ServerOnInteractWithIslandPortal(const class AFortPlayerPawn* InteractingPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "ServerOnInteractWithIslandPortal");
+
+	Params::BGA_IslandPortal_C_ServerOnInteractWithIslandPortal Parms{};
+
+	Parms.InteractingPawn = InteractingPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.BndEvt__HUD Visibility Volume_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_IslandPortal_C::BndEvt__HUD_Visibility_Volume_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "BndEvt__HUD Visibility Volume_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature");
+
+	Params::BGA_IslandPortal_C_BndEvt__HUD_Visibility_Volume_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature Parms{};
+
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.BndEvt__HUD Visibility Volume_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature
+// (HasOutParams, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void ABGA_IslandPortal_C::BndEvt__HUD_Visibility_Volume_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "BndEvt__HUD Visibility Volume_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature");
+
+	Params::BGA_IslandPortal_C_BndEvt__HUD_Visibility_Volume_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature Parms{};
+
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+	Parms.bFromSweep = bFromSweep;
+	Parms.SweepResult = std::move(SweepResult);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.OnReceivedNewIslandInfo
+// (Event, Protected, BlueprintEvent)
+
+void ABGA_IslandPortal_C::OnReceivedNewIslandInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "OnReceivedNewIslandInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.BroadcastIsBeingInteractedWith
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsInteracting                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_IslandPortal_C::BroadcastIsBeingInteractedWith(bool IsInteracting)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "BroadcastIsBeingInteractedWith");
+
+	Params::BGA_IslandPortal_C_BroadcastIsBeingInteractedWith Parms{};
+
+	Parms.IsInteracting = IsInteracting;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BGA_IslandPortal.BGA_IslandPortal_C.Play Teleport Audio
 // (BlueprintCallable, BlueprintEvent)
 
@@ -82,7 +206,7 @@ void ABGA_IslandPortal_C::OnThumbnailTextureReady()
 // Function BGA_IslandPortal.BGA_IslandPortal_C.Play Rift Exit Sound
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABGA_IslandPortal_C::Play_Rift_Exit_Sound(const struct FVector& Location)
 {
@@ -330,9 +454,9 @@ void ABGA_IslandPortal_C::LoadIslandUI(class AFortPlayerPawn* InteractingPawn)
 // Function BGA_IslandPortal.BGA_IslandPortal_C.NotifyTeleportedVehicle
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AFortAthenaVehicle*               Vehicle_0                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           VehicleActor_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABGA_IslandPortal_C::NotifyTeleportedVehicle(class AFortAthenaVehicle* Vehicle_0)
+void ABGA_IslandPortal_C::NotifyTeleportedVehicle(class AActor* VehicleActor_0)
 {
 	static class UFunction* Func = nullptr;
 
@@ -341,7 +465,7 @@ void ABGA_IslandPortal_C::NotifyTeleportedVehicle(class AFortAthenaVehicle* Vehi
 
 	Params::BGA_IslandPortal_C_NotifyTeleportedVehicle Parms{};
 
-	Parms.Vehicle_0 = Vehicle_0;
+	Parms.VehicleActor_0 = VehicleActor_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -370,7 +494,7 @@ void ABGA_IslandPortal_C::OverlappingOnBeginPlay(class AActor* Actor)
 // Function BGA_IslandPortal.BGA_IslandPortal_C.PlayCosmeticFX
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          DestinationLocation                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   DestinationLocation                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABGA_IslandPortal_C::PlayCosmeticFX(const struct FVector& DestinationLocation)
 {
@@ -390,8 +514,8 @@ void ABGA_IslandPortal_C::PlayCosmeticFX(const struct FVector& DestinationLocati
 // Function BGA_IslandPortal.BGA_IslandPortal_C.PlayTeleportFX
 // (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          PlayerLocation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          DestinationLocation                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   PlayerLocation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   DestinationLocation                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABGA_IslandPortal_C::PlayTeleportFX(const struct FVector& PlayerLocation, const struct FVector& DestinationLocation)
 {
@@ -457,7 +581,7 @@ void ABGA_IslandPortal_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_3_Component
 // class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FHitResult                       SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
 void ABGA_IslandPortal_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
@@ -487,7 +611,7 @@ void ABGA_IslandPortal_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_2_Component
 // class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FHitResult                       SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
 void ABGA_IslandPortal_C::BndEvt__OverlapCapsule_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
@@ -504,6 +628,26 @@ void ABGA_IslandPortal_C::BndEvt__OverlapCapsule_K2Node_ComponentBoundEvent_1_Co
 	Parms.OtherBodyIndex = OtherBodyIndex;
 	Parms.bFromSweep = bFromSweep;
 	Parms.SweepResult = std::move(SweepResult);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.OnLoaded_E60F9B1D4E758E4EA443468A995679B2
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UClass*                           Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_IslandPortal_C::OnLoaded_E60F9B1D4E758E4EA443468A995679B2(class UClass* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "OnLoaded_E60F9B1D4E758E4EA443468A995679B2");
+
+	Params::BGA_IslandPortal_C_OnLoaded_E60F9B1D4E758E4EA443468A995679B2 Parms{};
+
+	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -708,7 +852,7 @@ void ABGA_IslandPortal_C::CheckForRiftLocUpdate(class AController* InController)
 
 
 // Function BGA_IslandPortal.BGA_IslandPortal_C.UseRiftQuestUpdate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AController*                      InController                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -730,7 +874,7 @@ void ABGA_IslandPortal_C::UseRiftQuestUpdate(class AController* InController)
 // Function BGA_IslandPortal.BGA_IslandPortal_C.GetPortalPosition
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Location                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         Location                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABGA_IslandPortal_C::GetPortalPosition(struct FVector* Location)
 {
@@ -861,13 +1005,284 @@ struct FVector ABGA_IslandPortal_C::ScaleThumbnailPlaneByTextureSize()
 }
 
 
+// Function BGA_IslandPortal.BGA_IslandPortal_C.CanUseHUDInteract
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   CanInteract                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_IslandPortal_C::CanUseHUDInteract(bool* CanInteract)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "CanUseHUDInteract");
+
+	Params::BGA_IslandPortal_C_CanUseHUDInteract Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (CanInteract != nullptr)
+		*CanInteract = Parms.CanInteract;
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.CloseAndClearDisplayedWidget
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABGA_IslandPortal_C::CloseAndClearDisplayedWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "CloseAndClearDisplayedWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.ClearDisplayedWidget
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABGA_IslandPortal_C::ClearDisplayedWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "ClearDisplayedWidget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.StartOrEndQuery
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABGA_IslandPortal_C::StartOrEndQuery()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "StartOrEndQuery");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.QueryPlayerLookAt
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABGA_IslandPortal_C::QueryPlayerLookAt()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "QueryPlayerLookAt");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.UpdateCodeEntryScreen
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bForceScreenUpdate                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_IslandPortal_C::UpdateCodeEntryScreen(bool bForceScreenUpdate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "UpdateCodeEntryScreen");
+
+	Params::BGA_IslandPortal_C_UpdateCodeEntryScreen Parms{};
+
+	Parms.bForceScreenUpdate = bForceScreenUpdate;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.UpdateCodeEntryVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABGA_IslandPortal_C::UpdateCodeEntryVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "UpdateCodeEntryVisibility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.UpdateBaseVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABGA_IslandPortal_C::UpdateBaseVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "UpdateBaseVisibility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.LocalPlayerEnteredRange
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APawn*                            LocalPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_IslandPortal_C::LocalPlayerEnteredRange(class APawn* LocalPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "LocalPlayerEnteredRange");
+
+	Params::BGA_IslandPortal_C_LocalPlayerEnteredRange Parms{};
+
+	Parms.LocalPawn = LocalPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.LocalPlayerExitedRange
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APawn*                            LocalPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_IslandPortal_C::LocalPlayerExitedRange(class APawn* LocalPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "LocalPlayerExitedRange");
+
+	Params::BGA_IslandPortal_C_LocalPlayerExitedRange Parms{};
+
+	Parms.LocalPawn = LocalPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.LocalPlayerRangeCheck
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           OverlappingActor                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnteredRange                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_IslandPortal_C::LocalPlayerRangeCheck(class AActor* OverlappingActor, bool bEnteredRange)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "LocalPlayerRangeCheck");
+
+	Params::BGA_IslandPortal_C_LocalPlayerRangeCheck Parms{};
+
+	Parms.OverlappingActor = OverlappingActor;
+	Parms.bEnteredRange = bEnteredRange;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.StartTeleport
+// (Protected, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           OverlapActor_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_IslandPortal_C::StartTeleport(class AActor* OverlapActor_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "StartTeleport");
+
+	Params::BGA_IslandPortal_C_StartTeleport Parms{};
+
+	Parms.OverlapActor_0 = OverlapActor_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.UpdateInfoPlatePointer
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABGA_IslandPortal_C::UpdateInfoPlatePointer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "UpdateInfoPlatePointer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.StartTeleportByInteractionOnServer
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           OverlapActor_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_IslandPortal_C::StartTeleportByInteractionOnServer(class AActor* OverlapActor_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "StartTeleportByInteractionOnServer");
+
+	Params::BGA_IslandPortal_C_StartTeleportByInteractionOnServer Parms{};
+
+	Parms.OverlapActor_0 = OverlapActor_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.DetermineWherePlayerIsLooking
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APawn*                            Pawn                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bIsLookingAtScreen                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   bIsLookingAtPortal                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_IslandPortal_C::DetermineWherePlayerIsLooking(class APawn* Pawn, bool* bIsLookingAtScreen, bool* bIsLookingAtPortal)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "DetermineWherePlayerIsLooking");
+
+	Params::BGA_IslandPortal_C_DetermineWherePlayerIsLooking Parms{};
+
+	Parms.Pawn = Pawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bIsLookingAtScreen != nullptr)
+		*bIsLookingAtScreen = Parms.bIsLookingAtScreen;
+
+	if (bIsLookingAtPortal != nullptr)
+		*bIsLookingAtPortal = Parms.bIsLookingAtPortal;
+}
+
+
 // Function BGA_IslandPortal.BGA_IslandPortal_C.BlueprintCanInteract
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AFortPawn*                        InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool ABGA_IslandPortal_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn) const
+bool ABGA_IslandPortal_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -877,6 +1292,8 @@ bool ABGA_IslandPortal_C::BlueprintCanInteract(const class AFortPawn* Interactin
 	Params::BGA_IslandPortal_C_BlueprintCanInteract Parms{};
 
 	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+	Parms.InteractionType = InteractionType;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -887,10 +1304,11 @@ bool ABGA_IslandPortal_C::BlueprintCanInteract(const class AFortPawn* Interactin
 // Function BGA_IslandPortal.BGA_IslandPortal_C.BlueprintGetInteractionString
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class AFortPawn*                        InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-class FText ABGA_IslandPortal_C::BlueprintGetInteractionString(const class AFortPawn* InteractingPawn) const
+class FText ABGA_IslandPortal_C::BlueprintGetInteractionString(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -900,10 +1318,242 @@ class FText ABGA_IslandPortal_C::BlueprintGetInteractionString(const class AFort
 	Params::BGA_IslandPortal_C_BlueprintGetInteractionString Parms{};
 
 	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
 
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.BlueprintGetInteractionTime
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  OutInteractionTime                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABGA_IslandPortal_C::BlueprintGetInteractionTime(const class AFortPawn* InteractingPawn, float* OutInteractionTime, const EInteractionBeingAttempted InteractionBeingAttempted) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "BlueprintGetInteractionTime");
+
+	Params::BGA_IslandPortal_C_BlueprintGetInteractionTime Parms{};
+
+	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutInteractionTime != nullptr)
+		*OutInteractionTime = Parms.OutInteractionTime;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.PortalTeleportsByInteraction
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool*                                   bRequiresInteraction                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_IslandPortal_C::PortalTeleportsByInteraction(bool* bRequiresInteraction) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "PortalTeleportsByInteraction");
+
+	Params::BGA_IslandPortal_C_PortalTeleportsByInteraction Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bRequiresInteraction != nullptr)
+		*bRequiresInteraction = Parms.bRequiresInteraction;
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.PortalUsesCodeScreen
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool*                                   bUsesCodeScreen                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_IslandPortal_C::PortalUsesCodeScreen(bool* bUsesCodeScreen) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "PortalUsesCodeScreen");
+
+	Params::BGA_IslandPortal_C_PortalUsesCodeScreen Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bUsesCodeScreen != nullptr)
+		*bUsesCodeScreen = Parms.bUsesCodeScreen;
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.IsLookingAtSphere
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class USphereComponent*                 LookAtSphere                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Eyes_View_Point_Location                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FRotator&                  Eyes_View_Point_Rotation                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   bIsLookingAtSphere                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_IslandPortal_C::IsLookingAtSphere(class USphereComponent* LookAtSphere, const struct FVector& Eyes_View_Point_Location, const struct FRotator& Eyes_View_Point_Rotation, bool* bIsLookingAtSphere) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "IsLookingAtSphere");
+
+	Params::BGA_IslandPortal_C_IsLookingAtSphere Parms{};
+
+	Parms.LookAtSphere = LookAtSphere;
+	Parms.Eyes_View_Point_Location = std::move(Eyes_View_Point_Location);
+	Parms.Eyes_View_Point_Rotation = std::move(Eyes_View_Point_Rotation);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bIsLookingAtSphere != nullptr)
+		*bIsLookingAtSphere = Parms.bIsLookingAtSphere;
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.CanModifyPortal
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool*                                   bCanModify                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_IslandPortal_C::CanModifyPortal(bool* bCanModify) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "CanModifyPortal");
+
+	Params::BGA_IslandPortal_C_CanModifyPortal Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bCanModify != nullptr)
+		*bCanModify = Parms.bCanModify;
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.GetIconPlacement
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// const class AActor*                     SelfActor                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AActor*                     ViewingActor                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         OutLocation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         OutExtents                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABGA_IslandPortal_C::GetIconPlacement(const class AActor* SelfActor, const class AActor* ViewingActor, struct FVector* OutLocation, struct FVector* OutExtents) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "GetIconPlacement");
+
+	Params::BGA_IslandPortal_C_GetIconPlacement Parms{};
+
+	Parms.SelfActor = SelfActor;
+	Parms.ViewingActor = ViewingActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutLocation != nullptr)
+		*OutLocation = std::move(Parms.OutLocation);
+
+	if (OutExtents != nullptr)
+		*OutExtents = std::move(Parms.OutExtents);
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.IconPlacementNeedsUpdate
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABGA_IslandPortal_C::IconPlacementNeedsUpdate() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "IconPlacementNeedsUpdate");
+
+	Params::BGA_IslandPortal_C_IconPlacementNeedsUpdate Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.BlueprintUseMobileHighlight
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABGA_IslandPortal_C::BlueprintUseMobileHighlight() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "BlueprintUseMobileHighlight");
+
+	Params::BGA_IslandPortal_C_BlueprintUseMobileHighlight Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.BlueprintDisplayMobileInteractPrompt
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABGA_IslandPortal_C::BlueprintDisplayMobileInteractPrompt() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "BlueprintDisplayMobileInteractPrompt");
+
+	Params::BGA_IslandPortal_C_BlueprintDisplayMobileInteractPrompt Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BGA_IslandPortal.BGA_IslandPortal_C.MobileInteractIsValid
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// bool*                                   bIsValid                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABGA_IslandPortal_C::MobileInteractIsValid(bool* bIsValid) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BGA_IslandPortal_C", "MobileInteractIsValid");
+
+	Params::BGA_IslandPortal_C_MobileInteractIsValid Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bIsValid != nullptr)
+		*bIsValid = Parms.bIsValid;
 }
 
 }

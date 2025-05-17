@@ -18,24 +18,30 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_VictoryDrone.BP_VictoryDrone_C
-// 0x0060 (0x0300 - 0x02A0)
-class ABP_VictoryDrone_C : public APawn
+// 0x0070 (0x02F0 - 0x0280)
+class ABP_VictoryDrone_C final : public APawn
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USkeletalMeshComponentBudgeted*         SkeletalMeshComponentBudgeted;                     // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               SpawnEffect;                                       // 0x02B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class ABP_VictoryDrone_C* Drone)> SpawnOutAnimEndedDispatcher;                       // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	float                                         AnimPlayRate;                                      // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D4[0x4];                                      // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               StaticMeshMID;                                     // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TeleportIn;                                        // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	bool                                          IsAthena;                                          // 0x02E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_2E2[0x6];                                      // 0x02E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPawn*                              TargetPlayer;                                      // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UParticleSystemComponent*               CharacterAttached;                                 // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InLobby;                                           // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USkeletalMeshComponentBudgeted*         SkeletalMeshComponentBudgeted;                     // 0x0288(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x0290(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class ABP_VictoryDrone_C* Drone)> SpawnOutAnimEndedDispatcher;     // 0x0298(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	float                                         AnimPlayRate;                                      // 0x02A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               StaticMeshMID;                                     // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TeleportIn;                                        // 0x02B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	bool                                          IsAthena;                                          // 0x02B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_2BA[0x6];                                      // 0x02BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPawn*                              TargetPlayer;                                      // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CharacterAttached;                                 // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InLobby;                                           // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	bool                                          isNPC;                                             // 0x02D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_2D2[0x2];                                      // 0x02D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   AttachPoint;                                       // 0x02D4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isDecoy;                                           // 0x02DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_2DD[0x3];                                      // 0x02DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 Mesh_for_Attachment;                               // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SoundOnNPCDeath;                                   // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_VictoryDrone(int32 EntryPoint);
@@ -45,6 +51,9 @@ public:
 	void InitDrone();
 	void PlaySpawnAnim();
 	void NotifyTeleportFinishedTriggered();
+	void NPC_FX_Parameters(TArray<struct FParticleSysParam>* Instance_Parameters);
+	void Decoy_FX_Parameters(TArray<struct FParticleSysParam>* Instance_Parameters);
+	void Added_Death_Audio(class USoundBase* Sound_to_Spawn);
 
 public:
 	static class UClass* StaticClass()
@@ -56,20 +65,6 @@ public:
 		return GetDefaultObjImpl<ABP_VictoryDrone_C>();
 	}
 };
-static_assert(alignof(ABP_VictoryDrone_C) == 0x000008, "Wrong alignment on ABP_VictoryDrone_C");
-static_assert(sizeof(ABP_VictoryDrone_C) == 0x000300, "Wrong size on ABP_VictoryDrone_C");
-static_assert(offsetof(ABP_VictoryDrone_C, UberGraphFrame) == 0x0002A0, "Member 'ABP_VictoryDrone_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_VictoryDrone_C, SkeletalMeshComponentBudgeted) == 0x0002A8, "Member 'ABP_VictoryDrone_C::SkeletalMeshComponentBudgeted' has a wrong offset!");
-static_assert(offsetof(ABP_VictoryDrone_C, SpawnEffect) == 0x0002B0, "Member 'ABP_VictoryDrone_C::SpawnEffect' has a wrong offset!");
-static_assert(offsetof(ABP_VictoryDrone_C, StaticMesh) == 0x0002B8, "Member 'ABP_VictoryDrone_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_VictoryDrone_C, SpawnOutAnimEndedDispatcher) == 0x0002C0, "Member 'ABP_VictoryDrone_C::SpawnOutAnimEndedDispatcher' has a wrong offset!");
-static_assert(offsetof(ABP_VictoryDrone_C, AnimPlayRate) == 0x0002D0, "Member 'ABP_VictoryDrone_C::AnimPlayRate' has a wrong offset!");
-static_assert(offsetof(ABP_VictoryDrone_C, StaticMeshMID) == 0x0002D8, "Member 'ABP_VictoryDrone_C::StaticMeshMID' has a wrong offset!");
-static_assert(offsetof(ABP_VictoryDrone_C, TeleportIn) == 0x0002E0, "Member 'ABP_VictoryDrone_C::TeleportIn' has a wrong offset!");
-static_assert(offsetof(ABP_VictoryDrone_C, IsAthena) == 0x0002E1, "Member 'ABP_VictoryDrone_C::IsAthena' has a wrong offset!");
-static_assert(offsetof(ABP_VictoryDrone_C, TargetPlayer) == 0x0002E8, "Member 'ABP_VictoryDrone_C::TargetPlayer' has a wrong offset!");
-static_assert(offsetof(ABP_VictoryDrone_C, CharacterAttached) == 0x0002F0, "Member 'ABP_VictoryDrone_C::CharacterAttached' has a wrong offset!");
-static_assert(offsetof(ABP_VictoryDrone_C, InLobby) == 0x0002F8, "Member 'ABP_VictoryDrone_C::InLobby' has a wrong offset!");
 
 }
 

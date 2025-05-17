@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GE_Map_Fortitude_To_Health.GE_Map_Fortitude_To_Health_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_Map_Fortitude_To_Health_C : public UGameplayEffect
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGE_Map_Fortitude_To_Health_C>();
 	}
 };
-static_assert(alignof(UGE_Map_Fortitude_To_Health_C) == 0x000008, "Wrong alignment on UGE_Map_Fortitude_To_Health_C");
-static_assert(sizeof(UGE_Map_Fortitude_To_Health_C) == 0x0005F0, "Wrong size on UGE_Map_Fortitude_To_Health_C");
 
 }
 

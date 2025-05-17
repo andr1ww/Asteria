@@ -54,7 +54,7 @@ void UCinematic_TeamMics_C::Construct()
 // Function Cinematic-TeamMics.Cinematic-TeamMics_C.Update
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortTeamMemberInfo              UpdatedMemberInfo                                      (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FFortTeamMemberInfo&       UpdatedMemberInfo                                      (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
 void UCinematic_TeamMics_C::Update(const struct FFortTeamMemberInfo& UpdatedMemberInfo)
 {

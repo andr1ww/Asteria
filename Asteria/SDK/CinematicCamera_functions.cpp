@@ -17,6 +17,31 @@
 namespace SDK
 {
 
+// Function CinematicCamera.CameraRig_Rail.GetRailSplineComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class USplineComponent*                 ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class USplineComponent* ACameraRig_Rail::GetRailSplineComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CameraRig_Rail", "GetRailSplineComponent");
+
+	Params::CameraRig_Rail_GetRailSplineComponent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function CinematicCamera.CineCameraActor.GetCineCameraComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -42,10 +67,60 @@ class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent() const
 }
 
 
+// Function CinematicCamera.CineCameraComponent.GetLensPresetsCopy
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// TArray<struct FNamedLensPreset>         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+TArray<struct FNamedLensPreset> UCineCameraComponent::GetLensPresetsCopy()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CineCameraComponent", "GetLensPresetsCopy");
+
+	Params::CineCameraComponent_GetLensPresetsCopy Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CinematicCamera.CineCameraComponent.SetCurrentFocalLength
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InFocalLength                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCineCameraComponent::SetCurrentFocalLength(float InFocalLength)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CineCameraComponent", "SetCurrentFocalLength");
+
+	Params::CineCameraComponent_SetCurrentFocalLength Parms{};
+
+	Parms.InFocalLength = InFocalLength;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function CinematicCamera.CineCameraComponent.SetFilmbackPresetByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           InPresetName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InPresetName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UCineCameraComponent::SetFilmbackPresetByName(const class FString& InPresetName)
 {
@@ -70,7 +145,7 @@ void UCineCameraComponent::SetFilmbackPresetByName(const class FString& InPreset
 // Function CinematicCamera.CineCameraComponent.SetLensPresetByName
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FString                           InPresetName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InPresetName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UCineCameraComponent::SetLensPresetByName(const class FString& InPresetName)
 {
@@ -89,6 +164,31 @@ void UCineCameraComponent::SetLensPresetByName(const class FString& InPresetName
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CinematicCamera.CineCameraComponent.GetDefaultFilmbackPresetName
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UCineCameraComponent::GetDefaultFilmbackPresetName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CineCameraComponent", "GetDefaultFilmbackPresetName");
+
+	Params::CineCameraComponent_GetDefaultFilmbackPresetName Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

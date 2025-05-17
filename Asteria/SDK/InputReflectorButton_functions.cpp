@@ -40,7 +40,7 @@ void UInputReflectorButton_C::ShowIcon(bool bShouldShow)
 // Function InputReflectorButton.InputReflectorButton_C.SetTextInternal
 // (Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             InButtonText                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      InButtonText                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UInputReflectorButton_C::SetTextInternal(const class FText& InButtonText)
 {
@@ -230,7 +230,7 @@ void UInputReflectorButton_C::InitializeButton()
 // Function InputReflectorButton.InputReflectorButton_C.Set Icon
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSlateBrush                      IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateBrush&               IconBrush_0                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UInputReflectorButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
 {
@@ -250,7 +250,7 @@ void UInputReflectorButton_C::Set_Icon(const struct FSlateBrush& IconBrush_0)
 // Function InputReflectorButton.InputReflectorButton_C.Set Text
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      ButtonText_0                                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UInputReflectorButton_C::Set_Text(const class FText& ButtonText_0)
 {
@@ -324,7 +324,7 @@ void UInputReflectorButton_C::BndEvt__CommonActionWidgetAction_K2Node_ComponentB
 // Function InputReflectorButton.InputReflectorButton_C.OnTriggeredInputActionChanged
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FDataTableRowHandle              NewTriggeredAction                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// const struct FDataTableRowHandle&       NewTriggeredAction                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 
 void UInputReflectorButton_C::OnTriggeredInputActionChanged(const struct FDataTableRowHandle& NewTriggeredAction)
 {

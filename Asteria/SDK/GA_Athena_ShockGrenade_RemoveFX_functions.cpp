@@ -65,6 +65,26 @@ void UGA_Athena_ShockGrenade_RemoveFX_C::K2_ActivateAbility()
 }
 
 
+// Function GA_Athena_ShockGrenade_RemoveFX.GA_Athena_ShockGrenade_RemoveFX_C.OnChange_FB10A796481939495F3E43A6ECDEF98E
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EMovementMode                           NewMovementMode                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_ShockGrenade_RemoveFX_C::OnChange_FB10A796481939495F3E43A6ECDEF98E(EMovementMode NewMovementMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_ShockGrenade_RemoveFX_C", "OnChange_FB10A796481939495F3E43A6ECDEF98E");
+
+	Params::GA_Athena_ShockGrenade_RemoveFX_C_OnChange_FB10A796481939495F3E43A6ECDEF98E Parms{};
+
+	Parms.NewMovementMode = NewMovementMode;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GA_Athena_ShockGrenade_RemoveFX.GA_Athena_ShockGrenade_RemoveFX_C.OnChange_4AD3DFC14DFECA79ED54A7B53F3A9E7E
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:

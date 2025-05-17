@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UItemManagementTileButtonStyle_AthenaLocker_C>();
 	}
 };
-static_assert(alignof(UItemManagementTileButtonStyle_AthenaLocker_C) == 0x000008, "Wrong alignment on UItemManagementTileButtonStyle_AthenaLocker_C");
-static_assert(sizeof(UItemManagementTileButtonStyle_AthenaLocker_C) == 0x000570, "Wrong size on UItemManagementTileButtonStyle_AthenaLocker_C");
 
 }
 

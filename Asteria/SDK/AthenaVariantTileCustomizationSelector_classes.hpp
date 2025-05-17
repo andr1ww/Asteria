@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaVariantTileCustomizationSelector.AthenaVariantTileCustomizationSelector_C
-// 0x0000 (0x02C0 - 0x02C0)
-class UAthenaVariantTileCustomizationSelector_C final : public UFortVariantTileSelector
+// 0x0000 (0x0328 - 0x0328)
+class UAthenaVariantTileCustomizationSelector_C final : public UFortVariantSelector
 {
 public:
 	static class UClass* StaticClass()
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UAthenaVariantTileCustomizationSelector_C>();
 	}
 };
-static_assert(alignof(UAthenaVariantTileCustomizationSelector_C) == 0x000008, "Wrong alignment on UAthenaVariantTileCustomizationSelector_C");
-static_assert(sizeof(UAthenaVariantTileCustomizationSelector_C) == 0x0002C0, "Wrong size on UAthenaVariantTileCustomizationSelector_C");
 
 }
 

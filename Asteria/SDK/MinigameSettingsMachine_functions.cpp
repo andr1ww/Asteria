@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.ExecuteUbergraph_MinigameSettingsMachine
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -96,7 +96,7 @@ void AMinigameSettingsMachine_C::ReceiveBeginPlay()
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.GetPickupSpawnLocation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FVector                          SpawnLocation                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         SpawnLocation                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AMinigameSettingsMachine_C::GetPickupSpawnLocation(struct FVector* SpawnLocation)
 {
@@ -117,7 +117,7 @@ void AMinigameSettingsMachine_C::GetPickupSpawnLocation(struct FVector* SpawnLoc
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.HasMinigameStarted
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    bHasStarted                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   bHasStarted                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AMinigameSettingsMachine_C::HasMinigameStarted(bool* bHasStarted)
 {
@@ -166,7 +166,7 @@ void AMinigameSettingsMachine_C::UpdateTimeLimit()
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.GetCurrentMinigame
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AFortMinigame*                    Minigame                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AFortMinigame**                   Minigame                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AMinigameSettingsMachine_C::GetCurrentMinigame(class AFortMinigame** Minigame)
 {
@@ -299,8 +299,8 @@ void AMinigameSettingsMachine_C::UpdateAutoStart()
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.TryAddEndCondition_CollectItems
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FFortMinigameStatQuery>   EndConditions                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                                    bResult                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// TArray<struct FFortMinigameStatQuery>&  EndConditions                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// bool*                                   bResult                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AMinigameSettingsMachine_C::TryAddEndCondition_CollectItems(TArray<struct FFortMinigameStatQuery>& EndConditions, bool* bResult)
 {
@@ -337,7 +337,7 @@ void AMinigameSettingsMachine_C::UpdateJoinInProgress()
 
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateMinigameMutators
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AMinigameSettingsMachine_C::UpdateMinigameMutators()
 {
@@ -367,8 +367,8 @@ void AMinigameSettingsMachine_C::UpdateTotalRounds()
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.TryAddEndCondition_DestroyObjects
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FFortMinigameStatQuery>   EndConditions                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                                    bResult                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// TArray<struct FFortMinigameStatQuery>&  EndConditions                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// bool*                                   bResult                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AMinigameSettingsMachine_C::TryAddEndCondition_DestroyObjects(TArray<struct FFortMinigameStatQuery>& EndConditions, bool* bResult)
 {
@@ -390,66 +390,8 @@ void AMinigameSettingsMachine_C::TryAddEndCondition_DestroyObjects(TArray<struct
 }
 
 
-// Function MinigameSettingsMachine.MinigameSettingsMachine_C.ToggleScriptedGameRules
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bIsScriptedGame                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMinigameSettingsMachine_C::ToggleScriptedGameRules(bool bIsScriptedGame)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinigameSettingsMachine_C", "ToggleScriptedGameRules");
-
-	Params::MinigameSettingsMachine_C_ToggleScriptedGameRules Parms{};
-
-	Parms.bIsScriptedGame = bIsScriptedGame;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MinigameSettingsMachine.MinigameSettingsMachine_C.IsScriptedGame
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   GameModeIndex_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsScriptedGame                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMinigameSettingsMachine_C::IsScriptedGame(int32 GameModeIndex_0, bool* bIsScriptedGame)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinigameSettingsMachine_C", "IsScriptedGame");
-
-	Params::MinigameSettingsMachine_C_IsScriptedGame Parms{};
-
-	Parms.GameModeIndex_0 = GameModeIndex_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bIsScriptedGame != nullptr)
-		*bIsScriptedGame = Parms.bIsScriptedGame;
-}
-
-
-// Function MinigameSettingsMachine.MinigameSettingsMachine_C.LoadOrCreateVPL
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void AMinigameSettingsMachine_C::LoadOrCreateVPL()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MinigameSettingsMachine_C", "LoadOrCreateVPL");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.FillTrackedStats
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AMinigameSettingsMachine_C::FillTrackedStats()
 {
@@ -463,9 +405,9 @@ void AMinigameSettingsMachine_C::FillTrackedStats()
 
 
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.GetScoreboardStatsArray
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TArray<class UClass*>                   ScoreboardStats                                        (Parm, OutParm, ZeroConstructor)
+// TArray<class UClass*>*                  ScoreboardStats                                        (Parm, OutParm, HasGetValueTypeHash)
 
 void AMinigameSettingsMachine_C::GetScoreboardStatsArray(TArray<class UClass*>* ScoreboardStats)
 {
@@ -500,7 +442,7 @@ void AMinigameSettingsMachine_C::Game_Mode_Preset_Upgrade_Path()
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.GetUIExtensions
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FGameplayTagContainer            Return_Value                                           (Parm, OutParm)
+// struct FGameplayTagContainer*           Return_Value                                           (Parm, OutParm)
 
 void AMinigameSettingsMachine_C::GetUIExtensions(struct FGameplayTagContainer* Return_Value)
 {
@@ -518,13 +460,95 @@ void AMinigameSettingsMachine_C::GetUIExtensions(struct FGameplayTagContainer* R
 }
 
 
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateClassSettings
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AMinigameSettingsMachine_C::UpdateClassSettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinigameSettingsMachine_C", "UpdateClassSettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdatePlayerPersistence
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AMinigameSettingsMachine_C::UpdatePlayerPersistence()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinigameSettingsMachine_C", "UpdatePlayerPersistence");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateGameSettings
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AMinigameSettingsMachine_C::UpdateGameSettings()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinigameSettingsMachine_C", "UpdateGameSettings");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.AdditionalUIExtensionValidityChecks
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGameplayTagContainer&     TagContainer                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                                   bUIExtensionIsValid                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void AMinigameSettingsMachine_C::AdditionalUIExtensionValidityChecks(const struct FGameplayTagContainer& TagContainer, bool* bUIExtensionIsValid)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinigameSettingsMachine_C", "AdditionalUIExtensionValidityChecks");
+
+	Params::MinigameSettingsMachine_C_AdditionalUIExtensionValidityChecks Parms{};
+
+	Parms.TagContainer = std::move(TagContainer);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bUIExtensionIsValid != nullptr)
+		*bUIExtensionIsValid = Parms.bUIExtensionIsValid;
+}
+
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.UpdateGameStartCountdown
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AMinigameSettingsMachine_C::UpdateGameStartCountdown()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinigameSettingsMachine_C", "UpdateGameStartCountdown");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.BlueprintCanInteract
 // (HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AFortPawn*                        InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool AMinigameSettingsMachine_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn) const
+bool AMinigameSettingsMachine_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -534,6 +558,8 @@ bool AMinigameSettingsMachine_C::BlueprintCanInteract(const class AFortPawn* Int
 	Params::MinigameSettingsMachine_C_BlueprintCanInteract Parms{};
 
 	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+	Parms.InteractionType = InteractionType;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -544,10 +570,11 @@ bool AMinigameSettingsMachine_C::BlueprintCanInteract(const class AFortPawn* Int
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.BlueprintGetInteractionString
 // (HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class AFortPawn*                        InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-class FText AMinigameSettingsMachine_C::BlueprintGetInteractionString(const class AFortPawn* InteractingPawn) const
+class FText AMinigameSettingsMachine_C::BlueprintGetInteractionString(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -557,6 +584,7 @@ class FText AMinigameSettingsMachine_C::BlueprintGetInteractionString(const clas
 	Params::MinigameSettingsMachine_C_BlueprintGetInteractionString Parms{};
 
 	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -567,10 +595,11 @@ class FText AMinigameSettingsMachine_C::BlueprintGetInteractionString(const clas
 // Function MinigameSettingsMachine.MinigameSettingsMachine_C.BlueprintGetFailedInteractionString
 // (HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class AFortPawn*                        InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-class FText AMinigameSettingsMachine_C::BlueprintGetFailedInteractionString(const class AFortPawn* InteractingPawn) const
+class FText AMinigameSettingsMachine_C::BlueprintGetFailedInteractionString(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -580,6 +609,27 @@ class FText AMinigameSettingsMachine_C::BlueprintGetFailedInteractionString(cons
 	Params::MinigameSettingsMachine_C_BlueprintGetFailedInteractionString Parms{};
 
 	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MinigameSettingsMachine.MinigameSettingsMachine_C.GetTeamSetting
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 AMinigameSettingsMachine_C::GetTeamSetting() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MinigameSettingsMachine_C", "GetTeamSetting");
+
+	Params::MinigameSettingsMachine_C_GetTeamSetting Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -37,15 +37,15 @@ void UPlayerBannedModal_C::ExecuteUbergraph_PlayerBannedModal(int32 EntryPoint)
 }
 
 
-// Function PlayerBannedModal.PlayerBannedModal_C.OnActivated
+// Function PlayerBannedModal.PlayerBannedModal_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UPlayerBannedModal_C::OnActivated()
+void UPlayerBannedModal_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBannedModal_C", "OnActivated");
+		Func = Class->GetFunction("PlayerBannedModal_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -74,8 +74,8 @@ void UPlayerBannedModal_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_16_Com
 // Function PlayerBannedModal.PlayerBannedModal_C.UpdateText
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Title_0                                                (BlueprintVisible, BlueprintReadOnly, Parm)
-// class FText                             Content                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      Title_0                                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      Content                                                (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UPlayerBannedModal_C::UpdateText(const class FText& Title_0, const class FText& Content)
 {
@@ -116,7 +116,7 @@ void UPlayerBannedModal_C::DisableButton(bool DisableButton_0)
 // Function PlayerBannedModal.PlayerBannedModal_C.UpdateTimeRemaining
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UPlayerBannedModal_C::UpdateTimeRemaining(const class FText& Time)
 {
@@ -157,7 +157,7 @@ void UPlayerBannedModal_C::OnBanAck(bool Success)
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EPlayerBanReasons                       Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           ExploitProgramName                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    ExploitProgramName                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // EPlayerCompetitiveBanReasons            Competitive_Ban_Reason                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bIsCompetitiveBan_0                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)

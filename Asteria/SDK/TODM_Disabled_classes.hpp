@@ -19,73 +19,73 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TODM_Disabled.TODM_Disabled_C
-// 0x0180 (0x0ED0 - 0x0D50)
+// 0x0180 (0x11D0 - 0x1050)
 class ATODM_Disabled_C final : public AMASTER_TODM_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_TODM_Disabled_C;                    // 0x0D50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         WindSpeed_0;                                       // 0x0D58(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RandomWeatherWaitTime_0;                           // 0x0D5C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CurrentAmountOfRandomWeatherTimeLeft_0;            // 0x0D60(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         NewWeatherLerpAmount_0;                            // 0x0D64(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         WindStrength_0;                                    // 0x0D68(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FutureWindStrength_0;                              // 0x0D6C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FutureWindSpeed_0;                                 // 0x0D70(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bPickNewWindConditions_0;                          // 0x0D74(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D75[0x3];                                      // 0x0D75(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LightningStrength_0;                               // 0x0D78(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ThreatCloudStormAmount_0;                          // 0x0D7C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseRainWithStorms_0;                               // 0x0D80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Play_a_Particle_Effect_Near_the_players_Feet_0;    // 0x0D81(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          WindEffects_Should_be_Active_0;                    // 0x0D82(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D83[0x5];                                      // 0x0D83(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               Storm_Foot_Particle_Outdoor_0;                     // 0x0D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        Storm_Foot_Particle_While_on_Terrain_0;            // 0x0D90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Storm_Foot_Particle_Indoor_0;                      // 0x0D98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        Storm_Foot_Particle_While_NOT_on_Terrain_0;        // 0x0DA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Storm_Wind_Strength_0;                             // 0x0DA8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Generate_Foliage_Wind_Gusts_0;                     // 0x0DAC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_DAD[0x3];                                      // 0x0DAD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           LightningStrikeTimerHandle_0;                      // 0x0DB0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           PreviousDirectionalLightColor_0;                   // 0x0DB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Lightning_Flash_Color_0;                           // 0x0DC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	float                                         Lightning_Flash_Timeline_Min_0;                    // 0x0DD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Lightning_Flash_Timeline_Max_0;                    // 0x0DDC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               ShootingStarParticleSystem_0;                      // 0x0DE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Spawn_Shooting_Stars_0;                            // 0x0DE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_DE9[0x3];                                      // 0x0DE9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           SkyboxFogMorningColor_0;                           // 0x0DEC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SkyboxFogMorningLitColor_0;                        // 0x0DFC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogMorningDistance_0;                        // 0x0E0C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogMorningDiffuseAmount_0;                   // 0x0E10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogMorningEmissiveAmount_0;                  // 0x0E14(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogMorningLitLength_0;                       // 0x0E18(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogMorningLitRotation_0;                     // 0x0E1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogMorningLitOffset_0;                       // 0x0E20(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SkyboxFogDayColor_0;                               // 0x0E24(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SkyboxFogDayLitColor_0;                            // 0x0E34(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogDayDistance_0;                            // 0x0E44(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogDayDiffuseAmount_0;                       // 0x0E48(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogDayEmissiveAmount_0;                      // 0x0E4C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogDayLitLength_0;                           // 0x0E50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogDayLitRotation_0;                         // 0x0E54(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogDayLitOffset_0;                           // 0x0E58(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SkyboxFogEveningColor_0;                           // 0x0E5C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SkyboxFogEveningLitColor_0;                        // 0x0E6C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogEveningDistance_0;                        // 0x0E7C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogEveningDiffuseAmount_0;                   // 0x0E80(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogEveningEmissiveAmount_0;                  // 0x0E84(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogEveningLitLength_0;                       // 0x0E88(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogEveningLitRotation_0;                     // 0x0E8C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogEveningLitOffset_0;                       // 0x0E90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SkyboxFogNightColor_0;                             // 0x0E94(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SkyboxFogNightLitColor_0;                          // 0x0EA4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogNightDistance_0;                          // 0x0EB4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogNightDiffuseAmount_0;                     // 0x0EB8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogNightEmissiveAmount_0;                    // 0x0EBC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogNightLitLength_0;                         // 0x0EC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogNightLitRotation_0;                       // 0x0EC4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkyboxFogNightLitOffset_0;                         // 0x0EC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_TODM_Disabled_C;                    // 0x1050(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         WindSpeed_0;                                       // 0x1058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RandomWeatherWaitTime_0;                           // 0x105C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrentAmountOfRandomWeatherTimeLeft_0;            // 0x1060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NewWeatherLerpAmount_0;                            // 0x1064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         WindStrength_0;                                    // 0x1068(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FutureWindStrength_0;                              // 0x106C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FutureWindSpeed_0;                                 // 0x1070(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPickNewWindConditions_0;                          // 0x1074(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1075[0x3];                                     // 0x1075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LightningStrength_0;                               // 0x1078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ThreatCloudStormAmount_0;                          // 0x107C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseRainWithStorms_0;                               // 0x1080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Play_a_Particle_Effect_Near_the_players_Feet_0;    // 0x1081(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          WindEffects_Should_be_Active_0;                    // 0x1082(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1083[0x5];                                     // 0x1083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               Storm_Foot_Particle_Outdoor_0;                     // 0x1088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        Storm_Foot_Particle_While_on_Terrain_0;            // 0x1090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Storm_Foot_Particle_Indoor_0;                      // 0x1098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        Storm_Foot_Particle_While_NOT_on_Terrain_0;        // 0x10A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Storm_Wind_Strength_0;                             // 0x10A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Generate_Foliage_Wind_Gusts_0;                     // 0x10AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_10AD[0x3];                                     // 0x10AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           LightningStrikeTimerHandle_0;                      // 0x10B0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           PreviousDirectionalLightColor_0;                   // 0x10B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Lightning_Flash_Color_0;                           // 0x10C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	float                                         Lightning_Flash_Timeline_Min_0;                    // 0x10D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Lightning_Flash_Timeline_Max_0;                    // 0x10DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               ShootingStarParticleSystem_0;                      // 0x10E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Spawn_Shooting_Stars_0;                            // 0x10E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_10E9[0x3];                                     // 0x10E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           SkyboxFogMorningColor_0;                           // 0x10EC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SkyboxFogMorningLitColor_0;                        // 0x10FC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogMorningDistance_0;                        // 0x110C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogMorningDiffuseAmount_0;                   // 0x1110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogMorningEmissiveAmount_0;                  // 0x1114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogMorningLitLength_0;                       // 0x1118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogMorningLitRotation_0;                     // 0x111C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogMorningLitOffset_0;                       // 0x1120(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SkyboxFogDayColor_0;                               // 0x1124(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SkyboxFogDayLitColor_0;                            // 0x1134(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogDayDistance_0;                            // 0x1144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogDayDiffuseAmount_0;                       // 0x1148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogDayEmissiveAmount_0;                      // 0x114C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogDayLitLength_0;                           // 0x1150(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogDayLitRotation_0;                         // 0x1154(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogDayLitOffset_0;                           // 0x1158(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SkyboxFogEveningColor_0;                           // 0x115C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SkyboxFogEveningLitColor_0;                        // 0x116C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogEveningDistance_0;                        // 0x117C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogEveningDiffuseAmount_0;                   // 0x1180(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogEveningEmissiveAmount_0;                  // 0x1184(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogEveningLitLength_0;                       // 0x1188(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogEveningLitRotation_0;                     // 0x118C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogEveningLitOffset_0;                       // 0x1190(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SkyboxFogNightColor_0;                             // 0x1194(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SkyboxFogNightLitColor_0;                          // 0x11A4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogNightDistance_0;                          // 0x11B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogNightDiffuseAmount_0;                     // 0x11B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogNightEmissiveAmount_0;                    // 0x11BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogNightLitLength_0;                         // 0x11C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogNightLitRotation_0;                       // 0x11C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkyboxFogNightLitOffset_0;                         // 0x11C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
@@ -103,67 +103,6 @@ public:
 		return GetDefaultObjImpl<ATODM_Disabled_C>();
 	}
 };
-static_assert(alignof(ATODM_Disabled_C) == 0x000010, "Wrong alignment on ATODM_Disabled_C");
-static_assert(sizeof(ATODM_Disabled_C) == 0x000ED0, "Wrong size on ATODM_Disabled_C");
-static_assert(offsetof(ATODM_Disabled_C, UberGraphFrame_TODM_Disabled_C) == 0x000D50, "Member 'ATODM_Disabled_C::UberGraphFrame_TODM_Disabled_C' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, WindSpeed_0) == 0x000D58, "Member 'ATODM_Disabled_C::WindSpeed_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, RandomWeatherWaitTime_0) == 0x000D5C, "Member 'ATODM_Disabled_C::RandomWeatherWaitTime_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, CurrentAmountOfRandomWeatherTimeLeft_0) == 0x000D60, "Member 'ATODM_Disabled_C::CurrentAmountOfRandomWeatherTimeLeft_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, NewWeatherLerpAmount_0) == 0x000D64, "Member 'ATODM_Disabled_C::NewWeatherLerpAmount_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, WindStrength_0) == 0x000D68, "Member 'ATODM_Disabled_C::WindStrength_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, FutureWindStrength_0) == 0x000D6C, "Member 'ATODM_Disabled_C::FutureWindStrength_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, FutureWindSpeed_0) == 0x000D70, "Member 'ATODM_Disabled_C::FutureWindSpeed_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, bPickNewWindConditions_0) == 0x000D74, "Member 'ATODM_Disabled_C::bPickNewWindConditions_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, LightningStrength_0) == 0x000D78, "Member 'ATODM_Disabled_C::LightningStrength_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, ThreatCloudStormAmount_0) == 0x000D7C, "Member 'ATODM_Disabled_C::ThreatCloudStormAmount_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, UseRainWithStorms_0) == 0x000D80, "Member 'ATODM_Disabled_C::UseRainWithStorms_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, Play_a_Particle_Effect_Near_the_players_Feet_0) == 0x000D81, "Member 'ATODM_Disabled_C::Play_a_Particle_Effect_Near_the_players_Feet_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, WindEffects_Should_be_Active_0) == 0x000D82, "Member 'ATODM_Disabled_C::WindEffects_Should_be_Active_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, Storm_Foot_Particle_Outdoor_0) == 0x000D88, "Member 'ATODM_Disabled_C::Storm_Foot_Particle_Outdoor_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, Storm_Foot_Particle_While_on_Terrain_0) == 0x000D90, "Member 'ATODM_Disabled_C::Storm_Foot_Particle_While_on_Terrain_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, Storm_Foot_Particle_Indoor_0) == 0x000D98, "Member 'ATODM_Disabled_C::Storm_Foot_Particle_Indoor_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, Storm_Foot_Particle_While_NOT_on_Terrain_0) == 0x000DA0, "Member 'ATODM_Disabled_C::Storm_Foot_Particle_While_NOT_on_Terrain_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, Storm_Wind_Strength_0) == 0x000DA8, "Member 'ATODM_Disabled_C::Storm_Wind_Strength_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, Generate_Foliage_Wind_Gusts_0) == 0x000DAC, "Member 'ATODM_Disabled_C::Generate_Foliage_Wind_Gusts_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, LightningStrikeTimerHandle_0) == 0x000DB0, "Member 'ATODM_Disabled_C::LightningStrikeTimerHandle_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, PreviousDirectionalLightColor_0) == 0x000DB8, "Member 'ATODM_Disabled_C::PreviousDirectionalLightColor_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, Lightning_Flash_Color_0) == 0x000DC8, "Member 'ATODM_Disabled_C::Lightning_Flash_Color_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, Lightning_Flash_Timeline_Min_0) == 0x000DD8, "Member 'ATODM_Disabled_C::Lightning_Flash_Timeline_Min_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, Lightning_Flash_Timeline_Max_0) == 0x000DDC, "Member 'ATODM_Disabled_C::Lightning_Flash_Timeline_Max_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, ShootingStarParticleSystem_0) == 0x000DE0, "Member 'ATODM_Disabled_C::ShootingStarParticleSystem_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, Spawn_Shooting_Stars_0) == 0x000DE8, "Member 'ATODM_Disabled_C::Spawn_Shooting_Stars_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogMorningColor_0) == 0x000DEC, "Member 'ATODM_Disabled_C::SkyboxFogMorningColor_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogMorningLitColor_0) == 0x000DFC, "Member 'ATODM_Disabled_C::SkyboxFogMorningLitColor_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogMorningDistance_0) == 0x000E0C, "Member 'ATODM_Disabled_C::SkyboxFogMorningDistance_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogMorningDiffuseAmount_0) == 0x000E10, "Member 'ATODM_Disabled_C::SkyboxFogMorningDiffuseAmount_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogMorningEmissiveAmount_0) == 0x000E14, "Member 'ATODM_Disabled_C::SkyboxFogMorningEmissiveAmount_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogMorningLitLength_0) == 0x000E18, "Member 'ATODM_Disabled_C::SkyboxFogMorningLitLength_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogMorningLitRotation_0) == 0x000E1C, "Member 'ATODM_Disabled_C::SkyboxFogMorningLitRotation_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogMorningLitOffset_0) == 0x000E20, "Member 'ATODM_Disabled_C::SkyboxFogMorningLitOffset_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogDayColor_0) == 0x000E24, "Member 'ATODM_Disabled_C::SkyboxFogDayColor_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogDayLitColor_0) == 0x000E34, "Member 'ATODM_Disabled_C::SkyboxFogDayLitColor_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogDayDistance_0) == 0x000E44, "Member 'ATODM_Disabled_C::SkyboxFogDayDistance_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogDayDiffuseAmount_0) == 0x000E48, "Member 'ATODM_Disabled_C::SkyboxFogDayDiffuseAmount_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogDayEmissiveAmount_0) == 0x000E4C, "Member 'ATODM_Disabled_C::SkyboxFogDayEmissiveAmount_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogDayLitLength_0) == 0x000E50, "Member 'ATODM_Disabled_C::SkyboxFogDayLitLength_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogDayLitRotation_0) == 0x000E54, "Member 'ATODM_Disabled_C::SkyboxFogDayLitRotation_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogDayLitOffset_0) == 0x000E58, "Member 'ATODM_Disabled_C::SkyboxFogDayLitOffset_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogEveningColor_0) == 0x000E5C, "Member 'ATODM_Disabled_C::SkyboxFogEveningColor_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogEveningLitColor_0) == 0x000E6C, "Member 'ATODM_Disabled_C::SkyboxFogEveningLitColor_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogEveningDistance_0) == 0x000E7C, "Member 'ATODM_Disabled_C::SkyboxFogEveningDistance_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogEveningDiffuseAmount_0) == 0x000E80, "Member 'ATODM_Disabled_C::SkyboxFogEveningDiffuseAmount_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogEveningEmissiveAmount_0) == 0x000E84, "Member 'ATODM_Disabled_C::SkyboxFogEveningEmissiveAmount_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogEveningLitLength_0) == 0x000E88, "Member 'ATODM_Disabled_C::SkyboxFogEveningLitLength_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogEveningLitRotation_0) == 0x000E8C, "Member 'ATODM_Disabled_C::SkyboxFogEveningLitRotation_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogEveningLitOffset_0) == 0x000E90, "Member 'ATODM_Disabled_C::SkyboxFogEveningLitOffset_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogNightColor_0) == 0x000E94, "Member 'ATODM_Disabled_C::SkyboxFogNightColor_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogNightLitColor_0) == 0x000EA4, "Member 'ATODM_Disabled_C::SkyboxFogNightLitColor_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogNightDistance_0) == 0x000EB4, "Member 'ATODM_Disabled_C::SkyboxFogNightDistance_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogNightDiffuseAmount_0) == 0x000EB8, "Member 'ATODM_Disabled_C::SkyboxFogNightDiffuseAmount_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogNightEmissiveAmount_0) == 0x000EBC, "Member 'ATODM_Disabled_C::SkyboxFogNightEmissiveAmount_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogNightLitLength_0) == 0x000EC0, "Member 'ATODM_Disabled_C::SkyboxFogNightLitLength_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogNightLitRotation_0) == 0x000EC4, "Member 'ATODM_Disabled_C::SkyboxFogNightLitRotation_0' has a wrong offset!");
-static_assert(offsetof(ATODM_Disabled_C, SkyboxFogNightLitOffset_0) == 0x000EC8, "Member 'ATODM_Disabled_C::SkyboxFogNightLitOffset_0' has a wrong offset!");
 
 }
 

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
@@ -17,9 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass SoldierMannequin_Male.SoldierMannequin_Male_C
-// 0x0000 (0x0478 - 0x0478)
+// 0x0010 (0x04A8 - 0x0498)
 class ASoldierMannequin_Male_C final : public AFortPlayerMannequin
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0498(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        MannequinAudio;                                    // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ExecuteUbergraph_SoldierMannequin_Male(int32 EntryPoint);
+	void ReceiveDestroyed();
+	void ReceiveBeginPlay();
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -30,8 +40,6 @@ public:
 		return GetDefaultObjImpl<ASoldierMannequin_Male_C>();
 	}
 };
-static_assert(alignof(ASoldierMannequin_Male_C) == 0x000008, "Wrong alignment on ASoldierMannequin_Male_C");
-static_assert(sizeof(ASoldierMannequin_Male_C) == 0x000478, "Wrong size on ASoldierMannequin_Male_C");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AffiliateEntry.AffiliateEntry_C
-// 0x0000 (0x0B68 - 0x0B68)
+// 0x0000 (0x0BC0 - 0x0BC0)
 class UAffiliateEntry_C final : public UFortAffiliateEntry
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UAffiliateEntry_C>();
 	}
 };
-static_assert(alignof(UAffiliateEntry_C) == 0x000008, "Wrong alignment on UAffiliateEntry_C");
-static_assert(sizeof(UAffiliateEntry_C) == 0x000B68, "Wrong size on UAffiliateEntry_C");
 
 }
 

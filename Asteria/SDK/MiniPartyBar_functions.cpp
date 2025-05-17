@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function MiniPartyBar.MiniPartyBar_C.ExecuteUbergraph_MiniPartyBar
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

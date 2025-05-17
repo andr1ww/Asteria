@@ -34,19 +34,17 @@ public:
 		return GetDefaultObjImpl<UAnimationBudgetBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UAnimationBudgetBlueprintLibrary) == 0x000008, "Wrong alignment on UAnimationBudgetBlueprintLibrary");
-static_assert(sizeof(UAnimationBudgetBlueprintLibrary) == 0x000028, "Wrong size on UAnimationBudgetBlueprintLibrary");
 
 // Class AnimationBudgetAllocator.SkeletalMeshComponentBudgeted
-// 0x0030 (0x0AC0 - 0x0A90)
+// 0x0020 (0x0B80 - 0x0B60)
 class USkeletalMeshComponentBudgeted : public USkeletalMeshComponent
 {
 public:
-	uint8                                         Pad_A90[0x20];                                     // 0x0A90(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bAutoRegisterWithBudgetAllocator : 1;              // 0x0AB0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bAutoCalculateSignificance : 1;                    // 0x0AB0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         bShouldUseActorRenderedFlag : 1;                   // 0x0AB0(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
-	uint8                                         Pad_AB1[0xF];                                      // 0x0AB1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B58[0x20];                                     // 0x0B58(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bAutoRegisterWithBudgetAllocator : 1;              // 0x0B78(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bAutoCalculateSignificance : 1;                    // 0x0B78(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         bShouldUseActorRenderedFlag : 1;                   // 0x0B78(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate))
+	uint8                                         Pad_B79[0x7];                                      // 0x0B79(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetAutoRegisterWithBudgetAllocator(bool bInAutoRegisterWithBudgetAllocator);
@@ -61,8 +59,6 @@ public:
 		return GetDefaultObjImpl<USkeletalMeshComponentBudgeted>();
 	}
 };
-static_assert(alignof(USkeletalMeshComponentBudgeted) == 0x000008, "Wrong alignment on USkeletalMeshComponentBudgeted");
-static_assert(sizeof(USkeletalMeshComponentBudgeted) == 0x000AC0, "Wrong size on USkeletalMeshComponentBudgeted");
 
 }
 

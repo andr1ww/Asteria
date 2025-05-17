@@ -24,9 +24,6 @@ struct LiveLinkDebuggerBlueprintLibrary_DisplayLiveLinkDebugger final
 public:
 	class FString                                 SubjectName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkDebuggerBlueprintLibrary_DisplayLiveLinkDebugger) == 0x000008, "Wrong alignment on LiveLinkDebuggerBlueprintLibrary_DisplayLiveLinkDebugger");
-static_assert(sizeof(LiveLinkDebuggerBlueprintLibrary_DisplayLiveLinkDebugger) == 0x000010, "Wrong size on LiveLinkDebuggerBlueprintLibrary_DisplayLiveLinkDebugger");
-static_assert(offsetof(LiveLinkDebuggerBlueprintLibrary_DisplayLiveLinkDebugger, SubjectName) == 0x000000, "Member 'LiveLinkDebuggerBlueprintLibrary_DisplayLiveLinkDebugger::SubjectName' has a wrong offset!");
 
 // Function LiveLinkCurveDebugUI.LiveLinkDebuggerSettings.GetBarColorForCurveValue
 // 0x0030 (0x0030 - 0x0000)
@@ -37,10 +34,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkDebuggerSettings_GetBarColorForCurveValue) == 0x000008, "Wrong alignment on LiveLinkDebuggerSettings_GetBarColorForCurveValue");
-static_assert(sizeof(LiveLinkDebuggerSettings_GetBarColorForCurveValue) == 0x000030, "Wrong size on LiveLinkDebuggerSettings_GetBarColorForCurveValue");
-static_assert(offsetof(LiveLinkDebuggerSettings_GetBarColorForCurveValue, CurveValue) == 0x000000, "Member 'LiveLinkDebuggerSettings_GetBarColorForCurveValue::CurveValue' has a wrong offset!");
-static_assert(offsetof(LiveLinkDebuggerSettings_GetBarColorForCurveValue, ReturnValue) == 0x000008, "Member 'LiveLinkDebuggerSettings_GetBarColorForCurveValue::ReturnValue' has a wrong offset!");
 
 // Function LiveLinkCurveDebugUI.LiveLinkDebuggerSettings.GetDPIScaleBasedOnSize
 // 0x000C (0x000C - 0x0000)
@@ -50,10 +43,6 @@ public:
 	struct FIntPoint                              Size;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkDebuggerSettings_GetDPIScaleBasedOnSize) == 0x000004, "Wrong alignment on LiveLinkDebuggerSettings_GetDPIScaleBasedOnSize");
-static_assert(sizeof(LiveLinkDebuggerSettings_GetDPIScaleBasedOnSize) == 0x00000C, "Wrong size on LiveLinkDebuggerSettings_GetDPIScaleBasedOnSize");
-static_assert(offsetof(LiveLinkDebuggerSettings_GetDPIScaleBasedOnSize, Size) == 0x000000, "Member 'LiveLinkDebuggerSettings_GetDPIScaleBasedOnSize::Size' has a wrong offset!");
-static_assert(offsetof(LiveLinkDebuggerSettings_GetDPIScaleBasedOnSize, ReturnValue) == 0x000008, "Member 'LiveLinkDebuggerSettings_GetDPIScaleBasedOnSize::ReturnValue' has a wrong offset!");
 
 }
 

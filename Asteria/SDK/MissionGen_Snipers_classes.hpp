@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UMissionGen_Snipers_C>();
 	}
 };
-static_assert(alignof(UMissionGen_Snipers_C) == 0x000008, "Wrong alignment on UMissionGen_Snipers_C");
-static_assert(sizeof(UMissionGen_Snipers_C) == 0x0006C0, "Wrong size on UMissionGen_Snipers_C");
 
 }
 

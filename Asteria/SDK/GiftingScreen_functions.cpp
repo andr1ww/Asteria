@@ -17,155 +17,39 @@
 namespace SDK
 {
 
-// Function GiftingScreen.GiftingScreen_C.HandleMoreInfoClicked
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function GiftingScreen.GiftingScreen_C.ExecuteUbergraph_GiftingScreen
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGiftingScreen_C::HandleMoreInfoClicked(bool* bPassThrough)
+void UGiftingScreen_C::ExecuteUbergraph_GiftingScreen(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "HandleMoreInfoClicked");
+		Func = Class->GetFunction("GiftingScreen_C", "ExecuteUbergraph_GiftingScreen");
 
-	Params::GiftingScreen_C_HandleMoreInfoClicked Parms{};
+	Params::GiftingScreen_C_ExecuteUbergraph_GiftingScreen Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bPassThrough != nullptr)
-		*bPassThrough = Parms.bPassThrough;
-}
-
-
-// Function GiftingScreen.GiftingScreen_C.ToggleBackAction
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bEnable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UGiftingScreen_C::ToggleBackAction(bool bEnable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "ToggleBackAction");
-
-	Params::GiftingScreen_C_ToggleBackAction Parms{};
-
-	Parms.bEnable = bEnable;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GiftingScreen.GiftingScreen_C.GetWidgetForFramingViewedItem
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UGiftingScreen_C::GetWidgetForFramingViewedItem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "GetWidgetForFramingViewedItem");
-
-	Params::GiftingScreen_C_GetWidgetForFramingViewedItem Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GiftingScreen.GiftingScreen_C.HandleBackClicked
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bIsHandled                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UGiftingScreen_C::HandleBackClicked(bool* bIsHandled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "HandleBackClicked");
-
-	Params::GiftingScreen_C_HandleBackClicked Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bIsHandled != nullptr)
-		*bIsHandled = Parms.bIsHandled;
-}
-
-
-// Function GiftingScreen.GiftingScreen_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UGiftingScreen_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GiftingScreen.GiftingScreen_C.OnOfferSet
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UFortStoreFrontOfferInfo*         NewOfferInfo                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGiftingScreen_C::OnOfferSet(class UFortStoreFrontOfferInfo* NewOfferInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "OnOfferSet");
-
-	Params::GiftingScreen_C_OnOfferSet Parms{};
-
-	Parms.NewOfferInfo = NewOfferInfo;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GiftingScreen.GiftingScreen_C.OnMoveToGiftWrapStep
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bGiftingToSelf                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UGiftingScreen_C::OnMoveToGiftWrapStep(bool bGiftingToSelf)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "OnMoveToGiftWrapStep");
-
-	Params::GiftingScreen_C_OnMoveToGiftWrapStep Parms{};
-
-	Parms.bGiftingToSelf = bGiftingToSelf;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GiftingScreen.GiftingScreen_C.BndEvt__Tab_Recipients_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// Function GiftingScreen.GiftingScreen_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
 // class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGiftingScreen_C::BndEvt__Tab_Recipients_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+void UGiftingScreen_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "BndEvt__Tab_Recipients_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+		Func = Class->GetFunction("GiftingScreen_C", "BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
 
-	Params::GiftingScreen_C_BndEvt__Tab_Recipients_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+	Params::GiftingScreen_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature Parms{};
 
 	Parms.Button = Button;
 
@@ -173,49 +57,15 @@ void UGiftingScreen_C::BndEvt__Tab_Recipients_K2Node_ComponentBoundEvent_0_Commo
 }
 
 
-// Function GiftingScreen.GiftingScreen_C.OnMoveToFriendSelectStep
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
-
-void UGiftingScreen_C::OnMoveToFriendSelectStep()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "OnMoveToFriendSelectStep");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GiftingScreen.GiftingScreen_C.BndEvt__Tab_GiftWrap_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGiftingScreen_C::BndEvt__Tab_GiftWrap_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "BndEvt__Tab_GiftWrap_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-
-	Params::GiftingScreen_C_BndEvt__Tab_GiftWrap_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GiftingScreen.GiftingScreen_C.OnBeginGiftingSubmission
+// Function GiftingScreen.GiftingScreen_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UGiftingScreen_C::OnBeginGiftingSubmission()
+void UGiftingScreen_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "OnBeginGiftingSubmission");
+		Func = Class->GetFunction("GiftingScreen_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -241,81 +91,187 @@ void UGiftingScreen_C::OnEndGiftingSubmission(bool bSuccess)
 }
 
 
-// Function GiftingScreen.GiftingScreen_C.OnActivated
+// Function GiftingScreen.GiftingScreen_C.OnBeginGiftingSubmission
 // (Event, Protected, BlueprintEvent)
 
-void UGiftingScreen_C::OnActivated()
+void UGiftingScreen_C::OnBeginGiftingSubmission()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "OnActivated");
+		Func = Class->GetFunction("GiftingScreen_C", "OnBeginGiftingSubmission");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GiftingScreen.GiftingScreen_C.BndEvt__TileView_GiftBoxes_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature
+// Function GiftingScreen.GiftingScreen_C.BndEvt__Tab_GiftWrap_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsHovered                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGiftingScreen_C::BndEvt__TileView_GiftBoxes_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature(class UObject* Item, bool bIsHovered)
+void UGiftingScreen_C::BndEvt__Tab_GiftWrap_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "BndEvt__TileView_GiftBoxes_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature");
+		Func = Class->GetFunction("GiftingScreen_C", "BndEvt__Tab_GiftWrap_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
 
-	Params::GiftingScreen_C_BndEvt__TileView_GiftBoxes_K2Node_ComponentBoundEvent_2_OnItemIsHoveredChangedDynamic__DelegateSignature Parms{};
+	Params::GiftingScreen_C_BndEvt__Tab_GiftWrap_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
 
-	Parms.Item = Item;
-	Parms.bIsHovered = bIsHovered;
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GiftingScreen.GiftingScreen_C.BndEvt__TileView_GiftBoxes_K2Node_ComponentBoundEvent_3_OnListItemSelectionChangedDynamic__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UObject*                          Item                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function GiftingScreen.GiftingScreen_C.OnMoveToFriendSelectStep
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 
-void UGiftingScreen_C::BndEvt__TileView_GiftBoxes_K2Node_ComponentBoundEvent_3_OnListItemSelectionChangedDynamic__DelegateSignature(class UObject* Item, bool bIsSelected)
+void UGiftingScreen_C::OnMoveToFriendSelectStep()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "BndEvt__TileView_GiftBoxes_K2Node_ComponentBoundEvent_3_OnListItemSelectionChangedDynamic__DelegateSignature");
+		Func = Class->GetFunction("GiftingScreen_C", "OnMoveToFriendSelectStep");
 
-	Params::GiftingScreen_C_BndEvt__TileView_GiftBoxes_K2Node_ComponentBoundEvent_3_OnListItemSelectionChangedDynamic__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Item = Item;
-	Parms.bIsSelected = bIsSelected;
+
+// Function GiftingScreen.GiftingScreen_C.BndEvt__Tab_Recipients_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGiftingScreen_C::BndEvt__Tab_Recipients_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GiftingScreen_C", "BndEvt__Tab_Recipients_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+
+	Params::GiftingScreen_C_BndEvt__Tab_Recipients_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GiftingScreen.GiftingScreen_C.ExecuteUbergraph_GiftingScreen
-// (Final, UbergraphFunction, HasDefaults)
+// Function GiftingScreen.GiftingScreen_C.OnMoveToGiftWrapStep
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bGiftingToSelf                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UGiftingScreen_C::ExecuteUbergraph_GiftingScreen(int32 EntryPoint)
+void UGiftingScreen_C::OnMoveToGiftWrapStep(bool bGiftingToSelf)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingScreen_C", "ExecuteUbergraph_GiftingScreen");
+		Func = Class->GetFunction("GiftingScreen_C", "OnMoveToGiftWrapStep");
 
-	Params::GiftingScreen_C_ExecuteUbergraph_GiftingScreen Parms{};
+	Params::GiftingScreen_C_OnMoveToGiftWrapStep Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.bGiftingToSelf = bGiftingToSelf;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GiftingScreen.GiftingScreen_C.OnOfferSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UFortStoreFrontOfferInfo*         NewOfferInfo                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGiftingScreen_C::OnOfferSet(class UFortStoreFrontOfferInfo* NewOfferInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GiftingScreen_C", "OnOfferSet");
+
+	Params::GiftingScreen_C_OnOfferSet Parms{};
+
+	Parms.NewOfferInfo = NewOfferInfo;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GiftingScreen.GiftingScreen_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UGiftingScreen_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GiftingScreen_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GiftingScreen.GiftingScreen_C.HandleBackClicked
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   bIsHandled                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGiftingScreen_C::HandleBackClicked(bool* bIsHandled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GiftingScreen_C", "HandleBackClicked");
+
+	Params::GiftingScreen_C_HandleBackClicked Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bIsHandled != nullptr)
+		*bIsHandled = Parms.bIsHandled;
+}
+
+
+// Function GiftingScreen.GiftingScreen_C.ToggleBackAction
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bEnable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGiftingScreen_C::ToggleBackAction(bool bEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GiftingScreen_C", "ToggleBackAction");
+
+	Params::GiftingScreen_C_ToggleBackAction Parms{};
+
+	Parms.bEnable = bEnable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GiftingScreen.GiftingScreen_C.HandleMoreInfoClicked
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGiftingScreen_C::HandleMoreInfoClicked(bool* bPassThrough)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GiftingScreen_C", "HandleMoreInfoClicked");
+
+	Params::GiftingScreen_C_HandleMoreInfoClicked Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bPassThrough != nullptr)
+		*bPassThrough = Parms.bPassThrough;
 }
 
 }

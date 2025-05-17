@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass InterfacePlayerPawn.InterfacePlayerPawn_C
-// 0x0000 (0x0028 - 0x0028)
-class IInterfacePlayerPawn_C final : public IInterface
+// 0x0000 (0x0000 - 0x0000)
+class IInterfacePlayerPawn_C final
 {
 public:
-	void MeleeSwingRight();
-	void MeleeSwingLeft();
+	void MeleeSwingRight(bool First_Right);
+	void MeleeSwingLeft(bool First_Left);
 	void Melee_Effect_Color(struct FVector* Melee_Color_Set);
 	void FootStepLeft();
 	void FootStepRight();
@@ -38,9 +38,16 @@ public:
 	{
 		return GetDefaultObjImpl<IInterfacePlayerPawn_C>();
 	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
 };
-static_assert(alignof(IInterfacePlayerPawn_C) == 0x000008, "Wrong alignment on IInterfacePlayerPawn_C");
-static_assert(sizeof(IInterfacePlayerPawn_C) == 0x000028, "Wrong size on IInterfacePlayerPawn_C");
 
 }
 

@@ -11,39 +11,48 @@
 #include "Basic.hpp"
 
 #include "ToyAngleSelectorInfo_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_HookDestroy.GA_Athena_HookDestroy_C
-// 0x0078 (0x09B8 - 0x0940)
+// 0x00B8 (0x0B60 - 0x0AA8)
 class UGA_Athena_HookDestroy_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FActiveGameplayEffectHandle            SwitchLockGE;                                      // 0x0950(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          Hit_;                                              // 0x0958(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_959[0x3];                                      // 0x0959(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CleanedAngle;                                      // 0x095C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FToyAngleSelectorInfo>          LaunchAngleVariations;                             // 0x0960(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UAnimMontage*                           TravelMontage;                                     // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Debug;                                             // 0x0978(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_979[0x7];                                      // 0x0979(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_Hookgun_Athena_C*                    WeaponActor;                                       // 0x0980(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  ChangeEquipmentTag;                                // 0x0988(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTag                           RopeActiveTag;                                     // 0x09A8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                NullMontage;                                       // 0x09B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FActiveGameplayEffectHandle            SwitchLockGE;                                      // 0x0AB8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          Hit_;                                              // 0x0AC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AC1[0x3];                                      // 0x0AC1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CleanedAngle;                                      // 0x0AC4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FToyAngleSelectorInfo>          LaunchAngleVariations;                             // 0x0AC8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UAnimMontage*                           TravelMontage;                                     // 0x0AD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Debug;                                             // 0x0AE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AE1[0x7];                                      // 0x0AE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_Hookgun_Athena_C*                    WeaponActor;                                       // 0x0AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  ChangeEquipmentTag;                                // 0x0AF0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTag                           RopeActiveTag;                                     // 0x0B10(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                NullMontage;                                       // 0x0B18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GliderGrappler;                                    // 0x0B20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B21[0x3];                                      // 0x0B21(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BadgerGrapeDelayFailsafe;                          // 0x0B24(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           DestroyEvent;                                      // 0x0B28(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           Event_GrapplerHit;                                 // 0x0B30(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           Event_GrapplerReturn;                              // 0x0B38(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  T_HoverboardMontage;                               // 0x0B40(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_GA_Athena_HookDestroy(int32 EntryPoint);
 	void ResetDoOnce();
 	void K2_ActivateAbility();
+	void OnSync_A7AA33494F9F686A79A026809EAEF410();
+	void EventReceived_1B71851D49048B6433DA75B0D6007B6E(const struct FGameplayEventData& Payload);
 	void OnCompleted_7CDAB77949F908D1F388AB845AE6C282(class FName NotifyName);
 	void OnBlendOut_7CDAB77949F908D1F388AB845AE6C282(class FName NotifyName);
 	void OnInterrupted_7CDAB77949F908D1F388AB845AE6C282(class FName NotifyName);
@@ -69,6 +78,7 @@ public:
 	void OnRep_AmmoReserves();
 	void PickGrappleMontage(float PitchAngle, class FName* SectionName);
 	void K2_OnEndAbility(bool bWasCancelled);
+	void OnRep_BadgerGrapeDelayFailsafe();
 
 public:
 	static class UClass* StaticClass()
@@ -80,20 +90,6 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_HookDestroy_C>();
 	}
 };
-static_assert(alignof(UGA_Athena_HookDestroy_C) == 0x000008, "Wrong alignment on UGA_Athena_HookDestroy_C");
-static_assert(sizeof(UGA_Athena_HookDestroy_C) == 0x0009B8, "Wrong size on UGA_Athena_HookDestroy_C");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, UberGraphFrame) == 0x000940, "Member 'UGA_Athena_HookDestroy_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, PlayerPawn) == 0x000948, "Member 'UGA_Athena_HookDestroy_C::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, SwitchLockGE) == 0x000950, "Member 'UGA_Athena_HookDestroy_C::SwitchLockGE' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, Hit_) == 0x000958, "Member 'UGA_Athena_HookDestroy_C::Hit_' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, CleanedAngle) == 0x00095C, "Member 'UGA_Athena_HookDestroy_C::CleanedAngle' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, LaunchAngleVariations) == 0x000960, "Member 'UGA_Athena_HookDestroy_C::LaunchAngleVariations' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, TravelMontage) == 0x000970, "Member 'UGA_Athena_HookDestroy_C::TravelMontage' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, Debug) == 0x000978, "Member 'UGA_Athena_HookDestroy_C::Debug' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, WeaponActor) == 0x000980, "Member 'UGA_Athena_HookDestroy_C::WeaponActor' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, ChangeEquipmentTag) == 0x000988, "Member 'UGA_Athena_HookDestroy_C::ChangeEquipmentTag' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, RopeActiveTag) == 0x0009A8, "Member 'UGA_Athena_HookDestroy_C::RopeActiveTag' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_HookDestroy_C, NullMontage) == 0x0009B0, "Member 'UGA_Athena_HookDestroy_C::NullMontage' has a wrong offset!");
 
 }
 

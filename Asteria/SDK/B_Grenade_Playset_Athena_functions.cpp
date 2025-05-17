@@ -37,15 +37,15 @@ void AB_Grenade_Playset_Athena_C::ExecuteUbergraph_B_Grenade_Playset_Athena(int3
 }
 
 
-// Function B_Grenade_Playset_Athena.B_Grenade_Playset_Athena_C.K2_OnUnEquip
-// (Event, Public, BlueprintEvent)
+// Function B_Grenade_Playset_Athena.B_Grenade_Playset_Athena_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AB_Grenade_Playset_Athena_C::K2_OnUnEquip()
+void AB_Grenade_Playset_Athena_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Grenade_Playset_Athena_C", "K2_OnUnEquip");
+		Func = Class->GetFunction("B_Grenade_Playset_Athena_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,15 +65,15 @@ void AB_Grenade_Playset_Athena_C::OnWeaponAttached()
 }
 
 
-// Function B_Grenade_Playset_Athena.B_Grenade_Playset_Athena_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function B_Grenade_Playset_Athena.B_Grenade_Playset_Athena_C.K2_OnUnEquip
+// (Event, Public, BlueprintEvent)
 
-void AB_Grenade_Playset_Athena_C::ReceiveBeginPlay()
+void AB_Grenade_Playset_Athena_C::K2_OnUnEquip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_Grenade_Playset_Athena_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("B_Grenade_Playset_Athena_C", "K2_OnUnEquip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GET_TagContainer.GET_TagContainer_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGET_TagContainer_C : public UGameplayEffect
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGET_TagContainer_C>();
 	}
 };
-static_assert(alignof(UGET_TagContainer_C) == 0x000008, "Wrong alignment on UGET_TagContainer_C");
-static_assert(sizeof(UGET_TagContainer_C) == 0x0005F0, "Wrong size on UGET_TagContainer_C");
 
 }
 

@@ -11,49 +11,59 @@
 #include "Basic.hpp"
 
 #include "AnimGraphRuntime_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ExplosvieBow_AnimBP.ExplosvieBow_AnimBP_C
-// 0x0F28 (0x1258 - 0x0330)
+// 0x1200 (0x15B0 - 0x03B0)
 class UExplosvieBow_AnimBP_C final : public UFortBowWeaponAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root_BEC95E3847BCA5DB370AE8ABF0883FFA; // 0x0338(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_0048D06C4B06229328DED9A70334D916; // 0x0358(0x0048)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_D1D9434544B3EFE25F8410BCE4E510FA; // 0x03A0(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_CD361B0F41F56F7919BDE0A08A9DD90E; // 0x03C8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5569B29E412C00E84CD1E2B798971FF7; // 0x03F0(0x0028)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_8A1C46354E3AAC7F118D258387F50A2E; // 0x0418(0x00E0)()
-	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum_1AA4919A4039C74A05518DB7B6325FDE; // 0x04F8(0x00B0)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_71C8585B47FF4C60C6594DA412BB50EB; // 0x05A8(0x0078)()
-	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum_0258644644EDB11CABB0879AD850DC73; // 0x0620(0x00B0)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_FBA65F2D47DF3DB251B80CB1F4133A0A; // 0x06D0(0x00C8)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_6A596766412BE2A81058678C2D401F3A; // 0x0798(0x0078)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_7C5179394BD6E157890D04BC08D7E61A; // 0x0810(0x0078)()
-	struct FAnimNode_RotationOffsetBlendSpace     AnimGraphNode_RotationOffsetBlendSpace_DFE1FB17478B266421599093D1ECDBA0; // 0x0888(0x0188)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_A1A55ACB4B6C73CEE5AE1EB997460B5C; // 0x0A10(0x00C8)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_CBED26EA49583696D6BB15A368661896; // 0x0AD8(0x00E0)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_D23A17544DB04EEBA1FF1A84FCF2D543; // 0x0BB8(0x00E0)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_C090A94F4DBB1D8DBA0CF88C89B0517C; // 0x0C98(0x00C8)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_750C650D41FA05EF3BC699A6459FD9B5; // 0x0D60(0x0020)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose_30DDA7BE41CEE21E5249778B63236462; // 0x0D80(0x0018)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_23BC57494C35D2C151B4849C843A7344; // 0x0D98(0x00A0)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_9003208F4239CCAB108D3C821C9D39DF; // 0x0E38(0x00C8)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_C5143B384C380AC5084A07AA178566D7; // 0x0F00(0x00E0)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_FA9D7A944BC2BD1564E64D871613C1AE; // 0x0FE0(0x0078)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_45A789F449DD3F30227200BC768F37C4; // 0x1058(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_A3DA7738409B3EBB16160DAEDF118026; // 0x1078(0x00B0)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_E0F7654D426D0C074EA7CC9A00EB5C6A; // 0x1128(0x00B8)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_016F01A44AA3EA15944E679DDC2B14B4; // 0x11E0(0x0078)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03C0(0x0030)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x03F0(0x0048)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x0438(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x0460(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x0488(0x0028)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x04B0(0x0020)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x04D0(0x0020)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone_1;                        // 0x04F0(0x0108)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x05F8(0x0108)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_3;                  // 0x0700(0x00E0)()
+	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum_1;                   // 0x07E0(0x00B0)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_4;                    // 0x0890(0x0078)()
+	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x0908(0x00B0)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_2;                     // 0x09B8(0x00C8)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x0A80(0x0078)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x0AF8(0x0078)()
+	struct FAnimNode_RotationOffsetBlendSpace     AnimGraphNode_RotationOffsetBlendSpace;            // 0x0B70(0x0188)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0x0CF8(0x00C8)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_2;                  // 0x0DC0(0x00E0)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer_1;                  // 0x0EA0(0x00E0)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_1;                     // 0x0F80(0x00C8)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x1048(0x0030)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x1078(0x0018)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x1090(0x00A0)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x1130(0x00C8)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x11F8(0x00E0)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x12D8(0x0078)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x1350(0x0030)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x1380(0x00B0)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x1430(0x00C0)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x14F0(0x0078)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1568(0x0048)()
 
 public:
 	void ExecuteUbergraph_ExplosvieBow_AnimBP(int32 EntryPoint);
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ExplosvieBow_AnimBP_AnimGraphNode_ModifyBone_0E1011B841DA7A109A69F18ED59C9A93();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ExplosvieBow_AnimBP_AnimGraphNode_ModifyBone_D0BC44E84FB0F05DC49A24B18D5B2D51();
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -65,36 +75,6 @@ public:
 		return GetDefaultObjImpl<UExplosvieBow_AnimBP_C>();
 	}
 };
-static_assert(alignof(UExplosvieBow_AnimBP_C) == 0x000008, "Wrong alignment on UExplosvieBow_AnimBP_C");
-static_assert(sizeof(UExplosvieBow_AnimBP_C) == 0x001258, "Wrong size on UExplosvieBow_AnimBP_C");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, UberGraphFrame) == 0x000330, "Member 'UExplosvieBow_AnimBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_Root_BEC95E3847BCA5DB370AE8ABF0883FFA) == 0x000338, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_Root_BEC95E3847BCA5DB370AE8ABF0883FFA' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_Slot_0048D06C4B06229328DED9A70334D916) == 0x000358, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_Slot_0048D06C4B06229328DED9A70334D916' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_TransitionResult_D1D9434544B3EFE25F8410BCE4E510FA) == 0x0003A0, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_TransitionResult_D1D9434544B3EFE25F8410BCE4E510FA' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_TransitionResult_CD361B0F41F56F7919BDE0A08A9DD90E) == 0x0003C8, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_TransitionResult_CD361B0F41F56F7919BDE0A08A9DD90E' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_TransitionResult_5569B29E412C00E84CD1E2B798971FF7) == 0x0003F0, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_TransitionResult_5569B29E412C00E84CD1E2B798971FF7' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_BlendSpacePlayer_8A1C46354E3AAC7F118D258387F50A2E) == 0x000418, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_BlendSpacePlayer_8A1C46354E3AAC7F118D258387F50A2E' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_BlendListByEnum_1AA4919A4039C74A05518DB7B6325FDE) == 0x0004F8, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_BlendListByEnum_1AA4919A4039C74A05518DB7B6325FDE' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_SequencePlayer_71C8585B47FF4C60C6594DA412BB50EB) == 0x0005A8, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_SequencePlayer_71C8585B47FF4C60C6594DA412BB50EB' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_BlendListByEnum_0258644644EDB11CABB0879AD850DC73) == 0x000620, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_BlendListByEnum_0258644644EDB11CABB0879AD850DC73' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_ApplyAdditive_FBA65F2D47DF3DB251B80CB1F4133A0A) == 0x0006D0, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_ApplyAdditive_FBA65F2D47DF3DB251B80CB1F4133A0A' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_SequencePlayer_6A596766412BE2A81058678C2D401F3A) == 0x000798, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_SequencePlayer_6A596766412BE2A81058678C2D401F3A' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_SequencePlayer_7C5179394BD6E157890D04BC08D7E61A) == 0x000810, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_SequencePlayer_7C5179394BD6E157890D04BC08D7E61A' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_RotationOffsetBlendSpace_DFE1FB17478B266421599093D1ECDBA0) == 0x000888, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_RotationOffsetBlendSpace_DFE1FB17478B266421599093D1ECDBA0' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_TwoWayBlend_A1A55ACB4B6C73CEE5AE1EB997460B5C) == 0x000A10, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_TwoWayBlend_A1A55ACB4B6C73CEE5AE1EB997460B5C' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_BlendSpacePlayer_CBED26EA49583696D6BB15A368661896) == 0x000AD8, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_BlendSpacePlayer_CBED26EA49583696D6BB15A368661896' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_BlendSpacePlayer_D23A17544DB04EEBA1FF1A84FCF2D543) == 0x000BB8, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_BlendSpacePlayer_D23A17544DB04EEBA1FF1A84FCF2D543' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_ApplyAdditive_C090A94F4DBB1D8DBA0CF88C89B0517C) == 0x000C98, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_ApplyAdditive_C090A94F4DBB1D8DBA0CF88C89B0517C' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_StateResult_750C650D41FA05EF3BC699A6459FD9B5) == 0x000D60, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_StateResult_750C650D41FA05EF3BC699A6459FD9B5' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_LocalRefPose_30DDA7BE41CEE21E5249778B63236462) == 0x000D80, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_LocalRefPose_30DDA7BE41CEE21E5249778B63236462' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_BlendListByBool_23BC57494C35D2C151B4849C843A7344) == 0x000D98, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_BlendListByBool_23BC57494C35D2C151B4849C843A7344' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_ApplyAdditive_9003208F4239CCAB108D3C821C9D39DF) == 0x000E38, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_ApplyAdditive_9003208F4239CCAB108D3C821C9D39DF' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_BlendSpacePlayer_C5143B384C380AC5084A07AA178566D7) == 0x000F00, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_BlendSpacePlayer_C5143B384C380AC5084A07AA178566D7' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_SequencePlayer_FA9D7A944BC2BD1564E64D871613C1AE) == 0x000FE0, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_SequencePlayer_FA9D7A944BC2BD1564E64D871613C1AE' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_StateResult_45A789F449DD3F30227200BC768F37C4) == 0x001058, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_StateResult_45A789F449DD3F30227200BC768F37C4' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_StateMachine_A3DA7738409B3EBB16160DAEDF118026) == 0x001078, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_StateMachine_A3DA7738409B3EBB16160DAEDF118026' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_LayeredBoneBlend_E0F7654D426D0C074EA7CC9A00EB5C6A) == 0x001128, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_LayeredBoneBlend_E0F7654D426D0C074EA7CC9A00EB5C6A' has a wrong offset!");
-static_assert(offsetof(UExplosvieBow_AnimBP_C, AnimGraphNode_SequencePlayer_016F01A44AA3EA15944E679DDC2B14B4) == 0x0011E0, "Member 'UExplosvieBow_AnimBP_C::AnimGraphNode_SequencePlayer_016F01A44AA3EA15944E679DDC2B14B4' has a wrong offset!");
 
 }
 

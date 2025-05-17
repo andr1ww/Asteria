@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MiniCraftingIngredientList.MiniCraftingIngredientList_C
-// 0x0010 (0x02C8 - 0x02B8)
+// 0x0010 (0x0328 - 0x0318)
 class UMiniCraftingIngredientList_C final : public UFortItemQuantityListBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWrapBox*                               EntriesWrapBox;                                    // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWrapBox*                               EntriesWrapBox;                                    // 0x0320(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void AddListEntry(class UFortItemQuantityListEntryBase* ListEntry);
@@ -39,10 +39,6 @@ public:
 		return GetDefaultObjImpl<UMiniCraftingIngredientList_C>();
 	}
 };
-static_assert(alignof(UMiniCraftingIngredientList_C) == 0x000008, "Wrong alignment on UMiniCraftingIngredientList_C");
-static_assert(sizeof(UMiniCraftingIngredientList_C) == 0x0002C8, "Wrong size on UMiniCraftingIngredientList_C");
-static_assert(offsetof(UMiniCraftingIngredientList_C, UberGraphFrame) == 0x0002B8, "Member 'UMiniCraftingIngredientList_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMiniCraftingIngredientList_C, EntriesWrapBox) == 0x0002C0, "Member 'UMiniCraftingIngredientList_C::EntriesWrapBox' has a wrong offset!");
 
 }
 

@@ -36,5 +36,26 @@ void URPG_Skeleton_AnimBlueprint_C::ExecuteUbergraph_RPG_Skeleton_AnimBlueprint(
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function RPG_Skeleton_AnimBlueprint.RPG_Skeleton_AnimBlueprint_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+
+void URPG_Skeleton_AnimBlueprint_C::AnimGraph(struct FPoseLink* AnimGraph_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RPG_Skeleton_AnimBlueprint_C", "AnimGraph");
+
+	Params::RPG_Skeleton_AnimBlueprint_C_AnimGraph Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
+}
+
 }
 

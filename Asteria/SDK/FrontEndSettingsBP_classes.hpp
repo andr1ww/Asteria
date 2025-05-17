@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FrontEndSettingsBP.FrontEndSettingsBP_C
-// 0x0008 (0x0258 - 0x0250)
+// 0x0008 (0x0248 - 0x0240)
 class AFrontEndSettingsBP_C final : public AFrontEndSettings
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0250(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0240(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,9 +33,6 @@ public:
 		return GetDefaultObjImpl<AFrontEndSettingsBP_C>();
 	}
 };
-static_assert(alignof(AFrontEndSettingsBP_C) == 0x000008, "Wrong alignment on AFrontEndSettingsBP_C");
-static_assert(sizeof(AFrontEndSettingsBP_C) == 0x000258, "Wrong size on AFrontEndSettingsBP_C");
-static_assert(offsetof(AFrontEndSettingsBP_C, DefaultSceneRoot) == 0x000250, "Member 'AFrontEndSettingsBP_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

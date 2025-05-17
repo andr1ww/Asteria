@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SpeedLines_Looping_Camera_Lens.BP_SpeedLines_Looping_Camera_Lens_C
-// 0x0000 (0x0300 - 0x0300)
+// 0x0000 (0x02E0 - 0x02E0)
 class ABP_SpeedLines_Looping_Camera_Lens_C final : public AEmitterCameraLensEffectBase
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ABP_SpeedLines_Looping_Camera_Lens_C>();
 	}
 };
-static_assert(alignof(ABP_SpeedLines_Looping_Camera_Lens_C) == 0x000010, "Wrong alignment on ABP_SpeedLines_Looping_Camera_Lens_C");
-static_assert(sizeof(ABP_SpeedLines_Looping_Camera_Lens_C) == 0x000300, "Wrong size on ABP_SpeedLines_Looping_Camera_Lens_C");
 
 }
 

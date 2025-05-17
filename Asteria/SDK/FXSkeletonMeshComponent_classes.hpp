@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FXSkeletonMeshComponent.FXSkeletonMeshComponent_C
-// 0x0000 (0x0AB0 - 0x0AB0)
+// 0x0000 (0x0B80 - 0x0B80)
 class UFXSkeletonMeshComponent_C final : public UFortFXSkeletonMeshComponent
 {
 public:
@@ -35,8 +35,6 @@ public:
 		return GetDefaultObjImpl<UFXSkeletonMeshComponent_C>();
 	}
 };
-static_assert(alignof(UFXSkeletonMeshComponent_C) == 0x000008, "Wrong alignment on UFXSkeletonMeshComponent_C");
-static_assert(sizeof(UFXSkeletonMeshComponent_C) == 0x000AB0, "Wrong size on UFXSkeletonMeshComponent_C");
 
 }
 

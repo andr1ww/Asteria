@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function AthenaStatsRow.AthenaStatsRow_C.SetStatValueAsText
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function AthenaStatsRow.AthenaStatsRow_C.ExecuteUbergraph_AthenaStatsRow
+// (Final, UbergraphFunction)
 // Parameters:
-// class FText                             StatValue                                              (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaStatsRow_C::SetStatValueAsText(const class FText& StatValue)
+void UAthenaStatsRow_C::ExecuteUbergraph_AthenaStatsRow(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaStatsRow_C", "SetStatValueAsText");
+		Func = Class->GetFunction("AthenaStatsRow_C", "ExecuteUbergraph_AthenaStatsRow");
 
-	Params::AthenaStatsRow_C_SetStatValueAsText Parms{};
+	Params::AthenaStatsRow_C_ExecuteUbergraph_AthenaStatsRow Parms{};
 
-	Parms.StatValue = std::move(StatValue);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -57,21 +57,21 @@ void UAthenaStatsRow_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function AthenaStatsRow.AthenaStatsRow_C.ExecuteUbergraph_AthenaStatsRow
-// (Final, UbergraphFunction)
+// Function AthenaStatsRow.AthenaStatsRow_C.SetStatValueAsText
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      StatValue                                              (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UAthenaStatsRow_C::ExecuteUbergraph_AthenaStatsRow(int32 EntryPoint)
+void UAthenaStatsRow_C::SetStatValueAsText(const class FText& StatValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaStatsRow_C", "ExecuteUbergraph_AthenaStatsRow");
+		Func = Class->GetFunction("AthenaStatsRow_C", "SetStatValueAsText");
 
-	Params::AthenaStatsRow_C_ExecuteUbergraph_AthenaStatsRow Parms{};
+	Params::AthenaStatsRow_C_SetStatValueAsText Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.StatValue = std::move(StatValue);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

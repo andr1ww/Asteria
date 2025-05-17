@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PBWA_S1_HalfWallDoorSide.PBWA_S1_HalfWallDoorSide_C
-// 0x0000 (0x0C48 - 0x0C48)
+// 0x0000 (0x0CD0 - 0x0CD0)
 class APBWA_S1_HalfWallDoorSide_C final : public ABuildingWall
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<APBWA_S1_HalfWallDoorSide_C>();
 	}
 };
-static_assert(alignof(APBWA_S1_HalfWallDoorSide_C) == 0x000008, "Wrong alignment on APBWA_S1_HalfWallDoorSide_C");
-static_assert(sizeof(APBWA_S1_HalfWallDoorSide_C) == 0x000C48, "Wrong size on APBWA_S1_HalfWallDoorSide_C");
 
 }
 

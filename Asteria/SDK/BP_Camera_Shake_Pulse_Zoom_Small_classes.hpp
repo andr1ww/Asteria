@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UBP_Camera_Shake_Pulse_Zoom_Small_C>();
 	}
 };
-static_assert(alignof(UBP_Camera_Shake_Pulse_Zoom_Small_C) == 0x000008, "Wrong alignment on UBP_Camera_Shake_Pulse_Zoom_Small_C");
-static_assert(sizeof(UBP_Camera_Shake_Pulse_Zoom_Small_C) == 0x000160, "Wrong size on UBP_Camera_Shake_Pulse_Zoom_Small_C");
 
 }
 

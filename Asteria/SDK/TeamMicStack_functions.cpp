@@ -88,7 +88,7 @@ void UTeamMicStack_C::HandleTeamMemberRemoved(int32 Member_Index)
 // Function TeamMicStack.TeamMicStack_C.HandleTeamMemberChanged
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortTeamMemberInfo              Member_Info                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FFortTeamMemberInfo&       Member_Info                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
 void UTeamMicStack_C::HandleTeamMemberChanged(const struct FFortTeamMemberInfo& Member_Info)
 {
@@ -108,7 +108,7 @@ void UTeamMicStack_C::HandleTeamMemberChanged(const struct FFortTeamMemberInfo& 
 // Function TeamMicStack.TeamMicStack_C.AppendTeamMember
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortTeamMemberInfo              TeamMemberInfo                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// struct FFortTeamMemberInfo&             TeamMemberInfo                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void UTeamMicStack_C::AppendTeamMember(struct FFortTeamMemberInfo& TeamMemberInfo)
 {

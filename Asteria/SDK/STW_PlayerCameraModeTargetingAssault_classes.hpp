@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass STW_PlayerCameraModeTargetingAssault.STW_PlayerCameraModeTargetingAssault_C
-// 0x0000 (0x0CF0 - 0x0CF0)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class USTW_PlayerCameraModeTargetingAssault_C final : public UAthena_PlayerCameraModeTargetingAssault_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<USTW_PlayerCameraModeTargetingAssault_C>();
 	}
 };
-static_assert(alignof(USTW_PlayerCameraModeTargetingAssault_C) == 0x000010, "Wrong alignment on USTW_PlayerCameraModeTargetingAssault_C");
-static_assert(sizeof(USTW_PlayerCameraModeTargetingAssault_C) == 0x000CF0, "Wrong size on USTW_PlayerCameraModeTargetingAssault_C");
 
 }
 

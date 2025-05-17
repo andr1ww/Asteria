@@ -10,35 +10,38 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
+#include "EVisibleInGameState_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CreativeRadio.BP_CreativeRadio_C
-// 0x0038 (0x0BB8 - 0x0B80)
+// 0x0040 (0x0CB8 - 0x0C78)
 class ABP_CreativeRadio_C final : public ABuildingPropPlaygroundMusicPlayer
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B80(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCreative_Radio_AudioToMPC_C*           Creative_Radio_AudioToMPC;                         // 0x0B88(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UFortMinigameProgressComponent*         FortMinigameProgress;                              // 0x0B90(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UToyOptionsComponent_C*                 ToyOptionsComponent;                               // 0x0B98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         RadioAttenuationDistance;                          // 0x0BA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         VolumeOverride;                                    // 0x0BA4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CachedVolumeMultiplier;                            // 0x0BA8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	float                                         CachedAttenuationSetting;                          // 0x0BAC(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldDriveVisualization;                          // 0x0BB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor)
-	bool                                          CachedShouldDriveVisualization;                    // 0x0BB1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, RepNotify, NoDestructor)
-	bool                                          IsMeshVisibleDuringMinigame;                       // 0x0BB2(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C78(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCreative_VisibleInGame_Component_C*    VisibleInGameComponent;                            // 0x0C80(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCreative_Radio_AudioToMPC_C*           Creative_Radio_AudioToMPC;                         // 0x0C88(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UFortMinigameProgressComponent*         FortMinigameProgress;                              // 0x0C90(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UToyOptionsComponent_C*                 ToyOptionsComponent;                               // 0x0C98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         RadioAttenuationDistance;                          // 0x0CA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         VolumeOverride;                                    // 0x0CA4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CachedVolumeMultiplier;                            // 0x0CA8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	float                                         CachedAttenuationSetting;                          // 0x0CAC(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldDriveVisualization;                          // 0x0CB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, NoDestructor)
+	bool                                          CachedShouldDriveVisualization;                    // 0x0CB1(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, SaveGame, IsPlainOldData, RepNotify, NoDestructor)
+	bool                                          IsMeshVisibleDuringMinigame;                       // 0x0CB2(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_CreativeRadio(int32 EntryPoint);
-	void BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_3_OnMinigameStateChanged__DelegateSignature(EFortMinigameState NewMinigameState);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void OnWorldReady();
+	void BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_1_AnyPropertyChangedDelegate__DelegateSignature();
+	void BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_0_AnyPropertyChangedDelegate__DelegateSignature();
 	void ReceiveBeginPlay();
 	void OnPropertyChanged();
 	void OnRep_CachedVolumeMultiplier();
@@ -46,10 +49,11 @@ public:
 	void OnRep_CachedShouldDriveVisualization();
 	void SetAttenuationDistance();
 	void UpdateCachedAttenuationSettings();
-	void UpdateMinigameVisuals(EFortMinigameState MinigameState);
+	void PlaybackTypeUpgradePath();
+	void CheckMinigameStateOnPropertyChanged();
 
-	class FText BlueprintGetInteractionString(const class AFortPawn* InteractingPawn) const;
-	bool BlueprintCanInteract(const class AFortPawn* InteractingPawn) const;
+	class FText BlueprintGetInteractionString(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted) const;
+	bool BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const;
 
 public:
 	static class UClass* StaticClass()
@@ -61,19 +65,6 @@ public:
 		return GetDefaultObjImpl<ABP_CreativeRadio_C>();
 	}
 };
-static_assert(alignof(ABP_CreativeRadio_C) == 0x000008, "Wrong alignment on ABP_CreativeRadio_C");
-static_assert(sizeof(ABP_CreativeRadio_C) == 0x000BB8, "Wrong size on ABP_CreativeRadio_C");
-static_assert(offsetof(ABP_CreativeRadio_C, UberGraphFrame) == 0x000B80, "Member 'ABP_CreativeRadio_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_CreativeRadio_C, Creative_Radio_AudioToMPC) == 0x000B88, "Member 'ABP_CreativeRadio_C::Creative_Radio_AudioToMPC' has a wrong offset!");
-static_assert(offsetof(ABP_CreativeRadio_C, FortMinigameProgress) == 0x000B90, "Member 'ABP_CreativeRadio_C::FortMinigameProgress' has a wrong offset!");
-static_assert(offsetof(ABP_CreativeRadio_C, ToyOptionsComponent) == 0x000B98, "Member 'ABP_CreativeRadio_C::ToyOptionsComponent' has a wrong offset!");
-static_assert(offsetof(ABP_CreativeRadio_C, RadioAttenuationDistance) == 0x000BA0, "Member 'ABP_CreativeRadio_C::RadioAttenuationDistance' has a wrong offset!");
-static_assert(offsetof(ABP_CreativeRadio_C, VolumeOverride) == 0x000BA4, "Member 'ABP_CreativeRadio_C::VolumeOverride' has a wrong offset!");
-static_assert(offsetof(ABP_CreativeRadio_C, CachedVolumeMultiplier) == 0x000BA8, "Member 'ABP_CreativeRadio_C::CachedVolumeMultiplier' has a wrong offset!");
-static_assert(offsetof(ABP_CreativeRadio_C, CachedAttenuationSetting) == 0x000BAC, "Member 'ABP_CreativeRadio_C::CachedAttenuationSetting' has a wrong offset!");
-static_assert(offsetof(ABP_CreativeRadio_C, ShouldDriveVisualization) == 0x000BB0, "Member 'ABP_CreativeRadio_C::ShouldDriveVisualization' has a wrong offset!");
-static_assert(offsetof(ABP_CreativeRadio_C, CachedShouldDriveVisualization) == 0x000BB1, "Member 'ABP_CreativeRadio_C::CachedShouldDriveVisualization' has a wrong offset!");
-static_assert(offsetof(ABP_CreativeRadio_C, IsMeshVisibleDuringMinigame) == 0x000BB2, "Member 'ABP_CreativeRadio_C::IsMeshVisibleDuringMinigame' has a wrong offset!");
 
 }
 

@@ -36,5 +36,26 @@ void UBP_AssaultRifle_FrontClip_BackAction_C::ExecuteUbergraph_BP_AssaultRifle_F
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function BP_AssaultRifle_FrontClip_BackAction.BP_AssaultRifle_FrontClip_BackAction_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+
+void UBP_AssaultRifle_FrontClip_BackAction_C::AnimGraph(struct FPoseLink* AnimGraph_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AssaultRifle_FrontClip_BackAction_C", "AnimGraph");
+
+	Params::BP_AssaultRifle_FrontClip_BackAction_C_AnimGraph Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
+}
+
 }
 

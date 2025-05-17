@@ -10,21 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_AthenaInVehicle.GA_AthenaInVehicle_C
-// 0x0028 (0x0968 - 0x0940)
+// 0x0028 (0x0AD0 - 0x0AA8)
 class UGA_AthenaInVehicle_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTagContainer                  ExitTag;                                           // 0x0948(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTagContainer                  ExitTag;                                           // 0x0AB0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_GA_AthenaInVehicle(int32 EntryPoint);
@@ -41,10 +41,6 @@ public:
 		return GetDefaultObjImpl<UGA_AthenaInVehicle_C>();
 	}
 };
-static_assert(alignof(UGA_AthenaInVehicle_C) == 0x000008, "Wrong alignment on UGA_AthenaInVehicle_C");
-static_assert(sizeof(UGA_AthenaInVehicle_C) == 0x000968, "Wrong size on UGA_AthenaInVehicle_C");
-static_assert(offsetof(UGA_AthenaInVehicle_C, UberGraphFrame) == 0x000940, "Member 'UGA_AthenaInVehicle_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGA_AthenaInVehicle_C, ExitTag) == 0x000948, "Member 'UGA_AthenaInVehicle_C::ExitTag' has a wrong offset!");
 
 }
 

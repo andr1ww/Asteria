@@ -37,6 +37,20 @@ void ABP_Athena_Environmental_ZipLine_C::ExecuteUbergraph_BP_Athena_Environmenta
 }
 
 
+// Function BP_Athena_Environmental_ZipLine.BP_Athena_Environmental_ZipLine_C.ReleaseZipline
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_Athena_Environmental_ZipLine_C::ReleaseZipline()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Athena_Environmental_ZipLine_C", "ReleaseZipline");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_Athena_Environmental_ZipLine.BP_Athena_Environmental_ZipLine_C.HandleOnEndOverlap
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -71,7 +85,7 @@ void ABP_Athena_Environmental_ZipLine_C::HandleOnEndOverlap(class UPrimitiveComp
 // class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FHitResult                       SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
 void ABP_Athena_Environmental_ZipLine_C::HandleOnBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
@@ -183,8 +197,8 @@ void ABP_Athena_Environmental_ZipLine_C::StartZipLining(class AFortPlayerPawn* F
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class APawn*                            Character                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFortCustomMovement                     CustomMovementMode                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EMovementMode                           MovementMode                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFortCustomMovement*                    CustomMovementMode                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EMovementMode*                          MovementMode                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ABP_Athena_Environmental_ZipLine_C::GetCharacterCustomMovementMode(class APawn* Character, EFortCustomMovement* CustomMovementMode, EMovementMode* MovementMode)
 {
@@ -208,7 +222,7 @@ void ABP_Athena_Environmental_ZipLine_C::GetCharacterCustomMovementMode(class AP
 
 
 // Function BP_Athena_Environmental_ZipLine.BP_Athena_Environmental_ZipLine_C.QuestCheckForUse
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AFortPlayerController*            FortPlayerController                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -228,10 +242,10 @@ void ABP_Athena_Environmental_ZipLine_C::QuestCheckForUse(class AFortPlayerContr
 
 
 // Function BP_Athena_Environmental_ZipLine.BP_Athena_Environmental_ZipLine_C.CheckForBuildings
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AFortPlayerPawn*                  Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    BuildingNearby_                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   BuildingNearby_                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ABP_Athena_Environmental_ZipLine_C::CheckForBuildings(class AFortPlayerPawn* Player, bool* BuildingNearby_)
 {
@@ -282,6 +296,47 @@ void ABP_Athena_Environmental_ZipLine_C::Setup_Overlap_Bindings()
 		Func = Class->GetFunction("BP_Athena_Environmental_ZipLine_C", "Setup Overlap Bindings");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Athena_Environmental_ZipLine.BP_Athena_Environmental_ZipLine_C.CalculatePositionsOfPoles
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Athena_Environmental_ZipLine_C::CalculatePositionsOfPoles()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Athena_Environmental_ZipLine_C", "CalculatePositionsOfPoles");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Athena_Environmental_ZipLine.BP_Athena_Environmental_ZipLine_C.BlueprintCanInteract
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABP_Athena_Environmental_ZipLine_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Athena_Environmental_ZipLine_C", "BlueprintCanInteract");
+
+	Params::BP_Athena_Environmental_ZipLine_C_BlueprintCanInteract Parms{};
+
+	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+	Parms.InteractionType = InteractionType;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

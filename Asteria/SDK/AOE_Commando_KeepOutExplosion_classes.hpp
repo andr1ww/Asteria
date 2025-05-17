@@ -10,27 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass AOE_Commando_KeepOutExplosion.AOE_Commando_KeepOutExplosion_C
-// 0x0320 (0x0828 - 0x0508)
+// 0x03D8 (0x0978 - 0x05A0)
 class AAOE_Commando_KeepOutExplosion_C final : public AFortAreaOfEffectCloud
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0508(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        AOE_Audio_Effect;                                  // 0x0510(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               P_Grenade_Linger;                                  // 0x0518(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       DamageArea;                                        // 0x0520(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0528(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         Radius;                                            // 0x0530(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_534[0x4];                                      // 0x0534(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSoundAttenuationSettings              AOE_Sound_Attenuation_Based_On_Radius;             // 0x0538(0x02E8)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class USoundBase*                             AOE_Electric_Sound;                                // 0x0820(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        AOE_Audio_Effect;                                  // 0x05A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               P_Grenade_Linger;                                  // 0x05B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       DamageArea;                                        // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x05C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         Radius;                                            // 0x05C8(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5CC[0x4];                                      // 0x05CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSoundAttenuationSettings              AOE_Sound_Attenuation_Based_On_Radius;             // 0x05D0(0x03A0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class USoundBase*                             AOE_Electric_Sound;                                // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_AOE_Commando_KeepOutExplosion(int32 EntryPoint);
@@ -49,16 +49,6 @@ public:
 		return GetDefaultObjImpl<AAOE_Commando_KeepOutExplosion_C>();
 	}
 };
-static_assert(alignof(AAOE_Commando_KeepOutExplosion_C) == 0x000008, "Wrong alignment on AAOE_Commando_KeepOutExplosion_C");
-static_assert(sizeof(AAOE_Commando_KeepOutExplosion_C) == 0x000828, "Wrong size on AAOE_Commando_KeepOutExplosion_C");
-static_assert(offsetof(AAOE_Commando_KeepOutExplosion_C, UberGraphFrame) == 0x000508, "Member 'AAOE_Commando_KeepOutExplosion_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AAOE_Commando_KeepOutExplosion_C, AOE_Audio_Effect) == 0x000510, "Member 'AAOE_Commando_KeepOutExplosion_C::AOE_Audio_Effect' has a wrong offset!");
-static_assert(offsetof(AAOE_Commando_KeepOutExplosion_C, P_Grenade_Linger) == 0x000518, "Member 'AAOE_Commando_KeepOutExplosion_C::P_Grenade_Linger' has a wrong offset!");
-static_assert(offsetof(AAOE_Commando_KeepOutExplosion_C, DamageArea) == 0x000520, "Member 'AAOE_Commando_KeepOutExplosion_C::DamageArea' has a wrong offset!");
-static_assert(offsetof(AAOE_Commando_KeepOutExplosion_C, DefaultSceneRoot) == 0x000528, "Member 'AAOE_Commando_KeepOutExplosion_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AAOE_Commando_KeepOutExplosion_C, Radius) == 0x000530, "Member 'AAOE_Commando_KeepOutExplosion_C::Radius' has a wrong offset!");
-static_assert(offsetof(AAOE_Commando_KeepOutExplosion_C, AOE_Sound_Attenuation_Based_On_Radius) == 0x000538, "Member 'AAOE_Commando_KeepOutExplosion_C::AOE_Sound_Attenuation_Based_On_Radius' has a wrong offset!");
-static_assert(offsetof(AAOE_Commando_KeepOutExplosion_C, AOE_Electric_Sound) == 0x000820, "Member 'AAOE_Commando_KeepOutExplosion_C::AOE_Electric_Sound' has a wrong offset!");
 
 }
 

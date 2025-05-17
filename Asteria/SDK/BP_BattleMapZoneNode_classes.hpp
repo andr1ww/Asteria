@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BattleMapZoneNode.BP_BattleMapZoneNode_C
-// 0x0008 (0x0378 - 0x0370)
+// 0x0008 (0x0360 - 0x0358)
 class ABP_BattleMapZoneNode_C final : public ABP_BattleMapBaseNode_C
 {
 public:
-	class UStaticMeshComponent*                   StaticMesh_Inverted;                               // 0x0370(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh_Inverted;                               // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,9 +33,6 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapZoneNode_C>();
 	}
 };
-static_assert(alignof(ABP_BattleMapZoneNode_C) == 0x000008, "Wrong alignment on ABP_BattleMapZoneNode_C");
-static_assert(sizeof(ABP_BattleMapZoneNode_C) == 0x000378, "Wrong size on ABP_BattleMapZoneNode_C");
-static_assert(offsetof(ABP_BattleMapZoneNode_C, StaticMesh_Inverted) == 0x000370, "Member 'ABP_BattleMapZoneNode_C::StaticMesh_Inverted' has a wrong offset!");
 
 }
 

@@ -19,36 +19,94 @@
 namespace SDK
 {
 
-// Class AnimGraphRuntime.AnimCustomInstance
-// 0x0008 (0x0270 - 0x0268)
-class UAnimCustomInstance : public UAnimInstance
+// Class AnimGraphRuntime.AnimNotify_PlayMontageNotify
+// 0x0008 (0x0040 - 0x0038)
+class UAnimNotify_PlayMontageNotify final : public UAnimNotify
 {
 public:
-	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   NotifyName;                                        // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AnimCustomInstance">();
+		return StaticClassImpl<"AnimNotify_PlayMontageNotify">();
 	}
-	static class UAnimCustomInstance* GetDefaultObj()
+	static class UAnimNotify_PlayMontageNotify* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAnimCustomInstance>();
+		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotify>();
 	}
 };
-static_assert(alignof(UAnimCustomInstance) == 0x000008, "Wrong alignment on UAnimCustomInstance");
-static_assert(sizeof(UAnimCustomInstance) == 0x000270, "Wrong size on UAnimCustomInstance");
+
+// Class AnimGraphRuntime.AnimSequencerInstance
+// 0x0000 (0x02C0 - 0x02C0)
+class UAnimSequencerInstance : public UAnimInstance
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AnimSequencerInstance">();
+	}
+	static class UAnimSequencerInstance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimSequencerInstance>();
+	}
+};
+
+// Class AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
+// 0x0008 (0x0038 - 0x0030)
+class UAnimNotify_PlayMontageNotifyWindow final : public UAnimNotifyState
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AnimNotify_PlayMontageNotifyWindow">();
+	}
+	static class UAnimNotify_PlayMontageNotifyWindow* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotifyWindow>();
+	}
+};
+
+// Class AnimGraphRuntime.KismetAnimationLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UKismetAnimationLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static float K2_CalculateVelocityFromPositionHistory(float DeltaSeconds, const struct FVector& position, struct FPositionHistory& History, int32 NumberOfSamples, float VelocityMin, float VelocityMax);
+	static float K2_CalculateVelocityFromSockets(float DeltaSeconds, class USkeletalMeshComponent* Component, const class FName SocketOrBoneName, const class FName ReferenceSocketOrBone, ERelativeTransformSpace SocketSpace, const struct FVector& OffsetInBoneSpace, struct FPositionHistory& History, int32 NumberOfSamples, float VelocityMin, float VelocityMax, EEasingFuncType EasingType, const struct FRuntimeFloatCurve& CustomCurve);
+	static struct FVector K2_DirectionBetweenSockets(const class USkeletalMeshComponent* Component, const class FName SocketOrBoneNameFrom, const class FName SocketOrBoneNameTo);
+	static float K2_DistanceBetweenTwoSocketsAndMapRange(const class USkeletalMeshComponent* Component, const class FName SocketOrBoneNameA, ERelativeTransformSpace SocketSpaceA, const class FName SocketOrBoneNameB, ERelativeTransformSpace SocketSpaceB, bool bRemapRange, float InRangeMin, float InRangeMax, float OutRangeMin, float OutRangeMax);
+	static float K2_EndProfilingTimer(bool bLog, const class FString& LogPrefix);
+	static struct FTransform K2_LookAt(const struct FTransform& CurrentTransform, const struct FVector& TargetPosition, const struct FVector& LookAtVector, bool bUseUpVector, const struct FVector& UpVector, float ClampConeInDegree);
+	static float K2_MakePerlinNoiseAndRemap(float Value, float RangeOutMin, float RangeOutMax);
+	static struct FVector K2_MakePerlinNoiseVectorAndRemap(float X, float Y, float Z, float RangeOutMinX, float RangeOutMaxX, float RangeOutMinY, float RangeOutMaxY, float RangeOutMinZ, float RangeOutMaxZ);
+	static void K2_StartProfilingTimer();
+	static void K2_TwoBoneIK(const struct FVector& RootPos, const struct FVector& JointPos, const struct FVector& EndPos, const struct FVector& JointTarget, const struct FVector& Effector, struct FVector* OutJointPos, struct FVector* OutEndPos, bool bAllowStretching, float StartStretchRatio, float MaxStretchScale);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KismetAnimationLibrary">();
+	}
+	static class UKismetAnimationLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKismetAnimationLibrary>();
+	}
+};
 
 // Class AnimGraphRuntime.PlayMontageCallbackProxy
 // 0x0080 (0x00A8 - 0x0028)
 class UPlayMontageCallbackProxy final : public UObject
 {
 public:
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnCompleted;                                       // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnBlendOut;                                        // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnInterrupted;                                     // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyBegin;                                     // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyEnd;                                       // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnCompleted;                              // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnBlendOut;                               // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnInterrupted;                            // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyBegin;                            // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyEnd;                              // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_78[0x30];                                      // 0x0078(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -69,99 +127,30 @@ public:
 		return GetDefaultObjImpl<UPlayMontageCallbackProxy>();
 	}
 };
-static_assert(alignof(UPlayMontageCallbackProxy) == 0x000008, "Wrong alignment on UPlayMontageCallbackProxy");
-static_assert(sizeof(UPlayMontageCallbackProxy) == 0x0000A8, "Wrong size on UPlayMontageCallbackProxy");
-static_assert(offsetof(UPlayMontageCallbackProxy, OnCompleted) == 0x000028, "Member 'UPlayMontageCallbackProxy::OnCompleted' has a wrong offset!");
-static_assert(offsetof(UPlayMontageCallbackProxy, OnBlendOut) == 0x000038, "Member 'UPlayMontageCallbackProxy::OnBlendOut' has a wrong offset!");
-static_assert(offsetof(UPlayMontageCallbackProxy, OnInterrupted) == 0x000048, "Member 'UPlayMontageCallbackProxy::OnInterrupted' has a wrong offset!");
-static_assert(offsetof(UPlayMontageCallbackProxy, OnNotifyBegin) == 0x000058, "Member 'UPlayMontageCallbackProxy::OnNotifyBegin' has a wrong offset!");
-static_assert(offsetof(UPlayMontageCallbackProxy, OnNotifyEnd) == 0x000068, "Member 'UPlayMontageCallbackProxy::OnNotifyEnd' has a wrong offset!");
 
-// Class AnimGraphRuntime.AnimSequencerInstance
-// 0x0000 (0x0270 - 0x0270)
-class UAnimSequencerInstance : public UAnimCustomInstance
+// Class AnimGraphRuntime.SequencerAnimationSupport
+// 0x0000 (0x0000 - 0x0000)
+class ISequencerAnimationSupport final
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AnimSequencerInstance">();
+		return StaticClassImpl<"SequencerAnimationSupport">();
 	}
-	static class UAnimSequencerInstance* GetDefaultObj()
+	static class ISequencerAnimationSupport* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAnimSequencerInstance>();
+		return GetDefaultObjImpl<ISequencerAnimationSupport>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
 	}
 };
-static_assert(alignof(UAnimSequencerInstance) == 0x000008, "Wrong alignment on UAnimSequencerInstance");
-static_assert(sizeof(UAnimSequencerInstance) == 0x000270, "Wrong size on UAnimSequencerInstance");
-
-// Class AnimGraphRuntime.AnimNotify_PlayMontageNotify
-// 0x0008 (0x0040 - 0x0038)
-class UAnimNotify_PlayMontageNotify final : public UAnimNotify
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AnimNotify_PlayMontageNotify">();
-	}
-	static class UAnimNotify_PlayMontageNotify* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotify>();
-	}
-};
-static_assert(alignof(UAnimNotify_PlayMontageNotify) == 0x000008, "Wrong alignment on UAnimNotify_PlayMontageNotify");
-static_assert(sizeof(UAnimNotify_PlayMontageNotify) == 0x000040, "Wrong size on UAnimNotify_PlayMontageNotify");
-static_assert(offsetof(UAnimNotify_PlayMontageNotify, NotifyName) == 0x000038, "Member 'UAnimNotify_PlayMontageNotify::NotifyName' has a wrong offset!");
-
-// Class AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
-// 0x0008 (0x0038 - 0x0030)
-class UAnimNotify_PlayMontageNotifyWindow final : public UAnimNotifyState
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AnimNotify_PlayMontageNotifyWindow">();
-	}
-	static class UAnimNotify_PlayMontageNotifyWindow* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimNotify_PlayMontageNotifyWindow>();
-	}
-};
-static_assert(alignof(UAnimNotify_PlayMontageNotifyWindow) == 0x000008, "Wrong alignment on UAnimNotify_PlayMontageNotifyWindow");
-static_assert(sizeof(UAnimNotify_PlayMontageNotifyWindow) == 0x000038, "Wrong size on UAnimNotify_PlayMontageNotifyWindow");
-static_assert(offsetof(UAnimNotify_PlayMontageNotifyWindow, NotifyName) == 0x000030, "Member 'UAnimNotify_PlayMontageNotifyWindow::NotifyName' has a wrong offset!");
-
-// Class AnimGraphRuntime.KismetAnimationLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UKismetAnimationLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static float K2_CalculateVelocityFromPositionHistory(float DeltaSeconds, const struct FVector& Position, struct FPositionHistory& History, int32 NumberOfSamples, float VelocityMin, float VelocityMax);
-	static float K2_CalculateVelocityFromSockets(float DeltaSeconds, class USkeletalMeshComponent* Component, const class FName SocketOrBoneName, const class FName ReferenceSocketOrBone, ERelativeTransformSpace SocketSpace, const struct FVector& OffsetInBoneSpace, struct FPositionHistory& History, int32 NumberOfSamples, float VelocityMin, float VelocityMax, EEasingFuncType EasingType, const struct FRuntimeFloatCurve& CustomCurve);
-	static struct FVector K2_DirectionBetweenSockets(const class USkeletalMeshComponent* Component, const class FName SocketOrBoneNameFrom, const class FName SocketOrBoneNameTo);
-	static float K2_DistanceBetweenTwoSocketsAndMapRange(const class USkeletalMeshComponent* Component, const class FName SocketOrBoneNameA, ERelativeTransformSpace SocketSpaceA, const class FName SocketOrBoneNameB, ERelativeTransformSpace SocketSpaceB, bool bRemapRange, float InRangeMin, float InRangeMax, float OutRangeMin, float OutRangeMax);
-	static struct FTransform K2_LookAt(const struct FTransform& CurrentTransform, const struct FVector& TargetPosition, const struct FVector& LookAtVector, bool bUseUpVector, const struct FVector& UpVector, float ClampConeInDegree);
-	static float K2_MakePerlinNoiseAndRemap(float Value, float RangeOutMin, float RangeOutMax);
-	static struct FVector K2_MakePerlinNoiseVectorAndRemap(float X, float Y, float Z, float RangeOutMinX, float RangeOutMaxX, float RangeOutMinY, float RangeOutMaxY, float RangeOutMinZ, float RangeOutMaxZ);
-	static void K2_TwoBoneIK(const struct FVector& RootPos, const struct FVector& JointPos, const struct FVector& EndPos, const struct FVector& JointTarget, const struct FVector& Effector, struct FVector* OutJointPos, struct FVector* OutEndPos, bool bAllowStretching, float StartStretchRatio, float MaxStretchScale);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KismetAnimationLibrary">();
-	}
-	static class UKismetAnimationLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKismetAnimationLibrary>();
-	}
-};
-static_assert(alignof(UKismetAnimationLibrary) == 0x000008, "Wrong alignment on UKismetAnimationLibrary");
-static_assert(sizeof(UKismetAnimationLibrary) == 0x000028, "Wrong size on UKismetAnimationLibrary");
 
 }
 

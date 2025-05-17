@@ -19,18 +19,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TeamMemberBanner.TeamMemberBanner_C
-// 0x0040 (0x0BC8 - 0x0B88)
+// 0x0040 (0x0C20 - 0x0BE0)
 class UTeamMemberBanner_C final : public UFortCampaignTeamMemberBanner
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B88(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UIconTextButton_C*                      ButtonPartyFinder;                                 // 0x0B90(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               CONNECTED;                                         // 0x0B98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               Connecting;                                        // 0x0BA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_571;                                         // 0x0BA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Open;                                              // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 OpenImage;                                         // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  Switcher_MemberState;                              // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UIconTextButton_C*                      ButtonPartyFinder;                                 // 0x0BE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Connected;                                         // 0x0BF0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               Connecting;                                        // 0x0BF8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_571;                                         // 0x0C00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Open;                                              // 0x0C08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 OpenImage;                                         // 0x0C10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  Switcher_MemberState;                              // 0x0C18(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_TeamMemberBanner(int32 EntryPoint);
@@ -51,16 +51,6 @@ public:
 		return GetDefaultObjImpl<UTeamMemberBanner_C>();
 	}
 };
-static_assert(alignof(UTeamMemberBanner_C) == 0x000008, "Wrong alignment on UTeamMemberBanner_C");
-static_assert(sizeof(UTeamMemberBanner_C) == 0x000BC8, "Wrong size on UTeamMemberBanner_C");
-static_assert(offsetof(UTeamMemberBanner_C, UberGraphFrame) == 0x000B88, "Member 'UTeamMemberBanner_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTeamMemberBanner_C, ButtonPartyFinder) == 0x000B90, "Member 'UTeamMemberBanner_C::ButtonPartyFinder' has a wrong offset!");
-static_assert(offsetof(UTeamMemberBanner_C, CONNECTED) == 0x000B98, "Member 'UTeamMemberBanner_C::CONNECTED' has a wrong offset!");
-static_assert(offsetof(UTeamMemberBanner_C, Connecting) == 0x000BA0, "Member 'UTeamMemberBanner_C::Connecting' has a wrong offset!");
-static_assert(offsetof(UTeamMemberBanner_C, Image_571) == 0x000BA8, "Member 'UTeamMemberBanner_C::Image_571' has a wrong offset!");
-static_assert(offsetof(UTeamMemberBanner_C, Open) == 0x000BB0, "Member 'UTeamMemberBanner_C::Open' has a wrong offset!");
-static_assert(offsetof(UTeamMemberBanner_C, OpenImage) == 0x000BB8, "Member 'UTeamMemberBanner_C::OpenImage' has a wrong offset!");
-static_assert(offsetof(UTeamMemberBanner_C, Switcher_MemberState) == 0x000BC0, "Member 'UTeamMemberBanner_C::Switcher_MemberState' has a wrong offset!");
 
 }
 

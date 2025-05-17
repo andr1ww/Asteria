@@ -10,25 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CommonUI_classes.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaCustomizationBannerButton.AthenaCustomizationBannerButton_C
-// 0x0018 (0x0B60 - 0x0B48)
-class UAthenaCustomizationBannerButton_C final : public UCommonButton
+// 0x0008 (0x0BB0 - 0x0BA8)
+class UAthenaCustomizationBannerButton_C final : public UFortBannerSlotButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNormalBangWrapper_C*                   NormalBangWrapper;                                 // 0x0B50(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPlayerBanner_C*                        PlayerBanner;                                      // 0x0B58(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void Construct();
-	void ExecuteUbergraph_AthenaCustomizationBannerButton(int32 EntryPoint);
+	class UNormalBangWrapper_C*                   NormalBangWrapper;                                 // 0x0BA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -40,11 +33,6 @@ public:
 		return GetDefaultObjImpl<UAthenaCustomizationBannerButton_C>();
 	}
 };
-static_assert(alignof(UAthenaCustomizationBannerButton_C) == 0x000008, "Wrong alignment on UAthenaCustomizationBannerButton_C");
-static_assert(sizeof(UAthenaCustomizationBannerButton_C) == 0x000B60, "Wrong size on UAthenaCustomizationBannerButton_C");
-static_assert(offsetof(UAthenaCustomizationBannerButton_C, UberGraphFrame) == 0x000B48, "Member 'UAthenaCustomizationBannerButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationBannerButton_C, NormalBangWrapper) == 0x000B50, "Member 'UAthenaCustomizationBannerButton_C::NormalBangWrapper' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationBannerButton_C, PlayerBanner) == 0x000B58, "Member 'UAthenaCustomizationBannerButton_C::PlayerBanner' has a wrong offset!");
 
 }
 

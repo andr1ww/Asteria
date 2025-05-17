@@ -34,8 +34,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotifyState_TeleportFinished_C>();
 	}
 };
-static_assert(alignof(UAnimNotifyState_TeleportFinished_C) == 0x000008, "Wrong alignment on UAnimNotifyState_TeleportFinished_C");
-static_assert(sizeof(UAnimNotifyState_TeleportFinished_C) == 0x000030, "Wrong size on UAnimNotifyState_TeleportFinished_C");
 
 }
 

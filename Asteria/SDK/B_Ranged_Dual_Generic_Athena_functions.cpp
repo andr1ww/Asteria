@@ -37,6 +37,48 @@ void AB_Ranged_Dual_Generic_Athena_C::ExecuteUbergraph_B_Ranged_Dual_Generic_Ath
 }
 
 
+// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.ShellEjectionOff
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Ranged_Dual_Generic_Athena_C::ShellEjectionOff()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "ShellEjectionOff");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.Bind on Effects Quality
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Ranged_Dual_Generic_Athena_C::Bind_on_Effects_Quality()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "Bind on Effects Quality");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.ShellEjectionFixOn
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_Ranged_Dual_Generic_Athena_C::ShellEjectionFixOn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "ShellEjectionFixOn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.BindOnHandFired
 // (BlueprintCallable, BlueprintEvent)
 
@@ -70,20 +112,6 @@ void AB_Ranged_Dual_Generic_Athena_C::HandFired(EDualWeaponHand Hand, bool bPers
 	Parms.bPersistantFire = bPersistantFire;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.SetupScopePostProcess
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_Ranged_Dual_Generic_Athena_C::SetupScopePostProcess()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "SetupScopePostProcess");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -283,26 +311,6 @@ void AB_Ranged_Dual_Generic_Athena_C::HideWeaponMesh()
 }
 
 
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnWeaponVisibilityChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bVisible                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AB_Ranged_Dual_Generic_Athena_C::OnWeaponVisibilityChanged(bool bVisible)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "OnWeaponVisibilityChanged");
-
-	Params::B_Ranged_Dual_Generic_Athena_C_OnWeaponVisibilityChanged Parms{};
-
-	Parms.bVisible = bVisible;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -386,46 +394,6 @@ void AB_Ranged_Dual_Generic_Athena_C::ShellsON__onPump_()
 		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "ShellsON_(onPump)");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnInitCosmeticAlterations
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// struct FFortCosmeticModification        CosmeticMod                                            (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void AB_Ranged_Dual_Generic_Athena_C::OnInitCosmeticAlterations(const struct FFortCosmeticModification& CosmeticMod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "OnInitCosmeticAlterations");
-
-	Params::B_Ranged_Dual_Generic_Athena_C_OnInitCosmeticAlterations Parms{};
-
-	Parms.CosmeticMod = std::move(CosmeticMod);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnInitAlteration
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UFortAlterationItemDefinition*    NewAlteration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Ranged_Dual_Generic_Athena_C::OnInitAlteration(class UFortAlterationItemDefinition* NewAlteration)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "OnInitAlteration");
-
-	Params::B_Ranged_Dual_Generic_Athena_C_OnInitAlteration Parms{};
-
-	Parms.NewAlteration = NewAlteration;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -569,86 +537,6 @@ void AB_Ranged_Dual_Generic_Athena_C::OnPlayWeaponFireFX(bool bPersistentFire, b
 }
 
 
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnLoaded_DB8A0F544A576B8684A07E865C728884
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Ranged_Dual_Generic_Athena_C::OnLoaded_DB8A0F544A576B8684A07E865C728884(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "OnLoaded_DB8A0F544A576B8684A07E865C728884");
-
-	Params::B_Ranged_Dual_Generic_Athena_C_OnLoaded_DB8A0F544A576B8684A07E865C728884 Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Ranged_Dual_Generic_Athena_C::OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045");
-
-	Params::B_Ranged_Dual_Generic_Athena_C_OnLoaded_3B6C2F134D7C48D715B2EB8E0CE9B045 Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnLoaded_A20154E74163905534EAA7A226A4D20B
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Ranged_Dual_Generic_Athena_C::OnLoaded_A20154E74163905534EAA7A226A4D20B(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "OnLoaded_A20154E74163905534EAA7A226A4D20B");
-
-	Params::B_Ranged_Dual_Generic_Athena_C_OnLoaded_A20154E74163905534EAA7A226A4D20B Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.OnLoaded_468C8A744AA43D411B8A218EDC703167
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_Ranged_Dual_Generic_Athena_C::OnLoaded_468C8A744AA43D411B8A218EDC703167(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "OnLoaded_468C8A744AA43D411B8A218EDC703167");
-
-	Params::B_Ranged_Dual_Generic_Athena_C_OnLoaded_468C8A744AA43D411B8A218EDC703167 Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.AnimateScopePostProcess__UpdateFunc
 // (BlueprintEvent)
 
@@ -768,11 +656,11 @@ void AB_Ranged_Dual_Generic_Athena_C::Muzzle_Play_Reload_FX(EFortReloadFXState S
 
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.UpdateShellEmittersFX
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UParticleSystemComponent*         PS                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFXSystemComponent*               Target                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_Ranged_Dual_Generic_Athena_C::UpdateShellEmittersFX(class UParticleSystemComponent* PS)
+void AB_Ranged_Dual_Generic_Athena_C::UpdateShellEmittersFX(class UFXSystemComponent* Target)
 {
 	static class UFunction* Func = nullptr;
 
@@ -781,7 +669,7 @@ void AB_Ranged_Dual_Generic_Athena_C::UpdateShellEmittersFX(class UParticleSyste
 
 	Params::B_Ranged_Dual_Generic_Athena_C_UpdateShellEmittersFX Parms{};
 
-	Parms.PS = PS;
+	Parms.Target = Target;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -789,20 +677,26 @@ void AB_Ranged_Dual_Generic_Athena_C::UpdateShellEmittersFX(class UParticleSyste
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.SetupShellFX
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    OffHand                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Ranged_Dual_Generic_Athena_C::SetupShellFX()
+void AB_Ranged_Dual_Generic_Athena_C::SetupShellFX(bool OffHand)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "SetupShellFX");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::B_Ranged_Dual_Generic_Athena_C_SetupShellFX Parms{};
+
+	Parms.OffHand = OffHand;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
 // Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.DeactivateShellsFX
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void AB_Ranged_Dual_Generic_Athena_C::DeactivateShellsFX()
 {
@@ -924,28 +818,6 @@ void AB_Ranged_Dual_Generic_Athena_C::ShowReticle()
 		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "ShowReticle");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_Ranged_Dual_Generic_Athena.B_Ranged_Dual_Generic_Athena_C.SetActiveAlterationIdleParticles
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    Reset                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AB_Ranged_Dual_Generic_Athena_C::SetActiveAlterationIdleParticles(bool Active, bool Reset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Ranged_Dual_Generic_Athena_C", "SetActiveAlterationIdleParticles");
-
-	Params::B_Ranged_Dual_Generic_Athena_C_SetActiveAlterationIdleParticles Parms{};
-
-	Parms.Active = Active;
-	Parms.Reset = Reset;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

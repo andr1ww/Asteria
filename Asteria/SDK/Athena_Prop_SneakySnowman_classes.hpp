@@ -10,40 +10,40 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Athena_Prop_SneakySnowman.Athena_Prop_SneakySnowman_C
-// 0x00C8 (0x0BD8 - 0x0B10)
+// 0x00C8 (0x0CA0 - 0x0BD8)
 class AAthena_Prop_SneakySnowman_C final : public ABuildingProp
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCapsuleComponent*                      OverlapCheck;                                      // 0x0B18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UProjectileMovementComponent*           ProjectileMovementComponent;                       // 0x0B20(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSimulationRunning;                                // 0x0B28(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
-	uint8                                         Pad_B29[0x7];                                      // 0x0B29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 GE_ApplyEnemySnowman;                              // 0x0B30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         ShouldSnowmanEnemies;                              // 0x0B38(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AFortPickupAthena*                      PickupAthena;                                      // 0x0B58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         Ignored_Actors;                                    // 0x0B60(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	TArray<EObjectTypeQuery>                      LineTraceObjects;                                  // 0x0B70(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                          DestroyAfterHit;                                   // 0x0B80(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B81[0x3];                                      // 0x0B81(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LandedLocation;                                    // 0x0B84(0x000C)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	float                                         InitialGravityScale;                               // 0x0B90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          GamestateLoaded;                                   // 0x0B94(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B95[0x3];                                      // 0x0B95(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EObjectTypeQuery>                      ObjectTypes;                                       // 0x0B98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FVector                                StopLocation;                                      // 0x0BA8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BB4[0x4];                                      // 0x0BB4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         FallHeightToDestroy;                               // 0x0BB8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCapsuleComponent*                      OverlapCheck;                                      // 0x0BE0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UProjectileMovementComponent*           ProjectileMovementComp;                            // 0x0BE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSimulationRunning;                                // 0x0BF0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
+	uint8                                         Pad_BF1[0x7];                                      // 0x0BF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 GE_ApplyEnemySnowman;                              // 0x0BF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         ShouldSnowmanEnemies;                              // 0x0C00(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AFortPickupAthena*                      PickupAthena;                                      // 0x0C20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         Ignored_Actors;                                    // 0x0C28(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<EObjectTypeQuery>                      LineTraceObjects;                                  // 0x0C38(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          DestroyAfterHit;                                   // 0x0C48(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C49[0x3];                                      // 0x0C49(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LandedLocation;                                    // 0x0C4C(0x000C)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	float                                         InitialGravityScale;                               // 0x0C58(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GamestateLoaded;                                   // 0x0C5C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C5D[0x3];                                      // 0x0C5D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EObjectTypeQuery>                      ObjectTypes;                                       // 0x0C60(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FVector                                StopLocation;                                      // 0x0C70(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C7C[0x4];                                      // 0x0C7C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         FallHeightToDestroy;                               // 0x0C80(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_Athena_Prop_SneakySnowman(int32 EntryPoint);
@@ -75,24 +75,6 @@ public:
 		return GetDefaultObjImpl<AAthena_Prop_SneakySnowman_C>();
 	}
 };
-static_assert(alignof(AAthena_Prop_SneakySnowman_C) == 0x000008, "Wrong alignment on AAthena_Prop_SneakySnowman_C");
-static_assert(sizeof(AAthena_Prop_SneakySnowman_C) == 0x000BD8, "Wrong size on AAthena_Prop_SneakySnowman_C");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, UberGraphFrame) == 0x000B10, "Member 'AAthena_Prop_SneakySnowman_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, OverlapCheck) == 0x000B18, "Member 'AAthena_Prop_SneakySnowman_C::OverlapCheck' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, ProjectileMovementComponent) == 0x000B20, "Member 'AAthena_Prop_SneakySnowman_C::ProjectileMovementComponent' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, bSimulationRunning) == 0x000B28, "Member 'AAthena_Prop_SneakySnowman_C::bSimulationRunning' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, GE_ApplyEnemySnowman) == 0x000B30, "Member 'AAthena_Prop_SneakySnowman_C::GE_ApplyEnemySnowman' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, ShouldSnowmanEnemies) == 0x000B38, "Member 'AAthena_Prop_SneakySnowman_C::ShouldSnowmanEnemies' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, PickupAthena) == 0x000B58, "Member 'AAthena_Prop_SneakySnowman_C::PickupAthena' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, Ignored_Actors) == 0x000B60, "Member 'AAthena_Prop_SneakySnowman_C::Ignored_Actors' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, LineTraceObjects) == 0x000B70, "Member 'AAthena_Prop_SneakySnowman_C::LineTraceObjects' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, DestroyAfterHit) == 0x000B80, "Member 'AAthena_Prop_SneakySnowman_C::DestroyAfterHit' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, LandedLocation) == 0x000B84, "Member 'AAthena_Prop_SneakySnowman_C::LandedLocation' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, InitialGravityScale) == 0x000B90, "Member 'AAthena_Prop_SneakySnowman_C::InitialGravityScale' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, GamestateLoaded) == 0x000B94, "Member 'AAthena_Prop_SneakySnowman_C::GamestateLoaded' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, ObjectTypes) == 0x000B98, "Member 'AAthena_Prop_SneakySnowman_C::ObjectTypes' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, StopLocation) == 0x000BA8, "Member 'AAthena_Prop_SneakySnowman_C::StopLocation' has a wrong offset!");
-static_assert(offsetof(AAthena_Prop_SneakySnowman_C, FallHeightToDestroy) == 0x000BB8, "Member 'AAthena_Prop_SneakySnowman_C::FallHeightToDestroy' has a wrong offset!");
 
 }
 

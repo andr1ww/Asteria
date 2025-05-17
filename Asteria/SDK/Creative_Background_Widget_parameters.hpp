@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "EBillboardshadowDirection_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Slate_structs.hpp"
 #include "SlateCore_structs.hpp"
@@ -17,17 +18,6 @@
 
 namespace SDK::Params
 {
-
-// Function Creative_Background_Widget.Creative_Background_Widget_C.ExecuteUbergraph_Creative_Background_Widget
-// 0x0004 (0x0004 - 0x0000)
-struct Creative_Background_Widget_C_ExecuteUbergraph_Creative_Background_Widget final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Creative_Background_Widget_C_ExecuteUbergraph_Creative_Background_Widget) == 0x000004, "Wrong alignment on Creative_Background_Widget_C_ExecuteUbergraph_Creative_Background_Widget");
-static_assert(sizeof(Creative_Background_Widget_C_ExecuteUbergraph_Creative_Background_Widget) == 0x000004, "Wrong size on Creative_Background_Widget_C_ExecuteUbergraph_Creative_Background_Widget");
-static_assert(offsetof(Creative_Background_Widget_C_ExecuteUbergraph_Creative_Background_Widget, EntryPoint) == 0x000000, "Member 'Creative_Background_Widget_C_ExecuteUbergraph_Creative_Background_Widget::EntryPoint' has a wrong offset!");
 
 // Function Creative_Background_Widget.Creative_Background_Widget_C.SetText
 // 0x0028 (0x0028 - 0x0000)
@@ -37,10 +27,6 @@ public:
 	class FString                                 Text;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0010(0x0018)()
 };
-static_assert(alignof(Creative_Background_Widget_C_SetText) == 0x000008, "Wrong alignment on Creative_Background_Widget_C_SetText");
-static_assert(sizeof(Creative_Background_Widget_C_SetText) == 0x000028, "Wrong size on Creative_Background_Widget_C_SetText");
-static_assert(offsetof(Creative_Background_Widget_C_SetText, Text) == 0x000000, "Member 'Creative_Background_Widget_C_SetText::Text' has a wrong offset!");
-static_assert(offsetof(Creative_Background_Widget_C_SetText, CallFunc_Conv_StringToText_ReturnValue) == 0x000010, "Member 'Creative_Background_Widget_C_SetText::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
 
 // Function Creative_Background_Widget.Creative_Background_Widget_C.SetBackgroundColor
 // 0x0010 (0x0010 - 0x0000)
@@ -49,9 +35,6 @@ struct Creative_Background_Widget_C_SetBackgroundColor final
 public:
 	struct FLinearColor                           Color;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Creative_Background_Widget_C_SetBackgroundColor) == 0x000004, "Wrong alignment on Creative_Background_Widget_C_SetBackgroundColor");
-static_assert(sizeof(Creative_Background_Widget_C_SetBackgroundColor) == 0x000010, "Wrong size on Creative_Background_Widget_C_SetBackgroundColor");
-static_assert(offsetof(Creative_Background_Widget_C_SetBackgroundColor, Color) == 0x000000, "Member 'Creative_Background_Widget_C_SetBackgroundColor::Color' has a wrong offset!");
 
 // Function Creative_Background_Widget.Creative_Background_Widget_C.SetTextScale
 // 0x0058 (0x0058 - 0x0000)
@@ -62,10 +45,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0008(0x0050)(HasGetValueTypeHash)
 };
-static_assert(alignof(Creative_Background_Widget_C_SetTextScale) == 0x000008, "Wrong alignment on Creative_Background_Widget_C_SetTextScale");
-static_assert(sizeof(Creative_Background_Widget_C_SetTextScale) == 0x000058, "Wrong size on Creative_Background_Widget_C_SetTextScale");
-static_assert(offsetof(Creative_Background_Widget_C_SetTextScale, FontSize) == 0x000000, "Member 'Creative_Background_Widget_C_SetTextScale::FontSize' has a wrong offset!");
-static_assert(offsetof(Creative_Background_Widget_C_SetTextScale, K2Node_MakeStruct_SlateFontInfo) == 0x000008, "Member 'Creative_Background_Widget_C_SetTextScale::K2Node_MakeStruct_SlateFontInfo' has a wrong offset!");
 
 // Function Creative_Background_Widget.Creative_Background_Widget_C.SetTextAlignment
 // 0x0001 (0x0001 - 0x0000)
@@ -74,9 +53,6 @@ struct Creative_Background_Widget_C_SetTextAlignment final
 public:
 	ETextJustify                                  Alignment;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Creative_Background_Widget_C_SetTextAlignment) == 0x000001, "Wrong alignment on Creative_Background_Widget_C_SetTextAlignment");
-static_assert(sizeof(Creative_Background_Widget_C_SetTextAlignment) == 0x000001, "Wrong size on Creative_Background_Widget_C_SetTextAlignment");
-static_assert(offsetof(Creative_Background_Widget_C_SetTextAlignment, Alignment) == 0x000000, "Member 'Creative_Background_Widget_C_SetTextAlignment::Alignment' has a wrong offset!");
 
 // Function Creative_Background_Widget.Creative_Background_Widget_C.SetTextColor
 // 0x0038 (0x0038 - 0x0000)
@@ -86,10 +62,52 @@ public:
 	struct FLinearColor                           TextColor;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0010(0x0028)()
 };
-static_assert(alignof(Creative_Background_Widget_C_SetTextColor) == 0x000008, "Wrong alignment on Creative_Background_Widget_C_SetTextColor");
-static_assert(sizeof(Creative_Background_Widget_C_SetTextColor) == 0x000038, "Wrong size on Creative_Background_Widget_C_SetTextColor");
-static_assert(offsetof(Creative_Background_Widget_C_SetTextColor, TextColor) == 0x000000, "Member 'Creative_Background_Widget_C_SetTextColor::TextColor' has a wrong offset!");
-static_assert(offsetof(Creative_Background_Widget_C_SetTextColor, K2Node_MakeStruct_SlateColor) == 0x000010, "Member 'Creative_Background_Widget_C_SetTextColor::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+
+// Function Creative_Background_Widget.Creative_Background_Widget_C.SetTextFont
+// 0x0118 (0x0118 - 0x0000)
+struct Creative_Background_Widget_C_SetTextFont final
+{
+public:
+	int32                                         TextFont;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         OutlineStrength;                                   // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateFontInfo                         NewLocalVar_0;                                     // 0x0008(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFontOutlineSettings                   K2Node_MakeStruct_FontOutlineSettings;             // 0x0060(0x0020)(NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable;                                // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_1;                              // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_2;                              // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Select_Default;                             // 0x009C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                Temp_object_Variable;                              // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Temp_object_Variable_1;                            // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Temp_object_Variable_2;                            // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                K2Node_Select_Default_1;                           // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x00C8(0x0050)(HasGetValueTypeHash)
+};
+
+// Function Creative_Background_Widget.Creative_Background_Widget_C.SetShadow
+// 0x0054 (0x0054 - 0x0000)
+struct Creative_Background_Widget_C_SetShadow final
+{
+public:
+	EBillboardshadowDirection                     Shadow;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ShadowScale;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              Temp_struct_Variable;                              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_SelectColor_ReturnValue;                  // 0x0014(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0024(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_1;               // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_2;               // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue_3;               // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBillboardshadowDirection                     Temp_byte_Variable;                                // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              K2Node_Select_Default;                             // 0x004C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 }
 

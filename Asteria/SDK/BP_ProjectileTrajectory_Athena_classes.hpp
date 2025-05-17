@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ProjectileTrajectory_Athena.BP_ProjectileTrajectory_Athena_C
-// 0x0000 (0x0298 - 0x0298)
+// 0x0000 (0x0270 - 0x0270)
 class ABP_ProjectileTrajectory_Athena_C : public ABP_ProjectileTrajectory_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ABP_ProjectileTrajectory_Athena_C>();
 	}
 };
-static_assert(alignof(ABP_ProjectileTrajectory_Athena_C) == 0x000008, "Wrong alignment on ABP_ProjectileTrajectory_Athena_C");
-static_assert(sizeof(ABP_ProjectileTrajectory_Athena_C) == 0x000298, "Wrong size on ABP_ProjectileTrajectory_Athena_C");
 
 }
 

@@ -57,20 +57,6 @@ void UVoiceChannelToggleButton_C::OnVoiceChannelSelected(bool bIsPartyChat)
 }
 
 
-// Function VoiceChannelToggleButton.VoiceChannelToggleButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UVoiceChannelToggleButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VoiceChannelToggleButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function VoiceChannelToggleButton.VoiceChannelToggleButton_C.BP_OnUnhovered
 // (Event, Protected, BlueprintEvent)
 
@@ -80,6 +66,20 @@ void UVoiceChannelToggleButton_C::BP_OnUnhovered()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("VoiceChannelToggleButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function VoiceChannelToggleButton.VoiceChannelToggleButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UVoiceChannelToggleButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VoiceChannelToggleButton_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

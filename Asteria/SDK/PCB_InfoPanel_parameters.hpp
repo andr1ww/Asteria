@@ -24,11 +24,6 @@ public:
 	class FText                                   CallFunc_GetPCBHeader_ReturnValue;                 // 0x0008(0x0018)()
 	class FText                                   CallFunc_GetPCBDescription_ReturnValue;            // 0x0020(0x0018)()
 };
-static_assert(alignof(PCB_InfoPanel_C_ExecuteUbergraph_PCB_InfoPanel) == 0x000008, "Wrong alignment on PCB_InfoPanel_C_ExecuteUbergraph_PCB_InfoPanel");
-static_assert(sizeof(PCB_InfoPanel_C_ExecuteUbergraph_PCB_InfoPanel) == 0x000038, "Wrong size on PCB_InfoPanel_C_ExecuteUbergraph_PCB_InfoPanel");
-static_assert(offsetof(PCB_InfoPanel_C_ExecuteUbergraph_PCB_InfoPanel, EntryPoint) == 0x000000, "Member 'PCB_InfoPanel_C_ExecuteUbergraph_PCB_InfoPanel::EntryPoint' has a wrong offset!");
-static_assert(offsetof(PCB_InfoPanel_C_ExecuteUbergraph_PCB_InfoPanel, CallFunc_GetPCBHeader_ReturnValue) == 0x000008, "Member 'PCB_InfoPanel_C_ExecuteUbergraph_PCB_InfoPanel::CallFunc_GetPCBHeader_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PCB_InfoPanel_C_ExecuteUbergraph_PCB_InfoPanel, CallFunc_GetPCBDescription_ReturnValue) == 0x000020, "Member 'PCB_InfoPanel_C_ExecuteUbergraph_PCB_InfoPanel::CallFunc_GetPCBDescription_ReturnValue' has a wrong offset!");
 
 }
 

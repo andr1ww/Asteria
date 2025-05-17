@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // Class Rejoin.RejoinCheck
-// 0x00F8 (0x0120 - 0x0028)
+// 0x0148 (0x0170 - 0x0028)
 class URejoinCheck : public UObject
 {
 public:
 	ERejoinStatus                                 LastKnownStatus;                                   // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bRejoinAfterCheck;                                 // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bAttemptingRejoin;                                 // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2B[0xF5];                                      // 0x002B(0x00F5)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B[0x145];                                     // 0x002B(0x0145)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +37,6 @@ public:
 		return GetDefaultObjImpl<URejoinCheck>();
 	}
 };
-static_assert(alignof(URejoinCheck) == 0x000008, "Wrong alignment on URejoinCheck");
-static_assert(sizeof(URejoinCheck) == 0x000120, "Wrong size on URejoinCheck");
-static_assert(offsetof(URejoinCheck, LastKnownStatus) == 0x000028, "Member 'URejoinCheck::LastKnownStatus' has a wrong offset!");
-static_assert(offsetof(URejoinCheck, bRejoinAfterCheck) == 0x000029, "Member 'URejoinCheck::bRejoinAfterCheck' has a wrong offset!");
-static_assert(offsetof(URejoinCheck, bAttemptingRejoin) == 0x00002A, "Member 'URejoinCheck::bAttemptingRejoin' has a wrong offset!");
 
 }
 

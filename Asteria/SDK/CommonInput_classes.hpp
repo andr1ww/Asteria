@@ -10,27 +10,31 @@
 
 #include "Basic.hpp"
 
-#include "CommonInput_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CommonInput_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
 
 // Class CommonInput.CommonInputSettings
-// 0x0180 (0x01A8 - 0x0028)
+// 0x01E0 (0x0208 - 0x0028)
 class UCommonInputSettings final : public UObject
 {
 public:
-	bool                                          bAutoLoadData;                                     // 0x0028(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   InputData;                                         // 0x0030(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FCommonInputPlatformData               CommonInputPlatformData[0x7];                      // 0x0058(0x0028)(Edit, Config, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_170[0x8];                                      // 0x0170(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UCommonUIInputData>         InputDataClass;                                    // 0x0178(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FCommonInputPlatformData               CurrentPlatform;                                   // 0x0180(0x0028)(Transient, NativeAccessSpecifierPrivate)
+	TSoftClassPtr<class UClass>                   InputData;                                         // 0x0028(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FCommonInputPlatformData               CommonInputPlatformData[0x9];                      // 0x0050(0x0028)(Edit, Config, NativeAccessSpecifierPrivate)
+	bool                                          bEnableInputMethodThrashingProtection;             // 0x01B8(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1B9[0x3];                                      // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InputMethodThrashingLimit;                         // 0x01BC(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	double                                        InputMethodThrashingWindowInSeconds;               // 0x01C0(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	double                                        InputMethodThrashingCooldownInSeconds;             // 0x01C8(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bAllowOutOfFocusDeviceInput;                       // 0x01D0(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1D1[0x7];                                      // 0x01D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UCommonUIInputData>         InputDataClass;                                    // 0x01D8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FCommonInputPlatformData               CurrentPlatform;                                   // 0x01E0(0x0028)(Transient, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -42,29 +46,26 @@ public:
 		return GetDefaultObjImpl<UCommonInputSettings>();
 	}
 };
-static_assert(alignof(UCommonInputSettings) == 0x000008, "Wrong alignment on UCommonInputSettings");
-static_assert(sizeof(UCommonInputSettings) == 0x0001A8, "Wrong size on UCommonInputSettings");
-static_assert(offsetof(UCommonInputSettings, bAutoLoadData) == 0x000028, "Member 'UCommonInputSettings::bAutoLoadData' has a wrong offset!");
-static_assert(offsetof(UCommonInputSettings, InputData) == 0x000030, "Member 'UCommonInputSettings::InputData' has a wrong offset!");
-static_assert(offsetof(UCommonInputSettings, CommonInputPlatformData) == 0x000058, "Member 'UCommonInputSettings::CommonInputPlatformData' has a wrong offset!");
-static_assert(offsetof(UCommonInputSettings, InputDataClass) == 0x000178, "Member 'UCommonInputSettings::InputDataClass' has a wrong offset!");
-static_assert(offsetof(UCommonInputSettings, CurrentPlatform) == 0x000180, "Member 'UCommonInputSettings::CurrentPlatform' has a wrong offset!");
 
 // Class CommonInput.CommonInputSubsystem
-// 0x00A0 (0x00D0 - 0x0030)
-class UCommonInputSubsystem final : public UGameInstanceSubsystem
+// 0x00C0 (0x00F0 - 0x0030)
+class UCommonInputSubsystem final : public ULocalPlayerSubsystem
 {
 public:
-	TMulticastInlineDelegate<void(ECommonInputType bNewInputType)> OnInputMethodChanged;                              // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x18];                                      // 0x0040(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	ECommonInputType                              LastInputType;                                     // 0x0058(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	ECommonInputType                              CurrentInputType;                                  // 0x0059(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	ECommonGamepadType                            GamepadInputType;                                  // 0x005A(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_5B[0x5];                                       // 0x005B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, ECommonInputType>           CurrentInputLocks;                                 // 0x0060(0x0050)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_B0[0x18];                                      // 0x00B0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bIsGamepadSimulatedClick;                          // 0x00C8(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x20];                                      // 0x0030(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(ECommonInputType bNewInputType)> OnInputMethodChanged;             // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	int32                                         NumberOfInputMethodChangesRecently;                // 0x0060(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LastInputMethodChangeTime;                         // 0x0068(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	double                                        LastTimeInputMethodThrashingBegan;                 // 0x0070(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	ECommonInputType                              LastInputType;                                     // 0x0078(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	ECommonInputType                              CurrentInputType;                                  // 0x0079(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	ECommonGamepadType                            GamepadInputType;                                  // 0x007A(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_7B[0x5];                                       // 0x007B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, ECommonInputType>           CurrentInputLocks;                                 // 0x0080(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_D0[0x18];                                      // 0x00D0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsGamepadSimulatedClick;                          // 0x00E8(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetCurrentInputType(ECommonInputType NewInputType);
@@ -73,6 +74,7 @@ public:
 	ECommonGamepadType GetCurrentGamepadType() const;
 	ECommonInputType GetCurrentInputType() const;
 	ECommonInputType GetDefaultInputType() const;
+	bool IsInputMethodActive(ECommonInputType InputMethod) const;
 	bool IsUsingPointerInput() const;
 	bool ShouldShowInputKeys() const;
 
@@ -86,21 +88,14 @@ public:
 		return GetDefaultObjImpl<UCommonInputSubsystem>();
 	}
 };
-static_assert(alignof(UCommonInputSubsystem) == 0x000008, "Wrong alignment on UCommonInputSubsystem");
-static_assert(sizeof(UCommonInputSubsystem) == 0x0000D0, "Wrong size on UCommonInputSubsystem");
-static_assert(offsetof(UCommonInputSubsystem, OnInputMethodChanged) == 0x000030, "Member 'UCommonInputSubsystem::OnInputMethodChanged' has a wrong offset!");
-static_assert(offsetof(UCommonInputSubsystem, LastInputType) == 0x000058, "Member 'UCommonInputSubsystem::LastInputType' has a wrong offset!");
-static_assert(offsetof(UCommonInputSubsystem, CurrentInputType) == 0x000059, "Member 'UCommonInputSubsystem::CurrentInputType' has a wrong offset!");
-static_assert(offsetof(UCommonInputSubsystem, GamepadInputType) == 0x00005A, "Member 'UCommonInputSubsystem::GamepadInputType' has a wrong offset!");
-static_assert(offsetof(UCommonInputSubsystem, CurrentInputLocks) == 0x000060, "Member 'UCommonInputSubsystem::CurrentInputLocks' has a wrong offset!");
-static_assert(offsetof(UCommonInputSubsystem, bIsGamepadSimulatedClick) == 0x0000C8, "Member 'UCommonInputSubsystem::bIsGamepadSimulatedClick' has a wrong offset!");
 
 // Class CommonInput.CommonUIInputData
-// 0x0010 (0x0038 - 0x0028)
+// 0x0020 (0x0048 - 0x0028)
 class UCommonUIInputData : public UObject
 {
 public:
 	struct FDataTableRowHandle                    DefaultClickAction;                                // 0x0028(0x0010)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	struct FDataTableRowHandle                    DefaultBackAction;                                 // 0x0038(0x0010)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -112,19 +107,19 @@ public:
 		return GetDefaultObjImpl<UCommonUIInputData>();
 	}
 };
-static_assert(alignof(UCommonUIInputData) == 0x000008, "Wrong alignment on UCommonUIInputData");
-static_assert(sizeof(UCommonUIInputData) == 0x000038, "Wrong size on UCommonUIInputData");
-static_assert(offsetof(UCommonUIInputData, DefaultClickAction) == 0x000028, "Member 'UCommonUIInputData::DefaultClickAction' has a wrong offset!");
 
 // Class CommonInput.CommonInputControllerData
-// 0x0018 (0x0040 - 0x0028)
+// 0x0078 (0x00A0 - 0x0028)
 class UCommonInputControllerData : public UObject
 {
 public:
 	ECommonInputType                              InputType;                                         // 0x0028(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECommonGamepadType                            GamepadType;                                       // 0x0029(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCommonInputKeyBrushConfiguration> InputBrushDataMap;                                 // 0x0030(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              ControllerTexture;                                 // 0x0030(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              ControllerButtonMaskTexture;                       // 0x0058(0x0028)(Edit, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FCommonInputKeyBrushConfiguration> InputBrushDataMap;                              // 0x0080(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FCommonInputKeySetBrushConfiguration> InputBrushKeySets;                           // 0x0090(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -136,11 +131,6 @@ public:
 		return GetDefaultObjImpl<UCommonInputControllerData>();
 	}
 };
-static_assert(alignof(UCommonInputControllerData) == 0x000008, "Wrong alignment on UCommonInputControllerData");
-static_assert(sizeof(UCommonInputControllerData) == 0x000040, "Wrong size on UCommonInputControllerData");
-static_assert(offsetof(UCommonInputControllerData, InputType) == 0x000028, "Member 'UCommonInputControllerData::InputType' has a wrong offset!");
-static_assert(offsetof(UCommonInputControllerData, GamepadType) == 0x000029, "Member 'UCommonInputControllerData::GamepadType' has a wrong offset!");
-static_assert(offsetof(UCommonInputControllerData, InputBrushDataMap) == 0x000030, "Member 'UCommonInputControllerData::InputBrushDataMap' has a wrong offset!");
 
 }
 

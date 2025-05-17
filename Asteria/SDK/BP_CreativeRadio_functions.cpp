@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function BP_CreativeRadio.BP_CreativeRadio_C.ExecuteUbergraph_BP_CreativeRadio
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -37,43 +37,45 @@ void ABP_CreativeRadio_C::ExecuteUbergraph_BP_CreativeRadio(int32 EntryPoint)
 }
 
 
-// Function BP_CreativeRadio.BP_CreativeRadio_C.BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_3_OnMinigameStateChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// EFortMinigameState                      NewMinigameState                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_CreativeRadio.BP_CreativeRadio_C.OnWorldReady
+// (Event, Public, BlueprintEvent)
 
-void ABP_CreativeRadio_C::BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_3_OnMinigameStateChanged__DelegateSignature(EFortMinigameState NewMinigameState)
+void ABP_CreativeRadio_C::OnWorldReady()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CreativeRadio_C", "BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_3_OnMinigameStateChanged__DelegateSignature");
+		Func = Class->GetFunction("BP_CreativeRadio_C", "OnWorldReady");
 
-	Params::BP_CreativeRadio_C_BndEvt__FortMinigameProgress_K2Node_ComponentBoundEvent_3_OnMinigameStateChanged__DelegateSignature Parms{};
-
-	Parms.NewMinigameState = NewMinigameState;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_CreativeRadio.BP_CreativeRadio_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_CreativeRadio.BP_CreativeRadio_C.BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_1_AnyPropertyChangedDelegate__DelegateSignature
+// (BlueprintEvent)
 
-void ABP_CreativeRadio_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+void ABP_CreativeRadio_C::BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_1_AnyPropertyChangedDelegate__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CreativeRadio_C", "ReceiveEndPlay");
+		Func = Class->GetFunction("BP_CreativeRadio_C", "BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_1_AnyPropertyChangedDelegate__DelegateSignature");
 
-	Params::BP_CreativeRadio_C_ReceiveEndPlay Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EndPlayReason = EndPlayReason;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function BP_CreativeRadio.BP_CreativeRadio_C.BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_0_AnyPropertyChangedDelegate__DelegateSignature
+// (BlueprintEvent)
+
+void ABP_CreativeRadio_C::BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_0_AnyPropertyChangedDelegate__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CreativeRadio_C", "BndEvt__ToyOptionsComponent_K2Node_ComponentBoundEvent_0_AnyPropertyChangedDelegate__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -175,33 +177,42 @@ void ABP_CreativeRadio_C::UpdateCachedAttenuationSettings()
 }
 
 
-// Function BP_CreativeRadio.BP_CreativeRadio_C.UpdateMinigameVisuals
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EFortMinigameState                      MinigameState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_CreativeRadio.BP_CreativeRadio_C.PlaybackTypeUpgradePath
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_CreativeRadio_C::UpdateMinigameVisuals(EFortMinigameState MinigameState)
+void ABP_CreativeRadio_C::PlaybackTypeUpgradePath()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CreativeRadio_C", "UpdateMinigameVisuals");
+		Func = Class->GetFunction("BP_CreativeRadio_C", "PlaybackTypeUpgradePath");
 
-	Params::BP_CreativeRadio_C_UpdateMinigameVisuals Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.MinigameState = MinigameState;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function BP_CreativeRadio.BP_CreativeRadio_C.CheckMinigameStateOnPropertyChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_CreativeRadio_C::CheckMinigameStateOnPropertyChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CreativeRadio_C", "CheckMinigameStateOnPropertyChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function BP_CreativeRadio.BP_CreativeRadio_C.BlueprintGetInteractionString
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class AFortPawn*                        InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-class FText ABP_CreativeRadio_C::BlueprintGetInteractionString(const class AFortPawn* InteractingPawn) const
+class FText ABP_CreativeRadio_C::BlueprintGetInteractionString(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -211,6 +222,7 @@ class FText ABP_CreativeRadio_C::BlueprintGetInteractionString(const class AFort
 	Params::BP_CreativeRadio_C_BlueprintGetInteractionString Parms{};
 
 	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -221,10 +233,12 @@ class FText ABP_CreativeRadio_C::BlueprintGetInteractionString(const class AFort
 // Function BP_CreativeRadio.BP_CreativeRadio_C.BlueprintCanInteract
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AFortPawn*                        InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool ABP_CreativeRadio_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn) const
+bool ABP_CreativeRadio_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -234,6 +248,8 @@ bool ABP_CreativeRadio_C::BlueprintCanInteract(const class AFortPawn* Interactin
 	Params::BP_CreativeRadio_C_BlueprintCanInteract Parms{};
 
 	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+	Parms.InteractionType = InteractionType;
 
 	UObject::ProcessEvent(Func, &Parms);
 

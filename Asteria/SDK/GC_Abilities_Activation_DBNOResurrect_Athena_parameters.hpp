@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "GameplayAbilities_structs.hpp"
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -26,8 +26,8 @@ struct GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst final
 public:
 	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-	TArray<class UParticleSystemComponent*>       ParticleComponents;                                // 0x00C0(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<class UAudioComponent*>                AudioComponents;                                   // 0x00D0(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class UParticleSystemComponent*>       ParticleComponents;                                // 0x00C0(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<class UAudioComponent*>                AudioComponents;                                   // 0x00D0(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 	class UCameraShake*                           BurstCameraShakeInstance;                          // 0x00E0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ADecalActor*                            BurstDecalInstance;                                // 0x00E8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UParticleSystemComponent*               CallFunc_Array_Get_Item;                           // 0x00F0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -48,35 +48,8 @@ public:
 	int32                                         CallFunc_BreakGameplayCueParameters_AbilityLevel;  // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        CallFunc_BreakGameplayCueParameters_TargetAttachComponent; // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotFromX_ReturnValue;                 // 0x01B0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult; // 0x01BC(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult; // 0x01BC(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst) == 0x000008, "Wrong alignment on GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst");
-static_assert(sizeof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst) == 0x000248, "Wrong size on GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, MyTarget) == 0x000000, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::MyTarget' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, Parameters) == 0x000008, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::Parameters' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, ParticleComponents) == 0x0000C0, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::ParticleComponents' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, AudioComponents) == 0x0000D0, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::AudioComponents' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, BurstCameraShakeInstance) == 0x0000E0, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::BurstCameraShakeInstance' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, BurstDecalInstance) == 0x0000E8, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::BurstDecalInstance' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_Array_Get_Item) == 0x0000F0, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_NormalizedMagnitude) == 0x0000F8, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_NormalizedMagnitude' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_RawMagnitude) == 0x0000FC, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_RawMagnitude' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_EffectContext) == 0x000100, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_EffectContext' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_MatchedTagName) == 0x000118, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_MatchedTagName' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_OriginalTag) == 0x000120, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_OriginalTag' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_AggregatedSourceTags) == 0x000128, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_AggregatedSourceTags' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_AggregatedTargetTags) == 0x000148, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_AggregatedTargetTags' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_Location) == 0x000168, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_Location' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_Normal) == 0x000174, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_Normal' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_Instigator) == 0x000180, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_Instigator' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_EffectCauser) == 0x000188, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_EffectCauser' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_SourceObject) == 0x000190, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_SourceObject' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_PhysicalMaterial) == 0x000198, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_PhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_GameplayEffectLevel) == 0x0001A0, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_GameplayEffectLevel' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_AbilityLevel) == 0x0001A4, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_AbilityLevel' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_BreakGameplayCueParameters_TargetAttachComponent) == 0x0001A8, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_BreakGameplayCueParameters_TargetAttachComponent' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_MakeRotFromX_ReturnValue) == 0x0001B0, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_MakeRotFromX_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst, CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult) == 0x0001BC, "Member 'GC_Abilities_Activation_DBNOResurrect_Athena_C_OnBurst::CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult' has a wrong offset!");
 
 }
 

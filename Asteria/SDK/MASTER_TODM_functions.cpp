@@ -20,7 +20,7 @@ namespace SDK
 // Function MASTER_TODM.MASTER_TODM_C.EmptyTransform
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FTransform                       Transform                                              (Parm, OutParm, IsPlainOldData, NoDestructor)
+// struct FTransform*                      Transform                                              (Parm, OutParm, IsPlainOldData, NoDestructor)
 
 void AMASTER_TODM_C::EmptyTransform(struct FTransform* Transform)
 {

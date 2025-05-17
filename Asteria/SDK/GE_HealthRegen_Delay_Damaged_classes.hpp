@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GE_HealthRegen_Delay_Damaged.GE_HealthRegen_Delay_Damaged_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_HealthRegen_Delay_Damaged_C final : public UGameplayEffect
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGE_HealthRegen_Delay_Damaged_C>();
 	}
 };
-static_assert(alignof(UGE_HealthRegen_Delay_Damaged_C) == 0x000008, "Wrong alignment on UGE_HealthRegen_Delay_Damaged_C");
-static_assert(sizeof(UGE_HealthRegen_Delay_Damaged_C) == 0x0005F0, "Wrong size on UGE_HealthRegen_Delay_Damaged_C");
 
 }
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CommonUI_classes.hpp"
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "CommonUI_classes.hpp"
+#include "FortniteGame_structs.hpp"
 #include "FortniteUI_structs.hpp"
 
 
@@ -22,29 +22,29 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MainTabIconButton.MainTabIconButton_C
-// 0x0128 (0x0C70 - 0x0B48)
+// 0x0128 (0x0CC8 - 0x0BA0)
 class UMainTabIconButton_C final : public UCommonButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       AnimatedPulse;                                     // 0x0B50(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       AnimateIn;                                         // 0x0B58(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UMainTabTutorialBangWrapper_C*          BangWrapper;                                       // 0x0B60(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0B68(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         ContentHB;                                         // 0x0B70(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ImageGlow;                                         // 0x0B78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ImageTab;                                          // 0x0B80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 LeftSideImage;                                     // 0x0B88(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMainTabTutorialWrapper_C*              TutorialWrapper;                                   // 0x0B90(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   ButtonText;                                        // 0x0B98(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	struct FSlateBrush                            IconBrush;                                         // 0x0BB0(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
-	bool                                          UseText;                                           // 0x0C38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C39[0x3];                                      // 0x0C39(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           SelectedIconTint;                                  // 0x0C3C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           DeselectedIconTint;                                // 0x0C4C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           HoveredIconTint;                                   // 0x0C5C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bBangEnabled;                                      // 0x0C6C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          AllowStyleChange;                                  // 0x0C6D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       AnimatedPulse;                                     // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       AnimateIn;                                         // 0x0BB0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UMainTabTutorialBangWrapper_C*          BangWrapper;                                       // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         ContentHB;                                         // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ImageGlow;                                         // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ImageTab;                                          // 0x0BD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 LeftSideImage;                                     // 0x0BE0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMainTabTutorialWrapper_C*              TutorialWrapper;                                   // 0x0BE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   ButtonText;                                        // 0x0BF0(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	struct FSlateBrush                            IconBrush;                                         // 0x0C08(0x0088)(Edit, BlueprintVisible, ExposeOnSpawn)
+	bool                                          UseText;                                           // 0x0C90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C91[0x3];                                      // 0x0C91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           SelectedIconTint;                                  // 0x0C94(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           DeselectedIconTint;                                // 0x0CA4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           HoveredIconTint;                                   // 0x0CB4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bBangEnabled;                                      // 0x0CC4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          AllowStyleChange;                                  // 0x0CC5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void SetBangType(EFortBangType NewBangType);
@@ -65,12 +65,11 @@ public:
 	void Construct();
 	void BP_OnHovered();
 	void BP_OnUnhovered();
+	void OnCurrentTextStyleChanged();
 	void HandleTabAdded();
 	void HandleTabAnimateInFinished();
 	void HandleTabDialogCLosed();
-	void OnCurrentTextStyleChanged();
 	void Handle_StopTabCallout();
-	void BndEvt__ToastWidget_K2Node_ComponentBoundEvent_0_OnFinishedToast__DelegateSignature();
 	void BP_OnDisabled();
 	void BP_OnEnabled();
 	void ExecuteUbergraph_MainTabIconButton(int32 EntryPoint);
@@ -85,26 +84,6 @@ public:
 		return GetDefaultObjImpl<UMainTabIconButton_C>();
 	}
 };
-static_assert(alignof(UMainTabIconButton_C) == 0x000008, "Wrong alignment on UMainTabIconButton_C");
-static_assert(sizeof(UMainTabIconButton_C) == 0x000C70, "Wrong size on UMainTabIconButton_C");
-static_assert(offsetof(UMainTabIconButton_C, UberGraphFrame) == 0x000B48, "Member 'UMainTabIconButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, AnimatedPulse) == 0x000B50, "Member 'UMainTabIconButton_C::AnimatedPulse' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, AnimateIn) == 0x000B58, "Member 'UMainTabIconButton_C::AnimateIn' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, BangWrapper) == 0x000B60, "Member 'UMainTabIconButton_C::BangWrapper' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, CenterButtonTextWidget) == 0x000B68, "Member 'UMainTabIconButton_C::CenterButtonTextWidget' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, ContentHB) == 0x000B70, "Member 'UMainTabIconButton_C::ContentHB' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, ImageGlow) == 0x000B78, "Member 'UMainTabIconButton_C::ImageGlow' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, ImageTab) == 0x000B80, "Member 'UMainTabIconButton_C::ImageTab' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, LeftSideImage) == 0x000B88, "Member 'UMainTabIconButton_C::LeftSideImage' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, TutorialWrapper) == 0x000B90, "Member 'UMainTabIconButton_C::TutorialWrapper' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, ButtonText) == 0x000B98, "Member 'UMainTabIconButton_C::ButtonText' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, IconBrush) == 0x000BB0, "Member 'UMainTabIconButton_C::IconBrush' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, UseText) == 0x000C38, "Member 'UMainTabIconButton_C::UseText' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, SelectedIconTint) == 0x000C3C, "Member 'UMainTabIconButton_C::SelectedIconTint' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, DeselectedIconTint) == 0x000C4C, "Member 'UMainTabIconButton_C::DeselectedIconTint' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, HoveredIconTint) == 0x000C5C, "Member 'UMainTabIconButton_C::HoveredIconTint' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, bBangEnabled) == 0x000C6C, "Member 'UMainTabIconButton_C::bBangEnabled' has a wrong offset!");
-static_assert(offsetof(UMainTabIconButton_C, AllowStyleChange) == 0x000C6D, "Member 'UMainTabIconButton_C::AllowStyleChange' has a wrong offset!");
 
 }
 

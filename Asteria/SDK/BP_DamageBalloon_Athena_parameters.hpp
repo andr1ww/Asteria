@@ -12,9 +12,9 @@
 
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "FortniteGame_structs.hpp"
-#include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "Engine_structs.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK::Params
@@ -32,8 +32,7 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagContainer                  K2Node_Event_DamageTags;                           // 0x0010(0x0020)(ConstParm)
 	struct FVector                                K2Node_Event_Momentum;                             // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_HitInfo;                              // 0x003C(0x0088)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             K2Node_Event_HitInfo;                              // 0x003C(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	class AController*                            K2Node_Event_InstigatedBy;                         // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_Event_DamageCauser;                         // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext;                        // 0x00D8(0x0018)()
@@ -44,22 +43,6 @@ public:
 	uint8                                         Pad_F7[0x1];                                       // 0x00F7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFortAnalyticsEventAttribute           K2Node_MakeStruct_FortAnalyticsEventAttribute;     // 0x00F8(0x0020)()
 };
-static_assert(alignof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena) == 0x000008, "Wrong alignment on BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena");
-static_assert(sizeof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena) == 0x000118, "Wrong size on BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, EntryPoint) == 0x000000, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, CallFunc_HasAuthority_ReturnValue) == 0x000004, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, K2Node_Event_Damage) == 0x000008, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::K2Node_Event_Damage' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, K2Node_Event_DamageTags) == 0x000010, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::K2Node_Event_DamageTags' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, K2Node_Event_Momentum) == 0x000030, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::K2Node_Event_Momentum' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, K2Node_Event_HitInfo) == 0x00003C, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::K2Node_Event_HitInfo' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, K2Node_Event_InstigatedBy) == 0x0000C8, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::K2Node_Event_InstigatedBy' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, K2Node_Event_DamageCauser) == 0x0000D0, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::K2Node_Event_DamageCauser' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, K2Node_Event_EffectContext) == 0x0000D8, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::K2Node_Event_EffectContext' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, CallFunc_GetHealth_ReturnValue) == 0x0000F0, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::CallFunc_GetHealth_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x0000F4, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, Temp_bool_IsClosed_Variable) == 0x0000F5, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, Temp_bool_Has_Been_Initd_Variable) == 0x0000F6, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena, K2Node_MakeStruct_FortAnalyticsEventAttribute) == 0x0000F8, "Member 'BP_DamageBalloon_Athena_C_ExecuteUbergraph_BP_DamageBalloon_Athena::K2Node_MakeStruct_FortAnalyticsEventAttribute' has a wrong offset!");
 
 // Function BP_DamageBalloon_Athena.BP_DamageBalloon_Athena_C.OnDamageServer
 // 0x00E8 (0x00E8 - 0x0000)
@@ -70,21 +53,11 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             HitInfo;                                           // 0x0034(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             HitInfo;                                           // 0x0034(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	class AController*                            InstigatedBy;                                      // 0x00C0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 DamageCauser;                                      // 0x00C8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00D0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_DamageBalloon_Athena_C_OnDamageServer) == 0x000008, "Wrong alignment on BP_DamageBalloon_Athena_C_OnDamageServer");
-static_assert(sizeof(BP_DamageBalloon_Athena_C_OnDamageServer) == 0x0000E8, "Wrong size on BP_DamageBalloon_Athena_C_OnDamageServer");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_OnDamageServer, Damage) == 0x000000, "Member 'BP_DamageBalloon_Athena_C_OnDamageServer::Damage' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_OnDamageServer, DamageTags) == 0x000008, "Member 'BP_DamageBalloon_Athena_C_OnDamageServer::DamageTags' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_OnDamageServer, Momentum) == 0x000028, "Member 'BP_DamageBalloon_Athena_C_OnDamageServer::Momentum' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_OnDamageServer, HitInfo) == 0x000034, "Member 'BP_DamageBalloon_Athena_C_OnDamageServer::HitInfo' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_OnDamageServer, InstigatedBy) == 0x0000C0, "Member 'BP_DamageBalloon_Athena_C_OnDamageServer::InstigatedBy' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_OnDamageServer, DamageCauser) == 0x0000C8, "Member 'BP_DamageBalloon_Athena_C_OnDamageServer::DamageCauser' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_OnDamageServer, EffectContext) == 0x0000D0, "Member 'BP_DamageBalloon_Athena_C_OnDamageServer::EffectContext' has a wrong offset!");
 
 // Function BP_DamageBalloon_Athena.BP_DamageBalloon_Athena_C.ShouldDie
 // 0x0020 (0x0020 - 0x0000)
@@ -97,12 +70,6 @@ public:
 	class AActor*                                 DamageCauser;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_DamageBalloon_Athena_C_ShouldDie) == 0x000008, "Wrong alignment on BP_DamageBalloon_Athena_C_ShouldDie");
-static_assert(sizeof(BP_DamageBalloon_Athena_C_ShouldDie) == 0x000020, "Wrong size on BP_DamageBalloon_Athena_C_ShouldDie");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ShouldDie, Damage) == 0x000000, "Member 'BP_DamageBalloon_Athena_C_ShouldDie::Damage' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ShouldDie, EventInstigator) == 0x000008, "Member 'BP_DamageBalloon_Athena_C_ShouldDie::EventInstigator' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ShouldDie, DamageCauser) == 0x000010, "Member 'BP_DamageBalloon_Athena_C_ShouldDie::DamageCauser' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_ShouldDie, ReturnValue) == 0x000018, "Member 'BP_DamageBalloon_Athena_C_ShouldDie::ReturnValue' has a wrong offset!");
 
 // Function BP_DamageBalloon_Athena.BP_DamageBalloon_Athena_C.OnRep_DestroyBalloon
 // 0x0018 (0x0018 - 0x0000)
@@ -113,10 +80,6 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue;       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_DamageBalloon_Athena_C_OnRep_DestroyBalloon) == 0x000008, "Wrong alignment on BP_DamageBalloon_Athena_C_OnRep_DestroyBalloon");
-static_assert(sizeof(BP_DamageBalloon_Athena_C_OnRep_DestroyBalloon) == 0x000018, "Wrong size on BP_DamageBalloon_Athena_C_OnRep_DestroyBalloon");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_OnRep_DestroyBalloon, CallFunc_GetSocketLocation_ReturnValue) == 0x000000, "Member 'BP_DamageBalloon_Athena_C_OnRep_DestroyBalloon::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DamageBalloon_Athena_C_OnRep_DestroyBalloon, CallFunc_SpawnEmitterAtLocation_ReturnValue) == 0x000010, "Member 'BP_DamageBalloon_Athena_C_OnRep_DestroyBalloon::CallFunc_SpawnEmitterAtLocation_ReturnValue' has a wrong offset!");
 
 }
 

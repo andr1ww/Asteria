@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -17,9 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass StatusWidget.StatusWidget_C
-// 0x0000 (0x0348 - 0x0348)
+// 0x0008 (0x04E8 - 0x04E0)
 class UStatusWidget_C final : public UFortLoginStatus
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void SetContinueButtonText(const class FText& ContinueText);
+	void ExecuteUbergraph_StatusWidget(int32 EntryPoint);
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -30,8 +38,6 @@ public:
 		return GetDefaultObjImpl<UStatusWidget_C>();
 	}
 };
-static_assert(alignof(UStatusWidget_C) == 0x000008, "Wrong alignment on UStatusWidget_C");
-static_assert(sizeof(UStatusWidget_C) == 0x000348, "Wrong size on UStatusWidget_C");
 
 }
 

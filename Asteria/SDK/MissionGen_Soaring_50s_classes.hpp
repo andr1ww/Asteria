@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UMissionGen_Soaring_50s_C>();
 	}
 };
-static_assert(alignof(UMissionGen_Soaring_50s_C) == 0x000008, "Wrong alignment on UMissionGen_Soaring_50s_C");
-static_assert(sizeof(UMissionGen_Soaring_50s_C) == 0x0006C0, "Wrong size on UMissionGen_Soaring_50s_C");
 
 }
 

@@ -10,35 +10,37 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Athena_Player_Bush.Athena_Player_Bush_C
-// 0x0050 (0x0760 - 0x0710)
+// 0x0050 (0x0828 - 0x07D8)
 class AAthena_Player_Bush_C final : public ABuildingGameplayActorBalloon
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0710(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   SM_Bush;                                           // 0x0718(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x0720(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          Effects;                                           // 0x0728(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_729[0x7];                                      // 0x0729(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TotalDamage;                                       // 0x0738(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_73C[0x4];                                      // 0x073C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         MaxHealth;                                         // 0x0740(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   SM_Bush;                                           // 0x07E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x07E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          Effects;                                           // 0x07F0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7F1[0x7];                                      // 0x07F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x07F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TotalDamage;                                       // 0x0800(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_804[0x4];                                      // 0x0804(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         MaxHealth;                                         // 0x0808(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_Athena_Player_Bush(int32 EntryPoint);
+	void RemoveBush();
 	void OnDeathServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
 	void ReceiveBeginPlay();
 	void OnDamageServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
 	void UserConstructionScript();
+	void CheckInstIsOwner(class AActor* DamageCauser, class AActor** Owner_0);
 
 public:
 	static class UClass* StaticClass()
@@ -50,15 +52,6 @@ public:
 		return GetDefaultObjImpl<AAthena_Player_Bush_C>();
 	}
 };
-static_assert(alignof(AAthena_Player_Bush_C) == 0x000008, "Wrong alignment on AAthena_Player_Bush_C");
-static_assert(sizeof(AAthena_Player_Bush_C) == 0x000760, "Wrong size on AAthena_Player_Bush_C");
-static_assert(offsetof(AAthena_Player_Bush_C, UberGraphFrame) == 0x000710, "Member 'AAthena_Player_Bush_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AAthena_Player_Bush_C, SM_Bush) == 0x000718, "Member 'AAthena_Player_Bush_C::SM_Bush' has a wrong offset!");
-static_assert(offsetof(AAthena_Player_Bush_C, Scene) == 0x000720, "Member 'AAthena_Player_Bush_C::Scene' has a wrong offset!");
-static_assert(offsetof(AAthena_Player_Bush_C, Effects) == 0x000728, "Member 'AAthena_Player_Bush_C::Effects' has a wrong offset!");
-static_assert(offsetof(AAthena_Player_Bush_C, PlayerPawn) == 0x000730, "Member 'AAthena_Player_Bush_C::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(AAthena_Player_Bush_C, TotalDamage) == 0x000738, "Member 'AAthena_Player_Bush_C::TotalDamage' has a wrong offset!");
-static_assert(offsetof(AAthena_Player_Bush_C, MaxHealth) == 0x000740, "Member 'AAthena_Player_Bush_C::MaxHealth' has a wrong offset!");
 
 }
 

@@ -10,64 +10,63 @@
 
 #include "Basic.hpp"
 
+#include "CommonInput_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "CommonInput_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaStatsTab.AthenaStatsTab_C
-// 0x00E8 (0x05B0 - 0x04C8)
+// 0x00D8 (0x06F8 - 0x0620)
 class UAthenaStatsTab_C final : public UAthenaStatsScreenBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Entrance;                                          // 0x04D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Tabs_Paginate;                                     // 0x04D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonTextBlock*                       AccountLevelLabel;                                 // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 CloseIcon;                                         // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_0;                            // 0x04F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Divider;                                           // 0x04F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Divider1;                                          // 0x0500(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Divider2;                                          // 0x0508(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       FriendMatchXpBoostPointsLabel;                     // 0x0510(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HBoxNoStats;                                       // 0x0518(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  HiddenSwitcher;                                    // 0x0520(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_0;                                           // 0x0528(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         LastUpdatedTimeBox;                                // 0x0530(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  MainStatWidgetSwitcher;                            // 0x0538(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       MatchXpBoostPointsLabel;                           // 0x0540(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPanelButton_C*                         MobileCloseButton;                                 // 0x0548(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPanelButton_C*                         MobileCloseButton_Disabled;                        // 0x0550(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       NoStatsText;                                       // 0x0558(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlayCloseButton;                                // 0x0560(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlayCloseButton_Disabled;                       // 0x0568(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPlayerRankEmblem_C*                    PlayerRankEmblem;                                  // 0x0570(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 ProgressSpinner;                                   // 0x0578(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       SeasonLabel;                                       // 0x0580(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         UpdatingBox;                                       // 0x0588(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VBoxbannerstats;                                   // 0x0590(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           VBoxStats;                                         // 0x0598(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    Back_Action;                                       // 0x05A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0620(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Entrance;                                          // 0x0628(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Tabs_Paginate;                                     // 0x0630(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       AccountLevelLabel;                                 // 0x0638(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCloseButton_C*                         CloseButton;                                       // 0x0640(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 CloseIcon;                                         // 0x0648(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  CommonWidgetSwitcher_0;                            // 0x0650(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Divider;                                           // 0x0658(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Divider1;                                          // 0x0660(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Divider2;                                          // 0x0668(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       FriendMatchXpBoostPointsLabel;                     // 0x0670(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HBoxNoStats;                                       // 0x0678(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  HiddenSwitcher;                                    // 0x0680(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         LastUpdatedTimeBox;                                // 0x0688(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  MainStatWidgetSwitcher;                            // 0x0690(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       MatchXpBoostPointsLabel;                           // 0x0698(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UPanelButton_C*                         MobileCloseButton_Disabled;                        // 0x06A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       NoStatsText;                                       // 0x06A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               OverlayCloseButton_Disabled;                       // 0x06B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UPlayerRankEmblem_C*                    PlayerRankEmblem;                                  // 0x06B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 ProgressSpinner;                                   // 0x06C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SeasonLabel;                                       // 0x06C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         UpdatingBox;                                       // 0x06D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VBoxbannerstats;                                   // 0x06D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           VBoxStats;                                         // 0x06E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    Back_Action;                                       // 0x06E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
-	void Init_Back_Action();
-	void HandleBack(bool* PassThrough);
-	void OnActivated();
-	void OnQueryFinished(bool bWasSuccessful, bool bHasStatsToDisplay);
-	void BndEvt__StatsTabList_K2Node_ComponentBoundEvent_0_OnTabSelected__DelegateSignature(class FName TabId);
-	void OnQueryStarted();
-	void OnDeactivated();
-	void Construct();
-	void OnInputMethodChanged_Event_0(ECommonInputType bNewInputType);
-	void BndEvt__IconTextButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void SetPlatformButtonText(const class FText& PlatformButtonText);
-	void BndEvt__MobileCloseButton2_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void ExecuteUbergraph_AthenaStatsTab(int32 EntryPoint);
+	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void BndEvt__MobileCloseButton2_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void SetPlatformButtonText(const class FText& PlatformButtonText);
+	void BndEvt__IconTextButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void OnInputMethodChanged_Event_0(ECommonInputType bNewInputType);
+	void OnQueryStarted();
+	void BndEvt__StatsTabList_K2Node_ComponentBoundEvent_0_OnTabSelected__DelegateSignature(class FName TabId);
+	void OnQueryFinished(bool bWasSuccessful, bool bHasStatsToDisplay);
+	void BP_OnActivated();
+	void Construct();
+	void HandleBack(bool* PassThrough);
+	void Init_Back_Action();
+	class FText GetAccountLevelText();
+	void GetFriendMatchXpBoostText(class FText* Result);
 
 public:
 	static class UClass* StaticClass()
@@ -79,36 +78,6 @@ public:
 		return GetDefaultObjImpl<UAthenaStatsTab_C>();
 	}
 };
-static_assert(alignof(UAthenaStatsTab_C) == 0x000008, "Wrong alignment on UAthenaStatsTab_C");
-static_assert(sizeof(UAthenaStatsTab_C) == 0x0005B0, "Wrong size on UAthenaStatsTab_C");
-static_assert(offsetof(UAthenaStatsTab_C, UberGraphFrame) == 0x0004C8, "Member 'UAthenaStatsTab_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, Entrance) == 0x0004D0, "Member 'UAthenaStatsTab_C::Entrance' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, Tabs_Paginate) == 0x0004D8, "Member 'UAthenaStatsTab_C::Tabs_Paginate' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, AccountLevelLabel) == 0x0004E0, "Member 'UAthenaStatsTab_C::AccountLevelLabel' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, CloseIcon) == 0x0004E8, "Member 'UAthenaStatsTab_C::CloseIcon' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, CommonWidgetSwitcher_0) == 0x0004F0, "Member 'UAthenaStatsTab_C::CommonWidgetSwitcher_0' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, Divider) == 0x0004F8, "Member 'UAthenaStatsTab_C::Divider' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, Divider1) == 0x000500, "Member 'UAthenaStatsTab_C::Divider1' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, Divider2) == 0x000508, "Member 'UAthenaStatsTab_C::Divider2' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, FriendMatchXpBoostPointsLabel) == 0x000510, "Member 'UAthenaStatsTab_C::FriendMatchXpBoostPointsLabel' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, HBoxNoStats) == 0x000518, "Member 'UAthenaStatsTab_C::HBoxNoStats' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, HiddenSwitcher) == 0x000520, "Member 'UAthenaStatsTab_C::HiddenSwitcher' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, Image_0) == 0x000528, "Member 'UAthenaStatsTab_C::Image_0' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, LastUpdatedTimeBox) == 0x000530, "Member 'UAthenaStatsTab_C::LastUpdatedTimeBox' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, MainStatWidgetSwitcher) == 0x000538, "Member 'UAthenaStatsTab_C::MainStatWidgetSwitcher' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, MatchXpBoostPointsLabel) == 0x000540, "Member 'UAthenaStatsTab_C::MatchXpBoostPointsLabel' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, MobileCloseButton) == 0x000548, "Member 'UAthenaStatsTab_C::MobileCloseButton' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, MobileCloseButton_Disabled) == 0x000550, "Member 'UAthenaStatsTab_C::MobileCloseButton_Disabled' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, NoStatsText) == 0x000558, "Member 'UAthenaStatsTab_C::NoStatsText' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, OverlayCloseButton) == 0x000560, "Member 'UAthenaStatsTab_C::OverlayCloseButton' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, OverlayCloseButton_Disabled) == 0x000568, "Member 'UAthenaStatsTab_C::OverlayCloseButton_Disabled' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, PlayerRankEmblem) == 0x000570, "Member 'UAthenaStatsTab_C::PlayerRankEmblem' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, ProgressSpinner) == 0x000578, "Member 'UAthenaStatsTab_C::ProgressSpinner' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, SeasonLabel) == 0x000580, "Member 'UAthenaStatsTab_C::SeasonLabel' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, UpdatingBox) == 0x000588, "Member 'UAthenaStatsTab_C::UpdatingBox' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, VBoxbannerstats) == 0x000590, "Member 'UAthenaStatsTab_C::VBoxbannerstats' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, VBoxStats) == 0x000598, "Member 'UAthenaStatsTab_C::VBoxStats' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsTab_C, Back_Action) == 0x0005A0, "Member 'UAthenaStatsTab_C::Back_Action' has a wrong offset!");
 
 }
 

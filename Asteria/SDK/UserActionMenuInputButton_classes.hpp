@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass UserActionMenuInputButton.UserActionMenuInputButton_C
-// 0x0000 (0x0B48 - 0x0B48)
+// 0x0000 (0x0BA0 - 0x0BA0)
 class UUserActionMenuInputButton_C final : public UCommonButton
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UUserActionMenuInputButton_C>();
 	}
 };
-static_assert(alignof(UUserActionMenuInputButton_C) == 0x000008, "Wrong alignment on UUserActionMenuInputButton_C");
-static_assert(sizeof(UUserActionMenuInputButton_C) == 0x000B48, "Wrong size on UUserActionMenuInputButton_C");
 
 }
 

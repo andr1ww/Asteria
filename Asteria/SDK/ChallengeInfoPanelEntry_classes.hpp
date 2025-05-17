@@ -18,19 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ChallengeInfoPanelEntry.ChallengeInfoPanelEntry_C
-// 0x0020 (0x0280 - 0x0260)
+// 0x0028 (0x02E0 - 0x02B8)
 class UChallengeInfoPanelEntry_C final : public UAthenaChallengeInfoPanelEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       PartyAssistInfoIntro;                              // 0x0268(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       AmbientPartyAssistAttention;                       // 0x0270(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        SwitcherContent;                                   // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       PartyAssistInfoIntro;                              // 0x02C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       AmbientPartyAssistAttention;                       // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UGroupChallengeTag_C*                   GroupChallengeTag_124;                             // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        SwitcherContent;                                   // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_ChallengeInfoPanelEntry(int32 EntryPoint);
 	void OnLocalPlayerMissingAssistedChallenge();
 	void OnChallengeInfoSet();
-	void ExecuteUbergraph_ChallengeInfoPanelEntry(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -42,12 +43,6 @@ public:
 		return GetDefaultObjImpl<UChallengeInfoPanelEntry_C>();
 	}
 };
-static_assert(alignof(UChallengeInfoPanelEntry_C) == 0x000008, "Wrong alignment on UChallengeInfoPanelEntry_C");
-static_assert(sizeof(UChallengeInfoPanelEntry_C) == 0x000280, "Wrong size on UChallengeInfoPanelEntry_C");
-static_assert(offsetof(UChallengeInfoPanelEntry_C, UberGraphFrame) == 0x000260, "Member 'UChallengeInfoPanelEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UChallengeInfoPanelEntry_C, PartyAssistInfoIntro) == 0x000268, "Member 'UChallengeInfoPanelEntry_C::PartyAssistInfoIntro' has a wrong offset!");
-static_assert(offsetof(UChallengeInfoPanelEntry_C, AmbientPartyAssistAttention) == 0x000270, "Member 'UChallengeInfoPanelEntry_C::AmbientPartyAssistAttention' has a wrong offset!");
-static_assert(offsetof(UChallengeInfoPanelEntry_C, SwitcherContent) == 0x000278, "Member 'UChallengeInfoPanelEntry_C::SwitcherContent' has a wrong offset!");
 
 }
 

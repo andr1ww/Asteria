@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UTextStyle_Header_512_Gold_C>();
 	}
 };
-static_assert(alignof(UTextStyle_Header_512_Gold_C) == 0x000008, "Wrong alignment on UTextStyle_Header_512_Gold_C");
-static_assert(sizeof(UTextStyle_Header_512_Gold_C) == 0x000148, "Wrong size on UTextStyle_Header_512_Gold_C");
 
 }
 

@@ -10,46 +10,51 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AmbientAudioController.BP_AmbientAudioController_C
-// 0x0040 (0x01B8 - 0x0178)
+// 0x0068 (0x0148 - 0x00E0)
 class UBP_AmbientAudioController_C final : public UFortAmbientAudioController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0178(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        AmbientMixA;                                       // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        AmbientMixB;                                       // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Loop_Indoors;                                      // 0x0190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CheckFrequency;                                    // 0x0198(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsInsidePrevious;                                 // 0x019C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bIsInsideCurrent;                                  // 0x019D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_19E[0x2];                                      // 0x019E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        AmbientMixIndoor;                                  // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TargetLPFFreq;                                     // 0x01A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CurrentLPFFreq;                                    // 0x01AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         InsideLPFFreq;                                     // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         OutsideLPFFreq;                                    // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        AmbientMixA;                                       // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        AmbientMixB;                                       // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CheckFrequency;                                    // 0x00F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsInsidePrevious;                                 // 0x00FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsInsideCurrent;                                  // 0x00FD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_FE[0x2];                                       // 0x00FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        AmbientMixIndoor;                                  // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TargetLPFFreq;                                     // 0x0108(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrentLPFFreq;                                    // 0x010C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         InsideLPFFreq;                                     // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         OutsideLPFFreq;                                    // 0x0114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CurrentMPCValueInterp;                             // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bAboveSnowAltitude;                                // 0x011C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11D[0x3];                                      // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortPOIAmbientAudioBank*               WinterAudioBank;                                   // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSnowAltitudeEnabled;                              // 0x0128(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortPOIAmbientAudioBank*               StormAudioBank;                                    // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           AmbientAudioInsideTag;                             // 0x0138(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAmbientAudioDataAsset*                 CurieAudioBank;                                    // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_AmbientAudioController(int32 EntryPoint);
-	void Set_Storm_Amb_Layer_Enabled(bool Enabled);
-	void On_Game_Phase_Step_Change(EAthenaGamePhaseStep GamePhaseStep);
-	void On_Game_Phase_Change(EAthenaGamePhase GamePhase);
 	void ReceiveTick(float DeltaSeconds);
 	void Evaluate_Inside_State();
 	void OnCheckIfSurrounded();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void ReceiveBeginPlay();
 	bool Trace(const struct FVector& Start, const struct FVector& Direction);
-	void SetIndoorMixEnabled(bool Enabled);
 	void SetTargetLPFFreq(float Target);
+	void UpdateSnowSetupBP();
 
 public:
 	static class UClass* StaticClass()
@@ -61,20 +66,6 @@ public:
 		return GetDefaultObjImpl<UBP_AmbientAudioController_C>();
 	}
 };
-static_assert(alignof(UBP_AmbientAudioController_C) == 0x000008, "Wrong alignment on UBP_AmbientAudioController_C");
-static_assert(sizeof(UBP_AmbientAudioController_C) == 0x0001B8, "Wrong size on UBP_AmbientAudioController_C");
-static_assert(offsetof(UBP_AmbientAudioController_C, UberGraphFrame) == 0x000178, "Member 'UBP_AmbientAudioController_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_AmbientAudioController_C, AmbientMixA) == 0x000180, "Member 'UBP_AmbientAudioController_C::AmbientMixA' has a wrong offset!");
-static_assert(offsetof(UBP_AmbientAudioController_C, AmbientMixB) == 0x000188, "Member 'UBP_AmbientAudioController_C::AmbientMixB' has a wrong offset!");
-static_assert(offsetof(UBP_AmbientAudioController_C, Loop_Indoors) == 0x000190, "Member 'UBP_AmbientAudioController_C::Loop_Indoors' has a wrong offset!");
-static_assert(offsetof(UBP_AmbientAudioController_C, CheckFrequency) == 0x000198, "Member 'UBP_AmbientAudioController_C::CheckFrequency' has a wrong offset!");
-static_assert(offsetof(UBP_AmbientAudioController_C, bIsInsidePrevious) == 0x00019C, "Member 'UBP_AmbientAudioController_C::bIsInsidePrevious' has a wrong offset!");
-static_assert(offsetof(UBP_AmbientAudioController_C, bIsInsideCurrent) == 0x00019D, "Member 'UBP_AmbientAudioController_C::bIsInsideCurrent' has a wrong offset!");
-static_assert(offsetof(UBP_AmbientAudioController_C, AmbientMixIndoor) == 0x0001A0, "Member 'UBP_AmbientAudioController_C::AmbientMixIndoor' has a wrong offset!");
-static_assert(offsetof(UBP_AmbientAudioController_C, TargetLPFFreq) == 0x0001A8, "Member 'UBP_AmbientAudioController_C::TargetLPFFreq' has a wrong offset!");
-static_assert(offsetof(UBP_AmbientAudioController_C, CurrentLPFFreq) == 0x0001AC, "Member 'UBP_AmbientAudioController_C::CurrentLPFFreq' has a wrong offset!");
-static_assert(offsetof(UBP_AmbientAudioController_C, InsideLPFFreq) == 0x0001B0, "Member 'UBP_AmbientAudioController_C::InsideLPFFreq' has a wrong offset!");
-static_assert(offsetof(UBP_AmbientAudioController_C, OutsideLPFFreq) == 0x0001B4, "Member 'UBP_AmbientAudioController_C::OutsideLPFFreq' has a wrong offset!");
 
 }
 

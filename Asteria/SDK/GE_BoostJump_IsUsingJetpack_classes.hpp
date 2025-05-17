@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GE_BoostJump_IsUsingJetpack.GE_BoostJump_IsUsingJetpack_C
-// 0x0000 (0x05F0 - 0x05F0)
-class UGE_BoostJump_IsUsingJetpack_C final : public UGameplayEffect
+// 0x0000 (0x07B8 - 0x07B8)
+class UGE_BoostJump_IsUsingJetpack_C : public UGameplayEffect
 {
 public:
 	static class UClass* StaticClass()
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGE_BoostJump_IsUsingJetpack_C>();
 	}
 };
-static_assert(alignof(UGE_BoostJump_IsUsingJetpack_C) == 0x000008, "Wrong alignment on UGE_BoostJump_IsUsingJetpack_C");
-static_assert(sizeof(UGE_BoostJump_IsUsingJetpack_C) == 0x0005F0, "Wrong size on UGE_BoostJump_IsUsingJetpack_C");
 
 }
 

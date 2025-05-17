@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ImagePlate_structs.hpp"
 #include "MovieScene_classes.hpp"
 #include "CoreUObject_classes.hpp"
-#include "ImagePlate_structs.hpp"
 #include "MovieSceneTracks_classes.hpp"
 
 
@@ -22,11 +22,11 @@ namespace SDK
 {
 
 // Class ImagePlate.ImagePlate
-// 0x0008 (0x0248 - 0x0240)
+// 0x0008 (0x0228 - 0x0220)
 class AImagePlate final : public AActor
 {
 public:
-	class UImagePlateComponent*                   ImagePlate;                                        // 0x0240(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UImagePlateComponent*                   ImagePlate;                                        // 0x0220(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -38,17 +38,14 @@ public:
 		return GetDefaultObjImpl<AImagePlate>();
 	}
 };
-static_assert(alignof(AImagePlate) == 0x000008, "Wrong alignment on AImagePlate");
-static_assert(sizeof(AImagePlate) == 0x000248, "Wrong size on AImagePlate");
-static_assert(offsetof(AImagePlate, ImagePlate) == 0x000240, "Member 'AImagePlate::ImagePlate' has a wrong offset!");
 
 // Class ImagePlate.ImagePlateComponent
-// 0x00D0 (0x04C0 - 0x03F0)
+// 0x00D0 (0x0510 - 0x0440)
 class UImagePlateComponent final : public UPrimitiveComponent
 {
 public:
-	struct FImagePlateParameters                  Plate;                                             // 0x03F0(0x0038)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_428[0x98];                                     // 0x0428(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FImagePlateParameters                  Plate;                                             // 0x0440(0x0038)(Edit, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_478[0x98];                                     // 0x0478(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnRenderTextureChanged();
@@ -66,9 +63,6 @@ public:
 		return GetDefaultObjImpl<UImagePlateComponent>();
 	}
 };
-static_assert(alignof(UImagePlateComponent) == 0x000008, "Wrong alignment on UImagePlateComponent");
-static_assert(sizeof(UImagePlateComponent) == 0x0004C0, "Wrong size on UImagePlateComponent");
-static_assert(offsetof(UImagePlateComponent, Plate) == 0x0003F0, "Member 'UImagePlateComponent::Plate' has a wrong offset!");
 
 // Class ImagePlate.ImagePlateSettings
 // 0x0010 (0x0038 - 0x0028)
@@ -87,9 +81,6 @@ public:
 		return GetDefaultObjImpl<UImagePlateSettings>();
 	}
 };
-static_assert(alignof(UImagePlateSettings) == 0x000008, "Wrong alignment on UImagePlateSettings");
-static_assert(sizeof(UImagePlateSettings) == 0x000038, "Wrong size on UImagePlateSettings");
-static_assert(offsetof(UImagePlateSettings, ProxyName) == 0x000028, "Member 'UImagePlateSettings::ProxyName' has a wrong offset!");
 
 // Class ImagePlate.ImagePlateFileSequence
 // 0x0028 (0x0050 - 0x0028)
@@ -111,14 +102,9 @@ public:
 		return GetDefaultObjImpl<UImagePlateFileSequence>();
 	}
 };
-static_assert(alignof(UImagePlateFileSequence) == 0x000008, "Wrong alignment on UImagePlateFileSequence");
-static_assert(sizeof(UImagePlateFileSequence) == 0x000050, "Wrong size on UImagePlateFileSequence");
-static_assert(offsetof(UImagePlateFileSequence, SequencePath) == 0x000028, "Member 'UImagePlateFileSequence::SequencePath' has a wrong offset!");
-static_assert(offsetof(UImagePlateFileSequence, FileWildcard) == 0x000038, "Member 'UImagePlateFileSequence::FileWildcard' has a wrong offset!");
-static_assert(offsetof(UImagePlateFileSequence, FrameRate) == 0x000048, "Member 'UImagePlateFileSequence::FrameRate' has a wrong offset!");
 
 // Class ImagePlate.ImagePlateFrustumComponent
-// 0x0000 (0x03F0 - 0x03F0)
+// 0x0000 (0x0440 - 0x0440)
 class UImagePlateFrustumComponent final : public UPrimitiveComponent
 {
 public:
@@ -131,17 +117,15 @@ public:
 		return GetDefaultObjImpl<UImagePlateFrustumComponent>();
 	}
 };
-static_assert(alignof(UImagePlateFrustumComponent) == 0x000008, "Wrong alignment on UImagePlateFrustumComponent");
-static_assert(sizeof(UImagePlateFrustumComponent) == 0x0003F0, "Wrong size on UImagePlateFrustumComponent");
 
 // Class ImagePlate.MovieSceneImagePlateSection
-// 0x0010 (0x00F0 - 0x00E0)
+// 0x0010 (0x00F8 - 0x00E8)
 class UMovieSceneImagePlateSection final : public UMovieSceneSection
 {
 public:
-	class UImagePlateFileSequence*                FileSequence;                                      // 0x00E0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReuseExistingTexture;                             // 0x00E8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UImagePlateFileSequence*                FileSequence;                                      // 0x00E8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReuseExistingTexture;                             // 0x00F0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -153,15 +137,14 @@ public:
 		return GetDefaultObjImpl<UMovieSceneImagePlateSection>();
 	}
 };
-static_assert(alignof(UMovieSceneImagePlateSection) == 0x000008, "Wrong alignment on UMovieSceneImagePlateSection");
-static_assert(sizeof(UMovieSceneImagePlateSection) == 0x0000F0, "Wrong size on UMovieSceneImagePlateSection");
-static_assert(offsetof(UMovieSceneImagePlateSection, FileSequence) == 0x0000E0, "Member 'UMovieSceneImagePlateSection::FileSequence' has a wrong offset!");
-static_assert(offsetof(UMovieSceneImagePlateSection, bReuseExistingTexture) == 0x0000E8, "Member 'UMovieSceneImagePlateSection::bReuseExistingTexture' has a wrong offset!");
 
 // Class ImagePlate.MovieSceneImagePlateTrack
-// 0x0000 (0x0088 - 0x0088)
+// 0x0008 (0x00B0 - 0x00A8)
 class UMovieSceneImagePlateTrack final : public UMovieScenePropertyTrack
 {
+public:
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -172,8 +155,6 @@ public:
 		return GetDefaultObjImpl<UMovieSceneImagePlateTrack>();
 	}
 };
-static_assert(alignof(UMovieSceneImagePlateTrack) == 0x000008, "Wrong alignment on UMovieSceneImagePlateTrack");
-static_assert(sizeof(UMovieSceneImagePlateTrack) == 0x000088, "Wrong size on UMovieSceneImagePlateTrack");
 
 }
 

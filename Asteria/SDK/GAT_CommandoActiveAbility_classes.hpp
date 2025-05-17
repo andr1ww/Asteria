@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GAT_CommandoActiveAbility.GAT_CommandoActiveAbility_C
-// 0x00C8 (0x0A48 - 0x0980)
+// 0x00C8 (0x0BB0 - 0x0AE8)
 class UGAT_CommandoActiveAbility_C : public UGAT_ActiveAbility_Hero_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_CommandoActiveAbility_C;        // 0x0980(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayEventData                     Event_Data;                                        // 0x0988(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AFortPawn*                              CommandoPlayerPawn;                                // 0x0A38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isAutoCommitted;                                   // 0x0A40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          isStaminaLockedOut;                                // 0x0A41(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_CommandoActiveAbility_C;        // 0x0AE8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayEventData                     Event_Data;                                        // 0x0AF0(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AFortPawn*                              CommandoPlayerPawn;                                // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isAutoCommitted;                                   // 0x0BA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          isStaminaLockedOut;                                // 0x0BA9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GAT_CommandoActiveAbility(int32 EntryPoint);
@@ -43,13 +43,6 @@ public:
 		return GetDefaultObjImpl<UGAT_CommandoActiveAbility_C>();
 	}
 };
-static_assert(alignof(UGAT_CommandoActiveAbility_C) == 0x000008, "Wrong alignment on UGAT_CommandoActiveAbility_C");
-static_assert(sizeof(UGAT_CommandoActiveAbility_C) == 0x000A48, "Wrong size on UGAT_CommandoActiveAbility_C");
-static_assert(offsetof(UGAT_CommandoActiveAbility_C, UberGraphFrame_GAT_CommandoActiveAbility_C) == 0x000980, "Member 'UGAT_CommandoActiveAbility_C::UberGraphFrame_GAT_CommandoActiveAbility_C' has a wrong offset!");
-static_assert(offsetof(UGAT_CommandoActiveAbility_C, Event_Data) == 0x000988, "Member 'UGAT_CommandoActiveAbility_C::Event_Data' has a wrong offset!");
-static_assert(offsetof(UGAT_CommandoActiveAbility_C, CommandoPlayerPawn) == 0x000A38, "Member 'UGAT_CommandoActiveAbility_C::CommandoPlayerPawn' has a wrong offset!");
-static_assert(offsetof(UGAT_CommandoActiveAbility_C, isAutoCommitted) == 0x000A40, "Member 'UGAT_CommandoActiveAbility_C::isAutoCommitted' has a wrong offset!");
-static_assert(offsetof(UGAT_CommandoActiveAbility_C, isStaminaLockedOut) == 0x000A41, "Member 'UGAT_CommandoActiveAbility_C::isStaminaLockedOut' has a wrong offset!");
 
 }
 

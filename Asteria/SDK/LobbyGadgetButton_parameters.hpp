@@ -14,98 +14,6 @@
 namespace SDK::Params
 {
 
-// Function LobbyGadgetButton.LobbyGadgetButton_C.Focus
-// 0x0008 (0x0008 - 0x0000)
-struct LobbyGadgetButton_C_Focus final
-{
-public:
-	class UFortUINavigationManager*               CallFunc_GetUINavigationManager_ReturnValue;       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(LobbyGadgetButton_C_Focus) == 0x000008, "Wrong alignment on LobbyGadgetButton_C_Focus");
-static_assert(sizeof(LobbyGadgetButton_C_Focus) == 0x000008, "Wrong size on LobbyGadgetButton_C_Focus");
-static_assert(offsetof(LobbyGadgetButton_C_Focus, CallFunc_GetUINavigationManager_ReturnValue) == 0x000000, "Member 'LobbyGadgetButton_C_Focus::CallFunc_GetUINavigationManager_ReturnValue' has a wrong offset!");
-
-// Function LobbyGadgetButton.LobbyGadgetButton_C.GetLocked
-// 0x0001 (0x0001 - 0x0000)
-struct LobbyGadgetButton_C_GetLocked final
-{
-public:
-	bool                                          bLocked_0;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(LobbyGadgetButton_C_GetLocked) == 0x000001, "Wrong alignment on LobbyGadgetButton_C_GetLocked");
-static_assert(sizeof(LobbyGadgetButton_C_GetLocked) == 0x000001, "Wrong size on LobbyGadgetButton_C_GetLocked");
-static_assert(offsetof(LobbyGadgetButton_C_GetLocked, bLocked_0) == 0x000000, "Member 'LobbyGadgetButton_C_GetLocked::bLocked_0' has a wrong offset!");
-
-// Function LobbyGadgetButton.LobbyGadgetButton_C.SetLocked
-// 0x0002 (0x0002 - 0x0000)
-struct LobbyGadgetButton_C_SetLocked final
-{
-public:
-	bool                                          bLocked_0;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(LobbyGadgetButton_C_SetLocked) == 0x000001, "Wrong alignment on LobbyGadgetButton_C_SetLocked");
-static_assert(sizeof(LobbyGadgetButton_C_SetLocked) == 0x000002, "Wrong size on LobbyGadgetButton_C_SetLocked");
-static_assert(offsetof(LobbyGadgetButton_C_SetLocked, bLocked_0) == 0x000000, "Member 'LobbyGadgetButton_C_SetLocked::bLocked_0' has a wrong offset!");
-static_assert(offsetof(LobbyGadgetButton_C_SetLocked, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'LobbyGadgetButton_C_SetLocked::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-
-// Function LobbyGadgetButton.LobbyGadgetButton_C.GetGadgetItem
-// 0x0008 (0x0008 - 0x0000)
-struct LobbyGadgetButton_C_GetGadgetItem final
-{
-public:
-	class UFortWorldItem*                         GadgetItem_0;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(LobbyGadgetButton_C_GetGadgetItem) == 0x000008, "Wrong alignment on LobbyGadgetButton_C_GetGadgetItem");
-static_assert(sizeof(LobbyGadgetButton_C_GetGadgetItem) == 0x000008, "Wrong size on LobbyGadgetButton_C_GetGadgetItem");
-static_assert(offsetof(LobbyGadgetButton_C_GetGadgetItem, GadgetItem_0) == 0x000000, "Member 'LobbyGadgetButton_C_GetGadgetItem::GadgetItem_0' has a wrong offset!");
-
-// Function LobbyGadgetButton.LobbyGadgetButton_C.Refresh
-// 0x0010 (0x0010 - 0x0000)
-struct LobbyGadgetButton_C_Refresh final
-{
-public:
-	class UFortWorldItem*                         WorldItem;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(LobbyGadgetButton_C_Refresh) == 0x000008, "Wrong alignment on LobbyGadgetButton_C_Refresh");
-static_assert(sizeof(LobbyGadgetButton_C_Refresh) == 0x000010, "Wrong size on LobbyGadgetButton_C_Refresh");
-static_assert(offsetof(LobbyGadgetButton_C_Refresh, WorldItem) == 0x000000, "Member 'LobbyGadgetButton_C_Refresh::WorldItem' has a wrong offset!");
-static_assert(offsetof(LobbyGadgetButton_C_Refresh, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'LobbyGadgetButton_C_Refresh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function LobbyGadgetButton.LobbyGadgetButton_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct LobbyGadgetButton_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(LobbyGadgetButton_C_PreConstruct) == 0x000001, "Wrong alignment on LobbyGadgetButton_C_PreConstruct");
-static_assert(sizeof(LobbyGadgetButton_C_PreConstruct) == 0x000001, "Wrong size on LobbyGadgetButton_C_PreConstruct");
-static_assert(offsetof(LobbyGadgetButton_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'LobbyGadgetButton_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function LobbyGadgetButton.LobbyGadgetButton_C.BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature final
-{
-public:
-	class UCommonButton*                          Button_0;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature");
-static_assert(sizeof(LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature");
-static_assert(offsetof(LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature, Button_0) == 0x000000, "Member 'LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature::Button_0' has a wrong offset!");
-
-// Function LobbyGadgetButton.LobbyGadgetButton_C.BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature final
-{
-public:
-	class UCommonButton*                          Button_0;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature");
-static_assert(sizeof(LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature");
-static_assert(offsetof(LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature, Button_0) == 0x000000, "Member 'LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature::Button_0' has a wrong offset!");
-
 // Function LobbyGadgetButton.LobbyGadgetButton_C.ExecuteUbergraph_LobbyGadgetButton
 // 0x0038 (0x0038 - 0x0000)
 struct LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton final
@@ -123,16 +31,72 @@ public:
 	class UFortWorldItemDefinition*               CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UFortItem*                              CallFunc_CreateTemporaryItemInstanceBP_ReturnValue; // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton) == 0x000008, "Wrong alignment on LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton");
-static_assert(sizeof(LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton) == 0x000038, "Wrong size on LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton");
-static_assert(offsetof(LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton, EntryPoint) == 0x000000, "Member 'LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton::EntryPoint' has a wrong offset!");
-static_assert(offsetof(LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton, K2Node_Event_IsDesignTime) == 0x000004, "Member 'LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton, K2Node_ComponentBoundEvent_Button_1) == 0x000008, "Member 'LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton, K2Node_ComponentBoundEvent_Button) == 0x000018, "Member 'LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton, CallFunc_RandomInteger_ReturnValue) == 0x000020, "Member 'LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton::CallFunc_RandomInteger_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton, CallFunc_Array_Get_Item) == 0x000028, "Member 'LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton, CallFunc_CreateTemporaryItemInstanceBP_ReturnValue) == 0x000030, "Member 'LobbyGadgetButton_C_ExecuteUbergraph_LobbyGadgetButton::CallFunc_CreateTemporaryItemInstanceBP_ReturnValue' has a wrong offset!");
+
+// Function LobbyGadgetButton.LobbyGadgetButton_C.BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_96_CommonButtonClicked__DelegateSignature final
+{
+public:
+	class UCommonButton*                          Button_0;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function LobbyGadgetButton.LobbyGadgetButton_C.BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct LobbyGadgetButton_C_BndEvt__Button_K2Node_ComponentBoundEvent_81_CommonButtonClicked__DelegateSignature final
+{
+public:
+	class UCommonButton*                          Button_0;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function LobbyGadgetButton.LobbyGadgetButton_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct LobbyGadgetButton_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function LobbyGadgetButton.LobbyGadgetButton_C.Refresh
+// 0x0010 (0x0010 - 0x0000)
+struct LobbyGadgetButton_C_Refresh final
+{
+public:
+	class UFortWorldItem*                         WorldItem;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function LobbyGadgetButton.LobbyGadgetButton_C.GetGadgetItem
+// 0x0008 (0x0008 - 0x0000)
+struct LobbyGadgetButton_C_GetGadgetItem final
+{
+public:
+	class UFortWorldItem*                         GadgetItem_0;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function LobbyGadgetButton.LobbyGadgetButton_C.SetLocked
+// 0x0002 (0x0002 - 0x0000)
+struct LobbyGadgetButton_C_SetLocked final
+{
+public:
+	bool                                          bLocked_0;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function LobbyGadgetButton.LobbyGadgetButton_C.GetLocked
+// 0x0001 (0x0001 - 0x0000)
+struct LobbyGadgetButton_C_GetLocked final
+{
+public:
+	bool                                          bLocked_0;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function LobbyGadgetButton.LobbyGadgetButton_C.Focus
+// 0x0008 (0x0008 - 0x0000)
+struct LobbyGadgetButton_C_Focus final
+{
+public:
+	class UFortUINavigationManager*               CallFunc_GetUINavigationManager_ReturnValue;       // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 }
 

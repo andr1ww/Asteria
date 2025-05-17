@@ -36,5 +36,29 @@ void USK_M249_Skeleton_Dynamic_AnimBP_C::ExecuteUbergraph_SK_M249_Skeleton_Dynam
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function SK_M249_Skeleton_Dynamic_AnimBP.SK_M249_Skeleton_Dynamic_AnimBP_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPoseLink&                 InPose                                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+
+void USK_M249_Skeleton_Dynamic_AnimBP_C::AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SK_M249_Skeleton_Dynamic_AnimBP_C", "AnimGraph");
+
+	Params::SK_M249_Skeleton_Dynamic_AnimBP_C_AnimGraph Parms{};
+
+	Parms.InPose = std::move(InPose);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
+}
+
 }
 

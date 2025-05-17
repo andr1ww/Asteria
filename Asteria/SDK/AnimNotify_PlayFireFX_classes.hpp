@@ -33,8 +33,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayFireFX_C>();
 	}
 };
-static_assert(alignof(UAnimNotify_PlayFireFX_C) == 0x000008, "Wrong alignment on UAnimNotify_PlayFireFX_C");
-static_assert(sizeof(UAnimNotify_PlayFireFX_C) == 0x000038, "Wrong size on UAnimNotify_PlayFireFX_C");
 
 }
 

@@ -10,24 +10,41 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C
-// 0x0010 (0x0950 - 0x0940)
+// 0x0130 (0x0BD8 - 0x0AA8)
 class UGA_DefaultPlayer_InteractSearch_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           RefillGasTankTag;                                  // 0x0AB8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FFortGameplayAbilityMontageInfo        RefillGasTankMontage;                              // 0x0AC0(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTag                           CatchFireflyTag;                                   // 0x0B18(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FFortGameplayAbilityMontageInfo        FireflyCatchMontage;                               // 0x0B20(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FFortGameplayAbilityMontageInfo        RefillVehicleFuelMontage;                          // 0x0B78(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTag                           GasCanRefillVehicleTag;                            // 0x0BD0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_DefaultPlayer_InteractSearch(int32 EntryPoint);
 	void K2_ActivateAbility();
+	void Triggered_5EB1B64344DD00ABFE41E2857DC3FB38(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Cancelled_5EB1B64344DD00ABFE41E2857DC3FB38(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Completed_5EB1B64344DD00ABFE41E2857DC3FB38(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Triggered_6A38D93A428260E68695388965BFA176(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Cancelled_6A38D93A428260E68695388965BFA176(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Completed_6A38D93A428260E68695388965BFA176(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Triggered_72217B3542CE776DEDDBB3A7B5D6D343(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Cancelled_72217B3542CE776DEDDBB3A7B5D6D343(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
+	void Completed_72217B3542CE776DEDDBB3A7B5D6D343(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void Triggered_B697D9B445CA2BFDB1328D93C33FBCF3(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void Cancelled_B697D9B445CA2BFDB1328D93C33FBCF3(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
 	void Completed_B697D9B445CA2BFDB1328D93C33FBCF3(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag);
@@ -45,10 +62,6 @@ public:
 		return GetDefaultObjImpl<UGA_DefaultPlayer_InteractSearch_C>();
 	}
 };
-static_assert(alignof(UGA_DefaultPlayer_InteractSearch_C) == 0x000008, "Wrong alignment on UGA_DefaultPlayer_InteractSearch_C");
-static_assert(sizeof(UGA_DefaultPlayer_InteractSearch_C) == 0x000950, "Wrong size on UGA_DefaultPlayer_InteractSearch_C");
-static_assert(offsetof(UGA_DefaultPlayer_InteractSearch_C, UberGraphFrame) == 0x000940, "Member 'UGA_DefaultPlayer_InteractSearch_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGA_DefaultPlayer_InteractSearch_C, PlayerPawn) == 0x000948, "Member 'UGA_DefaultPlayer_InteractSearch_C::PlayerPawn' has a wrong offset!");
 
 }
 

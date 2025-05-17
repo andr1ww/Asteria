@@ -18,7 +18,7 @@ namespace SDK
 
 // BlueprintGeneratedClass AnimNotifyState_HolsterWeapon.AnimNotifyState_HolsterWeapon_C
 // 0x0010 (0x0040 - 0x0030)
-class UAnimNotifyState_HolsterWeapon_C final : public UAnimNotifyState
+class UAnimNotifyState_HolsterWeapon_C : public UAnimNotifyState
 {
 public:
 	bool                                          PlayEquipAnim;                                     // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -39,10 +39,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotifyState_HolsterWeapon_C>();
 	}
 };
-static_assert(alignof(UAnimNotifyState_HolsterWeapon_C) == 0x000008, "Wrong alignment on UAnimNotifyState_HolsterWeapon_C");
-static_assert(sizeof(UAnimNotifyState_HolsterWeapon_C) == 0x000040, "Wrong size on UAnimNotifyState_HolsterWeapon_C");
-static_assert(offsetof(UAnimNotifyState_HolsterWeapon_C, PlayEquipAnim) == 0x000030, "Member 'UAnimNotifyState_HolsterWeapon_C::PlayEquipAnim' has a wrong offset!");
-static_assert(offsetof(UAnimNotifyState_HolsterWeapon_C, AnimNotifyStateHolster) == 0x000034, "Member 'UAnimNotifyState_HolsterWeapon_C::AnimNotifyStateHolster' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Creative_Radio_AudioToMPC.Creative_Radio_AudioToMPC_C
-// 0x0000 (0x0128 - 0x0128)
+// 0x0000 (0x0100 - 0x0100)
 class UCreative_Radio_AudioToMPC_C final : public UFortAudioToMPCComponent
 {
 public:
@@ -33,8 +33,6 @@ public:
 		return GetDefaultObjImpl<UCreative_Radio_AudioToMPC_C>();
 	}
 };
-static_assert(alignof(UCreative_Radio_AudioToMPC_C) == 0x000008, "Wrong alignment on UCreative_Radio_AudioToMPC_C");
-static_assert(sizeof(UCreative_Radio_AudioToMPC_C) == 0x000128, "Wrong size on UCreative_Radio_AudioToMPC_C");
 
 }
 

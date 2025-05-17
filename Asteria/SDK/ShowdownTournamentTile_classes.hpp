@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ShowdownTournamentTile.ShowdownTournamentTile_C
-// 0x0030 (0x0BB0 - 0x0B80)
+// 0x0030 (0x0BF0 - 0x0BC0)
 class UShowdownTournamentTile_C final : public UFortShowdownTournamentTile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B80(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       SizeUp;                                            // 0x0B88(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       changeFocus;                                       // 0x0B90(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_TileFade;                                    // 0x0B98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               PosterSizeBox;                                     // 0x0BA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          isFaded;                                           // 0x0BA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       sizeUp;                                            // 0x0BC8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       changeFocus;                                       // 0x0BD0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_TileFade;                                    // 0x0BD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               PosterSizeBox;                                     // 0x0BE0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          isFaded;                                           // 0x0BE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_ShowdownTournamentTile(int32 EntryPoint);
@@ -45,14 +45,6 @@ public:
 		return GetDefaultObjImpl<UShowdownTournamentTile_C>();
 	}
 };
-static_assert(alignof(UShowdownTournamentTile_C) == 0x000008, "Wrong alignment on UShowdownTournamentTile_C");
-static_assert(sizeof(UShowdownTournamentTile_C) == 0x000BB0, "Wrong size on UShowdownTournamentTile_C");
-static_assert(offsetof(UShowdownTournamentTile_C, UberGraphFrame) == 0x000B80, "Member 'UShowdownTournamentTile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UShowdownTournamentTile_C, SizeUp) == 0x000B88, "Member 'UShowdownTournamentTile_C::SizeUp' has a wrong offset!");
-static_assert(offsetof(UShowdownTournamentTile_C, changeFocus) == 0x000B90, "Member 'UShowdownTournamentTile_C::changeFocus' has a wrong offset!");
-static_assert(offsetof(UShowdownTournamentTile_C, Image_TileFade) == 0x000B98, "Member 'UShowdownTournamentTile_C::Image_TileFade' has a wrong offset!");
-static_assert(offsetof(UShowdownTournamentTile_C, PosterSizeBox) == 0x000BA0, "Member 'UShowdownTournamentTile_C::PosterSizeBox' has a wrong offset!");
-static_assert(offsetof(UShowdownTournamentTile_C, isFaded) == 0x000BA8, "Member 'UShowdownTournamentTile_C::isFaded' has a wrong offset!");
 
 }
 

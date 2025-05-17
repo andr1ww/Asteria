@@ -10,47 +10,40 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
-// BlueprintGeneratedClass Frontend.FrontEnd_C
-// 0x0018 (0x0270 - 0x0258)
-class AFrontEnd_C final : public AFortLevelScriptActor
+// BlueprintGeneratedClass Frontend.Frontend_C
+// 0x0018 (0x0250 - 0x0238)
+class AFrontend_C final : public AFortLevelScriptActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0258(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          NewLobby;                                          // 0x0260(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AHBOnboardingFlow_C*                    HBOnboardingFlow_ExecuteUbergraph_Frontend_RefProperty; // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          NewLobby;                                          // 0x0240(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          NewVar_0;                                          // 0x0241(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_242[0x6];                                      // 0x0242(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AHBOnboardingFlow_C*                    HBOnboardingFlow_ExecuteUbergraph_Frontend_RefProperty; // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void PlaySpeech(const class FString& Filename, int32 SampleRate, class USoundWave* AssetFile);
 	void OnMatchStarted();
 	void EnableTutorial();
-	void ReceiveBeginPlay();
-	void ShowDebugPlayers();
-	void HideDebugPlayers();
-	void ExecuteUbergraph_FrontEnd(int32 EntryPoint);
+	void ExecuteUbergraph_Frontend(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"FrontEnd_C">();
+		return StaticBPGeneratedClassImpl<"Frontend_C">();
 	}
-	static class AFrontEnd_C* GetDefaultObj()
+	static class AFrontend_C* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AFrontEnd_C>();
+		return GetDefaultObjImpl<AFrontend_C>();
 	}
 };
-static_assert(alignof(AFrontEnd_C) == 0x000008, "Wrong alignment on AFrontEnd_C");
-static_assert(sizeof(AFrontEnd_C) == 0x000270, "Wrong size on AFrontEnd_C");
-static_assert(offsetof(AFrontEnd_C, UberGraphFrame) == 0x000258, "Member 'AFrontEnd_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AFrontEnd_C, NewLobby) == 0x000260, "Member 'AFrontEnd_C::NewLobby' has a wrong offset!");
-static_assert(offsetof(AFrontEnd_C, HBOnboardingFlow_ExecuteUbergraph_Frontend_RefProperty) == 0x000268, "Member 'AFrontEnd_C::HBOnboardingFlow_ExecuteUbergraph_Frontend_RefProperty' has a wrong offset!");
 
 }
 

@@ -20,8 +20,8 @@ namespace SDK
 // Function ShowdownTournamentDetailsScoringRule.ShowdownTournamentDetailsScoringRule_C.SetData
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortShowdownScoringRuleInfo     ScoreRule                                              (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FFortTournamentDisplayInfo       TournamentDisplayInfo                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortShowdownScoringRuleInfo&ScoreRule                                              (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortTournamentDisplayInfo&TournamentDisplayInfo                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UShowdownTournamentDetailsScoringRule_C::SetData(const struct FFortShowdownScoringRuleInfo& ScoreRule, const struct FFortTournamentDisplayInfo& TournamentDisplayInfo)
 {

@@ -19,28 +19,28 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaDirectAcquisitionOffer_SpecialBanner.AthenaDirectAcquisitionOffer_SpecialBanner_C
-// 0x0068 (0x0298 - 0x0230)
+// 0x0068 (0x02C8 - 0x0260)
 class UAthenaDirectAcquisitionOffer_SpecialBanner_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0230(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonBorder*                          Border_SaleInfo;                                   // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HB_BattlePassStarsSupplemental;                    // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_BattleStarSupplemental;                      // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       T_BattleStarInfoSupplemental;                      // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       T_SaleInfo;                                        // 0x0258(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_Main;                               // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bShowBanner;                                       // 0x0268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bHasBattlePassStars;                               // 0x0269(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_26A[0x6];                                      // 0x026A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   SalesInfoText;                                     // 0x0270(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         NumOfBattlePassStars;                              // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCatalogMessaging*                      CatalogMessaging;                                  // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonBorder*                          Border_SaleInfo;                                   // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HB_BattlePassStarsSupplemental;                    // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_BattleStarSupplemental;                      // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       T_BattleStarInfoSupplemental;                      // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       T_SaleInfo;                                        // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_Main;                               // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bShowBanner;                                       // 0x0298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bHasBattlePassStars;                               // 0x0299(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_29A[0x6];                                      // 0x029A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   SalesInfoText;                                     // 0x02A0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         NumOfBattlePassStars;                              // 0x02B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2BC[0x4];                                      // 0x02BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCatalogMessaging*                      CatalogMessaging;                                  // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetupSpecialOfferBanner(bool bHasSale, const class FText& SaleText, const class FString& BannerOverrideTag, bool bHasBattlePassStars_0, int32 iNumOfBattlePassStars);
 	void ExecuteUbergraph_AthenaDirectAcquisitionOffer_SpecialBanner(int32 EntryPoint);
+	void SetupSpecialOfferBanner(bool bHasSale, const class FText& SaleText, const class FString& BannerOverrideTag, bool bHasBattlePassStars_0, int32 iNumOfBattlePassStars);
 
 public:
 	static class UClass* StaticClass()
@@ -52,20 +52,6 @@ public:
 		return GetDefaultObjImpl<UAthenaDirectAcquisitionOffer_SpecialBanner_C>();
 	}
 };
-static_assert(alignof(UAthenaDirectAcquisitionOffer_SpecialBanner_C) == 0x000008, "Wrong alignment on UAthenaDirectAcquisitionOffer_SpecialBanner_C");
-static_assert(sizeof(UAthenaDirectAcquisitionOffer_SpecialBanner_C) == 0x000298, "Wrong size on UAthenaDirectAcquisitionOffer_SpecialBanner_C");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, UberGraphFrame) == 0x000230, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, Border_SaleInfo) == 0x000238, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::Border_SaleInfo' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, HB_BattlePassStarsSupplemental) == 0x000240, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::HB_BattlePassStarsSupplemental' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, Image_BattleStarSupplemental) == 0x000248, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::Image_BattleStarSupplemental' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, T_BattleStarInfoSupplemental) == 0x000250, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::T_BattleStarInfoSupplemental' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, T_SaleInfo) == 0x000258, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::T_SaleInfo' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, WidgetSwitcher_Main) == 0x000260, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::WidgetSwitcher_Main' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, bShowBanner) == 0x000268, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::bShowBanner' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, bHasBattlePassStars) == 0x000269, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::bHasBattlePassStars' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, SalesInfoText) == 0x000270, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::SalesInfoText' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, NumOfBattlePassStars) == 0x000288, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::NumOfBattlePassStars' has a wrong offset!");
-static_assert(offsetof(UAthenaDirectAcquisitionOffer_SpecialBanner_C, CatalogMessaging) == 0x000290, "Member 'UAthenaDirectAcquisitionOffer_SpecialBanner_C::CatalogMessaging' has a wrong offset!");
 
 }
 

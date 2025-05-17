@@ -19,14 +19,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CameraLens_Lava_Bouncing.B_CameraLens_Lava_Bouncing_C
-// 0x0030 (0x0330 - 0x0300)
+// 0x0030 (0x0310 - 0x02E0)
 class AB_CameraLens_Lava_Bouncing_C final : public AEmitterCameraLensEffectBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*               P_Camera_Lava_Bouncing;                            // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 VelocityActor;                                     // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                TargetRot;                                         // 0x0318(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               P_Camera_Lava_Bouncing;                            // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 VelocityActor;                                     // 0x02F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                TargetRot;                                         // 0x02F8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_B_CameraLens_Lava_Bouncing(int32 EntryPoint);
@@ -42,12 +42,6 @@ public:
 		return GetDefaultObjImpl<AB_CameraLens_Lava_Bouncing_C>();
 	}
 };
-static_assert(alignof(AB_CameraLens_Lava_Bouncing_C) == 0x000010, "Wrong alignment on AB_CameraLens_Lava_Bouncing_C");
-static_assert(sizeof(AB_CameraLens_Lava_Bouncing_C) == 0x000330, "Wrong size on AB_CameraLens_Lava_Bouncing_C");
-static_assert(offsetof(AB_CameraLens_Lava_Bouncing_C, UberGraphFrame) == 0x000300, "Member 'AB_CameraLens_Lava_Bouncing_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_CameraLens_Lava_Bouncing_C, P_Camera_Lava_Bouncing) == 0x000308, "Member 'AB_CameraLens_Lava_Bouncing_C::P_Camera_Lava_Bouncing' has a wrong offset!");
-static_assert(offsetof(AB_CameraLens_Lava_Bouncing_C, VelocityActor) == 0x000310, "Member 'AB_CameraLens_Lava_Bouncing_C::VelocityActor' has a wrong offset!");
-static_assert(offsetof(AB_CameraLens_Lava_Bouncing_C, TargetRot) == 0x000318, "Member 'AB_CameraLens_Lava_Bouncing_C::TargetRot' has a wrong offset!");
 
 }
 

@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function EventMatchHistoryTournamentInfo.EventMatchHistoryTournamentInfo_C.RefreshDataBP
-// (Event, Protected, BlueprintEvent)
-
-void UEventMatchHistoryTournamentInfo_C::RefreshDataBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventMatchHistoryTournamentInfo_C", "RefreshDataBP");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function EventMatchHistoryTournamentInfo.EventMatchHistoryTournamentInfo_C.ExecuteUbergraph_EventMatchHistoryTournamentInfo
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -48,6 +34,20 @@ void UEventMatchHistoryTournamentInfo_C::ExecuteUbergraph_EventMatchHistoryTourn
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventMatchHistoryTournamentInfo.EventMatchHistoryTournamentInfo_C.RefreshDataBP
+// (Event, Protected, BlueprintEvent)
+
+void UEventMatchHistoryTournamentInfo_C::RefreshDataBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventMatchHistoryTournamentInfo_C", "RefreshDataBP");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -11,34 +11,33 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
-#include "FortniteGame_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass WrapBandages_Prop_AnimBP.WrapBandages_Prop_AnimBP_C
-// 0x02F8 (0x0560 - 0x0268)
-class UWrapBandages_Prop_AnimBP_C final : public UAnimInstance
+// 0x0310 (0x0600 - 0x02F0)
+class UWrapBandages_Prop_AnimBP_C final : public UFortItemAnimInstance
 {
 public:
-	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root_5542383742DA5238F8A178848A7C8FD7; // 0x0278(0x0020)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_8B69A99142C5520097614183EAC7D467; // 0x0298(0x0078)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_9B269E1E4E036D2064B0DE9B141A5FA7; // 0x0310(0x0048)()
-	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum_ECF34B08453D54989318B1AA42733840; // 0x0358(0x00B0)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_0011D2534D31C2D5F2559C9C9E1174F5; // 0x0408(0x00B8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_C3A0993548249B24D187929033166E8F; // 0x04C0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_F17D123C4EB3DE0C42DC5ABC4130E5DE; // 0x04E8(0x0028)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_F32F7F1D429948AD568109AEBA7E7315; // 0x0510(0x0048)()
-	EFortCustomGender                             Gender;                                            // 0x0558(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0300(0x0030)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0330(0x0078)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x03A8(0x0048)()
+	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x03F0(0x00B0)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x04A0(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x0568(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x0590(0x0028)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x05B8(0x0048)()
 
 public:
 	void ExecuteUbergraph_WrapBandages_Prop_AnimBP(int32 EntryPoint);
-	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -50,18 +49,6 @@ public:
 		return GetDefaultObjImpl<UWrapBandages_Prop_AnimBP_C>();
 	}
 };
-static_assert(alignof(UWrapBandages_Prop_AnimBP_C) == 0x000008, "Wrong alignment on UWrapBandages_Prop_AnimBP_C");
-static_assert(sizeof(UWrapBandages_Prop_AnimBP_C) == 0x000560, "Wrong size on UWrapBandages_Prop_AnimBP_C");
-static_assert(offsetof(UWrapBandages_Prop_AnimBP_C, UberGraphFrame) == 0x000270, "Member 'UWrapBandages_Prop_AnimBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWrapBandages_Prop_AnimBP_C, AnimGraphNode_Root_5542383742DA5238F8A178848A7C8FD7) == 0x000278, "Member 'UWrapBandages_Prop_AnimBP_C::AnimGraphNode_Root_5542383742DA5238F8A178848A7C8FD7' has a wrong offset!");
-static_assert(offsetof(UWrapBandages_Prop_AnimBP_C, AnimGraphNode_SequencePlayer_8B69A99142C5520097614183EAC7D467) == 0x000298, "Member 'UWrapBandages_Prop_AnimBP_C::AnimGraphNode_SequencePlayer_8B69A99142C5520097614183EAC7D467' has a wrong offset!");
-static_assert(offsetof(UWrapBandages_Prop_AnimBP_C, AnimGraphNode_Slot_9B269E1E4E036D2064B0DE9B141A5FA7) == 0x000310, "Member 'UWrapBandages_Prop_AnimBP_C::AnimGraphNode_Slot_9B269E1E4E036D2064B0DE9B141A5FA7' has a wrong offset!");
-static_assert(offsetof(UWrapBandages_Prop_AnimBP_C, AnimGraphNode_BlendListByEnum_ECF34B08453D54989318B1AA42733840) == 0x000358, "Member 'UWrapBandages_Prop_AnimBP_C::AnimGraphNode_BlendListByEnum_ECF34B08453D54989318B1AA42733840' has a wrong offset!");
-static_assert(offsetof(UWrapBandages_Prop_AnimBP_C, AnimGraphNode_SaveCachedPose_0011D2534D31C2D5F2559C9C9E1174F5) == 0x000408, "Member 'UWrapBandages_Prop_AnimBP_C::AnimGraphNode_SaveCachedPose_0011D2534D31C2D5F2559C9C9E1174F5' has a wrong offset!");
-static_assert(offsetof(UWrapBandages_Prop_AnimBP_C, AnimGraphNode_UseCachedPose_C3A0993548249B24D187929033166E8F) == 0x0004C0, "Member 'UWrapBandages_Prop_AnimBP_C::AnimGraphNode_UseCachedPose_C3A0993548249B24D187929033166E8F' has a wrong offset!");
-static_assert(offsetof(UWrapBandages_Prop_AnimBP_C, AnimGraphNode_UseCachedPose_F17D123C4EB3DE0C42DC5ABC4130E5DE) == 0x0004E8, "Member 'UWrapBandages_Prop_AnimBP_C::AnimGraphNode_UseCachedPose_F17D123C4EB3DE0C42DC5ABC4130E5DE' has a wrong offset!");
-static_assert(offsetof(UWrapBandages_Prop_AnimBP_C, AnimGraphNode_Slot_F32F7F1D429948AD568109AEBA7E7315) == 0x000510, "Member 'UWrapBandages_Prop_AnimBP_C::AnimGraphNode_Slot_F32F7F1D429948AD568109AEBA7E7315' has a wrong offset!");
-static_assert(offsetof(UWrapBandages_Prop_AnimBP_C, Gender) == 0x000558, "Member 'UWrapBandages_Prop_AnimBP_C::Gender' has a wrong offset!");
 
 }
 

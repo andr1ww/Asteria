@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass DA_Glider_Item.DA_Glider_Item_C
-// 0x0068 (0x0A18 - 0x09B0)
+// 0x0068 (0x0DA8 - 0x0D40)
 class ADA_Glider_Item_C final : public AFortCustomizableAbilityDecoTool
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayTagContainer                  ErrorReason;                                       // 0x09B8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTagContainer                  ErrorReasonGamepad;                                // 0x09D8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTagContainer                  ErrorCannotUse;                                    // 0x09F8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayTagContainer                  ErrorReason;                                       // 0x0D48(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTagContainer                  ErrorReasonGamepad;                                // 0x0D68(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTagContainer                  ErrorCannotUse;                                    // 0x0D88(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_DA_Glider_Item(int32 EntryPoint);
@@ -44,12 +44,6 @@ public:
 		return GetDefaultObjImpl<ADA_Glider_Item_C>();
 	}
 };
-static_assert(alignof(ADA_Glider_Item_C) == 0x000008, "Wrong alignment on ADA_Glider_Item_C");
-static_assert(sizeof(ADA_Glider_Item_C) == 0x000A18, "Wrong size on ADA_Glider_Item_C");
-static_assert(offsetof(ADA_Glider_Item_C, UberGraphFrame) == 0x0009B0, "Member 'ADA_Glider_Item_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ADA_Glider_Item_C, ErrorReason) == 0x0009B8, "Member 'ADA_Glider_Item_C::ErrorReason' has a wrong offset!");
-static_assert(offsetof(ADA_Glider_Item_C, ErrorReasonGamepad) == 0x0009D8, "Member 'ADA_Glider_Item_C::ErrorReasonGamepad' has a wrong offset!");
-static_assert(offsetof(ADA_Glider_Item_C, ErrorCannotUse) == 0x0009F8, "Member 'ADA_Glider_Item_C::ErrorCannotUse' has a wrong offset!");
 
 }
 

@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass StorePinataMaster_Parent.StorePinataMaster_Parent_C
-// 0x0010 (0x0250 - 0x0240)
-class AStorePinataMaster_Parent_C : public AActor
+// 0x0010 (0x0230 - 0x0220)
+class AStorePinataMaster_Parent_C final : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        PinataSceneRoot;                                   // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        PinataSceneRoot;                                   // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void InitiatePinata();
-	void CameraTransitionComplete();
 	void CameraResetComplete();
+	void CameraTransitionComplete();
 	void ExecuteUbergraph_StorePinataMaster_Parent(int32 EntryPoint);
 
 public:
@@ -41,10 +41,6 @@ public:
 		return GetDefaultObjImpl<AStorePinataMaster_Parent_C>();
 	}
 };
-static_assert(alignof(AStorePinataMaster_Parent_C) == 0x000008, "Wrong alignment on AStorePinataMaster_Parent_C");
-static_assert(sizeof(AStorePinataMaster_Parent_C) == 0x000250, "Wrong size on AStorePinataMaster_Parent_C");
-static_assert(offsetof(AStorePinataMaster_Parent_C, UberGraphFrame) == 0x000240, "Member 'AStorePinataMaster_Parent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AStorePinataMaster_Parent_C, PinataSceneRoot) == 0x000248, "Member 'AStorePinataMaster_Parent_C::PinataSceneRoot' has a wrong offset!");
 
 }
 

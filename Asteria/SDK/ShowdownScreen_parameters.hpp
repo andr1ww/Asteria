@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
@@ -18,71 +19,90 @@
 namespace SDK::Params
 {
 
-// Function ShowdownScreen.ShowdownScreen_C.BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct ShowdownScreen_C_BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature final
+// Function ShowdownScreen.ShowdownScreen_C.ExecuteUbergraph_ShowdownScreen
+// 0x0170 (0x0170 - 0x0000)
+struct ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen final
 {
 public:
-	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle;              // 0x0008(0x0010)(NoDestructor)
+	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_ComponentBoundEvent_CurrentOffset;          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable;                                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                K2Node_Select_Default;                             // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bUsingGamepad;                        // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_51[0xF];                                       // 0x0051(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               CallFunc_GetSafeZonePadding_SafePadding;           // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_GetSafeZonePadding_SafePaddingScale;      // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               CallFunc_GetSafeZonePadding_SpillOverPadding;      // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UOverlaySlot*                           CallFunc_SlotAsOverlaySlot_ReturnValue;            // 0x0090(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonButton*                          K2Node_ComponentBoundEvent_Button;                 // 0x0098(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCommonButton*                          K2Node_ComponentBoundEvent_Button_1;               // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_2;        // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_3;        // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x00B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UWidget*                                K2Node_CustomEvent_CurrentWidget;                  // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UShowdownTournamentTile_C*              K2Node_DynamicCast_AsShowdown_Tournament_Tile;     // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UShowdownTournamentTile_C*              K2Node_DynamicCast_AsShowdown_Tournament_Tile_1;   // 0x00F0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetChildIndex_ReturnValue;                // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetChildrenCount_ReturnValue_1;           // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x010D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_10E[0x2];                                      // 0x010E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0115(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0116(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_117[0x1];                                      // 0x0117(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0118(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0155(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0156(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bFrontIsSelected;                     // 0x0157(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bEndIsSelected;                       // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDataTableRowHandle                    K2Node_MakeStruct_DataTableRowHandle_1;            // 0x0160(0x0010)(NoDestructor)
 };
-static_assert(alignof(ShowdownScreen_C_BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on ShowdownScreen_C_BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-static_assert(sizeof(ShowdownScreen_C_BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on ShowdownScreen_C_BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-static_assert(offsetof(ShowdownScreen_C_BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature, Button) == 0x000000, "Member 'ShowdownScreen_C_BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature::Button' has a wrong offset!");
 
-// Function ShowdownScreen.ShowdownScreen_C.BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct ShowdownScreen_C_BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature final
-{
-public:
-	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ShowdownScreen_C_BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on ShowdownScreen_C_BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
-static_assert(sizeof(ShowdownScreen_C_BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on ShowdownScreen_C_BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
-static_assert(offsetof(ShowdownScreen_C_BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature, Button) == 0x000000, "Member 'ShowdownScreen_C_BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function ShowdownScreen.ShowdownScreen_C.BndEvt__ScrollBox_TournamentList_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct ShowdownScreen_C_BndEvt__ScrollBox_TournamentList_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature final
-{
-public:
-	float                                         CurrentOffset;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ShowdownScreen_C_BndEvt__ScrollBox_TournamentList_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature) == 0x000004, "Wrong alignment on ShowdownScreen_C_BndEvt__ScrollBox_TournamentList_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature");
-static_assert(sizeof(ShowdownScreen_C_BndEvt__ScrollBox_TournamentList_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature) == 0x000004, "Wrong size on ShowdownScreen_C_BndEvt__ScrollBox_TournamentList_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature");
-static_assert(offsetof(ShowdownScreen_C_BndEvt__ScrollBox_TournamentList_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature, CurrentOffset) == 0x000000, "Member 'ShowdownScreen_C_BndEvt__ScrollBox_TournamentList_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature::CurrentOffset' has a wrong offset!");
-
-// Function ShowdownScreen.ShowdownScreen_C.PreConstruct
+// Function ShowdownScreen.ShowdownScreen_C.SelectedEndTournament
 // 0x0001 (0x0001 - 0x0000)
-struct ShowdownScreen_C_PreConstruct final
+struct ShowdownScreen_C_SelectedEndTournament final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bEndIsSelected;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ShowdownScreen_C_PreConstruct) == 0x000001, "Wrong alignment on ShowdownScreen_C_PreConstruct");
-static_assert(sizeof(ShowdownScreen_C_PreConstruct) == 0x000001, "Wrong size on ShowdownScreen_C_PreConstruct");
-static_assert(offsetof(ShowdownScreen_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'ShowdownScreen_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
-// Function ShowdownScreen.ShowdownScreen_C.OnInputModeChanged
+// Function ShowdownScreen.ShowdownScreen_C.SelectedFrontTournament
 // 0x0001 (0x0001 - 0x0000)
-struct ShowdownScreen_C_OnInputModeChanged final
+struct ShowdownScreen_C_SelectedFrontTournament final
 {
 public:
-	bool                                          bUsingGamepad;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bFrontIsSelected;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ShowdownScreen_C_OnInputModeChanged) == 0x000001, "Wrong alignment on ShowdownScreen_C_OnInputModeChanged");
-static_assert(sizeof(ShowdownScreen_C_OnInputModeChanged) == 0x000001, "Wrong size on ShowdownScreen_C_OnInputModeChanged");
-static_assert(offsetof(ShowdownScreen_C_OnInputModeChanged, bUsingGamepad) == 0x000000, "Member 'ShowdownScreen_C_OnInputModeChanged::bUsingGamepad' has a wrong offset!");
-
-// Function ShowdownScreen.ShowdownScreen_C.TournamentListSelect
-// 0x0008 (0x0008 - 0x0000)
-struct ShowdownScreen_C_TournamentListSelect final
-{
-public:
-	class UWidget*                                CurrentWidget;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ShowdownScreen_C_TournamentListSelect) == 0x000008, "Wrong alignment on ShowdownScreen_C_TournamentListSelect");
-static_assert(sizeof(ShowdownScreen_C_TournamentListSelect) == 0x000008, "Wrong size on ShowdownScreen_C_TournamentListSelect");
-static_assert(offsetof(ShowdownScreen_C_TournamentListSelect, CurrentWidget) == 0x000000, "Member 'ShowdownScreen_C_TournamentListSelect::CurrentWidget' has a wrong offset!");
 
 // Function ShowdownScreen.ShowdownScreen_C.Tick
 // 0x003C (0x003C - 0x0000)
@@ -92,145 +112,54 @@ public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ShowdownScreen_C_Tick) == 0x000004, "Wrong alignment on ShowdownScreen_C_Tick");
-static_assert(sizeof(ShowdownScreen_C_Tick) == 0x00003C, "Wrong size on ShowdownScreen_C_Tick");
-static_assert(offsetof(ShowdownScreen_C_Tick, MyGeometry) == 0x000000, "Member 'ShowdownScreen_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_Tick, InDeltaTime) == 0x000038, "Member 'ShowdownScreen_C_Tick::InDeltaTime' has a wrong offset!");
 
-// Function ShowdownScreen.ShowdownScreen_C.SelectedFrontTournament
+// Function ShowdownScreen.ShowdownScreen_C.TournamentListSelect
+// 0x0008 (0x0008 - 0x0000)
+struct ShowdownScreen_C_TournamentListSelect final
+{
+public:
+	class UWidget*                                CurrentWidget;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ShowdownScreen.ShowdownScreen_C.OnInputModeChanged
 // 0x0001 (0x0001 - 0x0000)
-struct ShowdownScreen_C_SelectedFrontTournament final
+struct ShowdownScreen_C_OnInputModeChanged final
 {
 public:
-	bool                                          bFrontIsSelected;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bUsingGamepad;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ShowdownScreen_C_SelectedFrontTournament) == 0x000001, "Wrong alignment on ShowdownScreen_C_SelectedFrontTournament");
-static_assert(sizeof(ShowdownScreen_C_SelectedFrontTournament) == 0x000001, "Wrong size on ShowdownScreen_C_SelectedFrontTournament");
-static_assert(offsetof(ShowdownScreen_C_SelectedFrontTournament, bFrontIsSelected) == 0x000000, "Member 'ShowdownScreen_C_SelectedFrontTournament::bFrontIsSelected' has a wrong offset!");
 
-// Function ShowdownScreen.ShowdownScreen_C.SelectedEndTournament
+// Function ShowdownScreen.ShowdownScreen_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
-struct ShowdownScreen_C_SelectedEndTournament final
+struct ShowdownScreen_C_PreConstruct final
 {
 public:
-	bool                                          bEndIsSelected;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ShowdownScreen_C_SelectedEndTournament) == 0x000001, "Wrong alignment on ShowdownScreen_C_SelectedEndTournament");
-static_assert(sizeof(ShowdownScreen_C_SelectedEndTournament) == 0x000001, "Wrong size on ShowdownScreen_C_SelectedEndTournament");
-static_assert(offsetof(ShowdownScreen_C_SelectedEndTournament, bEndIsSelected) == 0x000000, "Member 'ShowdownScreen_C_SelectedEndTournament::bEndIsSelected' has a wrong offset!");
 
-// Function ShowdownScreen.ShowdownScreen_C.ExecuteUbergraph_ShowdownScreen
-// 0x0140 (0x0140 - 0x0000)
-struct ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen final
+// Function ShowdownScreen.ShowdownScreen_C.BndEvt__ScrollBox_TournamentList_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct ShowdownScreen_C_BndEvt__ScrollBox_TournamentList_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_ComponentBoundEvent_CurrentOffset;          // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortFrontEndContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                K2Node_Select_Default;                             // 0x0030(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bUsingGamepad;                        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               CallFunc_GetSafeZonePadding_SafePadding;           // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_GetSafeZonePadding_SafePaddingScale;      // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector4                               CallFunc_GetSafeZonePadding_SpillOverPadding;      // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UOverlaySlot*                           CallFunc_SlotAsOverlaySlot_ReturnValue;            // 0x0070(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCommonButton*                          K2Node_ComponentBoundEvent_Button;                 // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCommonButton*                          K2Node_ComponentBoundEvent_Button_1;               // 0x0080(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_2;        // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_3;        // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0098(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class UWidget*                                K2Node_CustomEvent_CurrentWidget;                  // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UShowdownTournamentTile_C*              K2Node_DynamicCast_AsShowdown_Tournament_Tile;     // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C9[0x7];                                       // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UShowdownTournamentTile_C*              K2Node_DynamicCast_AsShowdown_Tournament_Tile_1;   // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetChildIndex_ReturnValue;                // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetChildrenCount_ReturnValue_1;           // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_EE[0x2];                                       // 0x00EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x00F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x00F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x00F6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F7[0x1];                                       // 0x00F7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x00F8(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0134(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0135(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0136(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bFrontIsSelected;                     // 0x0137(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bEndIsSelected;                       // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CurrentOffset;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen) == 0x000010, "Wrong alignment on ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen");
-static_assert(sizeof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen) == 0x000140, "Wrong size on ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, EntryPoint) == 0x000000, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_GetChildrenCount_ReturnValue) == 0x000004, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_GetChildrenCount_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_Greater_IntInt_ReturnValue) == 0x000008, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_ComponentBoundEvent_CurrentOffset) == 0x00000C, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_ComponentBoundEvent_CurrentOffset' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_PlayAnimation_ReturnValue) == 0x000010, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_Event_IsDesignTime) == 0x000018, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, Temp_int_Variable) == 0x00001C, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_GetContext_ReturnValue) == 0x000020, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_GetContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_Add_IntInt_ReturnValue) == 0x000028, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, Temp_bool_Variable) == 0x00002C, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_Select_Default) == 0x000030, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_Event_bUsingGamepad) == 0x000038, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_Event_bUsingGamepad' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_GetSafeZonePadding_SafePadding) == 0x000040, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_GetSafeZonePadding_SafePadding' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_GetSafeZonePadding_SafePaddingScale) == 0x000050, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_GetSafeZonePadding_SafePaddingScale' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_GetSafeZonePadding_SpillOverPadding) == 0x000060, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_GetSafeZonePadding_SpillOverPadding' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_SlotAsOverlaySlot_ReturnValue) == 0x000070, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_SlotAsOverlaySlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_ComponentBoundEvent_Button) == 0x000078, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_ComponentBoundEvent_Button_1) == 0x000080, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000088, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x00008C, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_Subtract_FloatFloat_ReturnValue_2) == 0x000090, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_Subtract_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_Subtract_FloatFloat_ReturnValue_3) == 0x000094, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_Subtract_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_MakeStruct_Margin) == 0x000098, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_MakeStruct_Margin' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_CustomEvent_CurrentWidget) == 0x0000A8, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_CustomEvent_CurrentWidget' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, Temp_byte_Variable) == 0x0000B0, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_GetChildAt_ReturnValue) == 0x0000B8, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_DynamicCast_AsShowdown_Tournament_Tile) == 0x0000C0, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_DynamicCast_AsShowdown_Tournament_Tile' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_DynamicCast_bSuccess) == 0x0000C8, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_DynamicCast_AsShowdown_Tournament_Tile_1) == 0x0000D0, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_DynamicCast_AsShowdown_Tournament_Tile_1' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_DynamicCast_bSuccess_1) == 0x0000D8, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_GetChildIndex_ReturnValue) == 0x0000DC, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_GetChildIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_GetChildrenCount_ReturnValue_1) == 0x0000E0, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_GetChildrenCount_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000E4, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x0000E8, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_Less_IntInt_ReturnValue) == 0x0000EC, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000ED, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000F0, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0000F4, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, Temp_byte_Variable_1) == 0x0000F5, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_BooleanOR_ReturnValue) == 0x0000F6, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_Event_MyGeometry) == 0x0000F8, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_Event_InDeltaTime) == 0x000130, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_Event_InDeltaTime' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, Temp_bool_Variable_1) == 0x000134, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, CallFunc_IsValid_ReturnValue) == 0x000135, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_Select_Default_1) == 0x000136, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_Event_bFrontIsSelected) == 0x000137, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_Event_bFrontIsSelected' has a wrong offset!");
-static_assert(offsetof(ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen, K2Node_Event_bEndIsSelected) == 0x000138, "Member 'ShowdownScreen_C_ExecuteUbergraph_ShowdownScreen::K2Node_Event_bEndIsSelected' has a wrong offset!");
+
+// Function ShowdownScreen.ShowdownScreen_C.BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct ShowdownScreen_C_BndEvt__CircleArrowButton_Right_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature final
+{
+public:
+	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ShowdownScreen.ShowdownScreen_C.BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct ShowdownScreen_C_BndEvt__CircleArrowButton_Left_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature final
+{
+public:
+	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 }
 

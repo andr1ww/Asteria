@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CameraLens_Victory_Ally.B_CameraLens_Victory_Ally_C
-// 0x0000 (0x0300 - 0x0300)
+// 0x0000 (0x02E0 - 0x02E0)
 class AB_CameraLens_Victory_Ally_C final : public AEmitterCameraLensEffectBase
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<AB_CameraLens_Victory_Ally_C>();
 	}
 };
-static_assert(alignof(AB_CameraLens_Victory_Ally_C) == 0x000010, "Wrong alignment on AB_CameraLens_Victory_Ally_C");
-static_assert(sizeof(AB_CameraLens_Victory_Ally_C) == 0x000300, "Wrong size on AB_CameraLens_Victory_Ally_C");
 
 }
 

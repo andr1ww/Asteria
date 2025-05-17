@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "OnlineSubsystemUtils_classes.hpp"
 #include "ReplicationGraph_structs.hpp"
 #include "ReplicationGraph_classes.hpp"
@@ -21,17 +22,22 @@ namespace SDK
 {
 
 // Class MeshNetwork.MeshBeaconClient
-// 0x0038 (0x02F8 - 0x02C0)
+// 0x0070 (0x0320 - 0x02B0)
 class AMeshBeaconClient : public AOnlineBeaconClient
 {
 public:
-	uint8                                         Pad_2C0[0x20];                                     // 0x02C0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bConnectedToRoot;                                  // 0x02E0(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E1[0x17];                                     // 0x02E1(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B0[0x40];                                     // 0x02B0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bConnectedToRoot;                                  // 0x02F0(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2F1[0x7];                                      // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              MeshPingTime;                                      // 0x02F8(0x0008)(Net, ZeroConstructor, RepNotify, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class FString>                         ParentIds;                                         // 0x0300(0x0010)(Net, ZeroConstructor, RepNotify, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_310[0x10];                                     // 0x0310(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnRep_ConnectedToRoot();
-	void ServerUpdateLevelVisibility(class FName PackageName, bool bIsVisible);
+	void OnRep_MeshPingTime();
+	void OnRep_ParentIds();
+	void ServerUpdateLevelVisibility(const struct FUpdateLevelVisibilityLevelInfo& LevelVisibility);
 	void ServerUpdateMultipleLevelsVisibility(const TArray<struct FUpdateLevelVisibilityLevelInfo>& LevelVisibilities);
 
 public:
@@ -44,17 +50,14 @@ public:
 		return GetDefaultObjImpl<AMeshBeaconClient>();
 	}
 };
-static_assert(alignof(AMeshBeaconClient) == 0x000008, "Wrong alignment on AMeshBeaconClient");
-static_assert(sizeof(AMeshBeaconClient) == 0x0002F8, "Wrong size on AMeshBeaconClient");
-static_assert(offsetof(AMeshBeaconClient, bConnectedToRoot) == 0x0002E0, "Member 'AMeshBeaconClient::bConnectedToRoot' has a wrong offset!");
 
 // Class MeshNetwork.MeshBeaconHost
-// 0x0008 (0x0330 - 0x0328)
+// 0x0008 (0x0310 - 0x0308)
 class AMeshBeaconHost : public AOnlineBeaconHost
 {
 public:
-	int32                                         MaxConnections;                                    // 0x0328(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_32C[0x4];                                      // 0x032C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         MaxConnections;                                    // 0x0308(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_30C[0x4];                                      // 0x030C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -66,19 +69,14 @@ public:
 		return GetDefaultObjImpl<AMeshBeaconHost>();
 	}
 };
-static_assert(alignof(AMeshBeaconHost) == 0x000008, "Wrong alignment on AMeshBeaconHost");
-static_assert(sizeof(AMeshBeaconHost) == 0x000330, "Wrong size on AMeshBeaconHost");
-static_assert(offsetof(AMeshBeaconHost, MaxConnections) == 0x000328, "Member 'AMeshBeaconHost::MaxConnections' has a wrong offset!");
 
 // Class MeshNetwork.MeshReplicationGraphNode_AlwaysRelevant_ForConnection
-// 0x0038 (0x0130 - 0x00F8)
+// 0x0020 (0x00F0 - 0x00D0)
 class UMeshReplicationGraphNode_AlwaysRelevant_ForConnection final : public UReplicationGraphNode_ActorList
 {
 public:
-	uint8                                         Pad_F8[0x18];                                      // 0x00F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAlwaysRelevantActorInfo>       PastRelevantActors;                                // 0x0110(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class AActor*                                 LastViewer;                                        // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 LastViewTarget;                                    // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D0[0x10];                                      // 0x00D0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAlwaysRelevantActorInfo>       PastRelevantActors;                                // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -90,18 +88,13 @@ public:
 		return GetDefaultObjImpl<UMeshReplicationGraphNode_AlwaysRelevant_ForConnection>();
 	}
 };
-static_assert(alignof(UMeshReplicationGraphNode_AlwaysRelevant_ForConnection) == 0x000008, "Wrong alignment on UMeshReplicationGraphNode_AlwaysRelevant_ForConnection");
-static_assert(sizeof(UMeshReplicationGraphNode_AlwaysRelevant_ForConnection) == 0x000130, "Wrong size on UMeshReplicationGraphNode_AlwaysRelevant_ForConnection");
-static_assert(offsetof(UMeshReplicationGraphNode_AlwaysRelevant_ForConnection, PastRelevantActors) == 0x000110, "Member 'UMeshReplicationGraphNode_AlwaysRelevant_ForConnection::PastRelevantActors' has a wrong offset!");
-static_assert(offsetof(UMeshReplicationGraphNode_AlwaysRelevant_ForConnection, LastViewer) == 0x000120, "Member 'UMeshReplicationGraphNode_AlwaysRelevant_ForConnection::LastViewer' has a wrong offset!");
-static_assert(offsetof(UMeshReplicationGraphNode_AlwaysRelevant_ForConnection, LastViewTarget) == 0x000128, "Member 'UMeshReplicationGraphNode_AlwaysRelevant_ForConnection::LastViewTarget' has a wrong offset!");
 
 // Class MeshNetwork.MeshBeaconHostObject
-// 0x0008 (0x0270 - 0x0268)
+// 0x0018 (0x0260 - 0x0248)
 class AMeshBeaconHostObject : public AOnlineBeaconHostObject
 {
 public:
-	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_248[0x18];                                     // 0x0248(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -113,11 +106,9 @@ public:
 		return GetDefaultObjImpl<AMeshBeaconHostObject>();
 	}
 };
-static_assert(alignof(AMeshBeaconHostObject) == 0x000008, "Wrong alignment on AMeshBeaconHostObject");
-static_assert(sizeof(AMeshBeaconHostObject) == 0x000270, "Wrong size on AMeshBeaconHostObject");
 
 // Class MeshNetwork.MeshConnection
-// 0x0000 (0x19F0 - 0x19F0)
+// 0x0000 (0x1B50 - 0x1B50)
 class UMeshConnection final : public UIpConnection
 {
 public:
@@ -130,13 +121,14 @@ public:
 		return GetDefaultObjImpl<UMeshConnection>();
 	}
 };
-static_assert(alignof(UMeshConnection) == 0x000008, "Wrong alignment on UMeshConnection");
-static_assert(sizeof(UMeshConnection) == 0x0019F0, "Wrong size on UMeshConnection");
 
 // Class MeshNetwork.MeshNetDriver
-// 0x0000 (0x0788 - 0x0788)
+// 0x0008 (0x07C0 - 0x07B8)
 class UMeshNetDriver final : public UIpNetDriver
 {
+public:
+	uint8                                         Pad_7B8[0x8];                                      // 0x07B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -147,18 +139,19 @@ public:
 		return GetDefaultObjImpl<UMeshNetDriver>();
 	}
 };
-static_assert(alignof(UMeshNetDriver) == 0x000008, "Wrong alignment on UMeshNetDriver");
-static_assert(sizeof(UMeshNetDriver) == 0x000788, "Wrong size on UMeshNetDriver");
 
 // Class MeshNetwork.MeshNetworkComponent
-// 0x00A8 (0x0180 - 0x00D8)
-class UMeshNetworkComponent final : public UActorComponent
+// 0x0150 (0x0200 - 0x00B0)
+class UMeshNetworkComponent : public UActorComponent
 {
 public:
-	EMeshNetworkRelevancy                         MeshRelevancy;                                     // 0x00D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, double>                     AggregationTimeouts;                               // 0x00E0(0x0050)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FAggregatedFunction> AggregatedFunctions;                               // 0x0130(0x0050)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	EMeshNetworkRelevancy                         MeshRelevancy;                                     // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, double>                     AggregationTimeouts;                               // 0x00B8(0x0050)(Edit, NativeAccessSpecifierPublic)
+	TSet<class FName>                             NoAggregationFunctions;                            // 0x0108(0x0050)(Edit, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FNoAggregationParameters> NoAggregationParameters;                      // 0x0158(0x0050)(Edit, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FAggregatedFunction> AggregatedFunctions;                             // 0x01A8(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	EMeshNetworkNodeType GetMeshNetworkNodeType() const;
@@ -173,28 +166,27 @@ public:
 		return GetDefaultObjImpl<UMeshNetworkComponent>();
 	}
 };
-static_assert(alignof(UMeshNetworkComponent) == 0x000008, "Wrong alignment on UMeshNetworkComponent");
-static_assert(sizeof(UMeshNetworkComponent) == 0x000180, "Wrong size on UMeshNetworkComponent");
-static_assert(offsetof(UMeshNetworkComponent, MeshRelevancy) == 0x0000D8, "Member 'UMeshNetworkComponent::MeshRelevancy' has a wrong offset!");
-static_assert(offsetof(UMeshNetworkComponent, AggregationTimeouts) == 0x0000E0, "Member 'UMeshNetworkComponent::AggregationTimeouts' has a wrong offset!");
-static_assert(offsetof(UMeshNetworkComponent, AggregatedFunctions) == 0x000130, "Member 'UMeshNetworkComponent::AggregatedFunctions' has a wrong offset!");
 
 // Class MeshNetwork.MeshNetworkSubsystem
-// 0x00B0 (0x00E0 - 0x0030)
+// 0x00D8 (0x0108 - 0x0030)
 class UMeshNetworkSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	TMulticastInlineDelegate<void(EMeshNetworkNodeType NodeType)> OnMeshNodeTypeChanged;                             // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(bool bConnected)> OnConnectedToRootChanged;                          // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(EMeshNetworkNodeType NodeType)> OnGameServerNodeTypeChanged;                       // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(EMeshNetworkNodeType NodeType)> OnMeshNodeTypeChanged;             // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool bConnected)> OnConnectedToRootChanged;                        // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(EMeshNetworkNodeType NodeType)> OnGameServerNodeTypeChanged;       // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnMeshMetaDataUpdated;                             // 0x0060(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_70[0x18];                                      // 0x0070(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	EMeshNetworkNodeType                          NodeType;                                          // 0x0088(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EMeshNetworkNodeType                          GameServerNodeType;                                // 0x0089(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bConnectedToRoot;                                  // 0x008A(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_8B[0x55];                                      // 0x008B(0x0055)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class APlayerController* Player, class FName Tag)> OnMeshPlayerRequested; // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_80[0x30];                                      // 0x0080(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	EMeshNetworkNodeType                          NodeType;                                          // 0x00B0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EMeshNetworkNodeType                          GameServerNodeType;                                // 0x00B1(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bConnectedToRoot;                                  // 0x00B2(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bMetadataReceived;                                 // 0x00B3(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B4[0x54];                                      // 0x00B4(0x0054)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
+	void DisableMeshReplication(class AActor* Actor);
+	void EnableMeshReplication(class AActor* Actor, TSubclassOf<class UMeshNetworkComponent> MeshComponentClass);
 	void GetMetadata(struct FMeshMetaDataStruct& MetaData);
 	bool GetMetaDataWithKey(class FName Key, struct FMeshMetaDataStruct& MetaData);
 	void SetMetaData(const struct FMeshMetaDataStruct& MetaData);
@@ -214,18 +206,24 @@ public:
 		return GetDefaultObjImpl<UMeshNetworkSubsystem>();
 	}
 };
-static_assert(alignof(UMeshNetworkSubsystem) == 0x000008, "Wrong alignment on UMeshNetworkSubsystem");
-static_assert(sizeof(UMeshNetworkSubsystem) == 0x0000E0, "Wrong size on UMeshNetworkSubsystem");
-static_assert(offsetof(UMeshNetworkSubsystem, OnMeshNodeTypeChanged) == 0x000030, "Member 'UMeshNetworkSubsystem::OnMeshNodeTypeChanged' has a wrong offset!");
-static_assert(offsetof(UMeshNetworkSubsystem, OnConnectedToRootChanged) == 0x000040, "Member 'UMeshNetworkSubsystem::OnConnectedToRootChanged' has a wrong offset!");
-static_assert(offsetof(UMeshNetworkSubsystem, OnGameServerNodeTypeChanged) == 0x000050, "Member 'UMeshNetworkSubsystem::OnGameServerNodeTypeChanged' has a wrong offset!");
-static_assert(offsetof(UMeshNetworkSubsystem, OnMeshMetaDataUpdated) == 0x000060, "Member 'UMeshNetworkSubsystem::OnMeshMetaDataUpdated' has a wrong offset!");
-static_assert(offsetof(UMeshNetworkSubsystem, NodeType) == 0x000088, "Member 'UMeshNetworkSubsystem::NodeType' has a wrong offset!");
-static_assert(offsetof(UMeshNetworkSubsystem, GameServerNodeType) == 0x000089, "Member 'UMeshNetworkSubsystem::GameServerNodeType' has a wrong offset!");
-static_assert(offsetof(UMeshNetworkSubsystem, bConnectedToRoot) == 0x00008A, "Member 'UMeshNetworkSubsystem::bConnectedToRoot' has a wrong offset!");
+
+// Class MeshNetwork.MeshReplicationGraphConnection
+// 0x0000 (0x0238 - 0x0238)
+class UMeshReplicationGraphConnection final : public UNetReplicationGraphConnection
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshReplicationGraphConnection">();
+	}
+	static class UMeshReplicationGraphConnection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshReplicationGraphConnection>();
+	}
+};
 
 // Class MeshNetwork.MeshReplicationGraph
-// 0x0008 (0x04A0 - 0x0498)
+// 0x0000 (0x04A0 - 0x04A0)
 class UMeshReplicationGraph : public UReplicationGraph
 {
 public:
@@ -241,9 +239,6 @@ public:
 		return GetDefaultObjImpl<UMeshReplicationGraph>();
 	}
 };
-static_assert(alignof(UMeshReplicationGraph) == 0x000008, "Wrong alignment on UMeshReplicationGraph");
-static_assert(sizeof(UMeshReplicationGraph) == 0x0004A0, "Wrong size on UMeshReplicationGraph");
-static_assert(offsetof(UMeshReplicationGraph, AlwaysRelevantNode) == 0x000498, "Member 'UMeshReplicationGraph::AlwaysRelevantNode' has a wrong offset!");
 
 }
 

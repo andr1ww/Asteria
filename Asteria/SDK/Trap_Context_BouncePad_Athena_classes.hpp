@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Trap_Context_BouncePad_Athena.Trap_Context_BouncePad_Athena_C
-// 0x0000 (0x0C68 - 0x0C68)
+// 0x0000 (0x0D48 - 0x0D48)
 class ATrap_Context_BouncePad_Athena_C final : public ABuildingTrap
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ATrap_Context_BouncePad_Athena_C>();
 	}
 };
-static_assert(alignof(ATrap_Context_BouncePad_Athena_C) == 0x000008, "Wrong alignment on ATrap_Context_BouncePad_Athena_C");
-static_assert(sizeof(ATrap_Context_BouncePad_Athena_C) == 0x000C68, "Wrong size on ATrap_Context_BouncePad_Athena_C");
 
 }
 

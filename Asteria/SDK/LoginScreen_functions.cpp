@@ -17,29 +17,6 @@
 namespace SDK
 {
 
-// Function LoginScreen.LoginScreen_C.PopContentWidgetInternal
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FContentPushState                State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* ULoginScreen_C::PopContentWidgetInternal(const struct FContentPushState& State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LoginScreen_C", "PopContentWidgetInternal");
-
-	Params::LoginScreen_C_PopContentWidgetInternal Parms{};
-
-	Parms.State = std::move(State);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function LoginScreen.LoginScreen_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -54,93 +31,45 @@ void ULoginScreen_C::Construct()
 }
 
 
-// Function LoginScreen.LoginScreen_C.OnEnterState
-// (Event, Public, BlueprintEvent)
+// Function LoginScreen.LoginScreen_C.BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// EFortUIState                            PreviousUIState                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ActiveWidget                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ActiveWidgetIndex                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULoginScreen_C::OnEnterState(EFortUIState PreviousUIState)
+void ULoginScreen_C::BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature(class UWidget* ActiveWidget, int32 ActiveWidgetIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LoginScreen_C", "OnEnterState");
+		Func = Class->GetFunction("LoginScreen_C", "BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature");
 
-	Params::LoginScreen_C_OnEnterState Parms{};
+	Params::LoginScreen_C_BndEvt__Switcher_ScreenContents_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature Parms{};
+
+	Parms.ActiveWidget = ActiveWidget;
+	Parms.ActiveWidgetIndex = ActiveWidgetIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LoginScreen.LoginScreen_C.OnEnterState_1
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFortUIState                            PreviousUIState                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULoginScreen_C::OnEnterState_1(EFortUIState PreviousUIState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LoginScreen_C", "OnEnterState_1");
+
+	Params::LoginScreen_C_OnEnterState_1 Parms{};
 
 	Parms.PreviousUIState = PreviousUIState;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LoginScreen.LoginScreen_C.PushContentWidgetInternal
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UWidget*                          Widget                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FContentPushState                State                                                  (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-
-void ULoginScreen_C::PushContentWidgetInternal(class UWidget* Widget, const struct FContentPushState& State)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LoginScreen_C", "PushContentWidgetInternal");
-
-	Params::LoginScreen_C_PushContentWidgetInternal Parms{};
-
-	Parms.Widget = Widget;
-	Parms.State = std::move(State);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LoginScreen.LoginScreen_C.BndEvt__IconTextButton_K2Node_ComponentBoundEvent_20_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULoginScreen_C::BndEvt__IconTextButton_K2Node_ComponentBoundEvent_20_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LoginScreen_C", "BndEvt__IconTextButton_K2Node_ComponentBoundEvent_20_CommonButtonClicked__DelegateSignature");
-
-	Params::LoginScreen_C_BndEvt__IconTextButton_K2Node_ComponentBoundEvent_20_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LoginScreen.LoginScreen_C.ShowBackBar
-// (Event, Protected, BlueprintEvent)
-
-void ULoginScreen_C::ShowBackBar()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LoginScreen_C", "ShowBackBar");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function LoginScreen.LoginScreen_C.HideTopBarOptions
-// (Event, Protected, BlueprintEvent)
-
-void ULoginScreen_C::HideTopBarOptions()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LoginScreen_C", "HideTopBarOptions");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

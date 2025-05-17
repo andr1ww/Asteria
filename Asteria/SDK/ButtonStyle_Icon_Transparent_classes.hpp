@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Icon_Transparent_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_Icon_Transparent_C) == 0x000008, "Wrong alignment on UButtonStyle_Icon_Transparent_C");
-static_assert(sizeof(UButtonStyle_Icon_Transparent_C) == 0x000570, "Wrong size on UButtonStyle_Icon_Transparent_C");
 
 }
 

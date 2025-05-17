@@ -17,77 +17,21 @@
 namespace SDK
 {
 
-// Function ErrorLlama.ErrorLlama_C.ExecuteUbergraph_ErrorLlama
-// (Final, UbergraphFunction, HasDefaults)
+// Function ErrorLlama.ErrorLlama_C.HandleInputTypeChanged
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ECommonInputType                        NewInputType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UErrorLlama_C::ExecuteUbergraph_ErrorLlama(int32 EntryPoint)
+void UErrorLlama_C::HandleInputTypeChanged(ECommonInputType NewInputType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ErrorLlama_C", "ExecuteUbergraph_ErrorLlama");
+		Func = Class->GetFunction("ErrorLlama_C", "HandleInputTypeChanged");
 
-	Params::ErrorLlama_C_ExecuteUbergraph_ErrorLlama Parms{};
+	Params::ErrorLlama_C_HandleInputTypeChanged Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ErrorLlama.ErrorLlama_C.HandleNormalizedInputDirection
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FVector2D                        TwoDInputVec                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UErrorLlama_C::HandleNormalizedInputDirection(const struct FVector2D& TwoDInputVec)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ErrorLlama_C", "HandleNormalizedInputDirection");
-
-	Params::ErrorLlama_C_HandleNormalizedInputDirection Parms{};
-
-	Parms.TwoDInputVec = std::move(TwoDInputVec);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ErrorLlama.ErrorLlama_C.RandomizeColor
-// (BlueprintCallable, BlueprintEvent)
-
-void UErrorLlama_C::RandomizeColor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ErrorLlama_C", "RandomizeColor");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ErrorLlama.ErrorLlama_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UErrorLlama_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ErrorLlama_C", "Tick");
-
-	Params::ErrorLlama_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
+	Parms.NewInputType = NewInputType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -107,21 +51,77 @@ void UErrorLlama_C::Construct()
 }
 
 
-// Function ErrorLlama.ErrorLlama_C.HandleInputTypeChanged
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function ErrorLlama.ErrorLlama_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// ECommonInputType                        NewInputType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UErrorLlama_C::HandleInputTypeChanged(ECommonInputType NewInputType)
+void UErrorLlama_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ErrorLlama_C", "HandleInputTypeChanged");
+		Func = Class->GetFunction("ErrorLlama_C", "Tick");
 
-	Params::ErrorLlama_C_HandleInputTypeChanged Parms{};
+	Params::ErrorLlama_C_Tick Parms{};
 
-	Parms.NewInputType = NewInputType;
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ErrorLlama.ErrorLlama_C.RandomizeColor
+// (BlueprintCallable, BlueprintEvent)
+
+void UErrorLlama_C::RandomizeColor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ErrorLlama_C", "RandomizeColor");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ErrorLlama.ErrorLlama_C.HandleNormalizedInputDirection
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 TwoDInputVec                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UErrorLlama_C::HandleNormalizedInputDirection(const struct FVector2D& TwoDInputVec)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ErrorLlama_C", "HandleNormalizedInputDirection");
+
+	Params::ErrorLlama_C_HandleNormalizedInputDirection Parms{};
+
+	Parms.TwoDInputVec = std::move(TwoDInputVec);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ErrorLlama.ErrorLlama_C.ExecuteUbergraph_ErrorLlama
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UErrorLlama_C::ExecuteUbergraph_ErrorLlama(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ErrorLlama_C", "ExecuteUbergraph_ErrorLlama");
+
+	Params::ErrorLlama_C_ExecuteUbergraph_ErrorLlama Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

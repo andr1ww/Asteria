@@ -10,65 +10,151 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "Slate_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.OnFocusReceived
-// 0x01B8 (0x01B8 - 0x0000)
-struct FilteredTextEntryWidget_C_OnFocusReceived final
-{
-public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FFocusEvent                            InFocusEvent;                                      // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	struct FEventReply                            ReturnValue;                                       // 0x0040(0x00B8)(Parm, OutParm, ReturnParm)
-	class UFortUINavigationManager*               CallFunc_GetUINavigationManager_ReturnValue;       // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0100(0x00B8)()
-};
-static_assert(alignof(FilteredTextEntryWidget_C_OnFocusReceived) == 0x000008, "Wrong alignment on FilteredTextEntryWidget_C_OnFocusReceived");
-static_assert(sizeof(FilteredTextEntryWidget_C_OnFocusReceived) == 0x0001B8, "Wrong size on FilteredTextEntryWidget_C_OnFocusReceived");
-static_assert(offsetof(FilteredTextEntryWidget_C_OnFocusReceived, MyGeometry) == 0x000000, "Member 'FilteredTextEntryWidget_C_OnFocusReceived::MyGeometry' has a wrong offset!");
-static_assert(offsetof(FilteredTextEntryWidget_C_OnFocusReceived, InFocusEvent) == 0x000038, "Member 'FilteredTextEntryWidget_C_OnFocusReceived::InFocusEvent' has a wrong offset!");
-static_assert(offsetof(FilteredTextEntryWidget_C_OnFocusReceived, ReturnValue) == 0x000040, "Member 'FilteredTextEntryWidget_C_OnFocusReceived::ReturnValue' has a wrong offset!");
-static_assert(offsetof(FilteredTextEntryWidget_C_OnFocusReceived, CallFunc_GetUINavigationManager_ReturnValue) == 0x0000F8, "Member 'FilteredTextEntryWidget_C_OnFocusReceived::CallFunc_GetUINavigationManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FilteredTextEntryWidget_C_OnFocusReceived, CallFunc_Handled_ReturnValue) == 0x000100, "Member 'FilteredTextEntryWidget_C_OnFocusReceived::CallFunc_Handled_ReturnValue' has a wrong offset!");
-
-// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.OnDirtyTextAttempted
-// 0x0001 (0x0001 - 0x0000)
-struct FilteredTextEntryWidget_C_OnDirtyTextAttempted final
-{
-public:
-	bool                                          bIsBadText;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(FilteredTextEntryWidget_C_OnDirtyTextAttempted) == 0x000001, "Wrong alignment on FilteredTextEntryWidget_C_OnDirtyTextAttempted");
-static_assert(sizeof(FilteredTextEntryWidget_C_OnDirtyTextAttempted) == 0x000001, "Wrong size on FilteredTextEntryWidget_C_OnDirtyTextAttempted");
-static_assert(offsetof(FilteredTextEntryWidget_C_OnDirtyTextAttempted, bIsBadText) == 0x000000, "Member 'FilteredTextEntryWidget_C_OnDirtyTextAttempted::bIsBadText' has a wrong offset!");
-
 // Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.ExecuteUbergraph_FilteredTextEntryWidget
-// 0x0018 (0x0018 - 0x0000)
+// 0x01A0 (0x01A0 - 0x0000)
 struct FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsBadText;                           // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              K2Node_Select_Default;                             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsBadText;                           // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bAdditionalValidationFailed;          // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetErrorText_Appropriate_Text;            // 0x0008(0x0018)()
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x0030(0x0018)(ConstParm)
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0048(0x0038)(IsPlainOldData, NoDestructor)
+	struct FPointerEvent                          K2Node_Event_MouseEvent_1;                         // 0x0080(0x0070)(ConstParm)
+	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x00F0(0x0070)(ConstParm)
+	class FText                                   CallFunc_GetCurrentText_Text;                      // 0x0160(0x0018)()
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0180(0x0018)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod;           // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x019A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x019B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget) == 0x000008, "Wrong alignment on FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget");
-static_assert(sizeof(FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget) == 0x000018, "Wrong size on FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget");
-static_assert(offsetof(FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget, EntryPoint) == 0x000000, "Member 'FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget::EntryPoint' has a wrong offset!");
-static_assert(offsetof(FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget, Temp_bool_Variable) == 0x000004, "Member 'FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget, Temp_byte_Variable) == 0x000005, "Member 'FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget, Temp_byte_Variable_1) == 0x000006, "Member 'FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget, K2Node_Event_bIsBadText) == 0x000007, "Member 'FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget::K2Node_Event_bIsBadText' has a wrong offset!");
-static_assert(offsetof(FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget, K2Node_Select_Default) == 0x000010, "Member 'FilteredTextEntryWidget_C_ExecuteUbergraph_FilteredTextEntryWidget::K2Node_Select_Default' has a wrong offset!");
+
+// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.BndEvt__EditText_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature
+// 0x0020 (0x0020 - 0x0000)
+struct FilteredTextEntryWidget_C_BndEvt__EditText_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.OnMouseLeave
+// 0x0070 (0x0070 - 0x0000)
+struct FilteredTextEntryWidget_C_OnMouseLeave final
+{
+public:
+	struct FPointerEvent                          MouseEvent;                                        // 0x0000(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
+// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.OnMouseEnter
+// 0x00A8 (0x00A8 - 0x0000)
+struct FilteredTextEntryWidget_C_OnMouseEnter final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0070)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
+// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.BndEvt__EditText_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct FilteredTextEntryWidget_C_BndEvt__EditText_K2Node_ComponentBoundEvent_0_OnEditableTextBoxChangedEvent__DelegateSignature final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
+// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct FilteredTextEntryWidget_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.OnDirtyTextAttempted
+// 0x0002 (0x0002 - 0x0000)
+struct FilteredTextEntryWidget_C_OnDirtyTextAttempted final
+{
+public:
+	bool                                          bIsBadText;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bAdditionalValidationFailed;                       // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.UpdateConfiguration
+// 0x0050 (0x0050 - 0x0000)
+struct FilteredTextEntryWidget_C_UpdateConfiguration final
+{
+public:
+	bool                                          bOverrideStyle;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bHideValidation;                                   // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	ETextJustify                                  TextJustification;                                 // 0x0002(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldShowTextPrompt;                             // 0x0003(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   PromptDisplayText;                                 // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UClass*                                 TextStyle;                                         // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0030(0x0018)()
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.HandleShowPrompt
+// 0x0040 (0x0040 - 0x0000)
+struct FilteredTextEntryWidget_C_HandleShowPrompt final
+{
+public:
+	class FText                                   CurrentText;                                       // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetEmptyText_ReturnValue;                 // 0x0020(0x0018)()
+	bool                                          CallFunc_EqualEqual_TextText_ReturnValue;          // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default;                             // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.GetCurrentText
+// 0x0030 (0x0030 - 0x0000)
+struct FilteredTextEntryWidget_C_GetCurrentText final
+{
+public:
+	class FText                                   Text;                                              // 0x0000(0x0018)(Parm, OutParm)
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0018(0x0018)()
+};
+
+// Function FIlteredTextEntryWidget.FilteredTextEntryWidget_C.GetErrorText
+// 0x0040 (0x0040 - 0x0000)
+struct FilteredTextEntryWidget_C_GetErrorText final
+{
+public:
+	bool                                          Additional_Validator_Failed;                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   Appropriate_Text;                                  // 0x0008(0x0018)(Parm, OutParm)
+	class FText                                   Result;                                            // 0x0020(0x0018)(Edit, BlueprintVisible)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
 
 }
 

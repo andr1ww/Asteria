@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -17,9 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaVariantTileButton.AthenaVariantTileButton_C
-// 0x0000 (0x0B88 - 0x0B88)
+// 0x0008 (0x0C18 - 0x0C10)
 class UAthenaVariantTileButton_C final : public UFortVariantTileButton
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+
+public:
+	void ExecuteUbergraph_AthenaVariantTileButton(int32 EntryPoint);
+	void OnListItemObjectSet(class UObject* ListItemObject);
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -30,8 +38,6 @@ public:
 		return GetDefaultObjImpl<UAthenaVariantTileButton_C>();
 	}
 };
-static_assert(alignof(UAthenaVariantTileButton_C) == 0x000008, "Wrong alignment on UAthenaVariantTileButton_C");
-static_assert(sizeof(UAthenaVariantTileButton_C) == 0x000B88, "Wrong size on UAthenaVariantTileButton_C");
 
 }
 

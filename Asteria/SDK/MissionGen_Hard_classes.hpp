@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UMissionGen_Hard_C>();
 	}
 };
-static_assert(alignof(UMissionGen_Hard_C) == 0x000008, "Wrong alignment on UMissionGen_Hard_C");
-static_assert(sizeof(UMissionGen_Hard_C) == 0x0006C0, "Wrong size on UMissionGen_Hard_C");
 
 }
 

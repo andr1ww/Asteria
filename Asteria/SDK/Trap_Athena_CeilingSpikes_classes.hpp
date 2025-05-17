@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Trap_Athena_CeilingSpikes.Trap_Athena_CeilingSpikes_C
-// 0x0000 (0x0D28 - 0x0D28)
+// 0x0000 (0x0E70 - 0x0E70)
 class ATrap_Athena_CeilingSpikes_C final : public ATrap_Athena_Spikes_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ATrap_Athena_CeilingSpikes_C>();
 	}
 };
-static_assert(alignof(ATrap_Athena_CeilingSpikes_C) == 0x000008, "Wrong alignment on ATrap_Athena_CeilingSpikes_C");
-static_assert(sizeof(ATrap_Athena_CeilingSpikes_C) == 0x000D28, "Wrong size on ATrap_Athena_CeilingSpikes_C");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GET_KnockbackImmunityTag.GET_KnockbackImmunityTag_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGET_KnockbackImmunityTag_C final : public UGET_TagContainer_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGET_KnockbackImmunityTag_C>();
 	}
 };
-static_assert(alignof(UGET_KnockbackImmunityTag_C) == 0x000008, "Wrong alignment on UGET_KnockbackImmunityTag_C");
-static_assert(sizeof(UGET_KnockbackImmunityTag_C) == 0x0005F0, "Wrong size on UGET_KnockbackImmunityTag_C");
 
 }
 

@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -34,17 +35,6 @@ public:
 	float                                         K2Node_Event_HalfHeightAdjust;                     // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_ScaledHalfHeightAdjust;               // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent) == 0x000010, "Wrong alignment on PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent");
-static_assert(sizeof(PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent) == 0x000070, "Wrong size on PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent, EntryPoint) == 0x000000, "Member 'PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent::EntryPoint' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent, Temp_struct_Variable) == 0x000010, "Member 'PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent, CallFunc_IsLocallyControlled_ReturnValue) == 0x000040, "Member 'PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent, CallFunc_AddComponent_ReturnValue) == 0x000048, "Member 'PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent, CallFunc_IsDedicatedServer_ReturnValue) == 0x000050, "Member 'PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent, K2Node_Event_HalfHeightAdjust_1) == 0x000054, "Member 'PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent::K2Node_Event_HalfHeightAdjust_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent, K2Node_Event_ScaledHalfHeightAdjust_1) == 0x000058, "Member 'PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent::K2Node_Event_ScaledHalfHeightAdjust_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent, K2Node_Event_HalfHeightAdjust) == 0x00005C, "Member 'PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent::K2Node_Event_HalfHeightAdjust' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent, K2Node_Event_ScaledHalfHeightAdjust) == 0x000060, "Member 'PlayerPawn_Athena_Generic_Parent_C_ExecuteUbergraph_PlayerPawn_Athena_Generic_Parent::K2Node_Event_ScaledHalfHeightAdjust' has a wrong offset!");
 
 // Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.K2_OnEndCrouch
 // 0x0008 (0x0008 - 0x0000)
@@ -54,10 +44,6 @@ public:
 	float                                         HalfHeightAdjust;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ScaledHalfHeightAdjust;                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Athena_Generic_Parent_C_K2_OnEndCrouch) == 0x000004, "Wrong alignment on PlayerPawn_Athena_Generic_Parent_C_K2_OnEndCrouch");
-static_assert(sizeof(PlayerPawn_Athena_Generic_Parent_C_K2_OnEndCrouch) == 0x000008, "Wrong size on PlayerPawn_Athena_Generic_Parent_C_K2_OnEndCrouch");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_K2_OnEndCrouch, HalfHeightAdjust) == 0x000000, "Member 'PlayerPawn_Athena_Generic_Parent_C_K2_OnEndCrouch::HalfHeightAdjust' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_K2_OnEndCrouch, ScaledHalfHeightAdjust) == 0x000004, "Member 'PlayerPawn_Athena_Generic_Parent_C_K2_OnEndCrouch::ScaledHalfHeightAdjust' has a wrong offset!");
 
 // Function PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.K2_OnStartCrouch
 // 0x0008 (0x0008 - 0x0000)
@@ -67,10 +53,6 @@ public:
 	float                                         HalfHeightAdjust;                                  // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         ScaledHalfHeightAdjust;                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Athena_Generic_Parent_C_K2_OnStartCrouch) == 0x000004, "Wrong alignment on PlayerPawn_Athena_Generic_Parent_C_K2_OnStartCrouch");
-static_assert(sizeof(PlayerPawn_Athena_Generic_Parent_C_K2_OnStartCrouch) == 0x000008, "Wrong size on PlayerPawn_Athena_Generic_Parent_C_K2_OnStartCrouch");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_K2_OnStartCrouch, HalfHeightAdjust) == 0x000000, "Member 'PlayerPawn_Athena_Generic_Parent_C_K2_OnStartCrouch::HalfHeightAdjust' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Athena_Generic_Parent_C_K2_OnStartCrouch, ScaledHalfHeightAdjust) == 0x000004, "Member 'PlayerPawn_Athena_Generic_Parent_C_K2_OnStartCrouch::ScaledHalfHeightAdjust' has a wrong offset!");
 
 }
 

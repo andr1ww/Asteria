@@ -19,7 +19,7 @@ namespace SDK::Params
 {
 
 // Function GA_Trap_FloorJumpPad.GA_Trap_FloorJumpPad_C.ExecuteUbergraph_GA_Trap_FloorJumpPad
-// 0x02F0 (0x02F0 - 0x0000)
+// 0x0308 (0x0308 - 0x0000)
 struct GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad final
 {
 public:
@@ -71,132 +71,49 @@ public:
 	class UFortAbilityTask_WaitTargetSelection*   CallFunc_WaitTargetSelection_ReturnValue;          // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        K2Node_CustomEvent_player;                         // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         CallFunc_GetActorsFromTargetData_ReturnValue;      // 0x01B0(0x0010)(ZeroConstructor, ReferenceParm)
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_Array_Get_Item_1;                         // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x01D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1D6[0x2];                                      // 0x01D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue_1;       // 0x01D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoesSocketExist_ReturnValue;              // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_DoesSocketExist_ReturnValue_1;            // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x01E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1E3[0x1];                                      // 0x01E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayAbilityTargetDataHandle       Temp_struct_Variable;                              // 0x01E8(0x0028)()
+	struct FGameplayAbilityTargetDataHandle       Temp_struct_Variable;                              // 0x01A0(0x0028)()
+	class AFortPlayerPawn*                        K2Node_CustomEvent_Player;                         // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         CallFunc_GetActorsFromTargetData_ReturnValue;      // 0x01D8(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x01E8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_Array_Get_Item_1;                         // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x01FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1FE[0x2];                                      // 0x01FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue_1;       // 0x0200(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoesSocketExist_ReturnValue;              // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_DoesSocketExist_ReturnValue_1;            // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x020A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_20B[0x1];                                      // 0x020B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x020C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayTag                           Temp_struct_Variable_1;                            // 0x0210(0x0008)(NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FActiveGameplayEffectHandle>    CallFunc_ApplyGameplayEffectContainer_ReturnValue; // 0x0220(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FActiveGameplayEffectHandle>    CallFunc_ApplyGameplayEffectContainer_ReturnValue; // 0x0220(0x0010)(ConstParm, ReferenceParm, HasGetValueTypeHash)
 	struct FGameplayAbilityTargetDataHandle       K2Node_CustomEvent_TargetData;                     // 0x0230(0x0028)(ConstParm)
 	struct FGameplayTag                           K2Node_CustomEvent_ApplicationTag;                 // 0x0258(0x0008)(NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)> K2Node_CreateDelegate_OutputDelegate;              // 0x0260(0x0010)(ZeroConstructor, NoDestructor)
+	TDelegate<void(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)> K2Node_CreateDelegate_OutputDelegate; // 0x0260(0x0010)(ZeroConstructor, NoDestructor)
 	struct FGameplayAbilityTargetDataHandle       K2Node_CustomEvent_TargetData_1;                   // 0x0270(0x0028)(ConstParm)
 	struct FGameplayTag                           K2Node_CustomEvent_ApplicationTag_1;               // 0x0298(0x0008)(NoDestructor, HasGetValueTypeHash)
 	class AController*                            CallFunc_GetController_ReturnValue;                // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput;    // 0x02A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput; // 0x02A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue;       // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_2B9[0x7];                                      // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortAthenaVehicle*                     CallFunc_GetVehicle_ReturnValue;                   // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x02C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsInVehicle_ReturnValue;                  // 0x02CB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2CD[0x3];                                      // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x02D0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x02DC(0x0010)(ZeroConstructor, NoDestructor)
+	TScriptInterface<class IFortVehicleInterface> CallFunc_GetVehicleUInterface_ReturnValue;         // 0x02C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_Conv_InterfaceToObject_ReturnValue;       // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsInVehicle_ReturnValue;                  // 0x02E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x02E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2E3[0x1];                                      // 0x02E3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x02E4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2F1[0x3];                                      // 0x02F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FGameplayAbilityTargetDataHandle& TargetData, const struct FGameplayTag& ApplicationTag)> K2Node_CreateDelegate_OutputDelegate_1; // 0x02F4(0x0010)(ZeroConstructor, NoDestructor)
 };
-static_assert(alignof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad) == 0x000008, "Wrong alignment on GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad");
-static_assert(sizeof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad) == 0x0002F0, "Wrong size on GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, EntryPoint) == 0x000000, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::EntryPoint' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetAbilitySystemComponent_ReturnValue) == 0x000008, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetAbilitySystemComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_BP_ApplyGameplayEffectToSelf_ReturnValue) == 0x000010, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_BP_ApplyGameplayEffectToSelf_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetAbilityLevel_ReturnValue) == 0x000018, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetAbilityLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Conv_IntToFloat_ReturnValue) == 0x00001C, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_MakeOutgoingGameplayEffectSpec_ReturnValue) == 0x000020, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_MakeOutgoingGameplayEffectSpec_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetOwningActorFromActorInfo_ReturnValue) == 0x000030, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetOwningActorFromActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_K2_CommitAbility_ReturnValue) == 0x000038, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_K2_CommitAbility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_DynamicCast_AsBuilding_Trap) == 0x000040, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_DynamicCast_AsBuilding_Trap' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetReloadBeginGameplayCueTag_ReturnValue) == 0x00004C, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetReloadBeginGameplayCueTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, Temp_int_Loop_Counter_Variable) == 0x000054, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Add_IntInt_ReturnValue) == 0x000058, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, Temp_int_Array_Index_Variable) == 0x00005C, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Array_Get_Item) == 0x000060, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Array_Length_ReturnValue) == 0x000068, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_DynamicCast_AsFort_Player_Pawn) == 0x000070, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_DynamicCast_AsFort_Player_Pawn' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_DynamicCast_bSuccess_1) == 0x000078, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Less_IntInt_ReturnValue) == 0x000079, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_IsDedicatedServer_ReturnValue) == 0x00007A, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetAbilitySystemComponent_ReturnValue_1) == 0x000080, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetAbilitySystemComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_IsDBNO_ReturnValue) == 0x000088, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_IsDBNO_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Not_PreBool_ReturnValue) == 0x000089, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetOwningActorFromActorInfo_ReturnValue_1) == 0x000090, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetOwningActorFromActorInfo_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_DynamicCast_AsBuilding_Trap_1) == 0x000098, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_DynamicCast_AsBuilding_Trap_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_DynamicCast_bSuccess_2) == 0x0000A0, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetDataCountFromTargetData_ReturnValue) == 0x0000A4, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetDataCountFromTargetData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetTrapLevel_ReturnValue) == 0x0000A8, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetTrapLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000AC, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_MakeStruct_GameplayEventData) == 0x0000B0, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_MakeStruct_GameplayEventData' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetDamageDelay_ReturnValue) == 0x000160, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetDamageDelay_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetActivateTrapGameplayCueTag_ReturnValue) == 0x000164, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetActivateTrapGameplayCueTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetAbilitySystemComponent_ReturnValue_2) == 0x000170, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetAbilitySystemComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetFireDelay_ReturnValue) == 0x000178, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetFireDelay_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_BP_ApplyGameplayEffectSpecToSelf_ReturnValue) == 0x00017C, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_BP_ApplyGameplayEffectSpecToSelf_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetDelayBeginGameplayCueTag_ReturnValue) == 0x000184, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetDelayBeginGameplayCueTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_WaitTargetSelection_ReturnValue) == 0x000190, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_WaitTargetSelection_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_IsValid_ReturnValue) == 0x000198, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_CustomEvent_player) == 0x0001A0, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_CustomEvent_player' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, Temp_int_Variable) == 0x0001A8, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetActorsFromTargetData_ReturnValue) == 0x0001B0, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetActorsFromTargetData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_SpawnEmitterAttached_ReturnValue) == 0x0001C0, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_SpawnEmitterAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Array_Get_Item_1) == 0x0001C8, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Array_Length_ReturnValue_1) == 0x0001D0, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_IsValid_ReturnValue_1) == 0x0001D4, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Greater_IntInt_ReturnValue) == 0x0001D5, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_SpawnEmitterAttached_ReturnValue_1) == 0x0001D8, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_SpawnEmitterAttached_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_DoesSocketExist_ReturnValue) == 0x0001E0, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_DoesSocketExist_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_DoesSocketExist_ReturnValue_1) == 0x0001E1, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_DoesSocketExist_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0001E2, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Add_IntInt_ReturnValue_1) == 0x0001E4, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, Temp_struct_Variable) == 0x0001E8, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, Temp_struct_Variable_1) == 0x000210, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Array_Add_ReturnValue) == 0x000218, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_ApplyGameplayEffectContainer_ReturnValue) == 0x000220, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_ApplyGameplayEffectContainer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_CustomEvent_TargetData) == 0x000230, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_CustomEvent_TargetData' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_CustomEvent_ApplicationTag) == 0x000258, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_CustomEvent_ApplicationTag' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_CreateDelegate_OutputDelegate) == 0x000260, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_CustomEvent_TargetData_1) == 0x000270, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_CustomEvent_TargetData_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_CustomEvent_ApplicationTag_1) == 0x000298, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_CustomEvent_ApplicationTag_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetController_ReturnValue) == 0x0002A0, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_HasMatchingGameplayTag_self_CastInput) == 0x0002A8, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_HasMatchingGameplayTag_self_CastInput' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_HasMatchingGameplayTag_ReturnValue) == 0x0002B8, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_HasMatchingGameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_GetVehicle_ReturnValue) == 0x0002C0, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_GetVehicle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_Not_PreBool_ReturnValue_1) == 0x0002C8, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_IsValid_ReturnValue_2) == 0x0002C9, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_BooleanAND_ReturnValue) == 0x0002CA, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_IsInVehicle_ReturnValue) == 0x0002CB, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_IsInVehicle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_BooleanAND_ReturnValue_1) == 0x0002CC, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, CallFunc_MakeVector_ReturnValue) == 0x0002D0, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad, K2Node_CreateDelegate_OutputDelegate_1) == 0x0002DC, "Member 'GA_Trap_FloorJumpPad_C_ExecuteUbergraph_GA_Trap_FloorJumpPad::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-
-// Function GA_Trap_FloorJumpPad.GA_Trap_FloorJumpPad_C.Cancelled_E91C59AB43D826926CE5CEAA22E84570
-// 0x0030 (0x0030 - 0x0000)
-struct GA_Trap_FloorJumpPad_C_Cancelled_E91C59AB43D826926CE5CEAA22E84570 final
-{
-public:
-	struct FGameplayAbilityTargetDataHandle       TargetData_0;                                      // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Trap_FloorJumpPad_C_Cancelled_E91C59AB43D826926CE5CEAA22E84570) == 0x000008, "Wrong alignment on GA_Trap_FloorJumpPad_C_Cancelled_E91C59AB43D826926CE5CEAA22E84570");
-static_assert(sizeof(GA_Trap_FloorJumpPad_C_Cancelled_E91C59AB43D826926CE5CEAA22E84570) == 0x000030, "Wrong size on GA_Trap_FloorJumpPad_C_Cancelled_E91C59AB43D826926CE5CEAA22E84570");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_Cancelled_E91C59AB43D826926CE5CEAA22E84570, TargetData_0) == 0x000000, "Member 'GA_Trap_FloorJumpPad_C_Cancelled_E91C59AB43D826926CE5CEAA22E84570::TargetData_0' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_Cancelled_E91C59AB43D826926CE5CEAA22E84570, ApplicationTag) == 0x000028, "Member 'GA_Trap_FloorJumpPad_C_Cancelled_E91C59AB43D826926CE5CEAA22E84570::ApplicationTag' has a wrong offset!");
 
 // Function GA_Trap_FloorJumpPad.GA_Trap_FloorJumpPad_C.PlayPlayerFX
 // 0x0008 (0x0008 - 0x0000)
@@ -205,9 +122,6 @@ struct GA_Trap_FloorJumpPad_C_PlayPlayerFX final
 public:
 	class AFortPlayerPawn*                        Player;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Trap_FloorJumpPad_C_PlayPlayerFX) == 0x000008, "Wrong alignment on GA_Trap_FloorJumpPad_C_PlayPlayerFX");
-static_assert(sizeof(GA_Trap_FloorJumpPad_C_PlayPlayerFX) == 0x000008, "Wrong size on GA_Trap_FloorJumpPad_C_PlayPlayerFX");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_PlayPlayerFX, Player) == 0x000000, "Member 'GA_Trap_FloorJumpPad_C_PlayPlayerFX::Player' has a wrong offset!");
 
 // Function GA_Trap_FloorJumpPad.GA_Trap_FloorJumpPad_C.Targeted_E91C59AB43D826926CE5CEAA22E84570
 // 0x0030 (0x0030 - 0x0000)
@@ -217,10 +131,15 @@ public:
 	struct FGameplayAbilityTargetDataHandle       TargetData_0;                                      // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Trap_FloorJumpPad_C_Targeted_E91C59AB43D826926CE5CEAA22E84570) == 0x000008, "Wrong alignment on GA_Trap_FloorJumpPad_C_Targeted_E91C59AB43D826926CE5CEAA22E84570");
-static_assert(sizeof(GA_Trap_FloorJumpPad_C_Targeted_E91C59AB43D826926CE5CEAA22E84570) == 0x000030, "Wrong size on GA_Trap_FloorJumpPad_C_Targeted_E91C59AB43D826926CE5CEAA22E84570");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_Targeted_E91C59AB43D826926CE5CEAA22E84570, TargetData_0) == 0x000000, "Member 'GA_Trap_FloorJumpPad_C_Targeted_E91C59AB43D826926CE5CEAA22E84570::TargetData_0' has a wrong offset!");
-static_assert(offsetof(GA_Trap_FloorJumpPad_C_Targeted_E91C59AB43D826926CE5CEAA22E84570, ApplicationTag) == 0x000028, "Member 'GA_Trap_FloorJumpPad_C_Targeted_E91C59AB43D826926CE5CEAA22E84570::ApplicationTag' has a wrong offset!");
+
+// Function GA_Trap_FloorJumpPad.GA_Trap_FloorJumpPad_C.Cancelled_E91C59AB43D826926CE5CEAA22E84570
+// 0x0030 (0x0030 - 0x0000)
+struct GA_Trap_FloorJumpPad_C_Cancelled_E91C59AB43D826926CE5CEAA22E84570 final
+{
+public:
+	struct FGameplayAbilityTargetDataHandle       TargetData_0;                                      // 0x0000(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FGameplayTag                           ApplicationTag;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
 
 }
 

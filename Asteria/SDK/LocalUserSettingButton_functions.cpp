@@ -37,20 +37,6 @@ void ULocalUserSettingButton_C::ExecuteUbergraph_LocalUserSettingButton(int32 En
 }
 
 
-// Function LocalUserSettingButton.LocalUserSettingButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void ULocalUserSettingButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LocalUserSettingButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function LocalUserSettingButton.LocalUserSettingButton_C.BP_OnUnhovered
 // (Event, Protected, BlueprintEvent)
 
@@ -60,6 +46,20 @@ void ULocalUserSettingButton_C::BP_OnUnhovered()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("LocalUserSettingButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LocalUserSettingButton.LocalUserSettingButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void ULocalUserSettingButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LocalUserSettingButton_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

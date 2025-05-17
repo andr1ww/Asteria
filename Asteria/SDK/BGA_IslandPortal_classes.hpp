@@ -10,130 +10,138 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BGA_IslandPortal.BGA_IslandPortal_C
-// 0x0520 (0x0EC0 - 0x09A0)
+// 0x0490 (0x0F58 - 0x0AC8)
 class ABGA_IslandPortal_C final : public AFortAthenaCreativePortal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetComponent*                       UI_PortalInfoPlate;                                // 0x09A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   ThumbnailPlane;                                    // 0x09B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               P_Rift_Idle_Loop_Gold;                             // 0x09B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                  RiftPostProcess;                                   // 0x09C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       PostProcessRadius;                                 // 0x09C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               P_RiftClosingUp;                                   // 0x09D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               P_Rift_Idle_Loop;                                  // 0x09D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      OverlapCapsule;                                    // 0x09E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      Capsule;                                           // 0x09E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_Rift;                                           // 0x09F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        Audio_Looping;                                     // 0x09F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         Timeline_0_Open_D988993744202060C85FC18A08065960;  // 0x0A00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Timeline_0__Direction_D988993744202060C85FC18A08065960; // 0x0A04(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A05[0x3];                                      // 0x0A05(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Timeline_0;                                        // 0x0A08(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         VectorScale_Open_7AB95DD3448038155AB954ABBF1B806E; // 0x0A10(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            VectorScale__Direction_7AB95DD3448038155AB954ABBF1B806E; // 0x0A14(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A15[0x3];                                      // 0x0A15(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     VectorScale;                                       // 0x0A18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        DeathEffects;                                      // 0x0A20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             EnteredRift;                                       // 0x0A28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             RiftDestroyed;                                     // 0x0A30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0A38(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        EnterRift;                                         // 0x0A40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortAthenaVehicle*                     Vehicle;                                           // 0x0A48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           FallingAnimation;                                  // 0x0A50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         TeleportHeight;                                    // 0x0A58(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         HangTime;                                          // 0x0A78(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         TeleportDelay;                                     // 0x0A98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9C[0x4];                                      // 0x0A9C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AFortPlayerPawn*>                PassengerArray;                                    // 0x0AA0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	class UParticleSystem*                        CrackExitRift;                                     // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             PlayerExitSkyCrack;                                // 0x0AB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ActorOriginalLocation;                             // 0x0AC0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxSpawnHeightMultiplier;                          // 0x0ACC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortQuestItemDefinition*               QuestItem;                                         // 0x0AD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ObjectiveBackendName;                              // 0x0AD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    ObjStat;                                           // 0x0AE0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	class UFortQuestItemDefinition*               RiftPortalLocationsQuest;                          // 0x0AF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    ObjStatLoc_1;                                      // 0x0AF8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_2;                                      // 0x0B08(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_3;                                      // 0x0B18(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_4;                                      // 0x0B28(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_5;                                      // 0x0B38(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_6;                                      // 0x0B48(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_7;                                      // 0x0B58(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_8;                                      // 0x0B68(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_9;                                      // 0x0B78(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_10;                                     // 0x0B88(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_11;                                     // 0x0B98(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_12;                                     // 0x0BA8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_13;                                     // 0x0BB8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_14;                                     // 0x0BC8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_15;                                     // 0x0BD8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_16;                                     // 0x0BE8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_17;                                     // 0x0BF8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_18;                                     // 0x0C08(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_19;                                     // 0x0C18(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_20;                                     // 0x0C28(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_21;                                     // 0x0C38(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_22;                                     // 0x0C48(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_23;                                     // 0x0C58(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FDataTableRowHandle                    ObjStatLoc_24;                                     // 0x0C68(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          CreativeMode;                                      // 0x0C78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C79[0x7];                                      // 0x0C79(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 OverlapActor;                                      // 0x0C80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         RiftLocationNum;                                   // 0x0C88(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               ActorRotation;                                     // 0x0C8C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FScalableFloat                         ShouldSpawnRift_;                                  // 0x0C98(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         TeleportExitDistance_0;                            // 0x0CB8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         PortalCount;                                       // 0x0CD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CDC[0x4];                                      // 0x0CDC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         XPortalSeparation;                                 // 0x0CE0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         StarterIslandTeleportHeight;                       // 0x0D00(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bCanPlayerInteract;                                // 0x0D20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D21[0x7];                                      // 0x0D21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         YPortalSeparation;                                 // 0x0D28(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AFortPlayerControllerAthena*            PendingTeleport;                                   // 0x0D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMyPortal;                                        // 0x0D50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D51[0x7];                                      // 0x0D51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        Enter_Rift_Gold;                                   // 0x0D58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_PortalLightPillar_C*                Beacon;                                            // 0x0D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           UIDistanceCheckTimer;                              // 0x0D68(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         UIShowDistance;                                    // 0x0D70(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D74[0x4];                                      // 0x0D74(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   UI_PortalInfoPlateSoftClass;                       // 0x0D78(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class FText NewPlayerName)> UpdatePlayerName;                                  // 0x0DA0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(int32 NewPop)>  UpdatePlayerPop;                                   // 0x0DB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(class FText NewIslandName)> UpdateIslandName;                                  // 0x0DC0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(bool Show, bool WasHidden, float Distance)> UpdatePortalUIVis;                                 // 0x0DD0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TSoftClassPtr<class UClass>                   UI_IslandSelectSoftClass;                          // 0x0DE0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class UClass*                                 UI_IslandSelectClass;                              // 0x0E08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          StartSkydiving;                                    // 0x0E10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E11[0x7];                                      // 0x0E11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool bIsCurated, bool bIsLinkCode, bool bIsUserInitiatedLoad)> UpdateIsCuratedPortal;                             // 0x0E18(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TSoftClassPtr<class UClass>                   UI_IslandCodeEntrySoftClass;                       // 0x0E28(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class UClass*                                 UI_IslandCodeEntryClass;                           // 0x0E50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class FText Description)> UpdateDescription;                                 // 0x0E58(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(const class FString& LinkCode)> UpdateLinkCode;                                    // 0x0E68(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          bIsBeingDisplayed;                                 // 0x0E78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E79[0x3];                                      // 0x0E79(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ThumbnailWorldSizeScale;                           // 0x0E7C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           OwnedThumbnailColor;                               // 0x0E80(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           UnownedThumbnailColor;                             // 0x0E90(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   OverrideName;                                      // 0x0EA0(0x0018)(Edit, BlueprintVisible)
-	bool                                          bAlwaysDisplay;                                    // 0x0EB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AC8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USphereComponent*                       CodeScreenLookAtSphere;                            // 0x0AD0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       PortalLookAtSphere;                                // 0x0AD8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       HUD_Visibility_Volume;                             // 0x0AE0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Code_Entry_Screen;                                 // 0x0AE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Base_Mesh;                                         // 0x0AF0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        PortalHUDDetails_PointerOrigin;                    // 0x0AF8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UWidgetComponent*                       UI_PortalInfoPlate;                                // 0x0B00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   ThumbnailPlane;                                    // 0x0B08(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               P_Rift_Idle_Loop_Gold;                             // 0x0B10(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPostProcessComponent*                  RiftPostProcess;                                   // 0x0B18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       PostProcessRadius;                                 // 0x0B20(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               P_RiftClosingUp;                                   // 0x0B28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               P_Rift_Idle_Loop;                                  // 0x0B30(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      OverlapCapsule;                                    // 0x0B38(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      Capsule;                                           // 0x0B40(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_Rift;                                           // 0x0B48(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        Audio_Looping;                                     // 0x0B50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         Timeline_0_Open_D988993744202060C85FC18A08065960;  // 0x0B58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Timeline_0__Direction_D988993744202060C85FC18A08065960; // 0x0B5C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B5D[0x3];                                      // 0x0B5D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Timeline_0;                                        // 0x0B60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         VectorScale_Open_7AB95DD3448038155AB954ABBF1B806E; // 0x0B68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            VectorScale__Direction_7AB95DD3448038155AB954ABBF1B806E; // 0x0B6C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B6D[0x3];                                      // 0x0B6D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     VectorScale;                                       // 0x0B70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        DeathEffects;                                      // 0x0B78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             EnteredRift;                                       // 0x0B80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             RiftDestroyed;                                     // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0B90(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        EnterRift;                                         // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 VehicleActor;                                      // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           FallingAnimation;                                  // 0x0BA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         TeleportHeight;                                    // 0x0BB0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         HangTime;                                          // 0x0BD0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         TeleportDelay;                                     // 0x0BF0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BF4[0x4];                                      // 0x0BF4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AFortPlayerPawn*>                PassengerArray;                                    // 0x0BF8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
+	class UParticleSystem*                        CrackExitRift;                                     // 0x0C08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             PlayerExitSkyCrack;                                // 0x0C10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ActorOriginalLocation;                             // 0x0C18(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxSpawnHeightMultiplier;                          // 0x0C24(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortQuestItemDefinition*               QuestItem;                                         // 0x0C28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ObjectiveBackendName;                              // 0x0C30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortQuestItemDefinition*               RiftPortalLocationsQuest;                          // 0x0C38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CreativeMode;                                      // 0x0C40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C41[0x7];                                      // 0x0C41(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 OverlapActor;                                      // 0x0C48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         RiftLocationNum;                                   // 0x0C50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               ActorRotation;                                     // 0x0C54(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FScalableFloat                         ShouldSpawnRift_;                                  // 0x0C60(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         TeleportExitDistance_0;                            // 0x0C80(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         PortalCount;                                       // 0x0CA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CA4[0x4];                                      // 0x0CA4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         XPortalSeparation;                                 // 0x0CA8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         StarterIslandTeleportHeight;                       // 0x0CC8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bCanPlayerInteract;                                // 0x0CE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_CE9[0x7];                                      // 0x0CE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         YPortalSeparation;                                 // 0x0CF0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AFortPlayerControllerAthena*            PendingTeleport;                                   // 0x0D10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMyPortal;                                        // 0x0D18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D19[0x7];                                      // 0x0D19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystem*                        Enter_Rift_Gold;                                   // 0x0D20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_PortalLightPillar_C*                Beacon;                                            // 0x0D28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           UIDistanceCheckTimer;                              // 0x0D30(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         UIShowDistance;                                    // 0x0D38(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D3C[0x4];                                      // 0x0D3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   UI_InteractionDisplayWidgetSoftClass;              // 0x0D40(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   UI_PortalInfoPlateSoftClass;                       // 0x0D68(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class FText NewPlayerName)> UpdatePlayerName;                      // 0x0D90(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(int32 NewPop)>  UpdatePlayerPop;                                   // 0x0DA0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class FText NewIslandName)> UpdateIslandName;                      // 0x0DB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool Show, bool WasHidden, float Distance)> UpdatePortalUIVis;     // 0x0DC0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TSoftClassPtr<class UClass>                   UI_IslandSelectSoftClass;                          // 0x0DD0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UClass*                                 UI_IslandSelectClass;                              // 0x0DF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          StartSkydiving;                                    // 0x0E00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E01[0x7];                                      // 0x0E01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool bIsCurated, bool bIsLinkCode, bool bIsUserInitiatedLoad)> UpdateIsCuratedPortal; // 0x0E08(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TSoftClassPtr<class UClass>                   UI_IslandCodeEntrySoftClass;                       // 0x0E18(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UClass*                                 UI_IslandCodeEntryClass;                           // 0x0E40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class FText Description)> UpdateDescription;                       // 0x0E48(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const class FString& LinkCode)> UpdateLinkCode;                    // 0x0E58(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bIsBeingDisplayed;                                 // 0x0E68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E69[0x3];                                      // 0x0E69(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ThumbnailWorldSizeScale;                           // 0x0E6C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           OwnedThumbnailColor;                               // 0x0E70(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           UnownedThumbnailColor;                             // 0x0E80(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   OverrideName;                                      // 0x0E90(0x0018)(Edit, BlueprintVisible)
+	bool                                          bAlwaysDisplay;                                    // 0x0EA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_EA9[0x7];                                      // 0x0EA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool IsInteracting)> IsBeingInteractedWith;                        // 0x0EB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UUserWidget*                            DisplayedWidget;                                   // 0x0EC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              CloseShownUI;                                      // 0x0EC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<class APawn*>                          LocalPawnsInRange;                                 // 0x0ED8(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, Transient, DisableEditOnInstance, AdvancedDisplay, HasGetValueTypeHash)
+	float                                         LookAtUpdateTimeSecs;                              // 0x0EE8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EEC[0x4];                                      // 0x0EEC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           LookAtCodeScreenHandle;                            // 0x0EF0(0x0008)(Edit, BlueprintVisible, Transient, DisableEditOnInstance, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	struct FLinearColor                           ScreenColorNotHighlighted;                         // 0x0EF8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ScreenColorCanUpdate;                              // 0x0F08(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ScreenColorLocked;                                 // 0x0F18(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ScreenColorDisabled;                               // 0x0F28(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseCodeEntryScreen;                               // 0x0F38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bPlayerMustInteractToUsePortal;                    // 0x0F39(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bEnableBaseAndCodeEntryInteractions;               // 0x0F3A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F3B[0x5];                                      // 0x0F3B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool bPlayerLookingAtScreen)> UpdateLocalPlayerLookingAtScreen;    // 0x0F40(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bLocalPlayerLookingAtScreen;                       // 0x0F50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay)
+	bool                                          bLocalPlayerLookingAtPortal;                       // 0x0F51(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay)
 
 public:
 	void ExecuteUbergraph_BGA_IslandPortal(int32 EntryPoint);
+	void ErrorStateChanged();
+	void ServerOnInteractWithIslandPortal(const class AFortPlayerPawn* InteractingPawn);
+	void BndEvt__HUD_Visibility_Volume_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void BndEvt__HUD_Visibility_Volume_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void OnReceivedNewIslandInfo();
+	void BroadcastIsBeingInteractedWith(bool IsInteracting);
 	void Play_Teleport_Audio();
 	void SetupPortalForThumbnailDisplay();
 	void OnThumbnailTextureReady();
@@ -152,7 +160,7 @@ public:
 	void ClientTeleportToLobbyIsland(class AFortPlayerController* RequestingController);
 	void NotifyTeleportedPlayerPawn(class AFortPlayerPawn* PlayerPawn_0, bool bTeleportedToIslandStart);
 	void LoadIslandUI(class AFortPlayerPawn* InteractingPawn);
-	void NotifyTeleportedVehicle(class AFortAthenaVehicle* Vehicle_0);
+	void NotifyTeleportedVehicle(class AActor* VehicleActor_0);
 	void OverlappingOnBeginPlay(class AActor* Actor);
 	void PlayCosmeticFX(const struct FVector& DestinationLocation);
 	void PlayTeleportFX(const struct FVector& PlayerLocation, const struct FVector& DestinationLocation);
@@ -160,6 +168,7 @@ public:
 	void BndEvt__Capsule_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 	void BndEvt__Capsule_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__OverlapCapsule_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void OnLoaded_E60F9B1D4E758E4EA443468A995679B2(class UClass* Loaded);
 	void OnLoaded_F2A7F21346C6B461BE9A1182BB5B5DD5(class UClass* Loaded);
 	void OnLoaded_A43955A14A20383F466DF18A87BBA501(class UClass* Loaded);
 	void OnLoaded_25EC650C4A5067360B49BC87DAFA1B71(class UClass* Loaded);
@@ -180,9 +189,34 @@ public:
 	void UpdatePopulationDisplay();
 	void UpdateNameDisplay();
 	struct FVector ScaleThumbnailPlaneByTextureSize();
+	void CanUseHUDInteract(bool* CanInteract);
+	void CloseAndClearDisplayedWidget();
+	void ClearDisplayedWidget();
+	void StartOrEndQuery();
+	void QueryPlayerLookAt();
+	void UpdateCodeEntryScreen(bool bForceScreenUpdate);
+	void UpdateCodeEntryVisibility();
+	void UpdateBaseVisibility();
+	void LocalPlayerEnteredRange(class APawn* LocalPawn);
+	void LocalPlayerExitedRange(class APawn* LocalPawn);
+	void LocalPlayerRangeCheck(class AActor* OverlappingActor, bool bEnteredRange);
+	void StartTeleport(class AActor* OverlapActor_0);
+	void UpdateInfoPlatePointer();
+	void StartTeleportByInteractionOnServer(class AActor* OverlapActor_0);
+	void DetermineWherePlayerIsLooking(class APawn* Pawn, bool* bIsLookingAtScreen, bool* bIsLookingAtPortal);
 
-	bool BlueprintCanInteract(const class AFortPawn* InteractingPawn) const;
-	class FText BlueprintGetInteractionString(const class AFortPawn* InteractingPawn) const;
+	bool BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const;
+	class FText BlueprintGetInteractionString(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted) const;
+	bool BlueprintGetInteractionTime(const class AFortPawn* InteractingPawn, float* OutInteractionTime, const EInteractionBeingAttempted InteractionBeingAttempted) const;
+	void PortalTeleportsByInteraction(bool* bRequiresInteraction) const;
+	void PortalUsesCodeScreen(bool* bUsesCodeScreen) const;
+	void IsLookingAtSphere(class USphereComponent* LookAtSphere, const struct FVector& Eyes_View_Point_Location, const struct FRotator& Eyes_View_Point_Rotation, bool* bIsLookingAtSphere) const;
+	void CanModifyPortal(bool* bCanModify) const;
+	void GetIconPlacement(const class AActor* SelfActor, const class AActor* ViewingActor, struct FVector* OutLocation, struct FVector* OutExtents) const;
+	bool IconPlacementNeedsUpdate() const;
+	bool BlueprintUseMobileHighlight() const;
+	bool BlueprintDisplayMobileInteractPrompt() const;
+	void MobileInteractIsValid(bool* bIsValid) const;
 
 public:
 	static class UClass* StaticClass()
@@ -194,105 +228,6 @@ public:
 		return GetDefaultObjImpl<ABGA_IslandPortal_C>();
 	}
 };
-static_assert(alignof(ABGA_IslandPortal_C) == 0x000008, "Wrong alignment on ABGA_IslandPortal_C");
-static_assert(sizeof(ABGA_IslandPortal_C) == 0x000EC0, "Wrong size on ABGA_IslandPortal_C");
-static_assert(offsetof(ABGA_IslandPortal_C, UberGraphFrame) == 0x0009A0, "Member 'ABGA_IslandPortal_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UI_PortalInfoPlate) == 0x0009A8, "Member 'ABGA_IslandPortal_C::UI_PortalInfoPlate' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ThumbnailPlane) == 0x0009B0, "Member 'ABGA_IslandPortal_C::ThumbnailPlane' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, P_Rift_Idle_Loop_Gold) == 0x0009B8, "Member 'ABGA_IslandPortal_C::P_Rift_Idle_Loop_Gold' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, RiftPostProcess) == 0x0009C0, "Member 'ABGA_IslandPortal_C::RiftPostProcess' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, PostProcessRadius) == 0x0009C8, "Member 'ABGA_IslandPortal_C::PostProcessRadius' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, P_RiftClosingUp) == 0x0009D0, "Member 'ABGA_IslandPortal_C::P_RiftClosingUp' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, P_Rift_Idle_Loop) == 0x0009D8, "Member 'ABGA_IslandPortal_C::P_Rift_Idle_Loop' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, OverlapCapsule) == 0x0009E0, "Member 'ABGA_IslandPortal_C::OverlapCapsule' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, Capsule) == 0x0009E8, "Member 'ABGA_IslandPortal_C::Capsule' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, SM_Rift) == 0x0009F0, "Member 'ABGA_IslandPortal_C::SM_Rift' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, Audio_Looping) == 0x0009F8, "Member 'ABGA_IslandPortal_C::Audio_Looping' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, Timeline_0_Open_D988993744202060C85FC18A08065960) == 0x000A00, "Member 'ABGA_IslandPortal_C::Timeline_0_Open_D988993744202060C85FC18A08065960' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, Timeline_0__Direction_D988993744202060C85FC18A08065960) == 0x000A04, "Member 'ABGA_IslandPortal_C::Timeline_0__Direction_D988993744202060C85FC18A08065960' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, Timeline_0) == 0x000A08, "Member 'ABGA_IslandPortal_C::Timeline_0' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, VectorScale_Open_7AB95DD3448038155AB954ABBF1B806E) == 0x000A10, "Member 'ABGA_IslandPortal_C::VectorScale_Open_7AB95DD3448038155AB954ABBF1B806E' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, VectorScale__Direction_7AB95DD3448038155AB954ABBF1B806E) == 0x000A14, "Member 'ABGA_IslandPortal_C::VectorScale__Direction_7AB95DD3448038155AB954ABBF1B806E' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, VectorScale) == 0x000A18, "Member 'ABGA_IslandPortal_C::VectorScale' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, DeathEffects) == 0x000A20, "Member 'ABGA_IslandPortal_C::DeathEffects' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, EnteredRift) == 0x000A28, "Member 'ABGA_IslandPortal_C::EnteredRift' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, RiftDestroyed) == 0x000A30, "Member 'ABGA_IslandPortal_C::RiftDestroyed' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, PlayerPawn) == 0x000A38, "Member 'ABGA_IslandPortal_C::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, EnterRift) == 0x000A40, "Member 'ABGA_IslandPortal_C::EnterRift' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, Vehicle) == 0x000A48, "Member 'ABGA_IslandPortal_C::Vehicle' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, FallingAnimation) == 0x000A50, "Member 'ABGA_IslandPortal_C::FallingAnimation' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, TeleportHeight) == 0x000A58, "Member 'ABGA_IslandPortal_C::TeleportHeight' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, HangTime) == 0x000A78, "Member 'ABGA_IslandPortal_C::HangTime' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, TeleportDelay) == 0x000A98, "Member 'ABGA_IslandPortal_C::TeleportDelay' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, PassengerArray) == 0x000AA0, "Member 'ABGA_IslandPortal_C::PassengerArray' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, CrackExitRift) == 0x000AB0, "Member 'ABGA_IslandPortal_C::CrackExitRift' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, PlayerExitSkyCrack) == 0x000AB8, "Member 'ABGA_IslandPortal_C::PlayerExitSkyCrack' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ActorOriginalLocation) == 0x000AC0, "Member 'ABGA_IslandPortal_C::ActorOriginalLocation' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, MaxSpawnHeightMultiplier) == 0x000ACC, "Member 'ABGA_IslandPortal_C::MaxSpawnHeightMultiplier' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, QuestItem) == 0x000AD0, "Member 'ABGA_IslandPortal_C::QuestItem' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjectiveBackendName) == 0x000AD8, "Member 'ABGA_IslandPortal_C::ObjectiveBackendName' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStat) == 0x000AE0, "Member 'ABGA_IslandPortal_C::ObjStat' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, RiftPortalLocationsQuest) == 0x000AF0, "Member 'ABGA_IslandPortal_C::RiftPortalLocationsQuest' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_1) == 0x000AF8, "Member 'ABGA_IslandPortal_C::ObjStatLoc_1' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_2) == 0x000B08, "Member 'ABGA_IslandPortal_C::ObjStatLoc_2' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_3) == 0x000B18, "Member 'ABGA_IslandPortal_C::ObjStatLoc_3' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_4) == 0x000B28, "Member 'ABGA_IslandPortal_C::ObjStatLoc_4' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_5) == 0x000B38, "Member 'ABGA_IslandPortal_C::ObjStatLoc_5' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_6) == 0x000B48, "Member 'ABGA_IslandPortal_C::ObjStatLoc_6' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_7) == 0x000B58, "Member 'ABGA_IslandPortal_C::ObjStatLoc_7' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_8) == 0x000B68, "Member 'ABGA_IslandPortal_C::ObjStatLoc_8' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_9) == 0x000B78, "Member 'ABGA_IslandPortal_C::ObjStatLoc_9' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_10) == 0x000B88, "Member 'ABGA_IslandPortal_C::ObjStatLoc_10' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_11) == 0x000B98, "Member 'ABGA_IslandPortal_C::ObjStatLoc_11' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_12) == 0x000BA8, "Member 'ABGA_IslandPortal_C::ObjStatLoc_12' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_13) == 0x000BB8, "Member 'ABGA_IslandPortal_C::ObjStatLoc_13' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_14) == 0x000BC8, "Member 'ABGA_IslandPortal_C::ObjStatLoc_14' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_15) == 0x000BD8, "Member 'ABGA_IslandPortal_C::ObjStatLoc_15' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_16) == 0x000BE8, "Member 'ABGA_IslandPortal_C::ObjStatLoc_16' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_17) == 0x000BF8, "Member 'ABGA_IslandPortal_C::ObjStatLoc_17' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_18) == 0x000C08, "Member 'ABGA_IslandPortal_C::ObjStatLoc_18' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_19) == 0x000C18, "Member 'ABGA_IslandPortal_C::ObjStatLoc_19' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_20) == 0x000C28, "Member 'ABGA_IslandPortal_C::ObjStatLoc_20' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_21) == 0x000C38, "Member 'ABGA_IslandPortal_C::ObjStatLoc_21' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_22) == 0x000C48, "Member 'ABGA_IslandPortal_C::ObjStatLoc_22' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_23) == 0x000C58, "Member 'ABGA_IslandPortal_C::ObjStatLoc_23' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ObjStatLoc_24) == 0x000C68, "Member 'ABGA_IslandPortal_C::ObjStatLoc_24' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, CreativeMode) == 0x000C78, "Member 'ABGA_IslandPortal_C::CreativeMode' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, OverlapActor) == 0x000C80, "Member 'ABGA_IslandPortal_C::OverlapActor' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, RiftLocationNum) == 0x000C88, "Member 'ABGA_IslandPortal_C::RiftLocationNum' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ActorRotation) == 0x000C8C, "Member 'ABGA_IslandPortal_C::ActorRotation' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ShouldSpawnRift_) == 0x000C98, "Member 'ABGA_IslandPortal_C::ShouldSpawnRift_' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, TeleportExitDistance_0) == 0x000CB8, "Member 'ABGA_IslandPortal_C::TeleportExitDistance_0' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, PortalCount) == 0x000CD8, "Member 'ABGA_IslandPortal_C::PortalCount' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, XPortalSeparation) == 0x000CE0, "Member 'ABGA_IslandPortal_C::XPortalSeparation' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, StarterIslandTeleportHeight) == 0x000D00, "Member 'ABGA_IslandPortal_C::StarterIslandTeleportHeight' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, bCanPlayerInteract) == 0x000D20, "Member 'ABGA_IslandPortal_C::bCanPlayerInteract' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, YPortalSeparation) == 0x000D28, "Member 'ABGA_IslandPortal_C::YPortalSeparation' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, PendingTeleport) == 0x000D48, "Member 'ABGA_IslandPortal_C::PendingTeleport' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, IsMyPortal) == 0x000D50, "Member 'ABGA_IslandPortal_C::IsMyPortal' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, Enter_Rift_Gold) == 0x000D58, "Member 'ABGA_IslandPortal_C::Enter_Rift_Gold' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, Beacon) == 0x000D60, "Member 'ABGA_IslandPortal_C::Beacon' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UIDistanceCheckTimer) == 0x000D68, "Member 'ABGA_IslandPortal_C::UIDistanceCheckTimer' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UIShowDistance) == 0x000D70, "Member 'ABGA_IslandPortal_C::UIShowDistance' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UI_PortalInfoPlateSoftClass) == 0x000D78, "Member 'ABGA_IslandPortal_C::UI_PortalInfoPlateSoftClass' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UpdatePlayerName) == 0x000DA0, "Member 'ABGA_IslandPortal_C::UpdatePlayerName' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UpdatePlayerPop) == 0x000DB0, "Member 'ABGA_IslandPortal_C::UpdatePlayerPop' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UpdateIslandName) == 0x000DC0, "Member 'ABGA_IslandPortal_C::UpdateIslandName' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UpdatePortalUIVis) == 0x000DD0, "Member 'ABGA_IslandPortal_C::UpdatePortalUIVis' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UI_IslandSelectSoftClass) == 0x000DE0, "Member 'ABGA_IslandPortal_C::UI_IslandSelectSoftClass' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UI_IslandSelectClass) == 0x000E08, "Member 'ABGA_IslandPortal_C::UI_IslandSelectClass' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, StartSkydiving) == 0x000E10, "Member 'ABGA_IslandPortal_C::StartSkydiving' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UpdateIsCuratedPortal) == 0x000E18, "Member 'ABGA_IslandPortal_C::UpdateIsCuratedPortal' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UI_IslandCodeEntrySoftClass) == 0x000E28, "Member 'ABGA_IslandPortal_C::UI_IslandCodeEntrySoftClass' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UI_IslandCodeEntryClass) == 0x000E50, "Member 'ABGA_IslandPortal_C::UI_IslandCodeEntryClass' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UpdateDescription) == 0x000E58, "Member 'ABGA_IslandPortal_C::UpdateDescription' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UpdateLinkCode) == 0x000E68, "Member 'ABGA_IslandPortal_C::UpdateLinkCode' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, bIsBeingDisplayed) == 0x000E78, "Member 'ABGA_IslandPortal_C::bIsBeingDisplayed' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, ThumbnailWorldSizeScale) == 0x000E7C, "Member 'ABGA_IslandPortal_C::ThumbnailWorldSizeScale' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, OwnedThumbnailColor) == 0x000E80, "Member 'ABGA_IslandPortal_C::OwnedThumbnailColor' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, UnownedThumbnailColor) == 0x000E90, "Member 'ABGA_IslandPortal_C::UnownedThumbnailColor' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, OverrideName) == 0x000EA0, "Member 'ABGA_IslandPortal_C::OverrideName' has a wrong offset!");
-static_assert(offsetof(ABGA_IslandPortal_C, bAlwaysDisplay) == 0x000EB8, "Member 'ABGA_IslandPortal_C::bAlwaysDisplay' has a wrong offset!");
 
 }
 

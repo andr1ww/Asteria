@@ -18,25 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PlayerSurveyPanel.PlayerSurveyPanel_C
-// 0x0028 (0x0390 - 0x0368)
+// 0x0020 (0x04B8 - 0x0498)
 class UPlayerSurveyPanel_C final : public UFortPlayerSurveyPanelBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Outro;                                             // 0x0370(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Intro;                                             // 0x0378(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UScaleBox*                              PanelScale;                                        // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPlayerSurveyPanelContents_C*           PlayerSurveyPanelContents;                         // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0498(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Outro;                                             // 0x04A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro;                                             // 0x04A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UScaleBox*                              PanelScale;                                        // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_PlayerSurveyPanel(int32 EntryPoint);
-	void BndEvt__PlayerSurveyPanelContents_K2Node_ComponentBoundEvent_0_OnSurveyEnded__DelegateSignature();
-	void Construct();
-	void HandleSurveyChanged();
-	void IntroDone();
-	void OnActivated();
-	void OutroDone();
+	void OnPlayerSurveyEnded();
+	void StartIntro_BP();
 	void StartIntro();
+	void OutroDone();
+	void Construct();
 
 public:
 	static class UClass* StaticClass()
@@ -48,13 +45,6 @@ public:
 		return GetDefaultObjImpl<UPlayerSurveyPanel_C>();
 	}
 };
-static_assert(alignof(UPlayerSurveyPanel_C) == 0x000008, "Wrong alignment on UPlayerSurveyPanel_C");
-static_assert(sizeof(UPlayerSurveyPanel_C) == 0x000390, "Wrong size on UPlayerSurveyPanel_C");
-static_assert(offsetof(UPlayerSurveyPanel_C, UberGraphFrame) == 0x000368, "Member 'UPlayerSurveyPanel_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanel_C, Outro) == 0x000370, "Member 'UPlayerSurveyPanel_C::Outro' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanel_C, Intro) == 0x000378, "Member 'UPlayerSurveyPanel_C::Intro' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanel_C, PanelScale) == 0x000380, "Member 'UPlayerSurveyPanel_C::PanelScale' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyPanel_C, PlayerSurveyPanelContents) == 0x000388, "Member 'UPlayerSurveyPanel_C::PlayerSurveyPanelContents' has a wrong offset!");
 
 }
 

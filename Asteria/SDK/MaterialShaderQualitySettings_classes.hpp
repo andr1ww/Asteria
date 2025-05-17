@@ -22,7 +22,7 @@ namespace SDK
 class UMaterialShaderQualitySettings final : public UObject
 {
 public:
-	TMap<class FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                                 // 0x0028(0x0050)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TMap<class FName, class UShaderPlatformQualitySettings*> ForwardSettingMap;                      // 0x0028(0x0050)(NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -34,17 +34,14 @@ public:
 		return GetDefaultObjImpl<UMaterialShaderQualitySettings>();
 	}
 };
-static_assert(alignof(UMaterialShaderQualitySettings) == 0x000008, "Wrong alignment on UMaterialShaderQualitySettings");
-static_assert(sizeof(UMaterialShaderQualitySettings) == 0x000078, "Wrong size on UMaterialShaderQualitySettings");
-static_assert(offsetof(UMaterialShaderQualitySettings, ForwardSettingMap) == 0x000028, "Member 'UMaterialShaderQualitySettings::ForwardSettingMap' has a wrong offset!");
 
 // Class MaterialShaderQualitySettings.ShaderPlatformQualitySettings
-// 0x0028 (0x0050 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class UShaderPlatformQualitySettings final : public UObject
 {
 public:
-	struct FMaterialQualityOverrides              QualityOverrides[0x3];                             // 0x0028(0x0008)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x10];                                      // 0x0040(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMaterialQualityOverrides              QualityOverrides[0x4];                             // 0x0028(0x0009)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x14];                                      // 0x004C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -56,9 +53,6 @@ public:
 		return GetDefaultObjImpl<UShaderPlatformQualitySettings>();
 	}
 };
-static_assert(alignof(UShaderPlatformQualitySettings) == 0x000008, "Wrong alignment on UShaderPlatformQualitySettings");
-static_assert(sizeof(UShaderPlatformQualitySettings) == 0x000050, "Wrong size on UShaderPlatformQualitySettings");
-static_assert(offsetof(UShaderPlatformQualitySettings, QualityOverrides) == 0x000028, "Member 'UShaderPlatformQualitySettings::QualityOverrides' has a wrong offset!");
 
 }
 

@@ -20,7 +20,7 @@ namespace SDK
 // Function KairosSceneCapture.KairosCaptureStatics.GetSceneManager
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class AKairosSceneManagerActor*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class AKairosSceneManagerActor* UKairosCaptureStatics::GetSceneManager(const class UObject* WorldContextObject)
@@ -73,8 +73,8 @@ void UKairosCaptureStatics::ToggleAutoRotate(bool bIsAutoRotateAllowed)
 // Function KairosSceneCapture.KairosCaptureStatics.PauseOrResumeSnippet
 // (Net, NetReliable, Native, Event, NetResponse, Public)
 // Parameters:
-// struct FKairosSnippetParams             Params_0                                               (Parm, NativeAccessSpecifierPublic)
-// struct FWebJSResponse                   Response                                               (Parm, NativeAccessSpecifierPublic)
+// const struct FKairosSnippetParams&      Params_0                                               (Parm, NativeAccessSpecifierPublic)
+// const struct FWebJSResponse&            Response                                               (Parm, NativeAccessSpecifierPublic)
 
 void UKairosCaptureStatics::PauseOrResumeSnippet(const struct FKairosSnippetParams& Params_0, const struct FWebJSResponse& Response)
 {
@@ -92,138 +92,6 @@ void UKairosCaptureStatics::PauseOrResumeSnippet(const struct FKairosSnippetPara
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KairosSceneCapture.KairosSceneManagerActor.BeginEmotePlaybackForPlayer
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           PlayerID                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           EmoteID                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKairosSceneManagerActor::BeginEmotePlaybackForPlayer(const class FString& PlayerID, const class FString& EmoteID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KairosSceneManagerActor", "BeginEmotePlaybackForPlayer");
-
-	Params::KairosSceneManagerActor_BeginEmotePlaybackForPlayer Parms{};
-
-	Parms.PlayerID = std::move(PlayerID);
-	Parms.EmoteID = std::move(EmoteID);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KairosSceneCapture.KairosSceneManagerActor.GetSceneInfo
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const struct FKairosSceneInfo           ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-const struct FKairosSceneInfo AKairosSceneManagerActor::GetSceneInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KairosSceneManagerActor", "GetSceneInfo");
-
-	Params::KairosSceneManagerActor_GetSceneInfo Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KairosSceneCapture.KairosSceneManagerActor.LoadWorldARMode
-// (Event, Public, BlueprintEvent)
-
-void AKairosSceneManagerActor::LoadWorldARMode()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KairosSceneManagerActor", "LoadWorldARMode");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KairosSceneCapture.KairosSceneManagerActor.OLD_OnSceneSetupComplete
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// struct FKairosSceneInfo                 CompleteSceneInfoCopy                                  (Parm, NativeAccessSpecifierPublic)
-
-void AKairosSceneManagerActor::OLD_OnSceneSetupComplete(const struct FKairosSceneInfo& CompleteSceneInfoCopy)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KairosSceneManagerActor", "OLD_OnSceneSetupComplete");
-
-	Params::KairosSceneManagerActor_OLD_OnSceneSetupComplete Parms{};
-
-	Parms.CompleteSceneInfoCopy = std::move(CompleteSceneInfoCopy);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function KairosSceneCapture.KairosSceneManagerActor.PauseOrResumeSnippet
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           PlayerID                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bShouldPase                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKairosSceneManagerActor::PauseOrResumeSnippet(const class FString& PlayerID, bool bShouldPase)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KairosSceneManagerActor", "PauseOrResumeSnippet");
-
-	Params::KairosSceneManagerActor_PauseOrResumeSnippet Parms{};
-
-	Parms.PlayerID = std::move(PlayerID);
-	Parms.bShouldPase = bShouldPase;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KairosSceneCapture.KairosSceneManagerActor.StopAR
-// (Final, Native, Public, BlueprintCallable)
-
-void AKairosSceneManagerActor::StopAR()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KairosSceneManagerActor", "StopAR");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -257,8 +125,8 @@ class UKairosConfig* AKairosGameModeBase::GetDefaultConfig()
 // Function KairosSceneCapture.KairosHeroBase.BeginCapture
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FKairosAnimationFramingInfo      FramingInfo                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FKairosCaptureParams             CaptureParams                                          (Parm, NativeAccessSpecifierPublic)
+// const struct FKairosAnimationFramingInfo&FramingInfo                                            (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FKairosCaptureParams&      CaptureParams                                          (Parm, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool AKairosHeroBase::BeginCapture(const struct FKairosAnimationFramingInfo& FramingInfo, const struct FKairosCaptureParams& CaptureParams)
@@ -306,6 +174,124 @@ bool AKairosHeroBase::EndCapture()
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function KairosSceneCapture.KairosSceneManagerActor.BeginEmotePlaybackForPlayer
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    PlayerId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    EmoteId                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKairosSceneManagerActor::BeginEmotePlaybackForPlayer(const class FString& PlayerId, const class FString& EmoteId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KairosSceneManagerActor", "BeginEmotePlaybackForPlayer");
+
+	Params::KairosSceneManagerActor_BeginEmotePlaybackForPlayer Parms{};
+
+	Parms.PlayerId = std::move(PlayerId);
+	Parms.EmoteId = std::move(EmoteId);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KairosSceneCapture.KairosSceneManagerActor.GetSceneInfo
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FKairosSceneInfo           ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const struct FKairosSceneInfo AKairosSceneManagerActor::GetSceneInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KairosSceneManagerActor", "GetSceneInfo");
+
+	Params::KairosSceneManagerActor_GetSceneInfo Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KairosSceneCapture.KairosSceneManagerActor.OLD_OnSceneSetupComplete
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FKairosSceneInfo&          CompleteSceneInfoCopy                                  (Parm, NativeAccessSpecifierPublic)
+
+void AKairosSceneManagerActor::OLD_OnSceneSetupComplete(const struct FKairosSceneInfo& CompleteSceneInfoCopy)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KairosSceneManagerActor", "OLD_OnSceneSetupComplete");
+
+	Params::KairosSceneManagerActor_OLD_OnSceneSetupComplete Parms{};
+
+	Parms.CompleteSceneInfoCopy = std::move(CompleteSceneInfoCopy);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KairosSceneCapture.KairosSceneManagerActor.PauseOrResumeSnippet
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    PlayerId                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bShouldPase                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKairosSceneManagerActor::PauseOrResumeSnippet(const class FString& PlayerId, bool bShouldPase)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KairosSceneManagerActor", "PauseOrResumeSnippet");
+
+	Params::KairosSceneManagerActor_PauseOrResumeSnippet Parms{};
+
+	Parms.PlayerId = std::move(PlayerId);
+	Parms.bShouldPase = bShouldPase;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KairosSceneCapture.KairosSceneManagerActor.StopAR
+// (Final, Native, Public, BlueprintCallable)
+
+void AKairosSceneManagerActor::StopAR()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KairosSceneManagerActor", "StopAR");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

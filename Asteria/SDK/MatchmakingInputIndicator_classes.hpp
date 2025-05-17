@@ -10,26 +10,25 @@
 
 #include "Basic.hpp"
 
+#include "CommonInput_structs.hpp"
 #include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "CommonInput_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MatchmakingInputIndicator.MatchmakingInputIndicator_C
-// 0x0018 (0x0288 - 0x0270)
+// 0x0010 (0x02D8 - 0x02C8)
 class UMatchmakingInputIndicator_C final : public UMatchmakingInputIndicatorBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 InputIcon;                                         // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UAthenaGameData*                        AthenaGameData;                                    // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 InputIcon;                                         // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnInputSourceTypeChanged(ECommonInputType InputType);
 	void ExecuteUbergraph_MatchmakingInputIndicator(int32 EntryPoint);
+	void OnInputSourceTypeChanged(ECommonInputType InputType);
 
 public:
 	static class UClass* StaticClass()
@@ -41,11 +40,6 @@ public:
 		return GetDefaultObjImpl<UMatchmakingInputIndicator_C>();
 	}
 };
-static_assert(alignof(UMatchmakingInputIndicator_C) == 0x000008, "Wrong alignment on UMatchmakingInputIndicator_C");
-static_assert(sizeof(UMatchmakingInputIndicator_C) == 0x000288, "Wrong size on UMatchmakingInputIndicator_C");
-static_assert(offsetof(UMatchmakingInputIndicator_C, UberGraphFrame) == 0x000270, "Member 'UMatchmakingInputIndicator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMatchmakingInputIndicator_C, InputIcon) == 0x000278, "Member 'UMatchmakingInputIndicator_C::InputIcon' has a wrong offset!");
-static_assert(offsetof(UMatchmakingInputIndicator_C, AthenaGameData) == 0x000280, "Member 'UMatchmakingInputIndicator_C::AthenaGameData' has a wrong offset!");
 
 }
 

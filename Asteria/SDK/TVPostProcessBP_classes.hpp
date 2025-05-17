@@ -18,147 +18,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TVPostProcessBP.TVPostProcessBP_C
-// 0x0180 (0x03C0 - 0x0240)
-class ATVPostProcessBP_C final : public AActor
+// 0x0020 (0x0240 - 0x0220)
+class ATVPostProcessBP_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPostProcessComponent*                  FullScreenTVPP_StoreFF;                            // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBillboardComponent*                    Billboard;                                         // 0x0250(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                  FullScreenTVPP_OnlyMaterialModified;               // 0x0258(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                  FullScreenTVPP;                                    // 0x0260(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         FrontEndCameraSwitchFade_DistortTheSceneTexture_FrontEnd02_A319E55147356F64E8D7AE9C824CC6C2; // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FrontEndCameraSwitchFade_DistortTheSceneTexture_FrontEnd_A319E55147356F64E8D7AE9C824CC6C2; // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FrontEndCameraSwitchFade_PostProcessVisibility_A319E55147356F64E8D7AE9C824CC6C2; // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            FrontEndCameraSwitchFade__Direction_A319E55147356F64E8D7AE9C824CC6C2; // 0x0274(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_275[0x3];                                      // 0x0275(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     FrontEndCameraSwitchFade;                          // 0x0278(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Jitter_Timeline_use_solid_color_3FCD803A4A5E86474EA128B9EDBED56E; // 0x0280(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Jitter_Timeline_LerpImageAndScreen_3FCD803A4A5E86474EA128B9EDBED56E; // 0x0284(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Jitter_Timeline_Noise_Distortion_Amount_3FCD803A4A5E86474EA128B9EDBED56E; // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Jitter_Timeline_Screen_Modulation_3FCD803A4A5E86474EA128B9EDBED56E; // 0x028C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Jitter_Timeline__Direction_3FCD803A4A5E86474EA128B9EDBED56E; // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Jitter_Timeline;                                   // 0x0298(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Camera_StartTheMonitor_Text_Timeline_SolidBackgroundModulation_8B52FB0849C47C5870E31DBE0A87A563; // 0x02A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Camera_StartTheMonitor_Text_Timeline_Additive_screen_modulation_8B52FB0849C47C5870E31DBE0A87A563; // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Camera_StartTheMonitor_Text_Timeline_ReplacementAlpha_8B52FB0849C47C5870E31DBE0A87A563; // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Camera_StartTheMonitor_Text_Timeline_Vpos_8B52FB0849C47C5870E31DBE0A87A563; // 0x02AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Camera_StartTheMonitor_Text_Timeline_Hpos_8B52FB0849C47C5870E31DBE0A87A563; // 0x02B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Camera_StartTheMonitor_Text_Timeline_Noise_Distortion_Amount_8B52FB0849C47C5870E31DBE0A87A563; // 0x02B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Camera_StartTheMonitor_Text_Timeline_Screen_Bend_Amount_8B52FB0849C47C5870E31DBE0A87A563; // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Camera_StartTheMonitor_Text_Timeline_Screen_Modulation_8B52FB0849C47C5870E31DBE0A87A563; // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Camera_StartTheMonitor_Text_Timeline__Direction_8B52FB0849C47C5870E31DBE0A87A563; // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Camera_StartTheMonitor_Text_Timeline;              // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FadeOut_blendweight_D40D454F4B32910AAC407D9AB580EA07; // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FadeOut_Fading_D40D454F4B32910AAC407D9AB580EA07;   // 0x02D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FadeOut_Effect_translucency_D40D454F4B32910AAC407D9AB580EA07; // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FadeOut_Kill_effect_amount_D40D454F4B32910AAC407D9AB580EA07; // 0x02DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            FadeOut__Direction_D40D454F4B32910AAC407D9AB580EA07; // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E1[0x7];                                      // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     FadeOut;                                           // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_between_cameras_use_solid_color_E4FB35CD487A51ED1632BFAD49D21E03; // 0x02F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_between_cameras_LerpImageAndScreen_E4FB35CD487A51ED1632BFAD49D21E03; // 0x02F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_between_cameras_Noise_Distortion_Amount_E4FB35CD487A51ED1632BFAD49D21E03; // 0x02F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_between_cameras_Screen_Modulation_E4FB35CD487A51ED1632BFAD49D21E03; // 0x02FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Switch_between_cameras__Direction_E4FB35CD487A51ED1632BFAD49D21E03; // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_301[0x7];                                      // 0x0301(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Switch_between_cameras;                            // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_to_static_use_solid_color_010BC5074AA9D38B1E815EB7DA97273B; // 0x0310(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_to_static_ShowScreenStatic_010BC5074AA9D38B1E815EB7DA97273B; // 0x0314(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_to_static_Noise_Distortion_Amount_010BC5074AA9D38B1E815EB7DA97273B; // 0x0318(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_to_static_Screen_Modulation_010BC5074AA9D38B1E815EB7DA97273B; // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Switch_to_static__Direction_010BC5074AA9D38B1E815EB7DA97273B; // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Switch_to_static;                                  // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_to_live_use_solid_color_DFB267304061CE3644C3E1B38972E94E; // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_to_live_LerpImageAndScreen_DFB267304061CE3644C3E1B38972E94E; // 0x0334(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_to_live_Noise_Distortion_Amount_DFB267304061CE3644C3E1B38972E94E; // 0x0338(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Switch_to_live_Screen_Modulation_DFB267304061CE3644C3E1B38972E94E; // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Switch_to_live__Direction_DFB267304061CE3644C3E1B38972E94E; // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Switch_to_live;                                    // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Show_the_troll_HideTroll_060EDD8E4EDBC900E7D2F29D7A26DBF0; // 0x0350(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Show_the_troll_use_solid_color_060EDD8E4EDBC900E7D2F29D7A26DBF0; // 0x0354(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Show_the_troll_Noise_Distortion_Amount_060EDD8E4EDBC900E7D2F29D7A26DBF0; // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Show_the_troll__Direction_060EDD8E4EDBC900E7D2F29D7A26DBF0; // 0x035C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_35D[0x3];                                      // 0x035D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Show_the_troll;                                    // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         StartScreen_Replacement_randomization_676222D64F5268BA3215E5B98CEFBE8A; // 0x0368(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         StartScreen_ReplacementAlpha_676222D64F5268BA3215E5B98CEFBE8A; // 0x036C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         StartScreen_Vpos_676222D64F5268BA3215E5B98CEFBE8A; // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         StartScreen_Hpos_676222D64F5268BA3215E5B98CEFBE8A; // 0x0374(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         StartScreen_Noise_Distortion_Amount_676222D64F5268BA3215E5B98CEFBE8A; // 0x0378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         StartScreen_Screen_Bend_Amount_676222D64F5268BA3215E5B98CEFBE8A; // 0x037C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         StartScreen_Screen_Modulation_676222D64F5268BA3215E5B98CEFBE8A; // 0x0380(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            StartScreen__Direction_676222D64F5268BA3215E5B98CEFBE8A; // 0x0384(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_385[0x3];                                      // 0x0385(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     StartScreen;                                       // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          GrabNewColorBool;                                  // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          increase_distortion_;                              // 0x0391(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_392[0x2];                                      // 0x0392(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AdditionalDistortionAmount;                        // 0x0394(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Show_troll;                                        // 0x0398(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_399[0x3];                                      // 0x0399(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Troll_counter;                                     // 0x039C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NewVar;                                            // 0x03A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Camera_hasnt_switched_to_live_yet;                 // 0x03A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3A2[0x2];                                      // 0x03A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FluctuatingDisplaySceneValue;                      // 0x03A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Ideal_Display_scene_min_value;                     // 0x03A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Ideal_display_scene_max_value;                     // 0x03AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SkipDos;                                           // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          DisableOnStartup;                                  // 0x03B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          FrontEndCameraSwitch_InProgress;                   // 0x03B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_3B3[0x1];                                      // 0x03B3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PreviousSceneModulation;                           // 0x03B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          FFInProgress;                                      // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	bool                                          RestartFrontEndCameraSwitch_;                      // 0x03B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBillboardComponent*                    Billboard;                                         // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Root;                                              // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          DisableOnStartup;                                  // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void RandomizeTheColor(float Use_Bluescreen, float Probablility_modulator, float Use_Flat_Blue, float MaxColorPerChannelValue, bool Control_replacement_alpha);
+	void IsEnabledForCurrentSubgame(bool* bEnabled);
 	void UserConstructionScript();
-	void Show_the_troll__FinishedFunc();
-	void Show_the_troll__UpdateFunc();
-	void Switch_between_cameras__FinishedFunc();
-	void Switch_between_cameras__UpdateFunc();
-	void Switch_between_cameras__Switch_Camera_Position__EventFunc();
-	void Switch_to_live__FinishedFunc();
-	void Switch_to_live__UpdateFunc();
-	void FadeOut__FinishedFunc();
-	void FadeOut__UpdateFunc();
-	void Switch_to_static__FinishedFunc();
-	void Switch_to_static__UpdateFunc();
-	void Camera_StartTheMonitor_Text_Timeline__FinishedFunc();
-	void Camera_StartTheMonitor_Text_Timeline__UpdateFunc();
-	void Jitter_Timeline__FinishedFunc();
-	void Jitter_Timeline__UpdateFunc();
-	void Jitter_Timeline__Switch_Camera_Position__EventFunc();
-	void FrontEndCameraSwitchFade__FinishedFunc();
-	void FrontEndCameraSwitchFade__UpdateFunc();
-	void StartScreen__FinishedFunc();
-	void StartScreen__UpdateFunc();
-	void Camera_TriggerTheTroll();
-	void Camera_SwitchBetweenLocations();
-	void Camera_TransitionToLiveStatic();
-	void Camera_TurnOffThePostProcess();
-	void Camera_TransitionToLiveVideo();
-	void Camera_DebugEvents();
-	void Camera_StartTheMonitor_Text();
-	void Camera_DosTextFinished();
-	void Camera_ReturningPlayerInitializeWithLiveVideo();
-	void FrontEndCameraSwitch();
-	void Camera_LoadAndWait();
-	void Camera_Sequence_Start_StaticWhoomp();
-	void WriteOutLoading();
-	void SequenceFinished(const class FString& SequenceName);
-	void Camera_InitializePost();
 	void Camera_DisableEffects();
-	void ReceiveTick(float DeltaSeconds);
-	void FastForwardPostProcess();
-	void JitterTheScreen();
-	void ReceiveBeginPlay();
+	void FrontEndCameraSwitch();
+	void ExecuteCameraSwitch();
 	void ExecuteUbergraph_TVPostProcessBP(int32 EntryPoint);
 
 public:
@@ -171,88 +45,6 @@ public:
 		return GetDefaultObjImpl<ATVPostProcessBP_C>();
 	}
 };
-static_assert(alignof(ATVPostProcessBP_C) == 0x000008, "Wrong alignment on ATVPostProcessBP_C");
-static_assert(sizeof(ATVPostProcessBP_C) == 0x0003C0, "Wrong size on ATVPostProcessBP_C");
-static_assert(offsetof(ATVPostProcessBP_C, UberGraphFrame) == 0x000240, "Member 'ATVPostProcessBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FullScreenTVPP_StoreFF) == 0x000248, "Member 'ATVPostProcessBP_C::FullScreenTVPP_StoreFF' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Billboard) == 0x000250, "Member 'ATVPostProcessBP_C::Billboard' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FullScreenTVPP_OnlyMaterialModified) == 0x000258, "Member 'ATVPostProcessBP_C::FullScreenTVPP_OnlyMaterialModified' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FullScreenTVPP) == 0x000260, "Member 'ATVPostProcessBP_C::FullScreenTVPP' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FrontEndCameraSwitchFade_DistortTheSceneTexture_FrontEnd02_A319E55147356F64E8D7AE9C824CC6C2) == 0x000268, "Member 'ATVPostProcessBP_C::FrontEndCameraSwitchFade_DistortTheSceneTexture_FrontEnd02_A319E55147356F64E8D7AE9C824CC6C2' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FrontEndCameraSwitchFade_DistortTheSceneTexture_FrontEnd_A319E55147356F64E8D7AE9C824CC6C2) == 0x00026C, "Member 'ATVPostProcessBP_C::FrontEndCameraSwitchFade_DistortTheSceneTexture_FrontEnd_A319E55147356F64E8D7AE9C824CC6C2' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FrontEndCameraSwitchFade_PostProcessVisibility_A319E55147356F64E8D7AE9C824CC6C2) == 0x000270, "Member 'ATVPostProcessBP_C::FrontEndCameraSwitchFade_PostProcessVisibility_A319E55147356F64E8D7AE9C824CC6C2' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FrontEndCameraSwitchFade__Direction_A319E55147356F64E8D7AE9C824CC6C2) == 0x000274, "Member 'ATVPostProcessBP_C::FrontEndCameraSwitchFade__Direction_A319E55147356F64E8D7AE9C824CC6C2' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FrontEndCameraSwitchFade) == 0x000278, "Member 'ATVPostProcessBP_C::FrontEndCameraSwitchFade' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Jitter_Timeline_use_solid_color_3FCD803A4A5E86474EA128B9EDBED56E) == 0x000280, "Member 'ATVPostProcessBP_C::Jitter_Timeline_use_solid_color_3FCD803A4A5E86474EA128B9EDBED56E' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Jitter_Timeline_LerpImageAndScreen_3FCD803A4A5E86474EA128B9EDBED56E) == 0x000284, "Member 'ATVPostProcessBP_C::Jitter_Timeline_LerpImageAndScreen_3FCD803A4A5E86474EA128B9EDBED56E' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Jitter_Timeline_Noise_Distortion_Amount_3FCD803A4A5E86474EA128B9EDBED56E) == 0x000288, "Member 'ATVPostProcessBP_C::Jitter_Timeline_Noise_Distortion_Amount_3FCD803A4A5E86474EA128B9EDBED56E' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Jitter_Timeline_Screen_Modulation_3FCD803A4A5E86474EA128B9EDBED56E) == 0x00028C, "Member 'ATVPostProcessBP_C::Jitter_Timeline_Screen_Modulation_3FCD803A4A5E86474EA128B9EDBED56E' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Jitter_Timeline__Direction_3FCD803A4A5E86474EA128B9EDBED56E) == 0x000290, "Member 'ATVPostProcessBP_C::Jitter_Timeline__Direction_3FCD803A4A5E86474EA128B9EDBED56E' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Jitter_Timeline) == 0x000298, "Member 'ATVPostProcessBP_C::Jitter_Timeline' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Camera_StartTheMonitor_Text_Timeline_SolidBackgroundModulation_8B52FB0849C47C5870E31DBE0A87A563) == 0x0002A0, "Member 'ATVPostProcessBP_C::Camera_StartTheMonitor_Text_Timeline_SolidBackgroundModulation_8B52FB0849C47C5870E31DBE0A87A563' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Camera_StartTheMonitor_Text_Timeline_Additive_screen_modulation_8B52FB0849C47C5870E31DBE0A87A563) == 0x0002A4, "Member 'ATVPostProcessBP_C::Camera_StartTheMonitor_Text_Timeline_Additive_screen_modulation_8B52FB0849C47C5870E31DBE0A87A563' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Camera_StartTheMonitor_Text_Timeline_ReplacementAlpha_8B52FB0849C47C5870E31DBE0A87A563) == 0x0002A8, "Member 'ATVPostProcessBP_C::Camera_StartTheMonitor_Text_Timeline_ReplacementAlpha_8B52FB0849C47C5870E31DBE0A87A563' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Camera_StartTheMonitor_Text_Timeline_Vpos_8B52FB0849C47C5870E31DBE0A87A563) == 0x0002AC, "Member 'ATVPostProcessBP_C::Camera_StartTheMonitor_Text_Timeline_Vpos_8B52FB0849C47C5870E31DBE0A87A563' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Camera_StartTheMonitor_Text_Timeline_Hpos_8B52FB0849C47C5870E31DBE0A87A563) == 0x0002B0, "Member 'ATVPostProcessBP_C::Camera_StartTheMonitor_Text_Timeline_Hpos_8B52FB0849C47C5870E31DBE0A87A563' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Camera_StartTheMonitor_Text_Timeline_Noise_Distortion_Amount_8B52FB0849C47C5870E31DBE0A87A563) == 0x0002B4, "Member 'ATVPostProcessBP_C::Camera_StartTheMonitor_Text_Timeline_Noise_Distortion_Amount_8B52FB0849C47C5870E31DBE0A87A563' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Camera_StartTheMonitor_Text_Timeline_Screen_Bend_Amount_8B52FB0849C47C5870E31DBE0A87A563) == 0x0002B8, "Member 'ATVPostProcessBP_C::Camera_StartTheMonitor_Text_Timeline_Screen_Bend_Amount_8B52FB0849C47C5870E31DBE0A87A563' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Camera_StartTheMonitor_Text_Timeline_Screen_Modulation_8B52FB0849C47C5870E31DBE0A87A563) == 0x0002BC, "Member 'ATVPostProcessBP_C::Camera_StartTheMonitor_Text_Timeline_Screen_Modulation_8B52FB0849C47C5870E31DBE0A87A563' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Camera_StartTheMonitor_Text_Timeline__Direction_8B52FB0849C47C5870E31DBE0A87A563) == 0x0002C0, "Member 'ATVPostProcessBP_C::Camera_StartTheMonitor_Text_Timeline__Direction_8B52FB0849C47C5870E31DBE0A87A563' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Camera_StartTheMonitor_Text_Timeline) == 0x0002C8, "Member 'ATVPostProcessBP_C::Camera_StartTheMonitor_Text_Timeline' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FadeOut_blendweight_D40D454F4B32910AAC407D9AB580EA07) == 0x0002D0, "Member 'ATVPostProcessBP_C::FadeOut_blendweight_D40D454F4B32910AAC407D9AB580EA07' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FadeOut_Fading_D40D454F4B32910AAC407D9AB580EA07) == 0x0002D4, "Member 'ATVPostProcessBP_C::FadeOut_Fading_D40D454F4B32910AAC407D9AB580EA07' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FadeOut_Effect_translucency_D40D454F4B32910AAC407D9AB580EA07) == 0x0002D8, "Member 'ATVPostProcessBP_C::FadeOut_Effect_translucency_D40D454F4B32910AAC407D9AB580EA07' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FadeOut_Kill_effect_amount_D40D454F4B32910AAC407D9AB580EA07) == 0x0002DC, "Member 'ATVPostProcessBP_C::FadeOut_Kill_effect_amount_D40D454F4B32910AAC407D9AB580EA07' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FadeOut__Direction_D40D454F4B32910AAC407D9AB580EA07) == 0x0002E0, "Member 'ATVPostProcessBP_C::FadeOut__Direction_D40D454F4B32910AAC407D9AB580EA07' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FadeOut) == 0x0002E8, "Member 'ATVPostProcessBP_C::FadeOut' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_between_cameras_use_solid_color_E4FB35CD487A51ED1632BFAD49D21E03) == 0x0002F0, "Member 'ATVPostProcessBP_C::Switch_between_cameras_use_solid_color_E4FB35CD487A51ED1632BFAD49D21E03' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_between_cameras_LerpImageAndScreen_E4FB35CD487A51ED1632BFAD49D21E03) == 0x0002F4, "Member 'ATVPostProcessBP_C::Switch_between_cameras_LerpImageAndScreen_E4FB35CD487A51ED1632BFAD49D21E03' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_between_cameras_Noise_Distortion_Amount_E4FB35CD487A51ED1632BFAD49D21E03) == 0x0002F8, "Member 'ATVPostProcessBP_C::Switch_between_cameras_Noise_Distortion_Amount_E4FB35CD487A51ED1632BFAD49D21E03' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_between_cameras_Screen_Modulation_E4FB35CD487A51ED1632BFAD49D21E03) == 0x0002FC, "Member 'ATVPostProcessBP_C::Switch_between_cameras_Screen_Modulation_E4FB35CD487A51ED1632BFAD49D21E03' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_between_cameras__Direction_E4FB35CD487A51ED1632BFAD49D21E03) == 0x000300, "Member 'ATVPostProcessBP_C::Switch_between_cameras__Direction_E4FB35CD487A51ED1632BFAD49D21E03' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_between_cameras) == 0x000308, "Member 'ATVPostProcessBP_C::Switch_between_cameras' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_static_use_solid_color_010BC5074AA9D38B1E815EB7DA97273B) == 0x000310, "Member 'ATVPostProcessBP_C::Switch_to_static_use_solid_color_010BC5074AA9D38B1E815EB7DA97273B' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_static_ShowScreenStatic_010BC5074AA9D38B1E815EB7DA97273B) == 0x000314, "Member 'ATVPostProcessBP_C::Switch_to_static_ShowScreenStatic_010BC5074AA9D38B1E815EB7DA97273B' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_static_Noise_Distortion_Amount_010BC5074AA9D38B1E815EB7DA97273B) == 0x000318, "Member 'ATVPostProcessBP_C::Switch_to_static_Noise_Distortion_Amount_010BC5074AA9D38B1E815EB7DA97273B' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_static_Screen_Modulation_010BC5074AA9D38B1E815EB7DA97273B) == 0x00031C, "Member 'ATVPostProcessBP_C::Switch_to_static_Screen_Modulation_010BC5074AA9D38B1E815EB7DA97273B' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_static__Direction_010BC5074AA9D38B1E815EB7DA97273B) == 0x000320, "Member 'ATVPostProcessBP_C::Switch_to_static__Direction_010BC5074AA9D38B1E815EB7DA97273B' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_static) == 0x000328, "Member 'ATVPostProcessBP_C::Switch_to_static' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_live_use_solid_color_DFB267304061CE3644C3E1B38972E94E) == 0x000330, "Member 'ATVPostProcessBP_C::Switch_to_live_use_solid_color_DFB267304061CE3644C3E1B38972E94E' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_live_LerpImageAndScreen_DFB267304061CE3644C3E1B38972E94E) == 0x000334, "Member 'ATVPostProcessBP_C::Switch_to_live_LerpImageAndScreen_DFB267304061CE3644C3E1B38972E94E' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_live_Noise_Distortion_Amount_DFB267304061CE3644C3E1B38972E94E) == 0x000338, "Member 'ATVPostProcessBP_C::Switch_to_live_Noise_Distortion_Amount_DFB267304061CE3644C3E1B38972E94E' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_live_Screen_Modulation_DFB267304061CE3644C3E1B38972E94E) == 0x00033C, "Member 'ATVPostProcessBP_C::Switch_to_live_Screen_Modulation_DFB267304061CE3644C3E1B38972E94E' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_live__Direction_DFB267304061CE3644C3E1B38972E94E) == 0x000340, "Member 'ATVPostProcessBP_C::Switch_to_live__Direction_DFB267304061CE3644C3E1B38972E94E' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Switch_to_live) == 0x000348, "Member 'ATVPostProcessBP_C::Switch_to_live' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Show_the_troll_HideTroll_060EDD8E4EDBC900E7D2F29D7A26DBF0) == 0x000350, "Member 'ATVPostProcessBP_C::Show_the_troll_HideTroll_060EDD8E4EDBC900E7D2F29D7A26DBF0' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Show_the_troll_use_solid_color_060EDD8E4EDBC900E7D2F29D7A26DBF0) == 0x000354, "Member 'ATVPostProcessBP_C::Show_the_troll_use_solid_color_060EDD8E4EDBC900E7D2F29D7A26DBF0' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Show_the_troll_Noise_Distortion_Amount_060EDD8E4EDBC900E7D2F29D7A26DBF0) == 0x000358, "Member 'ATVPostProcessBP_C::Show_the_troll_Noise_Distortion_Amount_060EDD8E4EDBC900E7D2F29D7A26DBF0' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Show_the_troll__Direction_060EDD8E4EDBC900E7D2F29D7A26DBF0) == 0x00035C, "Member 'ATVPostProcessBP_C::Show_the_troll__Direction_060EDD8E4EDBC900E7D2F29D7A26DBF0' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Show_the_troll) == 0x000360, "Member 'ATVPostProcessBP_C::Show_the_troll' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, StartScreen_Replacement_randomization_676222D64F5268BA3215E5B98CEFBE8A) == 0x000368, "Member 'ATVPostProcessBP_C::StartScreen_Replacement_randomization_676222D64F5268BA3215E5B98CEFBE8A' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, StartScreen_ReplacementAlpha_676222D64F5268BA3215E5B98CEFBE8A) == 0x00036C, "Member 'ATVPostProcessBP_C::StartScreen_ReplacementAlpha_676222D64F5268BA3215E5B98CEFBE8A' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, StartScreen_Vpos_676222D64F5268BA3215E5B98CEFBE8A) == 0x000370, "Member 'ATVPostProcessBP_C::StartScreen_Vpos_676222D64F5268BA3215E5B98CEFBE8A' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, StartScreen_Hpos_676222D64F5268BA3215E5B98CEFBE8A) == 0x000374, "Member 'ATVPostProcessBP_C::StartScreen_Hpos_676222D64F5268BA3215E5B98CEFBE8A' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, StartScreen_Noise_Distortion_Amount_676222D64F5268BA3215E5B98CEFBE8A) == 0x000378, "Member 'ATVPostProcessBP_C::StartScreen_Noise_Distortion_Amount_676222D64F5268BA3215E5B98CEFBE8A' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, StartScreen_Screen_Bend_Amount_676222D64F5268BA3215E5B98CEFBE8A) == 0x00037C, "Member 'ATVPostProcessBP_C::StartScreen_Screen_Bend_Amount_676222D64F5268BA3215E5B98CEFBE8A' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, StartScreen_Screen_Modulation_676222D64F5268BA3215E5B98CEFBE8A) == 0x000380, "Member 'ATVPostProcessBP_C::StartScreen_Screen_Modulation_676222D64F5268BA3215E5B98CEFBE8A' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, StartScreen__Direction_676222D64F5268BA3215E5B98CEFBE8A) == 0x000384, "Member 'ATVPostProcessBP_C::StartScreen__Direction_676222D64F5268BA3215E5B98CEFBE8A' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, StartScreen) == 0x000388, "Member 'ATVPostProcessBP_C::StartScreen' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, GrabNewColorBool) == 0x000390, "Member 'ATVPostProcessBP_C::GrabNewColorBool' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, increase_distortion_) == 0x000391, "Member 'ATVPostProcessBP_C::increase_distortion_' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, AdditionalDistortionAmount) == 0x000394, "Member 'ATVPostProcessBP_C::AdditionalDistortionAmount' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Show_troll) == 0x000398, "Member 'ATVPostProcessBP_C::Show_troll' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Troll_counter) == 0x00039C, "Member 'ATVPostProcessBP_C::Troll_counter' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, NewVar) == 0x0003A0, "Member 'ATVPostProcessBP_C::NewVar' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Camera_hasnt_switched_to_live_yet) == 0x0003A1, "Member 'ATVPostProcessBP_C::Camera_hasnt_switched_to_live_yet' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FluctuatingDisplaySceneValue) == 0x0003A4, "Member 'ATVPostProcessBP_C::FluctuatingDisplaySceneValue' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Ideal_Display_scene_min_value) == 0x0003A8, "Member 'ATVPostProcessBP_C::Ideal_Display_scene_min_value' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, Ideal_display_scene_max_value) == 0x0003AC, "Member 'ATVPostProcessBP_C::Ideal_display_scene_max_value' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, SkipDos) == 0x0003B0, "Member 'ATVPostProcessBP_C::SkipDos' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, DisableOnStartup) == 0x0003B1, "Member 'ATVPostProcessBP_C::DisableOnStartup' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FrontEndCameraSwitch_InProgress) == 0x0003B2, "Member 'ATVPostProcessBP_C::FrontEndCameraSwitch_InProgress' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, PreviousSceneModulation) == 0x0003B4, "Member 'ATVPostProcessBP_C::PreviousSceneModulation' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, FFInProgress) == 0x0003B8, "Member 'ATVPostProcessBP_C::FFInProgress' has a wrong offset!");
-static_assert(offsetof(ATVPostProcessBP_C, RestartFrontEndCameraSwitch_) == 0x0003B9, "Member 'ATVPostProcessBP_C::RestartFrontEndCameraSwitch_' has a wrong offset!");
 
 }
 

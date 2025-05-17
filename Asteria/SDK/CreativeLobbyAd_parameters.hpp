@@ -35,21 +35,16 @@ public:
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_TextToUpper_ReturnValue_2;                // 0x0088(0x0018)()
 	ESlateVisibility                              K2Node_Select_Default;                             // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd) == 0x000008, "Wrong alignment on CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd");
-static_assert(sizeof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd) == 0x0000A8, "Wrong size on CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, EntryPoint) == 0x000000, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::EntryPoint' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, Temp_bool_Variable) == 0x000004, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, Temp_byte_Variable) == 0x000005, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, Temp_byte_Variable_1) == 0x000006, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, CallFunc_Conv_StringToText_ReturnValue) == 0x000008, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, CallFunc_Conv_StringToText_ReturnValue_1) == 0x000020, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, CallFunc_TextToUpper_ReturnValue) == 0x000038, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, CallFunc_TextToUpper_ReturnValue_1) == 0x000050, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::CallFunc_TextToUpper_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, CallFunc_Conv_StringToText_ReturnValue_2) == 0x000068, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::CallFunc_Conv_StringToText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, CallFunc_TextIsEmpty_ReturnValue) == 0x000080, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, CallFunc_TextToUpper_ReturnValue_2) == 0x000088, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::CallFunc_TextToUpper_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd, K2Node_Select_Default) == 0x0000A0, "Member 'CreativeLobbyAd_C_ExecuteUbergraph_CreativeLobbyAd::K2Node_Select_Default' has a wrong offset!");
+
+// Function CreativeLobbyAd.CreativeLobbyAd_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct CreativeLobbyAd_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
 
 }
 

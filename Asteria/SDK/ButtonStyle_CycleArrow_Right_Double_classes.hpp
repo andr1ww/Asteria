@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_CycleArrow_Right_Double_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_CycleArrow_Right_Double_C) == 0x000008, "Wrong alignment on UButtonStyle_CycleArrow_Right_Double_C");
-static_assert(sizeof(UButtonStyle_CycleArrow_Right_Double_C) == 0x000570, "Wrong size on UButtonStyle_CycleArrow_Right_Double_C");
 
 }
 

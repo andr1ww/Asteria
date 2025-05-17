@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Grenade_Shockwave_Athena.B_Grenade_Shockwave_Athena_C
-// 0x0000 (0x0928 - 0x0928)
+// 0x0000 (0x0CC8 - 0x0CC8)
 class AB_Grenade_Shockwave_Athena_C final : public AB_ConsumableSmall_Athena_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<AB_Grenade_Shockwave_Athena_C>();
 	}
 };
-static_assert(alignof(AB_Grenade_Shockwave_Athena_C) == 0x000008, "Wrong alignment on AB_Grenade_Shockwave_Athena_C");
-static_assert(sizeof(AB_Grenade_Shockwave_Athena_C) == 0x000928, "Wrong size on AB_Grenade_Shockwave_Athena_C");
 
 }
 

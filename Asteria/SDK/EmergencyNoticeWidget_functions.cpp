@@ -17,11 +17,25 @@
 namespace SDK
 {
 
+// Function EmergencyNoticeWidget.EmergencyNoticeWidget_C.Show Notice
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UEmergencyNoticeWidget_C::Show_Notice()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EmergencyNoticeWidget_C", "Show Notice");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function EmergencyNoticeWidget.EmergencyNoticeWidget_C.ShowNotice
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
-// class FText                             Title                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class FText                             Body                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      Title                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const class FText&                      Body                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UEmergencyNoticeWidget_C::ShowNotice(const class FText& Title, const class FText& Body)
 {
@@ -36,20 +50,6 @@ void UEmergencyNoticeWidget_C::ShowNotice(const class FText& Title, const class 
 	Parms.Body = std::move(Body);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function EmergencyNoticeWidget.EmergencyNoticeWidget_C.Show Notice
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UEmergencyNoticeWidget_C::Show_Notice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EmergencyNoticeWidget_C", "Show Notice");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

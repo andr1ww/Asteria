@@ -19,30 +19,31 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ShowdownEventTile.ShowdownEventTile_C
-// 0x00A0 (0x0BE8 - 0x0B48)
+// 0x00B0 (0x0C50 - 0x0BA0)
 class UShowdownEventTile_C final : public UCommonButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Focus_Violator;                                    // 0x0B50(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover;                                             // 0x0B58(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Focus;                                             // 0x0B60(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       TransitionSize;                                    // 0x0B68(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Intro;                                             // 0x0B70(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_InputContainer;                       // 0x0B78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_BG;                                          // 0x0B80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Ended;                                       // 0x0B88(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Focus;                                       // 0x0B90(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Hover;                                       // 0x0B98(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Tail;                                        // 0x0BA0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UShowdownEventTile_RoundBreak_C*        ShowdownEventTile_RoundBreak;                      // 0x0BA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UShowdownEventTileInfo_C*               ShowdownEventTileInfo;                             // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UShowdownEventTileViolator_C*           Violator;                                          // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FString                                 EventId;                                           // 0x0BC0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          isEnded;                                           // 0x0BD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          isLive;                                            // 0x0BD1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BD2[0x6];                                      // 0x0BD2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnWindowSelected;                                  // 0x0BD8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Focus_Violator;                                    // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BB0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Focus;                                             // 0x0BB8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       TransitionSize;                                    // 0x0BC0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro;                                             // 0x0BC8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_InputContainer;                       // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_BG;                                          // 0x0BD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Ended;                                       // 0x0BE0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Focus;                                       // 0x0BE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Hover;                                       // 0x0BF0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Tail;                                        // 0x0BF8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UShowdownEventTile_RoundBreak_C*        ShowdownEventTile_RoundBreak;                      // 0x0C00(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UShowdownEventTileInfo_C*               ShowdownEventTileInfo;                             // 0x0C08(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UShowdownEventTileViolator_C*           Violator;                                          // 0x0C10(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FString                                 EventId;                                           // 0x0C18(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          isEnded;                                           // 0x0C28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          isLive;                                            // 0x0C29(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C2A[0x6];                                      // 0x0C2A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnWindowSelected;                                  // 0x0C30(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FString                                 TournamentId;                                      // 0x0C40(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_ShowdownEventTile(int32 EntryPoint);
@@ -57,9 +58,9 @@ public:
 	void BP_OnUnhovered();
 	void BP_OnHovered();
 	void EventResize(bool Out);
+	void EventIntro(int32 Index_0);
 	void BP_OnClicked();
 	void Construct();
-	void EventIntro(int32 Index_0);
 	void SetData(const class FString& TournamentInfo, const class FString& EventInfo);
 
 public:
@@ -72,27 +73,6 @@ public:
 		return GetDefaultObjImpl<UShowdownEventTile_C>();
 	}
 };
-static_assert(alignof(UShowdownEventTile_C) == 0x000008, "Wrong alignment on UShowdownEventTile_C");
-static_assert(sizeof(UShowdownEventTile_C) == 0x000BE8, "Wrong size on UShowdownEventTile_C");
-static_assert(offsetof(UShowdownEventTile_C, UberGraphFrame) == 0x000B48, "Member 'UShowdownEventTile_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, Focus_Violator) == 0x000B50, "Member 'UShowdownEventTile_C::Focus_Violator' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, Hover) == 0x000B58, "Member 'UShowdownEventTile_C::Hover' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, Focus) == 0x000B60, "Member 'UShowdownEventTile_C::Focus' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, TransitionSize) == 0x000B68, "Member 'UShowdownEventTile_C::TransitionSize' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, Intro) == 0x000B70, "Member 'UShowdownEventTile_C::Intro' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, CommonBorder_InputContainer) == 0x000B78, "Member 'UShowdownEventTile_C::CommonBorder_InputContainer' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, Image_BG) == 0x000B80, "Member 'UShowdownEventTile_C::Image_BG' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, Image_Ended) == 0x000B88, "Member 'UShowdownEventTile_C::Image_Ended' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, Image_Focus) == 0x000B90, "Member 'UShowdownEventTile_C::Image_Focus' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, Image_Hover) == 0x000B98, "Member 'UShowdownEventTile_C::Image_Hover' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, Image_Tail) == 0x000BA0, "Member 'UShowdownEventTile_C::Image_Tail' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, ShowdownEventTile_RoundBreak) == 0x000BA8, "Member 'UShowdownEventTile_C::ShowdownEventTile_RoundBreak' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, ShowdownEventTileInfo) == 0x000BB0, "Member 'UShowdownEventTile_C::ShowdownEventTileInfo' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, Violator) == 0x000BB8, "Member 'UShowdownEventTile_C::Violator' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, EventId) == 0x000BC0, "Member 'UShowdownEventTile_C::EventId' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, isEnded) == 0x000BD0, "Member 'UShowdownEventTile_C::isEnded' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, isLive) == 0x000BD1, "Member 'UShowdownEventTile_C::isLive' has a wrong offset!");
-static_assert(offsetof(UShowdownEventTile_C, OnWindowSelected) == 0x000BD8, "Member 'UShowdownEventTile_C::OnWindowSelected' has a wrong offset!");
 
 }
 

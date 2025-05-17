@@ -25,10 +25,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFortHero*                              InEvolutionOption;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ItemPerksListDetailWidget_C_SetState) == 0x000008, "Wrong alignment on ItemPerksListDetailWidget_C_SetState");
-static_assert(sizeof(ItemPerksListDetailWidget_C_SetState) == 0x000010, "Wrong size on ItemPerksListDetailWidget_C_SetState");
-static_assert(offsetof(ItemPerksListDetailWidget_C_SetState, InState) == 0x000000, "Member 'ItemPerksListDetailWidget_C_SetState::InState' has a wrong offset!");
-static_assert(offsetof(ItemPerksListDetailWidget_C_SetState, InEvolutionOption) == 0x000008, "Member 'ItemPerksListDetailWidget_C_SetState::InEvolutionOption' has a wrong offset!");
 
 // Function ItemPerksListDetailWidget.ItemPerksListDetailWidget_C.ExecuteUbergraph_ItemPerksListDetailWidget
 // 0x0018 (0x0018 - 0x0000)
@@ -40,11 +36,6 @@ public:
 	class UFortHero*                              K2Node_DynamicCast_AsFort_Hero;                    // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget) == 0x000008, "Wrong alignment on ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget");
-static_assert(sizeof(ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget) == 0x000018, "Wrong size on ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget");
-static_assert(offsetof(ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget, EntryPoint) == 0x000000, "Member 'ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget, K2Node_DynamicCast_AsFort_Hero) == 0x000008, "Member 'ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget::K2Node_DynamicCast_AsFort_Hero' has a wrong offset!");
-static_assert(offsetof(ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'ItemPerksListDetailWidget_C_ExecuteUbergraph_ItemPerksListDetailWidget::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 }
 

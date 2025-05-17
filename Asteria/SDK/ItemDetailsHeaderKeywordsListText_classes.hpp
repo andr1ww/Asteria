@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemDetailsHeaderKeywordsListText.ItemDetailsHeaderKeywordsListText_C
-// 0x0010 (0x0290 - 0x0280)
+// 0x0010 (0x02F0 - 0x02E0)
 class UItemDetailsHeaderKeywordsListText_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       TagListTextBlock;                                  // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       TagListTextBlock;                                  // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void FormatItemDisplayTags(TArray<class FText>& TagTexts, class FText* FormatedText);
@@ -42,10 +42,6 @@ public:
 		return GetDefaultObjImpl<UItemDetailsHeaderKeywordsListText_C>();
 	}
 };
-static_assert(alignof(UItemDetailsHeaderKeywordsListText_C) == 0x000008, "Wrong alignment on UItemDetailsHeaderKeywordsListText_C");
-static_assert(sizeof(UItemDetailsHeaderKeywordsListText_C) == 0x000290, "Wrong size on UItemDetailsHeaderKeywordsListText_C");
-static_assert(offsetof(UItemDetailsHeaderKeywordsListText_C, UberGraphFrame) == 0x000280, "Member 'UItemDetailsHeaderKeywordsListText_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UItemDetailsHeaderKeywordsListText_C, TagListTextBlock) == 0x000288, "Member 'UItemDetailsHeaderKeywordsListText_C::TagListTextBlock' has a wrong offset!");
 
 }
 

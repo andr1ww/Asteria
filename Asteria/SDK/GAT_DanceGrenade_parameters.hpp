@@ -21,9 +21,6 @@ struct GAT_DanceGrenade_C_ExecuteUbergraph_GAT_DanceGrenade final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GAT_DanceGrenade_C_ExecuteUbergraph_GAT_DanceGrenade) == 0x000004, "Wrong alignment on GAT_DanceGrenade_C_ExecuteUbergraph_GAT_DanceGrenade");
-static_assert(sizeof(GAT_DanceGrenade_C_ExecuteUbergraph_GAT_DanceGrenade) == 0x000004, "Wrong size on GAT_DanceGrenade_C_ExecuteUbergraph_GAT_DanceGrenade");
-static_assert(offsetof(GAT_DanceGrenade_C_ExecuteUbergraph_GAT_DanceGrenade, EntryPoint) == 0x000000, "Member 'GAT_DanceGrenade_C_ExecuteUbergraph_GAT_DanceGrenade::EntryPoint' has a wrong offset!");
 
 }
 

@@ -9,5 +9,19 @@
 // FORWARD DECLARATIONS
 
 
+namespace M_MED_HighTower_Tapas_AnimBP_0 { class UM_MED_HighTower_Tapas_AnimBP_C; }
+
 namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
+
+namespace S13_MainRoom_ToComicBookStand { class USequenceDirector_C; }
+
+namespace S14_MainRoom_ToWolverine { class USequenceDirector_C; }
+
+namespace S14_MainRoom_ToTable { class USequenceDirector_C; }
+
+namespace S14_MainRoom_ToPunchboard { class USequenceDirector_C; }
+
+namespace M_MED_HighTower_Tapas_AnimBP { class UM_MED_HighTower_Tapas_AnimBP_C; }
+
+namespace S14_MainRoom_ToBP { class USequenceDirector_C; }
 

@@ -19,17 +19,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CameraLens_SpookyMist_Loop.B_CameraLens_SpookyMist_Loop_C
-// 0x0020 (0x0320 - 0x0300)
+// 0x0020 (0x0300 - 0x02E0)
 class AB_CameraLens_SpookyMist_Loop_C final : public AEmitterCameraLensEffectBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AActor*                                 VelocityActor;                                     // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                TargetRot;                                         // 0x0310(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AActor*                                 VelocityActor;                                     // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                TargetRot;                                         // 0x02F0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_B_CameraLens_SpookyMist_Loop(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()
@@ -41,11 +41,6 @@ public:
 		return GetDefaultObjImpl<AB_CameraLens_SpookyMist_Loop_C>();
 	}
 };
-static_assert(alignof(AB_CameraLens_SpookyMist_Loop_C) == 0x000010, "Wrong alignment on AB_CameraLens_SpookyMist_Loop_C");
-static_assert(sizeof(AB_CameraLens_SpookyMist_Loop_C) == 0x000320, "Wrong size on AB_CameraLens_SpookyMist_Loop_C");
-static_assert(offsetof(AB_CameraLens_SpookyMist_Loop_C, UberGraphFrame) == 0x000300, "Member 'AB_CameraLens_SpookyMist_Loop_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_CameraLens_SpookyMist_Loop_C, VelocityActor) == 0x000308, "Member 'AB_CameraLens_SpookyMist_Loop_C::VelocityActor' has a wrong offset!");
-static_assert(offsetof(AB_CameraLens_SpookyMist_Loop_C, TargetRot) == 0x000310, "Member 'AB_CameraLens_SpookyMist_Loop_C::TargetRot' has a wrong offset!");
 
 }
 

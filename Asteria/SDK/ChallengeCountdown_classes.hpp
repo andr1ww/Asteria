@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -18,25 +19,25 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ChallengeCountdown.ChallengeCountdown_C
-// 0x0048 (0x0308 - 0x02C0)
+// 0x0040 (0x03C0 - 0x0380)
 class UChallengeCountdown_C final : public UAthenaChallengeCountdownDisplay
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Clock;                                             // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         PaddingHB;                                         // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 RedBoxBorder;                                      // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_TimeRemainingTag;                             // 0x02E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              TextScale;                                         // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               TransformOvr;                                      // 0x02F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 White;                                             // 0x02F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          IsLargeDisplay;                                    // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0380(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Clock;                                             // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         PaddingHB;                                         // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 RedBoxBorder;                                      // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_TimeRemainingTag;                             // 0x03A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              TextScale;                                         // 0x03A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               TransformOvr;                                      // 0x03B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          IsLargeDisplay;                                    // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bIsMinimalDisplay;                                 // 0x03B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
-	void PreConstruct(bool IsDesignTime);
-	void Construct();
-	void OnChallengeSet(const struct FTimerDisplayData& DisplayStyle);
 	void ExecuteUbergraph_ChallengeCountdown(int32 EntryPoint);
+	void OnChallengeSet(const struct FTimerDisplayData& DisplayStyle);
+	void Construct();
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()
@@ -48,17 +49,6 @@ public:
 		return GetDefaultObjImpl<UChallengeCountdown_C>();
 	}
 };
-static_assert(alignof(UChallengeCountdown_C) == 0x000008, "Wrong alignment on UChallengeCountdown_C");
-static_assert(sizeof(UChallengeCountdown_C) == 0x000308, "Wrong size on UChallengeCountdown_C");
-static_assert(offsetof(UChallengeCountdown_C, UberGraphFrame) == 0x0002C0, "Member 'UChallengeCountdown_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UChallengeCountdown_C, Clock) == 0x0002C8, "Member 'UChallengeCountdown_C::Clock' has a wrong offset!");
-static_assert(offsetof(UChallengeCountdown_C, PaddingHB) == 0x0002D0, "Member 'UChallengeCountdown_C::PaddingHB' has a wrong offset!");
-static_assert(offsetof(UChallengeCountdown_C, RedBoxBorder) == 0x0002D8, "Member 'UChallengeCountdown_C::RedBoxBorder' has a wrong offset!");
-static_assert(offsetof(UChallengeCountdown_C, Text_TimeRemainingTag) == 0x0002E0, "Member 'UChallengeCountdown_C::Text_TimeRemainingTag' has a wrong offset!");
-static_assert(offsetof(UChallengeCountdown_C, TextScale) == 0x0002E8, "Member 'UChallengeCountdown_C::TextScale' has a wrong offset!");
-static_assert(offsetof(UChallengeCountdown_C, TransformOvr) == 0x0002F0, "Member 'UChallengeCountdown_C::TransformOvr' has a wrong offset!");
-static_assert(offsetof(UChallengeCountdown_C, White) == 0x0002F8, "Member 'UChallengeCountdown_C::White' has a wrong offset!");
-static_assert(offsetof(UChallengeCountdown_C, IsLargeDisplay) == 0x000300, "Member 'UChallengeCountdown_C::IsLargeDisplay' has a wrong offset!");
 
 }
 

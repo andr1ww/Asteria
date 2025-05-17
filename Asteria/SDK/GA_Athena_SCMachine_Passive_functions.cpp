@@ -102,7 +102,7 @@ void UGA_Athena_SCMachine_Passive_C::SaveOutPlayer()
 // Function GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.Check Resurrection Active
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bEnabled                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   bEnabled                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UGA_Athena_SCMachine_Passive_C::Check_Resurrection_Active(bool* bEnabled)
 {

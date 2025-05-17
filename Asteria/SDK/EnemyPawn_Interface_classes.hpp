@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass EnemyPawn_Interface.EnemyPawn_Interface_C
-// 0x0000 (0x0028 - 0x0028)
-class IEnemyPawn_Interface_C final : public IInterface
+// 0x0000 (0x0000 - 0x0000)
+class IEnemyPawn_Interface_C final
 {
 public:
 	void Orphaned(bool* IsOrphaned, class AFortPawn** AttachedPawn);
@@ -32,9 +32,16 @@ public:
 	{
 		return GetDefaultObjImpl<IEnemyPawn_Interface_C>();
 	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
 };
-static_assert(alignof(IEnemyPawn_Interface_C) == 0x000008, "Wrong alignment on IEnemyPawn_Interface_C");
-static_assert(sizeof(IEnemyPawn_Interface_C) == 0x000028, "Wrong size on IEnemyPawn_Interface_C");
 
 }
 

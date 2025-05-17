@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -23,15 +23,16 @@ namespace SDK
 class AFortnitePartyBackdrop_Camera_C final : public AFortCameraBase
 {
 public:
+	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UArrowComponent*                        Arrow;                                             // 0x07E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             SavedTransform;                                    // 0x07F0(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor)
 	bool                                          Active;                                            // 0x0820(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
+	void OnActivated(class AFortPlayerController* PlayerController);
+	void OnDeactivated(class AFortPlayerController* PlayerController);
 	void Reset_Location();
-	void OnDeactivated();
-	void OnActivated();
 	void ManualActivate();
 	void ExecuteUbergraph_FortnitePartyBackdrop_Camera(int32 EntryPoint);
 
@@ -45,12 +46,6 @@ public:
 		return GetDefaultObjImpl<AFortnitePartyBackdrop_Camera_C>();
 	}
 };
-static_assert(alignof(AFortnitePartyBackdrop_Camera_C) == 0x000010, "Wrong alignment on AFortnitePartyBackdrop_Camera_C");
-static_assert(sizeof(AFortnitePartyBackdrop_Camera_C) == 0x000830, "Wrong size on AFortnitePartyBackdrop_Camera_C");
-static_assert(offsetof(AFortnitePartyBackdrop_Camera_C, UberGraphFrame) == 0x0007E0, "Member 'AFortnitePartyBackdrop_Camera_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AFortnitePartyBackdrop_Camera_C, Arrow) == 0x0007E8, "Member 'AFortnitePartyBackdrop_Camera_C::Arrow' has a wrong offset!");
-static_assert(offsetof(AFortnitePartyBackdrop_Camera_C, SavedTransform) == 0x0007F0, "Member 'AFortnitePartyBackdrop_Camera_C::SavedTransform' has a wrong offset!");
-static_assert(offsetof(AFortnitePartyBackdrop_Camera_C, Active) == 0x000820, "Member 'AFortnitePartyBackdrop_Camera_C::Active' has a wrong offset!");
 
 }
 

@@ -17,41 +17,21 @@
 namespace SDK
 {
 
-// Function FortVoiceChannelSpeaker.FortVoiceChannelSpeaker_C.OnStyleAssigned
-// (Event, Public, BlueprintEvent)
+// Function FortVoiceChannelSpeaker.FortVoiceChannelSpeaker_C.ExecuteUbergraph_FortVoiceChannelSpeaker
+// (Final, UbergraphFunction)
 // Parameters:
-// EChannelSpeakerStyle                    NewStyle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UFortVoiceChannelSpeaker_C::OnStyleAssigned(EChannelSpeakerStyle NewStyle)
+void UFortVoiceChannelSpeaker_C::ExecuteUbergraph_FortVoiceChannelSpeaker(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortVoiceChannelSpeaker_C", "OnStyleAssigned");
+		Func = Class->GetFunction("FortVoiceChannelSpeaker_C", "ExecuteUbergraph_FortVoiceChannelSpeaker");
 
-	Params::FortVoiceChannelSpeaker_C_OnStyleAssigned Parms{};
+	Params::FortVoiceChannelSpeaker_C_ExecuteUbergraph_FortVoiceChannelSpeaker Parms{};
 
-	Parms.NewStyle = NewStyle;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function FortVoiceChannelSpeaker.FortVoiceChannelSpeaker_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UFortVoiceChannelSpeaker_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FortVoiceChannelSpeaker_C", "PreConstruct");
-
-	Params::FortVoiceChannelSpeaker_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,21 +57,41 @@ void UFortVoiceChannelSpeaker_C::OnAnimateTalkingChanged(bool bIsNowTalking)
 }
 
 
-// Function FortVoiceChannelSpeaker.FortVoiceChannelSpeaker_C.ExecuteUbergraph_FortVoiceChannelSpeaker
-// (Final, UbergraphFunction)
+// Function FortVoiceChannelSpeaker.FortVoiceChannelSpeaker_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UFortVoiceChannelSpeaker_C::ExecuteUbergraph_FortVoiceChannelSpeaker(int32 EntryPoint)
+void UFortVoiceChannelSpeaker_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("FortVoiceChannelSpeaker_C", "ExecuteUbergraph_FortVoiceChannelSpeaker");
+		Func = Class->GetFunction("FortVoiceChannelSpeaker_C", "PreConstruct");
 
-	Params::FortVoiceChannelSpeaker_C_ExecuteUbergraph_FortVoiceChannelSpeaker Parms{};
+	Params::FortVoiceChannelSpeaker_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function FortVoiceChannelSpeaker.FortVoiceChannelSpeaker_C.OnStyleAssigned
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EChannelSpeakerStyle                    NewStyle                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UFortVoiceChannelSpeaker_C::OnStyleAssigned(EChannelSpeakerStyle NewStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FortVoiceChannelSpeaker_C", "OnStyleAssigned");
+
+	Params::FortVoiceChannelSpeaker_C_OnStyleAssigned Parms{};
+
+	Parms.NewStyle = NewStyle;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

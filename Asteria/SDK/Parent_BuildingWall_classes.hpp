@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Parent_BuildingWall.Parent_BuildingWall_C
-// 0x0018 (0x0C60 - 0x0C48)
+// 0x0018 (0x0CE8 - 0x0CD0)
 class AParent_BuildingWall_C : public ABuildingWall
 {
 public:
-	struct FVector                                BuildingBoundsMax;                                 // 0x0C48(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	struct FVector                                BuildingBoundsMin;                                 // 0x0C54(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FVector                                BuildingBoundsMax;                                 // 0x0CD0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FVector                                BuildingBoundsMin;                                 // 0x0CDC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,10 +35,6 @@ public:
 		return GetDefaultObjImpl<AParent_BuildingWall_C>();
 	}
 };
-static_assert(alignof(AParent_BuildingWall_C) == 0x000008, "Wrong alignment on AParent_BuildingWall_C");
-static_assert(sizeof(AParent_BuildingWall_C) == 0x000C60, "Wrong size on AParent_BuildingWall_C");
-static_assert(offsetof(AParent_BuildingWall_C, BuildingBoundsMax) == 0x000C48, "Member 'AParent_BuildingWall_C::BuildingBoundsMax' has a wrong offset!");
-static_assert(offsetof(AParent_BuildingWall_C, BuildingBoundsMin) == 0x000C54, "Member 'AParent_BuildingWall_C::BuildingBoundsMin' has a wrong offset!");
 
 }
 

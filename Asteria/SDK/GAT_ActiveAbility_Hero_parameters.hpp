@@ -21,9 +21,6 @@ struct GAT_ActiveAbility_Hero_C_ExecuteUbergraph_GAT_ActiveAbility_Hero final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GAT_ActiveAbility_Hero_C_ExecuteUbergraph_GAT_ActiveAbility_Hero) == 0x000004, "Wrong alignment on GAT_ActiveAbility_Hero_C_ExecuteUbergraph_GAT_ActiveAbility_Hero");
-static_assert(sizeof(GAT_ActiveAbility_Hero_C_ExecuteUbergraph_GAT_ActiveAbility_Hero) == 0x000004, "Wrong size on GAT_ActiveAbility_Hero_C_ExecuteUbergraph_GAT_ActiveAbility_Hero");
-static_assert(offsetof(GAT_ActiveAbility_Hero_C_ExecuteUbergraph_GAT_ActiveAbility_Hero, EntryPoint) == 0x000000, "Member 'GAT_ActiveAbility_Hero_C_ExecuteUbergraph_GAT_ActiveAbility_Hero::EntryPoint' has a wrong offset!");
 
 // Function GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C.CommitAbilityWithEvent
 // 0x0002 (0x0002 - 0x0000)
@@ -33,10 +30,6 @@ public:
 	bool                                          Passed;                                            // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_K2_CommitAbility_ReturnValue;             // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GAT_ActiveAbility_Hero_C_CommitAbilityWithEvent) == 0x000001, "Wrong alignment on GAT_ActiveAbility_Hero_C_CommitAbilityWithEvent");
-static_assert(sizeof(GAT_ActiveAbility_Hero_C_CommitAbilityWithEvent) == 0x000002, "Wrong size on GAT_ActiveAbility_Hero_C_CommitAbilityWithEvent");
-static_assert(offsetof(GAT_ActiveAbility_Hero_C_CommitAbilityWithEvent, Passed) == 0x000000, "Member 'GAT_ActiveAbility_Hero_C_CommitAbilityWithEvent::Passed' has a wrong offset!");
-static_assert(offsetof(GAT_ActiveAbility_Hero_C_CommitAbilityWithEvent, CallFunc_K2_CommitAbility_ReturnValue) == 0x000001, "Member 'GAT_ActiveAbility_Hero_C_CommitAbilityWithEvent::CallFunc_K2_CommitAbility_ReturnValue' has a wrong offset!");
 
 }
 

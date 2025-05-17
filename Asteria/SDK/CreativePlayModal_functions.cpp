@@ -37,6 +37,26 @@ void UCreativePlayModal_C::ExecuteUbergraph_CreativePlayModal(int32 EntryPoint)
 }
 
 
+// Function CreativePlayModal.CreativePlayModal_C.BndEvt__CloseButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCreativePlayModal_C::BndEvt__CloseButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativePlayModal_C", "BndEvt__CloseButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature");
+
+	Params::CreativePlayModal_C_BndEvt__CloseButton_K2Node_ComponentBoundEvent_3_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function CreativePlayModal.CreativePlayModal_C.OnInputMethodChanged
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -57,30 +77,10 @@ void UCreativePlayModal_C::OnInputMethodChanged(ECommonInputType bNewInputType)
 }
 
 
-// Function CreativePlayModal.CreativePlayModal_C.BndEvt__Mobile_CloseButton_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UCreativePlayModal_C::BndEvt__Mobile_CloseButton_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativePlayModal_C", "BndEvt__Mobile_CloseButton_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature");
-
-	Params::CreativePlayModal_C_BndEvt__Mobile_CloseButton_K2Node_ComponentBoundEvent_4_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function CreativePlayModal.CreativePlayModal_C.CreativeIslandCodeConfirmedEvent
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFortCreativeIslandLink*          IslandLink                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UFortCreativeIslandLink*    IslandLink                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UCreativePlayModal_C::CreativeIslandCodeConfirmedEvent(const class UFortCreativeIslandLink* IslandLink)
 {
@@ -137,28 +137,8 @@ void UCreativePlayModal_C::BndEvt__AddFriendsButton_K2Node_ComponentBoundEvent_1
 }
 
 
-// Function CreativePlayModal.CreativePlayModal_C.InitFromObject
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          InitObject                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UCreativePlayModal_C::InitFromObject(class UObject* InitObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativePlayModal_C", "InitFromObject");
-
-	Params::CreativePlayModal_C_InitFromObject Parms{};
-
-	Parms.InitObject = InitObject;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function CreativePlayModal.CreativePlayModal_C.OnBeginOutro
-// (Event, Public, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 
 void UCreativePlayModal_C::OnBeginOutro()
 {
@@ -171,29 +151,29 @@ void UCreativePlayModal_C::OnBeginOutro()
 }
 
 
-// Function CreativePlayModal.CreativePlayModal_C.OnDeactivated
+// Function CreativePlayModal.CreativePlayModal_C.BP_OnDeactivated
 // (Event, Protected, BlueprintEvent)
 
-void UCreativePlayModal_C::OnDeactivated()
+void UCreativePlayModal_C::BP_OnDeactivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CreativePlayModal_C", "OnDeactivated");
+		Func = Class->GetFunction("CreativePlayModal_C", "BP_OnDeactivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function CreativePlayModal.CreativePlayModal_C.OnActivated
+// Function CreativePlayModal.CreativePlayModal_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UCreativePlayModal_C::OnActivated()
+void UCreativePlayModal_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CreativePlayModal_C", "OnActivated");
+		Func = Class->GetFunction("CreativePlayModal_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -233,10 +213,30 @@ void UCreativePlayModal_C::BndEvt__CreativeOptionsServers_K2Node_ComponentBoundE
 }
 
 
+// Function CreativePlayModal.CreativePlayModal_C.InitFromObject
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          InitObject                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCreativePlayModal_C::InitFromObject(class UObject* InitObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativePlayModal_C", "InitFromObject");
+
+	Params::CreativePlayModal_C_InitFromObject Parms{};
+
+	Parms.InitObject = InitObject;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function CreativePlayModal.CreativePlayModal_C.NullActionHandler
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UCreativePlayModal_C::NullActionHandler(bool* bPassThrough)
 {
@@ -285,7 +285,7 @@ void UCreativePlayModal_C::HandleSocialImportClosed()
 // Function CreativePlayModal.CreativePlayModal_C.SetStartIsland
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             StartIslandName                                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      StartIslandName                                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UCreativePlayModal_C::SetStartIsland(const class FText& StartIslandName)
 {

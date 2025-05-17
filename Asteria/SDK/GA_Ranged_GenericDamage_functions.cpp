@@ -34,8 +34,8 @@ void UGA_Ranged_GenericDamage_C::K2_CommitExecute()
 // Function GA_Ranged_GenericDamage.GA_Ranged_GenericDamage_C.GetEventData
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayTag                     EventTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayEventData               GameplayEventData                                      (Parm, OutParm)
+// const struct FGameplayTag&              EventTag                                               (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// struct FGameplayEventData*              GameplayEventData                                      (Parm, OutParm)
 
 void UGA_Ranged_GenericDamage_C::GetEventData(const struct FGameplayTag& EventTag, struct FGameplayEventData* GameplayEventData)
 {

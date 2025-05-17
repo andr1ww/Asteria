@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UCannon_CameraShake_C>();
 	}
 };
-static_assert(alignof(UCannon_CameraShake_C) == 0x000008, "Wrong alignment on UCannon_CameraShake_C");
-static_assert(sizeof(UCannon_CameraShake_C) == 0x000160, "Wrong size on UCannon_CameraShake_C");
 
 }
 

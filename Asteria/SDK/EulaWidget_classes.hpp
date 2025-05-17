@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EulaWidget.EulaWidget_C
-// 0x0010 (0x0370 - 0x0360)
+// 0x0010 (0x0490 - 0x0480)
 class UEulaWidget_C final : public UFortEulaWidget
 {
 public:
-	TMulticastInlineDelegate<void(bool Accepted)> OnEulaResponse;                                    // 0x0360(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool Accepted)> OnEulaResponse;                                    // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	static class UClass* StaticClass()
@@ -33,9 +33,6 @@ public:
 		return GetDefaultObjImpl<UEulaWidget_C>();
 	}
 };
-static_assert(alignof(UEulaWidget_C) == 0x000008, "Wrong alignment on UEulaWidget_C");
-static_assert(sizeof(UEulaWidget_C) == 0x000370, "Wrong size on UEulaWidget_C");
-static_assert(offsetof(UEulaWidget_C, OnEulaResponse) == 0x000360, "Member 'UEulaWidget_C::OnEulaResponse' has a wrong offset!");
 
 }
 

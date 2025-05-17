@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UTextStyle_BurbSmBk_15_DarkBlue_C>();
 	}
 };
-static_assert(alignof(UTextStyle_BurbSmBk_15_DarkBlue_C) == 0x000008, "Wrong alignment on UTextStyle_BurbSmBk_15_DarkBlue_C");
-static_assert(sizeof(UTextStyle_BurbSmBk_15_DarkBlue_C) == 0x000148, "Wrong size on UTextStyle_BurbSmBk_15_DarkBlue_C");
 
 }
 

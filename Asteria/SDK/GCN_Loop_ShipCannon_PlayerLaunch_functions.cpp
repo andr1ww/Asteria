@@ -17,27 +17,21 @@
 namespace SDK
 {
 
-// Function GCN_Loop_ShipCannon_PlayerLaunch.GCN_Loop_ShipCannon_PlayerLaunch_C.OnLoopingStart
-// (Event, Public, HasOutParams, BlueprintEvent)
+// Function GCN_Loop_ShipCannon_PlayerLaunch.GCN_Loop_ShipCannon_PlayerLaunch_C.ExecuteUbergraph_GCN_Loop_ShipCannon_PlayerLaunch
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayCueParameters           Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// TArray<class UParticleSystemComponent*> ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<class UAudioComponent*>          AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AGCN_Loop_ShipCannon_PlayerLaunch_C::OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents)
+void AGCN_Loop_ShipCannon_PlayerLaunch_C::ExecuteUbergraph_GCN_Loop_ShipCannon_PlayerLaunch(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_ShipCannon_PlayerLaunch_C", "OnLoopingStart");
+		Func = Class->GetFunction("GCN_Loop_ShipCannon_PlayerLaunch_C", "ExecuteUbergraph_GCN_Loop_ShipCannon_PlayerLaunch");
 
-	Params::GCN_Loop_ShipCannon_PlayerLaunch_C_OnLoopingStart Parms{};
+	Params::GCN_Loop_ShipCannon_PlayerLaunch_C_ExecuteUbergraph_GCN_Loop_ShipCannon_PlayerLaunch Parms{};
 
-	Parms.MyTarget = MyTarget;
-	Parms.Parameters = std::move(Parameters);
-	Parms.ParticleComponents = std::move(ParticleComponents);
-	Parms.AudioComponents = std::move(AudioComponents);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -47,9 +41,9 @@ void AGCN_Loop_ShipCannon_PlayerLaunch_C::OnLoopingStart(class AActor* MyTarget,
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayCueParameters           Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// TArray<class UParticleSystemComponent*> ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<class UAudioComponent*>          AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 // class UCameraShake*                     BurstCameraShakeInstance                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ADecalActor*                      BurstDecalInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -73,21 +67,27 @@ void AGCN_Loop_ShipCannon_PlayerLaunch_C::OnRemoval(class AActor* MyTarget, cons
 }
 
 
-// Function GCN_Loop_ShipCannon_PlayerLaunch.GCN_Loop_ShipCannon_PlayerLaunch_C.ExecuteUbergraph_GCN_Loop_ShipCannon_PlayerLaunch
-// (Final, UbergraphFunction, HasDefaults)
+// Function GCN_Loop_ShipCannon_PlayerLaunch.GCN_Loop_ShipCannon_PlayerLaunch_C.OnLoopingStart
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
-void AGCN_Loop_ShipCannon_PlayerLaunch_C::ExecuteUbergraph_GCN_Loop_ShipCannon_PlayerLaunch(int32 EntryPoint)
+void AGCN_Loop_ShipCannon_PlayerLaunch_C::OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_ShipCannon_PlayerLaunch_C", "ExecuteUbergraph_GCN_Loop_ShipCannon_PlayerLaunch");
+		Func = Class->GetFunction("GCN_Loop_ShipCannon_PlayerLaunch_C", "OnLoopingStart");
 
-	Params::GCN_Loop_ShipCannon_PlayerLaunch_C_ExecuteUbergraph_GCN_Loop_ShipCannon_PlayerLaunch Parms{};
+	Params::GCN_Loop_ShipCannon_PlayerLaunch_C_OnLoopingStart Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.MyTarget = MyTarget;
+	Parms.Parameters = std::move(Parameters);
+	Parms.ParticleComponents = std::move(ParticleComponents);
+	Parms.AudioComponents = std::move(AudioComponents);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

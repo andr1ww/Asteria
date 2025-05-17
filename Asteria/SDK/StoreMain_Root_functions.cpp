@@ -17,128 +17,233 @@
 namespace SDK
 {
 
-// Function StoreMain_Root.StoreMain_Root_C.ShouldUserSeeNewVBuckOffer
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function StoreMain_Root.StoreMain_Root_C.ExecuteUbergraph_StoreMain_Root
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    ShowNewStyle                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UStoreMain_Root_C::ShouldUserSeeNewVBuckOffer(bool* ShowNewStyle)
+void UStoreMain_Root_C::ExecuteUbergraph_StoreMain_Root(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "ShouldUserSeeNewVBuckOffer");
+		Func = Class->GetFunction("StoreMain_Root_C", "ExecuteUbergraph_StoreMain_Root");
 
-	Params::StoreMain_Root_C_ShouldUserSeeNewVBuckOffer Parms{};
+	Params::StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (ShowNewStyle != nullptr)
-		*ShowNewStyle = Parms.ShowNewStyle;
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.HandleBack
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function StoreMain_Root.StoreMain_Root_C.OnStartReadingOffers
+// (Event, Protected, BlueprintEvent)
 
-void UStoreMain_Root_C::HandleBack(bool* PassThrough)
+void UStoreMain_Root_C::OnStartReadingOffers()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "HandleBack");
+		Func = Class->GetFunction("StoreMain_Root_C", "OnStartReadingOffers");
 
-	Params::StoreMain_Root_C_HandleBack Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PassThrough != nullptr)
-		*PassThrough = Parms.PassThrough;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.HandleRedeem
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function StoreMain_Root.StoreMain_Root_C.OnTransitionedBySwitcher
+// (Event, Protected, BlueprintEvent)
 
-void UStoreMain_Root_C::HandleRedeem(bool* bPassThrough)
+void UStoreMain_Root_C::OnTransitionedBySwitcher()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "HandleRedeem");
+		Func = Class->GetFunction("StoreMain_Root_C", "OnTransitionedBySwitcher");
 
-	Params::StoreMain_Root_C_HandleRedeem Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bPassThrough != nullptr)
-		*bPassThrough = Parms.bPassThrough;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.SetupForCampaignUpsell
+// Function StoreMain_Root.StoreMain_Root_C.OnPurchasingDisabled
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_Root_C::OnPurchasingDisabled()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "OnPurchasingDisabled");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.GenerateOfferWidget
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UFortStoreFrontOfferInfo*         OfferData                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UStoreMain_Root_C::GenerateOfferWidget(class UFortStoreFrontOfferInfo* OfferData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "GenerateOfferWidget");
+
+	Params::StoreMain_Root_C_GenerateOfferWidget Parms{};
+
+	Parms.OfferData = OfferData;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.OnUpdateOtherPlatformMTXMessage
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// bool                                    HasOtherPlatformCurrency                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const class FText&                      CurrencyMessageLocText                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UStoreMain_Root_C::OnUpdateOtherPlatformMTXMessage(bool HasOtherPlatformCurrency, const class FText& CurrencyMessageLocText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "OnUpdateOtherPlatformMTXMessage");
+
+	Params::StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage Parms{};
+
+	Parms.HasOtherPlatformCurrency = HasOtherPlatformCurrency;
+	Parms.CurrencyMessageLocText = std::move(CurrencyMessageLocText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.OnRemovedFromActivationStack
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_Root_C::OnRemovedFromActivationStack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "OnRemovedFromActivationStack");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.OnAddedToActivationStack
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_Root_C::OnAddedToActivationStack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "OnAddedToActivationStack");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.ClearOfferWidgets
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_Root_C::ClearOfferWidgets()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "ClearOfferWidgets");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.BP_OnDeactivated
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_Root_C::BP_OnDeactivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "BP_OnDeactivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_Root_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.OnOffersGenerated
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_Root_C::OnOffersGenerated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "OnOffersGenerated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.NoOffersAvailable
+// (Event, Protected, BlueprintEvent)
+
+void UStoreMain_Root_C::NoOffersAvailable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "NoOffersAvailable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.Focus
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UStoreMain_Root_C::Focus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "Focus");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.UpdateCurrencyNotification
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UStoreMain_Root_C::SetupForCampaignUpsell()
+void UStoreMain_Root_C::UpdateCurrencyNotification()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "SetupForCampaignUpsell");
+		Func = Class->GetFunction("StoreMain_Root_C", "UpdateCurrencyNotification");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_Root.StoreMain_Root_C.SetupFirstFocusableTile
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UStoreMain_Root_C::SetupFirstFocusableTile()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "SetupFirstFocusableTile");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_Root.StoreMain_Root_C.LayoutVBuckTiles
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UStoreMain_Root_C::LayoutVBuckTiles()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "LayoutVBuckTiles");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_Root.StoreMain_Root_C.Get Main Tab Reference
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool UStoreMain_Root_C::Get_Main_Tab_Reference()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "Get Main Tab Reference");
-
-	Params::StoreMain_Root_C_Get_Main_Tab_Reference Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -162,219 +267,199 @@ void UStoreMain_Root_C::Start_Ambient_Sound(bool Condition)
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.UpdateCurrencyNotification
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function StoreMain_Root.StoreMain_Root_C.Get Main Tab Reference
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-void UStoreMain_Root_C::UpdateCurrencyNotification()
+bool UStoreMain_Root_C::Get_Main_Tab_Reference()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "UpdateCurrencyNotification");
+		Func = Class->GetFunction("StoreMain_Root_C", "Get Main Tab Reference");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::StoreMain_Root_C_Get_Main_Tab_Reference Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.Focus
+// Function StoreMain_Root.StoreMain_Root_C.LayoutVBuckTiles
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UStoreMain_Root_C::Focus()
+void UStoreMain_Root_C::LayoutVBuckTiles()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "Focus");
+		Func = Class->GetFunction("StoreMain_Root_C", "LayoutVBuckTiles");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.ClearOfferWidgets
-// (Event, Public, BlueprintEvent)
+// Function StoreMain_Root.StoreMain_Root_C.SetupFirstFocusableTile
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UStoreMain_Root_C::ClearOfferWidgets()
+void UStoreMain_Root_C::SetupFirstFocusableTile()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "ClearOfferWidgets");
+		Func = Class->GetFunction("StoreMain_Root_C", "SetupFirstFocusableTile");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.OnAddedToActivationStack
-// (Event, Protected, BlueprintEvent)
+// Function StoreMain_Root.StoreMain_Root_C.SetupForCampaignUpsell
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UStoreMain_Root_C::OnAddedToActivationStack()
+void UStoreMain_Root_C::SetupForCampaignUpsell()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "OnAddedToActivationStack");
+		Func = Class->GetFunction("StoreMain_Root_C", "SetupForCampaignUpsell");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.OnRemovedFromActivationStack
-// (Event, Protected, BlueprintEvent)
-
-void UStoreMain_Root_C::OnRemovedFromActivationStack()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "OnRemovedFromActivationStack");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_Root.StoreMain_Root_C.OnUpdateOtherPlatformMTXMessage
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// Function StoreMain_Root.StoreMain_Root_C.HandleRedeem
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    HasOtherPlatformCurrency                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class FText                             CurrencyMessageLocText                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool*                                   bPassThrough                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UStoreMain_Root_C::OnUpdateOtherPlatformMTXMessage(bool HasOtherPlatformCurrency, const class FText& CurrencyMessageLocText)
+void UStoreMain_Root_C::HandleRedeem(bool* bPassThrough)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "OnUpdateOtherPlatformMTXMessage");
+		Func = Class->GetFunction("StoreMain_Root_C", "HandleRedeem");
 
-	Params::StoreMain_Root_C_OnUpdateOtherPlatformMTXMessage Parms{};
+	Params::StoreMain_Root_C_HandleRedeem Parms{};
 
-	Parms.HasOtherPlatformCurrency = HasOtherPlatformCurrency;
-	Parms.CurrencyMessageLocText = std::move(CurrencyMessageLocText);
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bPassThrough != nullptr)
+		*bPassThrough = Parms.bPassThrough;
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.HandleBack
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   PassThrough                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UStoreMain_Root_C::HandleBack(bool* PassThrough)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "HandleBack");
+
+	Params::StoreMain_Root_C_HandleBack Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PassThrough != nullptr)
+		*PassThrough = Parms.PassThrough;
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.PlayEquippedLockerMusic
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UStoreMain_Root_C::PlayEquippedLockerMusic()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "PlayEquippedLockerMusic");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StoreMain_Root.StoreMain_Root_C.HandleGenerateOffer
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortStoreFrontOfferInfo*         OfferInfo                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UStoreMain_Root_C::HandleGenerateOffer(class UFortStoreFrontOfferInfo* OfferInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_Root_C", "HandleGenerateOffer");
+
+	Params::StoreMain_Root_C_HandleGenerateOffer Parms{};
+
+	Parms.OfferInfo = OfferInfo;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.OnDeactivated
-// (Event, Protected, BlueprintEvent)
+// Function StoreMain_Root.StoreMain_Root_C.HandleAllOffersGenerated
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UStoreMain_Root_C::OnDeactivated()
+void UStoreMain_Root_C::HandleAllOffersGenerated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "OnDeactivated");
+		Func = Class->GetFunction("StoreMain_Root_C", "HandleAllOffersGenerated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.GenerateOfferWidget
-// (Event, Public, BlueprintEvent)
+// Function StoreMain_Root.StoreMain_Root_C.GetVisibilityByChildrenPresence
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UFortStoreFrontOfferInfo*         OfferData                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPanelWidget*                     Panel                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ESlateVisibility*                       NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UStoreMain_Root_C::GenerateOfferWidget(class UFortStoreFrontOfferInfo* OfferData)
+void UStoreMain_Root_C::GetVisibilityByChildrenPresence(class UPanelWidget* Panel, ESlateVisibility* NewParam)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "GenerateOfferWidget");
+		Func = Class->GetFunction("StoreMain_Root_C", "GetVisibilityByChildrenPresence");
 
-	Params::StoreMain_Root_C_GenerateOfferWidget Parms{};
+	Params::StoreMain_Root_C_GetVisibilityByChildrenPresence Parms{};
 
-	Parms.OfferData = OfferData;
+	Parms.Panel = Panel;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (NewParam != nullptr)
+		*NewParam = Parms.NewParam;
 }
 
 
-// Function StoreMain_Root.StoreMain_Root_C.OnPurchasingDisabled
-// (Event, Public, BlueprintEvent)
-
-void UStoreMain_Root_C::OnPurchasingDisabled()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "OnPurchasingDisabled");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_Root.StoreMain_Root_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UStoreMain_Root_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_Root.StoreMain_Root_C.OnStartReadingOffers
-// (Event, Public, BlueprintEvent)
-
-void UStoreMain_Root_C::OnStartReadingOffers()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "OnStartReadingOffers");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_Root.StoreMain_Root_C.OnOffersGenerated
-// (Event, Public, BlueprintEvent)
-
-void UStoreMain_Root_C::OnOffersGenerated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "OnOffersGenerated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_Root.StoreMain_Root_C.NoOffersAvailable
-// (Event, Public, BlueprintEvent)
-
-void UStoreMain_Root_C::NoOffersAvailable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "NoOffersAvailable");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function StoreMain_Root.StoreMain_Root_C.ExecuteUbergraph_StoreMain_Root
-// (Final, UbergraphFunction, HasDefaults)
+// Function StoreMain_Root.StoreMain_Root_C.BP_GetDesiredFocusTarget
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UStoreMain_Root_C::ExecuteUbergraph_StoreMain_Root(int32 EntryPoint)
+class UWidget* UStoreMain_Root_C::BP_GetDesiredFocusTarget() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_Root_C", "ExecuteUbergraph_StoreMain_Root");
+		Func = Class->GetFunction("StoreMain_Root_C", "BP_GetDesiredFocusTarget");
 
-	Params::StoreMain_Root_C_ExecuteUbergraph_StoreMain_Root Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::StoreMain_Root_C_BP_GetDesiredFocusTarget Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass F_MED_HIS_Ramirez_Head_01_AnimBP_Child.F_MED_HIS_Ramirez_Head_01_AnimBP_Child_C
-// 0x0000 (0x1250 - 0x1250)
+// 0x0000 (0x15A0 - 0x15A0)
 class UF_MED_HIS_Ramirez_Head_01_AnimBP_Child_C final : public UFortnite_Base_Head_Export_Skeleton_AnimBP_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UF_MED_HIS_Ramirez_Head_01_AnimBP_Child_C>();
 	}
 };
-static_assert(alignof(UF_MED_HIS_Ramirez_Head_01_AnimBP_Child_C) == 0x000008, "Wrong alignment on UF_MED_HIS_Ramirez_Head_01_AnimBP_Child_C");
-static_assert(sizeof(UF_MED_HIS_Ramirez_Head_01_AnimBP_Child_C) == 0x001250, "Wrong size on UF_MED_HIS_Ramirez_Head_01_AnimBP_Child_C");
 
 }
 

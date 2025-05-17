@@ -134,5 +134,67 @@ void ABP_VictoryDrone_C::NotifyTeleportFinishedTriggered()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function BP_VictoryDrone.BP_VictoryDrone_C.NPC FX Parameters
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<struct FParticleSysParam>*       Instance_Parameters                                    (Parm, OutParm, HasGetValueTypeHash)
+
+void ABP_VictoryDrone_C::NPC_FX_Parameters(TArray<struct FParticleSysParam>* Instance_Parameters)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VictoryDrone_C", "NPC FX Parameters");
+
+	Params::BP_VictoryDrone_C_NPC_FX_Parameters Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Instance_Parameters != nullptr)
+		*Instance_Parameters = std::move(Parms.Instance_Parameters);
+}
+
+
+// Function BP_VictoryDrone.BP_VictoryDrone_C.Decoy FX Parameters
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<struct FParticleSysParam>*       Instance_Parameters                                    (Parm, OutParm, HasGetValueTypeHash)
+
+void ABP_VictoryDrone_C::Decoy_FX_Parameters(TArray<struct FParticleSysParam>* Instance_Parameters)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VictoryDrone_C", "Decoy FX Parameters");
+
+	Params::BP_VictoryDrone_C_Decoy_FX_Parameters Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Instance_Parameters != nullptr)
+		*Instance_Parameters = std::move(Parms.Instance_Parameters);
+}
+
+
+// Function BP_VictoryDrone.BP_VictoryDrone_C.Added Death Audio
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USoundBase*                       Sound_to_Spawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_VictoryDrone_C::Added_Death_Audio(class USoundBase* Sound_to_Spawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_VictoryDrone_C", "Added Death Audio");
+
+	Params::BP_VictoryDrone_C_Added_Death_Audio Parms{};
+
+	Parms.Sound_to_Spawn = Sound_to_Spawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 }
 

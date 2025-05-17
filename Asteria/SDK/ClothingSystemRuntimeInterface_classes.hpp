@@ -10,12 +10,116 @@
 
 #include "Basic.hpp"
 
+#include "ClothingSystemRuntimeInterface_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
+
+// Class ClothingSystemRuntimeInterface.ClothConfigBase
+// 0x0000 (0x0028 - 0x0028)
+class UClothConfigBase : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ClothConfigBase">();
+	}
+	static class UClothConfigBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothConfigBase>();
+	}
+};
+
+// Class ClothingSystemRuntimeInterface.ClothingSimulationFactory
+// 0x0000 (0x0028 - 0x0028)
+class UClothingSimulationFactory : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ClothingSimulationFactory">();
+	}
+	static class UClothingSimulationFactory* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothingSimulationFactory>();
+	}
+};
+
+// Class ClothingSystemRuntimeInterface.ClothPhysicalMeshDataBase_Legacy
+// 0x00B8 (0x00E0 - 0x0028)
+class UClothPhysicalMeshDataBase_Legacy : public UObject
+{
+public:
+	TArray<struct FVector>                        Vertices;                                          // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        Normals;                                           // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint32>                                Indices;                                           // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 InverseMasses;                                     // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FClothVertBoneData>             BoneData;                                          // 0x0068(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumFixedVerts;                                     // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxBoneWeights;                                    // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint32>                                SelfCollisionIndices;                              // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x50];                                      // 0x0090(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ClothPhysicalMeshDataBase_Legacy">();
+	}
+	static class UClothPhysicalMeshDataBase_Legacy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothPhysicalMeshDataBase_Legacy>();
+	}
+};
+
+// Class ClothingSystemRuntimeInterface.ClothingSimulationInteractor
+// 0x0008 (0x0030 - 0x0028)
+class UClothingSimulationInteractor : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ClothConfigUpdated();
+	void DisableGravityOverride();
+	void EnableGravityOverride(const struct FVector& InVector);
+	void PhysicsAssetUpdated();
+	void SetAnimDriveSpringStiffness(float InStiffness);
+
+	int32 GetNumCloths() const;
+	int32 GetNumDynamicParticles() const;
+	int32 GetNumIterations() const;
+	int32 GetNumKinematicParticles() const;
+	int32 GetNumSubsteps() const;
+	float GetSimulationTime() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ClothingSimulationInteractor">();
+	}
+	static class UClothingSimulationInteractor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothingSimulationInteractor>();
+	}
+};
+
+// Class ClothingSystemRuntimeInterface.ClothSharedSimConfigBase
+// 0x0000 (0x0028 - 0x0028)
+class UClothSharedSimConfigBase final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ClothSharedSimConfigBase">();
+	}
+	static class UClothSharedSimConfigBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UClothSharedSimConfigBase>();
+	}
+};
 
 // Class ClothingSystemRuntimeInterface.ClothingAssetBase
 // 0x0020 (0x0048 - 0x0028)
@@ -35,51 +139,6 @@ public:
 		return GetDefaultObjImpl<UClothingAssetBase>();
 	}
 };
-static_assert(alignof(UClothingAssetBase) == 0x000008, "Wrong alignment on UClothingAssetBase");
-static_assert(sizeof(UClothingAssetBase) == 0x000048, "Wrong size on UClothingAssetBase");
-static_assert(offsetof(UClothingAssetBase, ImportedFilePath) == 0x000028, "Member 'UClothingAssetBase::ImportedFilePath' has a wrong offset!");
-static_assert(offsetof(UClothingAssetBase, AssetGuid) == 0x000038, "Member 'UClothingAssetBase::AssetGuid' has a wrong offset!");
-
-// Class ClothingSystemRuntimeInterface.ClothingSimulationFactory
-// 0x0000 (0x0028 - 0x0028)
-class UClothingSimulationFactory : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ClothingSimulationFactory">();
-	}
-	static class UClothingSimulationFactory* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClothingSimulationFactory>();
-	}
-};
-static_assert(alignof(UClothingSimulationFactory) == 0x000008, "Wrong alignment on UClothingSimulationFactory");
-static_assert(sizeof(UClothingSimulationFactory) == 0x000028, "Wrong size on UClothingSimulationFactory");
-
-// Class ClothingSystemRuntimeInterface.ClothingSimulationInteractor
-// 0x0008 (0x0030 - 0x0028)
-class UClothingSimulationInteractor : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void ClothConfigUpdated();
-	void PhysicsAssetUpdated();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ClothingSimulationInteractor">();
-	}
-	static class UClothingSimulationInteractor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UClothingSimulationInteractor>();
-	}
-};
-static_assert(alignof(UClothingSimulationInteractor) == 0x000008, "Wrong alignment on UClothingSimulationInteractor");
-static_assert(sizeof(UClothingSimulationInteractor) == 0x000030, "Wrong size on UClothingSimulationInteractor");
 
 }
 

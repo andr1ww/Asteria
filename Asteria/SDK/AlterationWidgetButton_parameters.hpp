@@ -23,9 +23,6 @@ struct AlterationWidgetButton_C_Setup_Triangles final
 public:
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(AlterationWidgetButton_C_Setup_Triangles) == 0x000008, "Wrong alignment on AlterationWidgetButton_C_Setup_Triangles");
-static_assert(sizeof(AlterationWidgetButton_C_Setup_Triangles) == 0x000008, "Wrong size on AlterationWidgetButton_C_Setup_Triangles");
-static_assert(offsetof(AlterationWidgetButton_C_Setup_Triangles, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000000, "Member 'AlterationWidgetButton_C_Setup_Triangles::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
 
 // Function AlterationWidgetButton.AlterationWidgetButton_C.Update Colors
 // 0x0098 (0x0098 - 0x0000)
@@ -39,13 +36,6 @@ public:
 	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFortRarityItemData                    CallFunc_BPGetRarityData_ReturnValue;              // 0x0018(0x0080)()
 };
-static_assert(alignof(AlterationWidgetButton_C_Update_Colors) == 0x000008, "Wrong alignment on AlterationWidgetButton_C_Update_Colors");
-static_assert(sizeof(AlterationWidgetButton_C_Update_Colors) == 0x000098, "Wrong size on AlterationWidgetButton_C_Update_Colors");
-static_assert(offsetof(AlterationWidgetButton_C_Update_Colors, CallFunc_GetAlterationInfo_ReturnValue) == 0x000000, "Member 'AlterationWidgetButton_C_Update_Colors::CallFunc_GetAlterationInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AlterationWidgetButton_C_Update_Colors, CallFunc_GetAlterationDefintion_ReturnValue) == 0x000008, "Member 'AlterationWidgetButton_C_Update_Colors::CallFunc_GetAlterationDefintion_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AlterationWidgetButton_C_Update_Colors, CallFunc_GetRarity_ReturnValue) == 0x000010, "Member 'AlterationWidgetButton_C_Update_Colors::CallFunc_GetRarity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AlterationWidgetButton_C_Update_Colors, CallFunc_IsValid_ReturnValue) == 0x000011, "Member 'AlterationWidgetButton_C_Update_Colors::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AlterationWidgetButton_C_Update_Colors, CallFunc_BPGetRarityData_ReturnValue) == 0x000018, "Member 'AlterationWidgetButton_C_Update_Colors::CallFunc_BPGetRarityData_ReturnValue' has a wrong offset!");
 
 // Function AlterationWidgetButton.AlterationWidgetButton_C.IntroStart
 // 0x0008 (0x0008 - 0x0000)
@@ -54,9 +44,6 @@ struct AlterationWidgetButton_C_IntroStart final
 public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(AlterationWidgetButton_C_IntroStart) == 0x000008, "Wrong alignment on AlterationWidgetButton_C_IntroStart");
-static_assert(sizeof(AlterationWidgetButton_C_IntroStart) == 0x000008, "Wrong size on AlterationWidgetButton_C_IntroStart");
-static_assert(offsetof(AlterationWidgetButton_C_IntroStart, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'AlterationWidgetButton_C_IntroStart::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 
 // Function AlterationWidgetButton.AlterationWidgetButton_C.IntroReset
 // 0x0008 (0x0008 - 0x0000)
@@ -65,9 +52,6 @@ struct AlterationWidgetButton_C_IntroReset final
 public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(AlterationWidgetButton_C_IntroReset) == 0x000008, "Wrong alignment on AlterationWidgetButton_C_IntroReset");
-static_assert(sizeof(AlterationWidgetButton_C_IntroReset) == 0x000008, "Wrong size on AlterationWidgetButton_C_IntroReset");
-static_assert(offsetof(AlterationWidgetButton_C_IntroReset, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'AlterationWidgetButton_C_IntroReset::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 
 // Function AlterationWidgetButton.AlterationWidgetButton_C.TriggerModificationAnimation
 // 0x0008 (0x0008 - 0x0000)
@@ -76,9 +60,6 @@ struct AlterationWidgetButton_C_TriggerModificationAnimation final
 public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(AlterationWidgetButton_C_TriggerModificationAnimation) == 0x000008, "Wrong alignment on AlterationWidgetButton_C_TriggerModificationAnimation");
-static_assert(sizeof(AlterationWidgetButton_C_TriggerModificationAnimation) == 0x000008, "Wrong size on AlterationWidgetButton_C_TriggerModificationAnimation");
-static_assert(offsetof(AlterationWidgetButton_C_TriggerModificationAnimation, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'AlterationWidgetButton_C_TriggerModificationAnimation::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 
 // Function AlterationWidgetButton.AlterationWidgetButton_C.ExecuteUbergraph_AlterationWidgetButton
 // 0x0010 (0x0010 - 0x0000)
@@ -89,10 +70,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFortAlterationInfo*                    CallFunc_GetAlterationInfo_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(AlterationWidgetButton_C_ExecuteUbergraph_AlterationWidgetButton) == 0x000008, "Wrong alignment on AlterationWidgetButton_C_ExecuteUbergraph_AlterationWidgetButton");
-static_assert(sizeof(AlterationWidgetButton_C_ExecuteUbergraph_AlterationWidgetButton) == 0x000010, "Wrong size on AlterationWidgetButton_C_ExecuteUbergraph_AlterationWidgetButton");
-static_assert(offsetof(AlterationWidgetButton_C_ExecuteUbergraph_AlterationWidgetButton, EntryPoint) == 0x000000, "Member 'AlterationWidgetButton_C_ExecuteUbergraph_AlterationWidgetButton::EntryPoint' has a wrong offset!");
-static_assert(offsetof(AlterationWidgetButton_C_ExecuteUbergraph_AlterationWidgetButton, CallFunc_GetAlterationInfo_ReturnValue) == 0x000008, "Member 'AlterationWidgetButton_C_ExecuteUbergraph_AlterationWidgetButton::CallFunc_GetAlterationInfo_ReturnValue' has a wrong offset!");
 
 }
 

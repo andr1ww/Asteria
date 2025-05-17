@@ -26,5 +26,42 @@ enum class EFrameNumberDisplayFormats : uint8
 	EFrameNumberDisplayFormats_MAX           = 5,
 };
 
+// Enum TimeManagement.ETimedDataInputState
+// NumValues: 0x0004
+enum class ETimedDataInputState : uint8
+{
+	Connected                                = 0,
+	Unresponsive                             = 1,
+	Disconnected                             = 2,
+	ETimedDataInputState_MAX                 = 3,
+};
+
+// Enum TimeManagement.ETimedDataInputEvaluationType
+// NumValues: 0x0004
+enum class ETimedDataInputEvaluationType : uint8
+{
+	None                                     = 0,
+	Timecode                                 = 1,
+	PlatformTime                             = 2,
+	ETimedDataInputEvaluationType_MAX        = 3,
+};
+
+// ScriptStruct TimeManagement.TimedDataInputEvaluationData
+// 0x0008 (0x0008 - 0x0000)
+struct FTimedDataInputEvaluationData final
+{
+public:
+	float                                         DistanceToNewestSampleSeconds;                     // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DistanceToOldestSampleSeconds;                     // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// ScriptStruct TimeManagement.TimedDataChannelSampleTime
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FTimedDataChannelSampleTime final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
 }
 

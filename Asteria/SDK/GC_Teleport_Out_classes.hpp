@@ -36,9 +36,6 @@ public:
 		return GetDefaultObjImpl<UGC_Teleport_Out_C>();
 	}
 };
-static_assert(alignof(UGC_Teleport_Out_C) == 0x000008, "Wrong alignment on UGC_Teleport_Out_C");
-static_assert(sizeof(UGC_Teleport_Out_C) == 0x000088, "Wrong size on UGC_Teleport_Out_C");
-static_assert(offsetof(UGC_Teleport_Out_C, Default_Play_Length) == 0x000080, "Member 'UGC_Teleport_Out_C::Default_Play_Length' has a wrong offset!");
 
 }
 

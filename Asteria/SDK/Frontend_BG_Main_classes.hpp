@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteGame_classes.hpp"
 
 
@@ -17,9 +18,24 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Frontend_BG_Main.Frontend_BG_Main_C
-// 0x0000 (0x0258 - 0x0258)
+// 0x0018 (0x0250 - 0x0238)
 class AFrontend_BG_Main_C final : public AFortLevelScriptActor
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class ABP_Frontend_ShopBG_C*                  BP_Frontend_ShopBG_9_ExecuteUbergraph_Frontend_BG_Main_RefProperty; // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortStaticMeshActor*                   S_UI_FrontendInspect_HexDonut_ExecuteUbergraph_Frontend_BG_Main_RefProperty; // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_2_RequestDelegate__DelegateSignature();
+	void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_3_RequestDelegate__DelegateSignature();
+	void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_1_OnEnvironmentBackgroundTextureChangedDynamic__DelegateSignature(class UTexture* BackgroundImage);
+	void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_0_OnEnvironmentChangedDynamic__DelegateSignature(const class FString& PresetEnvironmentName);
+	void ReceiveBeginPlay();
+	void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_4_OnEnteredItemShop__DelegateSignature();
+	void BndEvt__CMSLobbyDirector_2_K2Node_ActorBoundEvent_5_OnEnteredStore__DelegateSignature();
+	void ExecuteUbergraph_Frontend_BG_Main(int32 EntryPoint);
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -30,8 +46,6 @@ public:
 		return GetDefaultObjImpl<AFrontend_BG_Main_C>();
 	}
 };
-static_assert(alignof(AFrontend_BG_Main_C) == 0x000008, "Wrong alignment on AFrontend_BG_Main_C");
-static_assert(sizeof(AFrontend_BG_Main_C) == 0x000258, "Wrong size on AFrontend_BG_Main_C");
 
 }
 

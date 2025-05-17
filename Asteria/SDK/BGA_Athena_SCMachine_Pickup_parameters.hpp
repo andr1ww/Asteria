@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "FortniteGame_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 
@@ -20,215 +21,60 @@ namespace SDK::Params
 {
 
 // Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ExecuteUbergraph_BGA_Athena_SCMachine_Pickup
-// 0x04A0 (0x04A0 - 0x0000)
+// 0x01B0 (0x01B0 - 0x0000)
 struct BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_CustomEvent_DamagedActor;                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_CustomEvent_Damage;                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            K2Node_CustomEvent_InstigatedBy;                   // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_CustomEvent_DamageCauser;                   // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_CustomEvent_HitLocation;                    // 0x0028(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    K2Node_CustomEvent_FHitComponent;                  // 0x0038(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_CustomEvent_BoneName;                       // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_CustomEvent_Momentum;                       // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	const class AFortPawn*                        K2Node_Event_InteractingPawn;                      // 0x0030(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EInteractionBeingAttempted                    K2Node_Event_InteractionBeingAttempted;            // 0x0038(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0040(0x0008)(NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0048(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_CustomEvent_DestroyedActor;                 // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0060(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         K2Node_MakeArray_Array_1;                          // 0x0088(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
-	TArray<class AActor*>                         CallFunc_SphereOverlapActors_OutActors;            // 0x0098(0x0010)(ZeroConstructor, ReferenceParm)
-	bool                                          CallFunc_SphereOverlapActors_ReturnValue;          // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)> K2Node_CreateDelegate_OutputDelegate;              // 0x00B0(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void(class AActor* DestroyedActor)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x00C0(0x0010)(ZeroConstructor, NoDestructor)
-	TDelegate<void(class AActor* DamagedActor, float Damage, class AController* InstigatedBy, class AActor* DamageCauser, const struct FVector& HitLocation, class UPrimitiveComponent* FHitComponent, class FName BoneName, const struct FVector& Momentum)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x00D0(0x0010)(ZeroConstructor, NoDestructor)
-	class AActor*                                 K2Node_CustomEvent_Actor;                          // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x00E8(0x0010)(ZeroConstructor, NoDestructor)
-	class ABuildingActor*                         K2Node_DynamicCast_AsBuilding_Actor;               // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    K2Node_Event_MyComp;                               // 0x0108(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_Other;                                // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_Event_OtherComp;                            // 0x0118(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bSelfMoved;                           // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_121[0x3];                                      // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                K2Node_Event_HitLocation;                          // 0x0124(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_Event_HitNormal;                            // 0x0130(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_Event_NormalImpulse;                        // 0x013C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_Hit;                                  // 0x0148(0x0088)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         CallFunc_Dot_VectorVector_ReturnValue;             // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1E1[0x3];                                      // 0x01E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_DegAcos_ReturnValue;                      // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_CustomEvent_Hit;                            // 0x01E8(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0271(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0272(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_273[0x1];                                      // 0x0273(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x027C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0288(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0294(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x02A0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x02C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x02D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x02D8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x02E4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x02F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABuildingActor*                         K2Node_DynamicCast_AsBuilding_Actor_1;             // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_301[0x3];                                      // 0x0301(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class AActor* DestroyedActor)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x0304(0x0010)(ZeroConstructor, NoDestructor)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0314(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	const class AFortPawn*                        K2Node_Event_InteractingPawn;                      // 0x0318(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_321[0x3];                                      // 0x0321(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetValueAtLevel_ReturnValue;              // 0x0324(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0328(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0330(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_33C[0x4];                                      // 0x033C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue;       // 0x0340(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue; // 0x0348(0x0010)(ZeroConstructor, ReferenceParm)
-	class AFortPlayerController*                  CallFunc_Array_Get_Item_1;                         // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0360(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_364[0x4];                                      // 0x0364(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        CallFunc_GetPlayerPawn_ReturnValue;                // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetActorTeam_ReturnValue;                 // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0371(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_372[0x6];                                      // 0x0372(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0378(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_381[0x7];                                      // 0x0381(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue_1; // 0x0388(0x0010)(ZeroConstructor, ReferenceParm)
-	class AFortPlayerController*                  CallFunc_Array_Get_Item_2;                         // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetActorTeam_ReturnValue_1;               // 0x03A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x03A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x03A6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3A7[0x1];                                      // 0x03A7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_Damage;                               // 0x03A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3AC[0x4];                                      // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  K2Node_Event_DamageTags;                           // 0x03B0(0x0020)(ConstParm)
-	struct FVector                                K2Node_Event_Momentum;                             // 0x03D0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_HitInfo;                              // 0x03DC(0x0088)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            K2Node_Event_InstigatedBy;                         // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_DamageCauser;                         // 0x0470(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext;                        // 0x0478(0x0018)()
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0490(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0494(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_495[0x3];                                      // 0x0495(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0498(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue;       // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue; // 0x0060(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class AFortPlayerController*                  CallFunc_Array_Get_Item;                           // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        CallFunc_GetPlayerPawn_ReturnValue;                // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_GetActorTeam_ReturnValue;                 // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8B[0x5];                                       // 0x008B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAttached_ReturnValue;         // 0x0090(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue_1; // 0x00A0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class AFortPlayerController*                  CallFunc_Array_Get_Item_1;                         // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetActorTeam_ReturnValue_1;               // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x00BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BF[0x1];                                       // 0x00BF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_Damage;                               // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  K2Node_Event_DamageTags;                           // 0x00C8(0x0020)(ConstParm)
+	struct FVector                                K2Node_Event_Momentum;                             // 0x00E8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_Event_HitInfo;                              // 0x00F4(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AController*                            K2Node_Event_InstigatedBy;                         // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_DamageCauser;                         // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext;                        // 0x0190(0x0018)()
+	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01AE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup) == 0x000008, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup) == 0x0004A0, "Wrong size on BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, EntryPoint) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CustomEvent_DamagedActor) == 0x000008, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CustomEvent_DamagedActor' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CustomEvent_Damage) == 0x000010, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CustomEvent_Damage' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CustomEvent_InstigatedBy) == 0x000018, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CustomEvent_InstigatedBy' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CustomEvent_DamageCauser) == 0x000020, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CustomEvent_DamageCauser' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CustomEvent_HitLocation) == 0x000028, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CustomEvent_HitLocation' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CustomEvent_FHitComponent) == 0x000038, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CustomEvent_FHitComponent' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CustomEvent_BoneName) == 0x000040, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CustomEvent_BoneName' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CustomEvent_Momentum) == 0x000048, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CustomEvent_Momentum' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CustomEvent_DestroyedActor) == 0x000058, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CustomEvent_DestroyedActor' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000060, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_MakeArray_Array) == 0x000070, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, Temp_int_Loop_Counter_Variable) == 0x000080, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_MakeArray_Array_1) == 0x000088, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_SphereOverlapActors_OutActors) == 0x000098, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_SphereOverlapActors_OutActors' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_SphereOverlapActors_ReturnValue) == 0x0000A8, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_SphereOverlapActors_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_Add_IntInt_ReturnValue) == 0x0000AC, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CreateDelegate_OutputDelegate) == 0x0000B0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000C0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CreateDelegate_OutputDelegate_2) == 0x0000D0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CustomEvent_Actor) == 0x0000E0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CustomEvent_Actor' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CreateDelegate_OutputDelegate_3) == 0x0000E8, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_DynamicCast_AsBuilding_Actor) == 0x0000F8, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_DynamicCast_AsBuilding_Actor' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_DynamicCast_bSuccess) == 0x000100, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_MyComp) == 0x000108, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_MyComp' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_Other) == 0x000110, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_Other' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_OtherComp) == 0x000118, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_OtherComp' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_bSelfMoved) == 0x000120, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_bSelfMoved' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_HitLocation) == 0x000124, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_HitLocation' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_HitNormal) == 0x000130, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_HitNormal' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_NormalImpulse) == 0x00013C, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_NormalImpulse' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_Hit) == 0x000148, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_Hit' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_Dot_VectorVector_ReturnValue) == 0x0001D0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_Dot_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_DynamicCast_AsPawn) == 0x0001D8, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_DynamicCast_AsPawn' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_DynamicCast_bSuccess_1) == 0x0001E0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_DegAcos_ReturnValue) == 0x0001E4, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_DegAcos_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CustomEvent_Hit) == 0x0001E8, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CustomEvent_Hit' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_Less_FloatFloat_ReturnValue) == 0x000270, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_bBlockingHit) == 0x000271, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_bInitialOverlap) == 0x000272, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_Time) == 0x000274, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_Distance) == 0x000278, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_Location) == 0x00027C, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_ImpactPoint) == 0x000288, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_Normal) == 0x000294, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_ImpactNormal) == 0x0002A0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_PhysMat) == 0x0002B0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_HitActor) == 0x0002B8, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_HitComponent) == 0x0002C0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_HitBoneName) == 0x0002C8, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_HitItem) == 0x0002D0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_FaceIndex) == 0x0002D4, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_TraceStart) == 0x0002D8, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_BreakHitResult_TraceEnd) == 0x0002E4, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_Array_Get_Item) == 0x0002F0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_DynamicCast_AsBuilding_Actor_1) == 0x0002F8, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_DynamicCast_AsBuilding_Actor_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_DynamicCast_bSuccess_2) == 0x000300, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_CreateDelegate_OutputDelegate_4) == 0x000304, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, Temp_int_Array_Index_Variable_1) == 0x000314, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_InteractingPawn) == 0x000318, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_InteractingPawn' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_IsVisible_ReturnValue) == 0x000320, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_IsVisible_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_GetValueAtLevel_ReturnValue) == 0x000324, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_GetValueAtLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000328, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000330, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_SpawnEmitterAtLocation_ReturnValue) == 0x000340, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_SpawnEmitterAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_GetLocalFortPlayerControllers_ReturnValue) == 0x000348, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_GetLocalFortPlayerControllers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_Array_Get_Item_1) == 0x000358, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_Array_Length_ReturnValue) == 0x000360, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_GetPlayerPawn_ReturnValue) == 0x000368, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_GetActorTeam_ReturnValue) == 0x000370, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_GetActorTeam_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_IsValid_ReturnValue) == 0x000371, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_SpawnEmitterAttached_ReturnValue) == 0x000378, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_SpawnEmitterAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000380, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_GetLocalFortPlayerControllers_ReturnValue_1) == 0x000388, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_GetLocalFortPlayerControllers_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_Array_Get_Item_2) == 0x000398, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_Array_Length_ReturnValue_1) == 0x0003A0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_GetActorTeam_ReturnValue_1) == 0x0003A4, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_GetActorTeam_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_Less_IntInt_ReturnValue) == 0x0003A5, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x0003A6, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_Damage) == 0x0003A8, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_Damage' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_DamageTags) == 0x0003B0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_DamageTags' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_Momentum) == 0x0003D0, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_Momentum' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_HitInfo) == 0x0003DC, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_HitInfo' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_InstigatedBy) == 0x000468, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_InstigatedBy' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_DamageCauser) == 0x000470, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_DamageCauser' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, K2Node_Event_EffectContext) == 0x000478, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::K2Node_Event_EffectContext' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, Temp_int_Loop_Counter_Variable_1) == 0x000490, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_Less_IntInt_ReturnValue_1) == 0x000494, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup, CallFunc_Add_IntInt_ReturnValue_1) == 0x000498, "Member 'BGA_Athena_SCMachine_Pickup_C_ExecuteUbergraph_BGA_Athena_SCMachine_Pickup::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnDeathServer
 // 0x00E8 (0x00E8 - 0x0000)
@@ -239,118 +85,20 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             HitInfo;                                           // 0x0034(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             HitInfo;                                           // 0x0034(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	class AController*                            InstigatedBy;                                      // 0x00C0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 DamageCauser;                                      // 0x00C8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00D0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_OnDeathServer) == 0x000008, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_OnDeathServer");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_OnDeathServer) == 0x0000E8, "Wrong size on BGA_Athena_SCMachine_Pickup_C_OnDeathServer");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnDeathServer, Damage) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_OnDeathServer::Damage' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnDeathServer, DamageTags) == 0x000008, "Member 'BGA_Athena_SCMachine_Pickup_C_OnDeathServer::DamageTags' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnDeathServer, Momentum) == 0x000028, "Member 'BGA_Athena_SCMachine_Pickup_C_OnDeathServer::Momentum' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnDeathServer, HitInfo) == 0x000034, "Member 'BGA_Athena_SCMachine_Pickup_C_OnDeathServer::HitInfo' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnDeathServer, InstigatedBy) == 0x0000C0, "Member 'BGA_Athena_SCMachine_Pickup_C_OnDeathServer::InstigatedBy' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnDeathServer, DamageCauser) == 0x0000C8, "Member 'BGA_Athena_SCMachine_Pickup_C_OnDeathServer::DamageCauser' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnDeathServer, EffectContext) == 0x0000D0, "Member 'BGA_Athena_SCMachine_Pickup_C_OnDeathServer::EffectContext' has a wrong offset!");
 
 // Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintOnInteract
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct BGA_Athena_SCMachine_Pickup_C_BlueprintOnInteract final
 {
 public:
 	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_BlueprintOnInteract) == 0x000008, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_BlueprintOnInteract");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_BlueprintOnInteract) == 0x000008, "Wrong size on BGA_Athena_SCMachine_Pickup_C_BlueprintOnInteract");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BlueprintOnInteract, InteractingPawn) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_BlueprintOnInteract::InteractingPawn' has a wrong offset!");
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.StopSim
-// 0x0088 (0x0088 - 0x0000)
-struct BGA_Athena_SCMachine_Pickup_C_StopSim final
-{
-public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x0088)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_StopSim) == 0x000004, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_StopSim");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_StopSim) == 0x000088, "Wrong size on BGA_Athena_SCMachine_Pickup_C_StopSim");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_StopSim, Hit) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_StopSim::Hit' has a wrong offset!");
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ReceiveHit
-// 0x00C8 (0x00C8 - 0x0000)
-struct BGA_Athena_SCMachine_Pickup_C_ReceiveHit final
-{
-public:
-	class UPrimitiveComponent*                    MyComp;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Other;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSelfMoved;                                        // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                HitLocation;                                       // 0x001C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                HitNormal_0;                                       // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                NormalImpulse;                                     // 0x0034(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             Hit;                                               // 0x0040(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_ReceiveHit) == 0x000008, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_ReceiveHit");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_ReceiveHit) == 0x0000C8, "Wrong size on BGA_Athena_SCMachine_Pickup_C_ReceiveHit");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ReceiveHit, MyComp) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_ReceiveHit::MyComp' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ReceiveHit, Other) == 0x000008, "Member 'BGA_Athena_SCMachine_Pickup_C_ReceiveHit::Other' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ReceiveHit, OtherComp) == 0x000010, "Member 'BGA_Athena_SCMachine_Pickup_C_ReceiveHit::OtherComp' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ReceiveHit, bSelfMoved) == 0x000018, "Member 'BGA_Athena_SCMachine_Pickup_C_ReceiveHit::bSelfMoved' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ReceiveHit, HitLocation) == 0x00001C, "Member 'BGA_Athena_SCMachine_Pickup_C_ReceiveHit::HitLocation' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ReceiveHit, HitNormal_0) == 0x000028, "Member 'BGA_Athena_SCMachine_Pickup_C_ReceiveHit::HitNormal_0' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ReceiveHit, NormalImpulse) == 0x000034, "Member 'BGA_Athena_SCMachine_Pickup_C_ReceiveHit::NormalImpulse' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ReceiveHit, Hit) == 0x000040, "Member 'BGA_Athena_SCMachine_Pickup_C_ReceiveHit::Hit' has a wrong offset!");
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.HandleBinding
-// 0x0008 (0x0008 - 0x0000)
-struct BGA_Athena_SCMachine_Pickup_C_HandleBinding final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_HandleBinding) == 0x000008, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_HandleBinding");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_HandleBinding) == 0x000008, "Wrong size on BGA_Athena_SCMachine_Pickup_C_HandleBinding");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_HandleBinding, Actor) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_HandleBinding::Actor' has a wrong offset!");
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BaseDestroyed
-// 0x0008 (0x0008 - 0x0000)
-struct BGA_Athena_SCMachine_Pickup_C_BaseDestroyed final
-{
-public:
-	class AActor*                                 DestroyedActor;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_BaseDestroyed) == 0x000008, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_BaseDestroyed");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_BaseDestroyed) == 0x000008, "Wrong size on BGA_Athena_SCMachine_Pickup_C_BaseDestroyed");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BaseDestroyed, DestroyedActor) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_BaseDestroyed::DestroyedActor' has a wrong offset!");
-
-// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BaseDied
-// 0x0050 (0x0050 - 0x0000)
-struct BGA_Athena_SCMachine_Pickup_C_BaseDied final
-{
-public:
-	class AActor*                                 DamagedActor;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Damage;                                            // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            InstigatedBy;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 DamageCauser;                                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                HitLocation;                                       // 0x0020(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    FHitComponent;                                     // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   BoneName;                                          // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Momentum;                                          // 0x0040(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_BaseDied) == 0x000008, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_BaseDied");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_BaseDied) == 0x000050, "Wrong size on BGA_Athena_SCMachine_Pickup_C_BaseDied");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BaseDied, DamagedActor) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_BaseDied::DamagedActor' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BaseDied, Damage) == 0x000008, "Member 'BGA_Athena_SCMachine_Pickup_C_BaseDied::Damage' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BaseDied, InstigatedBy) == 0x000010, "Member 'BGA_Athena_SCMachine_Pickup_C_BaseDied::InstigatedBy' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BaseDied, DamageCauser) == 0x000018, "Member 'BGA_Athena_SCMachine_Pickup_C_BaseDied::DamageCauser' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BaseDied, HitLocation) == 0x000020, "Member 'BGA_Athena_SCMachine_Pickup_C_BaseDied::HitLocation' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BaseDied, FHitComponent) == 0x000030, "Member 'BGA_Athena_SCMachine_Pickup_C_BaseDied::FHitComponent' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BaseDied, BoneName) == 0x000038, "Member 'BGA_Athena_SCMachine_Pickup_C_BaseDied::BoneName' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BaseDied, Momentum) == 0x000040, "Member 'BGA_Athena_SCMachine_Pickup_C_BaseDied::Momentum' has a wrong offset!");
 
 // Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnRep_UnHide
 // 0x0048 (0x0048 - 0x0000)
@@ -362,7 +110,7 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue; // 0x0010(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue; // 0x0010(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AFortPlayerController*                  CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -375,20 +123,6 @@ public:
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_Conv_IntToBool_ReturnValue_1;             // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide) == 0x000008, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide) == 0x000048, "Wrong size on BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, CallFunc_Conv_IntToBool_ReturnValue) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, CallFunc_GetGameTimeInSeconds_ReturnValue) == 0x000008, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::CallFunc_GetGameTimeInSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, CallFunc_GetLocalFortPlayerControllers_ReturnValue) == 0x000010, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::CallFunc_GetLocalFortPlayerControllers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, CallFunc_Array_Get_Item) == 0x000028, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, CallFunc_GetActorTeam_ReturnValue) == 0x000030, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::CallFunc_GetActorTeam_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, CallFunc_Add_IntInt_ReturnValue) == 0x000034, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000038, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, CallFunc_Array_Length_ReturnValue) == 0x00003C, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, CallFunc_Less_IntInt_ReturnValue) == 0x000040, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide, CallFunc_Conv_IntToBool_ReturnValue_1) == 0x000041, "Member 'BGA_Athena_SCMachine_Pickup_C_OnRep_UnHide::CallFunc_Conv_IntToBool_ReturnValue_1' has a wrong offset!");
 
 // Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ShouldDie
 // 0x0020 (0x0020 - 0x0000)
@@ -401,12 +135,59 @@ public:
 	class AActor*                                 DamageCauser;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_ShouldDie) == 0x000008, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_ShouldDie");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_ShouldDie) == 0x000020, "Wrong size on BGA_Athena_SCMachine_Pickup_C_ShouldDie");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ShouldDie, Damage) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_ShouldDie::Damage' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ShouldDie, EventInstigator) == 0x000008, "Member 'BGA_Athena_SCMachine_Pickup_C_ShouldDie::EventInstigator' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ShouldDie, DamageCauser) == 0x000010, "Member 'BGA_Athena_SCMachine_Pickup_C_ShouldDie::DamageCauser' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_ShouldDie, ReturnValue) == 0x000018, "Member 'BGA_Athena_SCMachine_Pickup_C_ShouldDie::ReturnValue' has a wrong offset!");
+
+// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.DetermineStopLocation
+// 0x0148 (0x0148 - 0x0000)
+struct BGA_Athena_SCMachine_Pickup_C_DetermineStopLocation final
+{
+public:
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ConstParm, ReferenceParm, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0018(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0024(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0030(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_CapsuleTraceSingle_OutHit;                // 0x003C(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_CapsuleTraceSingle_ReturnValue;           // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x00CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_CB[0x1];                                       // 0x00CB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x00D4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x00E0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x00EC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x00F8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0118(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0130(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x013C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ConsiderPositionCorrection
+// 0x0158 (0x0158 - 0x0000)
+struct BGA_Athena_SCMachine_Pickup_C_ConsiderPositionCorrection final
+{
+public:
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0004(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x0098(0x0010)(ConstParm, ReferenceParm, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x00A8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x00B4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingle_OutHit;                   // 0x00C0(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_14D[0x3];                                      // 0x014D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Vector_Distance_ReturnValue;              // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
 
 // Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintCanInteract
 // 0x0010 (0x0010 - 0x0000)
@@ -414,29 +195,23 @@ struct BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract final
 {
 public:
 	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         CallFunc_GetActorTeam_ReturnValue;                 // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETInteractionType                             InteractionType;                                   // 0x0009(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x000A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_GetActorTeam_ReturnValue;                 // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract) == 0x000008, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract) == 0x000010, "Wrong size on BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract, InteractingPawn) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract::InteractingPawn' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract, ReturnValue) == 0x000008, "Member 'BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract, CallFunc_GetActorTeam_ReturnValue) == 0x000009, "Member 'BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract::CallFunc_GetActorTeam_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00000A, "Member 'BGA_Athena_SCMachine_Pickup_C_BlueprintCanInteract::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 
 // Function BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintGetInteractionString
-// 0x0020 (0x0020 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct BGA_Athena_SCMachine_Pickup_C_BlueprintGetInteractionString final
 {
 public:
 	const class AFortPawn*                        InteractingPawn;                                   // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm)
+	EInteractionBeingAttempted                    InteractionBeingAttempted;                         // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm)
 };
-static_assert(alignof(BGA_Athena_SCMachine_Pickup_C_BlueprintGetInteractionString) == 0x000008, "Wrong alignment on BGA_Athena_SCMachine_Pickup_C_BlueprintGetInteractionString");
-static_assert(sizeof(BGA_Athena_SCMachine_Pickup_C_BlueprintGetInteractionString) == 0x000020, "Wrong size on BGA_Athena_SCMachine_Pickup_C_BlueprintGetInteractionString");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BlueprintGetInteractionString, InteractingPawn) == 0x000000, "Member 'BGA_Athena_SCMachine_Pickup_C_BlueprintGetInteractionString::InteractingPawn' has a wrong offset!");
-static_assert(offsetof(BGA_Athena_SCMachine_Pickup_C_BlueprintGetInteractionString, ReturnValue) == 0x000008, "Member 'BGA_Athena_SCMachine_Pickup_C_BlueprintGetInteractionString::ReturnValue' has a wrong offset!");
 
 }
 

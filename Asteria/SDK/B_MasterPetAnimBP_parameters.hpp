@@ -10,97 +10,53 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+
 
 namespace SDK::Params
 {
 
+// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.PetSkeletalControlLayer
+// 0x0038 (0x0038 - 0x0000)
+struct B_MasterPetAnimBP_C_PetSkeletalControlLayer final
+{
+public:
+	struct FPoseLink                              Pose;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         LookAtOverrideInput_0;                             // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LookAtTargetLocationInput_0;                       // 0x0014(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LegIKAlphaOverride_0;                              // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         HandIKAlphaOverride_0;                             // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPoseLink                              PetSkeletalControlLayer_0;                         // 0x0028(0x0010)(Parm, OutParm, NoDestructor)
+};
+
+// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.PetFullOverrideLayer
+// 0x0020 (0x0020 - 0x0000)
+struct B_MasterPetAnimBP_C_PetFullOverrideLayer final
+{
+public:
+	struct FPoseLink                              InPose;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FPoseLink                              PetFullOverrideLayer_0;                            // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
+};
+
+// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.AnimGraph
+// 0x0010 (0x0010 - 0x0000)
+struct B_MasterPetAnimBP_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+};
+
 // Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.ExecuteUbergraph_B_MasterPetAnimBP
-// 0x0054 (0x0054 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetRelevantAnimTimeRemaining_ReturnValue; // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1; // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue_1;            // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2; // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetCurveValue_ReturnValue;                // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue; // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue_2;            // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x002E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2F[0x1];                                       // 0x002F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_1; // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue_1;       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaTimeX;                           // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCurveValue_ReturnValue_1;              // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetCurveValue_ReturnValue_2;              // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_RandomIntegerInRange_ReturnValue;         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Clamp_ReturnValue;                        // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP) == 0x000004, "Wrong alignment on B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP");
-static_assert(sizeof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP) == 0x000054, "Wrong size on B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, EntryPoint) == 0x000000, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue) == 0x000004, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_Not_PreBool_ReturnValue) == 0x000008, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_Less_FloatFloat_ReturnValue) == 0x000009, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_Not_PreBool_ReturnValue_1) == 0x00000A, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1) == 0x00000C, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_BooleanAND_ReturnValue) == 0x000010, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_Less_FloatFloat_ReturnValue_1) == 0x000011, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_Less_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_BooleanAND_ReturnValue_1) == 0x000012, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_Not_PreBool_ReturnValue_2) == 0x000013, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_BooleanAND_ReturnValue_2) == 0x000014, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2) == 0x000018, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x00001C, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_GetCurveValue_ReturnValue) == 0x000020, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_GetCurveValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_BooleanOR_ReturnValue) == 0x000024, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_Not_PreBool_ReturnValue_3) == 0x000025, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue) == 0x000028, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_Less_FloatFloat_ReturnValue_2) == 0x00002C, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_Less_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_BooleanAND_ReturnValue_3) == 0x00002D, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_BooleanAND_ReturnValue_4) == 0x00002E, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_1) == 0x000030, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_RandomIntegerInRange_ReturnValue) == 0x000034, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_RandomIntegerInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_Clamp_ReturnValue) == 0x000038, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_Clamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_RandomInteger_ReturnValue) == 0x00003C, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_RandomInteger_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_LessEqual_FloatFloat_ReturnValue_1) == 0x000040, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_LessEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_BooleanAND_ReturnValue_5) == 0x000041, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, K2Node_Event_DeltaTimeX) == 0x000044, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_GetCurveValue_ReturnValue_1) == 0x000048, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_GetCurveValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_GetCurveValue_ReturnValue_2) == 0x00004C, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_GetCurveValue_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000050, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x000051, "Member 'B_MasterPetAnimBP_C_ExecuteUbergraph_B_MasterPetAnimBP::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-
-// Function B_MasterPetAnimBP.B_MasterPetAnimBP_C.BlueprintUpdateAnimation
-// 0x0004 (0x0004 - 0x0000)
-struct B_MasterPetAnimBP_C_BlueprintUpdateAnimation final
-{
-public:
-	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(B_MasterPetAnimBP_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on B_MasterPetAnimBP_C_BlueprintUpdateAnimation");
-static_assert(sizeof(B_MasterPetAnimBP_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on B_MasterPetAnimBP_C_BlueprintUpdateAnimation");
-static_assert(offsetof(B_MasterPetAnimBP_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'B_MasterPetAnimBP_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
 
 }
 

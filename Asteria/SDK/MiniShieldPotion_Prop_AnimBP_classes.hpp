@@ -19,18 +19,21 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass MiniShieldPotion_Prop_AnimBP.MiniShieldPotion_Prop_AnimBP_C
-// 0x00F0 (0x0358 - 0x0268)
+// 0x00D0 (0x0390 - 0x02C0)
 class UMiniShieldPotion_Prop_AnimBP_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root_ADBF5B5247A0D734AE3EC09836B87FFF; // 0x0278(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_78F97BF7428BE467D018D1901FBFBB3A; // 0x0298(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_643128CD4E51CB7A8C42BF87DED7A3A0; // 0x02E0(0x0078)()
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02D0(0x0030)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0300(0x0048)()
+	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator;                   // 0x0348(0x0048)()
 
 public:
 	void ExecuteUbergraph_MiniShieldPotion_Prop_AnimBP(int32 EntryPoint);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -42,12 +45,6 @@ public:
 		return GetDefaultObjImpl<UMiniShieldPotion_Prop_AnimBP_C>();
 	}
 };
-static_assert(alignof(UMiniShieldPotion_Prop_AnimBP_C) == 0x000008, "Wrong alignment on UMiniShieldPotion_Prop_AnimBP_C");
-static_assert(sizeof(UMiniShieldPotion_Prop_AnimBP_C) == 0x000358, "Wrong size on UMiniShieldPotion_Prop_AnimBP_C");
-static_assert(offsetof(UMiniShieldPotion_Prop_AnimBP_C, UberGraphFrame) == 0x000270, "Member 'UMiniShieldPotion_Prop_AnimBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMiniShieldPotion_Prop_AnimBP_C, AnimGraphNode_Root_ADBF5B5247A0D734AE3EC09836B87FFF) == 0x000278, "Member 'UMiniShieldPotion_Prop_AnimBP_C::AnimGraphNode_Root_ADBF5B5247A0D734AE3EC09836B87FFF' has a wrong offset!");
-static_assert(offsetof(UMiniShieldPotion_Prop_AnimBP_C, AnimGraphNode_Slot_78F97BF7428BE467D018D1901FBFBB3A) == 0x000298, "Member 'UMiniShieldPotion_Prop_AnimBP_C::AnimGraphNode_Slot_78F97BF7428BE467D018D1901FBFBB3A' has a wrong offset!");
-static_assert(offsetof(UMiniShieldPotion_Prop_AnimBP_C, AnimGraphNode_SequencePlayer_643128CD4E51CB7A8C42BF87DED7A3A0) == 0x0002E0, "Member 'UMiniShieldPotion_Prop_AnimBP_C::AnimGraphNode_SequencePlayer_643128CD4E51CB7A8C42BF87DED7A3A0' has a wrong offset!");
 
 }
 

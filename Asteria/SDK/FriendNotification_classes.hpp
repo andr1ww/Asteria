@@ -10,25 +10,24 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass FriendNotification.FriendNotification_C
-// 0x0008 (0x00E0 - 0x00D8)
+// 0x0008 (0x0110 - 0x0108)
 class UFriendNotification_C final : public UFortUIFriendNotification
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0108(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_FriendNotification(int32 EntryPoint);
-	void ShowPartyInvites();
-	void JoinPartyInvite();
 	void ShowFriendInvites();
+	void JoinPartyInvite();
 
 public:
 	static class UClass* StaticClass()
@@ -40,9 +39,6 @@ public:
 		return GetDefaultObjImpl<UFriendNotification_C>();
 	}
 };
-static_assert(alignof(UFriendNotification_C) == 0x000008, "Wrong alignment on UFriendNotification_C");
-static_assert(sizeof(UFriendNotification_C) == 0x0000E0, "Wrong size on UFriendNotification_C");
-static_assert(offsetof(UFriendNotification_C, UberGraphFrame) == 0x0000D8, "Member 'UFriendNotification_C::UberGraphFrame' has a wrong offset!");
 
 }
 

@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UCameraShake_ZipLineAttach_C>();
 	}
 };
-static_assert(alignof(UCameraShake_ZipLineAttach_C) == 0x000008, "Wrong alignment on UCameraShake_ZipLineAttach_C");
-static_assert(sizeof(UCameraShake_ZipLineAttach_C) == 0x000160, "Wrong size on UCameraShake_ZipLineAttach_C");
 
 }
 

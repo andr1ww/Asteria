@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GC_Abilities_Activation_DBNOResurrect.GC_Abilities_Activation_DBNOResurrect_C
-// 0x0000 (0x01A0 - 0x01A0)
+// 0x0000 (0x01B8 - 0x01B8)
 class UGC_Abilities_Activation_DBNOResurrect_C final : public UFortGameplayCueNotify_Burst
 {
 public:
@@ -33,8 +33,6 @@ public:
 		return GetDefaultObjImpl<UGC_Abilities_Activation_DBNOResurrect_C>();
 	}
 };
-static_assert(alignof(UGC_Abilities_Activation_DBNOResurrect_C) == 0x000008, "Wrong alignment on UGC_Abilities_Activation_DBNOResurrect_C");
-static_assert(sizeof(UGC_Abilities_Activation_DBNOResurrect_C) == 0x0001A0, "Wrong size on UGC_Abilities_Activation_DBNOResurrect_C");
 
 }
 

@@ -17,43 +17,85 @@
 namespace SDK
 {
 
-// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.SetCardSizeAndSlotImage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.ExecuteUbergraph_AthenaCustomizationSlotButton
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// EFortItemCardSize                       CardSize                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSlateBrush                      SlotImage                                              (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAthenaCustomizationSlotButton_C::SetCardSizeAndSlotImage(EFortItemCardSize CardSize, const struct FSlateBrush& SlotImage)
+void UAthenaCustomizationSlotButton_C::ExecuteUbergraph_AthenaCustomizationSlotButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaCustomizationSlotButton_C", "SetCardSizeAndSlotImage");
+		Func = Class->GetFunction("AthenaCustomizationSlotButton_C", "ExecuteUbergraph_AthenaCustomizationSlotButton");
 
-	Params::AthenaCustomizationSlotButton_C_SetCardSizeAndSlotImage Parms{};
+	Params::AthenaCustomizationSlotButton_C_ExecuteUbergraph_AthenaCustomizationSlotButton Parms{};
 
-	Parms.CardSize = CardSize;
-	Parms.SlotImage = std::move(SlotImage);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.OnUpdateExclusiveWarning
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bShouldWarn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaCustomizationSlotButton_C::PreConstruct(bool IsDesignTime)
+void UAthenaCustomizationSlotButton_C::OnUpdateExclusiveWarning(bool bShouldWarn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaCustomizationSlotButton_C", "PreConstruct");
+		Func = Class->GetFunction("AthenaCustomizationSlotButton_C", "OnUpdateExclusiveWarning");
 
-	Params::AthenaCustomizationSlotButton_C_PreConstruct Parms{};
+	Params::AthenaCustomizationSlotButton_C_OnUpdateExclusiveWarning Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.bShouldWarn = bShouldWarn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.OnCardImageAndWidthChanged
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const TSoftObjectPtr<class UTexture2D>& Image                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash)
+// float                                   Width                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaCustomizationSlotButton_C::OnCardImageAndWidthChanged(const TSoftObjectPtr<class UTexture2D>& Image, float Width)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaCustomizationSlotButton_C", "OnCardImageAndWidthChanged");
+
+	Params::AthenaCustomizationSlotButton_C_OnCardImageAndWidthChanged Parms{};
+
+	Parms.Image = Image;
+	Parms.Width = Width;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.OnCustomizationSlotActiveStateChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bInAttachableCosmeticAvailable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bInActive                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UAthenaCustomizationSlotButton_C::OnCustomizationSlotActiveStateChanged(bool bInAttachableCosmeticAvailable, bool bInActive)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaCustomizationSlotButton_C", "OnCustomizationSlotActiveStateChanged");
+
+	Params::AthenaCustomizationSlotButton_C_OnCustomizationSlotActiveStateChanged Parms{};
+
+	Parms.bInAttachableCosmeticAvailable = bInAttachableCosmeticAvailable;
+	Parms.bInActive = bInActive;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -73,21 +115,63 @@ void UAthenaCustomizationSlotButton_C::Construct()
 }
 
 
-// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.ExecuteUbergraph_AthenaCustomizationSlotButton
-// (Final, UbergraphFunction)
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.HandleActiveStateChanged
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CosmeticAvailable                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Active                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaCustomizationSlotButton_C::ExecuteUbergraph_AthenaCustomizationSlotButton(int32 EntryPoint)
+void UAthenaCustomizationSlotButton_C::HandleActiveStateChanged(bool CosmeticAvailable, bool Active)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaCustomizationSlotButton_C", "ExecuteUbergraph_AthenaCustomizationSlotButton");
+		Func = Class->GetFunction("AthenaCustomizationSlotButton_C", "HandleActiveStateChanged");
 
-	Params::AthenaCustomizationSlotButton_C_ExecuteUbergraph_AthenaCustomizationSlotButton Parms{};
+	Params::AthenaCustomizationSlotButton_C_HandleActiveStateChanged Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.CosmeticAvailable = CosmeticAvailable;
+	Parms.Active = Active;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.GetSlotDebugName
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UAthenaCustomizationSlotButton_C::GetSlotDebugName()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaCustomizationSlotButton_C", "GetSlotDebugName");
+
+	Params::AthenaCustomizationSlotButton_C_GetSlotDebugName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AthenaCustomizationSlotButton.AthenaCustomizationSlotButton_C.HandleWidthChanged
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Width                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UAthenaCustomizationSlotButton_C::HandleWidthChanged(float Width)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaCustomizationSlotButton_C", "HandleWidthChanged");
+
+	Params::AthenaCustomizationSlotButton_C_HandleWidthChanged Parms{};
+
+	Parms.Width = Width;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

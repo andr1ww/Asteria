@@ -47,27 +47,6 @@ public:
 	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle) == 0x000008, "Wrong alignment on LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle");
-static_assert(sizeof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle) == 0x0000A0, "Wrong size on LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, EntryPoint) == 0x000000, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::EntryPoint' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, Temp_bool_Variable) == 0x000004, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, Temp_byte_Variable) == 0x000005, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, Temp_byte_Variable_1) == 0x000006, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, Temp_bool_Variable_1) == 0x000007, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, Temp_float_Variable) == 0x000008, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::Temp_float_Variable' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, Temp_float_Variable_1) == 0x00000C, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::Temp_float_Variable_1' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, Temp_bool_Variable_2) == 0x000010, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, Temp_int_Variable) == 0x000014, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, Temp_int_Variable_1) == 0x000018, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, CallFunc_PlayAnimation_ReturnValue) == 0x000020, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, CallFunc_PlayAnimation_ReturnValue_1) == 0x000028, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, CallFunc_IsMobileGame_ReturnValue) == 0x000030, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::CallFunc_IsMobileGame_ReturnValue' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, K2Node_Select_Default) == 0x000034, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, K2Node_Select_Default_1) == 0x000038, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, K2Node_MakeStruct_SlateFontInfo) == 0x000040, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::K2Node_MakeStruct_SlateFontInfo' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, K2Node_Event_bIsExpanded) == 0x000090, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::K2Node_Event_bIsExpanded' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, K2Node_Select_Default_2) == 0x000091, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle, CallFunc_PlayAnimation_ReturnValue_2) == 0x000098, "Member 'LocalUserSettingTitle_C_ExecuteUbergraph_LocalUserSettingTitle::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!");
 
 // Function LocalUserSettingTitle.LocalUserSettingTitle_C.OnExpansionChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -76,9 +55,6 @@ struct LocalUserSettingTitle_C_OnExpansionChanged final
 public:
 	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(LocalUserSettingTitle_C_OnExpansionChanged) == 0x000001, "Wrong alignment on LocalUserSettingTitle_C_OnExpansionChanged");
-static_assert(sizeof(LocalUserSettingTitle_C_OnExpansionChanged) == 0x000001, "Wrong size on LocalUserSettingTitle_C_OnExpansionChanged");
-static_assert(offsetof(LocalUserSettingTitle_C_OnExpansionChanged, bIsExpanded) == 0x000000, "Member 'LocalUserSettingTitle_C_OnExpansionChanged::bIsExpanded' has a wrong offset!");
 
 }
 

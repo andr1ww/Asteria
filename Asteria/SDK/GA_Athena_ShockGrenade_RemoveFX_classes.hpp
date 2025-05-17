@@ -10,29 +10,30 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_ShockGrenade_RemoveFX.GA_Athena_ShockGrenade_RemoveFX_C
-// 0x0028 (0x0968 - 0x0940)
+// 0x0028 (0x0AD0 - 0x0AA8)
 class UGA_Athena_ShockGrenade_RemoveFX_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           Looping_GC;                                        // 0x0950(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           Player_Landing_GC;                                 // 0x0958(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           VehicleOnGroundTimer;                              // 0x0960(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           Looping_GC;                                        // 0x0AB8(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           Player_Landing_GC;                                 // 0x0AC0(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           VehicleOnGroundTimer;                              // 0x0AC8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Athena_ShockGrenade_RemoveFX(int32 EntryPoint);
 	void VehicleLandedCheck();
 	void K2_ActivateAbility();
+	void OnChange_FB10A796481939495F3E43A6ECDEF98E(EMovementMode NewMovementMode);
 	void OnChange_4AD3DFC14DFECA79ED54A7B53F3A9E7E(EMovementMode NewMovementMode);
 
 public:
@@ -45,13 +46,6 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_ShockGrenade_RemoveFX_C>();
 	}
 };
-static_assert(alignof(UGA_Athena_ShockGrenade_RemoveFX_C) == 0x000008, "Wrong alignment on UGA_Athena_ShockGrenade_RemoveFX_C");
-static_assert(sizeof(UGA_Athena_ShockGrenade_RemoveFX_C) == 0x000968, "Wrong size on UGA_Athena_ShockGrenade_RemoveFX_C");
-static_assert(offsetof(UGA_Athena_ShockGrenade_RemoveFX_C, UberGraphFrame) == 0x000940, "Member 'UGA_Athena_ShockGrenade_RemoveFX_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_ShockGrenade_RemoveFX_C, PlayerPawn) == 0x000948, "Member 'UGA_Athena_ShockGrenade_RemoveFX_C::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_ShockGrenade_RemoveFX_C, Looping_GC) == 0x000950, "Member 'UGA_Athena_ShockGrenade_RemoveFX_C::Looping_GC' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_ShockGrenade_RemoveFX_C, Player_Landing_GC) == 0x000958, "Member 'UGA_Athena_ShockGrenade_RemoveFX_C::Player_Landing_GC' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_ShockGrenade_RemoveFX_C, VehicleOnGroundTimer) == 0x000960, "Member 'UGA_Athena_ShockGrenade_RemoveFX_C::VehicleOnGroundTimer' has a wrong offset!");
 
 }
 

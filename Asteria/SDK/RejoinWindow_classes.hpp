@@ -19,30 +19,18 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass RejoinWindow.RejoinWindow_C
-// 0x0070 (0x03A0 - 0x0330)
+// 0x0060 (0x0518 - 0x04B8)
 class URejoinWindow_C final : public UFortRejoinWindowBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0330(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       AutorejoinText;                                    // 0x0338(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         ButtonBox;                                         // 0x0340(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Description;                                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Title;                                             // 0x0350(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnRequestAbandon;                                  // 0x0358(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              OnRequestRejoinRetry;                              // 0x0368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<struct FDataTableRowHandle>            Buttons;                                           // 0x0378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	struct FMargin                                ButtonPadding;                                     // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          InitialScreen;                                     // 0x0398(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-
-public:
-	void OnButtonClicked(class UCommonButton* Button);
-	void CenterFirstButton();
-	void InitializeRejoinWindow();
-	void ShowInitalScreen(float TimeoutSeconds);
-	void ShowRetryScreen(const class FText& Failure, float TimeoutSeconds, bool AllowRetry);
-	void Construct();
-	void OnTimeoutTimeReached();
-	void ExecuteUbergraph_RejoinWindow(int32 EntryPoint);
+	class UCommonTextBlock*                       AutorejoinText;                                    // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         ButtonBox;                                         // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Title;                                             // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnRequestAbandon;                                  // 0x04D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              OnRequestRejoinRetry;                              // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<struct FDataTableRowHandle>            Buttons;                                           // 0x04F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FMargin                                ButtonPadding;                                     // 0x0500(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          InitialScreen;                                     // 0x0510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	static class UClass* StaticClass()
@@ -54,18 +42,6 @@ public:
 		return GetDefaultObjImpl<URejoinWindow_C>();
 	}
 };
-static_assert(alignof(URejoinWindow_C) == 0x000008, "Wrong alignment on URejoinWindow_C");
-static_assert(sizeof(URejoinWindow_C) == 0x0003A0, "Wrong size on URejoinWindow_C");
-static_assert(offsetof(URejoinWindow_C, UberGraphFrame) == 0x000330, "Member 'URejoinWindow_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, AutorejoinText) == 0x000338, "Member 'URejoinWindow_C::AutorejoinText' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, ButtonBox) == 0x000340, "Member 'URejoinWindow_C::ButtonBox' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, Description) == 0x000348, "Member 'URejoinWindow_C::Description' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, Title) == 0x000350, "Member 'URejoinWindow_C::Title' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, OnRequestAbandon) == 0x000358, "Member 'URejoinWindow_C::OnRequestAbandon' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, OnRequestRejoinRetry) == 0x000368, "Member 'URejoinWindow_C::OnRequestRejoinRetry' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, Buttons) == 0x000378, "Member 'URejoinWindow_C::Buttons' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, ButtonPadding) == 0x000388, "Member 'URejoinWindow_C::ButtonPadding' has a wrong offset!");
-static_assert(offsetof(URejoinWindow_C, InitialScreen) == 0x000398, "Member 'URejoinWindow_C::InitialScreen' has a wrong offset!");
 
 }
 

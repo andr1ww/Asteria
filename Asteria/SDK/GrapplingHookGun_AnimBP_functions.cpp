@@ -56,5 +56,26 @@ void UGrapplingHookGun_AnimBP_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function GrapplingHookGun_AnimBP.GrapplingHookGun_AnimBP_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+
+void UGrapplingHookGun_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GrapplingHookGun_AnimBP_C", "AnimGraph");
+
+	Params::GrapplingHookGun_AnimBP_C_AnimGraph Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
+}
+
 }
 

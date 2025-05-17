@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ULeagueImageDecorator_C>();
 	}
 };
-static_assert(alignof(ULeagueImageDecorator_C) == 0x000008, "Wrong alignment on ULeagueImageDecorator_C");
-static_assert(sizeof(ULeagueImageDecorator_C) == 0x000030, "Wrong size on ULeagueImageDecorator_C");
 
 }
 

@@ -69,9 +69,9 @@ void UMissionBlueprintFunctionLibrary_C::UnRegisterUI_UpdatesWithDamageEvents(cl
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AFortObjectiveBase*               Objective                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayTag                     RewardTag                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              RewardTag                                              (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSlateBrush                      IconBrush                                              (Parm, OutParm)
+// struct FSlateBrush*                     IconBrush                                              (Parm, OutParm)
 
 void UMissionBlueprintFunctionLibrary_C::GetObjectiveBadgeIconBrush(class AFortObjectiveBase* Objective, const struct FGameplayTag& RewardTag, class UObject* __WorldContext, struct FSlateBrush* IconBrush)
 {
@@ -100,8 +100,8 @@ void UMissionBlueprintFunctionLibrary_C::GetObjectiveBadgeIconBrush(class AFortO
 // class UFortQuestItemDefinition*         Quest_Item_Reference                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             Quest_Item_Objective_Backend_Name                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    QuestValid                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class AFortPlayerController*            PlayerControllerRef                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   QuestValid                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class AFortPlayerController**           PlayerControllerRef                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UMissionBlueprintFunctionLibrary_C::DoesPlayerHaveQuest(class AFortPlayerController* PlayerController, class UFortQuestItemDefinition* Quest_Item_Reference, class FName Quest_Item_Objective_Backend_Name, class UObject* __WorldContext, bool* QuestValid, class AFortPlayerController** PlayerControllerRef)
 {
@@ -156,11 +156,11 @@ void UMissionBlueprintFunctionLibrary_C::HighlightQuestActor(class AActor* Actor
 // Parameters:
 // class AFortPlayerController*            PlayerControllerReference                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UFortQuestItemDefinition*         Quest_Item_Reference                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FDataTableRowHandle              ObjectiveStatHandle                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FDataTableRowHandle&       ObjectiveStatHandle                                    (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Quest_Count_Achieved                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Quest_Count_Required                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    SuccessfullyFoundCount                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32*                                  Quest_Count_Achieved                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  Quest_Count_Required                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   SuccessfullyFoundCount                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::QuestObjectiveCountAchieved(class AFortPlayerController* PlayerControllerReference, class UFortQuestItemDefinition* Quest_Item_Reference, const struct FDataTableRowHandle& ObjectiveStatHandle, class UObject* __WorldContext, int32* Quest_Count_Achieved, int32* Quest_Count_Required, bool* SuccessfullyFoundCount)
 {
@@ -190,12 +190,12 @@ void UMissionBlueprintFunctionLibrary_C::QuestObjectiveCountAchieved(class AFort
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.DoesAnyoneRequireQuest
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFortQuestItemDefinition*         QuestReference                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             Quest_Backend_Name                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    SomePlayerNeedsTheQuest                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   SomePlayerNeedsTheQuest                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::DoesAnyoneRequireQuest(class UFortQuestItemDefinition* QuestReference, class FName Quest_Backend_Name, class UObject* __WorldContext, bool* SomePlayerNeedsTheQuest)
 {
@@ -218,13 +218,13 @@ void UMissionBlueprintFunctionLibrary_C::DoesAnyoneRequireQuest(class UFortQuest
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.ListPlayersWhoNeedQuest
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFortQuestItemDefinition*         Quest_Reference                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             Quest_Backend_Name                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class AFortPlayerController*>    Player_Controllers_Who_Require_The_Quest               (Parm, OutParm, ZeroConstructor)
-// bool                                    DoesAnyoneRequireTheQuest                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// TArray<class AFortPlayerController*>*   Player_Controllers_Who_Require_The_Quest               (Parm, OutParm, HasGetValueTypeHash)
+// bool*                                   DoesAnyoneRequireTheQuest                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::ListPlayersWhoNeedQuest(class UFortQuestItemDefinition* Quest_Reference, class FName Quest_Backend_Name, class UObject* __WorldContext, TArray<class AFortPlayerController*>* Player_Controllers_Who_Require_The_Quest, bool* DoesAnyoneRequireTheQuest)
 {
@@ -320,13 +320,13 @@ void UMissionBlueprintFunctionLibrary_C::FlashObjectiveUI(class AFortObjectiveBa
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.AnyPlayerNearActor
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   DistanceToCheck                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsPlayerNearActor                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// TArray<class AFortPlayerPawn*>          PlayersNearActor                                       (Parm, OutParm, ZeroConstructor)
+// bool*                                   IsPlayerNearActor                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// TArray<class AFortPlayerPawn*>*         PlayersNearActor                                       (Parm, OutParm, HasGetValueTypeHash)
 
 void UMissionBlueprintFunctionLibrary_C::AnyPlayerNearActor(float DistanceToCheck, class AActor* Actor, class UObject* __WorldContext, bool* IsPlayerNearActor, TArray<class AFortPlayerPawn*>* PlayersNearActor)
 {
@@ -356,7 +356,7 @@ void UMissionBlueprintFunctionLibrary_C::AnyPlayerNearActor(float DistanceToChec
 // Parameters:
 // float                                   DropPercentChance                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    DropResult                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   DropResult                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::DropChance(float DropPercentChance, class UObject* __WorldContext, bool* DropResult)
 {
@@ -382,8 +382,8 @@ void UMissionBlueprintFunctionLibrary_C::DropChance(float DropPercentChance, cla
 // Parameters:
 // class UFortQuestItemDefinition*         Quest_Reference                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             Quest_Objective_Backend_Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FDataTableRowHandle              ObjectiveStatEvent                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// TArray<class AFortPlayerController*>    PlayerControllersForUpdate                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const struct FDataTableRowHandle&       ObjectiveStatEvent                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// TArray<class AFortPlayerController*>&   PlayerControllersForUpdate                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UMissionBlueprintFunctionLibrary_C::GiveQuestUpdateToPlayers(class UFortQuestItemDefinition* Quest_Reference, class FName Quest_Objective_Backend_Name, const struct FDataTableRowHandle& ObjectiveStatEvent, TArray<class AFortPlayerController*>& PlayerControllersForUpdate, class UObject* __WorldContext)
@@ -408,13 +408,13 @@ void UMissionBlueprintFunctionLibrary_C::GiveQuestUpdateToPlayers(class UFortQue
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.AnyPawnNearActor
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   DistanceToCheck                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsPawnNearActor                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// TArray<class AFortPawn*>                PawnsNearActor                                         (Parm, OutParm, ZeroConstructor)
+// bool*                                   IsPawnNearActor                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// TArray<class AFortPawn*>*               PawnsNearActor                                         (Parm, OutParm, HasGetValueTypeHash)
 
 void UMissionBlueprintFunctionLibrary_C::AnyPawnNearActor(float DistanceToCheck, class AActor* Actor, class UObject* __WorldContext, bool* IsPawnNearActor, TArray<class AFortPawn*>* PawnsNearActor)
 {
@@ -445,7 +445,7 @@ void UMissionBlueprintFunctionLibrary_C::AnyPawnNearActor(float DistanceToCheck,
 // float                                   MinDistance                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   MaxDistance                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Random_Vector_Result_                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         Random_Vector_Result_                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UMissionBlueprintFunctionLibrary_C::Random_360_VectorInRange(float MinDistance, float MaxDistance, class UObject* __WorldContext, struct FVector* Random_Vector_Result_)
 {
@@ -472,8 +472,8 @@ void UMissionBlueprintFunctionLibrary_C::Random_360_VectorInRange(float MinDista
 // Parameters:
 // class FName                             RowName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   BuildingCount                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    RowFound                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32*                                  BuildingCount                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   RowFound                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::GetBuildingRecommendation(class FName RowName, class UObject* __WorldContext, int32* BuildingCount, bool* RowFound)
 {
@@ -498,12 +498,12 @@ void UMissionBlueprintFunctionLibrary_C::GetBuildingRecommendation(class FName R
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.GrantSurvivorBadge
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   LootLevelIn                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ESurvivorBadgeTypes                     BadgeType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFortItemDefinition*              NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortItemDefinition**             NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UMissionBlueprintFunctionLibrary_C::GrantSurvivorBadge(int32 LootLevelIn, ESurvivorBadgeTypes BadgeType, class UObject* __WorldContext, class UFortItemDefinition** NewParam)
 {
@@ -529,7 +529,7 @@ void UMissionBlueprintFunctionLibrary_C::GrantSurvivorBadge(int32 LootLevelIn, E
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EnumEventWorldItemDrop                  Item_Drop_Level                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          LootDropLocation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   LootDropLocation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UMissionBlueprintFunctionLibrary_C::BasicBuildingItemDrop(EnumEventWorldItemDrop Item_Drop_Level, const struct FVector& LootDropLocation, class UObject* __WorldContext)
@@ -550,13 +550,13 @@ void UMissionBlueprintFunctionLibrary_C::BasicBuildingItemDrop(EnumEventWorldIte
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.SeperatePlayersWhoNeedQuest
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFortQuestItemDefinition*         QuestItemReference                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             QuestObjectiveBackendName                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class AFortPlayerController*>    PlayersWhoNeedQuest                                    (Parm, OutParm, ZeroConstructor)
-// TArray<class AFortPlayerController*>    PlayersWhoDoNotNeedQuest                               (Parm, OutParm, ZeroConstructor)
+// TArray<class AFortPlayerController*>*   PlayersWhoNeedQuest                                    (Parm, OutParm, HasGetValueTypeHash)
+// TArray<class AFortPlayerController*>*   PlayersWhoDoNotNeedQuest                               (Parm, OutParm, HasGetValueTypeHash)
 
 void UMissionBlueprintFunctionLibrary_C::SeperatePlayersWhoNeedQuest(class UFortQuestItemDefinition* QuestItemReference, class FName QuestObjectiveBackendName, class UObject* __WorldContext, TArray<class AFortPlayerController*>* PlayersWhoNeedQuest, TArray<class AFortPlayerController*>* PlayersWhoDoNotNeedQuest)
 {
@@ -588,8 +588,8 @@ void UMissionBlueprintFunctionLibrary_C::SeperatePlayersWhoNeedQuest(class UFort
 // class UFortQuestItemDefinition*         QuestReference                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             QuestBackendName                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AFortPlayerController*            PlayerControllerOut                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CompletedQuest                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class AFortPlayerController**           PlayerControllerOut                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   CompletedQuest                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::HasPlayerCompletedQuest(class AFortPlayerController* PlayerController, class UFortQuestItemDefinition* QuestReference, class FName QuestBackendName, class UObject* __WorldContext, class AFortPlayerController** PlayerControllerOut, bool* CompletedQuest)
 {
@@ -618,12 +618,12 @@ void UMissionBlueprintFunctionLibrary_C::HasPlayerCompletedQuest(class AFortPlay
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.DistanceBetweenTwoVectors
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Vector1                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Vector2                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   vector1                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Vector2                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Distance                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  Distance                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UMissionBlueprintFunctionLibrary_C::DistanceBetweenTwoVectors(const struct FVector& Vector1, const struct FVector& Vector2, class UObject* __WorldContext, float* Distance)
+void UMissionBlueprintFunctionLibrary_C::DistanceBetweenTwoVectors(const struct FVector& vector1, const struct FVector& Vector2, class UObject* __WorldContext, float* Distance)
 {
 	static class UFunction* Func = nullptr;
 
@@ -632,7 +632,7 @@ void UMissionBlueprintFunctionLibrary_C::DistanceBetweenTwoVectors(const struct 
 
 	Params::MissionBlueprintFunctionLibrary_C_DistanceBetweenTwoVectors Parms{};
 
-	Parms.Vector1 = std::move(Vector1);
+	Parms.vector1 = std::move(vector1);
 	Parms.Vector2 = std::move(Vector2);
 	Parms.__WorldContext = __WorldContext;
 
@@ -649,7 +649,7 @@ void UMissionBlueprintFunctionLibrary_C::DistanceBetweenTwoVectors(const struct 
 // class FName                             RowName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   BaseDifficulty                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::ApplyDifficultyOffset(class FName RowName, float BaseDifficulty, class UObject* __WorldContext, bool* Success)
 {
@@ -675,8 +675,8 @@ void UMissionBlueprintFunctionLibrary_C::ApplyDifficultyOffset(class FName RowNa
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   Difficulty                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float*                                  Difficulty                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::GetCurrentDifficulty(class UObject* __WorldContext, float* Difficulty, bool* Success)
 {
@@ -700,14 +700,14 @@ void UMissionBlueprintFunctionLibrary_C::GetCurrentDifficulty(class UObject* __W
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.PointLocationsBetweenTwoVectors
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Vector_1                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Vector_2                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Vector_1                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Vector_2                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   HowManyPoints                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FVector>                  VectorPoints                                           (Parm, OutParm, ZeroConstructor)
-// bool                                    SuccessfullyFoundPoints                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// TArray<struct FVector>*                 VectorPoints                                           (Parm, OutParm, HasGetValueTypeHash)
+// bool*                                   SuccessfullyFoundPoints                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::PointLocationsBetweenTwoVectors(const struct FVector& Vector_1, const struct FVector& Vector_2, int32 HowManyPoints, class UObject* __WorldContext, TArray<struct FVector>* VectorPoints, bool* SuccessfullyFoundPoints)
 {
@@ -734,13 +734,13 @@ void UMissionBlueprintFunctionLibrary_C::PointLocationsBetweenTwoVectors(const s
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.GetContributingControllersNearActor
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   Distance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class AFortPlayerController*>    PlayerControllersNearby                                (Parm, OutParm, ZeroConstructor)
-// bool                                    SuccessfullyFoundPlayer                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// TArray<class AFortPlayerController*>*   PlayerControllersNearby                                (Parm, OutParm, HasGetValueTypeHash)
+// bool*                                   SuccessfullyFoundPlayer                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::GetContributingControllersNearActor(float Distance, class AActor* Actor, class UObject* __WorldContext, TArray<class AFortPlayerController*>* PlayerControllersNearby, bool* SuccessfullyFoundPlayer)
 {
@@ -772,8 +772,8 @@ void UMissionBlueprintFunctionLibrary_C::GetContributingControllersNearActor(flo
 // class UFortQuestItemDefinition*         QuestReference                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             QuestBackendObjectiveName                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AFortPlayerController*            PlayerControllerOut                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CompletedQuestObjective                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class AFortPlayerController**           PlayerControllerOut                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   CompletedQuestObjective                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::HasPlayerCompletedQuestObjective(class AFortPlayerController* PlayerController, class UFortQuestItemDefinition* QuestReference, class FName QuestBackendObjectiveName, class UObject* __WorldContext, class AFortPlayerController** PlayerControllerOut, bool* CompletedQuestObjective)
 {
@@ -800,11 +800,11 @@ void UMissionBlueprintFunctionLibrary_C::HasPlayerCompletedQuestObjective(class 
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.HideParticleComponentsAttachedToMesh
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UStaticMeshComponent*             MeshComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    SuccessfullyDeactivatedParticle                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   SuccessfullyDeactivatedParticle                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::HideParticleComponentsAttachedToMesh(class UStaticMeshComponent* MeshComponent, class UObject* __WorldContext, bool* SuccessfullyDeactivatedParticle)
 {
@@ -826,13 +826,13 @@ void UMissionBlueprintFunctionLibrary_C::HideParticleComponentsAttachedToMesh(cl
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.DoesAnyPlayerRequireQuestObjective
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFortQuestItemDefinition*         QuestReference                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FDataTableRowHandle              QuestObjectiveHandle                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FDataTableRowHandle&       QuestObjectiveHandle                                   (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class AFortPlayerController*>    PlayerControllersWhoRequireObjective                   (Parm, OutParm, ZeroConstructor)
-// bool                                    SomebodyRequiresObjective                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// TArray<class AFortPlayerController*>*   PlayerControllersWhoRequireObjective                   (Parm, OutParm, HasGetValueTypeHash)
+// bool*                                   SomebodyRequiresObjective                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::DoesAnyPlayerRequireQuestObjective(class UFortQuestItemDefinition* QuestReference, const struct FDataTableRowHandle& QuestObjectiveHandle, class UObject* __WorldContext, TArray<class AFortPlayerController*>* PlayerControllersWhoRequireObjective, bool* SomebodyRequiresObjective)
 {
@@ -862,10 +862,10 @@ void UMissionBlueprintFunctionLibrary_C::DoesAnyPlayerRequireQuestObjective(clas
 // Parameters:
 // class AFortPlayerController*            PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UFortQuestItemDefinition*         QuestReference                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FDataTableRowHandle              QuestBackendObjectiveHandle                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FDataTableRowHandle&       QuestBackendObjectiveHandle                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AFortPlayerController*            PlayerControllerOut                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CompletedQuestObjective                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class AFortPlayerController**           PlayerControllerOut                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   CompletedQuestObjective                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::HasPlayerCompletedQuestObjectiveHandle(class AFortPlayerController* PlayerController, class UFortQuestItemDefinition* QuestReference, const struct FDataTableRowHandle& QuestBackendObjectiveHandle, class UObject* __WorldContext, class AFortPlayerController** PlayerControllerOut, bool* CompletedQuestObjective)
 {
@@ -892,11 +892,11 @@ void UMissionBlueprintFunctionLibrary_C::HasPlayerCompletedQuestObjectiveHandle(
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.HaveAllPlayersCompletedQuest
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFortQuestItemDefinition*         QuestItem                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    AllPlayersCompletedQuest                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   AllPlayersCompletedQuest                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::HaveAllPlayersCompletedQuest(class UFortQuestItemDefinition* QuestItem, class UObject* __WorldContext, bool* AllPlayersCompletedQuest)
 {
@@ -918,15 +918,15 @@ void UMissionBlueprintFunctionLibrary_C::HaveAllPlayersCompletedQuest(class UFor
 
 
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.GetControllersNearActorThatRequireQuestObjective
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   Distance                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UFortQuestItemDefinition*         Quest_Item                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             Quest_Item_Backend_Objective_Name                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class AFortPlayerController*>    PlayerControllersNearbyThatRequireQuest                (Parm, OutParm, ZeroConstructor)
-// bool                                    SuccessfullyFoundPlayer                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// TArray<class AFortPlayerController*>*   PlayerControllersNearbyThatRequireQuest                (Parm, OutParm, HasGetValueTypeHash)
+// bool*                                   SuccessfullyFoundPlayer                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::GetControllersNearActorThatRequireQuestObjective(float Distance, class AActor* Actor, class UFortQuestItemDefinition* Quest_Item, class FName Quest_Item_Backend_Objective_Name, class UObject* __WorldContext, TArray<class AFortPlayerController*>* PlayerControllersNearbyThatRequireQuest, bool* SuccessfullyFoundPlayer)
 {
@@ -983,17 +983,17 @@ void UMissionBlueprintFunctionLibrary_C::NPC_LockThenRotateInPlace(bool LockedIn
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           Actor_A                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          ActorA_Location_Offset                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   ActorA_Location_Offset                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Actor_B                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Actor_B_Location_Offset                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Actor_B_Location_Offset                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    UseActorHalfHeightForSight                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // ETraceTypeQuery                         TraceChannel                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EDrawDebugTrace                         DrawDebugType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   DrawTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bTraceComplex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    In_Line_Of_Sight                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   Distance                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   In_Line_Of_Sight                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float*                                  Distance                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UMissionBlueprintFunctionLibrary_C::CheckBasicActorLineOfSight(class AActor* Actor_A, const struct FVector& ActorA_Location_Offset, class AActor* Actor_B, const struct FVector& Actor_B_Location_Offset, bool UseActorHalfHeightForSight, ETraceTypeQuery TraceChannel, EDrawDebugTrace DrawDebugType, float DrawTime, bool bTraceComplex, class UObject* __WorldContext, bool* In_Line_Of_Sight, float* Distance)
 {
@@ -1028,17 +1028,17 @@ void UMissionBlueprintFunctionLibrary_C::CheckBasicActorLineOfSight(class AActor
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.CheckBasicVectorToActorLineOfSight
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Vector_A                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Vector_A                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Actor_B                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Actor_B_Location_Offset                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Actor_B_Location_Offset                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ETraceTypeQuery                         TraceChannel                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EDrawDebugTrace                         DrawDebugType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   DrawTime                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class AActor*>                   ActorsToIgnore                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<class AActor*>&            ActorsToIgnore                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 // bool                                    bTraceComplex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    In_Line_Of_Sight                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// float                                   Distance                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   In_Line_Of_Sight                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float*                                  Distance                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UMissionBlueprintFunctionLibrary_C::CheckBasicVectorToActorLineOfSight(const struct FVector& Vector_A, class AActor* Actor_B, const struct FVector& Actor_B_Location_Offset, ETraceTypeQuery TraceChannel, EDrawDebugTrace DrawDebugType, float DrawTime, const TArray<class AActor*>& ActorsToIgnore, bool bTraceComplex, class UObject* __WorldContext, bool* In_Line_Of_Sight, float* Distance)
 {
@@ -1072,9 +1072,9 @@ void UMissionBlueprintFunctionLibrary_C::CheckBasicVectorToActorLineOfSight(cons
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.NPC_ConvertTagToNameText
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayTag                     PawnTag                                                (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              PawnTag                                                (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             Name_0                                                 (Parm, OutParm)
+// class FText*                            Name_0                                                 (Parm, OutParm)
 
 void UMissionBlueprintFunctionLibrary_C::NPC_ConvertTagToNameText(const struct FGameplayTag& PawnTag, class UObject* __WorldContext, class FText* Name_0)
 {
@@ -1099,10 +1099,10 @@ void UMissionBlueprintFunctionLibrary_C::NPC_ConvertTagToNameText(const struct F
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           HoverboardActor                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          LaunchVelocity                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   LaunchVelocity                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             ForceFeedbackTag                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::LaunchHoverboard(class AActor* HoverboardActor, const struct FVector& LaunchVelocity, class FName ForceFeedbackTag, class UObject* __WorldContext, bool* Success)
 {
@@ -1128,9 +1128,9 @@ void UMissionBlueprintFunctionLibrary_C::LaunchHoverboard(class AActor* Hoverboa
 // Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.NPC_CanBeElemental
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGameplayTag                     PawnTag                                                (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              PawnTag                                                (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   Value                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMissionBlueprintFunctionLibrary_C::NPC_CanBeElemental(const struct FGameplayTag& PawnTag, class UObject* __WorldContext, bool* Value)
 {
@@ -1148,6 +1148,32 @@ void UMissionBlueprintFunctionLibrary_C::NPC_CanBeElemental(const struct FGamepl
 
 	if (Value != nullptr)
 		*Value = Parms.Value;
+}
+
+
+// Function MissionBlueprintFunctionLibrary.MissionBlueprintFunctionLibrary_C.GetSeasonalEventManager
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortSeasonalEventManager**       SeasonalEventManager                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UMissionBlueprintFunctionLibrary_C::GetSeasonalEventManager(const class UObject* WorldContextObject, class UObject* __WorldContext, class UFortSeasonalEventManager** SeasonalEventManager)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MissionBlueprintFunctionLibrary_C", "GetSeasonalEventManager");
+
+	Params::MissionBlueprintFunctionLibrary_C_GetSeasonalEventManager Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (SeasonalEventManager != nullptr)
+		*SeasonalEventManager = Parms.SeasonalEventManager;
 }
 
 }

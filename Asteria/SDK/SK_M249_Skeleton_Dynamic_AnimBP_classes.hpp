@@ -10,29 +10,33 @@
 
 #include "Basic.hpp"
 
+#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass SK_M249_Skeleton_Dynamic_AnimBP.SK_M249_Skeleton_Dynamic_AnimBP_C
-// 0x0608 (0x0870 - 0x0268)
+// 0x0760 (0x0A20 - 0x02C0)
 class USK_M249_Skeleton_Dynamic_AnimBP_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_8E0F65D247E6D62D018C2FBA102CD862; // 0x0278(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_FFE83FF1460937477A33C495556479A8; // 0x0298(0x0020)()
-	struct FAnimNode_SubInput                     AnimGraphNode_SubInput_7B49CE394F90BE5C65D9C0A9ADF6EB63; // 0x02B8(0x0048)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_ABE25BC349D1D197C1C97D9008555ECD; // 0x0300(0x0020)()
-	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody_2A536FC14BBB64BCB3DB19A790BB45C4; // 0x0320(0x0550)()
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x02D0(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x02F0(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_SubInput;                            // 0x0310(0x0088)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0398(0x0030)()
+	uint8                                         Pad_3C8[0x8];                                      // 0x03C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_RigidBody                    AnimGraphNode_RigidBody;                           // 0x03D0(0x0650)()
 
 public:
 	void ExecuteUbergraph_SK_M249_Skeleton_Dynamic_AnimBP(int32 EntryPoint);
+	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -44,14 +48,6 @@ public:
 		return GetDefaultObjImpl<USK_M249_Skeleton_Dynamic_AnimBP_C>();
 	}
 };
-static_assert(alignof(USK_M249_Skeleton_Dynamic_AnimBP_C) == 0x000010, "Wrong alignment on USK_M249_Skeleton_Dynamic_AnimBP_C");
-static_assert(sizeof(USK_M249_Skeleton_Dynamic_AnimBP_C) == 0x000870, "Wrong size on USK_M249_Skeleton_Dynamic_AnimBP_C");
-static_assert(offsetof(USK_M249_Skeleton_Dynamic_AnimBP_C, UberGraphFrame) == 0x000270, "Member 'USK_M249_Skeleton_Dynamic_AnimBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USK_M249_Skeleton_Dynamic_AnimBP_C, AnimGraphNode_LocalToComponentSpace_8E0F65D247E6D62D018C2FBA102CD862) == 0x000278, "Member 'USK_M249_Skeleton_Dynamic_AnimBP_C::AnimGraphNode_LocalToComponentSpace_8E0F65D247E6D62D018C2FBA102CD862' has a wrong offset!");
-static_assert(offsetof(USK_M249_Skeleton_Dynamic_AnimBP_C, AnimGraphNode_ComponentToLocalSpace_FFE83FF1460937477A33C495556479A8) == 0x000298, "Member 'USK_M249_Skeleton_Dynamic_AnimBP_C::AnimGraphNode_ComponentToLocalSpace_FFE83FF1460937477A33C495556479A8' has a wrong offset!");
-static_assert(offsetof(USK_M249_Skeleton_Dynamic_AnimBP_C, AnimGraphNode_SubInput_7B49CE394F90BE5C65D9C0A9ADF6EB63) == 0x0002B8, "Member 'USK_M249_Skeleton_Dynamic_AnimBP_C::AnimGraphNode_SubInput_7B49CE394F90BE5C65D9C0A9ADF6EB63' has a wrong offset!");
-static_assert(offsetof(USK_M249_Skeleton_Dynamic_AnimBP_C, AnimGraphNode_Root_ABE25BC349D1D197C1C97D9008555ECD) == 0x000300, "Member 'USK_M249_Skeleton_Dynamic_AnimBP_C::AnimGraphNode_Root_ABE25BC349D1D197C1C97D9008555ECD' has a wrong offset!");
-static_assert(offsetof(USK_M249_Skeleton_Dynamic_AnimBP_C, AnimGraphNode_RigidBody_2A536FC14BBB64BCB3DB19A790BB45C4) == 0x000320, "Member 'USK_M249_Skeleton_Dynamic_AnimBP_C::AnimGraphNode_RigidBody_2A536FC14BBB64BCB3DB19A790BB45C4' has a wrong offset!");
 
 }
 

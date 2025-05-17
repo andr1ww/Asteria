@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TournamentLiveGamesEntry.TournamentLiveGamesEntry_C
-// 0x0028 (0x0B88 - 0x0B60)
+// 0x0028 (0x0BE0 - 0x0BB8)
 class UTournamentLiveGamesEntry_C final : public UFortTournamentLiveGameSessionEntry
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Selected;                                          // 0x0B68(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_IsPlayer;                             // 0x0B70(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_Selected;                             // 0x0B78(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          CommonBorder_Zebra;                                // 0x0B80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Selected;                                          // 0x0BC0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_IsPlayer;                             // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_Selected;                             // 0x0BD0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          CommonBorder_Zebra;                                // 0x0BD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_TournamentLiveGamesEntry(int32 EntryPoint);
@@ -44,13 +44,6 @@ public:
 		return GetDefaultObjImpl<UTournamentLiveGamesEntry_C>();
 	}
 };
-static_assert(alignof(UTournamentLiveGamesEntry_C) == 0x000008, "Wrong alignment on UTournamentLiveGamesEntry_C");
-static_assert(sizeof(UTournamentLiveGamesEntry_C) == 0x000B88, "Wrong size on UTournamentLiveGamesEntry_C");
-static_assert(offsetof(UTournamentLiveGamesEntry_C, UberGraphFrame) == 0x000B60, "Member 'UTournamentLiveGamesEntry_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTournamentLiveGamesEntry_C, Selected) == 0x000B68, "Member 'UTournamentLiveGamesEntry_C::Selected' has a wrong offset!");
-static_assert(offsetof(UTournamentLiveGamesEntry_C, CommonBorder_IsPlayer) == 0x000B70, "Member 'UTournamentLiveGamesEntry_C::CommonBorder_IsPlayer' has a wrong offset!");
-static_assert(offsetof(UTournamentLiveGamesEntry_C, CommonBorder_Selected) == 0x000B78, "Member 'UTournamentLiveGamesEntry_C::CommonBorder_Selected' has a wrong offset!");
-static_assert(offsetof(UTournamentLiveGamesEntry_C, CommonBorder_Zebra) == 0x000B80, "Member 'UTournamentLiveGamesEntry_C::CommonBorder_Zebra' has a wrong offset!");
 
 }
 

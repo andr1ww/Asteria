@@ -18,22 +18,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemAttributesDetailWidget.ItemAttributesDetailWidget_C
-// 0x0010 (0x0290 - 0x0280)
+// 0x0010 (0x02F0 - 0x02E0)
 class UItemAttributesDetailWidget_C final : public UFortItemDetailElementWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0280(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStatsListWidget_C*                     StatsListWidget;                                   // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStatsListWidget_C*                     StatsListWidget;                                   // 0x02E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void UpdateItemsForWidgets();
 	void HandlePostDifferentItemToDetailSet();
 	void HandlePostDifferentItemToCompareWithSet();
 	void HandleShouldPreviewUpgradingItemChanged();
-	void HandlePreDifferentItemToDetailSet();
-	void HandlePreDifferentItemToCompareWithSet();
-	void HandleItemToDetailChanged(bool bItemChanged, bool bAmmoChanged, bool bIngredientsChanged);
-	void HandleItemToCompareWithChanged(bool bItemChanged, bool bAmmoChanged, bool bIngredientsChanged);
+	void HandleItemToDetailChangedBP();
+	void HandleItemToCompareWithChangedBP();
+	void HandleUpgradeLevelDeltaChanged();
 	void ExecuteUbergraph_ItemAttributesDetailWidget(int32 EntryPoint);
 
 public:
@@ -46,10 +45,6 @@ public:
 		return GetDefaultObjImpl<UItemAttributesDetailWidget_C>();
 	}
 };
-static_assert(alignof(UItemAttributesDetailWidget_C) == 0x000008, "Wrong alignment on UItemAttributesDetailWidget_C");
-static_assert(sizeof(UItemAttributesDetailWidget_C) == 0x000290, "Wrong size on UItemAttributesDetailWidget_C");
-static_assert(offsetof(UItemAttributesDetailWidget_C, UberGraphFrame) == 0x000280, "Member 'UItemAttributesDetailWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UItemAttributesDetailWidget_C, StatsListWidget) == 0x000288, "Member 'UItemAttributesDetailWidget_C::StatsListWidget' has a wrong offset!");
 
 }
 

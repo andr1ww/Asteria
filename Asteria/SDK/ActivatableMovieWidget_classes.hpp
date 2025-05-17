@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -18,16 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ActivatableMovieWidget.ActivatableMovieWidget_C
-// 0x0008 (0x03A8 - 0x03A0)
+// 0x0008 (0x0550 - 0x0548)
 class UActivatableMovieWidget_C final : public UFortActivatableVideoPanel
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-
-public:
-	void OnDeactivated();
-	void OnActivated();
-	void ExecuteUbergraph_ActivatableMovieWidget(int32 EntryPoint);
+	class USafeZone*                              MainSafeZone;                                      // 0x0548(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,9 +33,6 @@ public:
 		return GetDefaultObjImpl<UActivatableMovieWidget_C>();
 	}
 };
-static_assert(alignof(UActivatableMovieWidget_C) == 0x000008, "Wrong alignment on UActivatableMovieWidget_C");
-static_assert(sizeof(UActivatableMovieWidget_C) == 0x0003A8, "Wrong size on UActivatableMovieWidget_C");
-static_assert(offsetof(UActivatableMovieWidget_C, UberGraphFrame) == 0x0003A0, "Member 'UActivatableMovieWidget_C::UberGraphFrame' has a wrong offset!");
 
 }
 

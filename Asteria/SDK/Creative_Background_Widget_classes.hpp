@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
+#include "EBillboardshadowDirection_structs.hpp"
 #include "Slate_structs.hpp"
 
 
@@ -19,21 +19,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass Creative_Background_Widget.Creative_Background_Widget_C
-// 0x0018 (0x0248 - 0x0230)
+// 0x0010 (0x0270 - 0x0260)
 class UCreative_Background_Widget_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0230(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBorder*                                Border_0;                                          // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             UserText;                                          // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                Border_0;                                          // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             UserText;                                          // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_Creative_Background_Widget(int32 EntryPoint);
 	void SetText(const class FString& Text);
 	void SetBackgroundColor(const struct FLinearColor& Color);
 	void SetTextScale(int32 FontSize);
 	void SetTextAlignment(ETextJustify Alignment);
 	void SetTextColor(const struct FLinearColor& TextColor);
+	void SetTextFont(int32 TextFont, int32 OutlineStrength);
+	void SetShadow(EBillboardshadowDirection Shadow, float ShadowScale);
 
 public:
 	static class UClass* StaticClass()
@@ -45,11 +45,6 @@ public:
 		return GetDefaultObjImpl<UCreative_Background_Widget_C>();
 	}
 };
-static_assert(alignof(UCreative_Background_Widget_C) == 0x000008, "Wrong alignment on UCreative_Background_Widget_C");
-static_assert(sizeof(UCreative_Background_Widget_C) == 0x000248, "Wrong size on UCreative_Background_Widget_C");
-static_assert(offsetof(UCreative_Background_Widget_C, UberGraphFrame) == 0x000230, "Member 'UCreative_Background_Widget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCreative_Background_Widget_C, Border_0) == 0x000238, "Member 'UCreative_Background_Widget_C::Border_0' has a wrong offset!");
-static_assert(offsetof(UCreative_Background_Widget_C, UserText) == 0x000240, "Member 'UCreative_Background_Widget_C::UserText' has a wrong offset!");
 
 }
 

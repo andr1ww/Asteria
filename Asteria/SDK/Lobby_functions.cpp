@@ -58,7 +58,7 @@ void ALobbyBeaconClient::ClientJoinGame()
 // Function Lobby.LobbyBeaconClient.ClientLoginComplete
 // (Net, NetReliable, Native, Event, Protected, NetClient)
 // Parameters:
-// struct FUniqueNetIdRepl                 InUniqueId                                             (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          InUniqueId                                             (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bWasSuccessful                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void ALobbyBeaconClient::ClientLoginComplete(const struct FUniqueNetIdRepl& InUniqueId, bool bWasSuccessful)
@@ -85,8 +85,8 @@ void ALobbyBeaconClient::ClientLoginComplete(const struct FUniqueNetIdRepl& InUn
 // Function Lobby.LobbyBeaconClient.ClientPlayerJoined
 // (Net, NetReliable, Native, Event, Protected, NetClient)
 // Parameters:
-// class FText                             NewPlayerName                                          (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 InUniqueId                                             (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FText&                      NewPlayerName                                          (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          InUniqueId                                             (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void ALobbyBeaconClient::ClientPlayerJoined(const class FText& NewPlayerName, const struct FUniqueNetIdRepl& InUniqueId)
 {
@@ -112,7 +112,7 @@ void ALobbyBeaconClient::ClientPlayerJoined(const class FText& NewPlayerName, co
 // Function Lobby.LobbyBeaconClient.ClientPlayerLeft
 // (Net, NetReliable, Native, Event, Protected, NetClient)
 // Parameters:
-// struct FUniqueNetIdRepl                 InUniqueId                                             (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          InUniqueId                                             (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void ALobbyBeaconClient::ClientPlayerLeft(const struct FUniqueNetIdRepl& InUniqueId)
 {
@@ -137,7 +137,7 @@ void ALobbyBeaconClient::ClientPlayerLeft(const struct FUniqueNetIdRepl& InUniqu
 // Function Lobby.LobbyBeaconClient.ClientSetInviteFlags
 // (Net, NetReliable, Native, Event, Public, NetClient)
 // Parameters:
-// struct FJoinabilitySettings             Settings                                               (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FJoinabilitySettings&      Settings                                               (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void ALobbyBeaconClient::ClientSetInviteFlags(const struct FJoinabilitySettings& Settings)
 {
@@ -162,7 +162,7 @@ void ALobbyBeaconClient::ClientSetInviteFlags(const struct FJoinabilitySettings&
 // Function Lobby.LobbyBeaconClient.ClientWasKicked
 // (Net, NetReliable, Native, Event, Protected, NetClient)
 // Parameters:
-// class FText                             KickReason                                             (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FText&                      KickReason                                             (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void ALobbyBeaconClient::ClientWasKicked(const class FText& KickReason)
 {
@@ -187,7 +187,7 @@ void ALobbyBeaconClient::ClientWasKicked(const class FText& KickReason)
 // Function Lobby.LobbyBeaconClient.ServerCheat
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
 // Parameters:
-// class FString                           Msg                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Msg                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void ALobbyBeaconClient::ServerCheat(const class FString& Msg)
 {
@@ -231,8 +231,8 @@ void ALobbyBeaconClient::ServerDisconnectFromLobby()
 // Function Lobby.LobbyBeaconClient.ServerKickPlayer
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// struct FUniqueNetIdRepl                 PlayerToKick                                           (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FText                             Reason                                                 (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          PlayerToKick                                           (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FText&                      Reason                                                 (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 
 void ALobbyBeaconClient::ServerKickPlayer(const struct FUniqueNetIdRepl& PlayerToKick, const class FText& Reason)
 {
@@ -258,9 +258,9 @@ void ALobbyBeaconClient::ServerKickPlayer(const struct FUniqueNetIdRepl& PlayerT
 // Function Lobby.LobbyBeaconClient.ServerLoginPlayer
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// class FString                           InSessionId                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 InUniqueId                                             (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           UrlString                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InSessionId                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          InUniqueId                                             (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    UrlString                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void ALobbyBeaconClient::ServerLoginPlayer(const class FString& InSessionId, const struct FUniqueNetIdRepl& InUniqueId, const class FString& UrlString)
 {
@@ -306,8 +306,8 @@ void ALobbyBeaconClient::ServerNotifyJoiningServer()
 // Function Lobby.LobbyBeaconClient.ServerSetPartyOwner
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// struct FUniqueNetIdRepl                 InUniqueId                                             (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FUniqueNetIdRepl                 InPartyOwnerId                                         (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          InUniqueId                                             (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FUniqueNetIdRepl&          InPartyOwnerId                                         (ConstParm, Parm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void ALobbyBeaconClient::ServerSetPartyOwner(const struct FUniqueNetIdRepl& InUniqueId, const struct FUniqueNetIdRepl& InPartyOwnerId)
 {

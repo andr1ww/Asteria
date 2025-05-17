@@ -10,41 +10,45 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ReplayPC_Athena.BP_ReplayPC_Athena_C
-// 0x00A8 (0x2EF8 - 0x2E50)
+// 0x00C0 (0x3920 - 0x3860)
 class ABP_ReplayPC_Athena_C final : public AFortReplaySpectatorAthena
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2E50(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMap<float, class USoundMix*>                 PlaybackRateMap;                                   // 0x2E58(0x0050)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	float                                         CurrentPlayRate;                                   // 0x2EA8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsFast;                                           // 0x2EAC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2EAD[0x3];                                     // 0x2EAD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        SpeedupLoop;                                       // 0x2EB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        SlowdownLoop;                                      // 0x2EB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsHudVisible;                                     // 0x2EC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2EC1[0x7];                                     // 0x2EC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        ZoomOutLoop;                                       // 0x2EC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        ZoomInLoop;                                        // 0x2ED0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsSkydivingAudioEnabled;                          // 0x2ED8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bIsTargetParachuting;                              // 0x2ED9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bIsTargetSkydiving;                                // 0x2EDA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2EDB[0x5];                                     // 0x2EDB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAudioComponent*                        SkydivingAudioLoop;                                // 0x2EE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bIsPaused;                                         // 0x2EE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2EE9[0x7];                                     // 0x2EE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             CurrentSkydivingSound;                             // 0x2EF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x3860(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UPostProcessComponent*                  PostProcess;                                       // 0x3868(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UUnderwaterAudioComponent_C*            UnderwaterAudioComponent;                          // 0x3870(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TMap<float, class USoundMix*>                 PlaybackRateMap;                                   // 0x3878(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         CurrentPlayRate;                                   // 0x38C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsFast;                                           // 0x38CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_38CD[0x3];                                     // 0x38CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        SpeedupLoop;                                       // 0x38D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        SlowdownLoop;                                      // 0x38D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsHudVisible;                                     // 0x38E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_38E1[0x7];                                     // 0x38E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        ZoomOutLoop;                                       // 0x38E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        ZoomInLoop;                                        // 0x38F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsSkydivingAudioEnabled;                          // 0x38F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsTargetParachuting;                              // 0x38F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsTargetSkydiving;                                // 0x38FA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_38FB[0x5];                                     // 0x38FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAudioComponent*                        SkydivingAudioLoop;                                // 0x3900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsPaused;                                         // 0x3908(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3909[0x7];                                     // 0x3909(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             CurrentSkydivingSound;                             // 0x3910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundMix*                              PauseMIx;                                          // 0x3918(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_ReplayPC_Athena(int32 EntryPoint);
+	void Update_Sound_Mix();
 	void Looping_Audio_Update();
 	void Handle_Parachute_Audio_State();
 	void On_Pause_State_Changed(bool bPaused);
@@ -71,23 +75,6 @@ public:
 		return GetDefaultObjImpl<ABP_ReplayPC_Athena_C>();
 	}
 };
-static_assert(alignof(ABP_ReplayPC_Athena_C) == 0x000008, "Wrong alignment on ABP_ReplayPC_Athena_C");
-static_assert(sizeof(ABP_ReplayPC_Athena_C) == 0x002EF8, "Wrong size on ABP_ReplayPC_Athena_C");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, UberGraphFrame) == 0x002E50, "Member 'ABP_ReplayPC_Athena_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, PlaybackRateMap) == 0x002E58, "Member 'ABP_ReplayPC_Athena_C::PlaybackRateMap' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, CurrentPlayRate) == 0x002EA8, "Member 'ABP_ReplayPC_Athena_C::CurrentPlayRate' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, bIsFast) == 0x002EAC, "Member 'ABP_ReplayPC_Athena_C::bIsFast' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, SpeedupLoop) == 0x002EB0, "Member 'ABP_ReplayPC_Athena_C::SpeedupLoop' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, SlowdownLoop) == 0x002EB8, "Member 'ABP_ReplayPC_Athena_C::SlowdownLoop' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, bIsHudVisible) == 0x002EC0, "Member 'ABP_ReplayPC_Athena_C::bIsHudVisible' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, ZoomOutLoop) == 0x002EC8, "Member 'ABP_ReplayPC_Athena_C::ZoomOutLoop' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, ZoomInLoop) == 0x002ED0, "Member 'ABP_ReplayPC_Athena_C::ZoomInLoop' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, bIsSkydivingAudioEnabled) == 0x002ED8, "Member 'ABP_ReplayPC_Athena_C::bIsSkydivingAudioEnabled' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, bIsTargetParachuting) == 0x002ED9, "Member 'ABP_ReplayPC_Athena_C::bIsTargetParachuting' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, bIsTargetSkydiving) == 0x002EDA, "Member 'ABP_ReplayPC_Athena_C::bIsTargetSkydiving' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, SkydivingAudioLoop) == 0x002EE0, "Member 'ABP_ReplayPC_Athena_C::SkydivingAudioLoop' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, bIsPaused) == 0x002EE8, "Member 'ABP_ReplayPC_Athena_C::bIsPaused' has a wrong offset!");
-static_assert(offsetof(ABP_ReplayPC_Athena_C, CurrentSkydivingSound) == 0x002EF0, "Member 'ABP_ReplayPC_Athena_C::CurrentSkydivingSound' has a wrong offset!");
 
 }
 

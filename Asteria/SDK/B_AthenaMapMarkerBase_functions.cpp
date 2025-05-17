@@ -40,7 +40,7 @@ void AB_AthenaMapMarkerBase_C::ExecuteUbergraph_B_AthenaMapMarkerBase(int32 Entr
 // Function B_AthenaMapMarkerBase.B_AthenaMapMarkerBase_C.OnMarkerColorChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// struct FLinearColor                     InColor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              InColor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AB_AthenaMapMarkerBase_C::OnMarkerColorChanged(const struct FLinearColor& InColor)
 {
@@ -52,6 +52,26 @@ void AB_AthenaMapMarkerBase_C::OnMarkerColorChanged(const struct FLinearColor& I
 	Params::B_AthenaMapMarkerBase_C_OnMarkerColorChanged Parms{};
 
 	Parms.InColor = std::move(InColor);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_AthenaMapMarkerBase.B_AthenaMapMarkerBase_C.OnSetupMarker
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FFortWorldMarkerData&      MarkerData_0                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void AB_AthenaMapMarkerBase_C::OnSetupMarker(const struct FFortWorldMarkerData& MarkerData_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AthenaMapMarkerBase_C", "OnSetupMarker");
+
+	Params::B_AthenaMapMarkerBase_C_OnSetupMarker Parms{};
+
+	Parms.MarkerData_0 = std::move(MarkerData_0);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -71,20 +91,6 @@ void AB_AthenaMapMarkerBase_C::OnMarkerPlaced()
 }
 
 
-// Function B_AthenaMapMarkerBase.B_AthenaMapMarkerBase_C.OnProtoMarkerPlaced__FinishedFunc
-// (BlueprintEvent)
-
-void AB_AthenaMapMarkerBase_C::OnProtoMarkerPlaced__FinishedFunc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_AthenaMapMarkerBase_C", "OnProtoMarkerPlaced__FinishedFunc");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_AthenaMapMarkerBase.B_AthenaMapMarkerBase_C.OnProtoMarkerPlaced__UpdateFunc
 // (BlueprintEvent)
 
@@ -99,35 +105,15 @@ void AB_AthenaMapMarkerBase_C::OnProtoMarkerPlaced__UpdateFunc()
 }
 
 
-// Function B_AthenaMapMarkerBase.B_AthenaMapMarkerBase_C.OnSetupMarker
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// struct FFortWorldMarkerData             MarkerData_0                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void AB_AthenaMapMarkerBase_C::OnSetupMarker(const struct FFortWorldMarkerData& MarkerData_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_AthenaMapMarkerBase_C", "OnSetupMarker");
-
-	Params::B_AthenaMapMarkerBase_C_OnSetupMarker Parms{};
-
-	Parms.MarkerData_0 = std::move(MarkerData_0);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_AthenaMapMarkerBase.B_AthenaMapMarkerBase_C.SpawnMarkerAnim__FinishedFunc
+// Function B_AthenaMapMarkerBase.B_AthenaMapMarkerBase_C.OnProtoMarkerPlaced__FinishedFunc
 // (BlueprintEvent)
 
-void AB_AthenaMapMarkerBase_C::SpawnMarkerAnim__FinishedFunc()
+void AB_AthenaMapMarkerBase_C::OnProtoMarkerPlaced__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_AthenaMapMarkerBase_C", "SpawnMarkerAnim__FinishedFunc");
+		Func = Class->GetFunction("B_AthenaMapMarkerBase_C", "OnProtoMarkerPlaced__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -142,6 +128,20 @@ void AB_AthenaMapMarkerBase_C::SpawnMarkerAnim__UpdateFunc()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_AthenaMapMarkerBase_C", "SpawnMarkerAnim__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_AthenaMapMarkerBase.B_AthenaMapMarkerBase_C.SpawnMarkerAnim__FinishedFunc
+// (BlueprintEvent)
+
+void AB_AthenaMapMarkerBase_C::SpawnMarkerAnim__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_AthenaMapMarkerBase_C", "SpawnMarkerAnim__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

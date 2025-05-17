@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass v2_PlayerCameraModeTargetingPistol.v2_PlayerCameraModeTargetingPistol_C
-// 0x0000 (0x0CF0 - 0x0CF0)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class Uv2_PlayerCameraModeTargetingPistol_C final : public Uv2_PlayerCameraModeRanged_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<Uv2_PlayerCameraModeTargetingPistol_C>();
 	}
 };
-static_assert(alignof(Uv2_PlayerCameraModeTargetingPistol_C) == 0x000010, "Wrong alignment on Uv2_PlayerCameraModeTargetingPistol_C");
-static_assert(sizeof(Uv2_PlayerCameraModeTargetingPistol_C) == 0x000CF0, "Wrong size on Uv2_PlayerCameraModeTargetingPistol_C");
 
 }
 

@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UTextStyle_Tab_Secondary_C>();
 	}
 };
-static_assert(alignof(UTextStyle_Tab_Secondary_C) == 0x000008, "Wrong alignment on UTextStyle_Tab_Secondary_C");
-static_assert(sizeof(UTextStyle_Tab_Secondary_C) == 0x000148, "Wrong size on UTextStyle_Tab_Secondary_C");
 
 }
 

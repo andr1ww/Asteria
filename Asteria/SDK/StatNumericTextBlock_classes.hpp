@@ -20,16 +20,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass StatNumericTextBlock.StatNumericTextBlock_C
-// 0x0028 (0x0260 - 0x0238)
+// 0x0028 (0x02B0 - 0x0288)
 class UStatNumericTextBlock_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 ComparisonArrowImage;                              // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonNumericTextBlock*                NumericText;                                       // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	EFortBuffState                                Buff_State;                                        // 0x0250(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 Numeric_Text_Style;                                // 0x0258(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 ComparisonArrowImage;                              // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonNumericTextBlock*                NumericText;                                       // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	EFortBuffState                                Buff_State;                                        // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A1[0x7];                                      // 0x02A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 Numeric_Text_Style;                                // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void SetComparisonState(EFortBuffState Buff_State_0);
@@ -48,13 +48,6 @@ public:
 		return GetDefaultObjImpl<UStatNumericTextBlock_C>();
 	}
 };
-static_assert(alignof(UStatNumericTextBlock_C) == 0x000008, "Wrong alignment on UStatNumericTextBlock_C");
-static_assert(sizeof(UStatNumericTextBlock_C) == 0x000260, "Wrong size on UStatNumericTextBlock_C");
-static_assert(offsetof(UStatNumericTextBlock_C, UberGraphFrame) == 0x000238, "Member 'UStatNumericTextBlock_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UStatNumericTextBlock_C, ComparisonArrowImage) == 0x000240, "Member 'UStatNumericTextBlock_C::ComparisonArrowImage' has a wrong offset!");
-static_assert(offsetof(UStatNumericTextBlock_C, NumericText) == 0x000248, "Member 'UStatNumericTextBlock_C::NumericText' has a wrong offset!");
-static_assert(offsetof(UStatNumericTextBlock_C, Buff_State) == 0x000250, "Member 'UStatNumericTextBlock_C::Buff_State' has a wrong offset!");
-static_assert(offsetof(UStatNumericTextBlock_C, Numeric_Text_Style) == 0x000258, "Member 'UStatNumericTextBlock_C::Numeric_Text_Style' has a wrong offset!");
 
 }
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "CommonUI_classes.hpp"
 #include "CommonInput_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CommonUI_classes.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -22,22 +22,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PanelButton.PanelButton_C
-// 0x0048 (0x0B90 - 0x0B48)
-class UPanelButton_C : public UCommonButton
+// 0x0048 (0x0BE8 - 0x0BA0)
+class UPanelButton_C final : public UCommonButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNamedSlot*                             ContentSlot;                                       // 0x0B50(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UClass*                                 ControllerInputStyle;                              // 0x0B58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class UClass*                                 MouseKeyboardStyle;                                // 0x0B60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    ButtonClickAction;                                 // 0x0B68(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	EHorizontalAlignment                          InputActionHorizontalAlignment;                    // 0x0B78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EVerticalAlignment                            InputActionVerticalAlignment;                      // 0x0B79(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B7A[0x2];                                      // 0x0B7A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              InputActionRenderTranslation;                      // 0x0B7C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InputActionUseRimBrush;                            // 0x0B84(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B85[0x3];                                      // 0x0B85(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              InputActionRimBrushSize;                           // 0x0B88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNamedSlot*                             ContentSlot;                                       // 0x0BA8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UClass*                                 ControllerInputStyle;                              // 0x0BB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class UClass*                                 MouseKeyboardStyle;                                // 0x0BB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    ButtonClickAction;                                 // 0x0BC0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	EHorizontalAlignment                          InputActionHorizontalAlignment;                    // 0x0BD0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EVerticalAlignment                            InputActionVerticalAlignment;                      // 0x0BD1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BD2[0x2];                                      // 0x0BD2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              InputActionRenderTranslation;                      // 0x0BD4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InputActionUseRimBrush;                            // 0x0BDC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BDD[0x3];                                      // 0x0BDD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              InputActionRimBrushSize;                           // 0x0BE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_PanelButton(int32 EntryPoint);
@@ -64,18 +64,6 @@ public:
 		return GetDefaultObjImpl<UPanelButton_C>();
 	}
 };
-static_assert(alignof(UPanelButton_C) == 0x000008, "Wrong alignment on UPanelButton_C");
-static_assert(sizeof(UPanelButton_C) == 0x000B90, "Wrong size on UPanelButton_C");
-static_assert(offsetof(UPanelButton_C, UberGraphFrame) == 0x000B48, "Member 'UPanelButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPanelButton_C, ContentSlot) == 0x000B50, "Member 'UPanelButton_C::ContentSlot' has a wrong offset!");
-static_assert(offsetof(UPanelButton_C, ControllerInputStyle) == 0x000B58, "Member 'UPanelButton_C::ControllerInputStyle' has a wrong offset!");
-static_assert(offsetof(UPanelButton_C, MouseKeyboardStyle) == 0x000B60, "Member 'UPanelButton_C::MouseKeyboardStyle' has a wrong offset!");
-static_assert(offsetof(UPanelButton_C, ButtonClickAction) == 0x000B68, "Member 'UPanelButton_C::ButtonClickAction' has a wrong offset!");
-static_assert(offsetof(UPanelButton_C, InputActionHorizontalAlignment) == 0x000B78, "Member 'UPanelButton_C::InputActionHorizontalAlignment' has a wrong offset!");
-static_assert(offsetof(UPanelButton_C, InputActionVerticalAlignment) == 0x000B79, "Member 'UPanelButton_C::InputActionVerticalAlignment' has a wrong offset!");
-static_assert(offsetof(UPanelButton_C, InputActionRenderTranslation) == 0x000B7C, "Member 'UPanelButton_C::InputActionRenderTranslation' has a wrong offset!");
-static_assert(offsetof(UPanelButton_C, InputActionUseRimBrush) == 0x000B84, "Member 'UPanelButton_C::InputActionUseRimBrush' has a wrong offset!");
-static_assert(offsetof(UPanelButton_C, InputActionRimBrushSize) == 0x000B88, "Member 'UPanelButton_C::InputActionRimBrushSize' has a wrong offset!");
 
 }
 

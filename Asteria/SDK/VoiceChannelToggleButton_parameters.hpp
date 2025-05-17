@@ -28,14 +28,6 @@ public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_3;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton) == 0x000008, "Wrong alignment on VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton");
-static_assert(sizeof(VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton) == 0x000030, "Wrong size on VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton");
-static_assert(offsetof(VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton, EntryPoint) == 0x000000, "Member 'VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton::EntryPoint' has a wrong offset!");
-static_assert(offsetof(VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton, K2Node_Event_bIsPartyChat) == 0x000018, "Member 'VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton::K2Node_Event_bIsPartyChat' has a wrong offset!");
-static_assert(offsetof(VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton, CallFunc_PlayAnimation_ReturnValue_2) == 0x000020, "Member 'VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton, CallFunc_PlayAnimation_ReturnValue_3) == 0x000028, "Member 'VoiceChannelToggleButton_C_ExecuteUbergraph_VoiceChannelToggleButton::CallFunc_PlayAnimation_ReturnValue_3' has a wrong offset!");
 
 // Function VoiceChannelToggleButton.VoiceChannelToggleButton_C.OnVoiceChannelSelected
 // 0x0001 (0x0001 - 0x0000)
@@ -44,9 +36,6 @@ struct VoiceChannelToggleButton_C_OnVoiceChannelSelected final
 public:
 	bool                                          bIsPartyChat;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(VoiceChannelToggleButton_C_OnVoiceChannelSelected) == 0x000001, "Wrong alignment on VoiceChannelToggleButton_C_OnVoiceChannelSelected");
-static_assert(sizeof(VoiceChannelToggleButton_C_OnVoiceChannelSelected) == 0x000001, "Wrong size on VoiceChannelToggleButton_C_OnVoiceChannelSelected");
-static_assert(offsetof(VoiceChannelToggleButton_C_OnVoiceChannelSelected, bIsPartyChat) == 0x000000, "Member 'VoiceChannelToggleButton_C_OnVoiceChannelSelected::bIsPartyChat' has a wrong offset!");
 
 }
 

@@ -17,23 +17,21 @@
 namespace SDK
 {
 
-// Function EventScoreRow.EventScoreRow_C.SetData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function EventScoreRow.EventScoreRow_C.ExecuteUbergraph_EventScoreRow
+// (Final, UbergraphFunction)
 // Parameters:
-// class FText                             Label                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventScoreRow_C::SetData(const class FText& Label, int32 Value)
+void UEventScoreRow_C::ExecuteUbergraph_EventScoreRow(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventScoreRow_C", "SetData");
+		Func = Class->GetFunction("EventScoreRow_C", "ExecuteUbergraph_EventScoreRow");
 
-	Params::EventScoreRow_C_SetData Parms{};
+	Params::EventScoreRow_C_ExecuteUbergraph_EventScoreRow Parms{};
 
-	Parms.Label = std::move(Label);
-	Parms.Value = Value;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -59,21 +57,23 @@ void UEventScoreRow_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function EventScoreRow.EventScoreRow_C.ExecuteUbergraph_EventScoreRow
-// (Final, UbergraphFunction)
+// Function EventScoreRow.EventScoreRow_C.SetData
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      Label                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventScoreRow_C::ExecuteUbergraph_EventScoreRow(int32 EntryPoint)
+void UEventScoreRow_C::SetData(const class FText& Label, int32 Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventScoreRow_C", "ExecuteUbergraph_EventScoreRow");
+		Func = Class->GetFunction("EventScoreRow_C", "SetData");
 
-	Params::EventScoreRow_C_ExecuteUbergraph_EventScoreRow Parms{};
+	Params::EventScoreRow_C_SetData Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Label = std::move(Label);
+	Parms.Value = Value;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

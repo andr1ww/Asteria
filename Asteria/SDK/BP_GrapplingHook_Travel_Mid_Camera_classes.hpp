@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UBP_GrapplingHook_Travel_Mid_Camera_C>();
 	}
 };
-static_assert(alignof(UBP_GrapplingHook_Travel_Mid_Camera_C) == 0x000008, "Wrong alignment on UBP_GrapplingHook_Travel_Mid_Camera_C");
-static_assert(sizeof(UBP_GrapplingHook_Travel_Mid_Camera_C) == 0x000160, "Wrong size on UBP_GrapplingHook_Travel_Mid_Camera_C");
 
 }
 

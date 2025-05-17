@@ -20,43 +20,41 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass CreativeIslandLinkScreen.CreativeIslandLinkScreen_C
-// 0x00A0 (0x04A8 - 0x0408)
+// 0x00A0 (0x0608 - 0x0568)
 class UCreativeIslandLinkScreen_C final : public UFortCreativeIslandLinkScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0408(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Loading;                                           // 0x0410(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_2;                                           // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_IslandImage;                                 // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Shadow;                                      // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               IslandListContent;                                 // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULightningViolator_C*                   LightningViolator;                                 // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 MatchmakingSpinner;                                // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               NoIslandsContent;                                  // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_Violator;                                  // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x0458(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonWidgetSwitcher*                  Switcher_IslandsList;                              // 0x0460(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_NoIslands;                                    // 0x0468(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_WebURL;                                       // 0x0470(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FLinearColor                           ViolatorColor_Error;                               // 0x0478(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ViolatorColor_Success;                             // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABGA_IslandPortal_C*                    Portal;                                            // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SelectPlotSound;                                   // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0568(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Loading;                                           // 0x0570(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_2;                                           // 0x0578(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_IslandImage;                                 // 0x0580(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Shadow;                                      // 0x0588(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               IslandListContent;                                 // 0x0590(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULightningViolator_C*                   LightningViolator;                                 // 0x0598(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 MatchmakingSpinner;                                // 0x05A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               NoIslandsContent;                                  // 0x05A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Overlay_Violator;                                  // 0x05B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_0;                                        // 0x05B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonWidgetSwitcher*                  Switcher_IslandsList;                              // 0x05C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_NoIslands;                                    // 0x05C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_WebURL;                                       // 0x05D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FLinearColor                           ViolatorColor_Error;                               // 0x05D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ViolatorColor_Success;                             // 0x05E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABGA_IslandPortal_C*                    Portal;                                            // 0x05F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SelectPlotSound;                                   // 0x0600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_CreativeIslandLinkScreen(int32 EntryPoint);
 	void BndEvt__Button_Refresh_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void OnCreativeIslandLinkValidated(EFortCreativeIslandLinkValidationResult ValidateResult);
-	void BndEvt__SimpleCommonButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void BndEvt__CommonActionWidget_0_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad);
 	void PreConstruct(bool IsDesignTime);
-	void Construct();
+	void BP_OnActivated();
+	void OnCreativeIslandLinkValidated(EFortCreativeIslandLinkValidationResult ValidateResult);
 	void Destruct();
-	void InitFromObject(class UObject* InitObject);
-	void OnActivated();
 	void OnAddedToActivationStack();
+	void InitFromObject(class UObject* InitObject);
 	void OnCreativeIslandLinksPopulated();
 	void OnIslandLinkEntryTextChanged(const class FText& Text);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()
@@ -68,26 +66,6 @@ public:
 		return GetDefaultObjImpl<UCreativeIslandLinkScreen_C>();
 	}
 };
-static_assert(alignof(UCreativeIslandLinkScreen_C) == 0x000008, "Wrong alignment on UCreativeIslandLinkScreen_C");
-static_assert(sizeof(UCreativeIslandLinkScreen_C) == 0x0004A8, "Wrong size on UCreativeIslandLinkScreen_C");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, UberGraphFrame) == 0x000408, "Member 'UCreativeIslandLinkScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, Loading) == 0x000410, "Member 'UCreativeIslandLinkScreen_C::Loading' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, Image_2) == 0x000418, "Member 'UCreativeIslandLinkScreen_C::Image_2' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, Image_IslandImage) == 0x000420, "Member 'UCreativeIslandLinkScreen_C::Image_IslandImage' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, Image_Shadow) == 0x000428, "Member 'UCreativeIslandLinkScreen_C::Image_Shadow' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, IslandListContent) == 0x000430, "Member 'UCreativeIslandLinkScreen_C::IslandListContent' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, LightningViolator) == 0x000438, "Member 'UCreativeIslandLinkScreen_C::LightningViolator' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, MatchmakingSpinner) == 0x000440, "Member 'UCreativeIslandLinkScreen_C::MatchmakingSpinner' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, NoIslandsContent) == 0x000448, "Member 'UCreativeIslandLinkScreen_C::NoIslandsContent' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, Overlay_Violator) == 0x000450, "Member 'UCreativeIslandLinkScreen_C::Overlay_Violator' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, SafeZone_0) == 0x000458, "Member 'UCreativeIslandLinkScreen_C::SafeZone_0' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, Switcher_IslandsList) == 0x000460, "Member 'UCreativeIslandLinkScreen_C::Switcher_IslandsList' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, Text_NoIslands) == 0x000468, "Member 'UCreativeIslandLinkScreen_C::Text_NoIslands' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, Text_WebURL) == 0x000470, "Member 'UCreativeIslandLinkScreen_C::Text_WebURL' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, ViolatorColor_Error) == 0x000478, "Member 'UCreativeIslandLinkScreen_C::ViolatorColor_Error' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, ViolatorColor_Success) == 0x000488, "Member 'UCreativeIslandLinkScreen_C::ViolatorColor_Success' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, Portal) == 0x000498, "Member 'UCreativeIslandLinkScreen_C::Portal' has a wrong offset!");
-static_assert(offsetof(UCreativeIslandLinkScreen_C, SelectPlotSound) == 0x0004A0, "Member 'UCreativeIslandLinkScreen_C::SelectPlotSound' has a wrong offset!");
 
 }
 

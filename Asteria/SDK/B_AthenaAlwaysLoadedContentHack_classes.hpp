@@ -17,13 +17,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_AthenaAlwaysLoadedContentHack.B_AthenaAlwaysLoadedContentHack_C
-// 0x0028 (0x0268 - 0x0240)
+// 0x0028 (0x0248 - 0x0220)
 class AB_AthenaAlwaysLoadedContentHack_C final : public AActor
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0240(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class UObject*>                        HardObjectList;                                    // 0x0248(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClass*>                         HardClassList;                                     // 0x0258(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0220(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class UObject*>                        HardObjectList;                                    // 0x0228(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UClass*>                         HardClassList;                                     // 0x0238(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,11 +35,6 @@ public:
 		return GetDefaultObjImpl<AB_AthenaAlwaysLoadedContentHack_C>();
 	}
 };
-static_assert(alignof(AB_AthenaAlwaysLoadedContentHack_C) == 0x000008, "Wrong alignment on AB_AthenaAlwaysLoadedContentHack_C");
-static_assert(sizeof(AB_AthenaAlwaysLoadedContentHack_C) == 0x000268, "Wrong size on AB_AthenaAlwaysLoadedContentHack_C");
-static_assert(offsetof(AB_AthenaAlwaysLoadedContentHack_C, DefaultSceneRoot) == 0x000240, "Member 'AB_AthenaAlwaysLoadedContentHack_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(AB_AthenaAlwaysLoadedContentHack_C, HardObjectList) == 0x000248, "Member 'AB_AthenaAlwaysLoadedContentHack_C::HardObjectList' has a wrong offset!");
-static_assert(offsetof(AB_AthenaAlwaysLoadedContentHack_C, HardClassList) == 0x000258, "Member 'AB_AthenaAlwaysLoadedContentHack_C::HardClassList' has a wrong offset!");
 
 }
 

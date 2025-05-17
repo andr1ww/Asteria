@@ -37,16 +37,72 @@ void ATiered_Chest_Athena_C::ExecuteUbergraph_Tiered_Chest_Athena(int32 EntryPoi
 }
 
 
+// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.PlayChestOpeningTimeline
+// (BlueprintCallable, BlueprintEvent)
+
+void ATiered_Chest_Athena_C::PlayChestOpeningTimeline()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Chest_Athena_C", "PlayChestOpeningTimeline");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.SpawnChestOpenVFX
+// (BlueprintCallable, BlueprintEvent)
+
+void ATiered_Chest_Athena_C::SpawnChestOpenVFX()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Chest_Athena_C", "SpawnChestOpenVFX");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.DetermineVFXRotation
+// (BlueprintCallable, BlueprintEvent)
+
+void ATiered_Chest_Athena_C::DetermineVFXRotation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Chest_Athena_C", "DetermineVFXRotation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.HideChestOpenableCosmetics
+// (BlueprintCallable, BlueprintEvent)
+
+void ATiered_Chest_Athena_C::HideChestOpenableCosmetics()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Chest_Athena_C", "HideChestOpenableCosmetics");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.OnDeathPlayEffects
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
 // float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayTagContainer            DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FVector                          Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FHitResult                       HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 // class AFortPawn*                        InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayEffectContextHandle     EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void ATiered_Chest_Athena_C::OnDeathPlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
 {
@@ -106,20 +162,6 @@ void ATiered_Chest_Athena_C::EnableBacchusHighlight()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Tiered_Chest_Athena_C", "EnableBacchusHighlight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.Chime Visual
-// (BlueprintCallable, BlueprintEvent)
-
-void ATiered_Chest_Athena_C::Chime_Visual()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Tiered_Chest_Athena_C", "Chime Visual");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -232,6 +274,34 @@ void ATiered_Chest_Athena_C::OnLoot()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("Tiered_Chest_Athena_C", "OnLoot");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.Timeline_0__UpdateFunc
+// (BlueprintEvent)
+
+void ATiered_Chest_Athena_C::Timeline_0__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Chest_Athena_C", "Timeline_0__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.Timeline_0__FinishedFunc
+// (BlueprintEvent)
+
+void ATiered_Chest_Athena_C::Timeline_0__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Tiered_Chest_Athena_C", "Timeline_0__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -355,7 +425,7 @@ bool ATiered_Chest_Athena_C::ShouldDie(float Damage, class AController* EventIns
 
 
 // Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.CreateMobileMIDs
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ATiered_Chest_Athena_C::CreateMobileMIDs()
 {
@@ -385,7 +455,7 @@ void ATiered_Chest_Athena_C::CleanupWiggleMIDs()
 // Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.GetMaxAudibleDistance
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                                   Max_Distance                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  Max_Distance                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ATiered_Chest_Athena_C::GetMaxAudibleDistance(float* Max_Distance)
 {
@@ -426,10 +496,10 @@ void ATiered_Chest_Athena_C::SetVisibleMobileInteractIcon(bool Visible)
 // Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.OnSetCustomDepthStencilValue
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class UPrimitiveComponent*>      PrimComponents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const TArray<class UPrimitiveComponent*>&PrimComponents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 // bool                                    bUseCustomDepth                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // int32                                   StencilValue                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bOutConsume                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   bOutConsume                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void ATiered_Chest_Athena_C::OnSetCustomDepthStencilValue(const TArray<class UPrimitiveComponent*>& PrimComponents, bool bUseCustomDepth, int32 StencilValue, bool* bOutConsume)
 {
@@ -454,10 +524,12 @@ void ATiered_Chest_Athena_C::OnSetCustomDepthStencilValue(const TArray<class UPr
 // Function Tiered_Chest_Athena.Tiered_Chest_Athena_C.BlueprintCanInteract
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class AFortPawn*                        InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class AFortPawn*                  InteractingPawn                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const EInteractionBeingAttempted        InteractionBeingAttempted                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const ETInteractionType                 InteractionType                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool ATiered_Chest_Athena_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn) const
+bool ATiered_Chest_Athena_C::BlueprintCanInteract(const class AFortPawn* InteractingPawn, const EInteractionBeingAttempted InteractionBeingAttempted, const ETInteractionType InteractionType) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -467,6 +539,8 @@ bool ATiered_Chest_Athena_C::BlueprintCanInteract(const class AFortPawn* Interac
 	Params::Tiered_Chest_Athena_C_BlueprintCanInteract Parms{};
 
 	Parms.InteractingPawn = InteractingPawn;
+	Parms.InteractionBeingAttempted = InteractionBeingAttempted;
+	Parms.InteractionType = InteractionType;
 
 	UObject::ProcessEvent(Func, &Parms);
 

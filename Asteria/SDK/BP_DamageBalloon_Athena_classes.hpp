@@ -10,25 +10,25 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DamageBalloon_Athena.BP_DamageBalloon_Athena_C
-// 0x0030 (0x0B08 - 0x0AD8)
+// 0x0030 (0x0B98 - 0x0B68)
 class ABP_DamageBalloon_Athena_C final : public ABuildingSMActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*               ExplosionParticle;                                 // 0x0AE0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UFortHealthBarComponent*                FortHealthBar;                                     // 0x0AE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          DestroyBalloon;                                    // 0x0AF0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
-	bool                                          DontPlayDestroyAudio;                              // 0x0AF1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_AF2[0x6];                                      // 0x0AF2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnBalloonDestroyed;                                // 0x0AF8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               ExplosionParticle;                                 // 0x0B70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UFortHealthBarComponent*                FortHealthBar;                                     // 0x0B78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          DestroyBalloon;                                    // 0x0B80(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
+	bool                                          DontPlayDestroyAudio;                              // 0x0B81(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B82[0x6];                                      // 0x0B82(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnBalloonDestroyed;                                // 0x0B88(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_BP_DamageBalloon_Athena(int32 EntryPoint);
@@ -48,14 +48,6 @@ public:
 		return GetDefaultObjImpl<ABP_DamageBalloon_Athena_C>();
 	}
 };
-static_assert(alignof(ABP_DamageBalloon_Athena_C) == 0x000008, "Wrong alignment on ABP_DamageBalloon_Athena_C");
-static_assert(sizeof(ABP_DamageBalloon_Athena_C) == 0x000B08, "Wrong size on ABP_DamageBalloon_Athena_C");
-static_assert(offsetof(ABP_DamageBalloon_Athena_C, UberGraphFrame) == 0x000AD8, "Member 'ABP_DamageBalloon_Athena_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_DamageBalloon_Athena_C, ExplosionParticle) == 0x000AE0, "Member 'ABP_DamageBalloon_Athena_C::ExplosionParticle' has a wrong offset!");
-static_assert(offsetof(ABP_DamageBalloon_Athena_C, FortHealthBar) == 0x000AE8, "Member 'ABP_DamageBalloon_Athena_C::FortHealthBar' has a wrong offset!");
-static_assert(offsetof(ABP_DamageBalloon_Athena_C, DestroyBalloon) == 0x000AF0, "Member 'ABP_DamageBalloon_Athena_C::DestroyBalloon' has a wrong offset!");
-static_assert(offsetof(ABP_DamageBalloon_Athena_C, DontPlayDestroyAudio) == 0x000AF1, "Member 'ABP_DamageBalloon_Athena_C::DontPlayDestroyAudio' has a wrong offset!");
-static_assert(offsetof(ABP_DamageBalloon_Athena_C, OnBalloonDestroyed) == 0x000AF8, "Member 'ABP_DamageBalloon_Athena_C::OnBalloonDestroyed' has a wrong offset!");
 
 }
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Athena_PlayerCameraModeTargetingScopeMidRange.Athena_PlayerCameraModeTargetingScopeMidRange_C
-// 0x0000 (0x0CF0 - 0x0CF0)
+// 0x0000 (0x0DC0 - 0x0DC0)
 class UAthena_PlayerCameraModeTargetingScopeMidRange_C final : public UAthena_PlayerCameraModeSniper_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UAthena_PlayerCameraModeTargetingScopeMidRange_C>();
 	}
 };
-static_assert(alignof(UAthena_PlayerCameraModeTargetingScopeMidRange_C) == 0x000010, "Wrong alignment on UAthena_PlayerCameraModeTargetingScopeMidRange_C");
-static_assert(sizeof(UAthena_PlayerCameraModeTargetingScopeMidRange_C) == 0x000CF0, "Wrong size on UAthena_PlayerCameraModeTargetingScopeMidRange_C");
 
 }
 

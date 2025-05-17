@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Prj_ThrownConsumable_Parent.B_Prj_ThrownConsumable_Parent_C
-// 0x0018 (0x06E8 - 0x06D0)
+// 0x0018 (0x0890 - 0x0878)
 class AB_Prj_ThrownConsumable_Parent_C : public AFortProjectileBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         BouncePawnAgainstPawnGravityScale;                 // 0x06D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FuseTime;                                          // 0x06DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSimulationRunning;                                // 0x06E0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
-	bool                                          bShouldRestartSimulating;                          // 0x06E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0878(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         BouncePawnAgainstPawnGravityScale;                 // 0x0880(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FuseTime;                                          // 0x0884(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSimulationRunning;                                // 0x0888(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
+	bool                                          bShouldRestartSimulating;                          // 0x0889(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_B_Prj_ThrownConsumable_Parent(int32 EntryPoint);
@@ -55,13 +55,6 @@ public:
 		return GetDefaultObjImpl<AB_Prj_ThrownConsumable_Parent_C>();
 	}
 };
-static_assert(alignof(AB_Prj_ThrownConsumable_Parent_C) == 0x000008, "Wrong alignment on AB_Prj_ThrownConsumable_Parent_C");
-static_assert(sizeof(AB_Prj_ThrownConsumable_Parent_C) == 0x0006E8, "Wrong size on AB_Prj_ThrownConsumable_Parent_C");
-static_assert(offsetof(AB_Prj_ThrownConsumable_Parent_C, UberGraphFrame) == 0x0006D0, "Member 'AB_Prj_ThrownConsumable_Parent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_Prj_ThrownConsumable_Parent_C, BouncePawnAgainstPawnGravityScale) == 0x0006D8, "Member 'AB_Prj_ThrownConsumable_Parent_C::BouncePawnAgainstPawnGravityScale' has a wrong offset!");
-static_assert(offsetof(AB_Prj_ThrownConsumable_Parent_C, FuseTime) == 0x0006DC, "Member 'AB_Prj_ThrownConsumable_Parent_C::FuseTime' has a wrong offset!");
-static_assert(offsetof(AB_Prj_ThrownConsumable_Parent_C, bSimulationRunning) == 0x0006E0, "Member 'AB_Prj_ThrownConsumable_Parent_C::bSimulationRunning' has a wrong offset!");
-static_assert(offsetof(AB_Prj_ThrownConsumable_Parent_C, bShouldRestartSimulating) == 0x0006E1, "Member 'AB_Prj_ThrownConsumable_Parent_C::bShouldRestartSimulating' has a wrong offset!");
 
 }
 

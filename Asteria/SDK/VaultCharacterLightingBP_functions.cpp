@@ -133,20 +133,6 @@ void AVaultCharacterLightingBP_C::OVERRIDELIGHTING()
 }
 
 
-// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AVaultCharacterLightingBP_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VaultCharacterLightingBP_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.LightControl
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -164,6 +150,20 @@ void AVaultCharacterLightingBP_C::LightControl(bool NewParam)
 	Parms.NewParam = NewParam;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function VaultCharacterLightingBP.VaultCharacterLightingBP_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AVaultCharacterLightingBP_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VaultCharacterLightingBP_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

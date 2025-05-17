@@ -54,8 +54,8 @@ void UMainTabTutorialWrapper_C::SetParentButton(class UCommonButton* ParentButto
 // Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.GetTutorialCalloutData
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FFortUITutorialData              TutorialData                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FFortToastDisplayInfo            FortToastDisplayInfo                                   (Parm, OutParm)
+// const struct FFortUITutorialData&       TutorialData                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FFortToastDisplayInfo*           FortToastDisplayInfo                                   (Parm, OutParm)
 
 void UMainTabTutorialWrapper_C::GetTutorialCalloutData(const struct FFortUITutorialData& TutorialData, struct FFortToastDisplayInfo* FortToastDisplayInfo)
 {
@@ -78,8 +78,8 @@ void UMainTabTutorialWrapper_C::GetTutorialCalloutData(const struct FFortUITutor
 // Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HasValidData
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FFortUITutorialData              FortUITutorialData                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FFortUITutorialData&       FortUITutorialData                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UMainTabTutorialWrapper_C::HasValidData(const struct FFortUITutorialData& FortUITutorialData, bool* Result)
 {
@@ -102,7 +102,7 @@ void UMainTabTutorialWrapper_C::HasValidData(const struct FFortUITutorialData& F
 // Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HandleTutorialCallout
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FName                             TutorialObjectiveName                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FName&                      TutorialObjectiveName                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // ETutorialType                           TutorialType                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UMainTabTutorialWrapper_C::HandleTutorialCallout(const class FName& TutorialObjectiveName, ETutorialType TutorialType)

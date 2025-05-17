@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CameraLens_IceFrost.BP_CameraLens_IceFrost_C
-// 0x0000 (0x0300 - 0x0300)
+// 0x0000 (0x02E0 - 0x02E0)
 class ABP_CameraLens_IceFrost_C final : public AEmitterCameraLensEffectBase
 {
 public:
@@ -33,8 +33,6 @@ public:
 		return GetDefaultObjImpl<ABP_CameraLens_IceFrost_C>();
 	}
 };
-static_assert(alignof(ABP_CameraLens_IceFrost_C) == 0x000010, "Wrong alignment on ABP_CameraLens_IceFrost_C");
-static_assert(sizeof(ABP_CameraLens_IceFrost_C) == 0x000300, "Wrong size on ABP_CameraLens_IceFrost_C");
 
 }
 

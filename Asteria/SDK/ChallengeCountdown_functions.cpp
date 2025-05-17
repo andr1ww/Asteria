@@ -17,21 +17,41 @@
 namespace SDK
 {
 
-// Function ChallengeCountdown.ChallengeCountdown_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function ChallengeCountdown.ChallengeCountdown_C.ExecuteUbergraph_ChallengeCountdown
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UChallengeCountdown_C::PreConstruct(bool IsDesignTime)
+void UChallengeCountdown_C::ExecuteUbergraph_ChallengeCountdown(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ChallengeCountdown_C", "PreConstruct");
+		Func = Class->GetFunction("ChallengeCountdown_C", "ExecuteUbergraph_ChallengeCountdown");
 
-	Params::ChallengeCountdown_C_PreConstruct Parms{};
+	Params::ChallengeCountdown_C_ExecuteUbergraph_ChallengeCountdown Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ChallengeCountdown.ChallengeCountdown_C.OnChallengeSet
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FTimerDisplayData&         DisplayStyle                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UChallengeCountdown_C::OnChallengeSet(const struct FTimerDisplayData& DisplayStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChallengeCountdown_C", "OnChallengeSet");
+
+	Params::ChallengeCountdown_C_OnChallengeSet Parms{};
+
+	Parms.DisplayStyle = std::move(DisplayStyle);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -51,41 +71,21 @@ void UChallengeCountdown_C::Construct()
 }
 
 
-// Function ChallengeCountdown.ChallengeCountdown_C.OnChallengeSet
-// (Event, Public, HasOutParams, BlueprintEvent)
+// Function ChallengeCountdown.ChallengeCountdown_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// struct FTimerDisplayData                DisplayStyle                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UChallengeCountdown_C::OnChallengeSet(const struct FTimerDisplayData& DisplayStyle)
+void UChallengeCountdown_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ChallengeCountdown_C", "OnChallengeSet");
+		Func = Class->GetFunction("ChallengeCountdown_C", "PreConstruct");
 
-	Params::ChallengeCountdown_C_OnChallengeSet Parms{};
+	Params::ChallengeCountdown_C_PreConstruct Parms{};
 
-	Parms.DisplayStyle = std::move(DisplayStyle);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ChallengeCountdown.ChallengeCountdown_C.ExecuteUbergraph_ChallengeCountdown
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UChallengeCountdown_C::ExecuteUbergraph_ChallengeCountdown(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChallengeCountdown_C", "ExecuteUbergraph_ChallengeCountdown");
-
-	Params::ChallengeCountdown_C_ExecuteUbergraph_ChallengeCountdown Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

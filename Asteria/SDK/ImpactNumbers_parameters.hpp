@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -29,12 +29,6 @@ public:
 	struct FTransform                             CallFunc_init_a_new_number_set_OutCameraTransform; // 0x0090(0x0030)(IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_init_a_new_number_set_OutNumberLocation;  // 0x00C0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers) == 0x000010, "Wrong alignment on ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers");
-static_assert(sizeof(ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers) == 0x0000D0, "Wrong size on ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers");
-static_assert(offsetof(ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers, EntryPoint) == 0x000000, "Member 'ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers, K2Node_Event_NewDamageNumberInfo) == 0x000008, "Member 'ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers::K2Node_Event_NewDamageNumberInfo' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers, CallFunc_init_a_new_number_set_OutCameraTransform) == 0x000090, "Member 'ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers::CallFunc_init_a_new_number_set_OutCameraTransform' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers, CallFunc_init_a_new_number_set_OutNumberLocation) == 0x0000C0, "Member 'ImpactNumbers_C_ExecuteUbergraph_ImpactNumbers::CallFunc_init_a_new_number_set_OutNumberLocation' has a wrong offset!");
 
 // Function ImpactNumbers.ImpactNumbers_C.OnNewDamageNumber
 // 0x0088 (0x0088 - 0x0000)
@@ -43,9 +37,6 @@ struct ImpactNumbers_C_OnNewDamageNumber final
 public:
 	struct FFortDamageNumberInfo                  NewDamageNumberInfo;                               // 0x0000(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 };
-static_assert(alignof(ImpactNumbers_C_OnNewDamageNumber) == 0x000008, "Wrong alignment on ImpactNumbers_C_OnNewDamageNumber");
-static_assert(sizeof(ImpactNumbers_C_OnNewDamageNumber) == 0x000088, "Wrong size on ImpactNumbers_C_OnNewDamageNumber");
-static_assert(offsetof(ImpactNumbers_C_OnNewDamageNumber, NewDamageNumberInfo) == 0x000000, "Member 'ImpactNumbers_C_OnNewDamageNumber::NewDamageNumberInfo' has a wrong offset!");
 
 // Function ImpactNumbers.ImpactNumbers_C.init a new number set
 // 0x0310 (0x0310 - 0x0000)
@@ -89,74 +80,27 @@ public:
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x019C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x01A8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x01B4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult; // 0x01C0(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FVector                                K2Node_Select_Default_2;                           // 0x0248(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0258(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetCameraRotation_ReturnValue;            // 0x0278(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0284(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_285[0x3];                                      // 0x0285(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetActorRightVector_ReturnValue;          // 0x0288(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0294(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetActorUpVector_ReturnValue;             // 0x02A0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetCameraLocation_ReturnValue;            // 0x02AC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue_1;       // 0x02B8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C4[0xC];                                      // 0x02C4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult; // 0x01C0(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector                                K2Node_Select_Default_2;                           // 0x024C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x025C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue_1;             // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_274[0x4];                                      // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerCameraManager*                   CallFunc_GetPlayerCameraManager_ReturnValue;       // 0x0278(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetCameraRotation_ReturnValue;            // 0x0280(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x028C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_28D[0x3];                                      // 0x028D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetActorRightVector_ReturnValue;          // 0x0290(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x029C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetActorUpVector_ReturnValue;             // 0x02A8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetCameraLocation_ReturnValue;            // 0x02B4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue_1;       // 0x02C0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CC[0x4];                                      // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x02D0(0x0030)(IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x0300(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ImpactNumbers_C_init_a_new_number_set) == 0x000010, "Wrong alignment on ImpactNumbers_C_init_a_new_number_set");
-static_assert(sizeof(ImpactNumbers_C_init_a_new_number_set) == 0x000310, "Wrong size on ImpactNumbers_C_init_a_new_number_set");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, NewDamageHitInfoStruct) == 0x000000, "Member 'ImpactNumbers_C_init_a_new_number_set::NewDamageHitInfoStruct' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, OutCameraTransform) == 0x000090, "Member 'ImpactNumbers_C_init_a_new_number_set::OutCameraTransform' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, OutNumberLocation) == 0x0000C0, "Member 'ImpactNumbers_C_init_a_new_number_set::OutNumberLocation' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, NumberLocation) == 0x0000CC, "Member 'ImpactNumbers_C_init_a_new_number_set::NumberLocation' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, LocationOffset) == 0x0000D8, "Member 'ImpactNumbers_C_init_a_new_number_set::LocationOffset' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CameraTransform) == 0x0000F0, "Member 'ImpactNumbers_C_init_a_new_number_set::CameraTransform' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, Temp_float_Variable) == 0x000120, "Member 'ImpactNumbers_C_init_a_new_number_set::Temp_float_Variable' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, Temp_byte_Variable) == 0x000124, "Member 'ImpactNumbers_C_init_a_new_number_set::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, Temp_struct_Variable) == 0x000128, "Member 'ImpactNumbers_C_init_a_new_number_set::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, Temp_byte_Variable_1) == 0x000130, "Member 'ImpactNumbers_C_init_a_new_number_set::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_Add_VectorVector_ReturnValue) == 0x000134, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_GetPlayerCharacter_ReturnValue) == 0x000140, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_GetPlayerCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_IsValid_ReturnValue) == 0x000148, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_GetPlayerCharacter_ReturnValue_1) == 0x000150, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_GetPlayerCharacter_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_MakeVector2D_ReturnValue) == 0x000158, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_IsValid_ReturnValue_1) == 0x000160, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000164, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_BooleanAND_ReturnValue) == 0x000170, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_MakeLiteralFloat_ReturnValue) == 0x000174, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_MakeLiteralFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_MakeVector2D_ReturnValue_1) == 0x000178, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_MakeVector2D_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_MakeLiteralFloat_ReturnValue_1) == 0x000180, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_MakeLiteralFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, K2Node_Select_Default) == 0x000184, "Member 'ImpactNumbers_C_init_a_new_number_set::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, K2Node_Select_Default_1) == 0x00018C, "Member 'ImpactNumbers_C_init_a_new_number_set::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_BreakVector2D_X) == 0x000190, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_BreakVector2D_X' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_BreakVector2D_Y) == 0x000194, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_BreakVector2D_Y' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, Temp_bool_Variable) == 0x000198, "Member 'ImpactNumbers_C_init_a_new_number_set::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_BreakTransform_Location) == 0x00019C, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_BreakTransform_Rotation) == 0x0001A8, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_BreakTransform_Scale) == 0x0001B4, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult) == 0x0001C0, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, K2Node_Select_Default_2) == 0x000248, "Member 'ImpactNumbers_C_init_a_new_number_set::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_RandomFloatInRange_ReturnValue) == 0x000254, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000258, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000264, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_Add_FloatFloat_ReturnValue) == 0x000268, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x00026C, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_GetPlayerCameraManager_ReturnValue) == 0x000270, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_GetPlayerCameraManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_GetCameraRotation_ReturnValue) == 0x000278, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_GetCameraRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_IsValid_ReturnValue_2) == 0x000284, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_GetActorRightVector_ReturnValue) == 0x000288, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_GetActorRightVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000294, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_GetActorUpVector_ReturnValue) == 0x0002A0, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_GetActorUpVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_GetCameraLocation_ReturnValue) == 0x0002AC, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_GetCameraLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_Multiply_VectorFloat_ReturnValue_1) == 0x0002B8, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_Multiply_VectorFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_MakeTransform_ReturnValue) == 0x0002D0, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ImpactNumbers_C_init_a_new_number_set, CallFunc_Add_VectorVector_ReturnValue_2) == 0x000300, "Member 'ImpactNumbers_C_init_a_new_number_set::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
 
 }
 

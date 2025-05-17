@@ -17,36 +17,22 @@
 namespace SDK
 {
 
-// Function SplashScreenWidget.SplashScreenWidget_C.OnActivated
+// Function SplashScreenWidget.SplashScreenWidget_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void USplashScreenWidget_C::OnActivated()
+void USplashScreenWidget_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SplashScreenWidget_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SplashScreenWidget.SplashScreenWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void USplashScreenWidget_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SplashScreenWidget_C", "Construct");
+		Func = Class->GetFunction("SplashScreenWidget_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function SplashScreenWidget.SplashScreenWidget_C.OnInputMethodChanged
-// (BlueprintCallable, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // ECommonInputType                        InputType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

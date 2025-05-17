@@ -19,22 +19,16 @@ namespace SDK::Params
 struct EasyAntiCheatNetComponent_ClientMessage final
 {
 public:
-	TArray<uint8>                                 MESSAGE;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 Message;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(EasyAntiCheatNetComponent_ClientMessage) == 0x000008, "Wrong alignment on EasyAntiCheatNetComponent_ClientMessage");
-static_assert(sizeof(EasyAntiCheatNetComponent_ClientMessage) == 0x000010, "Wrong size on EasyAntiCheatNetComponent_ClientMessage");
-static_assert(offsetof(EasyAntiCheatNetComponent_ClientMessage, MESSAGE) == 0x000000, "Member 'EasyAntiCheatNetComponent_ClientMessage::MESSAGE' has a wrong offset!");
 
 // Function EasyAntiCheatCommon.EasyAntiCheatNetComponent.ServerMessage
 // 0x0010 (0x0010 - 0x0000)
 struct EasyAntiCheatNetComponent_ServerMessage final
 {
 public:
-	TArray<uint8>                                 MESSAGE;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 Message;                                           // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(EasyAntiCheatNetComponent_ServerMessage) == 0x000008, "Wrong alignment on EasyAntiCheatNetComponent_ServerMessage");
-static_assert(sizeof(EasyAntiCheatNetComponent_ServerMessage) == 0x000010, "Wrong size on EasyAntiCheatNetComponent_ServerMessage");
-static_assert(offsetof(EasyAntiCheatNetComponent_ServerMessage, MESSAGE) == 0x000000, "Member 'EasyAntiCheatNetComponent_ServerMessage::MESSAGE' has a wrong offset!");
 
 }
 

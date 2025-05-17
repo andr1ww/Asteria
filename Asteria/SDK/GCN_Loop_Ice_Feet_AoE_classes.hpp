@@ -10,38 +10,38 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Loop_Ice_Feet_AoE.GCN_Loop_Ice_Feet_AoE_C
-// 0x00A8 (0x0838 - 0x0790)
+// 0x00A8 (0x0868 - 0x07C0)
 class AGCN_Loop_Ice_Feet_AoE_C final : public AFortGameplayCueNotify_Loop
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0790(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Duration;                                          // 0x0798(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ExpirationTellDuration;                            // 0x079C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        TargetPlayer;                                      // 0x07A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           ExpireTellDelayTimer;                              // 0x07A8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           ExpirationSoundTimer;                              // 0x07B0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         ExpirationSoundPeriod;                             // 0x07B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7BC[0x4];                                      // 0x07BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UParticleSystemComponent*>       SpawnedEmitters;                                   // 0x07C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	float                                         Crack;                                             // 0x07D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7D4[0x4];                                      // 0x07D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FScalableFloat                         DataTellDuration;                                  // 0x07D8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class USoundBase*                             SC_Footstep_Local;                                 // 0x07F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SC_Footstep_Remote;                                // 0x0800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SC_Collision;                                      // 0x0808(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortCollisionAudioComponent*           CollisionAudioComp;                                // 0x0810(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UAudioComponent*>                SpawnedAudioComps;                                 // 0x0818(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class USoundBase*                             SC_OnJumpOrBeginFalling;                           // 0x0828(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             SC_OnLand;                                         // 0x0830(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Duration;                                          // 0x07C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ExpirationTellDuration;                            // 0x07CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawn*                        TargetPlayer;                                      // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           ExpireTellDelayTimer;                              // 0x07D8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           ExpirationSoundTimer;                              // 0x07E0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         ExpirationSoundPeriod;                             // 0x07E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7EC[0x4];                                      // 0x07EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UParticleSystemComponent*>       SpawnedEmitters;                                   // 0x07F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	float                                         Crack;                                             // 0x0800(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_804[0x4];                                      // 0x0804(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FScalableFloat                         DataTellDuration;                                  // 0x0808(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class USoundBase*                             SC_Footstep_Local;                                 // 0x0828(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SC_Footstep_Remote;                                // 0x0830(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SC_Collision;                                      // 0x0838(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortCollisionAudioComponent*           CollisionAudioComp;                                // 0x0840(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UAudioComponent*>                SpawnedAudioComps;                                 // 0x0848(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	class USoundBase*                             SC_OnJumpOrBeginFalling;                           // 0x0858(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             SC_OnLand;                                         // 0x0860(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GCN_Loop_Ice_Feet_AoE(int32 EntryPoint);
@@ -67,25 +67,6 @@ public:
 		return GetDefaultObjImpl<AGCN_Loop_Ice_Feet_AoE_C>();
 	}
 };
-static_assert(alignof(AGCN_Loop_Ice_Feet_AoE_C) == 0x000008, "Wrong alignment on AGCN_Loop_Ice_Feet_AoE_C");
-static_assert(sizeof(AGCN_Loop_Ice_Feet_AoE_C) == 0x000838, "Wrong size on AGCN_Loop_Ice_Feet_AoE_C");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, UberGraphFrame) == 0x000790, "Member 'AGCN_Loop_Ice_Feet_AoE_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, Duration) == 0x000798, "Member 'AGCN_Loop_Ice_Feet_AoE_C::Duration' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, ExpirationTellDuration) == 0x00079C, "Member 'AGCN_Loop_Ice_Feet_AoE_C::ExpirationTellDuration' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, TargetPlayer) == 0x0007A0, "Member 'AGCN_Loop_Ice_Feet_AoE_C::TargetPlayer' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, ExpireTellDelayTimer) == 0x0007A8, "Member 'AGCN_Loop_Ice_Feet_AoE_C::ExpireTellDelayTimer' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, ExpirationSoundTimer) == 0x0007B0, "Member 'AGCN_Loop_Ice_Feet_AoE_C::ExpirationSoundTimer' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, ExpirationSoundPeriod) == 0x0007B8, "Member 'AGCN_Loop_Ice_Feet_AoE_C::ExpirationSoundPeriod' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, SpawnedEmitters) == 0x0007C0, "Member 'AGCN_Loop_Ice_Feet_AoE_C::SpawnedEmitters' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, Crack) == 0x0007D0, "Member 'AGCN_Loop_Ice_Feet_AoE_C::Crack' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, DataTellDuration) == 0x0007D8, "Member 'AGCN_Loop_Ice_Feet_AoE_C::DataTellDuration' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, SC_Footstep_Local) == 0x0007F8, "Member 'AGCN_Loop_Ice_Feet_AoE_C::SC_Footstep_Local' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, SC_Footstep_Remote) == 0x000800, "Member 'AGCN_Loop_Ice_Feet_AoE_C::SC_Footstep_Remote' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, SC_Collision) == 0x000808, "Member 'AGCN_Loop_Ice_Feet_AoE_C::SC_Collision' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, CollisionAudioComp) == 0x000810, "Member 'AGCN_Loop_Ice_Feet_AoE_C::CollisionAudioComp' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, SpawnedAudioComps) == 0x000818, "Member 'AGCN_Loop_Ice_Feet_AoE_C::SpawnedAudioComps' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, SC_OnJumpOrBeginFalling) == 0x000828, "Member 'AGCN_Loop_Ice_Feet_AoE_C::SC_OnJumpOrBeginFalling' has a wrong offset!");
-static_assert(offsetof(AGCN_Loop_Ice_Feet_AoE_C, SC_OnLand) == 0x000830, "Member 'AGCN_Loop_Ice_Feet_AoE_C::SC_OnLand' has a wrong offset!");
 
 }
 

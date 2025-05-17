@@ -37,6 +37,118 @@ void UGA_Athena_PlaysetGrenadeWithTrajectory_C::ExecuteUbergraph_GA_Athena_Plays
 }
 
 
+// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.OnAbilityInputReleased
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Athena_PlaysetGrenadeWithTrajectory_C::OnAbilityInputReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "OnAbilityInputReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.AthenaProjectileSpawned
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AFortProjectileBase*              ProjectileReference_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_PlaysetGrenadeWithTrajectory_C::AthenaProjectileSpawned(class AFortProjectileBase* ProjectileReference_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "AthenaProjectileSpawned");
+
+	Params::GA_Athena_PlaysetGrenadeWithTrajectory_C_AthenaProjectileSpawned Parms{};
+
+	Parms.ProjectileReference_0 = ProjectileReference_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.InitTrajectoryVariables
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_PlaysetGrenadeWithTrajectory_C::InitTrajectoryVariables()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "InitTrajectoryVariables");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.Server_SpawnProjectile
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FRotator&                  Direction                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_Athena_PlaysetGrenadeWithTrajectory_C::Server_SpawnProjectile(const struct FVector& Location, const struct FRotator& Direction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "Server_SpawnProjectile");
+
+	Params::GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile Parms{};
+
+	Parms.Location = std::move(Location);
+	Parms.Direction = std::move(Direction);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.CleanupTrajectoryDisplay
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_PlaysetGrenadeWithTrajectory_C::CleanupTrajectoryDisplay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "CleanupTrajectoryDisplay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Athena_PlaysetGrenadeWithTrajectory_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.UpdateTrajectorySpline
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UGA_Athena_PlaysetGrenadeWithTrajectory_C::UpdateTrajectorySpline()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "UpdateTrajectorySpline");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.SetupDummyProjectileRed
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -54,7 +166,7 @@ void UGA_Athena_PlaysetGrenadeWithTrajectory_C::SetupDummyProjectileRed()
 // Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.GetActivePlaysetData
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFortPlaysetItemDefinition*       OutData                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortPlaysetItemDefinition**      OutData                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UGA_Athena_PlaysetGrenadeWithTrajectory_C::GetActivePlaysetData(class UFortPlaysetItemDefinition** OutData)
 {
@@ -110,8 +222,8 @@ void UGA_Athena_PlaysetGrenadeWithTrajectory_C::SetActivePlaysetOnPlayer()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UFortPlaysetItemDefinition*       Playset                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FRotator                         Rotation                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FRotator                         NewRotation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FRotator&                  Rotation                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FRotator*                        NewRotation                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UGA_Athena_PlaysetGrenadeWithTrajectory_C::CalculateRotation(class UFortPlaysetItemDefinition* Playset, const struct FRotator& Rotation, struct FRotator* NewRotation)
 {
@@ -141,118 +253,6 @@ void UGA_Athena_PlaysetGrenadeWithTrajectory_C::DestroyProjectileTrajectory()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "DestroyProjectileTrajectory");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.OnAbilityInputReleased
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Athena_PlaysetGrenadeWithTrajectory_C::OnAbilityInputReleased()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "OnAbilityInputReleased");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.AthenaProjectileSpawned
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AFortProjectileBase*              ProjectileReference_0                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_PlaysetGrenadeWithTrajectory_C::AthenaProjectileSpawned(class AFortProjectileBase* ProjectileReference_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "AthenaProjectileSpawned");
-
-	Params::GA_Athena_PlaysetGrenadeWithTrajectory_C_AthenaProjectileSpawned Parms{};
-
-	Parms.ProjectileReference_0 = ProjectileReference_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.InitTrajectoryVariables
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_PlaysetGrenadeWithTrajectory_C::InitTrajectoryVariables()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "InitTrajectoryVariables");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.Server_SpawnProjectile
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FRotator                         Direction                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UGA_Athena_PlaysetGrenadeWithTrajectory_C::Server_SpawnProjectile(const struct FVector& Location, const struct FRotator& Direction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "Server_SpawnProjectile");
-
-	Params::GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile Parms{};
-
-	Parms.Location = std::move(Location);
-	Parms.Direction = std::move(Direction);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.CleanupTrajectoryDisplay
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_PlaysetGrenadeWithTrajectory_C::CleanupTrajectoryDisplay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "CleanupTrajectoryDisplay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Athena_PlaysetGrenadeWithTrajectory_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.UpdateTrajectorySpline
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UGA_Athena_PlaysetGrenadeWithTrajectory_C::UpdateTrajectorySpline()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_PlaysetGrenadeWithTrajectory_C", "UpdateTrajectorySpline");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

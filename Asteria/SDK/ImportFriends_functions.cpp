@@ -37,60 +37,6 @@ void UImportFriends_C::ExecuteUbergraph_ImportFriends(int32 EntryPoint)
 }
 
 
-// Function ImportFriends.ImportFriends_C.OnInputModeChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UImportFriends_C::OnInputModeChanged(bool bUsingGamepad)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ImportFriends_C", "OnInputModeChanged");
-
-	Params::ImportFriends_C_OnInputModeChanged Parms{};
-
-	Parms.bUsingGamepad = bUsingGamepad;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ImportFriends.ImportFriends_C.OnAnimationFinished
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
-// Parameters:
-// class UWidgetAnimation*                 Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UImportFriends_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ImportFriends_C", "OnAnimationFinished");
-
-	Params::ImportFriends_C_OnAnimationFinished Parms{};
-
-	Parms.Animation = Animation;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ImportFriends.ImportFriends_C.OnActivated
-// (Event, Protected, BlueprintEvent)
-
-void UImportFriends_C::OnActivated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ImportFriends_C", "OnActivated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function ImportFriends.ImportFriends_C.OnIncentivizedSet
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -108,6 +54,20 @@ void UImportFriends_C::OnIncentivizedSet(bool bIncentivized)
 	Parms.bIncentivized = bIncentivized;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ImportFriends.ImportFriends_C.BP_OnActivated
+// (Event, Protected, BlueprintEvent)
+
+void UImportFriends_C::BP_OnActivated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ImportFriends_C", "BP_OnActivated");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -202,12 +162,12 @@ void UImportFriends_C::PreConstruct(bool IsDesignTime)
 // Function ImportFriends.ImportFriends_C.ScaleTextboxWithWrappingWorkaround
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UScaleBox*                        ContainingScaleBox                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UScaleBox*                        ContainingScalebox                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CharLimitThreshold                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UCommonTextBlock*                 TargetText                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   WrapAtHorrizontal                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UImportFriends_C::ScaleTextboxWithWrappingWorkaround(class UScaleBox* ContainingScaleBox, int32 CharLimitThreshold, class UCommonTextBlock* TargetText, int32 WrapAtHorrizontal)
+void UImportFriends_C::ScaleTextboxWithWrappingWorkaround(class UScaleBox* ContainingScalebox, int32 CharLimitThreshold, class UCommonTextBlock* TargetText, int32 WrapAtHorrizontal)
 {
 	static class UFunction* Func = nullptr;
 
@@ -216,7 +176,7 @@ void UImportFriends_C::ScaleTextboxWithWrappingWorkaround(class UScaleBox* Conta
 
 	Params::ImportFriends_C_ScaleTextboxWithWrappingWorkaround Parms{};
 
-	Parms.ContainingScaleBox = ContainingScaleBox;
+	Parms.ContainingScalebox = ContainingScalebox;
 	Parms.CharLimitThreshold = CharLimitThreshold;
 	Parms.TargetText = TargetText;
 	Parms.WrapAtHorrizontal = WrapAtHorrizontal;
@@ -229,10 +189,10 @@ void UImportFriends_C::ScaleTextboxWithWrappingWorkaround(class UScaleBox* Conta
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   CharThreshold                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UScaleBox*                        ContainingScaleBox                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UScaleBox*                        ContainingScalebox                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UIconTextButton_C*                Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UImportFriends_C::ScaleTextButton(int32 CharThreshold, class UScaleBox* ContainingScaleBox, class UIconTextButton_C* Button)
+void UImportFriends_C::ScaleTextButton(int32 CharThreshold, class UScaleBox* ContainingScalebox, class UIconTextButton_C* Button)
 {
 	static class UFunction* Func = nullptr;
 
@@ -242,24 +202,10 @@ void UImportFriends_C::ScaleTextButton(int32 CharThreshold, class UScaleBox* Con
 	Params::ImportFriends_C_ScaleTextButton Parms{};
 
 	Parms.CharThreshold = CharThreshold;
-	Parms.ContainingScaleBox = ContainingScaleBox;
+	Parms.ContainingScalebox = ContainingScalebox;
 	Parms.Button = Button;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ImportFriends.ImportFriends_C.SetupNav
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UImportFriends_C::SetupNav()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ImportFriends_C", "SetupNav");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

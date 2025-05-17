@@ -17,145 +17,115 @@
 namespace SDK
 {
 
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.NavDown
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UEnableMultiFactorAuthModalBP_C::NavDown()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "NavDown");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.NavUp
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UEnableMultiFactorAuthModalBP_C::NavUp()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "NavUp");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.NavRight
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UEnableMultiFactorAuthModalBP_C::NavRight()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "NavRight");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.NavLeft
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UEnableMultiFactorAuthModalBP_C::NavLeft()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "NavLeft");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.ExecuteUbergraph_EnableMultiFactorAuthModalBP
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEnableMultiFactorAuthModalBP_C::PreConstruct(bool IsDesignTime)
+void UEnableMultiFactorAuthModalBP_C::ExecuteUbergraph_EnableMultiFactorAuthModalBP(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "PreConstruct");
+		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "ExecuteUbergraph_EnableMultiFactorAuthModalBP");
 
-	Params::EnableMultiFactorAuthModalBP_C_PreConstruct Parms{};
+	Params::EnableMultiFactorAuthModalBP_C_ExecuteUbergraph_EnableMultiFactorAuthModalBP Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.BndEvt__Button_RemindMeLater_K2Node_ComponentBoundEvent_796_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UEnableMultiFactorAuthModalBP_C::BndEvt__Button_RemindMeLater_K2Node_ComponentBoundEvent_796_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "BndEvt__Button_RemindMeLater_K2Node_ComponentBoundEvent_796_CommonButtonClicked__DelegateSignature");
-
-	Params::EnableMultiFactorAuthModalBP_C_BndEvt__Button_RemindMeLater_K2Node_ComponentBoundEvent_796_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.HandleHeaderText
-// (BlueprintCallable, BlueprintEvent)
-
-void UEnableMultiFactorAuthModalBP_C::HandleHeaderText()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "HandleHeaderText");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.OnActivated
+// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.OnInputModeChanged
 // (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UEnableMultiFactorAuthModalBP_C::OnActivated()
+void UEnableMultiFactorAuthModalBP_C::OnInputModeChanged(bool bUsingGamepad)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "OnActivated");
+		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "OnInputModeChanged");
+
+	Params::EnableMultiFactorAuthModalBP_C_OnInputModeChanged Parms{};
+
+	Parms.bUsingGamepad = bUsingGamepad;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UEnableMultiFactorAuthModalBP_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.OnPanelTypeSet
-// (BlueprintCallable, BlueprintEvent)
+// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.OnSetScreenConfiguration
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// ESocialImportPanelType                  NewType                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsConsole                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UEnableMultiFactorAuthModalBP_C::OnPanelTypeSet(ESocialImportPanelType NewType)
+void UEnableMultiFactorAuthModalBP_C::OnSetScreenConfiguration(bool bIsConsole)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "OnPanelTypeSet");
+		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "OnSetScreenConfiguration");
 
-	Params::EnableMultiFactorAuthModalBP_C_OnPanelTypeSet Parms{};
+	Params::EnableMultiFactorAuthModalBP_C_OnSetScreenConfiguration Parms{};
 
-	Parms.NewType = NewType;
+	Parms.bIsConsole = bIsConsole;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.OnConsoleDisplayURLProvided
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      UniquePlayerURLText                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UEnableMultiFactorAuthModalBP_C::OnConsoleDisplayURLProvided(const class FText& UniquePlayerURLText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "OnConsoleDisplayURLProvided");
+
+	Params::EnableMultiFactorAuthModalBP_C_OnConsoleDisplayURLProvided Parms{};
+
+	Parms.UniquePlayerURLText = std::move(UniquePlayerURLText);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.OnSetExitButtonText
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      NewButtonText                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UEnableMultiFactorAuthModalBP_C::OnSetExitButtonText(const class FText& NewButtonText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "OnSetExitButtonText");
+
+	Params::EnableMultiFactorAuthModalBP_C_OnSetExitButtonText Parms{};
+
+	Parms.NewButtonText = std::move(NewButtonText);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -181,83 +151,79 @@ void UEnableMultiFactorAuthModalBP_C::OnIncentivizedSet(bool bIncentivized)
 }
 
 
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.OnSetExitButtonText
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// class FText                             NewButtonText                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.HandleHeaderText
+// (BlueprintCallable, BlueprintEvent)
 
-void UEnableMultiFactorAuthModalBP_C::OnSetExitButtonText(const class FText& NewButtonText)
+void UEnableMultiFactorAuthModalBP_C::HandleHeaderText()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "OnSetExitButtonText");
+		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "HandleHeaderText");
 
-	Params::EnableMultiFactorAuthModalBP_C_OnSetExitButtonText Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.NewButtonText = std::move(NewButtonText);
+
+// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UEnableMultiFactorAuthModalBP_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "PreConstruct");
+
+	Params::EnableMultiFactorAuthModalBP_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.OnConsoleDisplayURLProvided
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// class FText                             UniquePlayerURLText                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UEnableMultiFactorAuthModalBP_C::OnConsoleDisplayURLProvided(const class FText& UniquePlayerURLText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "OnConsoleDisplayURLProvided");
-
-	Params::EnableMultiFactorAuthModalBP_C_OnConsoleDisplayURLProvided Parms{};
-
-	Parms.UniquePlayerURLText = std::move(UniquePlayerURLText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.OnSetScreenConfiguration
+// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsConsole                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UEnableMultiFactorAuthModalBP_C::OnSetScreenConfiguration(bool bIsConsole)
+void UEnableMultiFactorAuthModalBP_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "OnSetScreenConfiguration");
+		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "BP_OnActivated");
 
-	Params::EnableMultiFactorAuthModalBP_C_OnSetScreenConfiguration Parms{};
-
-	Parms.bIsConsole = bIsConsole;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.ExecuteUbergraph_EnableMultiFactorAuthModalBP
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.NavRight
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UEnableMultiFactorAuthModalBP_C::ExecuteUbergraph_EnableMultiFactorAuthModalBP(int32 EntryPoint)
+void UEnableMultiFactorAuthModalBP_C::NavRight()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "ExecuteUbergraph_EnableMultiFactorAuthModalBP");
+		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "NavRight");
 
-	Params::EnableMultiFactorAuthModalBP_C_ExecuteUbergraph_EnableMultiFactorAuthModalBP Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.NavUp
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UEnableMultiFactorAuthModalBP_C::NavUp()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EnableMultiFactorAuthModalBP_C", "NavUp");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -290,7 +256,7 @@ void UEnableMultiFactorAuthModalBP_C::AnimationFullyCompleteBP()
 
 
 // Function EnableMultiFactorAuthModalBP.EnableMultiFactorAuthModalBP_C.ScaleTitleForCulture
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UEnableMultiFactorAuthModalBP_C::ScaleTitleForCulture()
 {

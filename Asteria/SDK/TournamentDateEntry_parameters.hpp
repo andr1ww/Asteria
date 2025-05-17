@@ -12,38 +12,16 @@
 
 #include "UMG_structs.hpp"
 #include "FortniteUI_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function TournamentDateEntry.TournamentDateEntry_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct TournamentDateEntry_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(TournamentDateEntry_C_PreConstruct) == 0x000001, "Wrong alignment on TournamentDateEntry_C_PreConstruct");
-static_assert(sizeof(TournamentDateEntry_C_PreConstruct) == 0x000001, "Wrong size on TournamentDateEntry_C_PreConstruct");
-static_assert(offsetof(TournamentDateEntry_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'TournamentDateEntry_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function TournamentDateEntry.TournamentDateEntry_C.EventColor
-// 0x0170 (0x0170 - 0x0000)
-struct TournamentDateEntry_C_EventColor final
-{
-public:
-	struct FFortTournamentDisplayInfo             showdownData;                                      // 0x0000(0x0170)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(TournamentDateEntry_C_EventColor) == 0x000008, "Wrong alignment on TournamentDateEntry_C_EventColor");
-static_assert(sizeof(TournamentDateEntry_C_EventColor) == 0x000170, "Wrong size on TournamentDateEntry_C_EventColor");
-static_assert(offsetof(TournamentDateEntry_C_EventColor, showdownData) == 0x000000, "Member 'TournamentDateEntry_C_EventColor::showdownData' has a wrong offset!");
-
 // Function TournamentDateEntry.TournamentDateEntry_C.ExecuteUbergraph_TournamentDateEntry
-// 0x04D0 (0x04D0 - 0x0000)
+// 0x0508 (0x0508 - 0x0000)
 struct TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry final
 {
 public:
@@ -65,92 +43,59 @@ public:
 	class FText                                   Temp_text_Variable;                                // 0x0028(0x0018)()
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortTournamentDisplayInfo             K2Node_CustomEvent_showdownData;                   // 0x0048(0x0170)(ConstParm)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x01B8(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x01E0(0x0028)()
-	struct FSlateColor                            K2Node_Select_Default_1;                           // 0x0208(0x0028)()
-	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDateTime                              CallFunc_GetEventBeginTime_ReturnValue;            // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetEventDateAsText_ReturnValue;           // 0x0248(0x0018)()
-	struct FDateTime                              CallFunc_GetEventEndTime_ReturnValue;              // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_Select_Default_2;                           // 0x0268(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetEventDateAsText_ReturnValue_1;         // 0x0278(0x0018)()
-	bool                                          CallFunc_EqualEqual_TextText_ReturnValue;          // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDateTime                              CallFunc_GetEventBeginTime_ReturnValue_1;          // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_GetEventTimeAsText_ReturnValue;           // 0x02A0(0x0018)()
-	struct FDateTime                              CallFunc_GetEventEndTime_ReturnValue_1;            // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x02C0(0x0040)(HasGetValueTypeHash)
-	class FText                                   CallFunc_GetEventTimeAsText_ReturnValue_1;         // 0x0300(0x0018)()
-	struct FDateTime                              CallFunc_GetEventBeginTime_ReturnValue_2;          // 0x0318(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0320(0x0040)(HasGetValueTypeHash)
-	class FText                                   CallFunc_GetEventDateAsText_ReturnValue_2;         // 0x0360(0x0018)()
-	struct FDateTime                              CallFunc_GetEventEndTime_ReturnValue_2;            // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x0380(0x0040)(HasGetValueTypeHash)
-	class FText                                   CallFunc_GetEventDateAsText_ReturnValue_3;         // 0x03C0(0x0018)()
-	bool                                          Temp_bool_Variable_4;                              // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3D9[0x7];                                      // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x03E0(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0420(0x0010)(ZeroConstructor, ReferenceParm)
-	int32                                         K2Node_Select_Default_3;                           // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_434[0x4];                                      // 0x0434(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0438(0x0018)()
-	class FText                                   K2Node_Select_Default_4;                           // 0x0450(0x0018)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x0468(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x04A8(0x0010)(ZeroConstructor, ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x04B8(0x0018)()
+	struct FFortTournamentDisplayInfo             K2Node_CustomEvent_showdownData;                   // 0x0048(0x01A8)(ConstParm)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x01F0(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0218(0x0028)()
+	struct FSlateColor                            K2Node_Select_Default_1;                           // 0x0240(0x0028)()
+	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDateTime                              CallFunc_GetEventBeginTime_ReturnValue;            // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventDateAsText_ReturnValue;           // 0x0280(0x0018)()
+	struct FDateTime                              CallFunc_GetEventEndTime_ReturnValue;              // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_Select_Default_2;                           // 0x02A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventDateAsText_ReturnValue_1;         // 0x02B0(0x0018)()
+	bool                                          CallFunc_EqualEqual_TextText_ReturnValue;          // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDateTime                              CallFunc_GetEventBeginTime_ReturnValue_1;          // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventTimeAsText_ReturnValue;           // 0x02D8(0x0018)()
+	struct FDateTime                              CallFunc_GetEventEndTime_ReturnValue_1;            // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x02F8(0x0040)(HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventTimeAsText_ReturnValue_1;         // 0x0338(0x0018)()
+	struct FDateTime                              CallFunc_GetEventBeginTime_ReturnValue_2;          // 0x0350(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0358(0x0040)(HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventDateAsText_ReturnValue_2;         // 0x0398(0x0018)()
+	struct FDateTime                              CallFunc_GetEventEndTime_ReturnValue_2;            // 0x03B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_2;            // 0x03B8(0x0040)(HasGetValueTypeHash)
+	class FText                                   CallFunc_GetEventDateAsText_ReturnValue_3;         // 0x03F8(0x0018)()
+	bool                                          Temp_bool_Variable_4;                              // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_3;            // 0x0418(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0458(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default_3;                           // 0x0468(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46C[0x4];                                      // 0x046C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0470(0x0018)()
+	class FText                                   K2Node_Select_Default_4;                           // 0x0488(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_4;            // 0x04A0(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x04E0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x04F0(0x0018)()
 };
-static_assert(alignof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry) == 0x000008, "Wrong alignment on TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry");
-static_assert(sizeof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry) == 0x0004D0, "Wrong size on TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, EntryPoint) == 0x000000, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::EntryPoint' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventTimeState_ReturnValue) == 0x000004, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventTimeState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, Temp_int_Variable) == 0x000008, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00000C, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, Temp_bool_Variable) == 0x00000D, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, Temp_byte_Variable) == 0x00000E, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, Temp_byte_Variable_1) == 0x00000F, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, Temp_bool_Variable_1) == 0x000010, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_Select_Default) == 0x000011, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, Temp_struct_Variable) == 0x000014, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, Temp_bool_Variable_2) == 0x000024, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, Temp_bool_Variable_3) == 0x000025, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, Temp_text_Variable) == 0x000028, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_Event_IsDesignTime) == 0x000040, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_CustomEvent_showdownData) == 0x000048, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_CustomEvent_showdownData' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_MakeStruct_SlateColor) == 0x0001B8, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_MakeStruct_SlateColor_1) == 0x0001E0, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_Select_Default_1) == 0x000208, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000230, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_RandomFloatInRange_ReturnValue) == 0x000238, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, Temp_int_Variable_1) == 0x00023C, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventBeginTime_ReturnValue) == 0x000240, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventBeginTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventDateAsText_ReturnValue) == 0x000248, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventDateAsText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventEndTime_ReturnValue) == 0x000260, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventEndTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_Select_Default_2) == 0x000268, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventDateAsText_ReturnValue_1) == 0x000278, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventDateAsText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_EqualEqual_TextText_ReturnValue) == 0x000290, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_EqualEqual_TextText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventBeginTime_ReturnValue_1) == 0x000298, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventBeginTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventTimeAsText_ReturnValue) == 0x0002A0, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventTimeAsText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventEndTime_ReturnValue_1) == 0x0002B8, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventEndTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_MakeStruct_FormatArgumentData) == 0x0002C0, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventTimeAsText_ReturnValue_1) == 0x000300, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventTimeAsText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventBeginTime_ReturnValue_2) == 0x000318, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventBeginTime_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_MakeStruct_FormatArgumentData_1) == 0x000320, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventDateAsText_ReturnValue_2) == 0x000360, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventDateAsText_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventEndTime_ReturnValue_2) == 0x000378, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventEndTime_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_MakeStruct_FormatArgumentData_2) == 0x000380, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_MakeStruct_FormatArgumentData_2' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_GetEventDateAsText_ReturnValue_3) == 0x0003C0, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_GetEventDateAsText_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, Temp_bool_Variable_4) == 0x0003D8, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_MakeStruct_FormatArgumentData_3) == 0x0003E0, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_MakeStruct_FormatArgumentData_3' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_MakeArray_Array) == 0x000420, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_Select_Default_3) == 0x000430, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_Format_ReturnValue) == 0x000438, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_Select_Default_4) == 0x000450, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_MakeStruct_FormatArgumentData_4) == 0x000468, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_MakeStruct_FormatArgumentData_4' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, K2Node_MakeArray_Array_1) == 0x0004A8, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry, CallFunc_Format_ReturnValue_1) == 0x0004B8, "Member 'TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry::CallFunc_Format_ReturnValue_1' has a wrong offset!");
+
+// Function TournamentDateEntry.TournamentDateEntry_C.EventColor
+// 0x01A8 (0x01A8 - 0x0000)
+struct TournamentDateEntry_C_EventColor final
+{
+public:
+	struct FFortTournamentDisplayInfo             showdownData;                                      // 0x0000(0x01A8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
+// Function TournamentDateEntry.TournamentDateEntry_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct TournamentDateEntry_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
 
 }
 

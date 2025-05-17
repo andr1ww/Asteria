@@ -18,21 +18,23 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_CameraRainDrops_03.B_CameraRainDrops_03_C
-// 0x0020 (0x0320 - 0x0300)
+// 0x0020 (0x0300 - 0x02E0)
 class AB_CameraRainDrops_03_C final : public AEmitterCameraLensEffectBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0300(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         Alpha_Alpha_510BB77E4E686B10F0392B81CE9926AC;      // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Alpha__Direction_510BB77E4E686B10F0392B81CE9926AC; // 0x030C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_30D[0x3];                                      // 0x030D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Alpha;                                             // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         Alpha_Alpha_510BB77E4E686B10F0392B81CE9926AC;      // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Alpha__Direction_510BB77E4E686B10F0392B81CE9926AC; // 0x02EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2ED[0x3];                                      // 0x02ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Alpha;                                             // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AB_HeavyRainPost_C*                     PostActor;                                         // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_B_CameraRainDrops_03(int32 EntryPoint);
 	void ReceiveBeginPlay();
+	void ReceiveDestroyed();
 	void Alpha__UpdateFunc();
 	void Alpha__FinishedFunc();
-	void ExecuteUbergraph_B_CameraRainDrops_03(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -44,12 +46,6 @@ public:
 		return GetDefaultObjImpl<AB_CameraRainDrops_03_C>();
 	}
 };
-static_assert(alignof(AB_CameraRainDrops_03_C) == 0x000010, "Wrong alignment on AB_CameraRainDrops_03_C");
-static_assert(sizeof(AB_CameraRainDrops_03_C) == 0x000320, "Wrong size on AB_CameraRainDrops_03_C");
-static_assert(offsetof(AB_CameraRainDrops_03_C, UberGraphFrame) == 0x000300, "Member 'AB_CameraRainDrops_03_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_CameraRainDrops_03_C, Alpha_Alpha_510BB77E4E686B10F0392B81CE9926AC) == 0x000308, "Member 'AB_CameraRainDrops_03_C::Alpha_Alpha_510BB77E4E686B10F0392B81CE9926AC' has a wrong offset!");
-static_assert(offsetof(AB_CameraRainDrops_03_C, Alpha__Direction_510BB77E4E686B10F0392B81CE9926AC) == 0x00030C, "Member 'AB_CameraRainDrops_03_C::Alpha__Direction_510BB77E4E686B10F0392B81CE9926AC' has a wrong offset!");
-static_assert(offsetof(AB_CameraRainDrops_03_C, Alpha) == 0x000310, "Member 'AB_CameraRainDrops_03_C::Alpha' has a wrong offset!");
 
 }
 

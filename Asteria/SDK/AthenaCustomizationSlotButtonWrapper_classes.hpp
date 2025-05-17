@@ -14,7 +14,7 @@
 #include "FortniteGame_structs.hpp"
 #include "UMG_structs.hpp"
 #include "FortniteUI_structs.hpp"
-#include "SlateCore_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "CommonUI_classes.hpp"
 
 
@@ -22,32 +22,40 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaCustomizationSlotButtonWrapper.AthenaCustomizationSlotButtonWrapper_C
-// 0x0108 (0x0340 - 0x0238)
+// 0x00C8 (0x0350 - 0x0288)
 class UAthenaCustomizationSlotButtonWrapper_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAthenaCustomizationSlotButton_C*       SlotButton;                                        // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   BannerDisplayName;                                 // 0x0248(0x0018)(Edit, BlueprintVisible)
-	EAthenaCustomizationCategory                  CustomizationType;                                 // 0x0260(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_261[0x7];                                      // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(EAthenaCustomizationCategory CustomizationType, class UCommonButton* Button, class FText BannerLabel, int32 Subslot_Index)> OnSlotClicked;                                     // 0x0268(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(EAthenaCustomizationCategory CustomizationType, class FText BannerLabel, class FText CustomizationDescription, int32 SubslotIndex)> OnSlotHovered;                                     // 0x0278(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FText                                   CategoryDescription;                               // 0x0288(0x0018)(Edit, BlueprintVisible)
-	TMulticastInlineDelegate<void()>              OnSlotUnhovered;                                   // 0x02A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	int32                                         SubslotIndex;                                      // 0x02B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortBangType                                 BangType;                                          // 0x02B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortItemCardSize                             SlottedItemCardSize;                               // 0x02B5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B6[0x2];                                      // 0x02B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            SlotImage;                                         // 0x02B8(0x0088)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Populate;                                          // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UAthenaCustomizationSlotButton_C*       SlotButton;                                        // 0x0298(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   BannerDisplayName;                                 // 0x02A0(0x0018)(Edit, BlueprintVisible)
+	EAthenaCustomizationCategory                  CustomizationType;                                 // 0x02B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B9[0x7];                                      // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class UCommonButton* Button, const struct FAthenaCustomizationParams& CustomizationParams)> OnSlotClicked; // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class UAthenaCustomizationSlotButtonWrapper_C* ButtonWrapper, EAthenaCustomizationCategory CustomizationType, class FText BannerLabel, class FText CustomizationDescription, int32 SubslotIndex)> OnSlotHovered; // 0x02D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FText                                   CategoryDescription;                               // 0x02E0(0x0018)(Edit, BlueprintVisible)
+	TMulticastInlineDelegate<void()>              OnSlotUnhovered;                                   // 0x02F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	int32                                         SubslotIndex;                                      // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortBangType                                 BangType;                                          // 0x030C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bAllowUnownedItems;                                // 0x030D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bOneItemPerSlot;                                   // 0x030E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_30F[0x1];                                      // 0x030F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      OverrideSlotImage;                                 // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           RequiredSlotTag;                                   // 0x0318(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	float                                         SlottedItemCardWidth;                              // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_324[0x4];                                      // 0x0324(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              emptytexture;                                      // 0x0328(0x0028)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime);
-	void BndEvt__SlotButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void Construct();
-	void BndEvt__SlotButton_K2Node_ComponentBoundEvent_13_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void BndEvt__SlotButton_K2Node_ComponentBoundEvent_47_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void ExecuteUbergraph_AthenaCustomizationSlotButtonWrapper(int32 EntryPoint);
+	void AnimPopulateInternal(int32 ButtonIndex);
+	void BndEvt__SlotButton_K2Node_ComponentBoundEvent_47_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void BndEvt__SlotButton_K2Node_ComponentBoundEvent_13_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void Construct();
+	void BndEvt__SlotButton_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void GetCustomizationSlotActiveState(bool* bCosmeticAvaialble, bool* bActive);
+	void ResetPopulateAnimVisual();
 
 public:
 	static class UClass* StaticClass()
@@ -59,20 +67,6 @@ public:
 		return GetDefaultObjImpl<UAthenaCustomizationSlotButtonWrapper_C>();
 	}
 };
-static_assert(alignof(UAthenaCustomizationSlotButtonWrapper_C) == 0x000008, "Wrong alignment on UAthenaCustomizationSlotButtonWrapper_C");
-static_assert(sizeof(UAthenaCustomizationSlotButtonWrapper_C) == 0x000340, "Wrong size on UAthenaCustomizationSlotButtonWrapper_C");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, UberGraphFrame) == 0x000238, "Member 'UAthenaCustomizationSlotButtonWrapper_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, SlotButton) == 0x000240, "Member 'UAthenaCustomizationSlotButtonWrapper_C::SlotButton' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, BannerDisplayName) == 0x000248, "Member 'UAthenaCustomizationSlotButtonWrapper_C::BannerDisplayName' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, CustomizationType) == 0x000260, "Member 'UAthenaCustomizationSlotButtonWrapper_C::CustomizationType' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, OnSlotClicked) == 0x000268, "Member 'UAthenaCustomizationSlotButtonWrapper_C::OnSlotClicked' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, OnSlotHovered) == 0x000278, "Member 'UAthenaCustomizationSlotButtonWrapper_C::OnSlotHovered' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, CategoryDescription) == 0x000288, "Member 'UAthenaCustomizationSlotButtonWrapper_C::CategoryDescription' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, OnSlotUnhovered) == 0x0002A0, "Member 'UAthenaCustomizationSlotButtonWrapper_C::OnSlotUnhovered' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, SubslotIndex) == 0x0002B0, "Member 'UAthenaCustomizationSlotButtonWrapper_C::SubslotIndex' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, BangType) == 0x0002B4, "Member 'UAthenaCustomizationSlotButtonWrapper_C::BangType' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, SlottedItemCardSize) == 0x0002B5, "Member 'UAthenaCustomizationSlotButtonWrapper_C::SlottedItemCardSize' has a wrong offset!");
-static_assert(offsetof(UAthenaCustomizationSlotButtonWrapper_C, SlotImage) == 0x0002B8, "Member 'UAthenaCustomizationSlotButtonWrapper_C::SlotImage' has a wrong offset!");
 
 }
 

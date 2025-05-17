@@ -80,7 +80,7 @@ void AB_TargetTrack_C::Move_Target_Audio()
 
 
 // Function B_TargetTrack.B_TargetTrack_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Event, Protected, BlueprintEvent)
 // Parameters:
 // EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -121,7 +121,7 @@ void AB_TargetTrack_C::InitializeSettings()
 // class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FHitResult                       SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
 void AB_TargetTrack_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_3_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
@@ -166,20 +166,6 @@ void AB_TargetTrack_C::ReverseTargetMovement()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_TargetTrack_C", "ReverseTargetMovement");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_TargetTrack.B_TargetTrack_C.ResumeTargetMovement
-// (BlueprintCallable, BlueprintEvent)
-
-void AB_TargetTrack_C::ResumeTargetMovement()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_TargetTrack_C", "ResumeTargetMovement");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -354,7 +340,7 @@ void AB_TargetTrack_C::TargetMovement__FinishedFunc()
 // Function B_TargetTrack.B_TargetTrack_C.GetFinalDestinationOfTarget
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Destination                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         Destination                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AB_TargetTrack_C::GetFinalDestinationOfTarget(struct FVector* Destination)
 {
@@ -591,6 +577,26 @@ class UStaticMesh* AB_TargetTrack_C::GetCollisionStaticMesh() const
 		Func = Class->GetFunction("B_TargetTrack_C", "GetCollisionStaticMesh");
 
 	Params::B_TargetTrack_C_GetCollisionStaticMesh Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function B_TargetTrack.B_TargetTrack_C.GetMeshComponents
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// TArray<class UMeshComponent*>           ReturnValue                                            (Parm, OutParm, ReturnParm, ContainsInstancedReference, HasGetValueTypeHash)
+
+TArray<class UMeshComponent*> AB_TargetTrack_C::GetMeshComponents() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_TargetTrack_C", "GetMeshComponents");
+
+	Params::B_TargetTrack_C_GetMeshComponents Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

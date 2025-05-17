@@ -20,11 +20,11 @@ namespace SDK
 // Function EventScoreBigStat.EventScoreBigStat_C.SetData
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Label                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      Label                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 // int32                                   Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   ValueContext                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             FormatterText                                          (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FFortTournamentDisplayInfo       Tournament_Display_Info                                (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      FormatterText                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortTournamentDisplayInfo&Tournament_Display_Info                                (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UEventScoreBigStat_C::SetData(const class FText& Label, int32 Value, int32 ValueContext, const class FText& FormatterText, const struct FFortTournamentDisplayInfo& Tournament_Display_Info)
 {

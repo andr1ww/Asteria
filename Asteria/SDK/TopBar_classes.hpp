@@ -10,127 +10,35 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "UMG_structs.hpp"
-#include "FortniteUI_structs.hpp"
 #include "FortniteUI_classes.hpp"
-#include "CommonInput_structs.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TopBar.TopBar_C
-// 0x0168 (0x04C0 - 0x0358)
-class UTopBar_C final : public UFortTopBarPanel
+// 0x0040 (0x0458 - 0x0418)
+class UTopBar_C final : public UAthenaTopBar
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0358(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       IntroSocialPanel;                                  // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       PartyJoinFlash;                                    // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       IntroMainMenu;                                     // 0x0370(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBP_FortLiveStreamGrantWindowExpires_C* BP_FortLiveStreamGrantWindowExpires;               // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UFortSZAwareImage*                      FriendInviteBang;                                  // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HBoxStWContent;                                    // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UHorizontalBox*                         HorizontalBoxRatingIcons;                          // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULobbyTimer_C*                          LobbyTimer_112;                                    // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULocalUserParticipation_C*              LocalTeamMemberParticipation;                      // 0x03A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMainMenu_C*                            MainMenu;                                          // 0x03A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          MainMenuBorder;                                    // 0x03B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      MainMenuButton;                                    // 0x03B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMiniPartyBar_C*                        MiniPartyBar;                                      // 0x03C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMTXButton_C*                           MTXButton;                                         // 0x03C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               MTXButtonContainer;                                // 0x03D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Overlay_STWContent;                                // 0x03D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          PartyFlash;                                        // 0x03E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPowerRatingWidget_C*                   PowerRatingWidget;                                 // 0x03E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x03F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_4;                                        // 0x03F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZoneRatingIcons;                               // 0x0400(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      Social;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          Top;                                               // 0x0410(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTopBarDetailsWidget_C*                 TopBarDetailsWidget;                               // 0x0418(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          TouchZone;                                         // 0x0420(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class Uwindowchromebuttons_C*                 windowchromebuttons;                               // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          MainMenuShown;                                     // 0x0430(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_431[0x7];                                      // 0x0431(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             Sound_StoreButtonClicked_Error;                    // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Sound_StoreMusic;                                  // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFort_Entry_Music_Controller_BP_C*      Fort_Entry_Music_Controller;                       // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFrontEndCamera                               LastNavigationRequestCameraState;                  // 0x0450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_451[0x7];                                      // 0x0451(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           HeroSquadPulseTimer;                               // 0x0458(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           DisableHeroSquadPulseTimer;                        // 0x0460(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(bool Open)>     MainMenuStateChanged;                              // 0x0468(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UFortGameFeedbackBase*                  FeedbackWidget;                                    // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         fEdgePower;                                        // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OpenAccountPicker;                                 // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          UseAnimation;                                      // 0x0498(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          IsMainMenuOpen;                                    // 0x0499(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_49A[0x2];                                      // 0x049A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMargin                                IconPadding;                                       // 0x049C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          BROnly;                                            // 0x04AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4AD[0x3];                                      // 0x04AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UReportPlayer_C*                        ReportPlayerWidget;                                // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Main_Menu_Sound;                                   // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0418(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       IntroTabLabel;                                     // 0x0420(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UGameFeatureStatus_C*                   GameFeatureStatus_HighResTextureDownload;          // 0x0428(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UHorizontalBox*                         HorizontalBox_TopContent;                          // 0x0430(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULetoFrontendJoinPrompt_Side_C*         LetoFrontendJoinPrompt_Side;                       // 0x0438(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               MobileTabTitle;                                    // 0x0440(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_7;                                        // 0x0448(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class Uwindowchromebuttons_C*                 windowchromebuttons;                               // 0x0450(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void HandleSwitchProfileAction(bool* PassThrough);
-	void HandleFeatureSwitchOp(EFortUIFeature Feature);
-	void UnbindNavigationDelegates();
-	void BindNavigationDelegates();
-	void ForceMenuOpen();
-	void CreateWidgets();
-	void HandleCloseAction(bool* PassThrough);
-	void BindPanelControl();
-	void CloseMainMenu();
-	void OpenMainMenu();
-	void DialogResult_32D813B145A5E184B01A15AABE16B774(EFortDialogResult Result, class FName ResultName);
-	void OnBeginIntro();
-	void OnBeginOutro();
-	void OnActivated();
-	void Hidden();
-	void BndEvt__MainMenu_K2Node_ComponentBoundEvent_48_OnRequestShowFeedbackWidget__DelegateSignature();
-	void BndEvt__Social_K2Node_ComponentBoundEvent_64_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void PreConstruct(bool IsDesignTime);
-	void Destruct();
-	void OnAnimationFinished(const class UWidgetAnimation* Animation);
-	void BndEvt__BP_FortLiveStreamGrantWindowExpires_K2Node_ComponentBoundEvent_101_StreamTimerStarted__DelegateSignature();
-	void BndEvt__BP_FortLiveStreamGrantWindowExpires_K2Node_ComponentBoundEvent_108_StreamTimerExpired__DelegateSignature();
-	void ShowSocialConfirmation(const class FText& MESSAGE);
-	void On_Power_Increased();
-	void BndEvt__MainMenuButton_K2Node_ComponentBoundEvent_70_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void AddIconToScreen(class UCommonLazyImage* Image);
-	void ManualToggleMainMenu();
-	void Construct();
-	void BndEvt__MainMenu_K2Node_ComponentBoundEvent_0_OnRequestShowSocialWidget__DelegateSignature();
-	void BndEvt__MainMenu_K2Node_ComponentBoundEvent_5_OnRequestShowPlayerReportWidget__DelegateSignature();
-	void BndEvt__SocialPanel_K2Node_ComponentBoundEvent_0_SocialPanelCloseRequested__DelegateSignature();
-	void SetOnlineFriendsCount(int32 NewOnlineFriendsCount);
-	void SetActiveInvitesCount(int32 NewActiveInvitesCount);
 	void ExecuteUbergraph_TopBar(int32 EntryPoint);
-	void BindSwitchProfileAction();
-	void HandleAccountPickerResult(int32 ControllerIndex, bool UserSwitched);
-	void HandleActiveInvitesCountChanged(int32 ActiveInvitesCount);
-	class UWidget* GetFriendsTooltipWidget();
-	class UWidget* GetMainMenuTooltipWidget();
-	void ForceMenuClosed();
+	void OnMobileTabLabelChanged();
+	void Construct();
 	void UpdateMTXButton();
-	void OpenSocialMenu();
-	void ConfigureVisibleItemsForSubGame();
-	void Set_Header_Visibility(bool Visibility_0);
-	void CloseSocialMenu();
-	void HandleMainMenuAnimComplete();
-	void HandleSocialPanelAnimComplete();
-	struct FEventReply On_TouchZone_MouseButtonDown_0(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void OnCloseRequested();
-	void InitializeInput();
-	void ManualMenuToggle(bool* PassThrough);
-	void UninitializeInput();
-	void SetButtonStyleForMobile();
+	void SetTopTabsVisibility(ESlateVisibility NewVisibility);
 
 public:
 	static class UClass* StaticClass()
@@ -142,52 +50,6 @@ public:
 		return GetDefaultObjImpl<UTopBar_C>();
 	}
 };
-static_assert(alignof(UTopBar_C) == 0x000008, "Wrong alignment on UTopBar_C");
-static_assert(sizeof(UTopBar_C) == 0x0004C0, "Wrong size on UTopBar_C");
-static_assert(offsetof(UTopBar_C, UberGraphFrame) == 0x000358, "Member 'UTopBar_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, IntroSocialPanel) == 0x000360, "Member 'UTopBar_C::IntroSocialPanel' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, PartyJoinFlash) == 0x000368, "Member 'UTopBar_C::PartyJoinFlash' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, IntroMainMenu) == 0x000370, "Member 'UTopBar_C::IntroMainMenu' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, BP_FortLiveStreamGrantWindowExpires) == 0x000378, "Member 'UTopBar_C::BP_FortLiveStreamGrantWindowExpires' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, FriendInviteBang) == 0x000380, "Member 'UTopBar_C::FriendInviteBang' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, HBoxStWContent) == 0x000388, "Member 'UTopBar_C::HBoxStWContent' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, HorizontalBoxRatingIcons) == 0x000390, "Member 'UTopBar_C::HorizontalBoxRatingIcons' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, LobbyTimer_112) == 0x000398, "Member 'UTopBar_C::LobbyTimer_112' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, LocalTeamMemberParticipation) == 0x0003A0, "Member 'UTopBar_C::LocalTeamMemberParticipation' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, MainMenu) == 0x0003A8, "Member 'UTopBar_C::MainMenu' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, MainMenuBorder) == 0x0003B0, "Member 'UTopBar_C::MainMenuBorder' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, MainMenuButton) == 0x0003B8, "Member 'UTopBar_C::MainMenuButton' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, MiniPartyBar) == 0x0003C0, "Member 'UTopBar_C::MiniPartyBar' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, MTXButton) == 0x0003C8, "Member 'UTopBar_C::MTXButton' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, MTXButtonContainer) == 0x0003D0, "Member 'UTopBar_C::MTXButtonContainer' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, Overlay_STWContent) == 0x0003D8, "Member 'UTopBar_C::Overlay_STWContent' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, PartyFlash) == 0x0003E0, "Member 'UTopBar_C::PartyFlash' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, PowerRatingWidget) == 0x0003E8, "Member 'UTopBar_C::PowerRatingWidget' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, SafeZone_0) == 0x0003F0, "Member 'UTopBar_C::SafeZone_0' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, SafeZone_4) == 0x0003F8, "Member 'UTopBar_C::SafeZone_4' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, SafeZoneRatingIcons) == 0x000400, "Member 'UTopBar_C::SafeZoneRatingIcons' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, Social) == 0x000408, "Member 'UTopBar_C::Social' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, Top) == 0x000410, "Member 'UTopBar_C::Top' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, TopBarDetailsWidget) == 0x000418, "Member 'UTopBar_C::TopBarDetailsWidget' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, TouchZone) == 0x000420, "Member 'UTopBar_C::TouchZone' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, windowchromebuttons) == 0x000428, "Member 'UTopBar_C::windowchromebuttons' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, MainMenuShown) == 0x000430, "Member 'UTopBar_C::MainMenuShown' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, Sound_StoreButtonClicked_Error) == 0x000438, "Member 'UTopBar_C::Sound_StoreButtonClicked_Error' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, Sound_StoreMusic) == 0x000440, "Member 'UTopBar_C::Sound_StoreMusic' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, Fort_Entry_Music_Controller) == 0x000448, "Member 'UTopBar_C::Fort_Entry_Music_Controller' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, LastNavigationRequestCameraState) == 0x000450, "Member 'UTopBar_C::LastNavigationRequestCameraState' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, HeroSquadPulseTimer) == 0x000458, "Member 'UTopBar_C::HeroSquadPulseTimer' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, DisableHeroSquadPulseTimer) == 0x000460, "Member 'UTopBar_C::DisableHeroSquadPulseTimer' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, MainMenuStateChanged) == 0x000468, "Member 'UTopBar_C::MainMenuStateChanged' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, FeedbackWidget) == 0x000478, "Member 'UTopBar_C::FeedbackWidget' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, fEdgePower) == 0x000480, "Member 'UTopBar_C::fEdgePower' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, OpenAccountPicker) == 0x000488, "Member 'UTopBar_C::OpenAccountPicker' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, UseAnimation) == 0x000498, "Member 'UTopBar_C::UseAnimation' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, IsMainMenuOpen) == 0x000499, "Member 'UTopBar_C::IsMainMenuOpen' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, IconPadding) == 0x00049C, "Member 'UTopBar_C::IconPadding' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, BROnly) == 0x0004AC, "Member 'UTopBar_C::BROnly' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, ReportPlayerWidget) == 0x0004B0, "Member 'UTopBar_C::ReportPlayerWidget' has a wrong offset!");
-static_assert(offsetof(UTopBar_C, Main_Menu_Sound) == 0x0004B8, "Member 'UTopBar_C::Main_Menu_Sound' has a wrong offset!");
 
 }
 

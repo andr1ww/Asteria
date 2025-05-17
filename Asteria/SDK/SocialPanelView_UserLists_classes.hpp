@@ -11,7 +11,6 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -19,31 +18,41 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SocialPanelView_UserLists.SocialPanelView_UserLists_C
-// 0x0078 (0x0328 - 0x02B0)
+// 0x00C0 (0x0568 - 0x04A8)
 class USocialPanelView_UserLists_C final : public UFortSocialPanelView_UserLists
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       WeGameButtonHovered;                               // 0x02B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       SwitcherTransition;                                // 0x02C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       NoFriendsArrowBounce;                              // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ToggleTabShine;                                    // 0x02D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       ToggleTabHighlight;                                // 0x02D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       MenuAnchorItemOpen;                                // 0x02E0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Open_0;                                            // 0x02E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Open;                                              // 0x02F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                PanelTabHighlight;                                 // 0x02F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class URichTextBlock*                         RichTextBlock_0;                                   // 0x0300(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Shine;                                             // 0x0308(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USocialPanel_FriendLinkButton_C*        SocialPanel_FriendLinkButton;                      // 0x0310(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USocialPanelTab_C*                      CurSelectedPanelTab;                               // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSwitchingFriendsButton;                           // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       WeGameButtonHovered;                               // 0x04B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       SwitcherTransition;                                // 0x04B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       NoFriendsArrowBounce;                              // 0x04C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       MenuAnchorItemOpen;                                // 0x04C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Open_0;                                            // 0x04D0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Open;                                              // 0x04D8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 bckgrnd;                                           // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 CircularThrobber_UserSearch;                       // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   CommonRichTextBlock_97;                            // 0x04F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortMobileImage*                       FortMobileImage_127;                               // 0x04F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_MicDisabled;                                 // 0x0500(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortMobileImage*                       Image_MicIcon;                                     // 0x0508(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortMobileImage*                       Image_MicIcon_1;                                   // 0x0510(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortMobileImage*                       Image_MicIcon_2;                                   // 0x0518(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_MicIcon_3;                                   // 0x0520(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UFortMobileImage*                       Image_TitleIcon;                                   // 0x0528(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   RichText_LeavePlatformPartyTitle;                  // 0x0530(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   RichText_VoiceChatDisabled;                        // 0x0538(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   RichText_VoiceChatDisabledHeader;                  // 0x0540(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   RichText_VoiceChatDisabledWarningMessage;          // 0x0548(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         RichTextBlock_0;                                   // 0x0550(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USocialPanel_FriendLinkButton_C*        SocialPanel_FriendLinkButton;                      // 0x0558(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_LowPowerMode;                                 // 0x0560(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_SocialPanelView_UserLists(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void Construct();
+	void OnSetVoiceChannelButtonText(const class FText& ButtonText);
 	void BndEvt__Switcher_UserLists_K2Node_ComponentBoundEvent_0_OnActiveWidgetChanged__DelegateSignature(class UWidget* ActiveWidget, int32 ActiveWidgetIndex);
-	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	struct FEventReply OnKeyUp(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 
 public:
 	static class UClass* StaticClass()
@@ -55,23 +64,6 @@ public:
 		return GetDefaultObjImpl<USocialPanelView_UserLists_C>();
 	}
 };
-static_assert(alignof(USocialPanelView_UserLists_C) == 0x000008, "Wrong alignment on USocialPanelView_UserLists_C");
-static_assert(sizeof(USocialPanelView_UserLists_C) == 0x000328, "Wrong size on USocialPanelView_UserLists_C");
-static_assert(offsetof(USocialPanelView_UserLists_C, UberGraphFrame) == 0x0002B0, "Member 'USocialPanelView_UserLists_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, WeGameButtonHovered) == 0x0002B8, "Member 'USocialPanelView_UserLists_C::WeGameButtonHovered' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, SwitcherTransition) == 0x0002C0, "Member 'USocialPanelView_UserLists_C::SwitcherTransition' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, NoFriendsArrowBounce) == 0x0002C8, "Member 'USocialPanelView_UserLists_C::NoFriendsArrowBounce' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, ToggleTabShine) == 0x0002D0, "Member 'USocialPanelView_UserLists_C::ToggleTabShine' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, ToggleTabHighlight) == 0x0002D8, "Member 'USocialPanelView_UserLists_C::ToggleTabHighlight' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, MenuAnchorItemOpen) == 0x0002E0, "Member 'USocialPanelView_UserLists_C::MenuAnchorItemOpen' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, Open_0) == 0x0002E8, "Member 'USocialPanelView_UserLists_C::Open_0' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, Open) == 0x0002F0, "Member 'USocialPanelView_UserLists_C::Open' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, PanelTabHighlight) == 0x0002F8, "Member 'USocialPanelView_UserLists_C::PanelTabHighlight' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, RichTextBlock_0) == 0x000300, "Member 'USocialPanelView_UserLists_C::RichTextBlock_0' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, Shine) == 0x000308, "Member 'USocialPanelView_UserLists_C::Shine' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, SocialPanel_FriendLinkButton) == 0x000310, "Member 'USocialPanelView_UserLists_C::SocialPanel_FriendLinkButton' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, CurSelectedPanelTab) == 0x000318, "Member 'USocialPanelView_UserLists_C::CurSelectedPanelTab' has a wrong offset!");
-static_assert(offsetof(USocialPanelView_UserLists_C, bSwitchingFriendsButton) == 0x000320, "Member 'USocialPanelView_UserLists_C::bSwitchingFriendsButton' has a wrong offset!");
 
 }
 

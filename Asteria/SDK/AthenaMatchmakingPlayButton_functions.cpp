@@ -17,46 +17,6 @@
 namespace SDK
 {
 
-// Function AthenaMatchmakingPlayButton.AthenaMatchmakingPlayButton_C.SetButtonText
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UAthenaMatchmakingPlayButton_C::SetButtonText(const class FText& InText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaMatchmakingPlayButton_C", "SetButtonText");
-
-	Params::AthenaMatchmakingPlayButton_C_SetButtonText Parms{};
-
-	Parms.InText = std::move(InText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaMatchmakingPlayButton.AthenaMatchmakingPlayButton_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UAthenaMatchmakingPlayButton_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaMatchmakingPlayButton_C", "PreConstruct");
-
-	Params::AthenaMatchmakingPlayButton_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function AthenaMatchmakingPlayButton.AthenaMatchmakingPlayButton_C.ExecuteUbergraph_AthenaMatchmakingPlayButton
 // (Final, UbergraphFunction)
 // Parameters:
@@ -72,6 +32,54 @@ void UAthenaMatchmakingPlayButton_C::ExecuteUbergraph_AthenaMatchmakingPlayButto
 	Params::AthenaMatchmakingPlayButton_C_ExecuteUbergraph_AthenaMatchmakingPlayButton Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function AthenaMatchmakingPlayButton.AthenaMatchmakingPlayButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UAthenaMatchmakingPlayButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMatchmakingPlayButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaMatchmakingPlayButton.AthenaMatchmakingPlayButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UAthenaMatchmakingPlayButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMatchmakingPlayButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaMatchmakingPlayButton.AthenaMatchmakingPlayButton_C.SetButtonText
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      InText                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UAthenaMatchmakingPlayButton_C::SetButtonText(const class FText& InText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaMatchmakingPlayButton_C", "SetButtonText");
+
+	Params::AthenaMatchmakingPlayButton_C_SetButtonText Parms{};
+
+	Parms.InText = std::move(InText);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

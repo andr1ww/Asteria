@@ -17,125 +17,61 @@
 namespace SDK
 {
 
-// Function EventsSimpleButton.EventsSimpleButton_C.OnMouseButtonUp
-// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function EventsSimpleButton.EventsSimpleButton_C.ExecuteUbergraph_EventsSimpleButton
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-struct FEventReply UEventsSimpleButton_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+void UEventsSimpleButton_C::ExecuteUbergraph_EventsSimpleButton(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventsSimpleButton_C", "OnMouseButtonUp");
+		Func = Class->GetFunction("EventsSimpleButton_C", "ExecuteUbergraph_EventsSimpleButton");
 
-	Params::EventsSimpleButton_C_OnMouseButtonUp Parms{};
+	Params::EventsSimpleButton_C_ExecuteUbergraph_EventsSimpleButton Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function EventsSimpleButton.EventsSimpleButton_C.OnMouseButtonDown
-// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function EventsSimpleButton.EventsSimpleButton_C.UpdateColor
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+// const class FString&                    ParameterName                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FLinearColor&              New_Color                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-struct FEventReply UEventsSimpleButton_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+void UEventsSimpleButton_C::UpdateColor(const class FString& ParameterName, const struct FLinearColor& New_Color)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventsSimpleButton_C", "OnMouseButtonDown");
+		Func = Class->GetFunction("EventsSimpleButton_C", "UpdateColor");
 
-	Params::EventsSimpleButton_C_OnMouseButtonDown Parms{};
+	Params::EventsSimpleButton_C_UpdateColor Parms{};
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
+	Parms.ParameterName = std::move(ParameterName);
+	Parms.New_Color = std::move(New_Color);
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function EventsSimpleButton.EventsSimpleButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UEventsSimpleButton_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventsSimpleButton_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EventsSimpleButton.EventsSimpleButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void UEventsSimpleButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventsSimpleButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EventsSimpleButton.EventsSimpleButton_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
-
-void UEventsSimpleButton_C::BP_OnUnhovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventsSimpleButton_C", "BP_OnUnhovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EventsSimpleButton.EventsSimpleButton_C.BP_OnClicked
-// (Event, Protected, BlueprintEvent)
-
-void UEventsSimpleButton_C::BP_OnClicked()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventsSimpleButton_C", "BP_OnClicked");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EventsSimpleButton.EventsSimpleButton_C.BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature
-// (BlueprintEvent)
+// Function EventsSimpleButton.EventsSimpleButton_C.InputTypeChanged
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UEventsSimpleButton_C::BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad)
+void UEventsSimpleButton_C::InputTypeChanged(bool bUsingGamepad)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventsSimpleButton_C", "BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
+		Func = Class->GetFunction("EventsSimpleButton_C", "InputTypeChanged");
 
-	Params::EventsSimpleButton_C_BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature Parms{};
+	Params::EventsSimpleButton_C_InputTypeChanged Parms{};
 
 	Parms.bUsingGamepad = bUsingGamepad;
 
@@ -163,19 +99,19 @@ void UEventsSimpleButton_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function EventsSimpleButton.EventsSimpleButton_C.InputTypeChanged
-// (BlueprintCallable, BlueprintEvent)
+// Function EventsSimpleButton.EventsSimpleButton_C.BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
 // bool                                    bUsingGamepad                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UEventsSimpleButton_C::InputTypeChanged(bool bUsingGamepad)
+void UEventsSimpleButton_C::BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature(bool bUsingGamepad)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventsSimpleButton_C", "InputTypeChanged");
+		Func = Class->GetFunction("EventsSimpleButton_C", "BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature");
 
-	Params::EventsSimpleButton_C_InputTypeChanged Parms{};
+	Params::EventsSimpleButton_C_BndEvt__CommonActionWidgetAction_K2Node_ComponentBoundEvent_0_OnInputMethodChanged__DelegateSignature Parms{};
 
 	Parms.bUsingGamepad = bUsingGamepad;
 
@@ -183,23 +119,109 @@ void UEventsSimpleButton_C::InputTypeChanged(bool bUsingGamepad)
 }
 
 
-// Function EventsSimpleButton.EventsSimpleButton_C.ExecuteUbergraph_EventsSimpleButton
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function EventsSimpleButton.EventsSimpleButton_C.BP_OnClicked
+// (Event, Protected, BlueprintEvent)
 
-void UEventsSimpleButton_C::ExecuteUbergraph_EventsSimpleButton(int32 EntryPoint)
+void UEventsSimpleButton_C::BP_OnClicked()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventsSimpleButton_C", "ExecuteUbergraph_EventsSimpleButton");
+		Func = Class->GetFunction("EventsSimpleButton_C", "BP_OnClicked");
 
-	Params::EventsSimpleButton_C_ExecuteUbergraph_EventsSimpleButton Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function EventsSimpleButton.EventsSimpleButton_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UEventsSimpleButton_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventsSimpleButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function EventsSimpleButton.EventsSimpleButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UEventsSimpleButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventsSimpleButton_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function EventsSimpleButton.EventsSimpleButton_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UEventsSimpleButton_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventsSimpleButton_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function EventsSimpleButton.EventsSimpleButton_C.OnMouseButtonDown
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply UEventsSimpleButton_C::OnMouseButtonDown(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventsSimpleButton_C", "OnMouseButtonDown");
+
+	Params::EventsSimpleButton_C_OnMouseButtonDown Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function EventsSimpleButton.EventsSimpleButton_C.OnMouseButtonUp
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply UEventsSimpleButton_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventsSimpleButton_C", "OnMouseButtonUp");
+
+	Params::EventsSimpleButton_C_OnMouseButtonUp Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.MouseEvent = std::move(MouseEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

@@ -23,11 +23,6 @@ public:
 	int32                                         CallFunc_GetRenderingDetailMode_ReturnValue;       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(B_CameraRainDrops_02_C_ExecuteUbergraph_B_CameraRainDrops_02) == 0x000004, "Wrong alignment on B_CameraRainDrops_02_C_ExecuteUbergraph_B_CameraRainDrops_02");
-static_assert(sizeof(B_CameraRainDrops_02_C_ExecuteUbergraph_B_CameraRainDrops_02) == 0x00000C, "Wrong size on B_CameraRainDrops_02_C_ExecuteUbergraph_B_CameraRainDrops_02");
-static_assert(offsetof(B_CameraRainDrops_02_C_ExecuteUbergraph_B_CameraRainDrops_02, EntryPoint) == 0x000000, "Member 'B_CameraRainDrops_02_C_ExecuteUbergraph_B_CameraRainDrops_02::EntryPoint' has a wrong offset!");
-static_assert(offsetof(B_CameraRainDrops_02_C_ExecuteUbergraph_B_CameraRainDrops_02, CallFunc_GetRenderingDetailMode_ReturnValue) == 0x000004, "Member 'B_CameraRainDrops_02_C_ExecuteUbergraph_B_CameraRainDrops_02::CallFunc_GetRenderingDetailMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(B_CameraRainDrops_02_C_ExecuteUbergraph_B_CameraRainDrops_02, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000008, "Member 'B_CameraRainDrops_02_C_ExecuteUbergraph_B_CameraRainDrops_02::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
 
 }
 

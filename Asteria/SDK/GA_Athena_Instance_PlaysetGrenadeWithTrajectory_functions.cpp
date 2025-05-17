@@ -37,27 +37,6 @@ void UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C::ExecuteUbergraph_GA_Ath
 }
 
 
-// Function GA_Athena_Instance_PlaysetGrenadeWithTrajectory.GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C.GetActivePlaysetData
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFortPlaysetItemDefinition*       OutData                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C::GetActivePlaysetData(class UFortPlaysetItemDefinition** OutData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C", "GetActivePlaysetData");
-
-	Params::GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutData != nullptr)
-		*OutData = Parms.OutData;
-}
-
-
 // Function GA_Athena_Instance_PlaysetGrenadeWithTrajectory.GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C.SetActivePlaysetOnPlayer
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -89,6 +68,61 @@ void UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C::SetPlaysetData(class AF
 	Parms.Projectile_Reference = Projectile_Reference;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Instance_PlaysetGrenadeWithTrajectory.GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C", "K2_OnEndAbility");
+
+	Params::GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Athena_Instance_PlaysetGrenadeWithTrajectory.GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Athena_Instance_PlaysetGrenadeWithTrajectory.GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C.GetActivePlaysetData
+// (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFortPlaysetItemDefinition**      OutData                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Athena_Instance_PlaysetGrenadeWithTrajectory_C::GetActivePlaysetData(class UFortPlaysetItemDefinition** OutData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C", "GetActivePlaysetData");
+
+	Params::GA_Athena_Instance_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutData != nullptr)
+		*OutData = Parms.OutData;
 }
 
 }

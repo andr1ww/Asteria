@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+
 
 namespace SDK::Params
 {
@@ -21,9 +23,14 @@ struct Pistol_Revolver_SideAction_AnimBP_C_ExecuteUbergraph_Pistol_Revolver_Side
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Pistol_Revolver_SideAction_AnimBP_C_ExecuteUbergraph_Pistol_Revolver_SideAction_AnimBP) == 0x000004, "Wrong alignment on Pistol_Revolver_SideAction_AnimBP_C_ExecuteUbergraph_Pistol_Revolver_SideAction_AnimBP");
-static_assert(sizeof(Pistol_Revolver_SideAction_AnimBP_C_ExecuteUbergraph_Pistol_Revolver_SideAction_AnimBP) == 0x000004, "Wrong size on Pistol_Revolver_SideAction_AnimBP_C_ExecuteUbergraph_Pistol_Revolver_SideAction_AnimBP");
-static_assert(offsetof(Pistol_Revolver_SideAction_AnimBP_C_ExecuteUbergraph_Pistol_Revolver_SideAction_AnimBP, EntryPoint) == 0x000000, "Member 'Pistol_Revolver_SideAction_AnimBP_C_ExecuteUbergraph_Pistol_Revolver_SideAction_AnimBP::EntryPoint' has a wrong offset!");
+
+// Function Pistol_Revolver_SideAction_AnimBP.Pistol_Revolver_SideAction_AnimBP_C.AnimGraph
+// 0x0010 (0x0010 - 0x0000)
+struct Pistol_Revolver_SideAction_AnimBP_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+};
 
 }
 

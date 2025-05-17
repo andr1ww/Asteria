@@ -11,16 +11,16 @@
 #include "Basic.hpp"
 
 #include "GameplayAbilities_structs.hpp"
+#include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function GCNS_GM_OnDisplayChatEmoji.GCNS_GM_OnDisplayChatEmoji_C.OnStartParticleSystemSpawned
-// 0x0290 (0x0290 - 0x0000)
+// 0x0298 (0x0298 - 0x0000)
 struct GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned final
 {
 public:
@@ -62,44 +62,8 @@ public:
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x01F8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x0204(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_205[0x3];                                      // 0x0205(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0208(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0208(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned) == 0x000008, "Wrong alignment on GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned");
-static_assert(sizeof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned) == 0x000290, "Wrong size on GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, SpawnedParticleSysComponent) == 0x000000, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::SpawnedParticleSysComponent' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, Parameters) == 0x000008, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::Parameters' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_GetPlayerController_ReturnValue) == 0x0000C0, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_NormalizedMagnitude) == 0x0000C8, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_NormalizedMagnitude' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_RawMagnitude) == 0x0000CC, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_RawMagnitude' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_EffectContext) == 0x0000D0, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_EffectContext' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_MatchedTagName) == 0x0000E8, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_MatchedTagName' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_OriginalTag) == 0x0000F0, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_OriginalTag' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_AggregatedSourceTags) == 0x0000F8, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_AggregatedSourceTags' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_AggregatedTargetTags) == 0x000118, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_AggregatedTargetTags' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_Location) == 0x000138, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_Location' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_Normal) == 0x000144, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_Normal' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_Instigator) == 0x000150, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_Instigator' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_EffectCauser) == 0x000158, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_EffectCauser' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_SourceObject) == 0x000160, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_SourceObject' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_PhysicalMaterial) == 0x000168, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_PhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_GameplayEffectLevel) == 0x000170, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_GameplayEffectLevel' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_AbilityLevel) == 0x000174, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_AbilityLevel' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_BreakGameplayCueParameters_TargetAttachComponent) == 0x000178, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_BreakGameplayCueParameters_TargetAttachComponent' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, K2Node_DynamicCast_AsFort_Live_Broadcast_Controller) == 0x000180, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::K2Node_DynamicCast_AsFort_Live_Broadcast_Controller' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, K2Node_DynamicCast_bSuccess) == 0x000188, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, K2Node_DynamicCast_AsAthena_Emoji_Item_Definition) == 0x000190, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::K2Node_DynamicCast_AsAthena_Emoji_Item_Definition' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, K2Node_DynamicCast_bSuccess_1) == 0x000198, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_GetPlayerPawn_ReturnValue) == 0x0001A0, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, K2Node_DynamicCast_AsAthena_Emoji_Item_Definition_1) == 0x0001A8, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::K2Node_DynamicCast_AsAthena_Emoji_Item_Definition_1' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, K2Node_DynamicCast_bSuccess_2) == 0x0001B0, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, K2Node_DynamicCast_AsFort_Player_Pawn_Athena) == 0x0001B8, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::K2Node_DynamicCast_AsFort_Player_Pawn_Athena' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, K2Node_DynamicCast_bSuccess_3) == 0x0001C0, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x0001C1, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue) == 0x0001C8, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_GetPlayerPawn_ReturnValue_1) == 0x0001F0, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_GetPlayerPawn_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_Add_VectorVector_ReturnValue) == 0x0001F8, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x000204, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000208, "Member 'GCNS_GM_OnDisplayChatEmoji_C_OnStartParticleSystemSpawned::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
 
 }
 

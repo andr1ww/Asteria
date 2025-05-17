@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Generic_Instance_Grenade_Playset_Athena.B_Generic_Instance_Grenade_Playset_Athena_C
-// 0x0008 (0x0940 - 0x0938)
+// 0x0008 (0x0CE0 - 0x0CD8)
 class AB_Generic_Instance_Grenade_Playset_Athena_C final : public AB_Grenade_Playset_Athena_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_B_Generic_Instance_Grenade_Playset_Athena_C; // 0x0938(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_B_Generic_Instance_Grenade_Playset_Athena_C; // 0x0CD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_B_Generic_Instance_Grenade_Playset_Athena(int32 EntryPoint);
-	void K2_OnUnEquip();
 	void OnWeaponAttached();
+	void K2_OnUnEquip();
 	void ReceiveBeginPlay();
 
 public:
@@ -40,9 +40,6 @@ public:
 		return GetDefaultObjImpl<AB_Generic_Instance_Grenade_Playset_Athena_C>();
 	}
 };
-static_assert(alignof(AB_Generic_Instance_Grenade_Playset_Athena_C) == 0x000008, "Wrong alignment on AB_Generic_Instance_Grenade_Playset_Athena_C");
-static_assert(sizeof(AB_Generic_Instance_Grenade_Playset_Athena_C) == 0x000940, "Wrong size on AB_Generic_Instance_Grenade_Playset_Athena_C");
-static_assert(offsetof(AB_Generic_Instance_Grenade_Playset_Athena_C, UberGraphFrame_B_Generic_Instance_Grenade_Playset_Athena_C) == 0x000938, "Member 'AB_Generic_Instance_Grenade_Playset_Athena_C::UberGraphFrame_B_Generic_Instance_Grenade_Playset_Athena_C' has a wrong offset!");
 
 }
 

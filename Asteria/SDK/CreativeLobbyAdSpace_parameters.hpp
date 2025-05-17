@@ -24,11 +24,6 @@ public:
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CreativeLobbyAdSpace_C_ExecuteUbergraph_CreativeLobbyAdSpace) == 0x000004, "Wrong alignment on CreativeLobbyAdSpace_C_ExecuteUbergraph_CreativeLobbyAdSpace");
-static_assert(sizeof(CreativeLobbyAdSpace_C_ExecuteUbergraph_CreativeLobbyAdSpace) == 0x00000C, "Wrong size on CreativeLobbyAdSpace_C_ExecuteUbergraph_CreativeLobbyAdSpace");
-static_assert(offsetof(CreativeLobbyAdSpace_C_ExecuteUbergraph_CreativeLobbyAdSpace, EntryPoint) == 0x000000, "Member 'CreativeLobbyAdSpace_C_ExecuteUbergraph_CreativeLobbyAdSpace::EntryPoint' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAdSpace_C_ExecuteUbergraph_CreativeLobbyAdSpace, K2Node_SwitchInteger_CmpSuccess) == 0x000004, "Member 'CreativeLobbyAdSpace_C_ExecuteUbergraph_CreativeLobbyAdSpace::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(CreativeLobbyAdSpace_C_ExecuteUbergraph_CreativeLobbyAdSpace, CallFunc_Array_Length_ReturnValue) == 0x000008, "Member 'CreativeLobbyAdSpace_C_ExecuteUbergraph_CreativeLobbyAdSpace::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 
 }
 

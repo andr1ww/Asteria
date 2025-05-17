@@ -26,12 +26,6 @@ public:
 	struct FButtonStyle                           CenterButtonStyle;                                 // 0x0308(0x0278)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FButtonStyle                           RightButtonStyle;                                  // 0x0580(0x0278)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FWidgetCarouselNavigationBarStyle) == 0x000008, "Wrong alignment on FWidgetCarouselNavigationBarStyle");
-static_assert(sizeof(FWidgetCarouselNavigationBarStyle) == 0x0007F8, "Wrong size on FWidgetCarouselNavigationBarStyle");
-static_assert(offsetof(FWidgetCarouselNavigationBarStyle, HighlightBrush) == 0x000008, "Member 'FWidgetCarouselNavigationBarStyle::HighlightBrush' has a wrong offset!");
-static_assert(offsetof(FWidgetCarouselNavigationBarStyle, LeftButtonStyle) == 0x000090, "Member 'FWidgetCarouselNavigationBarStyle::LeftButtonStyle' has a wrong offset!");
-static_assert(offsetof(FWidgetCarouselNavigationBarStyle, CenterButtonStyle) == 0x000308, "Member 'FWidgetCarouselNavigationBarStyle::CenterButtonStyle' has a wrong offset!");
-static_assert(offsetof(FWidgetCarouselNavigationBarStyle, RightButtonStyle) == 0x000580, "Member 'FWidgetCarouselNavigationBarStyle::RightButtonStyle' has a wrong offset!");
 
 // ScriptStruct WidgetCarousel.WidgetCarouselNavigationButtonStyle
 // 0x0388 (0x0390 - 0x0008)
@@ -42,11 +36,6 @@ public:
 	struct FSlateBrush                            NavigationButtonLeftImage;                         // 0x0280(0x0088)(NativeAccessSpecifierPublic)
 	struct FSlateBrush                            NavigationButtonRightImage;                        // 0x0308(0x0088)(NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FWidgetCarouselNavigationButtonStyle) == 0x000008, "Wrong alignment on FWidgetCarouselNavigationButtonStyle");
-static_assert(sizeof(FWidgetCarouselNavigationButtonStyle) == 0x000390, "Wrong size on FWidgetCarouselNavigationButtonStyle");
-static_assert(offsetof(FWidgetCarouselNavigationButtonStyle, InnerButtonStyle) == 0x000008, "Member 'FWidgetCarouselNavigationButtonStyle::InnerButtonStyle' has a wrong offset!");
-static_assert(offsetof(FWidgetCarouselNavigationButtonStyle, NavigationButtonLeftImage) == 0x000280, "Member 'FWidgetCarouselNavigationButtonStyle::NavigationButtonLeftImage' has a wrong offset!");
-static_assert(offsetof(FWidgetCarouselNavigationButtonStyle, NavigationButtonRightImage) == 0x000308, "Member 'FWidgetCarouselNavigationButtonStyle::NavigationButtonRightImage' has a wrong offset!");
 
 }
 

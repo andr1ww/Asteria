@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UMinigameStat_PlayerHealth_C>();
 	}
 };
-static_assert(alignof(UMinigameStat_PlayerHealth_C) == 0x000008, "Wrong alignment on UMinigameStat_PlayerHealth_C");
-static_assert(sizeof(UMinigameStat_PlayerHealth_C) == 0x000190, "Wrong size on UMinigameStat_PlayerHealth_C");
 
 }
 

@@ -24,9 +24,6 @@ struct MainTabTutorialWrapper_C_SetParentButton final
 public:
 	class UCommonButton*                          ParentButton_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(MainTabTutorialWrapper_C_SetParentButton) == 0x000008, "Wrong alignment on MainTabTutorialWrapper_C_SetParentButton");
-static_assert(sizeof(MainTabTutorialWrapper_C_SetParentButton) == 0x000008, "Wrong size on MainTabTutorialWrapper_C_SetParentButton");
-static_assert(offsetof(MainTabTutorialWrapper_C_SetParentButton, ParentButton_0) == 0x000000, "Member 'MainTabTutorialWrapper_C_SetParentButton::ParentButton_0' has a wrong offset!");
 
 // Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.GetTutorialCalloutData
 // 0x0158 (0x0158 - 0x0000)
@@ -39,13 +36,6 @@ public:
 	TSoftObjectPtr<class UTexture2D>              CallFunc_Array_Get_Item_1;                         // 0x00D0(0x0028)(HasGetValueTypeHash)
 	struct FFortToastDisplayInfo                  K2Node_MakeStruct_FortToastDisplayInfo;            // 0x00F8(0x0060)()
 };
-static_assert(alignof(MainTabTutorialWrapper_C_GetTutorialCalloutData) == 0x000008, "Wrong alignment on MainTabTutorialWrapper_C_GetTutorialCalloutData");
-static_assert(sizeof(MainTabTutorialWrapper_C_GetTutorialCalloutData) == 0x000158, "Wrong size on MainTabTutorialWrapper_C_GetTutorialCalloutData");
-static_assert(offsetof(MainTabTutorialWrapper_C_GetTutorialCalloutData, TutorialData) == 0x000000, "Member 'MainTabTutorialWrapper_C_GetTutorialCalloutData::TutorialData' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_GetTutorialCalloutData, FortToastDisplayInfo) == 0x000058, "Member 'MainTabTutorialWrapper_C_GetTutorialCalloutData::FortToastDisplayInfo' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_GetTutorialCalloutData, CallFunc_Array_Get_Item) == 0x0000B8, "Member 'MainTabTutorialWrapper_C_GetTutorialCalloutData::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_GetTutorialCalloutData, CallFunc_Array_Get_Item_1) == 0x0000D0, "Member 'MainTabTutorialWrapper_C_GetTutorialCalloutData::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_GetTutorialCalloutData, K2Node_MakeStruct_FortToastDisplayInfo) == 0x0000F8, "Member 'MainTabTutorialWrapper_C_GetTutorialCalloutData::K2Node_MakeStruct_FortToastDisplayInfo' has a wrong offset!");
 
 // Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HasValidData
 // 0x0068 (0x0068 - 0x0000)
@@ -61,15 +51,6 @@ public:
 	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0066(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(MainTabTutorialWrapper_C_HasValidData) == 0x000008, "Wrong alignment on MainTabTutorialWrapper_C_HasValidData");
-static_assert(sizeof(MainTabTutorialWrapper_C_HasValidData) == 0x000068, "Wrong size on MainTabTutorialWrapper_C_HasValidData");
-static_assert(offsetof(MainTabTutorialWrapper_C_HasValidData, FortUITutorialData) == 0x000000, "Member 'MainTabTutorialWrapper_C_HasValidData::FortUITutorialData' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HasValidData, Result) == 0x000058, "Member 'MainTabTutorialWrapper_C_HasValidData::Result' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HasValidData, CallFunc_Array_Length_ReturnValue) == 0x00005C, "Member 'MainTabTutorialWrapper_C_HasValidData::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HasValidData, CallFunc_Array_Length_ReturnValue_1) == 0x000060, "Member 'MainTabTutorialWrapper_C_HasValidData::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HasValidData, CallFunc_Greater_IntInt_ReturnValue) == 0x000064, "Member 'MainTabTutorialWrapper_C_HasValidData::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HasValidData, CallFunc_Greater_IntInt_ReturnValue_1) == 0x000065, "Member 'MainTabTutorialWrapper_C_HasValidData::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HasValidData, CallFunc_BooleanAND_ReturnValue) == 0x000066, "Member 'MainTabTutorialWrapper_C_HasValidData::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.HandleTutorialCallout
 // 0x0138 (0x0138 - 0x0000)
@@ -91,19 +72,6 @@ public:
 	uint8                                         Pad_D2[0x6];                                       // 0x00D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFortToastDisplayInfo                  CallFunc_GetTutorialCalloutData_FortToastDisplayInfo; // 0x00D8(0x0060)()
 };
-static_assert(alignof(MainTabTutorialWrapper_C_HandleTutorialCallout) == 0x000008, "Wrong alignment on MainTabTutorialWrapper_C_HandleTutorialCallout");
-static_assert(sizeof(MainTabTutorialWrapper_C_HandleTutorialCallout) == 0x000138, "Wrong size on MainTabTutorialWrapper_C_HandleTutorialCallout");
-static_assert(offsetof(MainTabTutorialWrapper_C_HandleTutorialCallout, TutorialObjectiveName) == 0x000000, "Member 'MainTabTutorialWrapper_C_HandleTutorialCallout::TutorialObjectiveName' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HandleTutorialCallout, TutorialType) == 0x000008, "Member 'MainTabTutorialWrapper_C_HandleTutorialCallout::TutorialType' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HandleTutorialCallout, TutorialData) == 0x000010, "Member 'MainTabTutorialWrapper_C_HandleTutorialCallout::TutorialData' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HandleTutorialCallout, CallFunc_GetContext_ReturnValue) == 0x000068, "Member 'MainTabTutorialWrapper_C_HandleTutorialCallout::CallFunc_GetContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HandleTutorialCallout, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000070, "Member 'MainTabTutorialWrapper_C_HandleTutorialCallout::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HandleTutorialCallout, CallFunc_GetSelected_ReturnValue) == 0x000071, "Member 'MainTabTutorialWrapper_C_HandleTutorialCallout::CallFunc_GetSelected_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HandleTutorialCallout, CallFunc_IsValid_ReturnValue) == 0x000072, "Member 'MainTabTutorialWrapper_C_HandleTutorialCallout::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HandleTutorialCallout, CallFunc_GetTutorialData_OutTutorialData) == 0x000078, "Member 'MainTabTutorialWrapper_C_HandleTutorialCallout::CallFunc_GetTutorialData_OutTutorialData' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HandleTutorialCallout, CallFunc_GetTutorialData_ReturnValue) == 0x0000D0, "Member 'MainTabTutorialWrapper_C_HandleTutorialCallout::CallFunc_GetTutorialData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HandleTutorialCallout, CallFunc_HasValidData_Result) == 0x0000D1, "Member 'MainTabTutorialWrapper_C_HandleTutorialCallout::CallFunc_HasValidData_Result' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_HandleTutorialCallout, CallFunc_GetTutorialCalloutData_FortToastDisplayInfo) == 0x0000D8, "Member 'MainTabTutorialWrapper_C_HandleTutorialCallout::CallFunc_GetTutorialCalloutData_FortToastDisplayInfo' has a wrong offset!");
 
 // Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.CheckFinishTutorialWrapper
 // 0x0010 (0x0010 - 0x0000)
@@ -113,10 +81,6 @@ public:
 	class UFortTutorialContext*                   CallFunc_GetContext_ReturnValue;                   // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsTutorialCalloutVisible_ReturnValue;     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(MainTabTutorialWrapper_C_CheckFinishTutorialWrapper) == 0x000008, "Wrong alignment on MainTabTutorialWrapper_C_CheckFinishTutorialWrapper");
-static_assert(sizeof(MainTabTutorialWrapper_C_CheckFinishTutorialWrapper) == 0x000010, "Wrong size on MainTabTutorialWrapper_C_CheckFinishTutorialWrapper");
-static_assert(offsetof(MainTabTutorialWrapper_C_CheckFinishTutorialWrapper, CallFunc_GetContext_ReturnValue) == 0x000000, "Member 'MainTabTutorialWrapper_C_CheckFinishTutorialWrapper::CallFunc_GetContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_CheckFinishTutorialWrapper, CallFunc_IsTutorialCalloutVisible_ReturnValue) == 0x000008, "Member 'MainTabTutorialWrapper_C_CheckFinishTutorialWrapper::CallFunc_IsTutorialCalloutVisible_ReturnValue' has a wrong offset!");
 
 // Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.OnStartCallout
 // 0x000C (0x000C - 0x0000)
@@ -126,10 +90,6 @@ public:
 	class FName                                   TutorialObjectiveName;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETutorialType                                 TutorialType;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(MainTabTutorialWrapper_C_OnStartCallout) == 0x000004, "Wrong alignment on MainTabTutorialWrapper_C_OnStartCallout");
-static_assert(sizeof(MainTabTutorialWrapper_C_OnStartCallout) == 0x00000C, "Wrong size on MainTabTutorialWrapper_C_OnStartCallout");
-static_assert(offsetof(MainTabTutorialWrapper_C_OnStartCallout, TutorialObjectiveName) == 0x000000, "Member 'MainTabTutorialWrapper_C_OnStartCallout::TutorialObjectiveName' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_OnStartCallout, TutorialType) == 0x000008, "Member 'MainTabTutorialWrapper_C_OnStartCallout::TutorialType' has a wrong offset!");
 
 // Function MainTabTutorialWrapper.MainTabTutorialWrapper_C.ExecuteUbergraph_MainTabTutorialWrapper
 // 0x0020 (0x0020 - 0x0000)
@@ -141,12 +101,6 @@ public:
 	class FName                                   K2Node_Event_TutorialObjectiveName;                // 0x0014(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETutorialType                                 K2Node_Event_TutorialType;                         // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper) == 0x000004, "Wrong alignment on MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper");
-static_assert(sizeof(MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper) == 0x000020, "Wrong size on MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper");
-static_assert(offsetof(MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper, EntryPoint) == 0x000000, "Member 'MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper::EntryPoint' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper, K2Node_Event_TutorialObjectiveName) == 0x000014, "Member 'MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper::K2Node_Event_TutorialObjectiveName' has a wrong offset!");
-static_assert(offsetof(MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper, K2Node_Event_TutorialType) == 0x00001C, "Member 'MainTabTutorialWrapper_C_ExecuteUbergraph_MainTabTutorialWrapper::K2Node_Event_TutorialType' has a wrong offset!");
 
 }
 

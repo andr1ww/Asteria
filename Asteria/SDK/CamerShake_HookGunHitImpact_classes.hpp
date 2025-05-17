@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UCamerShake_HookGunHitImpact_C>();
 	}
 };
-static_assert(alignof(UCamerShake_HookGunHitImpact_C) == 0x000008, "Wrong alignment on UCamerShake_HookGunHitImpact_C");
-static_assert(sizeof(UCamerShake_HookGunHitImpact_C) == 0x000160, "Wrong size on UCamerShake_HookGunHitImpact_C");
 
 }
 

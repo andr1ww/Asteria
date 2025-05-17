@@ -18,19 +18,16 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaStatsRow.AthenaStatsRow_C
-// 0x0038 (0x0278 - 0x0240)
+// 0x0008 (0x02C8 - 0x02C0)
 class UAthenaStatsRow_C final : public UFortProfileStatsRow
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       Name_0;                                            // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   StatName;                                          // 0x0250(0x0018)(Edit, BlueprintVisible)
-	class FString                                 BaseGameplayTag;                                   // 0x0268(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void SetStatValueAsText(const class FText& StatValue);
-	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_AthenaStatsRow(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetStatValueAsText(const class FText& StatValue);
 
 public:
 	static class UClass* StaticClass()
@@ -42,12 +39,6 @@ public:
 		return GetDefaultObjImpl<UAthenaStatsRow_C>();
 	}
 };
-static_assert(alignof(UAthenaStatsRow_C) == 0x000008, "Wrong alignment on UAthenaStatsRow_C");
-static_assert(sizeof(UAthenaStatsRow_C) == 0x000278, "Wrong size on UAthenaStatsRow_C");
-static_assert(offsetof(UAthenaStatsRow_C, UberGraphFrame) == 0x000240, "Member 'UAthenaStatsRow_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsRow_C, Name_0) == 0x000248, "Member 'UAthenaStatsRow_C::Name_0' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsRow_C, StatName) == 0x000250, "Member 'UAthenaStatsRow_C::StatName' has a wrong offset!");
-static_assert(offsetof(UAthenaStatsRow_C, BaseGameplayTag) == 0x000268, "Member 'UAthenaStatsRow_C::BaseGameplayTag' has a wrong offset!");
 
 }
 

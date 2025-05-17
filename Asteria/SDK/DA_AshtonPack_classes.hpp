@@ -10,36 +10,36 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass DA_AshtonPack.DA_AshtonPack_C
-// 0x0088 (0x0A38 - 0x09B0)
+// 0x0088 (0x0DC8 - 0x0D40)
 class ADA_AshtonPack_C final : public AFortCustomizableAbilityDecoTool
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x09B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         TimePressed;                                       // 0x09B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         PunchPicker;                                       // 0x09BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasLanded;                                         // 0x09C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9C1[0x7];                                      // 0x09C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  AshtonAbilityTags;                                 // 0x09C8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTagContainer                  GC_JumpTrails;                                     // 0x09E8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTagContainer                  GC_SkydiveTrails;                                  // 0x0A08(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTag                           PrimaryFireEventTag;                               // 0x0A28(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           SecondaryFireEventTag;                             // 0x0A30(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D40(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         TimePressed;                                       // 0x0D48(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         PunchPicker;                                       // 0x0D4C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasLanded;                                         // 0x0D50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D51[0x7];                                      // 0x0D51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  AshtonAbilityTags;                                 // 0x0D58(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTagContainer                  GC_JumpTrails;                                     // 0x0D78(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTagContainer                  GC_SkydiveTrails;                                  // 0x0D98(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTag                           PrimaryFireEventTag;                               // 0x0DB8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           SecondaryFireEventTag;                             // 0x0DC0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_DA_AshtonPack(int32 EntryPoint);
-	void BPPressSecondaryFire(class AFortDecoHelper* FortDecoHelper);
-	void BPPressTrigger(class AFortDecoHelper* FortDecoHelper);
 	void Landed(const struct FHitResult& Hit);
 	void ReceiveBeginPlay();
+	void BPPressSecondaryFire(class AFortDecoHelper* FortDecoHelper);
+	void BPPressTrigger(class AFortDecoHelper* FortDecoHelper);
 
 public:
 	static class UClass* StaticClass()
@@ -51,17 +51,6 @@ public:
 		return GetDefaultObjImpl<ADA_AshtonPack_C>();
 	}
 };
-static_assert(alignof(ADA_AshtonPack_C) == 0x000008, "Wrong alignment on ADA_AshtonPack_C");
-static_assert(sizeof(ADA_AshtonPack_C) == 0x000A38, "Wrong size on ADA_AshtonPack_C");
-static_assert(offsetof(ADA_AshtonPack_C, UberGraphFrame) == 0x0009B0, "Member 'ADA_AshtonPack_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ADA_AshtonPack_C, TimePressed) == 0x0009B8, "Member 'ADA_AshtonPack_C::TimePressed' has a wrong offset!");
-static_assert(offsetof(ADA_AshtonPack_C, PunchPicker) == 0x0009BC, "Member 'ADA_AshtonPack_C::PunchPicker' has a wrong offset!");
-static_assert(offsetof(ADA_AshtonPack_C, HasLanded) == 0x0009C0, "Member 'ADA_AshtonPack_C::HasLanded' has a wrong offset!");
-static_assert(offsetof(ADA_AshtonPack_C, AshtonAbilityTags) == 0x0009C8, "Member 'ADA_AshtonPack_C::AshtonAbilityTags' has a wrong offset!");
-static_assert(offsetof(ADA_AshtonPack_C, GC_JumpTrails) == 0x0009E8, "Member 'ADA_AshtonPack_C::GC_JumpTrails' has a wrong offset!");
-static_assert(offsetof(ADA_AshtonPack_C, GC_SkydiveTrails) == 0x000A08, "Member 'ADA_AshtonPack_C::GC_SkydiveTrails' has a wrong offset!");
-static_assert(offsetof(ADA_AshtonPack_C, PrimaryFireEventTag) == 0x000A28, "Member 'ADA_AshtonPack_C::PrimaryFireEventTag' has a wrong offset!");
-static_assert(offsetof(ADA_AshtonPack_C, SecondaryFireEventTag) == 0x000A30, "Member 'ADA_AshtonPack_C::SecondaryFireEventTag' has a wrong offset!");
 
 }
 

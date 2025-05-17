@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Tracer_Shotgun.Tracer_Shotgun_C
-// 0x0008 (0x02E0 - 0x02D8)
+// 0x0008 (0x02C0 - 0x02B8)
 class ATracer_Shotgun_C final : public AFortTracerBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_Tracer_Shotgun(int32 EntryPoint);
@@ -39,9 +39,6 @@ public:
 		return GetDefaultObjImpl<ATracer_Shotgun_C>();
 	}
 };
-static_assert(alignof(ATracer_Shotgun_C) == 0x000008, "Wrong alignment on ATracer_Shotgun_C");
-static_assert(sizeof(ATracer_Shotgun_C) == 0x0002E0, "Wrong size on ATracer_Shotgun_C");
-static_assert(offsetof(ATracer_Shotgun_C, UberGraphFrame) == 0x0002D8, "Member 'ATracer_Shotgun_C::UberGraphFrame' has a wrong offset!");
 
 }
 

@@ -24,9 +24,9 @@ void IBPI_Building_Actor_Destroyed_C::Event_Building_Actor_Destroyed()
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_Building_Actor_Destroyed_C", "Event_Building_Actor_Destroyed");
+		Func = AsUObject()->Class->GetFunction("BPI_Building_Actor_Destroyed_C", "Event_Building_Actor_Destroyed");
 
-	UObject::ProcessEvent(Func, nullptr);
+	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
 }

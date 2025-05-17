@@ -37,20 +37,6 @@ void AB_Generic_Instance_Grenade_Playset_Athena_C::ExecuteUbergraph_B_Generic_In
 }
 
 
-// Function B_Generic_Instance_Grenade_Playset_Athena.B_Generic_Instance_Grenade_Playset_Athena_C.K2_OnUnEquip
-// (Event, Public, BlueprintEvent)
-
-void AB_Generic_Instance_Grenade_Playset_Athena_C::K2_OnUnEquip()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_Generic_Instance_Grenade_Playset_Athena_C", "K2_OnUnEquip");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function B_Generic_Instance_Grenade_Playset_Athena.B_Generic_Instance_Grenade_Playset_Athena_C.OnWeaponAttached
 // (Event, Public, BlueprintEvent)
 
@@ -60,6 +46,20 @@ void AB_Generic_Instance_Grenade_Playset_Athena_C::OnWeaponAttached()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("B_Generic_Instance_Grenade_Playset_Athena_C", "OnWeaponAttached");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_Generic_Instance_Grenade_Playset_Athena.B_Generic_Instance_Grenade_Playset_Athena_C.K2_OnUnEquip
+// (Event, Public, BlueprintEvent)
+
+void AB_Generic_Instance_Grenade_Playset_Athena_C::K2_OnUnEquip()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Generic_Instance_Grenade_Playset_Athena_C", "K2_OnUnEquip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

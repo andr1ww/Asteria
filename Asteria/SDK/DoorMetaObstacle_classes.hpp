@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UDoorMetaObstacle_C>();
 	}
 };
-static_assert(alignof(UDoorMetaObstacle_C) == 0x000008, "Wrong alignment on UDoorMetaObstacle_C");
-static_assert(sizeof(UDoorMetaObstacle_C) == 0x0000C8, "Wrong size on UDoorMetaObstacle_C");
 
 }
 

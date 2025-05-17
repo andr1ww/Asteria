@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "PlayerPawn_Athena_Generic_Parent_classes.hpp"
+#include "FortniteGame_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 
 
@@ -22,92 +22,79 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C
-// 0x02E0 (0x2D40 - 0x2A60)
-#pragma pack(push, 0x1)
-class alignas(0x10) APlayerPawn_Athena_Generic_C : public APlayerPawn_Athena_Generic_Parent_C
+// 0x0240 (0x3A80 - 0x3840)
+class APlayerPawn_Athena_Generic_C : public APlayerPawn_Athena_Generic_Parent_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_PlayerPawn_Athena_Generic_C;        // 0x2A60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*               Effect_WaterInteraction_FX;                        // 0x2A68(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               AnimTrailPS;                                       // 0x2A70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               HitDamageParticles;                                // 0x2A78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 ScreenEffect_PlayerHealthDamageDirection;          // 0x2A80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 ScreenEffect_PlayerHealthDamage;                   // 0x2A88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 ScreenEffect_PlayerShieldDamageDirection;          // 0x2A90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 ScreenEffect_PlayerShieldDamage;                   // 0x2A98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanSpawnDustLandFX_;                               // 0x2AA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          IsInWater;                                         // 0x2AA1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2AA2[0x2];                                     // 0x2AA2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               RunWalkParticleRotation;                           // 0x2AA4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FGameplayTagContainer                  GameplayTagsForHitByHuskMeleeSound;                // 0x2AB0(0x0020)(Edit, BlueprintVisible)
-	int32                                         WaterCounter;                                      // 0x2AD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Tick_Delta_Seconds;                                // 0x2AD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Sound_Shield_Impact;                               // 0x2AD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Sound_Shield_Destroyed;                            // 0x2AE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Sound_Shield_FullyCharged;                         // 0x2AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Sound_Shield_StartRecharge;                        // 0x2AF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  TC_GameplayCueDamageShielded;                      // 0x2AF8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          LatestDamageIsShieldDamage;                        // 0x2B18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2B19[0x3];                                     // 0x2B19(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Damage_Taken;                                      // 0x2B1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Last_Shield_Damage_Time;                           // 0x2B20(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BodyValid;                                         // 0x2B24(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          BackpackValid;                                     // 0x2B25(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          HatValid;                                          // 0x2B26(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          FaceValid;                                         // 0x2B27(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          CharmValid;                                        // 0x2B28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          HeadValid;                                         // 0x2B29(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2B2A[0x6];                                     // 0x2B2A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        Effect_Player_LandedDust;                          // 0x2B30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       TempArray;                                         // 0x2B38(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class USceneComponent*                        Sound_Player_Hit;                                  // 0x2B48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UForceFeedbackEffect*                   DamageForceFeedback;                               // 0x2B50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        Effect_Player_Landed_WindVector_P;                 // 0x2B58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 SpeechBubbleWidgetClass;                           // 0x2B60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   LastSpeechText;                                    // 0x2B68(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UClass*                                 DamageCameraShake;                                 // 0x2B80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseAnimTrailsNotifies;                             // 0x2B88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2B89[0x3];                                     // 0x2B89(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Time_when_you_ll_be_able_to_splash_again;          // 0x2B8C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CurrentWaterMeshActor;                             // 0x2B90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             WaterTraceHitLocation;                             // 0x2B98(0x0088)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FVector                                StableVelocityVector;                              // 0x2C20(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C2C[0x4];                                     // 0x2C2C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        PlayerRunTemplate_Ground;                          // 0x2C30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        PlayerWalkTemplate_Ground;                         // 0x2C38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        PlayerRunTemplate_Water;                           // 0x2C40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        PlayerWalkTemplate_Water;                          // 0x2C48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMesh*                          Pawn_Charm_Skeletal_Mesh;                          // 0x2C50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               AnimTrailsPS_Ref;                                  // 0x2C58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     WeaponMaterialOverride;                            // 0x2C60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TickWaterLevel;                                    // 0x2C68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2C69[0x7];                                     // 0x2C69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 WetnessDepthTexture;                               // 0x2C70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               WaterLevelMID;                                     // 0x2C78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               WaterDecayMID;                                     // 0x2C80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Was_RTT_Enabled_Var_Set;                           // 0x2C88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Is_RTT_Enabled;                                    // 0x2C89(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2C8A[0x2];                                     // 0x2C8A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StartingMinCapsuleShadowVis;                       // 0x2C8C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsShielded;                                        // 0x2C90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2C91[0x3];                                     // 0x2C91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InstigatorCheckDistanceSqrd;                       // 0x2C94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SlideDustActivateSpeed;                            // 0x2C98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanSpawnSlideKickupFX_;                            // 0x2C9C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2C9D[0x3];                                     // 0x2C9D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        Effect_Player_ShieldActivate;                      // 0x2CA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        Effect_PLayer_ShieldBreak;                         // 0x2CA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          GhostMode;                                         // 0x2CB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2CB1[0x7];                                     // 0x2CB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               OverrideAnimTrail;                                 // 0x2CB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(bool bActive)>  AnimNotify_Begin;                                  // 0x2CC0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              AnimNotify_End;                                    // 0x2CD0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          bIsInFrontendHologram;                             // 0x2CE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2CE1[0x7];                                     // 0x2CE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             Sound_Shield_Destroyed_2D;                         // 0x2CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  PoisonDartGETag;                                   // 0x2CF0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class USoundBase*                             Sound_Shield_Destroyed_Crit_2D;                    // 0x2D10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  DogSweaterDamageGETag;                             // 0x2D18(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame_PlayerPawn_Athena_Generic_C;        // 0x3840(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               Effect_WaterInteraction_FX;                        // 0x3848(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               AnimTrailPS;                                       // 0x3850(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSpawnDustLandFX_;                               // 0x3858(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsInWater;                                         // 0x3859(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_385A[0x2];                                     // 0x385A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               RunWalkParticleRotation;                           // 0x385C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	int32                                         WaterCounter;                                      // 0x3868(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Tick_Delta_Seconds;                                // 0x386C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sound_Shield_Impact;                               // 0x3870(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sound_Shield_Destroyed;                            // 0x3878(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sound_Shield_FullyCharged;                         // 0x3880(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sound_Shield_StartRecharge;                        // 0x3888(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BodyValid;                                         // 0x3890(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          BackpackValid;                                     // 0x3891(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          HatValid;                                          // 0x3892(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          FaceValid;                                         // 0x3893(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          CharmValid;                                        // 0x3894(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          HeadValid;                                         // 0x3895(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3896[0x2];                                     // 0x3896(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystem*                        Effect_Player_LandedDust;                          // 0x3898(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       TempArray;                                         // 0x38A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class USceneComponent*                        Sound_Player_Hit;                                  // 0x38B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        Effect_Player_Landed_WindVector_P;                 // 0x38B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 SpeechBubbleWidgetClass;                           // 0x38C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   LastSpeechText;                                    // 0x38C8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          UseAnimTrailsNotifies;                             // 0x38E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_38E1[0x3];                                     // 0x38E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Time_when_you_ll_be_able_to_splash_again;          // 0x38E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CurrentWaterMeshActor;                             // 0x38E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             WaterTraceHitLocation;                             // 0x38F0(0x008C)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector                                StableVelocityVector;                              // 0x397C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        PlayerRunTemplate_Ground;                          // 0x3988(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        PlayerWalkTemplate_Ground;                         // 0x3990(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        PlayerRunTemplate_Water;                           // 0x3998(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        PlayerWalkTemplate_Water;                          // 0x39A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          Pawn_Charm_Skeletal_Mesh;                          // 0x39A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               AnimTrailsPS_Ref;                                  // 0x39B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     WeaponMaterialOverride;                            // 0x39B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TickWaterLevel;                                    // 0x39C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39C1[0x7];                                     // 0x39C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 WetnessDepthTexture;                               // 0x39C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               WaterLevelMID;                                     // 0x39D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               WaterDecayMID;                                     // 0x39D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Was_RTT_Enabled_Var_Set;                           // 0x39E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Is_RTT_Enabled;                                    // 0x39E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39E2[0x2];                                     // 0x39E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StartingMinCapsuleShadowVis;                       // 0x39E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsShielded;                                        // 0x39E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39E9[0x3];                                     // 0x39E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InstigatorCheckDistanceSqrd;                       // 0x39EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SlideDustActivateSpeed;                            // 0x39F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanSpawnSlideKickupFX_;                            // 0x39F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39F5[0x3];                                     // 0x39F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystem*                        Effect_Player_ShieldActivate;                      // 0x39F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        Effect_PLayer_ShieldBreak;                         // 0x3A00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GhostMode;                                         // 0x3A08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3A09[0x7];                                     // 0x3A09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFXSystemComponent*                     OverrideAnimTrail;                                 // 0x3A10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(bool bActive)>  AnimNotify_Begin;                                  // 0x3A18(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              AnimNotify_End;                                    // 0x3A28(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class USoundBase*                             Sound_Shield_Destroyed_2D;                         // 0x3A38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sound_Shield_Destroyed_Crit_2D;                    // 0x3A40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFXSystemComponent*                     AnimTrailFX;                                       // 0x3A48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(const struct FGameplayTagContainer& Damage_Tags, const struct FHitResult& Hit_Info, class AFortPawn* Instigated_By, class AActor* Damage_Causer)> PlayDamageEffect; // 0x3A50(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FName                                   Component_Tag_AnimTrailFX_Const;                   // 0x3A60(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ReppedCapsuleExtraHalfHeight;                      // 0x3A68(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	float                                         CachedCapsuleHalfHeight;                           // 0x3A6C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnCharacterPartsMIDInitialized;                    // 0x3A70(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_PlayerPawn_Athena_Generic(int32 EntryPoint);
@@ -118,7 +105,7 @@ public:
 	void GameplayCue_Shield_PotionConsumed(EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters);
 	void GameplayCue_Abilities_SpookyMist_Loop(EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters);
 	void AnimTrailsDisable();
-	void AnimTrailsSetup(class UParticleSystem* ParticleSystemReference, class FName FirstSocketName, class FName SecondSocketName, float Width, class UParticleSystemComponent* OverrideParticleComp, class FName OverideFirstSocketName, class FName OverideSecondSocketName);
+	void AnimTrailsSetup(class UParticleSystem* ParticleSystemReference, class UNiagaraSystem* NiagaraSystemReference, class FName FirstSocketName, class FName SecondSocketName, float Width, class UFXSystemComponent* OverrideParticleComp, class FName OverideFirstSocketName, class FName OverideSecondSocketName);
 	void AnimTrailsNotify(bool bActive);
 	void BindOnDestroyed();
 	void CharacterDestroyed(class AActor* DestroyedActor);
@@ -135,17 +122,17 @@ public:
 	void OnDamagePlayEffects(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AFortPawn* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext);
 	void MeleeSwingLeft_End();
 	void MeleeSwingRight_End();
-	void MeleeSwingLeft();
-	void MeleeSwingRight();
+	void MeleeSwingLeft(bool First_Left);
+	void MeleeSwingRight(bool First_Right);
 	void UserConstructionScript();
 	void Create_and_Duplicate_Effect_Skeletal_Meshes_Parent(EFortCustomPartType BodyType, class USkeletalMeshComponent*& DuplicatedSkeletalMeshComponent, class UMaterialInterface* Material_to_Apply, TArray<class UMaterialInstanceDynamic*>& Empty_MID_Array, int32 TranslucentSortPriority);
 	void SlaveAMeshToTheBody(class USkeletalMeshComponent* Mesh_0, class USkeletalMeshComponent* Master);
 	void Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh(EFortCustomPartType BodyType, class UMaterialInterface* Material_to_Apply, TArray<class UMaterialInstanceDynamic*>& Empty_MID_Array, int32 TranslucentSortPriority, class UPoseableMeshComponent*& PoseableMesh);
 	void DisableWaterLevelTick();
 	void Are_the_wind_and_water_RTT_passes_enabled(bool* NewParam);
-	void GetHitPoint_FXLocation(class AActor* Object, struct FVector* OutputLocation);
 	void ReInitFrontendPetDisplay();
 	void PlayShieldDestroyedSound(const struct FGameplayCueParameters& GameplayCueParameters);
+	void OnRep_CapsuleEnlarged();
 	void Melee_Effect_Color(struct FVector* Melee_Color_Set);
 
 public:
@@ -158,79 +145,6 @@ public:
 		return GetDefaultObjImpl<APlayerPawn_Athena_Generic_C>();
 	}
 };
-#pragma pack(pop)
-static_assert(alignof(APlayerPawn_Athena_Generic_C) == 0x000010, "Wrong alignment on APlayerPawn_Athena_Generic_C");
-static_assert(sizeof(APlayerPawn_Athena_Generic_C) == 0x002D40, "Wrong size on APlayerPawn_Athena_Generic_C");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, UberGraphFrame_PlayerPawn_Athena_Generic_C) == 0x002A60, "Member 'APlayerPawn_Athena_Generic_C::UberGraphFrame_PlayerPawn_Athena_Generic_C' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Effect_WaterInteraction_FX) == 0x002A68, "Member 'APlayerPawn_Athena_Generic_C::Effect_WaterInteraction_FX' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, AnimTrailPS) == 0x002A70, "Member 'APlayerPawn_Athena_Generic_C::AnimTrailPS' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, HitDamageParticles) == 0x002A78, "Member 'APlayerPawn_Athena_Generic_C::HitDamageParticles' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, ScreenEffect_PlayerHealthDamageDirection) == 0x002A80, "Member 'APlayerPawn_Athena_Generic_C::ScreenEffect_PlayerHealthDamageDirection' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, ScreenEffect_PlayerHealthDamage) == 0x002A88, "Member 'APlayerPawn_Athena_Generic_C::ScreenEffect_PlayerHealthDamage' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, ScreenEffect_PlayerShieldDamageDirection) == 0x002A90, "Member 'APlayerPawn_Athena_Generic_C::ScreenEffect_PlayerShieldDamageDirection' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, ScreenEffect_PlayerShieldDamage) == 0x002A98, "Member 'APlayerPawn_Athena_Generic_C::ScreenEffect_PlayerShieldDamage' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, CanSpawnDustLandFX_) == 0x002AA0, "Member 'APlayerPawn_Athena_Generic_C::CanSpawnDustLandFX_' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, IsInWater) == 0x002AA1, "Member 'APlayerPawn_Athena_Generic_C::IsInWater' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, RunWalkParticleRotation) == 0x002AA4, "Member 'APlayerPawn_Athena_Generic_C::RunWalkParticleRotation' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, GameplayTagsForHitByHuskMeleeSound) == 0x002AB0, "Member 'APlayerPawn_Athena_Generic_C::GameplayTagsForHitByHuskMeleeSound' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, WaterCounter) == 0x002AD0, "Member 'APlayerPawn_Athena_Generic_C::WaterCounter' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Tick_Delta_Seconds) == 0x002AD4, "Member 'APlayerPawn_Athena_Generic_C::Tick_Delta_Seconds' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Sound_Shield_Impact) == 0x002AD8, "Member 'APlayerPawn_Athena_Generic_C::Sound_Shield_Impact' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Sound_Shield_Destroyed) == 0x002AE0, "Member 'APlayerPawn_Athena_Generic_C::Sound_Shield_Destroyed' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Sound_Shield_FullyCharged) == 0x002AE8, "Member 'APlayerPawn_Athena_Generic_C::Sound_Shield_FullyCharged' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Sound_Shield_StartRecharge) == 0x002AF0, "Member 'APlayerPawn_Athena_Generic_C::Sound_Shield_StartRecharge' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, TC_GameplayCueDamageShielded) == 0x002AF8, "Member 'APlayerPawn_Athena_Generic_C::TC_GameplayCueDamageShielded' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, LatestDamageIsShieldDamage) == 0x002B18, "Member 'APlayerPawn_Athena_Generic_C::LatestDamageIsShieldDamage' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Damage_Taken) == 0x002B1C, "Member 'APlayerPawn_Athena_Generic_C::Damage_Taken' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Last_Shield_Damage_Time) == 0x002B20, "Member 'APlayerPawn_Athena_Generic_C::Last_Shield_Damage_Time' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, BodyValid) == 0x002B24, "Member 'APlayerPawn_Athena_Generic_C::BodyValid' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, BackpackValid) == 0x002B25, "Member 'APlayerPawn_Athena_Generic_C::BackpackValid' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, HatValid) == 0x002B26, "Member 'APlayerPawn_Athena_Generic_C::HatValid' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, FaceValid) == 0x002B27, "Member 'APlayerPawn_Athena_Generic_C::FaceValid' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, CharmValid) == 0x002B28, "Member 'APlayerPawn_Athena_Generic_C::CharmValid' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, HeadValid) == 0x002B29, "Member 'APlayerPawn_Athena_Generic_C::HeadValid' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Effect_Player_LandedDust) == 0x002B30, "Member 'APlayerPawn_Athena_Generic_C::Effect_Player_LandedDust' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, TempArray) == 0x002B38, "Member 'APlayerPawn_Athena_Generic_C::TempArray' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Sound_Player_Hit) == 0x002B48, "Member 'APlayerPawn_Athena_Generic_C::Sound_Player_Hit' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, DamageForceFeedback) == 0x002B50, "Member 'APlayerPawn_Athena_Generic_C::DamageForceFeedback' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Effect_Player_Landed_WindVector_P) == 0x002B58, "Member 'APlayerPawn_Athena_Generic_C::Effect_Player_Landed_WindVector_P' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, SpeechBubbleWidgetClass) == 0x002B60, "Member 'APlayerPawn_Athena_Generic_C::SpeechBubbleWidgetClass' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, LastSpeechText) == 0x002B68, "Member 'APlayerPawn_Athena_Generic_C::LastSpeechText' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, DamageCameraShake) == 0x002B80, "Member 'APlayerPawn_Athena_Generic_C::DamageCameraShake' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, UseAnimTrailsNotifies) == 0x002B88, "Member 'APlayerPawn_Athena_Generic_C::UseAnimTrailsNotifies' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Time_when_you_ll_be_able_to_splash_again) == 0x002B8C, "Member 'APlayerPawn_Athena_Generic_C::Time_when_you_ll_be_able_to_splash_again' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, CurrentWaterMeshActor) == 0x002B90, "Member 'APlayerPawn_Athena_Generic_C::CurrentWaterMeshActor' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, WaterTraceHitLocation) == 0x002B98, "Member 'APlayerPawn_Athena_Generic_C::WaterTraceHitLocation' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, StableVelocityVector) == 0x002C20, "Member 'APlayerPawn_Athena_Generic_C::StableVelocityVector' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, PlayerRunTemplate_Ground) == 0x002C30, "Member 'APlayerPawn_Athena_Generic_C::PlayerRunTemplate_Ground' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, PlayerWalkTemplate_Ground) == 0x002C38, "Member 'APlayerPawn_Athena_Generic_C::PlayerWalkTemplate_Ground' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, PlayerRunTemplate_Water) == 0x002C40, "Member 'APlayerPawn_Athena_Generic_C::PlayerRunTemplate_Water' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, PlayerWalkTemplate_Water) == 0x002C48, "Member 'APlayerPawn_Athena_Generic_C::PlayerWalkTemplate_Water' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Pawn_Charm_Skeletal_Mesh) == 0x002C50, "Member 'APlayerPawn_Athena_Generic_C::Pawn_Charm_Skeletal_Mesh' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, AnimTrailsPS_Ref) == 0x002C58, "Member 'APlayerPawn_Athena_Generic_C::AnimTrailsPS_Ref' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, WeaponMaterialOverride) == 0x002C60, "Member 'APlayerPawn_Athena_Generic_C::WeaponMaterialOverride' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, TickWaterLevel) == 0x002C68, "Member 'APlayerPawn_Athena_Generic_C::TickWaterLevel' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, WetnessDepthTexture) == 0x002C70, "Member 'APlayerPawn_Athena_Generic_C::WetnessDepthTexture' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, WaterLevelMID) == 0x002C78, "Member 'APlayerPawn_Athena_Generic_C::WaterLevelMID' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, WaterDecayMID) == 0x002C80, "Member 'APlayerPawn_Athena_Generic_C::WaterDecayMID' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Was_RTT_Enabled_Var_Set) == 0x002C88, "Member 'APlayerPawn_Athena_Generic_C::Was_RTT_Enabled_Var_Set' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Is_RTT_Enabled) == 0x002C89, "Member 'APlayerPawn_Athena_Generic_C::Is_RTT_Enabled' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, StartingMinCapsuleShadowVis) == 0x002C8C, "Member 'APlayerPawn_Athena_Generic_C::StartingMinCapsuleShadowVis' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, IsShielded) == 0x002C90, "Member 'APlayerPawn_Athena_Generic_C::IsShielded' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, InstigatorCheckDistanceSqrd) == 0x002C94, "Member 'APlayerPawn_Athena_Generic_C::InstigatorCheckDistanceSqrd' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, SlideDustActivateSpeed) == 0x002C98, "Member 'APlayerPawn_Athena_Generic_C::SlideDustActivateSpeed' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, CanSpawnSlideKickupFX_) == 0x002C9C, "Member 'APlayerPawn_Athena_Generic_C::CanSpawnSlideKickupFX_' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Effect_Player_ShieldActivate) == 0x002CA0, "Member 'APlayerPawn_Athena_Generic_C::Effect_Player_ShieldActivate' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Effect_PLayer_ShieldBreak) == 0x002CA8, "Member 'APlayerPawn_Athena_Generic_C::Effect_PLayer_ShieldBreak' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, GhostMode) == 0x002CB0, "Member 'APlayerPawn_Athena_Generic_C::GhostMode' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, OverrideAnimTrail) == 0x002CB8, "Member 'APlayerPawn_Athena_Generic_C::OverrideAnimTrail' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, AnimNotify_Begin) == 0x002CC0, "Member 'APlayerPawn_Athena_Generic_C::AnimNotify_Begin' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, AnimNotify_End) == 0x002CD0, "Member 'APlayerPawn_Athena_Generic_C::AnimNotify_End' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, bIsInFrontendHologram) == 0x002CE0, "Member 'APlayerPawn_Athena_Generic_C::bIsInFrontendHologram' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Sound_Shield_Destroyed_2D) == 0x002CE8, "Member 'APlayerPawn_Athena_Generic_C::Sound_Shield_Destroyed_2D' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, PoisonDartGETag) == 0x002CF0, "Member 'APlayerPawn_Athena_Generic_C::PoisonDartGETag' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, Sound_Shield_Destroyed_Crit_2D) == 0x002D10, "Member 'APlayerPawn_Athena_Generic_C::Sound_Shield_Destroyed_Crit_2D' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Athena_Generic_C, DogSweaterDamageGETag) == 0x002D18, "Member 'APlayerPawn_Athena_Generic_C::DogSweaterDamageGETag' has a wrong offset!");
 
 }
 

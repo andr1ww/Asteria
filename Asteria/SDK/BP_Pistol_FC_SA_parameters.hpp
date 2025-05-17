@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+
 
 namespace SDK::Params
 {
@@ -21,9 +23,14 @@ struct BP_Pistol_FC_SA_C_ExecuteUbergraph_BP_Pistol_FC_SA final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_Pistol_FC_SA_C_ExecuteUbergraph_BP_Pistol_FC_SA) == 0x000004, "Wrong alignment on BP_Pistol_FC_SA_C_ExecuteUbergraph_BP_Pistol_FC_SA");
-static_assert(sizeof(BP_Pistol_FC_SA_C_ExecuteUbergraph_BP_Pistol_FC_SA) == 0x000004, "Wrong size on BP_Pistol_FC_SA_C_ExecuteUbergraph_BP_Pistol_FC_SA");
-static_assert(offsetof(BP_Pistol_FC_SA_C_ExecuteUbergraph_BP_Pistol_FC_SA, EntryPoint) == 0x000000, "Member 'BP_Pistol_FC_SA_C_ExecuteUbergraph_BP_Pistol_FC_SA::EntryPoint' has a wrong offset!");
+
+// Function BP_Pistol_FC_SA.BP_Pistol_FC_SA_C.AnimGraph
+// 0x0010 (0x0010 - 0x0000)
+struct BP_Pistol_FC_SA_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+};
 
 }
 

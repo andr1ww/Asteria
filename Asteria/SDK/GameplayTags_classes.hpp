@@ -14,6 +14,7 @@
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK
@@ -41,6 +42,7 @@ public:
 	static bool HasAnyTags(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bExactMatch);
 	static bool HasTag(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTag& Tag, bool bExactMatch);
 	static bool IsGameplayTagValid(const struct FGameplayTag& GameplayTag);
+	static bool IsTagQueryEmpty(const struct FGameplayTagQuery& TagQuery);
 	static struct FGameplayTagContainer MakeGameplayTagContainerFromArray(const TArray<struct FGameplayTag>& GameplayTags);
 	static struct FGameplayTagContainer MakeGameplayTagContainerFromTag(const struct FGameplayTag& SingleTag);
 	static struct FGameplayTagQuery MakeGameplayTagQuery(const struct FGameplayTagQuery& TagQuery);
@@ -64,12 +66,10 @@ public:
 		return GetDefaultObjImpl<UBlueprintGameplayTagLibrary>();
 	}
 };
-static_assert(alignof(UBlueprintGameplayTagLibrary) == 0x000008, "Wrong alignment on UBlueprintGameplayTagLibrary");
-static_assert(sizeof(UBlueprintGameplayTagLibrary) == 0x000028, "Wrong size on UBlueprintGameplayTagLibrary");
 
 // Class GameplayTags.GameplayTagAssetInterface
-// 0x0000 (0x0028 - 0x0028)
-class IGameplayTagAssetInterface final : public IInterface
+// 0x0000 (0x0000 - 0x0000)
+class IGameplayTagAssetInterface final
 {
 public:
 	void GetOwnedGameplayTags(struct FGameplayTagContainer* TagContainer) const;
@@ -86,9 +86,16 @@ public:
 	{
 		return GetDefaultObjImpl<IGameplayTagAssetInterface>();
 	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
 };
-static_assert(alignof(IGameplayTagAssetInterface) == 0x000008, "Wrong alignment on IGameplayTagAssetInterface");
-static_assert(sizeof(IGameplayTagAssetInterface) == 0x000028, "Wrong size on IGameplayTagAssetInterface");
 
 // Class GameplayTags.EditableGameplayTagQuery
 // 0x0070 (0x0098 - 0x0028)
@@ -110,11 +117,6 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQuery>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQuery) == 0x000008, "Wrong alignment on UEditableGameplayTagQuery");
-static_assert(sizeof(UEditableGameplayTagQuery) == 0x000098, "Wrong size on UEditableGameplayTagQuery");
-static_assert(offsetof(UEditableGameplayTagQuery, UserDescription) == 0x000028, "Member 'UEditableGameplayTagQuery::UserDescription' has a wrong offset!");
-static_assert(offsetof(UEditableGameplayTagQuery, RootExpression) == 0x000048, "Member 'UEditableGameplayTagQuery::RootExpression' has a wrong offset!");
-static_assert(offsetof(UEditableGameplayTagQuery, TagQueryExportText_Helper) == 0x000050, "Member 'UEditableGameplayTagQuery::TagQueryExportText_Helper' has a wrong offset!");
 
 // Class GameplayTags.EditableGameplayTagQueryExpression
 // 0x0000 (0x0028 - 0x0028)
@@ -130,8 +132,6 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression");
-static_assert(sizeof(UEditableGameplayTagQueryExpression) == 0x000028, "Wrong size on UEditableGameplayTagQueryExpression");
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AnyTagsMatch
 // 0x0020 (0x0048 - 0x0028)
@@ -150,9 +150,6 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AnyTagsMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AnyTagsMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AnyTagsMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AnyTagsMatch) == 0x000048, "Wrong size on UEditableGameplayTagQueryExpression_AnyTagsMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AnyTagsMatch, Tags) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_AnyTagsMatch::Tags' has a wrong offset!");
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AllTagsMatch
 // 0x0020 (0x0048 - 0x0028)
@@ -171,9 +168,6 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AllTagsMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AllTagsMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AllTagsMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AllTagsMatch) == 0x000048, "Wrong size on UEditableGameplayTagQueryExpression_AllTagsMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AllTagsMatch, Tags) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_AllTagsMatch::Tags' has a wrong offset!");
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_NoTagsMatch
 // 0x0020 (0x0048 - 0x0028)
@@ -192,16 +186,13 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_NoTagsMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_NoTagsMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_NoTagsMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_NoTagsMatch) == 0x000048, "Wrong size on UEditableGameplayTagQueryExpression_NoTagsMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_NoTagsMatch, Tags) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_NoTagsMatch::Tags' has a wrong offset!");
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AnyExprMatch
 // 0x0010 (0x0038 - 0x0028)
 class UEditableGameplayTagQueryExpression_AnyExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                       // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -213,16 +204,13 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AnyExprMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AnyExprMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AnyExprMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AnyExprMatch) == 0x000038, "Wrong size on UEditableGameplayTagQueryExpression_AnyExprMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AnyExprMatch, Expressions) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_AnyExprMatch::Expressions' has a wrong offset!");
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_AllExprMatch
 // 0x0010 (0x0038 - 0x0028)
 class UEditableGameplayTagQueryExpression_AllExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                       // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -234,16 +222,13 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_AllExprMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_AllExprMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_AllExprMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_AllExprMatch) == 0x000038, "Wrong size on UEditableGameplayTagQueryExpression_AllExprMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_AllExprMatch, Expressions) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_AllExprMatch::Expressions' has a wrong offset!");
 
 // Class GameplayTags.EditableGameplayTagQueryExpression_NoExprMatch
 // 0x0010 (0x0038 - 0x0028)
 class UEditableGameplayTagQueryExpression_NoExprMatch final : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                       // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                  // 0x0028(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -255,20 +240,17 @@ public:
 		return GetDefaultObjImpl<UEditableGameplayTagQueryExpression_NoExprMatch>();
 	}
 };
-static_assert(alignof(UEditableGameplayTagQueryExpression_NoExprMatch) == 0x000008, "Wrong alignment on UEditableGameplayTagQueryExpression_NoExprMatch");
-static_assert(sizeof(UEditableGameplayTagQueryExpression_NoExprMatch) == 0x000038, "Wrong size on UEditableGameplayTagQueryExpression_NoExprMatch");
-static_assert(offsetof(UEditableGameplayTagQueryExpression_NoExprMatch, Expressions) == 0x000028, "Member 'UEditableGameplayTagQueryExpression_NoExprMatch::Expressions' has a wrong offset!");
 
 // Class GameplayTags.GameplayTagsManager
-// 0x0188 (0x01B0 - 0x0028)
+// 0x01E8 (0x0210 - 0x0028)
 class UGameplayTagsManager final : public UObject
 {
 public:
 	uint8                                         Pad_28[0x98];                                      // 0x0028(0x0098)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FGameplayTagSource>             TagSources;                                        // 0x00C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_D0[0x80];                                      // 0x00D0(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UDataTable*>                     GameplayTagTables;                                 // 0x0150(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_160[0x50];                                     // 0x0160(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FGameplayTagSource>             TagSources;                                        // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_D0[0xE0];                                      // 0x00D0(0x00E0)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UDataTable*>                     GameplayTagTables;                                 // 0x01B0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C0[0x50];                                     // 0x01C0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -280,10 +262,6 @@ public:
 		return GetDefaultObjImpl<UGameplayTagsManager>();
 	}
 };
-static_assert(alignof(UGameplayTagsManager) == 0x000008, "Wrong alignment on UGameplayTagsManager");
-static_assert(sizeof(UGameplayTagsManager) == 0x0001B0, "Wrong size on UGameplayTagsManager");
-static_assert(offsetof(UGameplayTagsManager, TagSources) == 0x0000C0, "Member 'UGameplayTagsManager::TagSources' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsManager, GameplayTagTables) == 0x000150, "Member 'UGameplayTagsManager::GameplayTagTables' has a wrong offset!");
 
 // Class GameplayTags.GameplayTagsList
 // 0x0020 (0x0048 - 0x0028)
@@ -291,7 +269,7 @@ class UGameplayTagsList : public UObject
 {
 public:
 	class FString                                 ConfigFileName;                                    // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagTableRow>           GameplayTagList;                                   // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTagTableRow>           GameplayTagList;                                   // 0x0038(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -303,10 +281,6 @@ public:
 		return GetDefaultObjImpl<UGameplayTagsList>();
 	}
 };
-static_assert(alignof(UGameplayTagsList) == 0x000008, "Wrong alignment on UGameplayTagsList");
-static_assert(sizeof(UGameplayTagsList) == 0x000048, "Wrong size on UGameplayTagsList");
-static_assert(offsetof(UGameplayTagsList, ConfigFileName) == 0x000028, "Member 'UGameplayTagsList::ConfigFileName' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsList, GameplayTagList) == 0x000038, "Member 'UGameplayTagsList::GameplayTagList' has a wrong offset!");
 
 // Class GameplayTags.RestrictedGameplayTagsList
 // 0x0020 (0x0048 - 0x0028)
@@ -314,7 +288,7 @@ class URestrictedGameplayTagsList final : public UObject
 {
 public:
 	class FString                                 ConfigFileName;                                    // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FRestrictedGameplayTagTableRow> RestrictedGameplayTagList;                         // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FRestrictedGameplayTagTableRow> RestrictedGameplayTagList;                         // 0x0038(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -326,10 +300,6 @@ public:
 		return GetDefaultObjImpl<URestrictedGameplayTagsList>();
 	}
 };
-static_assert(alignof(URestrictedGameplayTagsList) == 0x000008, "Wrong alignment on URestrictedGameplayTagsList");
-static_assert(sizeof(URestrictedGameplayTagsList) == 0x000048, "Wrong size on URestrictedGameplayTagsList");
-static_assert(offsetof(URestrictedGameplayTagsList, ConfigFileName) == 0x000028, "Member 'URestrictedGameplayTagsList::ConfigFileName' has a wrong offset!");
-static_assert(offsetof(URestrictedGameplayTagsList, RestrictedGameplayTagList) == 0x000038, "Member 'URestrictedGameplayTagsList::RestrictedGameplayTagList' has a wrong offset!");
 
 // Class GameplayTags.GameplayTagsSettings
 // 0x0070 (0x00B8 - 0x0048)
@@ -341,13 +311,13 @@ public:
 	bool                                          FastReplication;                                   // 0x004A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4B[0x5];                                       // 0x004B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 InvalidTagCharacters;                              // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagCategoryRemap>      CategoryRemapping;                                 // 0x0060(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<struct FSoftObjectPath>                GameplayTagTableList;                              // 0x0070(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<struct FGameplayTagRedirect>           GameplayTagRedirects;                              // 0x0080(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<class FName>                           CommonlyReplicatedTags;                            // 0x0090(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTagCategoryRemap>      CategoryRemapping;                                 // 0x0060(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FSoftObjectPath>                GameplayTagTableList;                              // 0x0070(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGameplayTagRedirect>           GameplayTagRedirects;                              // 0x0080(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           CommonlyReplicatedTags;                            // 0x0090(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumBitsForContainerSize;                           // 0x00A0(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NetIndexFirstBitSegment;                           // 0x00A4(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FRestrictedConfigInfo>          RestrictedConfigFiles;                             // 0x00A8(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, NativeAccessSpecifierPublic)
+	TArray<struct FRestrictedConfigInfo>          RestrictedConfigFiles;                             // 0x00A8(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -359,26 +329,14 @@ public:
 		return GetDefaultObjImpl<UGameplayTagsSettings>();
 	}
 };
-static_assert(alignof(UGameplayTagsSettings) == 0x000008, "Wrong alignment on UGameplayTagsSettings");
-static_assert(sizeof(UGameplayTagsSettings) == 0x0000B8, "Wrong size on UGameplayTagsSettings");
-static_assert(offsetof(UGameplayTagsSettings, ImportTagsFromConfig) == 0x000048, "Member 'UGameplayTagsSettings::ImportTagsFromConfig' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, WarnOnInvalidTags) == 0x000049, "Member 'UGameplayTagsSettings::WarnOnInvalidTags' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, FastReplication) == 0x00004A, "Member 'UGameplayTagsSettings::FastReplication' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, InvalidTagCharacters) == 0x000050, "Member 'UGameplayTagsSettings::InvalidTagCharacters' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, CategoryRemapping) == 0x000060, "Member 'UGameplayTagsSettings::CategoryRemapping' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, GameplayTagTableList) == 0x000070, "Member 'UGameplayTagsSettings::GameplayTagTableList' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, GameplayTagRedirects) == 0x000080, "Member 'UGameplayTagsSettings::GameplayTagRedirects' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, CommonlyReplicatedTags) == 0x000090, "Member 'UGameplayTagsSettings::CommonlyReplicatedTags' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, NumBitsForContainerSize) == 0x0000A0, "Member 'UGameplayTagsSettings::NumBitsForContainerSize' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, NetIndexFirstBitSegment) == 0x0000A4, "Member 'UGameplayTagsSettings::NetIndexFirstBitSegment' has a wrong offset!");
-static_assert(offsetof(UGameplayTagsSettings, RestrictedConfigFiles) == 0x0000A8, "Member 'UGameplayTagsSettings::RestrictedConfigFiles' has a wrong offset!");
 
 // Class GameplayTags.GameplayTagsDeveloperSettings
-// 0x0010 (0x0038 - 0x0028)
-class UGameplayTagsDeveloperSettings final : public UObject
+// 0x0018 (0x0050 - 0x0038)
+class UGameplayTagsDeveloperSettings final : public UDeveloperSettings
 {
 public:
-	class FString                                 DeveloperConfigName;                               // 0x0028(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DeveloperConfigName;                               // 0x0038(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   FavoriteTagSource;                                 // 0x0048(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -390,9 +348,6 @@ public:
 		return GetDefaultObjImpl<UGameplayTagsDeveloperSettings>();
 	}
 };
-static_assert(alignof(UGameplayTagsDeveloperSettings) == 0x000008, "Wrong alignment on UGameplayTagsDeveloperSettings");
-static_assert(sizeof(UGameplayTagsDeveloperSettings) == 0x000038, "Wrong size on UGameplayTagsDeveloperSettings");
-static_assert(offsetof(UGameplayTagsDeveloperSettings, DeveloperConfigName) == 0x000028, "Member 'UGameplayTagsDeveloperSettings::DeveloperConfigName' has a wrong offset!");
 
 }
 

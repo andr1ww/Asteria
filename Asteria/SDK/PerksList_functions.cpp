@@ -31,29 +31,15 @@ void UPerksList_C::ResetVariables()
 }
 
 
-// Function PerksList.PerksList_C.OnStateChanged
-// (Event, Public, BlueprintEvent)
+// Function PerksList.PerksList_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UPerksList_C::OnStateChanged()
+void UPerksList_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PerksList_C", "OnStateChanged");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function PerksList.PerksList_C.OnHeroChanged
-// (Event, Public, BlueprintEvent)
-
-void UPerksList_C::OnHeroChanged()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PerksList_C", "OnHeroChanged");
+		Func = Class->GetFunction("PerksList_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -62,7 +48,7 @@ void UPerksList_C::OnHeroChanged()
 // Function PerksList.PerksList_C.OnGeneratePerkTier
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FFortUIPerkTier                  FortPerkTier                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FFortUIPerkTier&           FortPerkTier                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 // class UFortPerkTierWidget_NUI*          PerkTierWidget                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UPerksList_C::OnGeneratePerkTier(const struct FFortUIPerkTier& FortPerkTier, class UFortPerkTierWidget_NUI* PerkTierWidget)
@@ -84,7 +70,7 @@ void UPerksList_C::OnGeneratePerkTier(const struct FFortUIPerkTier& FortPerkTier
 // Function PerksList.PerksList_C.OnGeneratePerk
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FFortUIPerk                      FortPerk                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortUIPerk&               FortPerk                                               (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UFortPerkWidget_NUI*              PerkWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UPerksList_C::OnGeneratePerk(const struct FFortUIPerk& FortPerk, class UFortPerkWidget_NUI* PerkWidget)
@@ -103,15 +89,29 @@ void UPerksList_C::OnGeneratePerk(const struct FFortUIPerk& FortPerk, class UFor
 }
 
 
-// Function PerksList.PerksList_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function PerksList.PerksList_C.OnHeroChanged
+// (Event, Public, BlueprintEvent)
 
-void UPerksList_C::Construct()
+void UPerksList_C::OnHeroChanged()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PerksList_C", "Construct");
+		Func = Class->GetFunction("PerksList_C", "OnHeroChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PerksList.PerksList_C.OnStateChanged
+// (Event, Public, BlueprintEvent)
+
+void UPerksList_C::OnStateChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PerksList_C", "OnStateChanged");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

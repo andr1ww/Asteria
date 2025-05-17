@@ -10,16 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "BP_BattleMapBaseNode_classes.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BattleMapAirMoveNode.BP_BattleMapAirMoveNode_C
-// 0x0000 (0x0370 - 0x0370)
-class ABP_BattleMapAirMoveNode_C final : public ABP_BattleMapBaseNode_C
+// 0x0010 (0x0368 - 0x0358)
+class ABP_BattleMapAirMoveNode_C final : public ABattleMapGroundMoveNode
 {
+public:
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0358(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -30,8 +34,6 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapAirMoveNode_C>();
 	}
 };
-static_assert(alignof(ABP_BattleMapAirMoveNode_C) == 0x000008, "Wrong alignment on ABP_BattleMapAirMoveNode_C");
-static_assert(sizeof(ABP_BattleMapAirMoveNode_C) == 0x000370, "Wrong size on ABP_BattleMapAirMoveNode_C");
 
 }
 

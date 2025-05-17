@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CommonUIInputData.CommonUIInputData_C
-// 0x0000 (0x0038 - 0x0038)
+// 0x0000 (0x0048 - 0x0048)
 class UCommonUIInputData_C final : public UCommonUIInputData
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UCommonUIInputData_C>();
 	}
 };
-static_assert(alignof(UCommonUIInputData_C) == 0x000008, "Wrong alignment on UCommonUIInputData_C");
-static_assert(sizeof(UCommonUIInputData_C) == 0x000038, "Wrong size on UCommonUIInputData_C");
 
 }
 

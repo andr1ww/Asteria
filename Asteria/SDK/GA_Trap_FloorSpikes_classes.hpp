@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Trap_FloorSpikes.GA_Trap_FloorSpikes_C
-// 0x0000 (0x0970 - 0x0970)
+// 0x0000 (0x0AD8 - 0x0AD8)
 class UGA_Trap_FloorSpikes_C final : public UGA_TrapGeneric_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGA_Trap_FloorSpikes_C>();
 	}
 };
-static_assert(alignof(UGA_Trap_FloorSpikes_C) == 0x000008, "Wrong alignment on UGA_Trap_FloorSpikes_C");
-static_assert(sizeof(UGA_Trap_FloorSpikes_C) == 0x000970, "Wrong size on UGA_Trap_FloorSpikes_C");
 
 }
 

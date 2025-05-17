@@ -10,34 +10,37 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass ToyOptionsComponent.ToyOptionsComponent_C
-// 0x0080 (0x0348 - 0x02C8)
+// 0x00B8 (0x02D8 - 0x0220)
 class UToyOptionsComponent_C final : public UFortActorOptionsComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TSoftClassPtr<class UClass>                   OptionsWidgetClass;                                // 0x02D0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   MyIslandTabList;                                   // 0x02F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          IsMachine;                                         // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerController*                  InteractingPlayer;                                 // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortMatchmakingKnobsModal*             outModalWidget;                                    // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bInteractSuccess;                                  // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_339[0x7];                                      // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 ClassToLoad;                                       // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TSoftClassPtr<class UClass>                   OptionsWidgetClass;                                // 0x0228(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   MyIslandTabList;                                   // 0x0250(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          IsMachine;                                         // 0x0278(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_279[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerController*                  InteractingPlayer;                                 // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortMatchmakingKnobsModal*             outModalWidget;                                    // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInteractSuccess;                                  // 0x0290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 ClassToLoad;                                       // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   PropertyEditorWidgetClass;                         // 0x02A0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UUserWidget*                            CachedDisplayWidget;                               // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LoadingAssets;                                     // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	bool BlueprintOnLocalInteract(class AFortPlayerPawn* InteractingPawn);
-	void OnLoaded_E8F4D2FB4AB5542DE83E50B51A402D27(class UClass* Loaded);
-	void DisplayOptions(class APlayerController* InteractingPlayer_0, TSoftClassPtr<class UClass> WidgetClass);
 	void ExecuteUbergraph_ToyOptionsComponent(int32 EntryPoint);
+	void DisplayOptions(class APlayerController* InteractingPlayer_0, TSoftClassPtr<class UClass> WidgetClass);
+	void OnLoaded_E8F4D2FB4AB5542DE83E50B51A402D27(class UClass* Loaded);
+	bool BlueprintOnLocalInteract(class AFortPlayerPawn* InteractingPawn);
 
 public:
 	static class UClass* StaticClass()
@@ -49,16 +52,6 @@ public:
 		return GetDefaultObjImpl<UToyOptionsComponent_C>();
 	}
 };
-static_assert(alignof(UToyOptionsComponent_C) == 0x000008, "Wrong alignment on UToyOptionsComponent_C");
-static_assert(sizeof(UToyOptionsComponent_C) == 0x000348, "Wrong size on UToyOptionsComponent_C");
-static_assert(offsetof(UToyOptionsComponent_C, UberGraphFrame) == 0x0002C8, "Member 'UToyOptionsComponent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UToyOptionsComponent_C, OptionsWidgetClass) == 0x0002D0, "Member 'UToyOptionsComponent_C::OptionsWidgetClass' has a wrong offset!");
-static_assert(offsetof(UToyOptionsComponent_C, MyIslandTabList) == 0x0002F8, "Member 'UToyOptionsComponent_C::MyIslandTabList' has a wrong offset!");
-static_assert(offsetof(UToyOptionsComponent_C, IsMachine) == 0x000320, "Member 'UToyOptionsComponent_C::IsMachine' has a wrong offset!");
-static_assert(offsetof(UToyOptionsComponent_C, InteractingPlayer) == 0x000328, "Member 'UToyOptionsComponent_C::InteractingPlayer' has a wrong offset!");
-static_assert(offsetof(UToyOptionsComponent_C, outModalWidget) == 0x000330, "Member 'UToyOptionsComponent_C::outModalWidget' has a wrong offset!");
-static_assert(offsetof(UToyOptionsComponent_C, bInteractSuccess) == 0x000338, "Member 'UToyOptionsComponent_C::bInteractSuccess' has a wrong offset!");
-static_assert(offsetof(UToyOptionsComponent_C, ClassToLoad) == 0x000340, "Member 'UToyOptionsComponent_C::ClassToLoad' has a wrong offset!");
 
 }
 

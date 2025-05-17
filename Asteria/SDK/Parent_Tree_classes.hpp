@@ -10,56 +10,56 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Parent_Tree.Parent_Tree_C
-// 0x00C0 (0x0BD0 - 0x0B10)
-class AParent_Tree_C : public ABuildingProp
+// 0x00B8 (0x0C90 - 0x0BD8)
+class AParent_Tree_C final : public ABuildingProp
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FVector                                Wind_Direction;                                    // 0x0B18(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          StormActive_;                                      // 0x0B24(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          DistanceFieldsEnabled_;                            // 0x0B25(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B26[0x2];                                      // 0x0B26(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFortWindImpulseHandle                 WindHandle;                                        // 0x0B28(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          DebugWind;                                         // 0x0B2C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B2D[0x3];                                      // 0x0B2D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Debug_Wind_Intensity;                              // 0x0B30(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B34[0x4];                                      // 0x0B34(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               Debug_TempMaterial;                                // 0x0B38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DebugWindYaw;                                      // 0x0B40(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B44[0x4];                                      // 0x0B44(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   Wind_Intensity_Debug_Mesh;                         // 0x0B48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SpawnWindFX_;                                      // 0x0B50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B51[0xF];                                      // 0x0B51(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             WindFX_Transform;                                  // 0x0B60(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	float                                         WindFX_MaxDrawDistance;                            // 0x0B90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B94[0x4];                                      // 0x0B94(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               WindFX;                                            // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LeafRadius;                                        // 0x0BA0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LeafCenter_Offset;                                 // 0x0BA4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseCylinder;                                       // 0x0BB0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BB1[0x3];                                      // 0x0BB1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Hue;                                               // 0x0BB4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                WindDirection;                                     // 0x0BB8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BoundRadius;                                       // 0x0BC4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BoundsHeight_CylinderOnly_;                        // 0x0BC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BD8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FVector                                Wind_Direction;                                    // 0x0BE0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          StormActive_;                                      // 0x0BEC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          DistanceFieldsEnabled_;                            // 0x0BED(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BEE[0x2];                                      // 0x0BEE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFortWindImpulseHandle                 WindHandle;                                        // 0x0BF0(0x0004)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          DebugWind;                                         // 0x0BF4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_BF5[0x3];                                      // 0x0BF5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Debug_Wind_Intensity;                              // 0x0BF8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BFC[0x4];                                      // 0x0BFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               Debug_TempMaterial;                                // 0x0C00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DebugWindYaw;                                      // 0x0C08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C0C[0x4];                                      // 0x0C0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMeshComponent*                   Wind_Intensity_Debug_Mesh;                         // 0x0C10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SpawnWindFX_;                                      // 0x0C18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C19[0x7];                                      // 0x0C19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             WindFX_Transform;                                  // 0x0C20(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	float                                         WindFX_MaxDrawDistance;                            // 0x0C50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C54[0x4];                                      // 0x0C54(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               WindFX;                                            // 0x0C58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LeafRadius;                                        // 0x0C60(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LeafCenter_Offset;                                 // 0x0C64(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseCylinder;                                       // 0x0C70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C71[0x3];                                      // 0x0C71(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Hue;                                               // 0x0C74(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                WindDirection;                                     // 0x0C78(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BoundRadius;                                       // 0x0C84(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BoundsHeight_CylinderOnly_;                        // 0x0C88(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_Parent_Tree(int32 EntryPoint);
-	void ReceiveBeginPlay();
-	void ReceiveDestroyed();
-	void ChangeWindIntensity(float Intensity, float Time_It_Takes_To_Reach_New_Intensity);
-	void UserConstructionScript();
 	void RemoveTestWind(float BlendTime);
+	void UserConstructionScript();
+	void ChangeWindIntensity(float Intensity, float Time_It_Takes_To_Reach_New_Intensity);
+	void ReceiveDestroyed();
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_Parent_Tree(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -71,29 +71,6 @@ public:
 		return GetDefaultObjImpl<AParent_Tree_C>();
 	}
 };
-static_assert(alignof(AParent_Tree_C) == 0x000010, "Wrong alignment on AParent_Tree_C");
-static_assert(sizeof(AParent_Tree_C) == 0x000BD0, "Wrong size on AParent_Tree_C");
-static_assert(offsetof(AParent_Tree_C, UberGraphFrame) == 0x000B10, "Member 'AParent_Tree_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, Wind_Direction) == 0x000B18, "Member 'AParent_Tree_C::Wind_Direction' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, StormActive_) == 0x000B24, "Member 'AParent_Tree_C::StormActive_' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, DistanceFieldsEnabled_) == 0x000B25, "Member 'AParent_Tree_C::DistanceFieldsEnabled_' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, WindHandle) == 0x000B28, "Member 'AParent_Tree_C::WindHandle' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, DebugWind) == 0x000B2C, "Member 'AParent_Tree_C::DebugWind' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, Debug_Wind_Intensity) == 0x000B30, "Member 'AParent_Tree_C::Debug_Wind_Intensity' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, Debug_TempMaterial) == 0x000B38, "Member 'AParent_Tree_C::Debug_TempMaterial' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, DebugWindYaw) == 0x000B40, "Member 'AParent_Tree_C::DebugWindYaw' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, Wind_Intensity_Debug_Mesh) == 0x000B48, "Member 'AParent_Tree_C::Wind_Intensity_Debug_Mesh' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, SpawnWindFX_) == 0x000B50, "Member 'AParent_Tree_C::SpawnWindFX_' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, WindFX_Transform) == 0x000B60, "Member 'AParent_Tree_C::WindFX_Transform' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, WindFX_MaxDrawDistance) == 0x000B90, "Member 'AParent_Tree_C::WindFX_MaxDrawDistance' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, WindFX) == 0x000B98, "Member 'AParent_Tree_C::WindFX' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, LeafRadius) == 0x000BA0, "Member 'AParent_Tree_C::LeafRadius' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, LeafCenter_Offset) == 0x000BA4, "Member 'AParent_Tree_C::LeafCenter_Offset' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, UseCylinder) == 0x000BB0, "Member 'AParent_Tree_C::UseCylinder' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, Hue) == 0x000BB4, "Member 'AParent_Tree_C::Hue' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, WindDirection) == 0x000BB8, "Member 'AParent_Tree_C::WindDirection' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, BoundRadius) == 0x000BC4, "Member 'AParent_Tree_C::BoundRadius' has a wrong offset!");
-static_assert(offsetof(AParent_Tree_C, BoundsHeight_CylinderOnly_) == 0x000BC8, "Member 'AParent_Tree_C::BoundsHeight_CylinderOnly_' has a wrong offset!");
 
 }
 

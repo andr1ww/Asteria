@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UCamShake_Spooky_Dive_C>();
 	}
 };
-static_assert(alignof(UCamShake_Spooky_Dive_C) == 0x000008, "Wrong alignment on UCamShake_Spooky_Dive_C");
-static_assert(sizeof(UCamShake_Spooky_Dive_C) == 0x000160, "Wrong size on UCamShake_Spooky_Dive_C");
 
 }
 

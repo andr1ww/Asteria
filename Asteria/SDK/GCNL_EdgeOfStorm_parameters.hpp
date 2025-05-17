@@ -20,7 +20,7 @@ namespace SDK::Params
 {
 
 // Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.ExecuteUbergraph_GCNL_EdgeOfStorm
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x00A4 (0x00A4 - 0x0000)
 struct GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm final
 {
 public:
@@ -28,16 +28,9 @@ public:
 	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                K2Node_CustomEvent_EdgeOfStorm;                    // 0x0008(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x0014(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x0014(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm) == 0x000004, "Wrong alignment on GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm");
-static_assert(sizeof(GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm) == 0x0000A0, "Wrong size on GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm, EntryPoint) == 0x000000, "Member 'GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm::EntryPoint' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm, Temp_bool_Has_Been_Initd_Variable) == 0x000004, "Member 'GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm, K2Node_CustomEvent_EdgeOfStorm) == 0x000008, "Member 'GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm::K2Node_CustomEvent_EdgeOfStorm' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x000014, "Member 'GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm, Temp_bool_IsClosed_Variable) == 0x00009C, "Member 'GCNL_EdgeOfStorm_C_ExecuteUbergraph_GCNL_EdgeOfStorm::Temp_bool_IsClosed_Variable' has a wrong offset!");
 
 // Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.Activated
 // 0x000C (0x000C - 0x0000)
@@ -46,9 +39,6 @@ struct GCNL_EdgeOfStorm_C_Activated final
 public:
 	struct FVector                                EdgeOfStorm;                                       // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GCNL_EdgeOfStorm_C_Activated) == 0x000004, "Wrong alignment on GCNL_EdgeOfStorm_C_Activated");
-static_assert(sizeof(GCNL_EdgeOfStorm_C_Activated) == 0x00000C, "Wrong size on GCNL_EdgeOfStorm_C_Activated");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_Activated, EdgeOfStorm) == 0x000000, "Member 'GCNL_EdgeOfStorm_C_Activated::EdgeOfStorm' has a wrong offset!");
 
 // Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.OnActive
 // 0x0180 (0x0180 - 0x0000)
@@ -77,27 +67,6 @@ public:
 	int32                                         CallFunc_BreakGameplayCueParameters_AbilityLevel;  // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        CallFunc_BreakGameplayCueParameters_TargetAttachComponent; // 0x0178(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GCNL_EdgeOfStorm_C_OnActive) == 0x000008, "Wrong alignment on GCNL_EdgeOfStorm_C_OnActive");
-static_assert(sizeof(GCNL_EdgeOfStorm_C_OnActive) == 0x000180, "Wrong size on GCNL_EdgeOfStorm_C_OnActive");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, MyTarget) == 0x000000, "Member 'GCNL_EdgeOfStorm_C_OnActive::MyTarget' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, Parameters) == 0x000008, "Member 'GCNL_EdgeOfStorm_C_OnActive::Parameters' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, ReturnValue) == 0x0000C0, "Member 'GCNL_EdgeOfStorm_C_OnActive::ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_NormalizedMagnitude) == 0x0000C4, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_NormalizedMagnitude' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_RawMagnitude) == 0x0000C8, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_RawMagnitude' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_EffectContext) == 0x0000D0, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_EffectContext' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_MatchedTagName) == 0x0000E8, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_MatchedTagName' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_OriginalTag) == 0x0000F0, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_OriginalTag' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_AggregatedSourceTags) == 0x0000F8, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_AggregatedSourceTags' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_AggregatedTargetTags) == 0x000118, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_AggregatedTargetTags' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_Location) == 0x000138, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_Location' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_Normal) == 0x000144, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_Normal' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_Instigator) == 0x000150, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_Instigator' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_EffectCauser) == 0x000158, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_EffectCauser' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_SourceObject) == 0x000160, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_SourceObject' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_PhysicalMaterial) == 0x000168, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_PhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_GameplayEffectLevel) == 0x000170, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_GameplayEffectLevel' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_AbilityLevel) == 0x000174, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_AbilityLevel' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnActive, CallFunc_BreakGameplayCueParameters_TargetAttachComponent) == 0x000178, "Member 'GCNL_EdgeOfStorm_C_OnActive::CallFunc_BreakGameplayCueParameters_TargetAttachComponent' has a wrong offset!");
 
 // Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.OnExecute
 // 0x0180 (0x0180 - 0x0000)
@@ -126,27 +95,6 @@ public:
 	int32                                         CallFunc_BreakGameplayCueParameters_AbilityLevel;  // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        CallFunc_BreakGameplayCueParameters_TargetAttachComponent; // 0x0178(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GCNL_EdgeOfStorm_C_OnExecute) == 0x000008, "Wrong alignment on GCNL_EdgeOfStorm_C_OnExecute");
-static_assert(sizeof(GCNL_EdgeOfStorm_C_OnExecute) == 0x000180, "Wrong size on GCNL_EdgeOfStorm_C_OnExecute");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, MyTarget) == 0x000000, "Member 'GCNL_EdgeOfStorm_C_OnExecute::MyTarget' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, Parameters) == 0x000008, "Member 'GCNL_EdgeOfStorm_C_OnExecute::Parameters' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, ReturnValue) == 0x0000C0, "Member 'GCNL_EdgeOfStorm_C_OnExecute::ReturnValue' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_NormalizedMagnitude) == 0x0000C4, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_NormalizedMagnitude' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_RawMagnitude) == 0x0000C8, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_RawMagnitude' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_EffectContext) == 0x0000D0, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_EffectContext' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_MatchedTagName) == 0x0000E8, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_MatchedTagName' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_OriginalTag) == 0x0000F0, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_OriginalTag' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_AggregatedSourceTags) == 0x0000F8, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_AggregatedSourceTags' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_AggregatedTargetTags) == 0x000118, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_AggregatedTargetTags' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_Location) == 0x000138, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_Location' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_Normal) == 0x000144, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_Normal' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_Instigator) == 0x000150, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_Instigator' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_EffectCauser) == 0x000158, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_EffectCauser' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_SourceObject) == 0x000160, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_SourceObject' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_PhysicalMaterial) == 0x000168, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_PhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_GameplayEffectLevel) == 0x000170, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_GameplayEffectLevel' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_AbilityLevel) == 0x000174, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_AbilityLevel' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnExecute, CallFunc_BreakGameplayCueParameters_TargetAttachComponent) == 0x000178, "Member 'GCNL_EdgeOfStorm_C_OnExecute::CallFunc_BreakGameplayCueParameters_TargetAttachComponent' has a wrong offset!");
 
 // Function GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.OnRemove
 // 0x00C8 (0x00C8 - 0x0000)
@@ -157,11 +105,6 @@ public:
 	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 	bool                                          ReturnValue;                                       // 0x00C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GCNL_EdgeOfStorm_C_OnRemove) == 0x000008, "Wrong alignment on GCNL_EdgeOfStorm_C_OnRemove");
-static_assert(sizeof(GCNL_EdgeOfStorm_C_OnRemove) == 0x0000C8, "Wrong size on GCNL_EdgeOfStorm_C_OnRemove");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnRemove, MyTarget) == 0x000000, "Member 'GCNL_EdgeOfStorm_C_OnRemove::MyTarget' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnRemove, Parameters) == 0x000008, "Member 'GCNL_EdgeOfStorm_C_OnRemove::Parameters' has a wrong offset!");
-static_assert(offsetof(GCNL_EdgeOfStorm_C_OnRemove, ReturnValue) == 0x0000C0, "Member 'GCNL_EdgeOfStorm_C_OnRemove::ReturnValue' has a wrong offset!");
 
 }
 

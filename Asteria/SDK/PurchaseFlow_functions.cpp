@@ -20,7 +20,7 @@ namespace SDK
 // Function PurchaseFlow.PurchaseFlowJSBridge.GetDefaultExternalBrowserID
 // (Final, Native, Public)
 // Parameters:
-// class FString                           URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FString UPurchaseFlowJSBridge::GetDefaultExternalBrowserID(const class FString& URL)
@@ -48,7 +48,7 @@ class FString UPurchaseFlowJSBridge::GetDefaultExternalBrowserID(const class FSt
 // Function PurchaseFlow.PurchaseFlowJSBridge.GetExternalBrowserName
 // (Final, Native, Public)
 // Parameters:
-// class FString                           BrowserId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    BrowserId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FString UPurchaseFlowJSBridge::GetExternalBrowserName(const class FString& BrowserId)
@@ -76,7 +76,7 @@ class FString UPurchaseFlowJSBridge::GetExternalBrowserName(const class FString&
 // Function PurchaseFlow.PurchaseFlowJSBridge.GetExternalBrowserPath
 // (Final, Native, Public)
 // Parameters:
-// class FString                           BrowserId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    BrowserId                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 class FString UPurchaseFlowJSBridge::GetExternalBrowserPath(const class FString& BrowserId)
@@ -104,7 +104,7 @@ class FString UPurchaseFlowJSBridge::GetExternalBrowserPath(const class FString&
 // Function PurchaseFlow.PurchaseFlowJSBridge.LaunchExternalBrowserUrl
 // (Final, Native, Public)
 // Parameters:
-// class FString                           URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPurchaseFlowJSBridge::LaunchExternalBrowserUrl(const class FString& URL)
@@ -132,8 +132,8 @@ bool UPurchaseFlowJSBridge::LaunchExternalBrowserUrl(const class FString& URL)
 // Function PurchaseFlow.PurchaseFlowJSBridge.LaunchValidatedExternalBrowserUrl
 // (Final, Native, Public)
 // Parameters:
-// class FString                           AllowedBrowserID                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    AllowedBrowserID                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 bool UPurchaseFlowJSBridge::LaunchValidatedExternalBrowserUrl(const class FString& AllowedBrowserID, const class FString& URL)
@@ -159,21 +159,21 @@ bool UPurchaseFlowJSBridge::LaunchValidatedExternalBrowserUrl(const class FStrin
 }
 
 
-// Function PurchaseFlow.PurchaseFlowJSBridge.RECEIPT
+// Function PurchaseFlow.PurchaseFlowJSBridge.Receipt
 // (Final, Native, Public)
 // Parameters:
-// struct FPurchaseFlowReceiptParam        RECEIPT_0                                              (Parm, NativeAccessSpecifierPublic)
+// const struct FPurchaseFlowReceiptParam& Receipt_0                                              (Parm, NativeAccessSpecifierPublic)
 
-void UPurchaseFlowJSBridge::RECEIPT(const struct FPurchaseFlowReceiptParam& RECEIPT_0)
+void UPurchaseFlowJSBridge::Receipt(const struct FPurchaseFlowReceiptParam& Receipt_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PurchaseFlowJSBridge", "RECEIPT");
+		Func = Class->GetFunction("PurchaseFlowJSBridge", "Receipt");
 
-	Params::PurchaseFlowJSBridge_RECEIPT Parms{};
+	Params::PurchaseFlowJSBridge_Receipt Parms{};
 
-	Parms.RECEIPT_0 = std::move(RECEIPT_0);
+	Parms.Receipt_0 = std::move(Receipt_0);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -187,7 +187,7 @@ void UPurchaseFlowJSBridge::RECEIPT(const struct FPurchaseFlowReceiptParam& RECE
 // Function PurchaseFlow.PurchaseFlowJSBridge.RequestClose
 // (Final, Native, Public)
 // Parameters:
-// class FString                           CloseInfo                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    CloseInfo                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void UPurchaseFlowJSBridge::RequestClose(const class FString& CloseInfo)
 {

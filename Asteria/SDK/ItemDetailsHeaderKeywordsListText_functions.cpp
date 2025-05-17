@@ -20,8 +20,8 @@ namespace SDK
 // Function ItemDetailsHeaderKeywordsListText.ItemDetailsHeaderKeywordsListText_C.FormatItemDisplayTags
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TArray<class FText>                     TagTexts                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class FText                             FormatedText                                           (Parm, OutParm)
+// TArray<class FText>&                    TagTexts                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// class FText*                            FormatedText                                           (Parm, OutParm)
 
 void UItemDetailsHeaderKeywordsListText_C::FormatItemDisplayTags(TArray<class FText>& TagTexts, class FText* FormatedText)
 {

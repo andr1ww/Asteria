@@ -20,20 +20,20 @@ namespace SDK
 // Function PlayerSurveyMultipleChoiceListItemWidgetInterface.PlayerSurveyMultipleChoiceListItemWidgetInterface_C.SetChoiceData
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortPlayerSurveyQuestionChoice  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortPlayerSurveyQuestionChoice&Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void IPlayerSurveyMultipleChoiceListItemWidgetInterface_C::SetChoiceData(const struct FFortPlayerSurveyQuestionChoice& Value)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyMultipleChoiceListItemWidgetInterface_C", "SetChoiceData");
+		Func = AsUObject()->Class->GetFunction("PlayerSurveyMultipleChoiceListItemWidgetInterface_C", "SetChoiceData");
 
 	Params::PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetChoiceData Parms{};
 
 	Parms.Value = std::move(Value);
 
-	UObject::ProcessEvent(Func, &Parms);
+	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
 
@@ -47,13 +47,13 @@ void IPlayerSurveyMultipleChoiceListItemWidgetInterface_C::SetIndex(int32 Value)
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerSurveyMultipleChoiceListItemWidgetInterface_C", "SetIndex");
+		Func = AsUObject()->Class->GetFunction("PlayerSurveyMultipleChoiceListItemWidgetInterface_C", "SetIndex");
 
 	Params::PlayerSurveyMultipleChoiceListItemWidgetInterface_C_SetIndex Parms{};
 
 	Parms.Value = Value;
 
-	UObject::ProcessEvent(Func, &Parms);
+	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
 }

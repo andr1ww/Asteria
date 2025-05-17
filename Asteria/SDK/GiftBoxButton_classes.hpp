@@ -18,21 +18,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass GiftBoxButton.GiftBoxButton_C
-// 0x0030 (0x0B90 - 0x0B60)
+// 0x0030 (0x0BE8 - 0x0BB8)
 class UGiftBoxButton_C final : public UFortGiftBoxButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B60(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Hover;                                             // 0x0B68(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Deselected;                                        // 0x0B70(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Selected;                                          // 0x0B78(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 ButtonSelected;                                    // 0x0B80(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          LocalIsHovered;                                    // 0x0B88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BC0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Deselected;                                        // 0x0BC8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Selected;                                          // 0x0BD0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 ButtonSelected;                                    // 0x0BD8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          LocalIsHovered;                                    // 0x0BE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void Construct();
-	void PlayGiftSelectedAnimation(bool bIsSelected);
 	void ExecuteUbergraph_GiftBoxButton(int32 EntryPoint);
+	void PlayGiftSelectedAnimation(bool bIsSelected);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()
@@ -44,14 +44,6 @@ public:
 		return GetDefaultObjImpl<UGiftBoxButton_C>();
 	}
 };
-static_assert(alignof(UGiftBoxButton_C) == 0x000008, "Wrong alignment on UGiftBoxButton_C");
-static_assert(sizeof(UGiftBoxButton_C) == 0x000B90, "Wrong size on UGiftBoxButton_C");
-static_assert(offsetof(UGiftBoxButton_C, UberGraphFrame) == 0x000B60, "Member 'UGiftBoxButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGiftBoxButton_C, Hover) == 0x000B68, "Member 'UGiftBoxButton_C::Hover' has a wrong offset!");
-static_assert(offsetof(UGiftBoxButton_C, Deselected) == 0x000B70, "Member 'UGiftBoxButton_C::Deselected' has a wrong offset!");
-static_assert(offsetof(UGiftBoxButton_C, Selected) == 0x000B78, "Member 'UGiftBoxButton_C::Selected' has a wrong offset!");
-static_assert(offsetof(UGiftBoxButton_C, ButtonSelected) == 0x000B80, "Member 'UGiftBoxButton_C::ButtonSelected' has a wrong offset!");
-static_assert(offsetof(UGiftBoxButton_C, LocalIsHovered) == 0x000B88, "Member 'UGiftBoxButton_C::LocalIsHovered' has a wrong offset!");
 
 }
 

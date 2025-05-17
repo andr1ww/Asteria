@@ -10,88 +10,90 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass PartyDisplayManagerBP.PartyDisplayManagerBP_C
-// 0x01B0 (0x0528 - 0x0378)
+// 0x01C8 (0x0620 - 0x0458)
 class APartyDisplayManagerBP_C final : public APartyDisplayManager
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UChildActorComponent*                   PrefabActorComp;                                   // 0x0380(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x0388(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0390(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   ScalePivot;                                        // 0x0398(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   PivotHolder;                                       // 0x03A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               CelebratoryFX;                                     // 0x03A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         HoloMatColorPulse_Alpha_E6C257BB472EFEF7971B66A1E8FAE3D8; // 0x03B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            HoloMatColorPulse__Direction_E6C257BB472EFEF7971B66A1E8FAE3D8; // 0x03BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BD[0x3];                                      // 0x03BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     HoloMatColorPulse;                                 // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ScaleAnimEvolve_Scaling_6D0D09564D54A0DEA88CCC96FA6653CC; // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            ScaleAnimEvolve__Direction_6D0D09564D54A0DEA88CCC96FA6653CC; // 0x03CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CD[0x3];                                      // 0x03CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     ScaleAnimEvolve;                                   // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ScaleAnimLevel_Scaling_CC68128E49202D0C982B7A945E41AF43; // 0x03D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            ScaleAnimLevel__Direction_CC68128E49202D0C982B7A945E41AF43; // 0x03DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DD[0x3];                                      // 0x03DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     ScaleAnimLevel;                                    // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           TimerHandle;                                       // 0x03E8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	float                                         Rotation;                                          // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F4[0x4];                                      // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFortItem*                              ItemToRepresent;                                   // 0x03F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          PreviewRotation;                                   // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_401[0x7];                                      // 0x0401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            RotationAnimation;                                 // 0x0408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        LevelUpFX;                                         // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        EvolveUpFX;                                        // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                FXTargetLocation;                                  // 0x0420(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsCharacter;                                       // 0x042C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          IsEvolve;                                          // 0x042D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_42E[0x2];                                      // 0x042E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        CharLevelUpFX;                                     // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        CharEvolveUpFX;                                    // 0x0438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               UIoverrideMID;                                     // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HasResetVisuals;                                   // 0x0448(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               ParticleSystem1;                                   // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               ParticleSystem2;                                   // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        CharSwapTransitionFX;                              // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsCharacterVisible;                                // 0x0468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_469[0x7];                                      // 0x0469(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        HeroPawn;                                          // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SanityChecker;                                     // 0x0478(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_479[0x7];                                      // 0x0479(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               MID_HoloMaterial;                                  // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HideElement_1;                                     // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   VertexRange;                                       // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HideElement_2;                                     // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HideElement_3;                                     // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HideElement_4;                                     // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HideElement_5;                                     // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HideElement_6;                                     // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HideElement_7;                                     // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HideElement_8;                                     // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HideElement_9;                                     // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HideElement_10;                                    // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ScalePivotPreScaleLocation;                        // 0x04E0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                StaticMeshPreScaleLocation;                        // 0x04EC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                SkelMeshPreScaleLocation;                          // 0x04F8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                PrefabPreScaleLocation;                            // 0x0504(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               GhostPistolVFX;                                    // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Ghost_Sword_VFX;                                   // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Ghost_Sword_Mesh;                                  // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0458(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UChildActorComponent*                   PrefabActorComp;                                   // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   ScalePivot;                                        // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   PivotHolder;                                       // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CelebratoryFX;                                     // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         HoloMatColorPulse_Alpha_E6C257BB472EFEF7971B66A1E8FAE3D8; // 0x0498(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            HoloMatColorPulse__Direction_E6C257BB472EFEF7971B66A1E8FAE3D8; // 0x049C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49D[0x3];                                      // 0x049D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     HoloMatColorPulse;                                 // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ScaleAnimEvolve_Scaling_6D0D09564D54A0DEA88CCC96FA6653CC; // 0x04A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            ScaleAnimEvolve__Direction_6D0D09564D54A0DEA88CCC96FA6653CC; // 0x04AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4AD[0x3];                                      // 0x04AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     ScaleAnimEvolve;                                   // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ScaleAnimLevel_Scaling_CC68128E49202D0C982B7A945E41AF43; // 0x04B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            ScaleAnimLevel__Direction_CC68128E49202D0C982B7A945E41AF43; // 0x04BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4BD[0x3];                                      // 0x04BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     ScaleAnimLevel;                                    // 0x04C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           TimerHandle;                                       // 0x04C8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         Rotation;                                          // 0x04D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D4[0x4];                                      // 0x04D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFortItem*                              ItemToRepresent;                                   // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          PreviewRotation;                                   // 0x04E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4E1[0x7];                                      // 0x04E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            RotationAnimation;                                 // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        LevelUpFX;                                         // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        EvolveUpFX;                                        // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                FXTargetLocation;                                  // 0x0500(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCharacter;                                       // 0x050C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsEvolve;                                          // 0x050D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_50E[0x2];                                      // 0x050E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystem*                        CharLevelUpFX;                                     // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        CharEvolveUpFX;                                    // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               UIoverrideMID;                                     // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HasResetVisuals;                                   // 0x0528(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_529[0x7];                                      // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               ParticleSystem1;                                   // 0x0530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               ParticleSystem2;                                   // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        CharSwapTransitionFX;                              // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCharacterVisible;                                // 0x0548(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_549[0x7];                                      // 0x0549(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        HeroPawn;                                          // 0x0550(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SanityChecker;                                     // 0x0558(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_559[0x7];                                      // 0x0559(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               MID_HoloMaterial;                                  // 0x0560(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HideElement_1;                                     // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   VertexRange;                                       // 0x0570(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HideElement_2;                                     // 0x0578(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HideElement_3;                                     // 0x0580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HideElement_4;                                     // 0x0588(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HideElement_5;                                     // 0x0590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HideElement_6;                                     // 0x0598(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HideElement_7;                                     // 0x05A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HideElement_8;                                     // 0x05A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HideElement_9;                                     // 0x05B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HideElement_10;                                    // 0x05B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ScalePivotPreScaleLocation;                        // 0x05C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                StaticMeshPreScaleLocation;                        // 0x05CC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                SkelMeshPreScaleLocation;                          // 0x05D8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PrefabPreScaleLocation;                            // 0x05E4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               GhostPistolVFX;                                    // 0x05F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Ghost_Sword_VFX;                                   // 0x05F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Ghost_Sword_Mesh;                                  // 0x0600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               TransitionFXComponent;                             // 0x0608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        CharSwapTransitionFXLoop;                          // 0x0610(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HideElementsOnlyConsidersRedChannel;               // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void StorePreScaleLocations();
 	void ResetPreScaleLocations();
 	void RestoreTeleportMIDsInProgress(const class AFortPlayerPawn* Pawn);
 	void HandlePartyMemberInProgressDisplayChanges(class AFortPlayerPawn* Pawn);
@@ -113,15 +115,13 @@ public:
 	void ScaleAnimEvolve__UpdateFunc();
 	void HoloMatColorPulse__FinishedFunc();
 	void HoloMatColorPulse__UpdateFunc();
-	void Completed_01D864884864692DBB7035B0996A5437(class UFortItem* Item, const struct FGuid& RequestId);
-	void ShowLoading();
-	void HideLoading();
-	void ShowItem(class UFortItem* ItemToView, const struct FGuid& RequestId);
+	void Completed_01D864884864692DBB7035B0996A5437(class UFortItem* Item, const struct FGuid& RequestID);
+	void ShowItem(const class UFortItem* ItemToView, const struct FGuid& RequestID);
 	void PlayLevelUpEffect();
 	void PlayEvolutionEffect();
 	void CelebrateWithFX();
 	void PerformScaleMeshFX();
-	void HandleLoadingAssetsForItemCompleted(class UFortItem* ItemWhoseAssetsWereLoaded, const TArray<class UObject*>& LoadedAssets, const struct FGuid& RequestId);
+	void HandleLoadingAssetsForItemCompleted(class UFortItem* ItemWhoseAssetsWereLoaded, const TArray<class UObject*>& LoadedAssets, const struct FGuid& RequestID);
 	void ReceiveTick(float DeltaSeconds);
 	void Set_Character_Parts_Visibility(bool NewVisible);
 	void CharacterCustomizationFinished(class AFortPlayerPawn* Pawn);
@@ -129,6 +129,8 @@ public:
 	void OnPlayerPawnAddedToLobby(class AFortPlayerPawn* Pawn);
 	void ResOutPawnFromLobby(class AFortPlayerPawn* Pawn, int32 PartyIndex);
 	void SetupPrefabVisuals();
+	void OnEmoteSetupFinished();
+	void OnMeshLODStreamingFinished();
 	void ExecuteUbergraph_PartyDisplayManagerBP(int32 EntryPoint);
 
 	class AActor* GetPrefabActorForCurrentDisplayedItem() const;
@@ -143,64 +145,6 @@ public:
 		return GetDefaultObjImpl<APartyDisplayManagerBP_C>();
 	}
 };
-static_assert(alignof(APartyDisplayManagerBP_C) == 0x000008, "Wrong alignment on APartyDisplayManagerBP_C");
-static_assert(sizeof(APartyDisplayManagerBP_C) == 0x000528, "Wrong size on APartyDisplayManagerBP_C");
-static_assert(offsetof(APartyDisplayManagerBP_C, UberGraphFrame) == 0x000378, "Member 'APartyDisplayManagerBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, PrefabActorComp) == 0x000380, "Member 'APartyDisplayManagerBP_C::PrefabActorComp' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, SkeletalMesh) == 0x000388, "Member 'APartyDisplayManagerBP_C::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, StaticMesh) == 0x000390, "Member 'APartyDisplayManagerBP_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, ScalePivot) == 0x000398, "Member 'APartyDisplayManagerBP_C::ScalePivot' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, PivotHolder) == 0x0003A0, "Member 'APartyDisplayManagerBP_C::PivotHolder' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, CelebratoryFX) == 0x0003A8, "Member 'APartyDisplayManagerBP_C::CelebratoryFX' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, DefaultSceneRoot) == 0x0003B0, "Member 'APartyDisplayManagerBP_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HoloMatColorPulse_Alpha_E6C257BB472EFEF7971B66A1E8FAE3D8) == 0x0003B8, "Member 'APartyDisplayManagerBP_C::HoloMatColorPulse_Alpha_E6C257BB472EFEF7971B66A1E8FAE3D8' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HoloMatColorPulse__Direction_E6C257BB472EFEF7971B66A1E8FAE3D8) == 0x0003BC, "Member 'APartyDisplayManagerBP_C::HoloMatColorPulse__Direction_E6C257BB472EFEF7971B66A1E8FAE3D8' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HoloMatColorPulse) == 0x0003C0, "Member 'APartyDisplayManagerBP_C::HoloMatColorPulse' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, ScaleAnimEvolve_Scaling_6D0D09564D54A0DEA88CCC96FA6653CC) == 0x0003C8, "Member 'APartyDisplayManagerBP_C::ScaleAnimEvolve_Scaling_6D0D09564D54A0DEA88CCC96FA6653CC' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, ScaleAnimEvolve__Direction_6D0D09564D54A0DEA88CCC96FA6653CC) == 0x0003CC, "Member 'APartyDisplayManagerBP_C::ScaleAnimEvolve__Direction_6D0D09564D54A0DEA88CCC96FA6653CC' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, ScaleAnimEvolve) == 0x0003D0, "Member 'APartyDisplayManagerBP_C::ScaleAnimEvolve' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, ScaleAnimLevel_Scaling_CC68128E49202D0C982B7A945E41AF43) == 0x0003D8, "Member 'APartyDisplayManagerBP_C::ScaleAnimLevel_Scaling_CC68128E49202D0C982B7A945E41AF43' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, ScaleAnimLevel__Direction_CC68128E49202D0C982B7A945E41AF43) == 0x0003DC, "Member 'APartyDisplayManagerBP_C::ScaleAnimLevel__Direction_CC68128E49202D0C982B7A945E41AF43' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, ScaleAnimLevel) == 0x0003E0, "Member 'APartyDisplayManagerBP_C::ScaleAnimLevel' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, TimerHandle) == 0x0003E8, "Member 'APartyDisplayManagerBP_C::TimerHandle' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, Rotation) == 0x0003F0, "Member 'APartyDisplayManagerBP_C::Rotation' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, ItemToRepresent) == 0x0003F8, "Member 'APartyDisplayManagerBP_C::ItemToRepresent' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, PreviewRotation) == 0x000400, "Member 'APartyDisplayManagerBP_C::PreviewRotation' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, RotationAnimation) == 0x000408, "Member 'APartyDisplayManagerBP_C::RotationAnimation' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, LevelUpFX) == 0x000410, "Member 'APartyDisplayManagerBP_C::LevelUpFX' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, EvolveUpFX) == 0x000418, "Member 'APartyDisplayManagerBP_C::EvolveUpFX' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, FXTargetLocation) == 0x000420, "Member 'APartyDisplayManagerBP_C::FXTargetLocation' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, IsCharacter) == 0x00042C, "Member 'APartyDisplayManagerBP_C::IsCharacter' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, IsEvolve) == 0x00042D, "Member 'APartyDisplayManagerBP_C::IsEvolve' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, CharLevelUpFX) == 0x000430, "Member 'APartyDisplayManagerBP_C::CharLevelUpFX' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, CharEvolveUpFX) == 0x000438, "Member 'APartyDisplayManagerBP_C::CharEvolveUpFX' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, UIoverrideMID) == 0x000440, "Member 'APartyDisplayManagerBP_C::UIoverrideMID' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HasResetVisuals) == 0x000448, "Member 'APartyDisplayManagerBP_C::HasResetVisuals' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, ParticleSystem1) == 0x000450, "Member 'APartyDisplayManagerBP_C::ParticleSystem1' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, ParticleSystem2) == 0x000458, "Member 'APartyDisplayManagerBP_C::ParticleSystem2' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, CharSwapTransitionFX) == 0x000460, "Member 'APartyDisplayManagerBP_C::CharSwapTransitionFX' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, IsCharacterVisible) == 0x000468, "Member 'APartyDisplayManagerBP_C::IsCharacterVisible' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HeroPawn) == 0x000470, "Member 'APartyDisplayManagerBP_C::HeroPawn' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, SanityChecker) == 0x000478, "Member 'APartyDisplayManagerBP_C::SanityChecker' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, MID_HoloMaterial) == 0x000480, "Member 'APartyDisplayManagerBP_C::MID_HoloMaterial' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HideElement_1) == 0x000488, "Member 'APartyDisplayManagerBP_C::HideElement_1' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, VertexRange) == 0x000490, "Member 'APartyDisplayManagerBP_C::VertexRange' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HideElement_2) == 0x000498, "Member 'APartyDisplayManagerBP_C::HideElement_2' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HideElement_3) == 0x0004A0, "Member 'APartyDisplayManagerBP_C::HideElement_3' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HideElement_4) == 0x0004A8, "Member 'APartyDisplayManagerBP_C::HideElement_4' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HideElement_5) == 0x0004B0, "Member 'APartyDisplayManagerBP_C::HideElement_5' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HideElement_6) == 0x0004B8, "Member 'APartyDisplayManagerBP_C::HideElement_6' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HideElement_7) == 0x0004C0, "Member 'APartyDisplayManagerBP_C::HideElement_7' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HideElement_8) == 0x0004C8, "Member 'APartyDisplayManagerBP_C::HideElement_8' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HideElement_9) == 0x0004D0, "Member 'APartyDisplayManagerBP_C::HideElement_9' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, HideElement_10) == 0x0004D8, "Member 'APartyDisplayManagerBP_C::HideElement_10' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, ScalePivotPreScaleLocation) == 0x0004E0, "Member 'APartyDisplayManagerBP_C::ScalePivotPreScaleLocation' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, StaticMeshPreScaleLocation) == 0x0004EC, "Member 'APartyDisplayManagerBP_C::StaticMeshPreScaleLocation' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, SkelMeshPreScaleLocation) == 0x0004F8, "Member 'APartyDisplayManagerBP_C::SkelMeshPreScaleLocation' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, PrefabPreScaleLocation) == 0x000504, "Member 'APartyDisplayManagerBP_C::PrefabPreScaleLocation' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, GhostPistolVFX) == 0x000510, "Member 'APartyDisplayManagerBP_C::GhostPistolVFX' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, Ghost_Sword_VFX) == 0x000518, "Member 'APartyDisplayManagerBP_C::Ghost_Sword_VFX' has a wrong offset!");
-static_assert(offsetof(APartyDisplayManagerBP_C, Ghost_Sword_Mesh) == 0x000520, "Member 'APartyDisplayManagerBP_C::Ghost_Sword_Mesh' has a wrong offset!");
 
 }
 

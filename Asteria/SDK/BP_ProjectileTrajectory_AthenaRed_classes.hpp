@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_ProjectileTrajectory_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ProjectileTrajectory_AthenaRed.BP_ProjectileTrajectory_AthenaRed_C
-// 0x0008 (0x02A0 - 0x0298)
+// 0x0008 (0x0278 - 0x0270)
 class ABP_ProjectileTrajectory_AthenaRed_C final : public ABP_ProjectileTrajectory_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_C; // 0x0298(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_C; // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_ProjectileTrajectory_AthenaRed(int32 EntryPoint);
@@ -38,9 +38,6 @@ public:
 		return GetDefaultObjImpl<ABP_ProjectileTrajectory_AthenaRed_C>();
 	}
 };
-static_assert(alignof(ABP_ProjectileTrajectory_AthenaRed_C) == 0x000008, "Wrong alignment on ABP_ProjectileTrajectory_AthenaRed_C");
-static_assert(sizeof(ABP_ProjectileTrajectory_AthenaRed_C) == 0x0002A0, "Wrong size on ABP_ProjectileTrajectory_AthenaRed_C");
-static_assert(offsetof(ABP_ProjectileTrajectory_AthenaRed_C, UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_C) == 0x000298, "Member 'ABP_ProjectileTrajectory_AthenaRed_C::UberGraphFrame_BP_ProjectileTrajectory_AthenaRed_C' has a wrong offset!");
 
 }
 

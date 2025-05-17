@@ -17,79 +17,51 @@
 namespace SDK
 {
 
-// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.GetCharacterPartTypeMaterials
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.ExecuteUbergraph_GCN_Loop_GhostMode
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class AFortPlayerPawn*                  Fort_Player_Pawn                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFortCustomPartType                     PartType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AGCN_Loop_GhostMode_C::GetCharacterPartTypeMaterials(class AFortPlayerPawn* Fort_Player_Pawn, EFortCustomPartType PartType)
+void AGCN_Loop_GhostMode_C::ExecuteUbergraph_GCN_Loop_GhostMode(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "GetCharacterPartTypeMaterials");
+		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "ExecuteUbergraph_GCN_Loop_GhostMode");
 
-	Params::GCN_Loop_GhostMode_C_GetCharacterPartTypeMaterials Parms{};
+	Params::GCN_Loop_GhostMode_C_ExecuteUbergraph_GCN_Loop_GhostMode Parms{};
 
-	Parms.Fort_Player_Pawn = Fort_Player_Pawn;
-	Parms.PartType = PartType;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsTL__FinishedFunc
-// (BlueprintEvent)
+// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsOut
+// (BlueprintCallable, BlueprintEvent)
 
-void AGCN_Loop_GhostMode_C::FadeMaterialsTL__FinishedFunc()
+void AGCN_Loop_GhostMode_C::FadeMaterialsOut()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "FadeMaterialsTL__FinishedFunc");
+		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "FadeMaterialsOut");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsTL__UpdateFunc
-// (BlueprintEvent)
+// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsIn
+// (BlueprintCallable, BlueprintEvent)
 
-void AGCN_Loop_GhostMode_C::FadeMaterialsTL__UpdateFunc()
+void AGCN_Loop_GhostMode_C::FadeMaterialsIn()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "FadeMaterialsTL__UpdateFunc");
+		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "FadeMaterialsIn");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.OnLoopingStart
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayCueParameters           Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// TArray<class UParticleSystemComponent*> ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<class UAudioComponent*>          AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-
-void AGCN_Loop_GhostMode_C::OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "OnLoopingStart");
-
-	Params::GCN_Loop_GhostMode_C_OnLoopingStart Parms{};
-
-	Parms.MyTarget = MyTarget;
-	Parms.Parameters = std::move(Parameters);
-	Parms.ParticleComponents = std::move(ParticleComponents);
-	Parms.AudioComponents = std::move(AudioComponents);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -97,9 +69,9 @@ void AGCN_Loop_GhostMode_C::OnLoopingStart(class AActor* MyTarget, const struct 
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayCueParameters           Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// TArray<class UParticleSystemComponent*> ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<class UAudioComponent*>          AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 // class UCameraShake*                     BurstCameraShakeInstance                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ADecalActor*                      BurstDecalInstance                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -123,51 +95,81 @@ void AGCN_Loop_GhostMode_C::OnRemoval(class AActor* MyTarget, const struct FGame
 }
 
 
-// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsIn
-// (BlueprintCallable, BlueprintEvent)
-
-void AGCN_Loop_GhostMode_C::FadeMaterialsIn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "FadeMaterialsIn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsOut
-// (BlueprintCallable, BlueprintEvent)
-
-void AGCN_Loop_GhostMode_C::FadeMaterialsOut()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "FadeMaterialsOut");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.ExecuteUbergraph_GCN_Loop_GhostMode
-// (Final, UbergraphFunction, HasDefaults)
+// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.OnLoopingStart
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const TArray<class UParticleSystemComponent*>&ParticleComponents                                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+// const TArray<class UAudioComponent*>&   AudioComponents                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 
-void AGCN_Loop_GhostMode_C::ExecuteUbergraph_GCN_Loop_GhostMode(int32 EntryPoint)
+void AGCN_Loop_GhostMode_C::OnLoopingStart(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters, const TArray<class UParticleSystemComponent*>& ParticleComponents, const TArray<class UAudioComponent*>& AudioComponents)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "ExecuteUbergraph_GCN_Loop_GhostMode");
+		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "OnLoopingStart");
 
-	Params::GCN_Loop_GhostMode_C_ExecuteUbergraph_GCN_Loop_GhostMode Parms{};
+	Params::GCN_Loop_GhostMode_C_OnLoopingStart Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.MyTarget = MyTarget;
+	Parms.Parameters = std::move(Parameters);
+	Parms.ParticleComponents = std::move(ParticleComponents);
+	Parms.AudioComponents = std::move(AudioComponents);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsTL__UpdateFunc
+// (BlueprintEvent)
+
+void AGCN_Loop_GhostMode_C::FadeMaterialsTL__UpdateFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "FadeMaterialsTL__UpdateFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsTL__FinishedFunc
+// (BlueprintEvent)
+
+void AGCN_Loop_GhostMode_C::FadeMaterialsTL__FinishedFunc()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "FadeMaterialsTL__FinishedFunc");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.Highlight Lerp
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// float                                   Alpha                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPawnHighlight*                  Highlight                                              (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AGCN_Loop_GhostMode_C::Highlight_Lerp(float Alpha, struct FPawnHighlight* Highlight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GCN_Loop_GhostMode_C", "Highlight Lerp");
+
+	Params::GCN_Loop_GhostMode_C_Highlight_Lerp Parms{};
+
+	Parms.Alpha = Alpha;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Highlight != nullptr)
+		*Highlight = std::move(Parms.Highlight);
 }
 
 }

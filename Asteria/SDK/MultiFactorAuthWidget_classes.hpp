@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -18,17 +17,9 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MultiFactorAuthWidget.MultiFactorAuthWidget_C
-// 0x0010 (0x0388 - 0x0378)
+// 0x0000 (0x0488 - 0x0488)
 class UMultiFactorAuthWidget_C final : public UFortMultiFactorAuthWidget
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0378(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       CommonTextPromptText;                              // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-
-public:
-	void Construct();
-	void ExecuteUbergraph_MultiFactorAuthWidget(int32 EntryPoint);
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -39,10 +30,6 @@ public:
 		return GetDefaultObjImpl<UMultiFactorAuthWidget_C>();
 	}
 };
-static_assert(alignof(UMultiFactorAuthWidget_C) == 0x000008, "Wrong alignment on UMultiFactorAuthWidget_C");
-static_assert(sizeof(UMultiFactorAuthWidget_C) == 0x000388, "Wrong size on UMultiFactorAuthWidget_C");
-static_assert(offsetof(UMultiFactorAuthWidget_C, UberGraphFrame) == 0x000378, "Member 'UMultiFactorAuthWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMultiFactorAuthWidget_C, CommonTextPromptText) == 0x000380, "Member 'UMultiFactorAuthWidget_C::CommonTextPromptText' has a wrong offset!");
 
 }
 

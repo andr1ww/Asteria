@@ -45,7 +45,7 @@ void AQosBeaconClient::ClientQosResponse(EQosResponseType Response)
 // Function Qos.QosBeaconClient.ServerQosRequest
 // (Net, NetReliable, Native, Event, Protected, NetServer, NetValidate)
 // Parameters:
-// class FString                           InSessionId                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InSessionId                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 void AQosBeaconClient::ServerQosRequest(const class FString& InSessionId)
 {

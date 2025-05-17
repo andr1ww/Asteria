@@ -19,29 +19,28 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TabRevealMeassage.TabRevealMeassage_C
-// 0x0090 (0x03D8 - 0x0348)
+// 0x0090 (0x0508 - 0x0478)
 class UTabRevealMeassage_C final : public UFortActivatablePanel
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       FadeOut;                                           // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FadeIn;                                            // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_0;                                           // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_2;                                           // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Flare_Btm;                                   // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Flare_Top;                                   // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULightbox_C*                            Lightbox;                                          // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       TextHeader;                                        // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   inHeader;                                          // 0x0390(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class FText                                   inBody;                                            // 0x03A8(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	TMulticastInlineDelegate<void()>              TabMessageClosed;                                  // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FTimerHandle                           Timer;                                             // 0x03D0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       FadeOut;                                           // 0x0480(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeIn;                                            // 0x0488(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_0;                                           // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_2;                                           // 0x0498(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Flare_Btm;                                   // 0x04A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Flare_Top;                                   // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULightbox_C*                            Lightbox;                                          // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       TextHeader;                                        // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   inHeader;                                          // 0x04C0(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class FText                                   inBody;                                            // 0x04D8(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	TMulticastInlineDelegate<void()>              TabMessageClosed;                                  // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FTimerHandle                           Timer;                                             // 0x0500(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AutoClose();
 	void ToggleTimer(bool Enabled);
-	void OnActivated();
-	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void BP_OnActivated();
 	void Construct();
 	void CloseWindow();
 	void ExecuteUbergraph_TabRevealMeassage(int32 EntryPoint);
@@ -56,21 +55,6 @@ public:
 		return GetDefaultObjImpl<UTabRevealMeassage_C>();
 	}
 };
-static_assert(alignof(UTabRevealMeassage_C) == 0x000008, "Wrong alignment on UTabRevealMeassage_C");
-static_assert(sizeof(UTabRevealMeassage_C) == 0x0003D8, "Wrong size on UTabRevealMeassage_C");
-static_assert(offsetof(UTabRevealMeassage_C, UberGraphFrame) == 0x000348, "Member 'UTabRevealMeassage_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, FadeOut) == 0x000350, "Member 'UTabRevealMeassage_C::FadeOut' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, FadeIn) == 0x000358, "Member 'UTabRevealMeassage_C::FadeIn' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, Image_0) == 0x000360, "Member 'UTabRevealMeassage_C::Image_0' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, Image_2) == 0x000368, "Member 'UTabRevealMeassage_C::Image_2' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, Image_Flare_Btm) == 0x000370, "Member 'UTabRevealMeassage_C::Image_Flare_Btm' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, Image_Flare_Top) == 0x000378, "Member 'UTabRevealMeassage_C::Image_Flare_Top' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, Lightbox) == 0x000380, "Member 'UTabRevealMeassage_C::Lightbox' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, TextHeader) == 0x000388, "Member 'UTabRevealMeassage_C::TextHeader' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, inHeader) == 0x000390, "Member 'UTabRevealMeassage_C::inHeader' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, inBody) == 0x0003A8, "Member 'UTabRevealMeassage_C::inBody' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, TabMessageClosed) == 0x0003C0, "Member 'UTabRevealMeassage_C::TabMessageClosed' has a wrong offset!");
-static_assert(offsetof(UTabRevealMeassage_C, Timer) == 0x0003D0, "Member 'UTabRevealMeassage_C::Timer' has a wrong offset!");
 
 }
 

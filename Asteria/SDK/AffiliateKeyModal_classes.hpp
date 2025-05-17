@@ -19,50 +19,49 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AffiliateKeyModal.AffiliateKeyModal_C
-// 0x00C8 (0x0428 - 0x0360)
+// 0x00C8 (0x0558 - 0x0490)
 class UAffiliateKeyModal_C final : public UFortAffilateModal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       SuccessAnim;                                       // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Shake;                                             // 0x0370(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UIconTextButton_C*                      CloseButton;                                       // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 CloseIcon;                                         // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       CommonTextBlock_0;                                 // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ConnectionError;                                   // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Description;                                       // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    EditTextActionWidget;                              // 0x03A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       EntryError;                                        // 0x03A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       ErrorPart2;                                        // 0x03B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UIconTextButton_C*                      LaunchWebsite;                                     // 0x03B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULightbox_C*                            Lightbox;                                          // 0x03C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 MainIcon;                                          // 0x03C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 McpWaitingSpinner;                                 // 0x03D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UPanelButton_C*                         MobileCloseButton;                                 // 0x03D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               MobileCloseOverlay;                                // 0x03E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Title;                                             // 0x03E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          Found;                                             // 0x03F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3F1[0x7];                                      // 0x03F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 FoundItem;                                         // 0x03F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          ConnectionTimeout;                                 // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_409[0x7];                                      // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnPopupClosed;                                     // 0x0410(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          bSkipAutoPopulate;                                 // 0x0420(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0490(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       SuccessAnim;                                       // 0x0498(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Shake;                                             // 0x04A0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Check;                                             // 0x04A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      CloseButton;                                       // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCloseButton_C*                         CloseButton_Mobile;                                // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_0;                                 // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CommonTextBlock_2;                                 // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ConnectionError;                                   // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Description;                                       // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    EditTextActionWidget;                              // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       EntryError;                                        // 0x04E8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       ErrorPart2;                                        // 0x04F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UIconTextButton_C*                      LaunchWebsite;                                     // 0x04F8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULightbox_C*                            Lightbox;                                          // 0x0500(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 McpWaitingSpinner;                                 // 0x0508(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          Found;                                             // 0x0510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_511[0x7];                                      // 0x0511(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 FoundItem;                                         // 0x0518(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          ConnectionTimeout;                                 // 0x0528(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_529[0x7];                                      // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnPopupClosed;                                     // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bSkipAutoPopulate;                                 // 0x0540(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_541[0x7];                                      // 0x0541(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnSuccess;                                         // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void SetupAffiliateField(const class FString& AffilateName);
 	void SetMobileButtons();
-	void OnNavUpToAffiliateKey();
-	void OnNavDownFromAffiliateKey();
-	void OnActivated();
 	void BndEvt__CloseButton_K2Node_ComponentBoundEvent_21_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void BndEvt__AcceptButton_K2Node_ComponentBoundEvent_26_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void OnSet(bool bSuccess);
+	void BP_OnActivated();
 	void BndEvt__IconTextButton_C_0_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void OnCheckComplete(bool bSuccess, bool bWasValidAffiliateName, const class FString& AffilateNameChecked);
-	void OnFinish();
-	void BndEvt__MobileCloseButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void OnInputModeChanged(bool bUsingGamepad);
+	void Construct();
+	void BndEvt__CloseButton_Mobile_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
+	void WidgetAnimationEvt_SuccessAnim_K2Node_WidgetAnimationEvent_1();
 	void ExecuteUbergraph_AffiliateKeyModal(int32 EntryPoint);
 
 public:
@@ -75,31 +74,6 @@ public:
 		return GetDefaultObjImpl<UAffiliateKeyModal_C>();
 	}
 };
-static_assert(alignof(UAffiliateKeyModal_C) == 0x000008, "Wrong alignment on UAffiliateKeyModal_C");
-static_assert(sizeof(UAffiliateKeyModal_C) == 0x000428, "Wrong size on UAffiliateKeyModal_C");
-static_assert(offsetof(UAffiliateKeyModal_C, UberGraphFrame) == 0x000360, "Member 'UAffiliateKeyModal_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, SuccessAnim) == 0x000368, "Member 'UAffiliateKeyModal_C::SuccessAnim' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, Shake) == 0x000370, "Member 'UAffiliateKeyModal_C::Shake' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, CloseButton) == 0x000378, "Member 'UAffiliateKeyModal_C::CloseButton' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, CloseIcon) == 0x000380, "Member 'UAffiliateKeyModal_C::CloseIcon' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, CommonTextBlock_0) == 0x000388, "Member 'UAffiliateKeyModal_C::CommonTextBlock_0' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, ConnectionError) == 0x000390, "Member 'UAffiliateKeyModal_C::ConnectionError' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, Description) == 0x000398, "Member 'UAffiliateKeyModal_C::Description' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, EditTextActionWidget) == 0x0003A0, "Member 'UAffiliateKeyModal_C::EditTextActionWidget' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, EntryError) == 0x0003A8, "Member 'UAffiliateKeyModal_C::EntryError' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, ErrorPart2) == 0x0003B0, "Member 'UAffiliateKeyModal_C::ErrorPart2' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, LaunchWebsite) == 0x0003B8, "Member 'UAffiliateKeyModal_C::LaunchWebsite' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, Lightbox) == 0x0003C0, "Member 'UAffiliateKeyModal_C::Lightbox' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, MainIcon) == 0x0003C8, "Member 'UAffiliateKeyModal_C::MainIcon' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, McpWaitingSpinner) == 0x0003D0, "Member 'UAffiliateKeyModal_C::McpWaitingSpinner' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, MobileCloseButton) == 0x0003D8, "Member 'UAffiliateKeyModal_C::MobileCloseButton' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, MobileCloseOverlay) == 0x0003E0, "Member 'UAffiliateKeyModal_C::MobileCloseOverlay' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, Title) == 0x0003E8, "Member 'UAffiliateKeyModal_C::Title' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, Found) == 0x0003F0, "Member 'UAffiliateKeyModal_C::Found' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, FoundItem) == 0x0003F8, "Member 'UAffiliateKeyModal_C::FoundItem' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, ConnectionTimeout) == 0x000408, "Member 'UAffiliateKeyModal_C::ConnectionTimeout' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, OnPopupClosed) == 0x000410, "Member 'UAffiliateKeyModal_C::OnPopupClosed' has a wrong offset!");
-static_assert(offsetof(UAffiliateKeyModal_C, bSkipAutoPopulate) == 0x000420, "Member 'UAffiliateKeyModal_C::bSkipAutoPopulate' has a wrong offset!");
 
 }
 

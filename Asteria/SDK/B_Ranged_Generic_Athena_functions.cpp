@@ -125,8 +125,9 @@ void AB_Ranged_Generic_Athena_C::HideWeaponMesh()
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // bool                                    bVisible                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    bSetForLocalControllerOnly                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_Ranged_Generic_Athena_C::OnWeaponVisibilityChanged(bool bVisible)
+void AB_Ranged_Generic_Athena_C::OnWeaponVisibilityChanged(bool bVisible, bool bSetForLocalControllerOnly)
 {
 	static class UFunction* Func = nullptr;
 
@@ -136,6 +137,7 @@ void AB_Ranged_Generic_Athena_C::OnWeaponVisibilityChanged(bool bVisible)
 	Params::B_Ranged_Generic_Athena_C_OnWeaponVisibilityChanged Parms{};
 
 	Parms.bVisible = bVisible;
+	Parms.bSetForLocalControllerOnly = bSetForLocalControllerOnly;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -230,7 +232,7 @@ void AB_Ranged_Generic_Athena_C::ShellsON__onPump_()
 // Function B_Ranged_Generic_Athena.B_Ranged_Generic_Athena_C.OnInitCosmeticAlterations
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// struct FFortCosmeticModification        CosmeticMod                                            (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortCosmeticModification& CosmeticMod                                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void AB_Ranged_Generic_Athena_C::OnInitCosmeticAlterations(const struct FFortCosmeticModification& CosmeticMod)
 {
@@ -780,6 +782,35 @@ void AB_Ranged_Generic_Athena_C::HandlePawnAndWeaponVisFor1PTargeting(bool IsTar
 	Parms.IsTargeting = IsTargeting;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_Ranged_Generic_Athena.B_Ranged_Generic_Athena_C.GetScopeParameters
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UStaticMeshComponent**            ScopeComponent                                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D*                       DepthOfFieldVignetteRange                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  WeaponSightsCameraOffset                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AB_Ranged_Generic_Athena_C::GetScopeParameters(class UStaticMeshComponent** ScopeComponent, struct FVector2D* DepthOfFieldVignetteRange, float* WeaponSightsCameraOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_Ranged_Generic_Athena_C", "GetScopeParameters");
+
+	Params::B_Ranged_Generic_Athena_C_GetScopeParameters Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ScopeComponent != nullptr)
+		*ScopeComponent = Parms.ScopeComponent;
+
+	if (DepthOfFieldVignetteRange != nullptr)
+		*DepthOfFieldVignetteRange = std::move(Parms.DepthOfFieldVignetteRange);
+
+	if (WeaponSightsCameraOffset != nullptr)
+		*WeaponSightsCameraOffset = Parms.WeaponSightsCameraOffset;
 }
 
 }

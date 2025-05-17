@@ -11,34 +11,33 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
-#include "FortniteGame_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ApplyMedkit_Athena_AnimBP.ApplyMedkit_Athena_AnimBP_C
-// 0x02F8 (0x0560 - 0x0268)
-class UApplyMedkit_Athena_AnimBP_C final : public UAnimInstance
+// 0x0310 (0x0600 - 0x02F0)
+class UApplyMedkit_Athena_AnimBP_C final : public UFortItemAnimInstance
 {
 public:
-	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root_5FAA15A34682216510D589A50487471A; // 0x0278(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_F9A34A2B463D37243970C4B4C478BEEC; // 0x0298(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_0A922DF04C01828D0F5A42838F0C626E; // 0x02E0(0x0078)()
-	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum_BF6BBA2D4BFA8438C4D6609C33CA86C9; // 0x0358(0x00B0)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_FD3F608B440246E77EBEB1B065FCF60A; // 0x0408(0x00B8)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_216D9F694D96C1FCFF7C009A530AF1DA; // 0x04C0(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_24AD787544D7B979140370BE70006301; // 0x0508(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5DEB5D87408BBFCCBE4CAE8EB3BDFC0F; // 0x0530(0x0028)()
-	EFortCustomGender                             Gender;                                            // 0x0558(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0300(0x0030)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0330(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x0378(0x0078)()
+	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x03F0(0x00B0)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x04A0(0x00C8)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0568(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x05B0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x05D8(0x0028)()
 
 public:
 	void ExecuteUbergraph_ApplyMedkit_Athena_AnimBP(int32 EntryPoint);
-	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -50,18 +49,6 @@ public:
 		return GetDefaultObjImpl<UApplyMedkit_Athena_AnimBP_C>();
 	}
 };
-static_assert(alignof(UApplyMedkit_Athena_AnimBP_C) == 0x000008, "Wrong alignment on UApplyMedkit_Athena_AnimBP_C");
-static_assert(sizeof(UApplyMedkit_Athena_AnimBP_C) == 0x000560, "Wrong size on UApplyMedkit_Athena_AnimBP_C");
-static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, UberGraphFrame) == 0x000270, "Member 'UApplyMedkit_Athena_AnimBP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_Root_5FAA15A34682216510D589A50487471A) == 0x000278, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_Root_5FAA15A34682216510D589A50487471A' has a wrong offset!");
-static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_Slot_F9A34A2B463D37243970C4B4C478BEEC) == 0x000298, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_Slot_F9A34A2B463D37243970C4B4C478BEEC' has a wrong offset!");
-static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_SequencePlayer_0A922DF04C01828D0F5A42838F0C626E) == 0x0002E0, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_SequencePlayer_0A922DF04C01828D0F5A42838F0C626E' has a wrong offset!");
-static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_BlendListByEnum_BF6BBA2D4BFA8438C4D6609C33CA86C9) == 0x000358, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_BlendListByEnum_BF6BBA2D4BFA8438C4D6609C33CA86C9' has a wrong offset!");
-static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_SaveCachedPose_FD3F608B440246E77EBEB1B065FCF60A) == 0x000408, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_SaveCachedPose_FD3F608B440246E77EBEB1B065FCF60A' has a wrong offset!");
-static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_Slot_216D9F694D96C1FCFF7C009A530AF1DA) == 0x0004C0, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_Slot_216D9F694D96C1FCFF7C009A530AF1DA' has a wrong offset!");
-static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_UseCachedPose_24AD787544D7B979140370BE70006301) == 0x000508, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_UseCachedPose_24AD787544D7B979140370BE70006301' has a wrong offset!");
-static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, AnimGraphNode_UseCachedPose_5DEB5D87408BBFCCBE4CAE8EB3BDFC0F) == 0x000530, "Member 'UApplyMedkit_Athena_AnimBP_C::AnimGraphNode_UseCachedPose_5DEB5D87408BBFCCBE4CAE8EB3BDFC0F' has a wrong offset!");
-static_assert(offsetof(UApplyMedkit_Athena_AnimBP_C, Gender) == 0x000558, "Member 'UApplyMedkit_Athena_AnimBP_C::Gender' has a wrong offset!");
 
 }
 

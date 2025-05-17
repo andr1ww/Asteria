@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UPartyFinderListItemStyle_Invis_C>();
 	}
 };
-static_assert(alignof(UPartyFinderListItemStyle_Invis_C) == 0x000008, "Wrong alignment on UPartyFinderListItemStyle_Invis_C");
-static_assert(sizeof(UPartyFinderListItemStyle_Invis_C) == 0x000570, "Wrong size on UPartyFinderListItemStyle_Invis_C");
 
 }
 

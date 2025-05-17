@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GCNL_Athena_SnowSurface.GCNL_Athena_SnowSurface_C
-// 0x0008 (0x0798 - 0x0790)
+// 0x0008 (0x07C8 - 0x07C0)
 class AGCNL_Athena_SnowSurface_C final : public AFortGameplayCueNotify_Loop
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0790(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_GCNL_Athena_SnowSurface(int32 EntryPoint);
@@ -39,9 +39,6 @@ public:
 		return GetDefaultObjImpl<AGCNL_Athena_SnowSurface_C>();
 	}
 };
-static_assert(alignof(AGCNL_Athena_SnowSurface_C) == 0x000008, "Wrong alignment on AGCNL_Athena_SnowSurface_C");
-static_assert(sizeof(AGCNL_Athena_SnowSurface_C) == 0x000798, "Wrong size on AGCNL_Athena_SnowSurface_C");
-static_assert(offsetof(AGCNL_Athena_SnowSurface_C, UberGraphFrame) == 0x000790, "Member 'AGCNL_Athena_SnowSurface_C::UberGraphFrame' has a wrong offset!");
 
 }
 

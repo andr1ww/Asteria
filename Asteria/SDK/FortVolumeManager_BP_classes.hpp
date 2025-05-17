@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FortVolumeManager_BP.FortVolumeManager_BP_C
-// 0x0000 (0x0510 - 0x0510)
+// 0x0000 (0x0570 - 0x0570)
 class AFortVolumeManager_BP_C final : public AFortVolumeManager
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<AFortVolumeManager_BP_C>();
 	}
 };
-static_assert(alignof(AFortVolumeManager_BP_C) == 0x000008, "Wrong alignment on AFortVolumeManager_BP_C");
-static_assert(sizeof(AFortVolumeManager_BP_C) == 0x000510, "Wrong size on AFortVolumeManager_BP_C");
 
 }
 

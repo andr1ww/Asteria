@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function ChatMessageEntry.ChatMessageEntry_C.HandleSelectionStatusChanged
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function ChatMessageEntry.ChatMessageEntry_C.ExecuteUbergraph_ChatMessageEntry
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UChatMessageEntry_C::HandleSelectionStatusChanged(bool bIsSelected)
+void UChatMessageEntry_C::ExecuteUbergraph_ChatMessageEntry(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ChatMessageEntry_C", "HandleSelectionStatusChanged");
+		Func = Class->GetFunction("ChatMessageEntry_C", "ExecuteUbergraph_ChatMessageEntry");
 
-	Params::ChatMessageEntry_C_HandleSelectionStatusChanged Parms{};
+	Params::ChatMessageEntry_C_ExecuteUbergraph_ChatMessageEntry Parms{};
 
-	Parms.bIsSelected = bIsSelected;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -46,20 +46,6 @@ void UChatMessageEntry_C::OnEntryUpdated_1()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ChatMessageEntry_C", "OnEntryUpdated_1");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ChatMessageEntry.ChatMessageEntry_C.BndEvt__Button_FocusTarget_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UChatMessageEntry_C::BndEvt__Button_FocusTarget_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ChatMessageEntry_C", "BndEvt__Button_FocusTarget_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,21 +71,35 @@ void UChatMessageEntry_C::OnFocusedChanged(bool bIsFocused)
 }
 
 
-// Function ChatMessageEntry.ChatMessageEntry_C.ExecuteUbergraph_ChatMessageEntry
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function ChatMessageEntry.ChatMessageEntry_C.BndEvt__Button_FocusTarget_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UChatMessageEntry_C::ExecuteUbergraph_ChatMessageEntry(int32 EntryPoint)
+void UChatMessageEntry_C::BndEvt__Button_FocusTarget_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ChatMessageEntry_C", "ExecuteUbergraph_ChatMessageEntry");
+		Func = Class->GetFunction("ChatMessageEntry_C", "BndEvt__Button_FocusTarget_K2Node_ComponentBoundEvent_35_OnButtonClickedEvent__DelegateSignature");
 
-	Params::ChatMessageEntry_C_ExecuteUbergraph_ChatMessageEntry Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function ChatMessageEntry.ChatMessageEntry_C.HandleSelectionStatusChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UChatMessageEntry_C::HandleSelectionStatusChanged(bool bIsSelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChatMessageEntry_C", "HandleSelectionStatusChanged");
+
+	Params::ChatMessageEntry_C_HandleSelectionStatusChanged Parms{};
+
+	Parms.bIsSelected = bIsSelected;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

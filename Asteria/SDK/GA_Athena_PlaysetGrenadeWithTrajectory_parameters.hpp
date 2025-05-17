@@ -19,7 +19,7 @@ namespace SDK::Params
 {
 
 // Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory
-// 0x02A0 (0x02A0 - 0x0000)
+// 0x0250 (0x0250 - 0x0000)
 struct GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory final
 {
 public:
@@ -34,10 +34,9 @@ public:
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0038(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_FMax_ReturnValue;                         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_CalculateProjectileTrajectorySplineWithHit_OutHitResult; // 0x004C(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVector>                        CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplinePoints; // 0x00D8(0x0010)(ZeroConstructor, ReferenceParm)
-	TArray<struct FVector>                        CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplineTangents; // 0x00E8(0x0010)(ZeroConstructor, ReferenceParm)
+	struct FHitResult                             CallFunc_CalculateProjectileTrajectorySplineWithHit_OutHitResult; // 0x004C(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	TArray<struct FVector>                        CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplinePoints; // 0x00D8(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	TArray<struct FVector>                        CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplineTangents; // 0x00E8(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_FA[0x2];                                       // 0x00FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
@@ -56,145 +55,63 @@ public:
 	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0160(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x016C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_DamageBalloon_Athena_C*             K2Node_DynamicCast_AsBP_Damage_Balloon_Athena;     // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0181(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_182[0x6];                                      // 0x0182(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortAthenaSupplyDrop*                  K2Node_DynamicCast_AsFort_Athena_Supply_Drop;      // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_191[0x7];                                      // 0x0191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPawn*                              K2Node_DynamicCast_AsFort_Pawn;                    // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABuildingProp*                          K2Node_DynamicCast_AsBuilding_Prop;                // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1B1[0x3];                                      // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector_X;                            // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1C9[0x3];                                      // 0x01C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Round_ReturnValue;                        // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1D1[0x3];                                      // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Multiply_IntFloat_ReturnValue;            // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_3;                  // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1E1[0x3];                                      // 0x01E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x01E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_IntFloat_ReturnValue_1;          // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_IntFloat_ReturnValue_2;          // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x01F8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0204(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_205[0x3];                                      // 0x0205(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                K2Node_Event_Location;                             // 0x0208(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               K2Node_Event_Direction;                            // 0x0214(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortGameStateAthena*                   K2Node_DynamicCast_AsFort_Game_State_Athena;       // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  CallFunc_GetAthenaPlaylistContextTags_ReturnValue; // 0x0238(0x0020)()
-	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_259[0x7];                                      // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortProjectileBase*                    K2Node_Event_ProjectileReference;                  // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFortPlaysetItemDefinition*             CallFunc_GetActivePlaysetData_OutData;             // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_CalculateRotation_NewRotation;            // 0x0270(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_CanCreatePlayset_ReturnValue;             // 0x027C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x027D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_4;                  // 0x027E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_27F[0x1];                                      // 0x027F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_ProjectileTrajectory_C*             K2Node_Select_Default;                             // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0289(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_28A[0x6];                                      // 0x028A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_ProjectileTrajectory_C*             K2Node_Select_Default_1;                           // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakVector_X;                            // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_189[0x3];                                      // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Round_ReturnValue;                        // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_IntFloat_ReturnValue;            // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue_2;          // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_IntFloat_ReturnValue_1;          // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_IntFloat_ReturnValue_2;          // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x01AC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1B9[0x3];                                      // 0x01B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                K2Node_Event_Location;                             // 0x01BC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               K2Node_Event_Direction;                            // 0x01C8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1D4[0x4];                                      // 0x01D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortGameStateAthena*                   K2Node_DynamicCast_AsFort_Game_State_Athena;       // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  CallFunc_GetAthenaPlaylistContextTags_ReturnValue; // 0x01F0(0x0020)()
+	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortProjectileBase*                    K2Node_Event_ProjectileReference;                  // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFortPlaysetItemDefinition*             CallFunc_GetActivePlaysetData_OutData;             // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_CalculateRotation_NewRotation;            // 0x0228(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_CanCreatePlayset_ReturnValue;             // 0x0234(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0235(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_236[0x2];                                      // 0x0236(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_ProjectileTrajectory_C*             K2Node_Select_Default;                             // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_1;                              // 0x0242(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_243[0x5];                                      // 0x0243(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_ProjectileTrajectory_C*             K2Node_Select_Default_1;                           // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory) == 0x000008, "Wrong alignment on GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory");
-static_assert(sizeof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory) == 0x0002A0, "Wrong size on GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, EntryPoint) == 0x000000, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::EntryPoint' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_SpawnLocationAndRotation_OutLoc) == 0x000004, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_SpawnLocationAndRotation_OutLoc' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_SpawnLocationAndRotation_OutRot) == 0x000010, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_SpawnLocationAndRotation_OutRot' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Conv_RotatorToVector_ReturnValue) == 0x00001C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Conv_RotatorToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakRotator_Roll) == 0x000028, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakRotator_Pitch) == 0x00002C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakRotator_Yaw) == 0x000030, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_CalcGrenadeSpeedFromPitch_GrenadeSpeed) == 0x000034, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_CalcGrenadeSpeedFromPitch_GrenadeSpeed' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000038, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_SelectFloat_ReturnValue) == 0x000044, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_FMax_ReturnValue) == 0x000048, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_CalculateProjectileTrajectorySplineWithHit_OutHitResult) == 0x00004C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_CalculateProjectileTrajectorySplineWithHit_OutHitResult' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplinePoints) == 0x0000D8, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplinePoints' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplineTangents) == 0x0000E8, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_CalculateProjectileTrajectorySplineWithHit_OutSplineTangents' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_bBlockingHit) == 0x0000F8, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_bInitialOverlap) == 0x0000F9, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_Time) == 0x0000FC, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_Distance) == 0x000100, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_Location) == 0x000104, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_ImpactPoint) == 0x000110, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_Normal) == 0x00011C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_ImpactNormal) == 0x000128, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_PhysMat) == 0x000138, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_HitActor) == 0x000140, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_HitComponent) == 0x000148, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_HitBoneName) == 0x000150, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_HitItem) == 0x000158, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_FaceIndex) == 0x00015C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_TraceStart) == 0x000160, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakHitResult_TraceEnd) == 0x00016C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_DynamicCast_AsBP_Damage_Balloon_Athena) == 0x000178, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_DynamicCast_AsBP_Damage_Balloon_Athena' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_DynamicCast_bSuccess) == 0x000180, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_IsLocallyControlled_ReturnValue) == 0x000181, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_DynamicCast_AsFort_Athena_Supply_Drop) == 0x000188, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_DynamicCast_AsFort_Athena_Supply_Drop' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_DynamicCast_bSuccess_1) == 0x000190, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_DynamicCast_AsFort_Pawn) == 0x000198, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_DynamicCast_AsFort_Pawn' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_DynamicCast_bSuccess_2) == 0x0001A0, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_DynamicCast_AsBuilding_Prop) == 0x0001A8, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_DynamicCast_AsBuilding_Prop' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_DynamicCast_bSuccess_3) == 0x0001B0, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakVector_X) == 0x0001B4, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakVector_Y) == 0x0001B8, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BreakVector_Z) == 0x0001BC, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Not_PreBool_ReturnValue) == 0x0001C0, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Divide_FloatFloat_ReturnValue) == 0x0001C4, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BooleanOR_ReturnValue) == 0x0001C8, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Round_ReturnValue) == 0x0001CC, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Round_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BooleanOR_ReturnValue_1) == 0x0001D0, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Multiply_IntFloat_ReturnValue) == 0x0001D4, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Multiply_IntFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BooleanOR_ReturnValue_2) == 0x0001D8, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x0001DC, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BooleanOR_ReturnValue_3) == 0x0001E0, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BooleanOR_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Round_ReturnValue_1) == 0x0001E4, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Round_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Divide_FloatFloat_ReturnValue_2) == 0x0001E8, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Divide_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Multiply_IntFloat_ReturnValue_1) == 0x0001EC, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Multiply_IntFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Round_ReturnValue_2) == 0x0001F0, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Round_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Multiply_IntFloat_ReturnValue_2) == 0x0001F4, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Multiply_IntFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_MakeVector_ReturnValue) == 0x0001F8, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, Temp_bool_Variable) == 0x000204, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_Event_Location) == 0x000208, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_Event_Location' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_Event_Direction) == 0x000214, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_Event_Direction' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_GetGameState_ReturnValue) == 0x000220, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_GetGameState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_DynamicCast_AsFort_Game_State_Athena) == 0x000228, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_DynamicCast_AsFort_Game_State_Athena' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_DynamicCast_bSuccess_4) == 0x000230, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_GetAthenaPlaylistContextTags_ReturnValue) == 0x000238, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_GetAthenaPlaylistContextTags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_HasTag_ReturnValue) == 0x000258, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_HasTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_Event_ProjectileReference) == 0x000260, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_Event_ProjectileReference' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_GetActivePlaysetData_OutData) == 0x000268, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_GetActivePlaysetData_OutData' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_CalculateRotation_NewRotation) == 0x000270, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_CalculateRotation_NewRotation' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_CanCreatePlayset_ReturnValue) == 0x00027C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_CanCreatePlayset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_Not_PreBool_ReturnValue_1) == 0x00027D, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_BooleanOR_ReturnValue_4) == 0x00027E, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_BooleanOR_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_Select_Default) == 0x000280, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, Temp_bool_Variable_1) == 0x000288, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_IsServer_ReturnValue) == 0x000289, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, K2Node_Select_Default_1) == 0x000290, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory, CallFunc_IsValid_ReturnValue) == 0x000298, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_ExecuteUbergraph_GA_Athena_PlaysetGrenadeWithTrajectory::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.AthenaProjectileSpawned
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Athena_PlaysetGrenadeWithTrajectory_C_AthenaProjectileSpawned final
+{
+public:
+	class AFortProjectileBase*                    ProjectileReference_0;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.Server_SpawnProjectile
+// 0x0018 (0x0018 - 0x0000)
+struct GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Direction;                                         // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
 
 // Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.SetupDummyProjectileRed
 // 0x0080 (0x0080 - 0x0000)
@@ -205,7 +122,7 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0010(0x0030)(IsPlainOldData, NoDestructor)
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0010(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
 	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_ProjectileTrajectory_Athena_SnapBoxToGrid_C* K2Node_DynamicCast_AsBP_Projectile_Trajectory_Athena_Snap_Box_to_Grid; // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -218,21 +135,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed) == 0x000010, "Wrong alignment on GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed");
-static_assert(sizeof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed) == 0x000080, "Wrong size on GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, Temp_int_Array_Index_Variable) == 0x000000, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, CallFunc_GetTransform_ReturnValue) == 0x000010, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000040, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, CallFunc_FinishSpawningActor_ReturnValue) == 0x000048, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, K2Node_DynamicCast_AsBP_Projectile_Trajectory_Athena_Snap_Box_to_Grid) == 0x000050, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::K2Node_DynamicCast_AsBP_Projectile_Trajectory_Athena_Snap_Box_to_Grid' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, K2Node_DynamicCast_AsBP_Projectile_Trajectory) == 0x000060, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::K2Node_DynamicCast_AsBP_Projectile_Trajectory' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, K2Node_DynamicCast_bSuccess_1) == 0x000068, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, CallFunc_Array_Get_Item) == 0x000070, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, CallFunc_Array_Length_ReturnValue) == 0x000078, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed, CallFunc_Less_IntInt_ReturnValue) == 0x00007C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetupDummyProjectileRed::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.GetActivePlaysetData
 // 0x0030 (0x0030 - 0x0000)
@@ -247,14 +149,6 @@ public:
 	class UFortPlaysetItemDefinition*             CallFunc_GetPlayset_ReturnValue;                   // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData) == 0x000008, "Wrong alignment on GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData");
-static_assert(sizeof(GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData) == 0x000030, "Wrong size on GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData, OutData) == 0x000000, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData::OutData' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData, CallFunc_GetPlayerController_ReturnValue) == 0x000008, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData, K2Node_DynamicCast_AsAthena_Player_Controller) == 0x000010, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData::K2Node_DynamicCast_AsAthena_Player_Controller' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData, CallFunc_GetPlayset_ReturnValue) == 0x000020, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData::CallFunc_GetPlayset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_GetActivePlaysetData::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.SetPlaysetData
 // 0x0020 (0x0020 - 0x0000)
@@ -266,12 +160,6 @@ public:
 	class AB_Prj_Athena_PlaysetGrenade_C*         K2Node_DynamicCast_AsB_Prj_Athena_Playset_Grenade; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData) == 0x000008, "Wrong alignment on GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData");
-static_assert(sizeof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData) == 0x000020, "Wrong size on GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData, Projectile_Reference) == 0x000000, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData::Projectile_Reference' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData, CallFunc_GetActivePlaysetData_OutData) == 0x000008, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData::CallFunc_GetActivePlaysetData_OutData' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData, K2Node_DynamicCast_AsB_Prj_Athena_Playset_Grenade) == 0x000010, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData::K2Node_DynamicCast_AsB_Prj_Athena_Playset_Grenade' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetPlaysetData::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.SetActivePlaysetOnPlayer
 // 0x0020 (0x0020 - 0x0000)
@@ -283,12 +171,6 @@ public:
 	class AAthena_PlayerController_C*             K2Node_DynamicCast_AsAthena_Player_Controller;     // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer) == 0x000008, "Wrong alignment on GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer");
-static_assert(sizeof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer) == 0x000020, "Wrong size on GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer, CallFunc_GetPlayerController_ReturnValue) == 0x000000, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer, CallFunc_GetActivePlaysetData_OutData) == 0x000008, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer::CallFunc_GetActivePlaysetData_OutData' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer, K2Node_DynamicCast_AsAthena_Player_Controller) == 0x000010, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer::K2Node_DynamicCast_AsAthena_Player_Controller' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_SetActivePlaysetOnPlayer::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.CalculateRotation
 // 0x0068 (0x0068 - 0x0000)
@@ -314,23 +196,6 @@ public:
 	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0058(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation) == 0x000008, "Wrong alignment on GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation");
-static_assert(sizeof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation) == 0x000068, "Wrong size on GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, Playset) == 0x000000, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::Playset' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, Rotation) == 0x000008, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::Rotation' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, NewRotation) == 0x000014, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::NewRotation' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, PlaysetRotation) == 0x000020, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::PlaysetRotation' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, YawOffset) == 0x00002C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::YawOffset' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, CallFunc_BreakRotator_Roll) == 0x000038, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, CallFunc_BreakRotator_Pitch) == 0x00003C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, CallFunc_BreakRotator_Yaw) == 0x000040, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, CallFunc_IsValid_ReturnValue) == 0x000044, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, CallFunc_GreaterEqual_FloatFloat_ReturnValue) == 0x000045, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::CallFunc_GreaterEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, CallFunc_Abs_ReturnValue) == 0x000048, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, CallFunc_GreaterEqual_FloatFloat_ReturnValue_1) == 0x00004C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::CallFunc_GreaterEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, CallFunc_Abs_ReturnValue_1) == 0x000050, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, CallFunc_GreaterEqual_FloatFloat_ReturnValue_2) == 0x000054, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::CallFunc_GreaterEqual_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation, CallFunc_ComposeRotators_ReturnValue) == 0x000058, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_CalculateRotation::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
 
 // Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.DestroyProjectileTrajectory
 // 0x0001 (0x0001 - 0x0000)
@@ -339,33 +204,6 @@ struct GA_Athena_PlaysetGrenadeWithTrajectory_C_DestroyProjectileTrajectory fina
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GA_Athena_PlaysetGrenadeWithTrajectory_C_DestroyProjectileTrajectory) == 0x000001, "Wrong alignment on GA_Athena_PlaysetGrenadeWithTrajectory_C_DestroyProjectileTrajectory");
-static_assert(sizeof(GA_Athena_PlaysetGrenadeWithTrajectory_C_DestroyProjectileTrajectory) == 0x000001, "Wrong size on GA_Athena_PlaysetGrenadeWithTrajectory_C_DestroyProjectileTrajectory");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_DestroyProjectileTrajectory, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_DestroyProjectileTrajectory::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.AthenaProjectileSpawned
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Athena_PlaysetGrenadeWithTrajectory_C_AthenaProjectileSpawned final
-{
-public:
-	class AFortProjectileBase*                    ProjectileReference_0;                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Athena_PlaysetGrenadeWithTrajectory_C_AthenaProjectileSpawned) == 0x000008, "Wrong alignment on GA_Athena_PlaysetGrenadeWithTrajectory_C_AthenaProjectileSpawned");
-static_assert(sizeof(GA_Athena_PlaysetGrenadeWithTrajectory_C_AthenaProjectileSpawned) == 0x000008, "Wrong size on GA_Athena_PlaysetGrenadeWithTrajectory_C_AthenaProjectileSpawned");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_AthenaProjectileSpawned, ProjectileReference_0) == 0x000000, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_AthenaProjectileSpawned::ProjectileReference_0' has a wrong offset!");
-
-// Function GA_Athena_PlaysetGrenadeWithTrajectory.GA_Athena_PlaysetGrenadeWithTrajectory_C.Server_SpawnProjectile
-// 0x0018 (0x0018 - 0x0000)
-struct GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Direction;                                         // 0x000C(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile) == 0x000004, "Wrong alignment on GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile");
-static_assert(sizeof(GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile) == 0x000018, "Wrong size on GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile, Location) == 0x000000, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile::Location' has a wrong offset!");
-static_assert(offsetof(GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile, Direction) == 0x00000C, "Member 'GA_Athena_PlaysetGrenadeWithTrajectory_C_Server_SpawnProjectile::Direction' has a wrong offset!");
 
 }
 

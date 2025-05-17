@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UMissionGen_DeimosLarge_C>();
 	}
 };
-static_assert(alignof(UMissionGen_DeimosLarge_C) == 0x000008, "Wrong alignment on UMissionGen_DeimosLarge_C");
-static_assert(sizeof(UMissionGen_DeimosLarge_C) == 0x0006C0, "Wrong size on UMissionGen_DeimosLarge_C");
 
 }
 

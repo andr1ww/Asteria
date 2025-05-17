@@ -18,17 +18,17 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass MicIndicator.MicIndicator_C
-// 0x0030 (0x0290 - 0x0260)
+// 0x0030 (0x02E0 - 0x02B0)
 class UMicIndicator_C final : public UFortMicIndicatorWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UOverlay*                               Zero1_NotSpeaking;                                 // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Zero2_Speaking;                                    // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               Zero3_Muted;                                       // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        MicStateSwitcher;                                  // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bIsMuted;                                          // 0x0288(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bIsTalking;                                        // 0x0289(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UOverlay*                               Zero1_NotSpeaking;                                 // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Zero2_Speaking;                                    // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               Zero3_Muted;                                       // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        MicStateSwitcher;                                  // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          bIsMuted;                                          // 0x02D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsTalking;                                        // 0x02D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_MicIndicator(int32 EntryPoint);
@@ -45,15 +45,6 @@ public:
 		return GetDefaultObjImpl<UMicIndicator_C>();
 	}
 };
-static_assert(alignof(UMicIndicator_C) == 0x000008, "Wrong alignment on UMicIndicator_C");
-static_assert(sizeof(UMicIndicator_C) == 0x000290, "Wrong size on UMicIndicator_C");
-static_assert(offsetof(UMicIndicator_C, UberGraphFrame) == 0x000260, "Member 'UMicIndicator_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UMicIndicator_C, Zero1_NotSpeaking) == 0x000268, "Member 'UMicIndicator_C::Zero1_NotSpeaking' has a wrong offset!");
-static_assert(offsetof(UMicIndicator_C, Zero2_Speaking) == 0x000270, "Member 'UMicIndicator_C::Zero2_Speaking' has a wrong offset!");
-static_assert(offsetof(UMicIndicator_C, Zero3_Muted) == 0x000278, "Member 'UMicIndicator_C::Zero3_Muted' has a wrong offset!");
-static_assert(offsetof(UMicIndicator_C, MicStateSwitcher) == 0x000280, "Member 'UMicIndicator_C::MicStateSwitcher' has a wrong offset!");
-static_assert(offsetof(UMicIndicator_C, bIsMuted) == 0x000288, "Member 'UMicIndicator_C::bIsMuted' has a wrong offset!");
-static_assert(offsetof(UMicIndicator_C, bIsTalking) == 0x000289, "Member 'UMicIndicator_C::bIsTalking' has a wrong offset!");
 
 }
 

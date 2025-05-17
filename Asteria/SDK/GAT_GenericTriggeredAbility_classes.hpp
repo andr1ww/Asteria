@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GAT_GenericTriggeredAbility.GAT_GenericTriggeredAbility_C
-// 0x00C8 (0x0A20 - 0x0958)
+// 0x00C8 (0x0B88 - 0x0AC0)
 class UGAT_GenericTriggeredAbility_C : public UGAT_TriggeredAbility_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_GenericTriggeredAbility_C;      // 0x0958(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayEventData                     EventData;                                         // 0x0960(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AFortPlayerPawn*                        FortPlayerPawn;                                    // 0x0A10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isAutoCommitted;                                   // 0x0A18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          isStaminaLockedOut;                                // 0x0A19(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_GenericTriggeredAbility_C;      // 0x0AC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayEventData                     EventData;                                         // 0x0AC8(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class AFortPlayerPawn*                        FortPlayerPawn;                                    // 0x0B78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isAutoCommitted;                                   // 0x0B80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          isStaminaLockedOut;                                // 0x0B81(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_GAT_GenericTriggeredAbility(int32 EntryPoint);
@@ -43,13 +43,6 @@ public:
 		return GetDefaultObjImpl<UGAT_GenericTriggeredAbility_C>();
 	}
 };
-static_assert(alignof(UGAT_GenericTriggeredAbility_C) == 0x000008, "Wrong alignment on UGAT_GenericTriggeredAbility_C");
-static_assert(sizeof(UGAT_GenericTriggeredAbility_C) == 0x000A20, "Wrong size on UGAT_GenericTriggeredAbility_C");
-static_assert(offsetof(UGAT_GenericTriggeredAbility_C, UberGraphFrame_GAT_GenericTriggeredAbility_C) == 0x000958, "Member 'UGAT_GenericTriggeredAbility_C::UberGraphFrame_GAT_GenericTriggeredAbility_C' has a wrong offset!");
-static_assert(offsetof(UGAT_GenericTriggeredAbility_C, EventData) == 0x000960, "Member 'UGAT_GenericTriggeredAbility_C::EventData' has a wrong offset!");
-static_assert(offsetof(UGAT_GenericTriggeredAbility_C, FortPlayerPawn) == 0x000A10, "Member 'UGAT_GenericTriggeredAbility_C::FortPlayerPawn' has a wrong offset!");
-static_assert(offsetof(UGAT_GenericTriggeredAbility_C, isAutoCommitted) == 0x000A18, "Member 'UGAT_GenericTriggeredAbility_C::isAutoCommitted' has a wrong offset!");
-static_assert(offsetof(UGAT_GenericTriggeredAbility_C, isStaminaLockedOut) == 0x000A19, "Member 'UGAT_GenericTriggeredAbility_C::isStaminaLockedOut' has a wrong offset!");
 
 }
 

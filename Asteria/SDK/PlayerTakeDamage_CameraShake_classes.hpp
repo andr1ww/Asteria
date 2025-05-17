@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UPlayerTakeDamage_CameraShake_C>();
 	}
 };
-static_assert(alignof(UPlayerTakeDamage_CameraShake_C) == 0x000008, "Wrong alignment on UPlayerTakeDamage_CameraShake_C");
-static_assert(sizeof(UPlayerTakeDamage_CameraShake_C) == 0x000160, "Wrong size on UPlayerTakeDamage_CameraShake_C");
 
 }
 

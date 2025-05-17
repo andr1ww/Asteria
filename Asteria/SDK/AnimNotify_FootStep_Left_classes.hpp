@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_FootStep_Left_C>();
 	}
 };
-static_assert(alignof(UAnimNotify_FootStep_Left_C) == 0x000008, "Wrong alignment on UAnimNotify_FootStep_Left_C");
-static_assert(sizeof(UAnimNotify_FootStep_Left_C) == 0x000040, "Wrong size on UAnimNotify_FootStep_Left_C");
 
 }
 

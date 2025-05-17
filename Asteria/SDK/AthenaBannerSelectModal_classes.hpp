@@ -18,26 +18,27 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaBannerSelectModal.AthenaBannerSelectModal_C
-// 0x0030 (0x0378 - 0x0348)
-class UAthenaBannerSelectModal_C final : public UFortActivatablePanel
+// 0x0038 (0x04B0 - 0x0478)
+class UAthenaBannerSelectModal_C final : public UFortBannerSelectModal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0348(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonBorder*                          BorderTouch;                                       // 0x0350(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBP_LocalPlayerBannerEditor_C*          BP_LocalPlayerBannerEditor;                        // 0x0358(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULightbox_C*                            Lightbox;                                          // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    CloseAction;                                       // 0x0368(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0478(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonBorder*                          BorderTouch;                                       // 0x0480(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBP_LocalPlayerBannerEditor_C*          BP_LocalPlayerBannerEditor;                        // 0x0488(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULightbox_C*                            Lightbox;                                          // 0x0490(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              ScaleBox_Banner;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    CloseAction;                                       // 0x04A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
-	struct FEventReply On_BorderTouch_MouseButtonDown_0(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void Setup_Input_Action_Handlers();
-	void HandleCloseAction(bool* PassThrough);
-	void Construct();
-	void BndEvt__BP_LocalPlayerBannerEditor_K2Node_ComponentBoundEvent_18_CloseBannerEditor__DelegateSignature(class FName IconId, class FName ColorId);
-	void OnDeactivated();
-	void OnActivated();
-	void Close();
 	void ExecuteUbergraph_AthenaBannerSelectModal(int32 EntryPoint);
+	void Close();
+	void BP_OnActivated();
+	void BP_OnDeactivated();
+	void BndEvt__BP_LocalPlayerBannerEditor_K2Node_ComponentBoundEvent_18_CloseBannerEditor__DelegateSignature(class FName IconId, class FName ColorId);
+	void Construct();
+	void HandleCloseAction(bool* PassThrough);
+	void Setup_Input_Action_Handlers();
+	struct FEventReply On_BorderTouch_MouseButtonDown_0(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 
 public:
 	static class UClass* StaticClass()
@@ -49,13 +50,6 @@ public:
 		return GetDefaultObjImpl<UAthenaBannerSelectModal_C>();
 	}
 };
-static_assert(alignof(UAthenaBannerSelectModal_C) == 0x000008, "Wrong alignment on UAthenaBannerSelectModal_C");
-static_assert(sizeof(UAthenaBannerSelectModal_C) == 0x000378, "Wrong size on UAthenaBannerSelectModal_C");
-static_assert(offsetof(UAthenaBannerSelectModal_C, UberGraphFrame) == 0x000348, "Member 'UAthenaBannerSelectModal_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaBannerSelectModal_C, BorderTouch) == 0x000350, "Member 'UAthenaBannerSelectModal_C::BorderTouch' has a wrong offset!");
-static_assert(offsetof(UAthenaBannerSelectModal_C, BP_LocalPlayerBannerEditor) == 0x000358, "Member 'UAthenaBannerSelectModal_C::BP_LocalPlayerBannerEditor' has a wrong offset!");
-static_assert(offsetof(UAthenaBannerSelectModal_C, Lightbox) == 0x000360, "Member 'UAthenaBannerSelectModal_C::Lightbox' has a wrong offset!");
-static_assert(offsetof(UAthenaBannerSelectModal_C, CloseAction) == 0x000368, "Member 'UAthenaBannerSelectModal_C::CloseAction' has a wrong offset!");
 
 }
 

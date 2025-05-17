@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UB_Small_Vertical_Jolt_CameraShake_C>();
 	}
 };
-static_assert(alignof(UB_Small_Vertical_Jolt_CameraShake_C) == 0x000008, "Wrong alignment on UB_Small_Vertical_Jolt_CameraShake_C");
-static_assert(sizeof(UB_Small_Vertical_Jolt_CameraShake_C) == 0x000160, "Wrong size on UB_Small_Vertical_Jolt_CameraShake_C");
 
 }
 

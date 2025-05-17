@@ -10,7 +10,6 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -18,22 +17,9 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PlayerSurveyDispatcher.PlayerSurveyDispatcher_C
-// 0x0018 (0x0078 - 0x0060)
+// 0x0000 (0x0078 - 0x0078)
 class UPlayerSurveyDispatcher_C final : public UFortPlayerSurveyDispatcher
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0060(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UPanelWidget*                           PanelParent;                                       // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          DoIntroOnActivate;                                 // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-
-public:
-	void ExecuteUbergraph_PlayerSurveyDispatcher(int32 EntryPoint);
-	void HandleFirstActivation(class UCommonActivatablePanel* Panel);
-	void StartSurveyIntro(class UFortPlayerSurveyPanelBase* Widget);
-	void RemoveSurveyWidget(class UFortPlayerSurveyPanelBase* Widget);
-	void DisplaySurveyWidget(class UFortPlayerSurveyPanelBase* Widget);
-	void DoStartSurveyIntro(class UFortPlayerSurveyPanelBase* Widget);
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -44,11 +30,6 @@ public:
 		return GetDefaultObjImpl<UPlayerSurveyDispatcher_C>();
 	}
 };
-static_assert(alignof(UPlayerSurveyDispatcher_C) == 0x000008, "Wrong alignment on UPlayerSurveyDispatcher_C");
-static_assert(sizeof(UPlayerSurveyDispatcher_C) == 0x000078, "Wrong size on UPlayerSurveyDispatcher_C");
-static_assert(offsetof(UPlayerSurveyDispatcher_C, UberGraphFrame) == 0x000060, "Member 'UPlayerSurveyDispatcher_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyDispatcher_C, PanelParent) == 0x000068, "Member 'UPlayerSurveyDispatcher_C::PanelParent' has a wrong offset!");
-static_assert(offsetof(UPlayerSurveyDispatcher_C, DoIntroOnActivate) == 0x000070, "Member 'UPlayerSurveyDispatcher_C::DoIntroOnActivate' has a wrong offset!");
 
 }
 

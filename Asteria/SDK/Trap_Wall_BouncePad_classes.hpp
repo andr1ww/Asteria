@@ -10,54 +10,56 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Trap_Wall_BouncePad.Trap_Wall_BouncePad_C
-// 0x01F0 (0x0E58 - 0x0C68)
+// 0x01F8 (0x0F40 - 0x0D48)
 class ATrap_Wall_BouncePad_C final : public ABuildingTrapWall
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*               BouncePadFX;                                       // 0x0C70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          Trigger;                                           // 0x0C78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   SM_BouncePad_Wall_Glow;                            // 0x0C80(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              Trap_Active_Sound;                                 // 0x0C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              Trap_Fire_Sound;                                   // 0x0C90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              Trap_Explode_Sound;                                // 0x0C98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              Place_Trap_Sound;                                  // 0x0CA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              Trap_Destroyed_Sound;                              // 0x0CA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OverlappedActor;                                   // 0x0CB0(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	float                                         Player_DestructionRange;                           // 0x0CB8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           BouncePadTagMaxCount;                              // 0x0CBC(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC4[0x4];                                      // 0x0CC4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerPawn*                        LaunchedPlayer;                                    // 0x0CC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortAthenaVehicle*                     LaunchedVehicle;                                   // 0x0CD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_LowGravity;                                     // 0x0CD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_BounceTracker1;                                 // 0x0CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_BounceTracker2;                                 // 0x0CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         PlayerMinLateralVelocity;                          // 0x0CF0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         PlayerVelocityMultiplier;                          // 0x0D10(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         PlayerMaxLateralVelocity;                          // 0x0D30(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         PlayerMinZVelocity;                                // 0x0D50(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         PlayerMaxZVelocity;                                // 0x0D70(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         VehicleVelocityMultiplier;                         // 0x0D90(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         VehicleZVelocity;                                  // 0x0DB0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         VehicleMinLateralVelocity;                         // 0x0DD0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         VehicleMaxVelocity;                                // 0x0DF0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IgnoreFallDamage;                                  // 0x0E10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E11[0x7];                                      // 0x0E11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 GE_NoFXLowGravity;                                 // 0x0E18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         SetIgnoreFallDamage;                               // 0x0E20(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UClass*                                 GE_LowGravityWithHopRocks;                         // 0x0E40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AEnemyPawn_Parent_C*                    DeimosPawn;                                        // 0x0E48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bPlayFewerSounds;                                  // 0x0E50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               BouncePadFX;                                       // 0x0D50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          Trigger;                                           // 0x0D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   SM_BouncePad_Wall_Glow;                            // 0x0D60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              Trap_Active_Sound;                                 // 0x0D68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              Trap_Fire_Sound;                                   // 0x0D70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              Trap_Explode_Sound;                                // 0x0D78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              Place_Trap_Sound;                                  // 0x0D80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              Trap_Destroyed_Sound;                              // 0x0D88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OverlappedActor;                                   // 0x0D90(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	float                                         Player_DestructionRange;                           // 0x0D98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           BouncePadTagMaxCount;                              // 0x0D9C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DA4[0x4];                                      // 0x0DA4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        LaunchedPlayer;                                    // 0x0DA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortAthenaVehicle*                     LaunchedVehicle;                                   // 0x0DB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_LowGravity;                                     // 0x0DB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_BounceTracker1;                                 // 0x0DC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_BounceTracker2;                                 // 0x0DC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         PlayerMinLateralVelocity;                          // 0x0DD0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         PlayerVelocityMultiplier;                          // 0x0DF0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         PlayerMaxLateralVelocity;                          // 0x0E10(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         PlayerMinZVelocity;                                // 0x0E30(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         PlayerMaxZVelocity;                                // 0x0E50(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         VehicleVelocityMultiplier;                         // 0x0E70(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         VehicleZVelocity;                                  // 0x0E90(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         VehicleMinLateralVelocity;                         // 0x0EB0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         VehicleMaxVelocity;                                // 0x0ED0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IgnoreFallDamage;                                  // 0x0EF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_EF1[0x7];                                      // 0x0EF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 GE_NoFXLowGravity;                                 // 0x0EF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         SetIgnoreFallDamage;                               // 0x0F00(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UClass*                                 GE_LowGravityWithHopRocks;                         // 0x0F20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AEnemyPawn_Parent_Deimos_C*             DeimosPawn;                                        // 0x0F28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPlayFewerSounds;                                  // 0x0F30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F31[0x3];                                      // 0x0F31(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           Tag_CancelAbilityOnImpulse;                        // 0x0F34(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Trap_Wall_BouncePad(int32 EntryPoint);
@@ -68,12 +70,13 @@ public:
 	void OnPlaced();
 	void UserConstructionScript();
 	void PlayerLaunch(class AFortPlayerPawn* FortPlayerPawn, const struct FVector& InVec);
-	void VehicleLaunch(class AFortAthenaVehicle* Vehicle);
+	void VehicleLaunch(TScriptInterface<class IFortVehicleInterface> VehicleInterface);
 	void OnRep_Overlappedactor();
 	void PlayerApplyGameplayEffects();
-	void DeimosLaunch(class AEnemyPawn_Parent_C* DeimosPawn_0);
+	void DeimosLaunch(class AEnemyPawn_Parent_Deimos_C* DeimosPawn_0);
 	void DeimosApplyGameplayEffects();
 	void BP_OnTrigger(const TArray<class AActor*>& TouchingActors, bool* bOutConsumeEvent);
+	void PhysicsObjectLaunch(class AFortPhysicsPawnObject* PhysicsObject);
 
 public:
 	static class UClass* StaticClass()
@@ -85,40 +88,6 @@ public:
 		return GetDefaultObjImpl<ATrap_Wall_BouncePad_C>();
 	}
 };
-static_assert(alignof(ATrap_Wall_BouncePad_C) == 0x000008, "Wrong alignment on ATrap_Wall_BouncePad_C");
-static_assert(sizeof(ATrap_Wall_BouncePad_C) == 0x000E58, "Wrong size on ATrap_Wall_BouncePad_C");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, UberGraphFrame) == 0x000C68, "Member 'ATrap_Wall_BouncePad_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, BouncePadFX) == 0x000C70, "Member 'ATrap_Wall_BouncePad_C::BouncePadFX' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, Trigger) == 0x000C78, "Member 'ATrap_Wall_BouncePad_C::Trigger' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, SM_BouncePad_Wall_Glow) == 0x000C80, "Member 'ATrap_Wall_BouncePad_C::SM_BouncePad_Wall_Glow' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, Trap_Active_Sound) == 0x000C88, "Member 'ATrap_Wall_BouncePad_C::Trap_Active_Sound' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, Trap_Fire_Sound) == 0x000C90, "Member 'ATrap_Wall_BouncePad_C::Trap_Fire_Sound' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, Trap_Explode_Sound) == 0x000C98, "Member 'ATrap_Wall_BouncePad_C::Trap_Explode_Sound' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, Place_Trap_Sound) == 0x000CA0, "Member 'ATrap_Wall_BouncePad_C::Place_Trap_Sound' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, Trap_Destroyed_Sound) == 0x000CA8, "Member 'ATrap_Wall_BouncePad_C::Trap_Destroyed_Sound' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, OverlappedActor) == 0x000CB0, "Member 'ATrap_Wall_BouncePad_C::OverlappedActor' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, Player_DestructionRange) == 0x000CB8, "Member 'ATrap_Wall_BouncePad_C::Player_DestructionRange' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, BouncePadTagMaxCount) == 0x000CBC, "Member 'ATrap_Wall_BouncePad_C::BouncePadTagMaxCount' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, LaunchedPlayer) == 0x000CC8, "Member 'ATrap_Wall_BouncePad_C::LaunchedPlayer' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, LaunchedVehicle) == 0x000CD0, "Member 'ATrap_Wall_BouncePad_C::LaunchedVehicle' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, GE_LowGravity) == 0x000CD8, "Member 'ATrap_Wall_BouncePad_C::GE_LowGravity' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, GE_BounceTracker1) == 0x000CE0, "Member 'ATrap_Wall_BouncePad_C::GE_BounceTracker1' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, GE_BounceTracker2) == 0x000CE8, "Member 'ATrap_Wall_BouncePad_C::GE_BounceTracker2' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, PlayerMinLateralVelocity) == 0x000CF0, "Member 'ATrap_Wall_BouncePad_C::PlayerMinLateralVelocity' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, PlayerVelocityMultiplier) == 0x000D10, "Member 'ATrap_Wall_BouncePad_C::PlayerVelocityMultiplier' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, PlayerMaxLateralVelocity) == 0x000D30, "Member 'ATrap_Wall_BouncePad_C::PlayerMaxLateralVelocity' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, PlayerMinZVelocity) == 0x000D50, "Member 'ATrap_Wall_BouncePad_C::PlayerMinZVelocity' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, PlayerMaxZVelocity) == 0x000D70, "Member 'ATrap_Wall_BouncePad_C::PlayerMaxZVelocity' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, VehicleVelocityMultiplier) == 0x000D90, "Member 'ATrap_Wall_BouncePad_C::VehicleVelocityMultiplier' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, VehicleZVelocity) == 0x000DB0, "Member 'ATrap_Wall_BouncePad_C::VehicleZVelocity' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, VehicleMinLateralVelocity) == 0x000DD0, "Member 'ATrap_Wall_BouncePad_C::VehicleMinLateralVelocity' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, VehicleMaxVelocity) == 0x000DF0, "Member 'ATrap_Wall_BouncePad_C::VehicleMaxVelocity' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, IgnoreFallDamage) == 0x000E10, "Member 'ATrap_Wall_BouncePad_C::IgnoreFallDamage' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, GE_NoFXLowGravity) == 0x000E18, "Member 'ATrap_Wall_BouncePad_C::GE_NoFXLowGravity' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, SetIgnoreFallDamage) == 0x000E20, "Member 'ATrap_Wall_BouncePad_C::SetIgnoreFallDamage' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, GE_LowGravityWithHopRocks) == 0x000E40, "Member 'ATrap_Wall_BouncePad_C::GE_LowGravityWithHopRocks' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, DeimosPawn) == 0x000E48, "Member 'ATrap_Wall_BouncePad_C::DeimosPawn' has a wrong offset!");
-static_assert(offsetof(ATrap_Wall_BouncePad_C, bPlayFewerSounds) == 0x000E50, "Member 'ATrap_Wall_BouncePad_C::bPlayFewerSounds' has a wrong offset!");
 
 }
 

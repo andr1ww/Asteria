@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CommonUI_classes.hpp"
 #include "CommonInput_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Slate_structs.hpp"
+#include "CommonUI_classes.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -21,26 +21,26 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass PendingAccountMergeNotification.PendingAccountMergeNotification_C
-// 0x0030 (0x0B78 - 0x0B48)
+// 0x0030 (0x0BD0 - 0x0BA0)
 class UPendingAccountMergeNotification_C final : public UCommonButton
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Hover;                                             // 0x0B50(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                Border_1;                                          // 0x0B58(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonActionWidget*                    CommonActionWidget_48;                             // 0x0B60(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_42;                                      // 0x0B68(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             TextBlock_45;                                      // 0x0B70(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Hover;                                             // 0x0BA8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                Border_1;                                          // 0x0BB0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonActionWidget*                    CommonActionWidget_48;                             // 0x0BB8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_42;                                      // 0x0BC0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             TextBlock_45;                                      // 0x0BC8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Construct();
-	void Hovered(bool IsHovered_0);
-	void BP_OnHovered();
-	void BP_OnUnhovered();
-	void BP_OnClicked();
-	void Destruct();
-	void OnInputChanged(ECommonInputType bNewInputType);
 	void ExecuteUbergraph_PendingAccountMergeNotification(int32 EntryPoint);
+	void OnInputChanged(ECommonInputType bNewInputType);
+	void Destruct();
+	void BP_OnClicked();
+	void BP_OnUnhovered();
+	void BP_OnHovered();
+	void Hovered(bool IsHovered_0);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()
@@ -52,14 +52,6 @@ public:
 		return GetDefaultObjImpl<UPendingAccountMergeNotification_C>();
 	}
 };
-static_assert(alignof(UPendingAccountMergeNotification_C) == 0x000008, "Wrong alignment on UPendingAccountMergeNotification_C");
-static_assert(sizeof(UPendingAccountMergeNotification_C) == 0x000B78, "Wrong size on UPendingAccountMergeNotification_C");
-static_assert(offsetof(UPendingAccountMergeNotification_C, UberGraphFrame) == 0x000B48, "Member 'UPendingAccountMergeNotification_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UPendingAccountMergeNotification_C, Hover) == 0x000B50, "Member 'UPendingAccountMergeNotification_C::Hover' has a wrong offset!");
-static_assert(offsetof(UPendingAccountMergeNotification_C, Border_1) == 0x000B58, "Member 'UPendingAccountMergeNotification_C::Border_1' has a wrong offset!");
-static_assert(offsetof(UPendingAccountMergeNotification_C, CommonActionWidget_48) == 0x000B60, "Member 'UPendingAccountMergeNotification_C::CommonActionWidget_48' has a wrong offset!");
-static_assert(offsetof(UPendingAccountMergeNotification_C, TextBlock_42) == 0x000B68, "Member 'UPendingAccountMergeNotification_C::TextBlock_42' has a wrong offset!");
-static_assert(offsetof(UPendingAccountMergeNotification_C, TextBlock_45) == 0x000B70, "Member 'UPendingAccountMergeNotification_C::TextBlock_45' has a wrong offset!");
 
 }
 

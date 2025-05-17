@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
@@ -22,11 +22,12 @@ namespace SDK
 class ASpecialEventsCamera_Blueprint_C final : public AFortCameraBase
 {
 public:
+	uint8                                         Pad_7D8[0x8];                                      // 0x07D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x07E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void OnDeactivated();
-	void OnActivated();
+	void OnActivated(class AFortPlayerController* PlayerController);
+	void OnDeactivated(class AFortPlayerController* PlayerController);
 	void ExecuteUbergraph_SpecialEventsCamera_Blueprint(int32 EntryPoint);
 
 public:
@@ -39,9 +40,6 @@ public:
 		return GetDefaultObjImpl<ASpecialEventsCamera_Blueprint_C>();
 	}
 };
-static_assert(alignof(ASpecialEventsCamera_Blueprint_C) == 0x000010, "Wrong alignment on ASpecialEventsCamera_Blueprint_C");
-static_assert(sizeof(ASpecialEventsCamera_Blueprint_C) == 0x0007F0, "Wrong size on ASpecialEventsCamera_Blueprint_C");
-static_assert(offsetof(ASpecialEventsCamera_Blueprint_C, UberGraphFrame) == 0x0007E0, "Member 'ASpecialEventsCamera_Blueprint_C::UberGraphFrame' has a wrong offset!");
 
 }
 

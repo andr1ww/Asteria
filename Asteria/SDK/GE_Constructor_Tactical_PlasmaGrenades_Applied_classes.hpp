@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GE_Constructor_Tactical_PlasmaGrenades_Applied.GE_Constructor_Tactical_PlasmaGrenades_Applied_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_Constructor_Tactical_PlasmaGrenades_Applied_C final : public UGET_PeriodicEnergyDamage_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGE_Constructor_Tactical_PlasmaGrenades_Applied_C>();
 	}
 };
-static_assert(alignof(UGE_Constructor_Tactical_PlasmaGrenades_Applied_C) == 0x000008, "Wrong alignment on UGE_Constructor_Tactical_PlasmaGrenades_Applied_C");
-static_assert(sizeof(UGE_Constructor_Tactical_PlasmaGrenades_Applied_C) == 0x0005F0, "Wrong size on UGE_Constructor_Tactical_PlasmaGrenades_Applied_C");
 
 }
 

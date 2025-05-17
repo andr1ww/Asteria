@@ -40,7 +40,7 @@ void AImpactNumbers_C::ExecuteUbergraph_ImpactNumbers(int32 EntryPoint)
 // Function ImpactNumbers.ImpactNumbers_C.OnNewDamageNumber
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortDamageNumberInfo            NewDamageNumberInfo                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const struct FFortDamageNumberInfo&     NewDamageNumberInfo                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 
 void AImpactNumbers_C::OnNewDamageNumber(const struct FFortDamageNumberInfo& NewDamageNumberInfo)
 {
@@ -60,9 +60,9 @@ void AImpactNumbers_C::OnNewDamageNumber(const struct FFortDamageNumberInfo& New
 // Function ImpactNumbers.ImpactNumbers_C.init a new number set
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortDamageNumberInfo            NewDamageHitInfoStruct                                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// struct FTransform                       OutCameraTransform                                     (Parm, OutParm, IsPlainOldData, NoDestructor)
-// struct FVector                          OutNumberLocation                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FFortDamageNumberInfo&           NewDamageHitInfoStruct                                 (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// struct FTransform*                      OutCameraTransform                                     (Parm, OutParm, IsPlainOldData, NoDestructor)
+// struct FVector*                         OutNumberLocation                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AImpactNumbers_C::init_a_new_number_set(struct FFortDamageNumberInfo& NewDamageHitInfoStruct, struct FTransform* OutCameraTransform, struct FVector* OutNumberLocation)
 {

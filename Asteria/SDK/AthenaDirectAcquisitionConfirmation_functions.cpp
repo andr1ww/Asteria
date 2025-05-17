@@ -91,36 +91,36 @@ void UAthenaDirectAcquisitionConfirmation_C::BndEvt__PurchaseButton_K2Node_Compo
 }
 
 
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.OnActivated
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.BP_OnActivated
 // (Event, Protected, BlueprintEvent)
 
-void UAthenaDirectAcquisitionConfirmation_C::OnActivated()
+void UAthenaDirectAcquisitionConfirmation_C::BP_OnActivated()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "OnActivated");
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "BP_OnActivated");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.OnOfferSet
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.BP_OnOfferSet
 // (Event, Public, BlueprintEvent)
 
-void UAthenaDirectAcquisitionConfirmation_C::OnOfferSet()
+void UAthenaDirectAcquisitionConfirmation_C::BP_OnOfferSet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "OnOfferSet");
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "BP_OnOfferSet");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
 // Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.UpdateFromOffer
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UAthenaDirectAcquisitionConfirmation_C::UpdateFromOffer()
 {
@@ -162,7 +162,7 @@ void UAthenaDirectAcquisitionConfirmation_C::SetupPrice(class UWidget* PriceCont
 
 
 // Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.UpdateItemList
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void UAthenaDirectAcquisitionConfirmation_C::UpdateItemList()
 {
@@ -170,6 +170,20 @@ void UAthenaDirectAcquisitionConfirmation_C::UpdateItemList()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "UpdateItemList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.UpdateCatalogOfferName
+// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UAthenaDirectAcquisitionConfirmation_C::UpdateCatalogOfferName()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "UpdateCatalogOfferName");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -192,20 +206,6 @@ void UAthenaDirectAcquisitionConfirmation_C::SetPurchaseNumber(int32 InNumToPurc
 	Parms.InNumToPurchse = InNumToPurchse;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function AthenaDirectAcquisitionConfirmation.AthenaDirectAcquisitionConfirmation_C.UpdateCatalogOfferName
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UAthenaDirectAcquisitionConfirmation_C::UpdateCatalogOfferName()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaDirectAcquisitionConfirmation_C", "UpdateCatalogOfferName");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

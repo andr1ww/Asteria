@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -35,8 +35,8 @@ public:
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInstanceDynamic*>       K2Node_CustomEvent_MID_Array;                      // 0x0030(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
-	TArray<class USkeletalMeshComponent*>         K2Node_CustomEvent_External_MEsh_Component_Array;  // 0x0040(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInstanceDynamic*>       K2Node_CustomEvent_MID_Array;                      // 0x0030(0x0010)(ConstParm, ReferenceParm, HasGetValueTypeHash)
+	TArray<class USkeletalMeshComponent*>         K2Node_CustomEvent_External_MEsh_Component_Array;  // 0x0040(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -47,72 +47,33 @@ public:
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0070(0x0030)(IsPlainOldData, NoDestructor)
 	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item_1;                         // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x00A8(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	TArray<class UMaterialInstanceDynamic*>       CallFunc_External_Mesh_Masked_Setup_Corrected_Mid_Array; // 0x0130(0x0010)(ZeroConstructor, ReferenceParm)
-	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item_2;                         // 0x0140(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0150(0x0010)(ZeroConstructor, ReferenceParm)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x00A8(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInstanceDynamic*>       CallFunc_External_Mesh_Masked_Setup_Corrected_Mid_Array; // 0x0138(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item_2;                         // 0x0148(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0158(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_169[0x3];                                      // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_3;                         // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_171[0x3];                                      // 0x0171(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_3;                         // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh) == 0x000010, "Wrong alignment on DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh");
-static_assert(sizeof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh) == 0x000190, "Wrong size on DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, EntryPoint) == 0x000000, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::EntryPoint' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, Temp_int_Array_Index_Variable) == 0x000004, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, Temp_int_Array_Index_Variable_1) == 0x000014, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, Temp_int_Loop_Counter_Variable_1) == 0x000018, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Add_IntInt_ReturnValue_1) == 0x00001C, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000020, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, K2Node_Event_DeltaSeconds) == 0x000024, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, K2Node_CustomEvent_MID_Array) == 0x000030, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::K2Node_CustomEvent_MID_Array' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, K2Node_CustomEvent_External_MEsh_Component_Array) == 0x000040, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::K2Node_CustomEvent_External_MEsh_Component_Array' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, Temp_int_Loop_Counter_Variable_2) == 0x000050, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Less_IntInt_ReturnValue) == 0x000054, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Add_IntInt_ReturnValue_2) == 0x000058, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, Temp_int_Array_Index_Variable_2) == 0x00005C, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Array_Get_Item) == 0x000060, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, K2Node_SwitchEnum_CmpSuccess) == 0x000068, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_K2_GetComponentToWorld_ReturnValue) == 0x000070, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Array_Get_Item_1) == 0x0000A0, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_K2_SetWorldTransform_SweepHitResult) == 0x0000A8, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_K2_SetWorldTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_External_Mesh_Masked_Setup_Corrected_Mid_Array) == 0x000130, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_External_Mesh_Masked_Setup_Corrected_Mid_Array' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Array_Get_Item_2) == 0x000140, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Array_Length_ReturnValue_1) == 0x000148, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_GetMaterials_ReturnValue) == 0x000150, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Less_IntInt_ReturnValue_1) == 0x000160, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Array_Length_ReturnValue_2) == 0x000164, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Less_IntInt_ReturnValue_2) == 0x000168, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Array_Length_ReturnValue_3) == 0x00016C, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Add_IntInt_ReturnValue_3) == 0x000170, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Add_IntInt_ReturnValue_4) == 0x000174, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_Array_Get_Item_3) == 0x000178, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh, CallFunc_IsValid_ReturnValue_1) == 0x000180, "Member 'DuplicateResOutMesh_C_ExecuteUbergraph_DuplicateResOutMesh::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function DuplicateResOutMesh.DuplicateResOutMesh_C.UpdateExternalParameters
 // 0x0020 (0x0020 - 0x0000)
 struct DuplicateResOutMesh_C_UpdateExternalParameters final
 {
 public:
-	TArray<class UMaterialInstanceDynamic*>       MID_Array;                                         // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<class USkeletalMeshComponent*>         External_Mesh_Component_Array;                     // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInstanceDynamic*>       MID_Array;                                         // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+	TArray<class USkeletalMeshComponent*>         External_MEsh_Component_Array;                     // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 };
-static_assert(alignof(DuplicateResOutMesh_C_UpdateExternalParameters) == 0x000008, "Wrong alignment on DuplicateResOutMesh_C_UpdateExternalParameters");
-static_assert(sizeof(DuplicateResOutMesh_C_UpdateExternalParameters) == 0x000020, "Wrong size on DuplicateResOutMesh_C_UpdateExternalParameters");
-static_assert(offsetof(DuplicateResOutMesh_C_UpdateExternalParameters, MID_Array) == 0x000000, "Member 'DuplicateResOutMesh_C_UpdateExternalParameters::MID_Array' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_UpdateExternalParameters, External_Mesh_Component_Array) == 0x000010, "Member 'DuplicateResOutMesh_C_UpdateExternalParameters::External_Mesh_Component_Array' has a wrong offset!");
 
 // Function DuplicateResOutMesh.DuplicateResOutMesh_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -121,9 +82,6 @@ struct DuplicateResOutMesh_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(DuplicateResOutMesh_C_ReceiveTick) == 0x000004, "Wrong alignment on DuplicateResOutMesh_C_ReceiveTick");
-static_assert(sizeof(DuplicateResOutMesh_C_ReceiveTick) == 0x000004, "Wrong size on DuplicateResOutMesh_C_ReceiveTick");
-static_assert(offsetof(DuplicateResOutMesh_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'DuplicateResOutMesh_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function DuplicateResOutMesh.DuplicateResOutMesh_C.initializeExternalSkeletalMeshArray
 // 0x0040 (0x0040 - 0x0000)
@@ -136,19 +94,10 @@ public:
 	class AFortAIPawn*                            K2Node_DynamicCast_AsFort_AIPawn;                  // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class USkeletalMeshComponent*>         K2Node_MakeArray_Array;                            // 0x0020(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<class USkeletalMeshComponent*>         K2Node_MakeArray_Array;                            // 0x0020(0x0010)(ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
 	class APlayerPawn_Generic_Parent_C*           K2Node_DynamicCast_AsPlayer_Pawn_Generic_Parent;   // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray) == 0x000008, "Wrong alignment on DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray");
-static_assert(sizeof(DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray) == 0x000040, "Wrong size on DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray");
-static_assert(offsetof(DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray, K2Node_DynamicCast_AsPlayer_Pawn_Athena_Generic_Parent) == 0x000000, "Member 'DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray::K2Node_DynamicCast_AsPlayer_Pawn_Athena_Generic_Parent' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray, K2Node_DynamicCast_bSuccess) == 0x000008, "Member 'DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray, K2Node_DynamicCast_AsFort_AIPawn) == 0x000010, "Member 'DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray::K2Node_DynamicCast_AsFort_AIPawn' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray, K2Node_DynamicCast_bSuccess_1) == 0x000018, "Member 'DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray, K2Node_MakeArray_Array) == 0x000020, "Member 'DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray, K2Node_DynamicCast_AsPlayer_Pawn_Generic_Parent) == 0x000030, "Member 'DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray::K2Node_DynamicCast_AsPlayer_Pawn_Generic_Parent' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray, K2Node_DynamicCast_bSuccess_2) == 0x000038, "Member 'DuplicateResOutMesh_C_initializeExternalSkeletalMeshArray::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
 
 // Function DuplicateResOutMesh.DuplicateResOutMesh_C.Find Bounds
 // 0x01D0 (0x01D0 - 0x0000)
@@ -191,39 +140,6 @@ public:
 	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue_2;              // 0x01A0(0x0030)(IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DuplicateResOutMesh_C_Find_Bounds) == 0x000010, "Wrong alignment on DuplicateResOutMesh_C_Find_Bounds");
-static_assert(sizeof(DuplicateResOutMesh_C_Find_Bounds) == 0x0001D0, "Wrong size on DuplicateResOutMesh_C_Find_Bounds");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, Temp_bool_Variable) == 0x000000, "Member 'DuplicateResOutMesh_C_Find_Bounds::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakTransform_Location) == 0x000004, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakTransform_Rotation) == 0x000010, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakTransform_Scale) == 0x00001C, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakTransform_Location_1) == 0x000028, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakTransform_Rotation_1) == 0x000034, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakTransform_Scale_1) == 0x000040, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakVector_X) == 0x00004C, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakVector_Y) == 0x000050, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakVector_Z) == 0x000054, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakVector_X_1) == 0x000058, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakVector_Y_1) == 0x00005C, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakVector_Z_1) == 0x000060, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000064, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_MakeVector_ReturnValue) == 0x000068, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_MakeVector_ReturnValue_1) == 0x000074, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakRotIntoAxes_X) == 0x000080, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakRotIntoAxes_X' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakRotIntoAxes_Y) == 0x00008C, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakRotIntoAxes_Y' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakRotIntoAxes_Z) == 0x000098, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakRotIntoAxes_Z' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_MakeTransform_ReturnValue) == 0x0000B0, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_MakeRotationFromAxes_ReturnValue) == 0x0000E0, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_MakeRotationFromAxes_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_MakeTransform_ReturnValue_1) == 0x0000F0, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_MakeTransform_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, K2Node_Select_Default) == 0x000120, "Member 'DuplicateResOutMesh_C_Find_Bounds::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakTransform_Location_2) == 0x000150, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakTransform_Location_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakTransform_Rotation_2) == 0x00015C, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakTransform_Rotation_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_BreakTransform_Scale_2) == 0x000168, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_BreakTransform_Scale_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_GetActorBounds_Origin) == 0x000174, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_GetActorBounds_Origin' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_GetActorBounds_BoxExtent) == 0x000180, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_GetActorBounds_BoxExtent' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_VSize_ReturnValue) == 0x00018C, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000190, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Find_Bounds, CallFunc_MakeTransform_ReturnValue_2) == 0x0001A0, "Member 'DuplicateResOutMesh_C_Find_Bounds::CallFunc_MakeTransform_ReturnValue_2' has a wrong offset!");
 
 // Function DuplicateResOutMesh.DuplicateResOutMesh_C.Spawn  Light
 // 0x0050 (0x0050 - 0x0000)
@@ -235,11 +151,6 @@ public:
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0010(0x0030)(IsPlainOldData, NoDestructor)
 	class UPointLightComponent*                   CallFunc_AddComponent_ReturnValue;                 // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(DuplicateResOutMesh_C_Spawn__Light) == 0x000010, "Wrong alignment on DuplicateResOutMesh_C_Spawn__Light");
-static_assert(sizeof(DuplicateResOutMesh_C_Spawn__Light) == 0x000050, "Wrong size on DuplicateResOutMesh_C_Spawn__Light");
-static_assert(offsetof(DuplicateResOutMesh_C_Spawn__Light, CallFunc_IsMobilePlatform_ReturnValue) == 0x000000, "Member 'DuplicateResOutMesh_C_Spawn__Light::CallFunc_IsMobilePlatform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Spawn__Light, CallFunc_MakeTransform_ReturnValue) == 0x000010, "Member 'DuplicateResOutMesh_C_Spawn__Light::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Spawn__Light, CallFunc_AddComponent_ReturnValue) == 0x000040, "Member 'DuplicateResOutMesh_C_Spawn__Light::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
 
 // Function DuplicateResOutMesh.DuplicateResOutMesh_C.Make and slave internal meshes
 // 0x0190 (0x0190 - 0x0000)
@@ -258,12 +169,11 @@ public:
 	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item_1;                         // 0x0080(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0090(0x0030)(IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x00C0(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_14D[0x3];                                      // 0x014D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x00C0(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item_2;                         // 0x0158(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 K2Node_Select_Default;                             // 0x0160(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -275,30 +185,6 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes) == 0x000010, "Wrong alignment on DuplicateResOutMesh_C_Make_and_slave_internal_meshes");
-static_assert(sizeof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes) == 0x000190, "Wrong size on DuplicateResOutMesh_C_Make_and_slave_internal_meshes");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, Transform) == 0x000000, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::Transform' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, Temp_int_Array_Index_Variable) == 0x000030, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, Temp_int_Variable) == 0x000034, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000038, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_Add_IntInt_ReturnValue) == 0x00003C, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_MakeTransform_ReturnValue) == 0x000040, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_AddComponent_ReturnValue) == 0x000070, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_Array_Get_Item) == 0x000078, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_Array_Get_Item_1) == 0x000080, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_K2_GetComponentToWorld_ReturnValue) == 0x000090, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_K2_GetComponentToWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_K2_SetWorldTransform_SweepHitResult) == 0x0000C0, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_K2_SetWorldTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_Array_Length_ReturnValue) == 0x000148, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, Temp_bool_Variable) == 0x00014C, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_Array_Add_ReturnValue) == 0x000150, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_Array_Get_Item_2) == 0x000158, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, K2Node_Select_Default) == 0x000160, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, Temp_int_Loop_Counter_Variable) == 0x000168, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_Less_IntInt_ReturnValue) == 0x00016C, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_Add_IntInt_ReturnValue_1) == 0x000170, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_Array_Get_Item_3) == 0x000178, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_Array_Length_ReturnValue_1) == 0x000180, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_and_slave_internal_meshes, CallFunc_Less_IntInt_ReturnValue_1) == 0x000184, "Member 'DuplicateResOutMesh_C_Make_and_slave_internal_meshes::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function DuplicateResOutMesh.DuplicateResOutMesh_C.Make internal mids and append external and intermal mids to mid array
 // 0x0088 (0x0088 - 0x0000)
@@ -332,30 +218,6 @@ public:
 	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstance*                      K2Node_Select_Default;                             // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array) == 0x000008, "Wrong alignment on DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array");
-static_assert(sizeof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array) == 0x000088, "Wrong size on DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CurrentExternalSkeletalMeshComponent) == 0x000000, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CurrentExternalSkeletalMeshComponent' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, GunOrCharacterMaterialInstance) == 0x000008, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::GunOrCharacterMaterialInstance' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, Temp_int_Loop_Counter_Variable) == 0x000010, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, Temp_int_Array_Index_Variable) == 0x000018, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, Temp_int_Variable) == 0x00001C, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000020, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_Add_IntInt_ReturnValue_1) == 0x000024, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_Array_Get_Item) == 0x000028, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_Array_Get_Item_1) == 0x000030, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000038, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, Temp_object_Variable) == 0x000040, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_Array_Add_ReturnValue) == 0x000048, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, Temp_object_Variable_1) == 0x000050, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_GetMaterial_ReturnValue) == 0x000058, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_Array_Get_Item_2) == 0x000060, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_Array_Length_ReturnValue) == 0x000068, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_GetNumMaterials_ReturnValue) == 0x00006C, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_GetNumMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_Less_IntInt_ReturnValue) == 0x000070, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, CallFunc_Subtract_IntInt_ReturnValue) == 0x000074, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, Temp_bool_Variable) == 0x000078, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array, K2Node_Select_Default) == 0x000080, "Member 'DuplicateResOutMesh_C_Make_internal_mids_and_append_external_and_intermal_mids_to_mid_array::K2Node_Select_Default' has a wrong offset!");
 
 // Function DuplicateResOutMesh.DuplicateResOutMesh_C.ProcessSpawnInTimeline
 // 0x01B8 (0x01B8 - 0x0000)
@@ -374,90 +236,50 @@ public:
 	float                                         CallFunc_MakeLiteralFloat_ReturnValue;             // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Lerp_ReturnValue_1;                       // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x0048(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D2[0x2];                                       // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x00D4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue_1;            // 0x00DC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x00E4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_1;          // 0x00F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0100(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x010C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x011C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x0128(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue_1;       // 0x0138(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0144(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue_2;       // 0x0150(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x015C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_VLerp_ReturnValue;                        // 0x0168(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_VLerp_ReturnValue_1;                      // 0x0174(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x0180(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_1;   // 0x018C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_VSize_ReturnValue;                        // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x0048(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D6[0x2];                                       // 0x00D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue_1;            // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x00E8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_1;          // 0x00F4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0104(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x0110(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0120(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x012C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue_1;       // 0x013C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0148(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue_2;       // 0x0154(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0160(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_VLerp_ReturnValue;                        // 0x016C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_VLerp_ReturnValue_1;                      // 0x0178(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x0184(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_1;   // 0x0190(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_VSize_ReturnValue;                        // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DuplicateResOutMesh_C_ProcessSpawnInTimeline) == 0x000008, "Wrong alignment on DuplicateResOutMesh_C_ProcessSpawnInTimeline");
-static_assert(sizeof(DuplicateResOutMesh_C_ProcessSpawnInTimeline) == 0x0001B8, "Wrong size on DuplicateResOutMesh_C_ProcessSpawnInTimeline");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, ZHeight) == 0x000000, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::ZHeight' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, LightIntensity) == 0x000004, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::LightIntensity' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, DissolveGradientPercentage) == 0x000008, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::DissolveGradientPercentage' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, DissolveGradientDistance) == 0x00000C, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::DissolveGradientDistance' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, DissolveGradientBaseLocation) == 0x000010, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::DissolveGradientBaseLocation' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, DissolveGradientDirectionalColor) == 0x000020, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::DissolveGradientDirectionalColor' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000030, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Lerp_ReturnValue) == 0x000034, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, Temp_int_Array_Index_Variable) == 0x000038, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_MakeLiteralFloat_ReturnValue) == 0x00003C, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_MakeLiteralFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Lerp_ReturnValue_1) == 0x000040, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Lerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000044, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x000048, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_IsValid_ReturnValue) == 0x0000D0, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_IsValid_ReturnValue_1) == 0x0000D1, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_MakeLiteralName_ReturnValue) == 0x0000D4, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_MakeLiteralName_ReturnValue_1) == 0x0000DC, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_MakeLiteralName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_GetSocketLocation_ReturnValue) == 0x0000E4, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_GetSocketLocation_ReturnValue_1) == 0x0000F0, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_GetSocketLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, Temp_int_Loop_Counter_Variable) == 0x0000FC, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000100, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Normal_ReturnValue) == 0x00010C, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Add_IntInt_ReturnValue) == 0x000118, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x00011C, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x000128, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Multiply_VectorFloat_ReturnValue_1) == 0x000138, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Multiply_VectorFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Add_VectorVector_ReturnValue) == 0x000144, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Multiply_VectorFloat_ReturnValue_2) == 0x000150, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Multiply_VectorFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Add_VectorVector_ReturnValue_1) == 0x00015C, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_VLerp_ReturnValue) == 0x000168, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_VLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_VLerp_ReturnValue_1) == 0x000174, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_VLerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Subtract_VectorVector_ReturnValue_1) == 0x000180, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Subtract_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Conv_VectorToLinearColor_ReturnValue_1) == 0x00018C, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Conv_VectorToLinearColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_VSize_ReturnValue) == 0x00019C, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Array_Length_ReturnValue) == 0x0001A0, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Array_Get_Item) == 0x0001A8, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_ProcessSpawnInTimeline, CallFunc_Less_IntInt_ReturnValue) == 0x0001B0, "Member 'DuplicateResOutMesh_C_ProcessSpawnInTimeline::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function DuplicateResOutMesh.DuplicateResOutMesh_C.External Mesh Masked Setup
 // 0x0108 (0x0108 - 0x0000)
 struct DuplicateResOutMesh_C_External_Mesh_Masked_Setup final
 {
 public:
-	TArray<class USkeletalMeshComponent*>         External_Mesh_Component_Array;                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<class UMaterialInstanceDynamic*>       Corrected_Mid_Array;                               // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor)
+	TArray<class USkeletalMeshComponent*>         External_MEsh_Component_Array;                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       Corrected_Mid_Array;                               // 0x0010(0x0010)(Parm, OutParm, HasGetValueTypeHash)
 	int32                                         Increment_MaskedSetup;                             // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInstanceDynamic*>       MID_Array_MaskedSetup;                             // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UMaterialInstanceDynamic*>       MID_Array_MaskedSetup;                             // 0x0028(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0050(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0050(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -493,55 +315,14 @@ public:
 	uint8                                         Pad_FD[0x3];                                       // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup) == 0x000008, "Wrong alignment on DuplicateResOutMesh_C_External_Mesh_Masked_Setup");
-static_assert(sizeof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup) == 0x000108, "Wrong size on DuplicateResOutMesh_C_External_Mesh_Masked_Setup");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, External_Mesh_Component_Array) == 0x000000, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::External_Mesh_Component_Array' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, Corrected_Mid_Array) == 0x000010, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::Corrected_Mid_Array' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, Increment_MaskedSetup) == 0x000020, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::Increment_MaskedSetup' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, MID_Array_MaskedSetup) == 0x000028, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::MID_Array_MaskedSetup' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Array_Length_ReturnValue) == 0x000038, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, Temp_int_Array_Index_Variable) == 0x00003C, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, Temp_int_Loop_Counter_Variable) == 0x000040, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Array_Get_Item) == 0x000048, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_GetMaterials_ReturnValue) == 0x000050, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Less_IntInt_ReturnValue) == 0x000060, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Array_Length_ReturnValue_1) == 0x000064, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Array_Length_ReturnValue_2) == 0x000068, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Add_IntInt_ReturnValue) == 0x00006C, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, Temp_int_Array_Index_Variable_1) == 0x000070, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Array_Get_Item_1) == 0x000078, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_GetDisplayName_ReturnValue) == 0x000080, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000090, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Array_Add_ReturnValue) == 0x000098, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, K2Node_DynamicCast_AsMaterial_Instance) == 0x0000A0, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::K2Node_DynamicCast_AsMaterial_Instance' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, K2Node_DynamicCast_bSuccess) == 0x0000A8, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Array_Contains_ReturnValue) == 0x0000A9, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, Temp_object_Variable) == 0x0000B0, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Array_Contains_ReturnValue_1) == 0x0000B8, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Array_Contains_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_BooleanOR_ReturnValue) == 0x0000B9, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, Temp_object_Variable_1) == 0x0000C0, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, Temp_bool_Variable) == 0x0000C8, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000CC, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, K2Node_Select_Default) == 0x0000D0, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x0000D8, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Add_IntInt_ReturnValue_2) == 0x0000E0, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Array_Add_ReturnValue_1) == 0x0000E4, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Array_Get_Item_2) == 0x0000E8, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Array_Get_Item_3) == 0x0000F0, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, Temp_int_Loop_Counter_Variable_1) == 0x0000F8, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000FC, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DuplicateResOutMesh_C_External_Mesh_Masked_Setup, CallFunc_Add_IntInt_ReturnValue_3) == 0x000100, "Member 'DuplicateResOutMesh_C_External_Mesh_Masked_Setup::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
 
 // Function DuplicateResOutMesh.DuplicateResOutMesh_C.RestoreInProgressRes
 // 0x0010 (0x0010 - 0x0000)
 struct DuplicateResOutMesh_C_RestoreInProgressRes final
 {
 public:
-	TArray<class UMaterialInstanceDynamic*>       CallFunc_External_Mesh_Masked_Setup_Corrected_Mid_Array; // 0x0000(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInstanceDynamic*>       CallFunc_External_Mesh_Masked_Setup_Corrected_Mid_Array; // 0x0000(0x0010)(ReferenceParm, HasGetValueTypeHash)
 };
-static_assert(alignof(DuplicateResOutMesh_C_RestoreInProgressRes) == 0x000008, "Wrong alignment on DuplicateResOutMesh_C_RestoreInProgressRes");
-static_assert(sizeof(DuplicateResOutMesh_C_RestoreInProgressRes) == 0x000010, "Wrong size on DuplicateResOutMesh_C_RestoreInProgressRes");
-static_assert(offsetof(DuplicateResOutMesh_C_RestoreInProgressRes, CallFunc_External_Mesh_Masked_Setup_Corrected_Mid_Array) == 0x000000, "Member 'DuplicateResOutMesh_C_RestoreInProgressRes::CallFunc_External_Mesh_Masked_Setup_Corrected_Mid_Array' has a wrong offset!");
 
 }
 

@@ -34,7 +34,7 @@ void UHeroLoadoutActiveAbilityDetailRow_C::SetBorderVisibility()
 // Function HeroLoadoutActiveAbilityDetailRow.HeroLoadoutActiveAbilityDetailRow_C.GetTierImage
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TSoftObjectPtr<class UTexture2D>        NewParam                                               (Parm, OutParm, HasGetValueTypeHash)
+// TSoftObjectPtr<class UTexture2D>*       NewParam                                               (Parm, OutParm, HasGetValueTypeHash)
 
 void UHeroLoadoutActiveAbilityDetailRow_C::GetTierImage(TSoftObjectPtr<class UTexture2D>* NewParam)
 {

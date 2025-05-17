@@ -17,49 +17,49 @@
 namespace SDK
 {
 
-// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.RefreshDataBP
-// (Event, Protected, BlueprintEvent)
-
-void UShowdownEventTileInfo_C::RefreshDataBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownEventTileInfo_C", "RefreshDataBP");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.EventAnimFocus
-// (BlueprintCallable, BlueprintEvent)
+// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.ExecuteUbergraph_ShowdownEventTileInfo
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    In                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UShowdownEventTileInfo_C::EventAnimFocus(bool In)
+void UShowdownEventTileInfo_C::ExecuteUbergraph_ShowdownEventTileInfo(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownEventTileInfo_C", "EventAnimFocus");
+		Func = Class->GetFunction("ShowdownEventTileInfo_C", "ExecuteUbergraph_ShowdownEventTileInfo");
 
-	Params::ShowdownEventTileInfo_C_EventAnimFocus Parms{};
+	Params::ShowdownEventTileInfo_C_ExecuteUbergraph_ShowdownEventTileInfo Parms{};
 
-	Parms.In = In;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.EventStyleSocket
+// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.EventColorize
 // (BlueprintCallable, BlueprintEvent)
 
-void UShowdownEventTileInfo_C::EventStyleSocket()
+void UShowdownEventTileInfo_C::EventColorize()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownEventTileInfo_C", "EventStyleSocket");
+		Func = Class->GetFunction("ShowdownEventTileInfo_C", "EventColorize");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UShowdownEventTileInfo_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownEventTileInfo_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,51 +85,51 @@ void UShowdownEventTileInfo_C::EventAnimHover(bool In)
 }
 
 
-// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UShowdownEventTileInfo_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownEventTileInfo_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.EventColorize
+// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.EventStyleSocket
 // (BlueprintCallable, BlueprintEvent)
 
-void UShowdownEventTileInfo_C::EventColorize()
+void UShowdownEventTileInfo_C::EventStyleSocket()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownEventTileInfo_C", "EventColorize");
+		Func = Class->GetFunction("ShowdownEventTileInfo_C", "EventStyleSocket");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.ExecuteUbergraph_ShowdownEventTileInfo
-// (Final, UbergraphFunction, HasDefaults)
+// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.EventAnimFocus
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    In                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UShowdownEventTileInfo_C::ExecuteUbergraph_ShowdownEventTileInfo(int32 EntryPoint)
+void UShowdownEventTileInfo_C::EventAnimFocus(bool In)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ShowdownEventTileInfo_C", "ExecuteUbergraph_ShowdownEventTileInfo");
+		Func = Class->GetFunction("ShowdownEventTileInfo_C", "EventAnimFocus");
 
-	Params::ShowdownEventTileInfo_C_ExecuteUbergraph_ShowdownEventTileInfo Parms{};
+	Params::ShowdownEventTileInfo_C_EventAnimFocus Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.In = In;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ShowdownEventTileInfo.ShowdownEventTileInfo_C.RefreshDataBP
+// (Event, Protected, BlueprintEvent)
+
+void UShowdownEventTileInfo_C::RefreshDataBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ShowdownEventTileInfo_C", "RefreshDataBP");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

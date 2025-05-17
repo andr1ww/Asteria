@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UMissionGen_Blitz_C>();
 	}
 };
-static_assert(alignof(UMissionGen_Blitz_C) == 0x000008, "Wrong alignment on UMissionGen_Blitz_C");
-static_assert(sizeof(UMissionGen_Blitz_C) == 0x0006C0, "Wrong size on UMissionGen_Blitz_C");
 
 }
 

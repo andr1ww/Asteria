@@ -16,52 +16,6 @@
 namespace SDK::Params
 {
 
-// Function Squad.Squad_C.OnSquadAssigned
-// 0x0088 (0x0088 - 0x0000)
-struct Squad_C_OnSquadAssigned final
-{
-public:
-	struct FAthenaTeamDisplayInfo                 SquadStyle;                                        // 0x0000(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(Squad_C_OnSquadAssigned) == 0x000008, "Wrong alignment on Squad_C_OnSquadAssigned");
-static_assert(sizeof(Squad_C_OnSquadAssigned) == 0x000088, "Wrong size on Squad_C_OnSquadAssigned");
-static_assert(offsetof(Squad_C_OnSquadAssigned, SquadStyle) == 0x000000, "Member 'Squad_C_OnSquadAssigned::SquadStyle' has a wrong offset!");
-
-// Function Squad.Squad_C.OnLoaded_68F5F01141304474DB5D18BD77CD085C
-// 0x0008 (0x0008 - 0x0000)
-struct Squad_C_OnLoaded_68F5F01141304474DB5D18BD77CD085C final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Squad_C_OnLoaded_68F5F01141304474DB5D18BD77CD085C) == 0x000008, "Wrong alignment on Squad_C_OnLoaded_68F5F01141304474DB5D18BD77CD085C");
-static_assert(sizeof(Squad_C_OnLoaded_68F5F01141304474DB5D18BD77CD085C) == 0x000008, "Wrong size on Squad_C_OnLoaded_68F5F01141304474DB5D18BD77CD085C");
-static_assert(offsetof(Squad_C_OnLoaded_68F5F01141304474DB5D18BD77CD085C, Loaded) == 0x000000, "Member 'Squad_C_OnLoaded_68F5F01141304474DB5D18BD77CD085C::Loaded' has a wrong offset!");
-
-// Function Squad.Squad_C.OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E
-// 0x0008 (0x0008 - 0x0000)
-struct Squad_C_OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Squad_C_OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E) == 0x000008, "Wrong alignment on Squad_C_OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E");
-static_assert(sizeof(Squad_C_OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E) == 0x000008, "Wrong size on Squad_C_OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E");
-static_assert(offsetof(Squad_C_OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E, Loaded) == 0x000000, "Member 'Squad_C_OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E::Loaded' has a wrong offset!");
-
-// Function Squad.Squad_C.OnSquadIsEmptyChanged
-// 0x0002 (0x0002 - 0x0000)
-struct Squad_C_OnSquadIsEmptyChanged final
-{
-public:
-	bool                                          bSquadIsEmpty;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bMultipleSquadsPopulated;                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(Squad_C_OnSquadIsEmptyChanged) == 0x000001, "Wrong alignment on Squad_C_OnSquadIsEmptyChanged");
-static_assert(sizeof(Squad_C_OnSquadIsEmptyChanged) == 0x000002, "Wrong size on Squad_C_OnSquadIsEmptyChanged");
-static_assert(offsetof(Squad_C_OnSquadIsEmptyChanged, bSquadIsEmpty) == 0x000000, "Member 'Squad_C_OnSquadIsEmptyChanged::bSquadIsEmpty' has a wrong offset!");
-static_assert(offsetof(Squad_C_OnSquadIsEmptyChanged, bMultipleSquadsPopulated) == 0x000001, "Member 'Squad_C_OnSquadIsEmptyChanged::bMultipleSquadsPopulated' has a wrong offset!");
-
 // Function Squad.Squad_C.ExecuteUbergraph_Squad
 // 0x0128 (0x0128 - 0x0000)
 struct Squad_C_ExecuteUbergraph_Squad final
@@ -92,28 +46,39 @@ public:
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_4;         // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue_5;         // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Squad_C_ExecuteUbergraph_Squad) == 0x000008, "Wrong alignment on Squad_C_ExecuteUbergraph_Squad");
-static_assert(sizeof(Squad_C_ExecuteUbergraph_Squad) == 0x000128, "Wrong size on Squad_C_ExecuteUbergraph_Squad");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, EntryPoint) == 0x000000, "Member 'Squad_C_ExecuteUbergraph_Squad::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, K2Node_CustomEvent_Loaded_1) == 0x000008, "Member 'Squad_C_ExecuteUbergraph_Squad::K2Node_CustomEvent_Loaded_1' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, Temp_object_Variable) == 0x000010, "Member 'Squad_C_ExecuteUbergraph_Squad::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, K2Node_DynamicCast_AsTexture) == 0x000018, "Member 'Squad_C_ExecuteUbergraph_Squad::K2Node_DynamicCast_AsTexture' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'Squad_C_ExecuteUbergraph_Squad::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, K2Node_CustomEvent_Loaded) == 0x000028, "Member 'Squad_C_ExecuteUbergraph_Squad::K2Node_CustomEvent_Loaded' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, Temp_object_Variable_1) == 0x000030, "Member 'Squad_C_ExecuteUbergraph_Squad::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, K2Node_DynamicCast_AsTexture_1) == 0x000038, "Member 'Squad_C_ExecuteUbergraph_Squad::K2Node_DynamicCast_AsTexture_1' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'Squad_C_ExecuteUbergraph_Squad::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, K2Node_Event_SquadStyle) == 0x000048, "Member 'Squad_C_ExecuteUbergraph_Squad::K2Node_Event_SquadStyle' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, CallFunc_GetDynamicMaterial_ReturnValue) == 0x0000D0, "Member 'Squad_C_ExecuteUbergraph_Squad::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, CallFunc_GetDynamicMaterial_ReturnValue_1) == 0x0000D8, "Member 'Squad_C_ExecuteUbergraph_Squad::CallFunc_GetDynamicMaterial_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, K2Node_CreateDelegate_OutputDelegate) == 0x0000E0, "Member 'Squad_C_ExecuteUbergraph_Squad::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000F0, "Member 'Squad_C_ExecuteUbergraph_Squad::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, K2Node_Event_bSquadIsEmpty) == 0x000100, "Member 'Squad_C_ExecuteUbergraph_Squad::K2Node_Event_bSquadIsEmpty' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, K2Node_Event_bMultipleSquadsPopulated) == 0x000101, "Member 'Squad_C_ExecuteUbergraph_Squad::K2Node_Event_bMultipleSquadsPopulated' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, CallFunc_GetDynamicMaterial_ReturnValue_2) == 0x000108, "Member 'Squad_C_ExecuteUbergraph_Squad::CallFunc_GetDynamicMaterial_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, CallFunc_GetDynamicMaterial_ReturnValue_3) == 0x000110, "Member 'Squad_C_ExecuteUbergraph_Squad::CallFunc_GetDynamicMaterial_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, CallFunc_GetDynamicMaterial_ReturnValue_4) == 0x000118, "Member 'Squad_C_ExecuteUbergraph_Squad::CallFunc_GetDynamicMaterial_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Squad_C_ExecuteUbergraph_Squad, CallFunc_GetDynamicMaterial_ReturnValue_5) == 0x000120, "Member 'Squad_C_ExecuteUbergraph_Squad::CallFunc_GetDynamicMaterial_ReturnValue_5' has a wrong offset!");
+
+// Function Squad.Squad_C.OnSquadIsEmptyChanged
+// 0x0002 (0x0002 - 0x0000)
+struct Squad_C_OnSquadIsEmptyChanged final
+{
+public:
+	bool                                          bSquadIsEmpty;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bMultipleSquadsPopulated;                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function Squad.Squad_C.OnSquadAssigned
+// 0x0088 (0x0088 - 0x0000)
+struct Squad_C_OnSquadAssigned final
+{
+public:
+	struct FAthenaTeamDisplayInfo                 SquadStyle;                                        // 0x0000(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
+// Function Squad.Squad_C.OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E
+// 0x0008 (0x0008 - 0x0000)
+struct Squad_C_OnLoaded_2EC4A7E44D1A9CF51A66D8904054E26E final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function Squad.Squad_C.OnLoaded_68F5F01141304474DB5D18BD77CD085C
+// 0x0008 (0x0008 - 0x0000)
+struct Squad_C_OnLoaded_68F5F01141304474DB5D18BD77CD085C final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 }
 

@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UTextStyle_Base_XS_B_40pc_C>();
 	}
 };
-static_assert(alignof(UTextStyle_Base_XS_B_40pc_C) == 0x000008, "Wrong alignment on UTextStyle_Base_XS_B_40pc_C");
-static_assert(sizeof(UTextStyle_Base_XS_B_40pc_C) == 0x000148, "Wrong size on UTextStyle_Base_XS_B_40pc_C");
 
 }
 

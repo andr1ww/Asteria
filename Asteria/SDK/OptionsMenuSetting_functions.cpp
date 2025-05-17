@@ -37,6 +37,28 @@ void UOptionsMenuSetting_C::ExecuteUbergraph_OptionsMenuSetting(int32 EntryPoint
 }
 
 
+// Function OptionsMenuSetting.OptionsMenuSetting_C.SetControlsEnabled
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const class FText&                      DisabledReason                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UOptionsMenuSetting_C::SetControlsEnabled(bool bEnabled, const class FText& DisabledReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OptionsMenuSetting_C", "SetControlsEnabled");
+
+	Params::OptionsMenuSetting_C_SetControlsEnabled Parms{};
+
+	Parms.bEnabled = bEnabled;
+	Parms.DisabledReason = std::move(DisabledReason);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function OptionsMenuSetting.OptionsMenuSetting_C.Refresh
 // (BlueprintCallable, BlueprintEvent)
 
@@ -230,8 +252,8 @@ void UOptionsMenuSetting_C::BndEvt__MenuSlider_K2Node_ComponentBoundEvent_124_On
 // Function OptionsMenuSetting.OptionsMenuSetting_C.OnMouseEnter
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UOptionsMenuSetting_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
@@ -252,7 +274,7 @@ void UOptionsMenuSetting_C::OnMouseEnter(const struct FGeometry& MyGeometry, con
 // Function OptionsMenuSetting.OptionsMenuSetting_C.OnMouseLeave
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UOptionsMenuSetting_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
@@ -437,7 +459,7 @@ void UOptionsMenuSetting_C::SetDarkTabStyle()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                                   SliderValue_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   SettingsValue                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  SettingsValue                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UOptionsMenuSetting_C::ConvertSliderValueToSettingsValue(float SliderValue_0, float* SettingsValue)
 {
@@ -475,7 +497,7 @@ void UOptionsMenuSetting_C::UpdateSliderTexture()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                                   SettingsValue                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   SliderValue_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  SliderValue_0                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UOptionsMenuSetting_C::ConvertSettingsValueToSliderValue(float SettingsValue, float* SliderValue_0)
 {
@@ -530,26 +552,6 @@ void UOptionsMenuSetting_C::SetFontSize(class UCommonTextBlock* Text, int32 Defa
 	Parms.MobileFont = MobileFont;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function OptionsMenuSetting.OptionsMenuSetting_C.GetListItemObject
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UObject* UOptionsMenuSetting_C::GetListItemObject() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("OptionsMenuSetting_C", "GetListItemObject");
-
-	Params::OptionsMenuSetting_C_GetListItemObject Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 }

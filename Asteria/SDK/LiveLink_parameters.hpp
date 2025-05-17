@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "LiveLink_structs.hpp"
-#include "Engine_structs.hpp"
 #include "LiveLinkInterface_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "LiveLink_structs.hpp"
 
 
 namespace SDK::Params
@@ -28,10 +28,6 @@ public:
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_ChildCount) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_ChildCount");
-static_assert(sizeof(LiveLinkBlueprintLibrary_ChildCount) == 0x000028, "Wrong size on LiveLinkBlueprintLibrary_ChildCount");
-static_assert(offsetof(LiveLinkBlueprintLibrary_ChildCount, LiveLinkTransform) == 0x000000, "Member 'LiveLinkBlueprintLibrary_ChildCount::LiveLinkTransform' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_ChildCount, ReturnValue) == 0x000020, "Member 'LiveLinkBlueprintLibrary_ChildCount::ReturnValue' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.ComponentSpaceTransform
 // 0x0050 (0x0050 - 0x0000)
@@ -41,10 +37,66 @@ public:
 	struct FLiveLinkTransform                     LiveLinkTransform;                                 // 0x0000(0x0020)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTransform                             Transform;                                         // 0x0020(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_ComponentSpaceTransform) == 0x000010, "Wrong alignment on LiveLinkBlueprintLibrary_ComponentSpaceTransform");
-static_assert(sizeof(LiveLinkBlueprintLibrary_ComponentSpaceTransform) == 0x000050, "Wrong size on LiveLinkBlueprintLibrary_ComponentSpaceTransform");
-static_assert(offsetof(LiveLinkBlueprintLibrary_ComponentSpaceTransform, LiveLinkTransform) == 0x000000, "Member 'LiveLinkBlueprintLibrary_ComponentSpaceTransform::LiveLinkTransform' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_ComponentSpaceTransform, Transform) == 0x000020, "Member 'LiveLinkBlueprintLibrary_ComponentSpaceTransform::Transform' has a wrong offset!");
+
+// Function LiveLink.LiveLinkBlueprintLibrary.EvaluateLiveLinkFrame
+// 0x0020 (0x0020 - 0x0000)
+struct LiveLinkBlueprintLibrary_EvaluateLiveLinkFrame final
+{
+public:
+	struct FLiveLinkSubjectRepresentation         SubjectRepresentation;                             // 0x0000(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FLiveLinkBaseBlueprintData             OutBlueprintData;                                  // 0x0010(0x0008)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function LiveLink.LiveLinkBlueprintLibrary.EvaluateLiveLinkFrameAtSceneTime
+// 0x0038 (0x0038 - 0x0000)
+struct LiveLinkBlueprintLibrary_EvaluateLiveLinkFrameAtSceneTime final
+{
+public:
+	struct FLiveLinkSubjectName                   SubjectName;                                       // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ULiveLinkRole>              Role;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTimecode                              SceneTime;                                         // 0x0010(0x0014)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLiveLinkBaseBlueprintData             OutBlueprintData;                                  // 0x0028(0x0008)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function LiveLink.LiveLinkBlueprintLibrary.EvaluateLiveLinkFrameAtWorldTimeOffset
+// 0x0028 (0x0028 - 0x0000)
+struct LiveLinkBlueprintLibrary_EvaluateLiveLinkFrameAtWorldTimeOffset final
+{
+public:
+	struct FLiveLinkSubjectName                   SubjectName;                                       // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ULiveLinkRole>              Role;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WorldTimeOffset;                                   // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLiveLinkBaseBlueprintData             OutBlueprintData;                                  // 0x0018(0x0008)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function LiveLink.LiveLinkBlueprintLibrary.EvaluateLiveLinkFrameWithSpecificRole
+// 0x0020 (0x0020 - 0x0000)
+struct LiveLinkBlueprintLibrary_EvaluateLiveLinkFrameWithSpecificRole final
+{
+public:
+	struct FLiveLinkSubjectName                   SubjectName;                                       // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ULiveLinkRole>              Role;                                              // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLiveLinkBaseBlueprintData             OutBlueprintData;                                  // 0x0010(0x0008)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function LiveLink.LiveLinkBlueprintLibrary.GetBasicData
+// 0x00D0 (0x00D0 - 0x0000)
+struct LiveLinkBlueprintLibrary_GetBasicData final
+{
+public:
+	struct FSubjectFrameHandle                    SubjectFrameHandle;                                // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLiveLinkBasicBlueprintData            BasicBlueprintData;                                // 0x0018(0x00B8)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetChildren
 // 0x0030 (0x0030 - 0x0000)
@@ -52,12 +104,8 @@ struct LiveLinkBlueprintLibrary_GetChildren final
 {
 public:
 	struct FLiveLinkTransform                     LiveLinkTransform;                                 // 0x0000(0x0020)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FLiveLinkTransform>             Children;                                          // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FLiveLinkTransform>             Children;                                          // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_GetChildren) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_GetChildren");
-static_assert(sizeof(LiveLinkBlueprintLibrary_GetChildren) == 0x000030, "Wrong size on LiveLinkBlueprintLibrary_GetChildren");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetChildren, LiveLinkTransform) == 0x000000, "Member 'LiveLinkBlueprintLibrary_GetChildren::LiveLinkTransform' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetChildren, Children) == 0x000020, "Member 'LiveLinkBlueprintLibrary_GetChildren::Children' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetCurves
 // 0x0068 (0x0068 - 0x0000)
@@ -65,12 +113,38 @@ struct LiveLinkBlueprintLibrary_GetCurves final
 {
 public:
 	struct FSubjectFrameHandle                    SubjectFrameHandle;                                // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TMap<class FName, float>                      Curves;                                            // 0x0018(0x0050)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<class FName, float>                      Curves;                                            // 0x0018(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_GetCurves) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_GetCurves");
-static_assert(sizeof(LiveLinkBlueprintLibrary_GetCurves) == 0x000068, "Wrong size on LiveLinkBlueprintLibrary_GetCurves");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetCurves, SubjectFrameHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_GetCurves::SubjectFrameHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetCurves, Curves) == 0x000018, "Member 'LiveLinkBlueprintLibrary_GetCurves::Curves' has a wrong offset!");
+
+// Function LiveLink.LiveLinkBlueprintLibrary.GetLiveLinkEnabledSubjectNames
+// 0x0018 (0x0018 - 0x0000)
+struct LiveLinkBlueprintLibrary_GetLiveLinkEnabledSubjectNames final
+{
+public:
+	bool                                          bIncludeVirtualSubject;                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FLiveLinkSubjectName>           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function LiveLink.LiveLinkBlueprintLibrary.GetLiveLinkSubjectRole
+// 0x0010 (0x0010 - 0x0000)
+struct LiveLinkBlueprintLibrary_GetLiveLinkSubjectRole final
+{
+public:
+	struct FLiveLinkSubjectName                   SubjectName;                                       // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ULiveLinkRole>              ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function LiveLink.LiveLinkBlueprintLibrary.GetLiveLinkSubjects
+// 0x0018 (0x0018 - 0x0000)
+struct LiveLinkBlueprintLibrary_GetLiveLinkSubjects final
+{
+public:
+	bool                                          bIncludeDisabledSubject;                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIncludeDisal;                                     // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FLiveLinkSubjectKey>            ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetMetadata
 // 0x0088 (0x0088 - 0x0000)
@@ -80,10 +154,6 @@ public:
 	struct FSubjectFrameHandle                    SubjectFrameHandle;                                // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FSubjectMetadata                       MetaData;                                          // 0x0018(0x0070)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_GetMetadata) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_GetMetadata");
-static_assert(sizeof(LiveLinkBlueprintLibrary_GetMetadata) == 0x000088, "Wrong size on LiveLinkBlueprintLibrary_GetMetadata");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetMetadata, SubjectFrameHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_GetMetadata::SubjectFrameHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetMetadata, MetaData) == 0x000018, "Member 'LiveLinkBlueprintLibrary_GetMetadata::MetaData' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetParent
 // 0x0040 (0x0040 - 0x0000)
@@ -93,10 +163,18 @@ public:
 	struct FLiveLinkTransform                     LiveLinkTransform;                                 // 0x0000(0x0020)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FLiveLinkTransform                     Parent;                                            // 0x0020(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_GetParent) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_GetParent");
-static_assert(sizeof(LiveLinkBlueprintLibrary_GetParent) == 0x000040, "Wrong size on LiveLinkBlueprintLibrary_GetParent");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetParent, LiveLinkTransform) == 0x000000, "Member 'LiveLinkBlueprintLibrary_GetParent::LiveLinkTransform' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetParent, Parent) == 0x000020, "Member 'LiveLinkBlueprintLibrary_GetParent::Parent' has a wrong offset!");
+
+// Function LiveLink.LiveLinkBlueprintLibrary.GetPropertyValue
+// 0x00C8 (0x00C8 - 0x0000)
+struct LiveLinkBlueprintLibrary_GetPropertyValue final
+{
+public:
+	struct FLiveLinkBasicBlueprintData            BasicData;                                         // 0x0000(0x00B8)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FName                                   PropertyName;                                      // 0x00B8(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x00C0(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00C4(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetRootTransform
 // 0x0038 (0x0038 - 0x0000)
@@ -106,10 +184,6 @@ public:
 	struct FSubjectFrameHandle                    SubjectFrameHandle;                                // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FLiveLinkTransform                     LiveLinkTransform;                                 // 0x0018(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_GetRootTransform) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_GetRootTransform");
-static_assert(sizeof(LiveLinkBlueprintLibrary_GetRootTransform) == 0x000038, "Wrong size on LiveLinkBlueprintLibrary_GetRootTransform");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetRootTransform, SubjectFrameHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_GetRootTransform::SubjectFrameHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetRootTransform, LiveLinkTransform) == 0x000018, "Member 'LiveLinkBlueprintLibrary_GetRootTransform::LiveLinkTransform' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetSourceMachineName
 // 0x0030 (0x0030 - 0x0000)
@@ -119,10 +193,6 @@ public:
 	struct FLiveLinkSourceHandle                  SourceHandle;                                      // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_GetSourceMachineName) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_GetSourceMachineName");
-static_assert(sizeof(LiveLinkBlueprintLibrary_GetSourceMachineName) == 0x000030, "Wrong size on LiveLinkBlueprintLibrary_GetSourceMachineName");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetSourceMachineName, SourceHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_GetSourceMachineName::SourceHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetSourceMachineName, ReturnValue) == 0x000018, "Member 'LiveLinkBlueprintLibrary_GetSourceMachineName::ReturnValue' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetSourceStatus
 // 0x0030 (0x0030 - 0x0000)
@@ -132,10 +202,6 @@ public:
 	struct FLiveLinkSourceHandle                  SourceHandle;                                      // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_GetSourceStatus) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_GetSourceStatus");
-static_assert(sizeof(LiveLinkBlueprintLibrary_GetSourceStatus) == 0x000030, "Wrong size on LiveLinkBlueprintLibrary_GetSourceStatus");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetSourceStatus, SourceHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_GetSourceStatus::SourceHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetSourceStatus, ReturnValue) == 0x000018, "Member 'LiveLinkBlueprintLibrary_GetSourceStatus::ReturnValue' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetSourceType
 // 0x0030 (0x0030 - 0x0000)
@@ -145,10 +211,15 @@ public:
 	struct FLiveLinkSourceHandle                  SourceHandle;                                      // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_GetSourceType) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_GetSourceType");
-static_assert(sizeof(LiveLinkBlueprintLibrary_GetSourceType) == 0x000030, "Wrong size on LiveLinkBlueprintLibrary_GetSourceType");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetSourceType, SourceHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_GetSourceType::SourceHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetSourceType, ReturnValue) == 0x000018, "Member 'LiveLinkBlueprintLibrary_GetSourceType::ReturnValue' has a wrong offset!");
+
+// Function LiveLink.LiveLinkBlueprintLibrary.GetSpecificLiveLinkSubjectRole
+// 0x0020 (0x0020 - 0x0000)
+struct LiveLinkBlueprintLibrary_GetSpecificLiveLinkSubjectRole final
+{
+public:
+	struct FLiveLinkSubjectKey                    SubjectKey;                                        // 0x0000(0x0018)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ULiveLinkRole>              ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetTransformByIndex
 // 0x0040 (0x0040 - 0x0000)
@@ -160,11 +231,6 @@ public:
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLiveLinkTransform                     LiveLinkTransform;                                 // 0x0020(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_GetTransformByIndex) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_GetTransformByIndex");
-static_assert(sizeof(LiveLinkBlueprintLibrary_GetTransformByIndex) == 0x000040, "Wrong size on LiveLinkBlueprintLibrary_GetTransformByIndex");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetTransformByIndex, SubjectFrameHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_GetTransformByIndex::SubjectFrameHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetTransformByIndex, TransformIndex) == 0x000018, "Member 'LiveLinkBlueprintLibrary_GetTransformByIndex::TransformIndex' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetTransformByIndex, LiveLinkTransform) == 0x000020, "Member 'LiveLinkBlueprintLibrary_GetTransformByIndex::LiveLinkTransform' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.GetTransformByName
 // 0x0040 (0x0040 - 0x0000)
@@ -175,11 +241,6 @@ public:
 	class FName                                   TransformName_0;                                   // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLiveLinkTransform                     LiveLinkTransform;                                 // 0x0020(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_GetTransformByName) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_GetTransformByName");
-static_assert(sizeof(LiveLinkBlueprintLibrary_GetTransformByName) == 0x000040, "Wrong size on LiveLinkBlueprintLibrary_GetTransformByName");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetTransformByName, SubjectFrameHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_GetTransformByName::SubjectFrameHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetTransformByName, TransformName_0) == 0x000018, "Member 'LiveLinkBlueprintLibrary_GetTransformByName::TransformName_0' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_GetTransformByName, LiveLinkTransform) == 0x000020, "Member 'LiveLinkBlueprintLibrary_GetTransformByName::LiveLinkTransform' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.HasParent
 // 0x0028 (0x0028 - 0x0000)
@@ -190,10 +251,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_HasParent) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_HasParent");
-static_assert(sizeof(LiveLinkBlueprintLibrary_HasParent) == 0x000028, "Wrong size on LiveLinkBlueprintLibrary_HasParent");
-static_assert(offsetof(LiveLinkBlueprintLibrary_HasParent, LiveLinkTransform) == 0x000000, "Member 'LiveLinkBlueprintLibrary_HasParent::LiveLinkTransform' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_HasParent, ReturnValue) == 0x000020, "Member 'LiveLinkBlueprintLibrary_HasParent::ReturnValue' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.IsSourceStillValid
 // 0x0020 (0x0020 - 0x0000)
@@ -204,10 +261,6 @@ public:
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_IsSourceStillValid) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_IsSourceStillValid");
-static_assert(sizeof(LiveLinkBlueprintLibrary_IsSourceStillValid) == 0x000020, "Wrong size on LiveLinkBlueprintLibrary_IsSourceStillValid");
-static_assert(offsetof(LiveLinkBlueprintLibrary_IsSourceStillValid, SourceHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_IsSourceStillValid::SourceHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_IsSourceStillValid, ReturnValue) == 0x000018, "Member 'LiveLinkBlueprintLibrary_IsSourceStillValid::ReturnValue' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.NumberOfTransforms
 // 0x0020 (0x0020 - 0x0000)
@@ -218,10 +271,6 @@ public:
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_NumberOfTransforms) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_NumberOfTransforms");
-static_assert(sizeof(LiveLinkBlueprintLibrary_NumberOfTransforms) == 0x000020, "Wrong size on LiveLinkBlueprintLibrary_NumberOfTransforms");
-static_assert(offsetof(LiveLinkBlueprintLibrary_NumberOfTransforms, SubjectFrameHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_NumberOfTransforms::SubjectFrameHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_NumberOfTransforms, ReturnValue) == 0x000018, "Member 'LiveLinkBlueprintLibrary_NumberOfTransforms::ReturnValue' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.ParentBoneSpaceTransform
 // 0x0050 (0x0050 - 0x0000)
@@ -231,24 +280,16 @@ public:
 	struct FLiveLinkTransform                     LiveLinkTransform;                                 // 0x0000(0x0020)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTransform                             Transform;                                         // 0x0020(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_ParentBoneSpaceTransform) == 0x000010, "Wrong alignment on LiveLinkBlueprintLibrary_ParentBoneSpaceTransform");
-static_assert(sizeof(LiveLinkBlueprintLibrary_ParentBoneSpaceTransform) == 0x000050, "Wrong size on LiveLinkBlueprintLibrary_ParentBoneSpaceTransform");
-static_assert(offsetof(LiveLinkBlueprintLibrary_ParentBoneSpaceTransform, LiveLinkTransform) == 0x000000, "Member 'LiveLinkBlueprintLibrary_ParentBoneSpaceTransform::LiveLinkTransform' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_ParentBoneSpaceTransform, Transform) == 0x000020, "Member 'LiveLinkBlueprintLibrary_ParentBoneSpaceTransform::Transform' has a wrong offset!");
 
-// Function LiveLink.LiveLinkBlueprintLibrary.RequestShutdown
+// Function LiveLink.LiveLinkBlueprintLibrary.RemoveSource
 // 0x0020 (0x0020 - 0x0000)
-struct LiveLinkBlueprintLibrary_RequestShutdown final
+struct LiveLinkBlueprintLibrary_RemoveSource final
 {
 public:
 	struct FLiveLinkSourceHandle                  SourceHandle;                                      // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_RequestShutdown) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_RequestShutdown");
-static_assert(sizeof(LiveLinkBlueprintLibrary_RequestShutdown) == 0x000020, "Wrong size on LiveLinkBlueprintLibrary_RequestShutdown");
-static_assert(offsetof(LiveLinkBlueprintLibrary_RequestShutdown, SourceHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_RequestShutdown::SourceHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_RequestShutdown, ReturnValue) == 0x000018, "Member 'LiveLinkBlueprintLibrary_RequestShutdown::ReturnValue' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.TransformName
 // 0x0028 (0x0028 - 0x0000)
@@ -258,10 +299,6 @@ public:
 	struct FLiveLinkTransform                     LiveLinkTransform;                                 // 0x0000(0x0020)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FName                                   Name_0;                                            // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_TransformName) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_TransformName");
-static_assert(sizeof(LiveLinkBlueprintLibrary_TransformName) == 0x000028, "Wrong size on LiveLinkBlueprintLibrary_TransformName");
-static_assert(offsetof(LiveLinkBlueprintLibrary_TransformName, LiveLinkTransform) == 0x000000, "Member 'LiveLinkBlueprintLibrary_TransformName::LiveLinkTransform' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_TransformName, Name_0) == 0x000020, "Member 'LiveLinkBlueprintLibrary_TransformName::Name_0' has a wrong offset!");
 
 // Function LiveLink.LiveLinkBlueprintLibrary.TransformNames
 // 0x0028 (0x0028 - 0x0000)
@@ -269,23 +306,47 @@ struct LiveLinkBlueprintLibrary_TransformNames final
 {
 public:
 	struct FSubjectFrameHandle                    SubjectFrameHandle;                                // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class FName>                           TransformNames_0;                                  // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           TransformNames_0;                                  // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkBlueprintLibrary_TransformNames) == 0x000008, "Wrong alignment on LiveLinkBlueprintLibrary_TransformNames");
-static_assert(sizeof(LiveLinkBlueprintLibrary_TransformNames) == 0x000028, "Wrong size on LiveLinkBlueprintLibrary_TransformNames");
-static_assert(offsetof(LiveLinkBlueprintLibrary_TransformNames, SubjectFrameHandle) == 0x000000, "Member 'LiveLinkBlueprintLibrary_TransformNames::SubjectFrameHandle' has a wrong offset!");
-static_assert(offsetof(LiveLinkBlueprintLibrary_TransformNames, TransformNames_0) == 0x000018, "Member 'LiveLinkBlueprintLibrary_TransformNames::TransformNames_0' has a wrong offset!");
+
+// Function LiveLink.LiveLinkBlueprintLibrary.IsLiveLinkSubjectEnabled
+// 0x000C (0x000C - 0x0000)
+struct LiveLinkBlueprintLibrary_IsLiveLinkSubjectEnabled final
+{
+public:
+	struct FLiveLinkSubjectName                   SubjectName;                                       // 0x0000(0x0008)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function LiveLink.LiveLinkBlueprintLibrary.IsSpecificLiveLinkSubjectEnabled
+// 0x001C (0x001C - 0x0000)
+struct LiveLinkBlueprintLibrary_IsSpecificLiveLinkSubjectEnabled final
+{
+public:
+	struct FLiveLinkSubjectKey                    SubjectKey;                                        // 0x0000(0x0018)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForThisFrame;                                     // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x2];                                       // 0x001A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+
+// Function LiveLink.LiveLinkBlueprintLibrary.SetLiveLinkSubjectEnabled
+// 0x001C (0x001C - 0x0000)
+struct LiveLinkBlueprintLibrary_SetLiveLinkSubjectEnabled final
+{
+public:
+	struct FLiveLinkSubjectKey                    SubjectKey;                                        // 0x0000(0x0018)(ConstParm, Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnabled;                                          // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
 
 // Function LiveLink.LiveLinkComponent.GetAvailableSubjectNames
 // 0x0010 (0x0010 - 0x0000)
 struct LiveLinkComponent_GetAvailableSubjectNames final
 {
 public:
-	TArray<class FName>                           SubjectNames;                                      // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           SubjectNames;                                      // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkComponent_GetAvailableSubjectNames) == 0x000008, "Wrong alignment on LiveLinkComponent_GetAvailableSubjectNames");
-static_assert(sizeof(LiveLinkComponent_GetAvailableSubjectNames) == 0x000010, "Wrong size on LiveLinkComponent_GetAvailableSubjectNames");
-static_assert(offsetof(LiveLinkComponent_GetAvailableSubjectNames, SubjectNames) == 0x000000, "Member 'LiveLinkComponent_GetAvailableSubjectNames::SubjectNames' has a wrong offset!");
 
 // Function LiveLink.LiveLinkComponent.GetSubjectData
 // 0x0028 (0x0028 - 0x0000)
@@ -297,11 +358,6 @@ public:
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSubjectFrameHandle                    SubjectFrameHandle;                                // 0x0010(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkComponent_GetSubjectData) == 0x000008, "Wrong alignment on LiveLinkComponent_GetSubjectData");
-static_assert(sizeof(LiveLinkComponent_GetSubjectData) == 0x000028, "Wrong size on LiveLinkComponent_GetSubjectData");
-static_assert(offsetof(LiveLinkComponent_GetSubjectData, SubjectName) == 0x000000, "Member 'LiveLinkComponent_GetSubjectData::SubjectName' has a wrong offset!");
-static_assert(offsetof(LiveLinkComponent_GetSubjectData, bSuccess) == 0x000008, "Member 'LiveLinkComponent_GetSubjectData::bSuccess' has a wrong offset!");
-static_assert(offsetof(LiveLinkComponent_GetSubjectData, SubjectFrameHandle) == 0x000010, "Member 'LiveLinkComponent_GetSubjectData::SubjectFrameHandle' has a wrong offset!");
 
 // Function LiveLink.LiveLinkComponent.GetSubjectDataAtSceneTime
 // 0x0038 (0x0038 - 0x0000)
@@ -314,12 +370,6 @@ public:
 	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSubjectFrameHandle                    SubjectFrameHandle;                                // 0x0020(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkComponent_GetSubjectDataAtSceneTime) == 0x000008, "Wrong alignment on LiveLinkComponent_GetSubjectDataAtSceneTime");
-static_assert(sizeof(LiveLinkComponent_GetSubjectDataAtSceneTime) == 0x000038, "Wrong size on LiveLinkComponent_GetSubjectDataAtSceneTime");
-static_assert(offsetof(LiveLinkComponent_GetSubjectDataAtSceneTime, SubjectName) == 0x000000, "Member 'LiveLinkComponent_GetSubjectDataAtSceneTime::SubjectName' has a wrong offset!");
-static_assert(offsetof(LiveLinkComponent_GetSubjectDataAtSceneTime, SceneTime) == 0x000008, "Member 'LiveLinkComponent_GetSubjectDataAtSceneTime::SceneTime' has a wrong offset!");
-static_assert(offsetof(LiveLinkComponent_GetSubjectDataAtSceneTime, bSuccess) == 0x00001C, "Member 'LiveLinkComponent_GetSubjectDataAtSceneTime::bSuccess' has a wrong offset!");
-static_assert(offsetof(LiveLinkComponent_GetSubjectDataAtSceneTime, SubjectFrameHandle) == 0x000020, "Member 'LiveLinkComponent_GetSubjectDataAtSceneTime::SubjectFrameHandle' has a wrong offset!");
 
 // Function LiveLink.LiveLinkComponent.GetSubjectDataAtWorldTime
 // 0x0028 (0x0028 - 0x0000)
@@ -332,25 +382,31 @@ public:
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSubjectFrameHandle                    SubjectFrameHandle;                                // 0x0010(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkComponent_GetSubjectDataAtWorldTime) == 0x000008, "Wrong alignment on LiveLinkComponent_GetSubjectDataAtWorldTime");
-static_assert(sizeof(LiveLinkComponent_GetSubjectDataAtWorldTime) == 0x000028, "Wrong size on LiveLinkComponent_GetSubjectDataAtWorldTime");
-static_assert(offsetof(LiveLinkComponent_GetSubjectDataAtWorldTime, SubjectName) == 0x000000, "Member 'LiveLinkComponent_GetSubjectDataAtWorldTime::SubjectName' has a wrong offset!");
-static_assert(offsetof(LiveLinkComponent_GetSubjectDataAtWorldTime, WorldTime) == 0x000008, "Member 'LiveLinkComponent_GetSubjectDataAtWorldTime::WorldTime' has a wrong offset!");
-static_assert(offsetof(LiveLinkComponent_GetSubjectDataAtWorldTime, bSuccess) == 0x00000C, "Member 'LiveLinkComponent_GetSubjectDataAtWorldTime::bSuccess' has a wrong offset!");
-static_assert(offsetof(LiveLinkComponent_GetSubjectDataAtWorldTime, SubjectFrameHandle) == 0x000010, "Member 'LiveLinkComponent_GetSubjectDataAtWorldTime::SubjectFrameHandle' has a wrong offset!");
+
+// Function LiveLink.LiveLinkInstance.SetRetargetAsset
+// 0x0008 (0x0008 - 0x0000)
+struct LiveLinkInstance_SetRetargetAsset final
+{
+public:
+	TSubclassOf<class ULiveLinkRetargetAsset>     RetargetAsset;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function LiveLink.LiveLinkInstance.SetSubject
+// 0x0008 (0x0008 - 0x0000)
+struct LiveLinkInstance_SetSubject final
+{
+public:
+	struct FLiveLinkSubjectName                   SubjectName;                                       // 0x0000(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function LiveLink.LiveLinkMessageBusFinder.ConnectToProvider
-// 0x0048 (0x0048 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct LiveLinkMessageBusFinder_ConnectToProvider final
 {
 public:
-	struct FProviderPollResult                    Provider;                                          // 0x0000(0x0030)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FLiveLinkSourceHandle                  SourceHandle;                                      // 0x0030(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FProviderPollResult                    Provider;                                          // 0x0000(0x0038)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FLiveLinkSourceHandle                  SourceHandle;                                      // 0x0038(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkMessageBusFinder_ConnectToProvider) == 0x000008, "Wrong alignment on LiveLinkMessageBusFinder_ConnectToProvider");
-static_assert(sizeof(LiveLinkMessageBusFinder_ConnectToProvider) == 0x000048, "Wrong size on LiveLinkMessageBusFinder_ConnectToProvider");
-static_assert(offsetof(LiveLinkMessageBusFinder_ConnectToProvider, Provider) == 0x000000, "Member 'LiveLinkMessageBusFinder_ConnectToProvider::Provider' has a wrong offset!");
-static_assert(offsetof(LiveLinkMessageBusFinder_ConnectToProvider, SourceHandle) == 0x000030, "Member 'LiveLinkMessageBusFinder_ConnectToProvider::SourceHandle' has a wrong offset!");
 
 // Function LiveLink.LiveLinkMessageBusFinder.ConstructMessageBusFinder
 // 0x0008 (0x0008 - 0x0000)
@@ -359,9 +415,6 @@ struct LiveLinkMessageBusFinder_ConstructMessageBusFinder final
 public:
 	class ULiveLinkMessageBusFinder*              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkMessageBusFinder_ConstructMessageBusFinder) == 0x000008, "Wrong alignment on LiveLinkMessageBusFinder_ConstructMessageBusFinder");
-static_assert(sizeof(LiveLinkMessageBusFinder_ConstructMessageBusFinder) == 0x000008, "Wrong size on LiveLinkMessageBusFinder_ConstructMessageBusFinder");
-static_assert(offsetof(LiveLinkMessageBusFinder_ConstructMessageBusFinder, ReturnValue) == 0x000000, "Member 'LiveLinkMessageBusFinder_ConstructMessageBusFinder::ReturnValue' has a wrong offset!");
 
 // Function LiveLink.LiveLinkMessageBusFinder.GetAvailableProviders
 // 0x0038 (0x0038 - 0x0000)
@@ -372,14 +425,25 @@ public:
 	struct FLatentActionInfo                      LatentInfo;                                        // 0x0008(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         Duration;                                          // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FProviderPollResult>            AvailableProviders;                                // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FProviderPollResult>            AvailableProviders;                                // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkMessageBusFinder_GetAvailableProviders) == 0x000008, "Wrong alignment on LiveLinkMessageBusFinder_GetAvailableProviders");
-static_assert(sizeof(LiveLinkMessageBusFinder_GetAvailableProviders) == 0x000038, "Wrong size on LiveLinkMessageBusFinder_GetAvailableProviders");
-static_assert(offsetof(LiveLinkMessageBusFinder_GetAvailableProviders, WorldContextObject) == 0x000000, "Member 'LiveLinkMessageBusFinder_GetAvailableProviders::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LiveLinkMessageBusFinder_GetAvailableProviders, LatentInfo) == 0x000008, "Member 'LiveLinkMessageBusFinder_GetAvailableProviders::LatentInfo' has a wrong offset!");
-static_assert(offsetof(LiveLinkMessageBusFinder_GetAvailableProviders, Duration) == 0x000020, "Member 'LiveLinkMessageBusFinder_GetAvailableProviders::Duration' has a wrong offset!");
-static_assert(offsetof(LiveLinkMessageBusFinder_GetAvailableProviders, AvailableProviders) == 0x000028, "Member 'LiveLinkMessageBusFinder_GetAvailableProviders::AvailableProviders' has a wrong offset!");
+
+// Function LiveLink.LiveLinkPreset.AddToClient
+// 0x0002 (0x0002 - 0x0000)
+struct LiveLinkPreset_AddToClient final
+{
+public:
+	bool                                          bRecreatePresets;                                  // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// Function LiveLink.LiveLinkPreset.ApplyToClient
+// 0x0001 (0x0001 - 0x0000)
+struct LiveLinkPreset_ApplyToClient final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
 
 // Function LiveLink.LiveLinkRemapAsset.GetRemappedBoneName
 // 0x0010 (0x0010 - 0x0000)
@@ -389,10 +453,6 @@ public:
 	class FName                                   BoneName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkRemapAsset_GetRemappedBoneName) == 0x000004, "Wrong alignment on LiveLinkRemapAsset_GetRemappedBoneName");
-static_assert(sizeof(LiveLinkRemapAsset_GetRemappedBoneName) == 0x000010, "Wrong size on LiveLinkRemapAsset_GetRemappedBoneName");
-static_assert(offsetof(LiveLinkRemapAsset_GetRemappedBoneName, BoneName) == 0x000000, "Member 'LiveLinkRemapAsset_GetRemappedBoneName::BoneName' has a wrong offset!");
-static_assert(offsetof(LiveLinkRemapAsset_GetRemappedBoneName, ReturnValue) == 0x000008, "Member 'LiveLinkRemapAsset_GetRemappedBoneName::ReturnValue' has a wrong offset!");
 
 // Function LiveLink.LiveLinkRemapAsset.GetRemappedCurveName
 // 0x0010 (0x0010 - 0x0000)
@@ -402,21 +462,14 @@ public:
 	class FName                                   CurveName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkRemapAsset_GetRemappedCurveName) == 0x000004, "Wrong alignment on LiveLinkRemapAsset_GetRemappedCurveName");
-static_assert(sizeof(LiveLinkRemapAsset_GetRemappedCurveName) == 0x000010, "Wrong size on LiveLinkRemapAsset_GetRemappedCurveName");
-static_assert(offsetof(LiveLinkRemapAsset_GetRemappedCurveName, CurveName) == 0x000000, "Member 'LiveLinkRemapAsset_GetRemappedCurveName::CurveName' has a wrong offset!");
-static_assert(offsetof(LiveLinkRemapAsset_GetRemappedCurveName, ReturnValue) == 0x000008, "Member 'LiveLinkRemapAsset_GetRemappedCurveName::ReturnValue' has a wrong offset!");
 
 // Function LiveLink.LiveLinkRemapAsset.RemapCurveElements
 // 0x0050 (0x0050 - 0x0000)
 struct LiveLinkRemapAsset_RemapCurveElements final
 {
 public:
-	TMap<class FName, float>                      CurveItems;                                        // 0x0000(0x0050)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TMap<class FName, float>                      CurveItems;                                        // 0x0000(0x0050)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(LiveLinkRemapAsset_RemapCurveElements) == 0x000008, "Wrong alignment on LiveLinkRemapAsset_RemapCurveElements");
-static_assert(sizeof(LiveLinkRemapAsset_RemapCurveElements) == 0x000050, "Wrong size on LiveLinkRemapAsset_RemapCurveElements");
-static_assert(offsetof(LiveLinkRemapAsset_RemapCurveElements, CurveItems) == 0x000000, "Member 'LiveLinkRemapAsset_RemapCurveElements::CurveItems' has a wrong offset!");
 
 }
 

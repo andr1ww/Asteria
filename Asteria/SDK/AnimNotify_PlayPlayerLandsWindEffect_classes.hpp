@@ -33,8 +33,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotify_PlayPlayerLandsWindEffect_C>();
 	}
 };
-static_assert(alignof(UAnimNotify_PlayPlayerLandsWindEffect_C) == 0x000008, "Wrong alignment on UAnimNotify_PlayPlayerLandsWindEffect_C");
-static_assert(sizeof(UAnimNotify_PlayPlayerLandsWindEffect_C) == 0x000038, "Wrong size on UAnimNotify_PlayPlayerLandsWindEffect_C");
 
 }
 

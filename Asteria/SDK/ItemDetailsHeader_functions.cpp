@@ -87,6 +87,26 @@ void UItemDetailsHeader_C::HandleDifferentItemToCompareSet()
 }
 
 
+// Function ItemDetailsHeader.ItemDetailsHeader_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UItemDetailsHeader_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemDetailsHeader_C", "PreConstruct");
+
+	Params::ItemDetailsHeader_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function ItemDetailsHeader.ItemDetailsHeader_C.ExecuteUbergraph_ItemDetailsHeader
 // (Final, UbergraphFunction)
 // Parameters:

@@ -40,7 +40,7 @@ void UBuildWatermark_C::ExecuteUbergraph_BuildWatermark(int32 EntryPoint)
 // Function BuildWatermark.BuildWatermark_C.HandlePlayerStateChanged
 // (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortTeamMemberInfo              PlayerInfo                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const struct FFortTeamMemberInfo&       PlayerInfo                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
 void UBuildWatermark_C::HandlePlayerStateChanged(const struct FFortTeamMemberInfo& PlayerInfo)
 {
@@ -94,58 +94,6 @@ void UBuildWatermark_C::Construct()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BuildWatermark_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BuildWatermark.BuildWatermark_C.Update Watermark
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBuildWatermark_C::Update_Watermark()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuildWatermark_C", "Update Watermark");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BuildWatermark.BuildWatermark_C.SetTextCollapseIfDefault
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UTextBlock*                       Text_Widget                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString                           InputText                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class FString                           DefaultText                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UBuildWatermark_C::SetTextCollapseIfDefault(class UTextBlock* Text_Widget, const class FString& InputText, const class FString& DefaultText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuildWatermark_C", "SetTextCollapseIfDefault");
-
-	Params::BuildWatermark_C_SetTextCollapseIfDefault Parms{};
-
-	Parms.Text_Widget = Text_Widget;
-	Parms.InputText = std::move(InputText);
-	Parms.DefaultText = std::move(DefaultText);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BuildWatermark.BuildWatermark_C.UpdateCalenderOffset
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UBuildWatermark_C::UpdateCalenderOffset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BuildWatermark_C", "UpdateCalenderOffset");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

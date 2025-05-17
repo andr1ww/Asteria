@@ -10,45 +10,46 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass PlayerPawn_Generic_Parent.PlayerPawn_Generic_Parent_C
-// 0x00E0 (0x2430 - 0x2350)
+// 0x00F0 (0x2E90 - 0x2DA0)
 #pragma pack(push, 0x1)
 class alignas(0x10) APlayerPawn_Generic_Parent_C : public AFortPlayerPawn
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TArray<class UMaterialInterface*>             Default_Weapon_Materials;                          // 0x2358(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnBackpackMaterials;                             // 0x2368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnHatMaterials;                                  // 0x2378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnHeadMaterials;                                 // 0x2388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnBodyMaterials;                                 // 0x2398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnCharmMaterials;                                // 0x23A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnFaceMaterials;                                 // 0x23B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInterface*>             PawnLegsMaterials;                                 // 0x23C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInterface*>             PawnTorsoMaterials;                                // 0x23D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UPostProcessComponent*                  PlayerPostProcessFX;                               // 0x23E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class USkeletalMeshComponent*>         SkeletalMeshes;                                    // 0x23F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UMaterialInstanceDynamic*>       PawnMaterials_ALL;                                 // 0x2400(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	int32                                         WaterCounter;                                      // 0x2410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2414[0x4];                                     // 0x2414(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CurrentWaterMeshActor;                             // 0x2418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsInWater;                                         // 0x2420(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2421[0x3];                                     // 0x2421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Time_when_you_ll_be_able_to_splash_again;          // 0x2424(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2DA0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TArray<class UMaterialInterface*>             Default_Weapon_Materials;                          // 0x2DA8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnBackpackMaterials;                             // 0x2DB8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnHatMaterials;                                  // 0x2DC8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnHeadMaterials;                                 // 0x2DD8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnBodyMaterials;                                 // 0x2DE8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnCharmMaterials;                                // 0x2DF8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnFaceMaterials;                                 // 0x2E08(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInterface*>             PawnLegsMaterials;                                 // 0x2E18(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class UMaterialInterface*>             PawnTorsoMaterials;                                // 0x2E28(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UPostProcessComponent*                  PlayerPostProcessFX;                               // 0x2E38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class USkeletalMeshComponent*>         SkeletalMeshes;                                    // 0x2E40(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<class UMaterialInstanceDynamic*>       PawnMaterials_ALL;                                 // 0x2E50(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         WaterCounter;                                      // 0x2E60(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E64[0x4];                                     // 0x2E64(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CurrentWaterMeshActor;                             // 0x2E68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsInWater;                                         // 0x2E70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2E71[0x3];                                     // 0x2E71(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Time_when_you_ll_be_able_to_splash_again;          // 0x2E74(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(bool bIsInWater, class AFortPlayerPawn* Pawn, class AActor* Water)> OnOverlapWaterVolume; // 0x2E78(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_PlayerPawn_Generic_Parent(int32 EntryPoint);
-	void Entered_Water_Volume();
-	void Player_Creates_a_Splash(const struct FTransform& NewTransform);
-	void ReceiveBeginPlay();
 	void ReinitializeWeaponMaterials();
+	void Player_Creates_a_Splash(const struct FTransform& NewTransform);
+	void Entered_Water_Volume();
+	void ReceiveBeginPlay();
 
 public:
 	static class UClass* StaticClass()
@@ -61,25 +62,6 @@ public:
 	}
 };
 #pragma pack(pop)
-static_assert(alignof(APlayerPawn_Generic_Parent_C) == 0x000010, "Wrong alignment on APlayerPawn_Generic_Parent_C");
-static_assert(sizeof(APlayerPawn_Generic_Parent_C) == 0x002430, "Wrong size on APlayerPawn_Generic_Parent_C");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, UberGraphFrame) == 0x002350, "Member 'APlayerPawn_Generic_Parent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, Default_Weapon_Materials) == 0x002358, "Member 'APlayerPawn_Generic_Parent_C::Default_Weapon_Materials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, PawnBackpackMaterials) == 0x002368, "Member 'APlayerPawn_Generic_Parent_C::PawnBackpackMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, PawnHatMaterials) == 0x002378, "Member 'APlayerPawn_Generic_Parent_C::PawnHatMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, PawnHeadMaterials) == 0x002388, "Member 'APlayerPawn_Generic_Parent_C::PawnHeadMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, PawnBodyMaterials) == 0x002398, "Member 'APlayerPawn_Generic_Parent_C::PawnBodyMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, PawnCharmMaterials) == 0x0023A8, "Member 'APlayerPawn_Generic_Parent_C::PawnCharmMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, PawnFaceMaterials) == 0x0023B8, "Member 'APlayerPawn_Generic_Parent_C::PawnFaceMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, PawnLegsMaterials) == 0x0023C8, "Member 'APlayerPawn_Generic_Parent_C::PawnLegsMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, PawnTorsoMaterials) == 0x0023D8, "Member 'APlayerPawn_Generic_Parent_C::PawnTorsoMaterials' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, PlayerPostProcessFX) == 0x0023E8, "Member 'APlayerPawn_Generic_Parent_C::PlayerPostProcessFX' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, SkeletalMeshes) == 0x0023F0, "Member 'APlayerPawn_Generic_Parent_C::SkeletalMeshes' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, PawnMaterials_ALL) == 0x002400, "Member 'APlayerPawn_Generic_Parent_C::PawnMaterials_ALL' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, WaterCounter) == 0x002410, "Member 'APlayerPawn_Generic_Parent_C::WaterCounter' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, CurrentWaterMeshActor) == 0x002418, "Member 'APlayerPawn_Generic_Parent_C::CurrentWaterMeshActor' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, IsInWater) == 0x002420, "Member 'APlayerPawn_Generic_Parent_C::IsInWater' has a wrong offset!");
-static_assert(offsetof(APlayerPawn_Generic_Parent_C, Time_when_you_ll_be_able_to_splash_again) == 0x002424, "Member 'APlayerPawn_Generic_Parent_C::Time_when_you_ll_be_able_to_splash_again' has a wrong offset!");
 
 }
 

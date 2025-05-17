@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BattleMapGroundMoveChestEdge.BP_BattleMapGroundMoveChestEdge_C
-// 0x0000 (0x0280 - 0x0280)
+// 0x0000 (0x0288 - 0x0288)
 class ABP_BattleMapGroundMoveChestEdge_C final : public ABP_BattleMapBaseEdge_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<ABP_BattleMapGroundMoveChestEdge_C>();
 	}
 };
-static_assert(alignof(ABP_BattleMapGroundMoveChestEdge_C) == 0x000008, "Wrong alignment on ABP_BattleMapGroundMoveChestEdge_C");
-static_assert(sizeof(ABP_BattleMapGroundMoveChestEdge_C) == 0x000280, "Wrong size on ABP_BattleMapGroundMoveChestEdge_C");
 
 }
 

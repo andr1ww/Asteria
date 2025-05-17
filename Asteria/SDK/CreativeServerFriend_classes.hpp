@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass CreativeServerFriend.CreativeServerFriend_C
-// 0x0008 (0x0240 - 0x0238)
+// 0x0008 (0x0290 - 0x0288)
 class UCreativeServerFriend_C final : public UCommonUserWidget
 {
 public:
-	class UCommonTextBlock*                       Text_FriendName;                                   // 0x0238(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_FriendName;                                   // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void InitData(const class FString& FriendName);
@@ -36,9 +36,6 @@ public:
 		return GetDefaultObjImpl<UCreativeServerFriend_C>();
 	}
 };
-static_assert(alignof(UCreativeServerFriend_C) == 0x000008, "Wrong alignment on UCreativeServerFriend_C");
-static_assert(sizeof(UCreativeServerFriend_C) == 0x000240, "Wrong size on UCreativeServerFriend_C");
-static_assert(offsetof(UCreativeServerFriend_C, Text_FriendName) == 0x000238, "Member 'UCreativeServerFriend_C::Text_FriendName' has a wrong offset!");
 
 }
 

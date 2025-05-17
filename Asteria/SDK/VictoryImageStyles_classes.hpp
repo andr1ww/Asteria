@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UVictoryImageStyles_C>();
 	}
 };
-static_assert(alignof(UVictoryImageStyles_C) == 0x000008, "Wrong alignment on UVictoryImageStyles_C");
-static_assert(sizeof(UVictoryImageStyles_C) == 0x000030, "Wrong size on UVictoryImageStyles_C");
 
 }
 

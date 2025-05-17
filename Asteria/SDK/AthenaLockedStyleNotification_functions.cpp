@@ -17,35 +17,77 @@
 namespace SDK
 {
 
-// Function AthenaLockedStyleNotification.AthenaLockedStyleNotification_C.SetLockedStyleDescription
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function AthenaLockedStyleNotification.AthenaLockedStyleNotification_C.OnUnlockingInfoSet
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// class FText                             LockedStyleDescription                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    bShowProgression                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UAthenaLockedStyleNotification_C::SetLockedStyleDescription(const class FText& LockedStyleDescription)
+void UAthenaLockedStyleNotification_C::OnUnlockingInfoSet(bool bShowProgression)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaLockedStyleNotification_C", "SetLockedStyleDescription");
+		Func = Class->GetFunction("AthenaLockedStyleNotification_C", "OnUnlockingInfoSet");
 
-	Params::AthenaLockedStyleNotification_C_SetLockedStyleDescription Parms{};
+	Params::AthenaLockedStyleNotification_C_OnUnlockingInfoSet Parms{};
 
-	Parms.LockedStyleDescription = std::move(LockedStyleDescription);
+	Parms.bShowProgression = bShowProgression;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function AthenaLockedStyleNotification.AthenaLockedStyleNotification_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function AthenaLockedStyleNotification.AthenaLockedStyleNotification_C.RequestUpdateAnim
+// (Event, Protected, BlueprintEvent)
 
-void UAthenaLockedStyleNotification_C::Construct()
+void UAthenaLockedStyleNotification_C::RequestUpdateAnim()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AthenaLockedStyleNotification_C", "Construct");
+		Func = Class->GetFunction("AthenaLockedStyleNotification_C", "RequestUpdateAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaLockedStyleNotification.AthenaLockedStyleNotification_C.RequestIntroAnim
+// (Event, Protected, BlueprintEvent)
+
+void UAthenaLockedStyleNotification_C::RequestIntroAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLockedStyleNotification_C", "RequestIntroAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaLockedStyleNotification.AthenaLockedStyleNotification_C.RequestOutroAnim
+// (Event, Protected, BlueprintEvent)
+
+void UAthenaLockedStyleNotification_C::RequestOutroAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLockedStyleNotification_C", "RequestOutroAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function AthenaLockedStyleNotification.AthenaLockedStyleNotification_C.OutroFinished
+// (BlueprintCallable, BlueprintEvent)
+
+void UAthenaLockedStyleNotification_C::OutroFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AthenaLockedStyleNotification_C", "OutroFinished");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

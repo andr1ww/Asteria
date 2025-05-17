@@ -18,23 +18,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass EventTeamMatchHistoryModal.EventTeamMatchHistoryModal_C
-// 0x0040 (0x03A0 - 0x0360)
+// 0x0040 (0x04E0 - 0x04A0)
 class UEventTeamMatchHistoryModal_C final : public UFortEventTeamMatchHistoryModal
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Intro;                                             // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UIconTextButton_C*                      CloseMainPanel;                                    // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UEventMatchHistoryTournamentInfo_C*     EventMatchHistoryTournamentInfo;                   // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        Switcher_Content;                                  // 0x0388(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_EventLabel;                                   // 0x0390(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_TeamLabel;                                    // 0x0398(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Intro;                                             // 0x04A8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UIconTextButton_C*                      CloseMainPanel;                                    // 0x04B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UEventMatchHistoryTournamentInfo_C*     EventMatchHistoryTournamentInfo;                   // 0x04B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_0;                                        // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Switcher_Content;                                  // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_EventLabel;                                   // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_TeamLabel;                                    // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void OnActivated();
-	void BndEvt__CloseMainPanel_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void ExecuteUbergraph_EventTeamMatchHistoryModal(int32 EntryPoint);
+	void OnSetupMatchHistory(const class FString& TournamentId, const class FString& EventWindowId);
+	void BP_OnActivated();
+	void BndEvt__CloseMainPanel_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 
 public:
 	static class UClass* StaticClass()
@@ -46,16 +47,6 @@ public:
 		return GetDefaultObjImpl<UEventTeamMatchHistoryModal_C>();
 	}
 };
-static_assert(alignof(UEventTeamMatchHistoryModal_C) == 0x000008, "Wrong alignment on UEventTeamMatchHistoryModal_C");
-static_assert(sizeof(UEventTeamMatchHistoryModal_C) == 0x0003A0, "Wrong size on UEventTeamMatchHistoryModal_C");
-static_assert(offsetof(UEventTeamMatchHistoryModal_C, UberGraphFrame) == 0x000360, "Member 'UEventTeamMatchHistoryModal_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryModal_C, Intro) == 0x000368, "Member 'UEventTeamMatchHistoryModal_C::Intro' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryModal_C, CloseMainPanel) == 0x000370, "Member 'UEventTeamMatchHistoryModal_C::CloseMainPanel' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryModal_C, EventMatchHistoryTournamentInfo) == 0x000378, "Member 'UEventTeamMatchHistoryModal_C::EventMatchHistoryTournamentInfo' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryModal_C, SafeZone_0) == 0x000380, "Member 'UEventTeamMatchHistoryModal_C::SafeZone_0' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryModal_C, Switcher_Content) == 0x000388, "Member 'UEventTeamMatchHistoryModal_C::Switcher_Content' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryModal_C, Text_EventLabel) == 0x000390, "Member 'UEventTeamMatchHistoryModal_C::Text_EventLabel' has a wrong offset!");
-static_assert(offsetof(UEventTeamMatchHistoryModal_C, Text_TeamLabel) == 0x000398, "Member 'UEventTeamMatchHistoryModal_C::Text_TeamLabel' has a wrong offset!");
 
 }
 

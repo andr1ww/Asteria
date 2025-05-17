@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "PlayerWindParticleEmitters_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "FortniteGame_structs.hpp"
-#include "PlayerWindParticleEmitters_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "GameplayTags_structs.hpp"
 
@@ -22,220 +22,228 @@ namespace SDK::Params
 {
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.ExecuteUbergraph_PlayerPawn_Generic
-// 0x1BA0 (0x1BA0 - 0x0000)
+// 0x1C30 (0x1C30 - 0x0000)
 struct PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWindManager*                       CallFunc_GetWindManager_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_13[0x1];                                       // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_MakeLiteralFloat_ReturnValue;             // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue;              // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeLiteralFloat_ReturnValue;             // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInstanceDynamic*>       K2Node_MakeArray_Array;                            // 0x0028(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInstanceDynamic*>       K2Node_MakeArray_Array;                            // 0x0028(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable;                                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x0046(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_47[0x1];                                       // 0x0047(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCanvas*                                CallFunc_BeginDrawCanvasToRenderTarget_Canvas;     // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_BeginDrawCanvasToRenderTarget_Size;       // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FDrawToRenderTargetContext             CallFunc_BeginDrawCanvasToRenderTarget_Context;    // 0x0058(0x0010)(NoDestructor)
-	float                                         CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x006C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x008C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetVelocity_ReturnValue_1;                // 0x0098(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X;                            // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y;                            // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z;                            // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00B4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_2;               // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable;                                // 0x00C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_IsClosed_Variable_2;                     // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_2;          // 0x003E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_3;          // 0x003F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable_2;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable_3;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCanvas*                                CallFunc_BeginDrawCanvasToRenderTarget_Canvas;     // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_BeginDrawCanvasToRenderTarget_Size;       // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FDrawToRenderTargetContext             CallFunc_BeginDrawCanvasToRenderTarget_Context;    // 0x0068(0x0010)(NoDestructor)
+	float                                         CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x007C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x009C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_2;               // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetVelocity_ReturnValue_1;                // 0x00AC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X;                            // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y;                            // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z;                            // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_1;                               // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_3;               // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetVelocity_ReturnValue_2;                // 0x00D4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X_1;                          // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_1;                          // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_1;                          // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_2;         // 0x00EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_ED[0x3];                                       // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x00F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_4;               // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_3;         // 0x00FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_FE[0x2];                                       // 0x00FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_2;                               // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue_1;            // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_2;          // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_10A[0x2];                                      // 0x010A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_3;                               // 0x010C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable_3;                     // 0x011C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_11D[0x3];                                      // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x00C8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x00D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_3;               // 0x00D6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D7[0x1];                                       // 0x00D7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_2;                               // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortWindManager*                       CallFunc_GetWindManager_ReturnValue;               // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_4;          // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetVelocity_ReturnValue_2;                // 0x00F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X_1;                          // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_1;                          // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_1;                          // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_2;         // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_109[0x3];                                      // 0x0109(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x010C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_3;         // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable_4;                     // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue_1;            // 0x011A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11B[0x1];                                      // 0x011B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_3;                               // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_IsClosed_Variable_4;                     // 0x0125(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_2;                              // 0x0126(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_127[0x1];                                      // 0x0127(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_13D[0x3];                                      // 0x013D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0145(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_146[0x2];                                      // 0x0146(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_1;            // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_125[0x3];                                      // 0x0125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_4;               // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable_5;                     // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_5;               // 0x0133(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable_6;                     // 0x0134(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_135[0x3];                                      // 0x0135(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_5;          // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_2;                              // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_14A[0x2];                                      // 0x014A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_4;                               // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeLiteralFloat_ReturnValue_1;           // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_1;                          // 0x0160(0x0010)(ZeroConstructor, ReferenceParm)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_172[0x2];                                      // 0x0172(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_2;            // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_2;            // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_5;                               // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_6;                               // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_184[0x4];                                      // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_1;                // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_7;                 // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_6;                 // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_4;                              // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x015A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x015B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_1;            // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_4;                               // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeLiteralFloat_ReturnValue_1;           // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0170(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_179[0x3];                                      // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_7;                 // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_1;                          // 0x0180(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_5;                               // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_1;                // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1A1[0x3];                                      // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue_8;                 // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A9[0x3];                                      // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_MakeLiteralFloat_ReturnValue_2;           // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_2;                          // 0x01B0(0x0010)(ZeroConstructor, ReferenceParm)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x01C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x01C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1C6[0x2];                                      // 0x01C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_3;            // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_3;            // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_2;                // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_2;           // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_5;               // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1DA[0x2];                                      // 0x01DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_MakeLiteralFloat_ReturnValue_3;           // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       K2Node_MakeArray_Array_3;                          // 0x01E0(0x0010)(ZeroConstructor, ReferenceParm)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F2[0x2];                                      // 0x01F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_4;            // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_4;            // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_7;                               // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_8;                               // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_9;                 // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_10;                // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable_5;                     // 0x020C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_20D[0x3];                                      // 0x020D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_4;         // 0x0214(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_215[0x3];                                      // 0x0215(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_MakeLiteralFloat_ReturnValue_4;           // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21C[0x4];                                      // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_4;                          // 0x0220(0x0010)(ZeroConstructor, ReferenceParm)
-	bool                                          Temp_bool_IsClosed_Variable_6;                     // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x0232(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_12;                   // 0x0233(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_13;                   // 0x0234(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_235[0x3];                                      // 0x0235(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_5;            // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_5;            // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_3;                // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_3;           // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_6;               // 0x0249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_3;          // 0x024A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_24B[0x1];                                      // 0x024B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_MakeLiteralFloat_ReturnValue_5;           // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_5;                          // 0x0250(0x0010)(ZeroConstructor, ReferenceParm)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_14;                   // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_15;                   // 0x0265(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_266[0x2];                                      // 0x0266(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_6;            // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_6;            // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_4;                // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_4;           // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_279[0x3];                                      // 0x0279(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_MakeLiteralFloat_ReturnValue_6;           // 0x027C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_6;                          // 0x0280(0x0010)(ZeroConstructor, ReferenceParm)
-	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_16;                   // 0x0294(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_17;                   // 0x0295(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         Temp_int_Variable_6;                               // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x01AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x01AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1AE[0x2];                                      // 0x01AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_2;            // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_2;            // 0x01B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_2;                // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_2;           // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1C1[0x3];                                      // 0x01C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_9;                 // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeLiteralFloat_ReturnValue_2;           // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_2;                          // 0x01D0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable_7;                     // 0x01E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x01E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x01E6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1E7[0x1];                                      // 0x01E7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_3;            // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_3;            // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeLiteralFloat_ReturnValue_3;           // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F4[0x4];                                      // 0x01F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInstanceDynamic*>       K2Node_MakeArray_Array_3;                          // 0x01F8(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_7;                               // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x020C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x020D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_20E[0x2];                                      // 0x020E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_4;            // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_4;            // 0x0214(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_3;                // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_3;           // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_221[0x3];                                      // 0x0221(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_10;                // 0x0224(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_4;         // 0x022C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_22D[0x3];                                      // 0x022D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_8;                               // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_11;                // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_239[0x3];                                      // 0x0239(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_MakeLiteralFloat_ReturnValue_4;           // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_4;                          // 0x0248(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_2;                  // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_12;                   // 0x025D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_13;                   // 0x025E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_25F[0x1];                                      // 0x025F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_5;            // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_5;            // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_4;                // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_4;           // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAuthority_ReturnValue_2;               // 0x0271(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_272[0x2];                                      // 0x0272(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_9;                               // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeLiteralFloat_ReturnValue_5;           // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_12;                // 0x027C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_5;                          // 0x0280(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_14;                   // 0x0294(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_15;                   // 0x0295(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_296[0x2];                                      // 0x0296(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_7;            // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_7;            // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_9;                               // 0x02A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_11;                // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeLiteralFloat_ReturnValue_7;           // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_7;                          // 0x02B0(0x0010)(ZeroConstructor, ReferenceParm)
-	bool                                          Temp_bool_Variable_5;                              // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_4;          // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2C2[0x2];                                      // 0x02C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Temp_name_Variable;                                // 0x02C4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_1;                              // 0x02CC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_5;          // 0x02D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2D5[0x3];                                      // 0x02D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Temp_name_Variable_2;                              // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_3;                              // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_6;          // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2E9[0x3];                                      // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_Damage_2;                             // 0x02EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  K2Node_Event_DamageTags_2;                         // 0x02F0(0x0020)(ConstParm)
-	struct FVector                                K2Node_Event_Momentum_2;                           // 0x0310(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_HitInfo_2;                            // 0x031C(0x0088)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_3A4[0x4];                                      // 0x03A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPawn*                              K2Node_Event_InstigatedBy_2;                       // 0x03A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_DamageCauser_2;                       // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext_2;                      // 0x03B8(0x0018)()
-	struct FHitResult                             K2Node_Event_Hit;                                  // 0x03D0(0x0088)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0458(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0470(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_18;                   // 0x047C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_47D[0x3];                                      // 0x047D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGameplayTagAssetInterface> K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface; // 0x0480(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0490(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_491[0x3];                                      // 0x0491(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_2;        // 0x0494(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x04A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_4A2[0x2];                                      // 0x04A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_6;            // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_6;            // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_6;               // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_16;                   // 0x02A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2A2[0x2];                                      // 0x02A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Temp_name_Variable;                                // 0x02A4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_1;                              // 0x02AC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeLiteralFloat_ReturnValue_6;           // 0x02B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_6;                          // 0x02B8(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_2;                              // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_17;                   // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_18;                   // 0x02D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2D2[0x2];                                      // 0x02D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_7;            // 0x02D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_7;            // 0x02D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_3;                              // 0x02DC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_10;                              // 0x02E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeLiteralFloat_ReturnValue_7;           // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2EC[0x4];                                      // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMaterialInterface*>             K2Node_MakeArray_Array_7;                          // 0x02F0(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_3;                   // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_5;                              // 0x0304(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_6;                              // 0x0305(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_7;                              // 0x0306(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_8;                              // 0x0307(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_6;          // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsMovingOnGround_ReturnValue;             // 0x0309(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x030A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_30B[0x5];                                      // 0x030B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0310(0x0010)(ConstParm, ReferenceParm, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_7;          // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_8;          // 0x0321(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_322[0x2];                                      // 0x0322(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_Damage_2;                             // 0x0324(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  K2Node_Event_DamageTags_2;                         // 0x0328(0x0020)(ConstParm)
+	struct FVector                                K2Node_Event_Momentum_2;                           // 0x0348(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_Event_HitInfo_2;                            // 0x0354(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AFortPawn*                              K2Node_Event_InstigatedBy_2;                       // 0x03E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_DamageCauser_2;                       // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext_2;                      // 0x03F0(0x0018)()
+	struct FHitResult                             K2Node_Event_Hit;                                  // 0x0408(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0494(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_19;                   // 0x04A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x04A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x04A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4A3[0x1];                                      // 0x04A3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakHitResult_Time;                      // 0x04A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakHitResult_Distance;                  // 0x04A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x04AC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -252,1224 +260,577 @@ public:
 	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0508(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0514(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0520(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52C[0x4];                                      // 0x052C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWeapon*                            K2Node_Event_NewWeapon;                            // 0x0530(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortWeapon*                            K2Node_Event_PrevWeapon;                           // 0x0538(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_VSizeSquared_ReturnValue;                 // 0x0540(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotFromX_ReturnValue;                 // 0x0544(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_5;         // 0x0550(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_551[0x3];                                      // 0x0551(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x0554(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_VSizeSquared_ReturnValue;                 // 0x052C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotFromX_ReturnValue;                 // 0x0530(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_5;         // 0x053C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_53D[0x3];                                      // 0x053D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortWeapon*                            K2Node_Event_NewWeapon;                            // 0x0540(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortWeapon*                            K2Node_Event_PrevWeapon;                           // 0x0548(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RandomFloatInRange_ReturnValue;           // 0x0550(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0554(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0558(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0564(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetVelocity_ReturnValue_3;                // 0x0568(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X_2;                          // 0x0574(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_2;                          // 0x0578(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_2;                          // 0x057C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x0580(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_VSize_ReturnValue;                        // 0x058C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_10;                              // 0x0590(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType_5;               // 0x0594(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_595[0x3];                                      // 0x0595(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters_5;              // 0x0598(0x00B8)(ContainsInstancedReference)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0650(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType_4;               // 0x0651(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_652[0x6];                                      // 0x0652(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters_4;              // 0x0658(0x00B8)(ContainsInstancedReference)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_6;                              // 0x0711(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bNewUseFirstPersonCamera;             // 0x0712(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_713[0x5];                                      // 0x0713(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_Ranged_Generic_C*                    K2Node_DynamicCast_AsB_Ranged_Generic;             // 0x0718(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0720(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_721[0x7];                                      // 0x0721(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0728(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortWeap_BuildingToolBase*             K2Node_DynamicCast_AsFort_Weap_Building_Tool_Base; // 0x0730(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetVelocity_ReturnValue_3;                // 0x0564(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X_2;                          // 0x0570(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_2;                          // 0x0574(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_2;                          // 0x0578(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_2;                 // 0x057C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_VSize_ReturnValue;                        // 0x0588(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType_5;               // 0x058C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_58D[0x3];                                      // 0x058D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters_5;              // 0x0590(0x00B8)(ContainsInstancedReference)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType_4;               // 0x0649(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_64A[0x6];                                      // 0x064A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters_4;              // 0x0650(0x00B8)(ContainsInstancedReference)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0708(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_bNewUseFirstPersonCamera;             // 0x0709(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_70A[0x6];                                      // 0x070A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_Ranged_Generic_C*                    K2Node_DynamicCast_AsB_Ranged_Generic;             // 0x0710(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0718(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_719[0x3];                                      // 0x0719(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_11;                              // 0x071C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortWeap_BuildingToolBase*             K2Node_DynamicCast_AsFort_Weap_Building_Tool_Base; // 0x0720(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0728(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_729[0x7];                                      // 0x0729(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortWeap_BuildingToolBase*             K2Node_DynamicCast_AsFort_Weap_Building_Tool_Base_1; // 0x0730(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0738(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_739[0x7];                                      // 0x0739(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerController*                  K2Node_DynamicCast_AsFort_Player_Controller;       // 0x0740(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0748(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsUsingFirstPersonCamera_ReturnValue;     // 0x0749(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_74A[0x6];                                      // 0x074A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWeap_BuildingToolBase*             K2Node_DynamicCast_AsFort_Weap_Building_Tool_Base_1; // 0x0750(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0758(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_19;                   // 0x0759(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsPlayerControlled_ReturnValue;           // 0x075A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_20;                   // 0x075B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x075C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_11;                              // 0x0760(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue;                        // 0x0764(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_12;                // 0x0768(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_NewUseFirstPersonCamera;        // 0x076C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsWeaponHolstered_ReturnValue;            // 0x076D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_7;                              // 0x076E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x076F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class AActor*                                 K2Node_Event_NewBase;                              // 0x0770(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABuildingSMActor*                       K2Node_DynamicCast_AsBuilding_SMActor;             // 0x0778(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0780(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_21;                   // 0x0781(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsPlayerBuilt_ReturnValue;                // 0x0782(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_7;               // 0x0783(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_784[0x4];                                      // 0x0784(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            K2Node_Event_NewController;                        // 0x0788(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_Event_SpeechText;                           // 0x0790(0x0018)(ConstParm)
-	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue;    // 0x07A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput; // 0x07B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasAllMatchingGameplayTags_ReturnValue;   // 0x07C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7C1[0x7];                                      // 0x07C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue; // 0x07C8(0x0010)(ZeroConstructor, ReferenceParm)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_3;        // 0x07D8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x07E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7E8[0x8];                                      // 0x07E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x07F0(0x0030)(IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_8;                              // 0x0820(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_821[0x3];                                      // 0x0821(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0824(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0830(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x083C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0848(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0854(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0860(0x0030)(IsPlainOldData, NoDestructor)
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue;       // 0x0890(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x0898(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x08A4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x08B0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_9;                              // 0x08BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_22;                   // 0x08BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_23;                   // 0x08BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8BF[0x1];                                      // 0x08BF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWeapon*                            K2Node_CustomEvent_NewWeapon;                      // 0x08C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortWeapon*                            K2Node_CustomEvent_PrevWeapon;                     // 0x08C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue_1;     // 0x08D0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_CustomEvent_InDuration;                     // 0x08D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8DC[0x4];                                      // 0x08DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWeapon*                            K2Node_CustomEvent_New;                            // 0x08E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortWeapon*                            K2Node_CustomEvent_Prev;                           // 0x08E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_24;                   // 0x08F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_25;                   // 0x08F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8F2[0x6];                                      // 0x08F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWeapon*                            K2Node_CustomEvent_CurrentWeapon;                  // 0x08F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_10;                             // 0x0900(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_26;                   // 0x0901(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasAuthority_ReturnValue;                 // 0x0902(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_11;                             // 0x0903(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasAuthority_ReturnValue_1;               // 0x0904(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_905[0x3];                                      // 0x0905(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUserWidget*                            CallFunc_Create_ReturnValue;                       // 0x0908(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IFortInitializeFromObjectInterface> K2Node_DynamicCast_AsFort_Initialize_from_Object_Interface; // 0x0910(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0920(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_921[0x3];                                      // 0x0921(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_Damage_1;                             // 0x0924(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  K2Node_Event_DamageTags_1;                         // 0x0928(0x0020)(ConstParm)
-	struct FVector                                K2Node_Event_Momentum_1;                           // 0x0948(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_HitInfo_1;                            // 0x0954(0x0088)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_9DC[0x4];                                      // 0x09DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            K2Node_Event_InstigatedBy_1;                       // 0x09E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_DamageCauser_1;                       // 0x09E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext_1;                      // 0x09F0(0x0018)()
-	class AController*                            CallFunc_GetController_ReturnValue_1;              // 0x0A08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0A10(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A11[0x7];                                      // 0x0A11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerController*                  K2Node_DynamicCast_AsFort_Player_Controller_1;     // 0x0A18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0A20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A21[0x3];                                      // 0x0A21(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_12;                              // 0x0A24(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_12;                             // 0x0A28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A29[0x7];                                      // 0x0A29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_5;                // 0x0A30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_3;                  // 0x0A38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_5;           // 0x0A3C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A3D[0x3];                                      // 0x0A3D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_13;                // 0x0A40(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A44[0x4];                                      // 0x0A44(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortWindManager*                       CallFunc_GetWindManager_ReturnValue_1;             // 0x0A48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AWindManager_C*                         K2Node_DynamicCast_AsWind_Manager;                 // 0x0A50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0A58(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A59[0x7];                                      // 0x0A59(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0A60(0x0008)(NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0A68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 CallFunc_CreateRenderTarget2D_ReturnValue;         // 0x0A70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x0A78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_1;                         // 0x0A80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0A88(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0A8C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A8D[0x3];                                      // 0x0A8D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0A90(0x0010)(ConstParm, ZeroConstructor, ReferenceParm)
-	bool                                          CallFunc_IsMovingOnGround_ReturnValue;             // 0x0AA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0AA1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_AA2[0x6];                                      // 0x0AA2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           Temp_object_Variable_1;                            // 0x0AA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_13;                             // 0x0AB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_AB1[0x3];                                      // 0x0AB1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_13;                              // 0x0AB4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           Temp_object_Variable_2;                            // 0x0AB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_6;                // 0x0AC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x0AC8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_6;           // 0x0ACC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_ACD[0x3];                                      // 0x0ACD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_14;                // 0x0AD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_14;                              // 0x0AD4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           Temp_object_Variable_3;                            // 0x0AD8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_15;                // 0x0AE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_14;                             // 0x0AE4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_AE5[0x3];                                      // 0x0AE5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_15;                              // 0x0AE8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_27;                   // 0x0AEC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_AED[0x3];                                      // 0x0AED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_16;                // 0x0AF0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_28;                   // 0x0AF4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EPlayerWindParticleEmitters                   K2Node_CustomEvent_Player_Wind_Particle_Emitter_To_Fire; // 0x0AF5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AF6[0x2];                                      // 0x0AF6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_2; // 0x0AF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_3; // 0x0B00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0B08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B0C[0x4];                                      // 0x0B0C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPlayerController*                  CallFunc_Array_Get_Item_2;                         // 0x0B10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawn*                        CallFunc_GetPlayerPawn_ReturnValue;                // 0x0B18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_4;        // 0x0B20(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x0B2C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_VSize_ReturnValue_1;                      // 0x0B38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0B3C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0B3D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_B3E[0x2];                                      // 0x0B3E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             K2Node_Event_NewTransform;                         // 0x0B40(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0B70(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x0BF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_GetPencilMeshComponent_ReturnValue;       // 0x0740(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_GetPencilMeshComponent_ReturnValue_1;     // 0x0748(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_20;                   // 0x0750(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_21;                   // 0x0751(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_752[0x2];                                      // 0x0752(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_13;                // 0x0754(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0758(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerController*                  K2Node_DynamicCast_AsFort_Player_Controller;       // 0x0760(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0768(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsPlayerControlled_ReturnValue;           // 0x0769(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsUsingFirstPersonCamera_ReturnValue;     // 0x076A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_76B[0x1];                                      // 0x076B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x076C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_NewUseFirstPersonCamera;        // 0x0770(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_771[0x3];                                      // 0x0771(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Round_ReturnValue;                        // 0x0774(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWeaponHolstered_ReturnValue;            // 0x0778(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0779(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_77A[0x6];                                      // 0x077A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_Event_NewBase;                              // 0x0780(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABuildingSMActor*                       K2Node_DynamicCast_AsBuilding_SMActor;             // 0x0788(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0790(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_22;                   // 0x0791(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsPlayerBuilt_ReturnValue;                // 0x0792(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_793[0x5];                                      // 0x0793(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class AController*                            K2Node_Event_NewController;                        // 0x0798(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue;    // 0x07A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_Event_SpeechText;                           // 0x07A8(0x0018)(ConstParm)
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput; // 0x07C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAllMatchingGameplayTags_ReturnValue;   // 0x07D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7D1[0x7];                                      // 0x07D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AFortPlayerController*>          CallFunc_GetLocalFortPlayerControllers_ReturnValue; // 0x07D8(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x07E8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7F4[0x4];                                      // 0x07F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerController*                  CallFunc_Array_Get_Item_1;                         // 0x07F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0800(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_804[0x4];                                      // 0x0804(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerPawn*                        CallFunc_GetPlayerPawn_ReturnValue;                // 0x0808(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_2;        // 0x0810(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x081C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_VSize_ReturnValue_1;                      // 0x0828(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x082C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_82D[0x3];                                      // 0x082D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0830(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0860(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x086C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0878(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0884(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_885[0x3];                                      // 0x0885(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0888(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0894(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_895[0x3];                                      // 0x0895(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0898(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8A4[0xC];                                      // 0x08A4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x08B0(0x0030)(IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_23;                   // 0x08E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_8E1[0x3];                                      // 0x08E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakTransform_Location_1;                // 0x08E4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x08F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x08FC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue;       // 0x0908(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_24;                   // 0x0910(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_911[0x7];                                      // 0x0911(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           Temp_object_Variable_1;                            // 0x0918(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortWeapon*                            K2Node_CustomEvent_NewWeapon;                      // 0x0920(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortWeapon*                            K2Node_CustomEvent_PrevWeapon;                     // 0x0928(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue_1;     // 0x0930(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_CustomEvent_InDuration;                     // 0x0938(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_93C[0x4];                                      // 0x093C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortWeapon*                            K2Node_CustomEvent_New;                            // 0x0940(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortWeapon*                            K2Node_CustomEvent_Prev;                           // 0x0948(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_25;                   // 0x0950(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_26;                   // 0x0951(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_952[0x6];                                      // 0x0952(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortWeapon*                            K2Node_CustomEvent_CurrentWeapon;                  // 0x0958(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_12;                              // 0x0960(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_27;                   // 0x0964(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_965[0x3];                                      // 0x0965(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_5;                // 0x0968(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_5;           // 0x0970(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_971[0x3];                                      // 0x0971(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_14;                // 0x0974(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_9;                              // 0x0978(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_979[0x3];                                      // 0x0979(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_3;                  // 0x097C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0980(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_981[0x3];                                      // 0x0981(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_15;                // 0x0984(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0988(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_989[0x7];                                      // 0x0989(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           Temp_object_Variable_2;                            // 0x0990(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            CallFunc_Create_ReturnValue;                       // 0x0998(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IFortInitializeFromObjectInterface> K2Node_DynamicCast_AsFort_Initialize_from_Object_Interface; // 0x09A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x09B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9B1[0x3];                                      // 0x09B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_Damage_1;                             // 0x09B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  K2Node_Event_DamageTags_1;                         // 0x09B8(0x0020)(ConstParm)
+	struct FVector                                K2Node_Event_Momentum_1;                           // 0x09D8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_Event_HitInfo_1;                            // 0x09E4(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AController*                            K2Node_Event_InstigatedBy_1;                       // 0x0A70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_DamageCauser_1;                       // 0x0A78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext_1;                      // 0x0A80(0x0018)()
+	class AController*                            CallFunc_GetController_ReturnValue_1;              // 0x0A98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0AA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AA1[0x7];                                      // 0x0AA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortPlayerController*                  K2Node_DynamicCast_AsFort_Player_Controller_1;     // 0x0AA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0AB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AB1[0x7];                                      // 0x0AB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           Temp_object_Variable_3;                            // 0x0AB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortWindManager*                       CallFunc_GetWindManager_ReturnValue_1;             // 0x0AC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AWindManager_C*                         K2Node_DynamicCast_AsWind_Manager;                 // 0x0AC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x0AD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AD1[0x7];                                      // 0x0AD1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0AD8(0x0008)(NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0AE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 CallFunc_CreateRenderTarget2D_ReturnValue;         // 0x0AE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x0AF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_2;                         // 0x0AF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0B00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0B04(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_IsClosed_Variable_8;                     // 0x0B05(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_28;                   // 0x0B06(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_10;                             // 0x0B07(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_29;                   // 0x0B08(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EPlayerWindParticleEmitters                   K2Node_CustomEvent_Player_Wind_Particle_Emitter_To_Fire; // 0x0B09(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B0A[0x6];                                      // 0x0B0A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_2; // 0x0B10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_3; // 0x0B18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_13;                              // 0x0B20(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_16;                // 0x0B24(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_7;               // 0x0B28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0B29(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B2A[0x6];                                      // 0x0B2A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             K2Node_Event_NewTransform;                         // 0x0B30(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
+	struct FHitResult                             CallFunc_K2_SetWorldTransform_SweepHitResult;      // 0x0B60(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0BEC(0x0010)(ZeroConstructor, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Location_2;                // 0x0BFC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation_2;                // 0x0C08(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale_2;                   // 0x0C14(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X_3;                          // 0x0C20(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_3;                          // 0x0C24(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_3;                          // 0x0C28(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_Damage;                               // 0x0C2C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  K2Node_Event_DamageTags;                           // 0x0C30(0x0020)(ConstParm)
-	struct FVector                                K2Node_Event_Momentum;                             // 0x0C50(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             K2Node_Event_HitInfo;                              // 0x0C5C(0x0088)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_CE4[0x4];                                      // 0x0CE4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AFortPawn*                              K2Node_Event_InstigatedBy;                         // 0x0CE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_DamageCauser;                         // 0x0CF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext;                        // 0x0CF8(0x0018)()
-	bool                                          CallFunc_IsDBNO_ReturnValue;                       // 0x0D10(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsSkydiving_ReturnValue;                  // 0x0D11(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D12[0x6];                                      // 0x0D12(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           K2Node_Select_Default;                             // 0x0D18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldPlayDeathAnimation_ReturnValue;     // 0x0D20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D21[0x7];                                      // 0x0D21(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           K2Node_Select_Default_1;                           // 0x0D28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayLocalAnimMontage_ReturnValue;         // 0x0D30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType_3;               // 0x0D34(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D35[0x3];                                      // 0x0D35(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters_3;              // 0x0D38(0x00B8)(ContainsInstancedReference)
-	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType_2;               // 0x0DF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_DF1[0x7];                                      // 0x0DF1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters_2;              // 0x0DF8(0x00B8)(ContainsInstancedReference)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0EB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_EB1[0x7];                                      // 0x0EB1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0EB8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x0EC0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_29;                   // 0x0EC8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_30;                   // 0x0EC9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_ECA[0x6];                                      // 0x0ECA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0C20(0x0008)(NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X_3;                          // 0x0C28(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_3;                          // 0x0C2C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_3;                          // 0x0C30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_4;                  // 0x0C34(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_Damage;                               // 0x0C38(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C3C[0x4];                                      // 0x0C3C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  K2Node_Event_DamageTags;                           // 0x0C40(0x0020)(ConstParm)
+	struct FVector                                K2Node_Event_Momentum;                             // 0x0C60(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             K2Node_Event_HitInfo;                              // 0x0C6C(0x008C)(ConstParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	class AFortPawn*                              K2Node_Event_InstigatedBy;                         // 0x0CF8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_DamageCauser;                         // 0x0D00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayEffectContextHandle           K2Node_Event_EffectContext;                        // 0x0D08(0x0018)()
+	bool                                          CallFunc_IsDBNO_ReturnValue;                       // 0x0D20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsSkydiving_ReturnValue;                  // 0x0D21(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D22[0x6];                                      // 0x0D22(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           K2Node_Select_Default;                             // 0x0D28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldPlayDeathAnimation_ReturnValue;     // 0x0D30(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D31[0x7];                                      // 0x0D31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           K2Node_Select_Default_1;                           // 0x0D38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PlayLocalAnimMontage_ReturnValue;         // 0x0D40(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType_3;               // 0x0D44(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D45[0x3];                                      // 0x0D45(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters_3;              // 0x0D48(0x00B8)(ContainsInstancedReference)
+	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType_2;               // 0x0E00(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E01[0x7];                                      // 0x0E01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters_2;              // 0x0E08(0x00B8)(ContainsInstancedReference)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x0EC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_EC1[0x7];                                      // 0x0EC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0EC8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue_1;        // 0x0ED0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType_1;               // 0x0ED8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_ED9[0x7];                                      // 0x0ED9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters_1;              // 0x0EE0(0x00B8)(ContainsInstancedReference)
-	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue_1;         // 0x0F98(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x0FA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType;                 // 0x0FA1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FA2[0x6];                                      // 0x0FA2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters;                // 0x0FA8(0x00B8)(ContainsInstancedReference)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x1060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1061[0x3];                                     // 0x1061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x1064(0x0010)(ZeroConstructor, NoDestructor)
-	uint8                                         Pad_1074[0x4];                                     // 0x1074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x1078(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x1080(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x1108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x1109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_110A[0x2];                                     // 0x110A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_1;     // 0x110C(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	TDelegate<void(class AFortWeapon* NewWeapon, class AFortWeapon* PrevWeapon)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x1194(0x0010)(ZeroConstructor, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_2;     // 0x11A4(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_3;     // 0x122C(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_4;     // 0x12B4(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FVector                                CallFunc_GetVelocity_ReturnValue_4;                // 0x133C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x1348(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_X_4;                          // 0x1354(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Y_4;                          // 0x1358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector_Z_4;                          // 0x135C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue;         // 0x1360(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_3;                 // 0x136C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_5;     // 0x1378(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FRotator                               CallFunc_MakeRotFromX_ReturnValue_1;               // 0x1400(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_140C[0x4];                                     // 0x140C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue_2;        // 0x1410(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x1418(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x1424(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1425[0x3];                                     // 0x1425(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x1428(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x1434(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue;   // 0x1440(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_LineTraceSingle_OutHit;                   // 0x1448(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x14D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_31;                   // 0x14D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit_1;            // 0x14D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap_1;         // 0x14D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakHitResult_Time_1;                    // 0x14D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance_1;                // 0x14D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Location_1;                // 0x14DC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint_1;             // 0x14E8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal_1;                  // 0x14F4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal_1;            // 0x1500(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_150C[0x4];                                     // 0x150C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat_1;                 // 0x1510(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor_1;                // 0x1518(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent_1;            // 0x1520(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName_1;             // 0x1528(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem_1;                 // 0x1530(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex_1;               // 0x1534(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceStart_1;              // 0x1538(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd_1;                // 0x1544(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x1550(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_4; // 0x15D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_7;                // 0x15E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_6;                  // 0x15E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15EC[0x4];                                     // 0x15EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic;    // 0x15F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x15F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_15F9[0x3];                                     // 0x15F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_8;            // 0x15FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_8;            // 0x1600(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_7;           // 0x1604(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_32;                   // 0x1605(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1606[0x2];                                     // 0x1606(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetVelocity_ReturnValue_5;                // 0x1608(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Cross_VectorVector_ReturnValue;           // 0x1614(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x1620(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue_1;       // 0x162C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_VectorVector_ReturnValue;      // 0x1638(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x1639(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x163A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x163B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_163C[0x4];                                     // 0x163C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_1; // 0x1640(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_33;                   // 0x1648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1649[0x7];                                     // 0x1649(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_5; // 0x1650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_8;                // 0x1658(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_7;                  // 0x1660(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1664[0x4];                                     // 0x1664(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1;  // 0x1668(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x1670(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1671[0x3];                                     // 0x1671(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_9;            // 0x1674(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_9;            // 0x1678(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_8;           // 0x167C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_34;                   // 0x167D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_2;            // 0x167E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_167F[0x1];                                     // 0x167F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue_2;    // 0x1680(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1684[0x4];                                     // 0x1684(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_2; // 0x1688(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x1690(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_35;                   // 0x1694(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1695[0x3];                                     // 0x1695(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_6; // 0x1698(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_9;                // 0x16A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_8;                  // 0x16A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16AC[0x4];                                     // 0x16AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2;  // 0x16B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x16B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_16B9[0x3];                                     // 0x16B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_10;           // 0x16BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_10;           // 0x16C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_9;           // 0x16C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_36;                   // 0x16C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_16C6[0x2];                                     // 0x16C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x16C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x16CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_16CD[0x3];                                     // 0x16CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_17;                // 0x16D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x16D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x16D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_16D6[0x2];                                     // 0x16D6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue_3;    // 0x16D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x16DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_3;            // 0x16E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16E1[0x3];                                     // 0x16E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_Select_Default_2;                           // 0x16E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_3; // 0x16E8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_37;                   // 0x16F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_16F1[0x7];                                     // 0x16F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_7; // 0x16F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_10;               // 0x1700(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_9;                  // 0x1708(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_170C[0x4];                                     // 0x170C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_3;  // 0x1710(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_12;                    // 0x1718(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1719[0x3];                                     // 0x1719(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_11;           // 0x171C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_11;           // 0x1720(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_10;          // 0x1724(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_38;                   // 0x1725(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_4;            // 0x1726(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1727[0x1];                                     // 0x1727(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_4; // 0x1728(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_39;                   // 0x1730(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1731[0x3];                                     // 0x1731(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_10;                 // 0x1734(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_11;                 // 0x1738(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_173C[0x4];                                     // 0x173C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_8; // 0x1740(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_11;               // 0x1748(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_12;                 // 0x1750(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1754[0x4];                                     // 0x1754(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_4;  // 0x1758(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_13;                    // 0x1760(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1761[0x3];                                     // 0x1761(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_13;                 // 0x1764(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_14;                 // 0x1768(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_12;           // 0x176C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_12;           // 0x1770(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_40;                   // 0x1774(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_11;          // 0x1775(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1776[0x2];                                     // 0x1776(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_15;                 // 0x1778(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_16;                 // 0x177C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_17;                 // 0x1780(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_18;                 // 0x1784(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_19;                 // 0x1788(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_20;                 // 0x178C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_21;                 // 0x1790(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_5;            // 0x1794(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_41;                   // 0x1795(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1796[0x2];                                     // 0x1796(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_5; // 0x1798(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_42;                   // 0x17A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_43;                   // 0x17A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_17A2[0x6];                                     // 0x17A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_9; // 0x17A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_12;               // 0x17B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_22;                 // 0x17B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17BC[0x4];                                     // 0x17BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_5;  // 0x17C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_14;                    // 0x17C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_17C9[0x3];                                     // 0x17C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_23;                 // 0x17CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_24;                 // 0x17D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_13;           // 0x17D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_13;           // 0x17D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_44;                   // 0x17DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_12;          // 0x17DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_6;            // 0x17DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17DF[0x1];                                     // 0x17DF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput;    // 0x17E0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue;       // 0x17F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_17F1[0x7];                                     // 0x17F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_6; // 0x17F8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x1800(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_45;                   // 0x1801(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1802[0x6];                                     // 0x1802(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_10; // 0x1808(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_13;               // 0x1810(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_25;                 // 0x1818(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue;           // 0x0ED8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType_1;               // 0x0EE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EE1[0x7];                                      // 0x0EE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters_1;              // 0x0EE8(0x00B8)(ContainsInstancedReference)
+	class UAudioComponent*                        CallFunc_SpawnSoundAttached_ReturnValue_1;         // 0x0FA0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x0FA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EGameplayCueEvent                             K2Node_GameplayCueEvent_EventType;                 // 0x0FA9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FAA[0x6];                                      // 0x0FAA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayCueParameters                 K2Node_GameplayCueEvent_Parameters;                // 0x0FB0(0x00B8)(ContainsInstancedReference)
+	bool                                          K2Node_Event_First_Left;                           // 0x1068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_30;                   // 0x1069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_First_Right;                          // 0x106A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_31;                   // 0x106B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TDelegate<void(class AFortWeapon* NewWeapon, class AFortWeapon* PrevWeapon)> K2Node_CreateDelegate_OutputDelegate_1; // 0x106C(0x0010)(ZeroConstructor, NoDestructor)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x107C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               CallFunc_SpawnEmitterAtLocation_ReturnValue_2;     // 0x1088(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AGameStateBase*                         CallFunc_GetGameState_ReturnValue;                 // 0x1090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortGameState*                         K2Node_DynamicCast_AsFort_Game_State;              // 0x1098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x10A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_DBNOEnabledForGameMode_ReturnValue;       // 0x10A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_32;                   // 0x10A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x10A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10A4[0x4];                                     // 0x10A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Array_Get_Item_3;                         // 0x10A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue;   // 0x10B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x10B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_33;                   // 0x10BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x10BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_10BE[0x2];                                     // 0x10BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_5;                  // 0x10C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_8;            // 0x10C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_8;            // 0x10C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_34;                   // 0x10CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_10CD[0x3];                                     // 0x10CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue_1;               // 0x10D0(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x1100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ADuplicateResOutMesh_C*                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x1108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x1110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_Blocked;                        // 0x1111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1112[0x6];                                     // 0x1112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_1; // 0x1118(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_35;                   // 0x1120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1121[0x7];                                     // 0x1121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_4; // 0x1128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_6;                // 0x1130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_6;                  // 0x1138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_113C[0x4];                                     // 0x113C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic;    // 0x1140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x1148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1149[0x3];                                     // 0x1149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_9;            // 0x114C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_9;            // 0x1150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_6;           // 0x1154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_36;                   // 0x1155(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x1156(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1157[0x1];                                     // 0x1157(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x1158(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_1;     // 0x11E4(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_9;          // 0x1270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_2;            // 0x1271(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1272[0x6];                                     // 0x1272(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_2; // 0x1278(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_37;                   // 0x1280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1281[0x7];                                     // 0x1281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_5; // 0x1288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_7;                // 0x1290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_7;                  // 0x1298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129C[0x4];                                     // 0x129C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1;  // 0x12A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_10;                    // 0x12A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_12A9[0x3];                                     // 0x12A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_10;           // 0x12AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_10;           // 0x12B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_7;           // 0x12B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_38;                   // 0x12B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_12B6[0x2];                                     // 0x12B6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_2;     // 0x12B8(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_3;     // 0x1344(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_4;     // 0x13D0(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector                                CallFunc_GetVelocity_ReturnValue_4;                // 0x145C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x1468(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_X_4;                          // 0x1474(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Y_4;                          // 0x1478(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector_Z_4;                          // 0x147C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue;         // 0x1480(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_3;                 // 0x148C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult_5;     // 0x1498(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FRotator                               CallFunc_MakeRotFromX_ReturnValue_1;               // 0x1524(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_3;            // 0x1530(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1531[0x7];                                     // 0x1531(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue_2;        // 0x1538(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_3; // 0x1540(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x1548(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_39;                   // 0x1554(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1555[0x3];                                     // 0x1555(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x1558(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x1564(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingle_OutHit;                   // 0x1570(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x15FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_15FD[0x3];                                     // 0x15FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_6; // 0x1600(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit_1;            // 0x1608(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap_1;         // 0x1609(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_160A[0x2];                                     // 0x160A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time_1;                    // 0x160C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance_1;                // 0x1610(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Location_1;                // 0x1614(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint_1;             // 0x1620(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal_1;                  // 0x162C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal_1;            // 0x1638(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1644[0x4];                                     // 0x1644(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat_1;                 // 0x1648(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor_1;                // 0x1650(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent_1;            // 0x1658(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName_1;             // 0x1660(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem_1;                 // 0x1668(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex_1;               // 0x166C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceStart_1;              // 0x1670(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd_1;                // 0x167C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_8;                // 0x1688(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldLocation_SweepHitResult;       // 0x1690(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_171C[0x4];                                     // 0x171C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2;  // 0x1720(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_11;                    // 0x1728(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1729[0x3];                                     // 0x1729(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_8;                  // 0x172C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_11;           // 0x1730(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_11;           // 0x1734(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_40;                   // 0x1738(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_8;           // 0x1739(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_173A[0x2];                                     // 0x173A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetVelocity_ReturnValue_5;                // 0x173C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Cross_VectorVector_ReturnValue;           // 0x1748(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x1754(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue_1;       // 0x1760(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_VectorVector_ReturnValue;      // 0x176C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue_10;         // 0x176D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x176E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x176F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_4;            // 0x1770(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1771[0x7];                                     // 0x1771(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_4; // 0x1778(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_41;                   // 0x1780(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1781[0x7];                                     // 0x1781(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_7; // 0x1788(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_9;                // 0x1790(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_9;                  // 0x1798(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179C[0x4];                                     // 0x179C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_3;  // 0x17A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_12;                    // 0x17A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_17A9[0x3];                                     // 0x17A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_10;                 // 0x17AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_11;                 // 0x17B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_12;           // 0x17B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_12;           // 0x17B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_42;                   // 0x17BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_9;           // 0x17BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_5;            // 0x17BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17BF[0x1];                                     // 0x17BF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue_2;    // 0x17C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17C4[0x4];                                     // 0x17C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_5; // 0x17C8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_1;                      // 0x17D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_43;                   // 0x17D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_17D5[0x3];                                     // 0x17D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_8; // 0x17D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_10;               // 0x17E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_12;                 // 0x17E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_17EC[0x4];                                     // 0x17EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_4;  // 0x17F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_13;                    // 0x17F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_17F9[0x3];                                     // 0x17F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_13;           // 0x17FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_13;           // 0x1800(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_10;          // 0x1804(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_44;                   // 0x1805(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_45;                   // 0x1806(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_46;                   // 0x1807(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x1808(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1809[0x3];                                     // 0x1809(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue_3;    // 0x180C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Round_ReturnValue_2;                      // 0x1810(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_6;            // 0x1814(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1815[0x3];                                     // 0x1815(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_Select_Default_2;                           // 0x1818(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_181C[0x4];                                     // 0x181C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_6;  // 0x1820(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_15;                    // 0x1828(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1829[0x3];                                     // 0x1829(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_26;                 // 0x182C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_27;                 // 0x1830(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_14;           // 0x1834(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_14;           // 0x1838(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_46;                   // 0x183C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_13;          // 0x183D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_7;            // 0x183E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_183F[0x1];                                     // 0x183F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_1;  // 0x1840(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_1;     // 0x1850(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x1851(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1852[0x6];                                     // 0x1852(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_7; // 0x1858(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_47;                   // 0x1860(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1861[0x3];                                     // 0x1861(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_5;        // 0x1864(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_2;      // 0x1870(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue_2;       // 0x187C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_1;          // 0x1888(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult; // 0x1894(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FHitResult                             CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult_1; // 0x191C(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x19A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_48;                   // 0x19A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_49;                   // 0x19A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_8;            // 0x19AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19AB[0x5];                                     // 0x19AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_8; // 0x19B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_50;                   // 0x19B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_9;            // 0x19B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_10;           // 0x19BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19BB[0x5];                                     // 0x19BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_9; // 0x19C0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_10; // 0x19C8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_51;                   // 0x19D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_52;                   // 0x19D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_IsClosed_Variable_7;                     // 0x19D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_19D3[0x5];                                     // 0x19D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 K2Node_Select_Default_3;                           // 0x19D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AEmitterCameraLensEffectBase*           CallFunc_SpawnCameraLensEffect_ReturnValue;        // 0x19E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AB_PlayerHealthDamage_CameraLensEffect_C* K2Node_DynamicCast_AsB_Player_Health_Damage_Camera_Lens_Effect; // 0x19E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_16;                    // 0x19F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_19F1[0x7];                                     // 0x19F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_PlayerShieldDamage_CameraLensEffect_C* K2Node_DynamicCast_AsB_Player_Shield_Damage_Camera_Lens_Effect; // 0x19F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_17;                    // 0x1A00(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_8;               // 0x1A01(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_7;          // 0x1A02(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue_8;          // 0x1A03(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_6;                // 0x1A04(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_HasAnyTags_ReturnValue;                   // 0x1A05(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_IsClosed_Variable_8;                     // 0x1A06(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A07[0x1];                                     // 0x1A07(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x1A08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Select_Default_4;                           // 0x1A0C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAnyMatchingGameplayTags_ReturnValue;   // 0x1A14(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A15[0x3];                                     // 0x1A15(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_PlayLocalAnimMontage_ReturnValue_1;       // 0x1A18(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_11;           // 0x1A1C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A1D[0x3];                                     // 0x1A1D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             K2Node_Select_Default_5;                           // 0x1A20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_11; // 0x1A28(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_53;                   // 0x1A30(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A31[0x7];                                     // 0x1A31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             K2Node_Select_Default_6;                           // 0x1A38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ClassIsChildOf_ReturnValue;               // 0x1A40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A41[0x7];                                     // 0x1A41(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 K2Node_Select_Default_7;                           // 0x1A48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortEmitterCameraLensEffectDirectional* CallFunc_SpawnCameraLensEffectDirectional_ReturnValue; // 0x1A50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AController*                            CallFunc_GetController_ReturnValue_2;              // 0x1A58(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerController*                  K2Node_DynamicCast_AsFort_Player_Controller_2;     // 0x1A60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_18;                    // 0x1A68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A69[0x7];                                     // 0x1A69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue_1;  // 0x1A70(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute; // 0x1A78(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A79[0x3];                                     // 0x1A79(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue; // 0x1A7C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute_1; // 0x1A80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A81[0x3];                                     // 0x1A81(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue_1; // 0x1A84(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x1A88(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x1A8C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1A8D[0x3];                                     // 0x1A8D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x1A90(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_12;           // 0x1A94(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A95[0x3];                                     // 0x1A95(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue_2;  // 0x1A98(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_12; // 0x1AA0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute_2; // 0x1AA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1AA9[0x3];                                     // 0x1AA9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue_2; // 0x1AAC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_54;                   // 0x1AB0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute_3; // 0x1AB1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1AB2[0x2];                                     // 0x1AB2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue_3; // 0x1AB4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue_1;          // 0x1AB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_1;   // 0x1ABC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x1ACC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_13;           // 0x1AD0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_7;                // 0x1AD1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1AD2[0x6];                                     // 0x1AD2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_13; // 0x1AD8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_55;                   // 0x1AE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1AE1[0x7];                                     // 0x1AE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_11; // 0x1AE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_14;               // 0x1AF0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_28;                 // 0x1AF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1AFC[0x4];                                     // 0x1AFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_7;  // 0x1B00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_19;                    // 0x1B08(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1B09[0x3];                                     // 0x1B09(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue_29;                 // 0x1B0C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_30;                 // 0x1B10(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetNumMaterials_ReturnValue_15;           // 0x1B14(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_15;           // 0x1B18(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_56;                   // 0x1B1C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_14;          // 0x1B1D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1B1E[0x2];                                     // 0x1B1E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue_1;       // 0x1B20(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B24[0x4];                                     // 0x1B24(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        K2Node_Event_ParticleSystemReference;              // 0x1B28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_FirstSocketName;                      // 0x1B30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_SecondSocketName;                     // 0x1B38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_Width;                                // 0x1B40(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B44[0x4];                                     // 0x1B44(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               K2Node_Event_OverrideParticleComp;                 // 0x1B48(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_OverideFirstSocketName;               // 0x1B50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Event_OverideSecondSocketName;              // 0x1B58(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x1B60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_57;                   // 0x1B64(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue_2;            // 0x1B65(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x1B66(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_bActive;                              // 0x1B67(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_15;                             // 0x1B68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_58;                   // 0x1B69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_59;                   // 0x1B6A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_60;                   // 0x1B6B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	int32                                         Temp_int_Variable_16;                              // 0x1B6C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_15;               // 0x1B70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_31;                 // 0x1B78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_15;          // 0x1B7C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1B7D[0x3];                                     // 0x1B7D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_18;                // 0x1B80(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_14;           // 0x1B84(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B85[0x3];                                     // 0x1B85(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_14; // 0x1B88(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_61;                   // 0x1B90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1B91[0x3];                                     // 0x1B91(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x1B94(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_6; // 0x1820(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_47;                   // 0x1828(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1829[0x7];                                     // 0x1829(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_9; // 0x1830(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_11;               // 0x1838(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_13;                 // 0x1840(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1844[0x4];                                     // 0x1844(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_5;  // 0x1848(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_14;                    // 0x1850(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1851[0x3];                                     // 0x1851(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_14;           // 0x1854(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_14;           // 0x1858(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_11;          // 0x185C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_48;                   // 0x185D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_7;            // 0x185E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_185F[0x1];                                     // 0x185F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_14;                 // 0x1860(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1864[0x4];                                     // 0x1864(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_7; // 0x1868(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_15;                 // 0x1870(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_49;                   // 0x1874(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1875[0x3];                                     // 0x1875(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_16;                 // 0x1878(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_17;                 // 0x187C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_18;                 // 0x1880(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_19;                 // 0x1884(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_20;                 // 0x1888(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_21;                 // 0x188C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_22;                 // 0x1890(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_23;                 // 0x1894(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_24;                 // 0x1898(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_8;            // 0x189C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_50;                   // 0x189D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_189E[0x2];                                     // 0x189E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_8; // 0x18A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_51;                   // 0x18A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_52;                   // 0x18A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_9;            // 0x18AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_11;                             // 0x18AB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_18AC[0x4];                                     // 0x18AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_9; // 0x18B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_53;                   // 0x18B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_18B9[0x3];                                     // 0x18B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetHealthPercent2_ReturnValue;            // 0x18BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetShieldPercent2_ReturnValue;            // 0x18C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_14;                              // 0x18C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_12;               // 0x18C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput; // 0x18D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue;       // 0x18E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_18E1[0x3];                                     // 0x18E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_25;                 // 0x18E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x18E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_12;          // 0x18E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_18EA[0x2];                                     // 0x18EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_17;                // 0x18EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_3;        // 0x18F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18FC[0x4];                                     // 0x18FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayTagAssetInterface> CallFunc_HasMatchingGameplayTag_self_CastInput_1; // 0x1900(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasMatchingGameplayTag_ReturnValue_1;     // 0x1910(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1911[0x3];                                     // 0x1911(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_2;      // 0x1914(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x1920(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1921[0x3];                                     // 0x1921(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue_2;       // 0x1924(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_1;          // 0x1930(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult; // 0x193C(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult_1; // 0x19C8(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          Temp_bool_IsClosed_Variable_9;                     // 0x1A54(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_10;           // 0x1A55(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A56[0x2];                                     // 0x1A56(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue;         // 0x1A58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A5C[0x4];                                     // 0x1A5C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_10; // 0x1A60(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_54;                   // 0x1A68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_11;           // 0x1A69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_12;           // 0x1A6A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A6B[0x5];                                     // 0x1A6B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_11; // 0x1A70(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_12; // 0x1A78(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_55;                   // 0x1A80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_56;                   // 0x1A81(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_8;               // 0x1A82(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1A83[0x5];                                     // 0x1A83(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 K2Node_Select_Default_3;                           // 0x1A88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AEmitterCameraLensEffectBase*           CallFunc_SpawnCameraLensEffect_ReturnValue;        // 0x1A90(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_6;                // 0x1A98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1A99[0x7];                                     // 0x1A99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerShieldDamage_CameraLensEffect_C* K2Node_DynamicCast_AsB_Player_Shield_Damage_Camera_Lens_Effect; // 0x1AA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_15;                    // 0x1AA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1AA9[0x7];                                     // 0x1AA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_PlayerHealthDamage_CameraLensEffect_C* K2Node_DynamicCast_AsB_Player_Health_Damage_Camera_Lens_Effect; // 0x1AB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_16;                    // 0x1AB8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAnyTags_ReturnValue;                   // 0x1AB9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1ABA[0x2];                                     // 0x1ABA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_RandomInteger_ReturnValue;                // 0x1ABC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Select_Default_4;                           // 0x1AC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 K2Node_Select_Default_5;                           // 0x1AC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PlayLocalAnimMontage_ReturnValue_1;       // 0x1AD0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AD4[0x4];                                     // 0x1AD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AFortEmitterCameraLensEffectDirectional* CallFunc_SpawnCameraLensEffectDirectional_ReturnValue; // 0x1AD8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AController*                            CallFunc_GetController_ReturnValue_2;              // 0x1AE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerController*                  K2Node_DynamicCast_AsFort_Player_Controller_2;     // 0x1AE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_17;                    // 0x1AF0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_7;                // 0x1AF1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x1AF2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1AF3[0x1];                                     // 0x1AF3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetGameTimeInSeconds_ReturnValue_1;       // 0x1AF4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x1AF8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_1;   // 0x1AFC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue_2;            // 0x1B0C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x1B0D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_13;           // 0x1B0E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B0F[0x1];                                     // 0x1B0F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_13; // 0x1B10(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_57;                   // 0x1B18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1B19[0x7];                                     // 0x1B19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_10; // 0x1B20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_13;               // 0x1B28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_26;                 // 0x1B30(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B34[0x4];                                     // 0x1B34(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_6;  // 0x1B38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_18;                    // 0x1B40(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1B41[0x3];                                     // 0x1B41(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_27;                 // 0x1B44(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_28;                 // 0x1B48(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetNumMaterials_ReturnValue_15;           // 0x1B4C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_15;           // 0x1B50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_58;                   // 0x1B54(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_13;          // 0x1B55(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_59;                   // 0x1B56(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1B57[0x1];                                     // 0x1B57(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_15;                              // 0x1B58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B5C[0x4];                                     // 0x1B5C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_11; // 0x1B60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_14;               // 0x1B68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_29;                 // 0x1B70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B74[0x4];                                     // 0x1B74(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_AsMaterial_Instance_Dynamic_7;  // 0x1B78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_19;                    // 0x1B80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1B81[0x3];                                     // 0x1B81(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_30;                 // 0x1B84(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_14;          // 0x1B88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1B89[0x3];                                     // 0x1B89(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_18;                // 0x1B8C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_12;                             // 0x1B90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_9;               // 0x1B91(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_60;                   // 0x1B92(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1B93[0x5];                                     // 0x1B93(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystem*                        K2Node_Event_ParticleSystemReference;              // 0x1B98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         K2Node_Event_NiagaraSystemReference;               // 0x1BA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_FirstSocketName;                      // 0x1BA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_SecondSocketName;                     // 0x1BB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_Width;                                // 0x1BB8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BBC[0x4];                                     // 0x1BBC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFXSystemComponent*                     K2Node_Event_OverrideParticleComp;                 // 0x1BC0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_OverideFirstSocketName;               // 0x1BC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Event_OverideSecondSocketName;              // 0x1BD0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_61;                   // 0x1BD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1BD9[0x7];                                     // 0x1BD9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFXSystemAsset*                         CallFunc_GetFXSystemAsset_ReturnValue;             // 0x1BE0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_62;                   // 0x1BE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1BE9[0x7];                                     // 0x1BE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFXSystemComponent*                     CallFunc_SetAssetOrSpawnAltFXAttached_ReturnValue; // 0x1BF0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bActive;                              // 0x1BF8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_63;                   // 0x1BF9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_64;                   // 0x1BFA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1BFB[0x1];                                     // 0x1BFB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_16;                              // 0x1BFC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue_15;               // 0x1C00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue_31;                 // 0x1C08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_15;          // 0x1C0C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1C0D[0x3];                                     // 0x1C0D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_19;                // 0x1C10(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_14;           // 0x1C14(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C15[0x3];                                     // 0x1C15(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_14; // 0x1C18(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_65;                   // 0x1C20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1C21[0x3];                                     // 0x1C21(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x1C24(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic) == 0x000010, "Wrong alignment on PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic");
-static_assert(sizeof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic) == 0x001BA0, "Wrong size on PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, EntryPoint) == 0x000000, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::EntryPoint' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetWindManager_ReturnValue) == 0x000008, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetWindManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_IsClosed_Variable) == 0x000010, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue) == 0x000011, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_1) == 0x000012, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue) == 0x000014, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue) == 0x000018, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Has_Been_Initd_Variable) == 0x00001C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralFloat_ReturnValue) == 0x000020, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_MakeArray_Array) == 0x000028, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsDedicatedServer_ReturnValue) == 0x000038, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable) == 0x00003C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue) == 0x000040, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsDedicatedServer_ReturnValue_1) == 0x000044, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsDedicatedServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_IsClosed_Variable_1) == 0x000045, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Has_Been_Initd_Variable_1) == 0x000046, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Has_Been_Initd_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BeginDrawCanvasToRenderTarget_Canvas) == 0x000048, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BeginDrawCanvasToRenderTarget_Canvas' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BeginDrawCanvasToRenderTarget_Size) == 0x000050, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BeginDrawCanvasToRenderTarget_Size' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BeginDrawCanvasToRenderTarget_Context) == 0x000058, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BeginDrawCanvasToRenderTarget_Context' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetWorldDeltaSeconds_ReturnValue) == 0x000068, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSocketLocation_ReturnValue) == 0x00006C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x000078, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Length_ReturnValue) == 0x000088, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetVelocity_ReturnValue) == 0x00008C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetVelocity_ReturnValue_1) == 0x000098, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetVelocity_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_X) == 0x0000A4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_Y) == 0x0000A8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_Z) == 0x0000AC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Greater_FloatFloat_ReturnValue) == 0x0000B0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeVector_ReturnValue) == 0x0000B4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x0000C0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Less_FloatFloat_ReturnValue) == 0x0000C1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Has_Been_Initd_Variable_2) == 0x0000C2, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Has_Been_Initd_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable) == 0x0000C3, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_IsClosed_Variable_2) == 0x0000C4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_IsClosed_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_1) == 0x0000C8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000CC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Has_Been_Initd_Variable_3) == 0x0000D0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Has_Been_Initd_Variable_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetVelocity_ReturnValue_2) == 0x0000D4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetVelocity_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_X_1) == 0x0000E0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_X_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_Y_1) == 0x0000E4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_Y_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_Z_1) == 0x0000E8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_Z_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Greater_FloatFloat_ReturnValue_2) == 0x0000EC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Greater_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeVector_ReturnValue_1) == 0x0000F0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Has_Been_Initd_Variable_4) == 0x0000FC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Has_Been_Initd_Variable_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Greater_FloatFloat_ReturnValue_3) == 0x0000FD, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Greater_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_2) == 0x000100, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_2) == 0x000104, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Less_FloatFloat_ReturnValue_1) == 0x000108, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Less_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsDedicatedServer_ReturnValue_2) == 0x000109, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsDedicatedServer_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_3) == 0x00010C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_3) == 0x000110, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Array_Index_Variable) == 0x000114, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Loop_Counter_Variable) == 0x000118, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_IsClosed_Variable_3) == 0x00011C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_IsClosed_Variable_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_4) == 0x000120, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_1) == 0x000124, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_IsClosed_Variable_4) == 0x000125, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_IsClosed_Variable_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_2) == 0x000126, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Array_Index_Variable_1) == 0x000128, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Get_Item) == 0x000130, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Loop_Counter_Variable_1) == 0x000138, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Less_IntInt_ReturnValue) == 0x00013C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_5) == 0x000140, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_2) == 0x000144, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_3) == 0x000145, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_1) == 0x000148, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x00014C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_3) == 0x000150, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_4) == 0x000154, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_6) == 0x000158, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralFloat_ReturnValue_1) == 0x00015C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_MakeArray_Array_1) == 0x000160, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_4) == 0x000170, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_5) == 0x000171, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_2) == 0x000174, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_2) == 0x000178, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_5) == 0x00017C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_6) == 0x000180, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue) == 0x000188, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_1) == 0x000190, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000198, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_7) == 0x00019C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x0001A0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_8) == 0x0001A4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_4) == 0x0001A8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralFloat_ReturnValue_2) == 0x0001AC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_MakeArray_Array_2) == 0x0001B0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue) == 0x0001C0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_6) == 0x0001C4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_7) == 0x0001C5, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_3) == 0x0001C8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_3) == 0x0001CC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_2) == 0x0001D0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_2) == 0x0001D8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Has_Been_Initd_Variable_5) == 0x0001D9, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Has_Been_Initd_Variable_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralFloat_ReturnValue_3) == 0x0001DC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_MakeArray_Array_3) == 0x0001E0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_8) == 0x0001F0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_9) == 0x0001F1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_4) == 0x0001F4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_4) == 0x0001F8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_7) == 0x0001FC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_8) == 0x000200, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_9) == 0x000204, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_10) == 0x000208, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_IsClosed_Variable_5) == 0x00020C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_IsClosed_Variable_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000210, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Greater_FloatFloat_ReturnValue_4) == 0x000214, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Greater_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralFloat_ReturnValue_4) == 0x000218, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_MakeArray_Array_4) == 0x000220, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_IsClosed_Variable_6) == 0x000230, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_IsClosed_Variable_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_10) == 0x000231, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_11) == 0x000232, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_12) == 0x000233, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_13) == 0x000234, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_5) == 0x000238, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_5) == 0x00023C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_3) == 0x000240, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_3) == 0x000248, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Has_Been_Initd_Variable_6) == 0x000249, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Has_Been_Initd_Variable_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsDedicatedServer_ReturnValue_3) == 0x00024A, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsDedicatedServer_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralFloat_ReturnValue_5) == 0x00024C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_MakeArray_Array_5) == 0x000250, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_MakeArray_Array_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_1) == 0x000260, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_14) == 0x000264, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_15) == 0x000265, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_6) == 0x000268, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_6) == 0x00026C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_4) == 0x000270, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_4) == 0x000278, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralFloat_ReturnValue_6) == 0x00027C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_MakeArray_Array_6) == 0x000280, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_MakeArray_Array_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_2) == 0x000290, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_16) == 0x000294, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_17) == 0x000295, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_7) == 0x000298, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_7) == 0x00029C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_9) == 0x0002A0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_11) == 0x0002A4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralFloat_ReturnValue_7) == 0x0002A8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralFloat_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_MakeArray_Array_7) == 0x0002B0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_MakeArray_Array_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_5) == 0x0002C0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsDedicatedServer_ReturnValue_4) == 0x0002C1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsDedicatedServer_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_name_Variable) == 0x0002C4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_name_Variable_1) == 0x0002CC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_name_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsDedicatedServer_ReturnValue_5) == 0x0002D4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsDedicatedServer_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_name_Variable_2) == 0x0002D8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_name_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_name_Variable_3) == 0x0002E0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_name_Variable_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsDedicatedServer_ReturnValue_6) == 0x0002E8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsDedicatedServer_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_Damage_2) == 0x0002EC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_Damage_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_DamageTags_2) == 0x0002F0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_DamageTags_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_Momentum_2) == 0x000310, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_Momentum_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_HitInfo_2) == 0x00031C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_HitInfo_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_InstigatedBy_2) == 0x0003A8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_InstigatedBy_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_DamageCauser_2) == 0x0003B0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_DamageCauser_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_EffectContext_2) == 0x0003B8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_EffectContext_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_Hit) == 0x0003D0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_Hit' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000458, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetObjectClass_ReturnValue) == 0x000468, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000470, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_18) == 0x00047C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface) == 0x000480, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess) == 0x000490, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_GetActorLocation_ReturnValue_2) == 0x000494, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_GetActorLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_bBlockingHit) == 0x0004A0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_bInitialOverlap) == 0x0004A1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_Time) == 0x0004A4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_Distance) == 0x0004A8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_Location) == 0x0004AC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_ImpactPoint) == 0x0004B8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_Normal) == 0x0004C4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_ImpactNormal) == 0x0004D0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_PhysMat) == 0x0004E0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_HitActor) == 0x0004E8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_HitComponent) == 0x0004F0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_HitBoneName) == 0x0004F8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_HitItem) == 0x000500, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_FaceIndex) == 0x000504, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_TraceStart) == 0x000508, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_TraceEnd) == 0x000514, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000520, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_NewWeapon) == 0x000530, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_NewWeapon' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_PrevWeapon) == 0x000538, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_PrevWeapon' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_VSizeSquared_ReturnValue) == 0x000540, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_VSizeSquared_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeRotFromX_ReturnValue) == 0x000544, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeRotFromX_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Greater_FloatFloat_ReturnValue_5) == 0x000550, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Greater_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_RandomFloatInRange_ReturnValue) == 0x000554, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeRotator_ReturnValue) == 0x000558, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_DeltaSeconds) == 0x000564, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetVelocity_ReturnValue_3) == 0x000568, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetVelocity_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_X_2) == 0x000574, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_X_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_Y_2) == 0x000578, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_Y_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_Z_2) == 0x00057C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_Z_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeVector_ReturnValue_2) == 0x000580, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_VSize_ReturnValue) == 0x00058C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_10) == 0x000590, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_EventType_5) == 0x000594, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_EventType_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_Parameters_5) == 0x000598, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_Parameters_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_SwitchEnum_CmpSuccess) == 0x000650, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_EventType_4) == 0x000651, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_EventType_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_Parameters_4) == 0x000658, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_Parameters_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_SwitchEnum_CmpSuccess_1) == 0x000710, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_6) == 0x000711, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_bNewUseFirstPersonCamera) == 0x000712, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_bNewUseFirstPersonCamera' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsB_Ranged_Generic) == 0x000718, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsB_Ranged_Generic' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_1) == 0x000720, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetController_ReturnValue) == 0x000728, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsFort_Weap_Building_Tool_Base) == 0x000730, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsFort_Weap_Building_Tool_Base' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_2) == 0x000738, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsFort_Player_Controller) == 0x000740, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsFort_Player_Controller' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_3) == 0x000748, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsUsingFirstPersonCamera_ReturnValue) == 0x000749, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsUsingFirstPersonCamera_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsFort_Weap_Building_Tool_Base_1) == 0x000750, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsFort_Weap_Building_Tool_Base_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_4) == 0x000758, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_19) == 0x000759, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsPlayerControlled_ReturnValue) == 0x00075A, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsPlayerControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_20) == 0x00075B, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_20' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x00075C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_11) == 0x000760, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Round_ReturnValue) == 0x000764, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Round_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_12) == 0x000768, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_CustomEvent_NewUseFirstPersonCamera) == 0x00076C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_CustomEvent_NewUseFirstPersonCamera' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsWeaponHolstered_ReturnValue) == 0x00076D, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsWeaponHolstered_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_7) == 0x00076E, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Not_PreBool_ReturnValue) == 0x00076F, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_NewBase) == 0x000770, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_NewBase' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsBuilding_SMActor) == 0x000778, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsBuilding_SMActor' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_5) == 0x000780, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_21) == 0x000781, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_21' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsPlayerBuilt_ReturnValue) == 0x000782, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsPlayerBuilt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Has_Been_Initd_Variable_7) == 0x000783, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Has_Been_Initd_Variable_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_NewController) == 0x000788, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_NewController' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_SpeechText) == 0x000790, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_SpeechText' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetAbilitySystemComponent_ReturnValue) == 0x0007A8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetAbilitySystemComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput) == 0x0007B0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_HasAllMatchingGameplayTags_ReturnValue) == 0x0007C0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_HasAllMatchingGameplayTags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetLocalFortPlayerControllers_ReturnValue) == 0x0007C8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetLocalFortPlayerControllers_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_GetActorLocation_ReturnValue_3) == 0x0007D8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_GetActorLocation_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Length_ReturnValue_1) == 0x0007E4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetTransform_ReturnValue) == 0x0007F0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_8) == 0x000820, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakTransform_Location) == 0x000824, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakTransform_Rotation) == 0x000830, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakTransform_Scale) == 0x00083C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_ComposeRotators_ReturnValue) == 0x000848, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_VectorVector_ReturnValue) == 0x000854, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeTransform_ReturnValue) == 0x000860, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_SpawnEmitterAtLocation_ReturnValue) == 0x000890, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_SpawnEmitterAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakTransform_Location_1) == 0x000898, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakTransform_Location_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakTransform_Rotation_1) == 0x0008A4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakTransform_Rotation_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakTransform_Scale_1) == 0x0008B0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakTransform_Scale_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_9) == 0x0008BC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_22) == 0x0008BD, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_22' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_23) == 0x0008BE, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_23' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_CustomEvent_NewWeapon) == 0x0008C0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_CustomEvent_NewWeapon' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_CustomEvent_PrevWeapon) == 0x0008C8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_CustomEvent_PrevWeapon' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_SpawnEmitterAtLocation_ReturnValue_1) == 0x0008D0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_SpawnEmitterAtLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_CustomEvent_InDuration) == 0x0008D8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_CustomEvent_InDuration' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_CustomEvent_New) == 0x0008E0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_CustomEvent_New' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_CustomEvent_Prev) == 0x0008E8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_CustomEvent_Prev' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_24) == 0x0008F0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_24' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_25) == 0x0008F1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_25' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_CustomEvent_CurrentWeapon) == 0x0008F8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_CustomEvent_CurrentWeapon' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_10) == 0x000900, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_26) == 0x000901, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_26' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_HasAuthority_ReturnValue) == 0x000902, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_HasAuthority_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_11) == 0x000903, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_HasAuthority_ReturnValue_1) == 0x000904, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_HasAuthority_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Create_ReturnValue) == 0x000908, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Create_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsFort_Initialize_from_Object_Interface) == 0x000910, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsFort_Initialize_from_Object_Interface' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_6) == 0x000920, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_Damage_1) == 0x000924, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_Damage_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_DamageTags_1) == 0x000928, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_DamageTags_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_Momentum_1) == 0x000948, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_Momentum_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_HitInfo_1) == 0x000954, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_HitInfo_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_InstigatedBy_1) == 0x0009E0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_InstigatedBy_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_DamageCauser_1) == 0x0009E8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_DamageCauser_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_EffectContext_1) == 0x0009F0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_EffectContext_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetController_ReturnValue_1) == 0x000A08, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetController_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000A10, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsFort_Player_Controller_1) == 0x000A18, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsFort_Player_Controller_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_7) == 0x000A20, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_12) == 0x000A24, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_12) == 0x000A28, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_5) == 0x000A30, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_3) == 0x000A38, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_5) == 0x000A3C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_13) == 0x000A40, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetWindManager_ReturnValue_1) == 0x000A48, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetWindManager_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsWind_Manager) == 0x000A50, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsWind_Manager' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_8) == 0x000A58, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetTimer_ReturnValue) == 0x000A60, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000A68, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateRenderTarget2D_ReturnValue) == 0x000A70, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateRenderTarget2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x000A78, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Get_Item_1) == 0x000A80, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Length_ReturnValue_2) == 0x000A88, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Less_IntInt_ReturnValue_1) == 0x000A8C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_object_Variable) == 0x000A90, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsMovingOnGround_ReturnValue) == 0x000AA0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsMovingOnGround_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Not_PreBool_ReturnValue_1) == 0x000AA1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_object_Variable_1) == 0x000AA8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_13) == 0x000AB0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_13) == 0x000AB4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_object_Variable_2) == 0x000AB8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_object_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_6) == 0x000AC0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_4) == 0x000AC8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_6) == 0x000ACC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_14) == 0x000AD0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_14) == 0x000AD4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_object_Variable_3) == 0x000AD8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_object_Variable_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_15) == 0x000AE0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_14) == 0x000AE4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_15) == 0x000AE8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_15' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_27) == 0x000AEC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_27' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_16) == 0x000AF0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_28) == 0x000AF4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_28' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_CustomEvent_Player_Wind_Particle_Emitter_To_Fire) == 0x000AF5, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_CustomEvent_Player_Wind_Particle_Emitter_To_Fire' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue_2) == 0x000AF8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue_3) == 0x000B00, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Array_Index_Variable_2) == 0x000B08, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Get_Item_2) == 0x000B10, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetPlayerPawn_ReturnValue) == 0x000B18, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_GetActorLocation_ReturnValue_4) == 0x000B20, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_GetActorLocation_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_VectorVector_ReturnValue_1) == 0x000B2C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_VSize_ReturnValue_1) == 0x000B38, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_VSize_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000B3C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BooleanOR_ReturnValue) == 0x000B3D, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_NewTransform) == 0x000B40, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_NewTransform' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetWorldTransform_SweepHitResult) == 0x000B70, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetWorldTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_5) == 0x000BF8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakTransform_Location_2) == 0x000BFC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakTransform_Location_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakTransform_Rotation_2) == 0x000C08, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakTransform_Rotation_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakTransform_Scale_2) == 0x000C14, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakTransform_Scale_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_X_3) == 0x000C20, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_X_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_Y_3) == 0x000C24, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_Y_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_Z_3) == 0x000C28, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_Z_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_Damage) == 0x000C2C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_Damage' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_DamageTags) == 0x000C30, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_DamageTags' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_Momentum) == 0x000C50, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_Momentum' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_HitInfo) == 0x000C5C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_HitInfo' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_InstigatedBy) == 0x000CE8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_InstigatedBy' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_DamageCauser) == 0x000CF0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_DamageCauser' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_EffectContext) == 0x000CF8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_EffectContext' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsDBNO_ReturnValue) == 0x000D10, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsDBNO_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsSkydiving_ReturnValue) == 0x000D11, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsSkydiving_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Select_Default) == 0x000D18, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_ShouldPlayDeathAnimation_ReturnValue) == 0x000D20, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_ShouldPlayDeathAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Select_Default_1) == 0x000D28, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_PlayLocalAnimMontage_ReturnValue) == 0x000D30, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_PlayLocalAnimMontage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_EventType_3) == 0x000D34, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_EventType_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_Parameters_3) == 0x000D38, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_Parameters_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_EventType_2) == 0x000DF0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_EventType_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_Parameters_2) == 0x000DF8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_Parameters_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_SwitchEnum_CmpSuccess_2) == 0x000EB0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_SwitchEnum_CmpSuccess_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000EB8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_SpawnSoundAttached_ReturnValue) == 0x000EC0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_SpawnSoundAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_29) == 0x000EC8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_29' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_30) == 0x000EC9, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_30' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_GetRootComponent_ReturnValue_1) == 0x000ED0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_GetRootComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_EventType_1) == 0x000ED8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_EventType_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_Parameters_1) == 0x000EE0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_Parameters_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_SpawnSoundAttached_ReturnValue_1) == 0x000F98, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_SpawnSoundAttached_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_SwitchEnum_CmpSuccess_3) == 0x000FA0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_SwitchEnum_CmpSuccess_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_EventType) == 0x000FA1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_EventType' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_GameplayCueEvent_Parameters) == 0x000FA8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_GameplayCueEvent_Parameters' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Not_PreBool_ReturnValue_2) == 0x001060, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_CreateDelegate_OutputDelegate) == 0x001064, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x001078, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x001080, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_True_if_break_was_hit_Variable) == 0x001108, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Not_PreBool_ReturnValue_3) == 0x001109, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetWorldRotation_SweepHitResult_1) == 0x00110C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetWorldRotation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_CreateDelegate_OutputDelegate_1) == 0x001194, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetWorldRotation_SweepHitResult_2) == 0x0011A4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetWorldRotation_SweepHitResult_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetWorldRotation_SweepHitResult_3) == 0x00122C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetWorldRotation_SweepHitResult_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetWorldRotation_SweepHitResult_4) == 0x0012B4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetWorldRotation_SweepHitResult_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetVelocity_ReturnValue_4) == 0x00133C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetVelocity_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x001348, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_X_4) == 0x001354, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_X_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_Y_4) == 0x001358, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_Y_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakVector_Z_4) == 0x00135C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakVector_Z_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Conv_VectorToRotator_ReturnValue) == 0x001360, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Conv_VectorToRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeVector_ReturnValue_3) == 0x00136C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetWorldRotation_SweepHitResult_5) == 0x001378, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetWorldRotation_SweepHitResult_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeRotFromX_ReturnValue_1) == 0x001400, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeRotFromX_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_GetRootComponent_ReturnValue_2) == 0x001410, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_GetRootComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x001418, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue) == 0x001424, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_VectorVector_ReturnValue_1) == 0x001428, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_VectorVector_ReturnValue_2) == 0x001434, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue) == 0x001440, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LineTraceSingle_OutHit) == 0x001448, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LineTraceSingle_OutHit' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LineTraceSingle_ReturnValue) == 0x0014D0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LineTraceSingle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_31) == 0x0014D1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_31' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_bBlockingHit_1) == 0x0014D2, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_bBlockingHit_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_bInitialOverlap_1) == 0x0014D3, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_bInitialOverlap_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_Time_1) == 0x0014D4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_Time_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_Distance_1) == 0x0014D8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_Distance_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_Location_1) == 0x0014DC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_Location_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_ImpactPoint_1) == 0x0014E8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_ImpactPoint_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_Normal_1) == 0x0014F4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_Normal_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_ImpactNormal_1) == 0x001500, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_ImpactNormal_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_PhysMat_1) == 0x001510, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_PhysMat_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_HitActor_1) == 0x001518, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_HitActor_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_HitComponent_1) == 0x001520, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_HitComponent_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_HitBoneName_1) == 0x001528, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_HitBoneName_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_HitItem_1) == 0x001530, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_HitItem_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_FaceIndex_1) == 0x001534, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_FaceIndex_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_TraceStart_1) == 0x001538, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_TraceStart_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BreakHitResult_TraceEnd_1) == 0x001544, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BreakHitResult_TraceEnd_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetWorldLocation_SweepHitResult) == 0x001550, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetWorldLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue_4) == 0x0015D8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_7) == 0x0015E0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_6) == 0x0015E8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsMaterial_Instance_Dynamic) == 0x0015F0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsMaterial_Instance_Dynamic' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_9) == 0x0015F8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_8) == 0x0015FC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_8) == 0x001600, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_7) == 0x001604, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_32) == 0x001605, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_32' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetVelocity_ReturnValue_5) == 0x001608, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetVelocity_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Cross_VectorVector_ReturnValue) == 0x001614, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Cross_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Normal_ReturnValue) == 0x001620, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Conv_VectorToRotator_ReturnValue_1) == 0x00162C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Conv_VectorToRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_EqualEqual_VectorVector_ReturnValue) == 0x001638, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_EqualEqual_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BooleanOR_ReturnValue_1) == 0x001639, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BooleanOR_ReturnValue_2) == 0x00163A, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x00163B, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_1) == 0x001640, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_33) == 0x001648, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_33' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue_5) == 0x001650, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_8) == 0x001658, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_7) == 0x001660, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1) == 0x001668, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_10) == 0x001670, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_9) == 0x001674, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_9) == 0x001678, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_8) == 0x00167C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_34) == 0x00167D, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_34' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_2) == 0x00167E, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetScalarParameterValue_ReturnValue_2) == 0x001680, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetScalarParameterValue_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_2) == 0x001688, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Round_ReturnValue_1) == 0x001690, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Round_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_35) == 0x001694, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_35' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue_6) == 0x001698, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_9) == 0x0016A0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_8) == 0x0016A8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2) == 0x0016B0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_11) == 0x0016B8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_10) == 0x0016BC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_10) == 0x0016C0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_9) == 0x0016C4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_36) == 0x0016C5, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_36' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Loop_Counter_Variable_2) == 0x0016C8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Less_IntInt_ReturnValue_2) == 0x0016CC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_17) == 0x0016D0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BooleanAND_ReturnValue) == 0x0016D4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsLocallyControlled_ReturnValue) == 0x0016D5, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetScalarParameterValue_ReturnValue_3) == 0x0016D8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetScalarParameterValue_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Round_ReturnValue_2) == 0x0016DC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Round_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_3) == 0x0016E0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Select_Default_2) == 0x0016E4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_3) == 0x0016E8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_37) == 0x0016F0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_37' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue_7) == 0x0016F8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_10) == 0x001700, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_9) == 0x001708, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_3) == 0x001710, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_12) == 0x001718, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_11) == 0x00171C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_11) == 0x001720, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_10) == 0x001724, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_38) == 0x001725, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_38' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_4) == 0x001726, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_4) == 0x001728, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_39) == 0x001730, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_39' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_10) == 0x001734, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_11) == 0x001738, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue_8) == 0x001740, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_11) == 0x001748, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_12) == 0x001750, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_4) == 0x001758, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_13) == 0x001760, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_13) == 0x001764, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_14) == 0x001768, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_12) == 0x00176C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_12) == 0x001770, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_40) == 0x001774, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_40' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_11) == 0x001775, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_15) == 0x001778, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_16) == 0x00177C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_17) == 0x001780, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_17' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_18) == 0x001784, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_19) == 0x001788, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_20) == 0x00178C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_20' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_21) == 0x001790, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_21' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_5) == 0x001794, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_41) == 0x001795, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_41' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_5) == 0x001798, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_42) == 0x0017A0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_42' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_43) == 0x0017A1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_43' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue_9) == 0x0017A8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_12) == 0x0017B0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_22) == 0x0017B8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_22' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_5) == 0x0017C0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_14) == 0x0017C8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_23) == 0x0017CC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_23' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_24) == 0x0017D0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_24' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_13) == 0x0017D4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_13) == 0x0017D8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_44) == 0x0017DC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_44' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_12) == 0x0017DD, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_6) == 0x0017DE, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_HasMatchingGameplayTag_self_CastInput) == 0x0017E0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_HasMatchingGameplayTag_self_CastInput' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_HasMatchingGameplayTag_ReturnValue) == 0x0017F0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_HasMatchingGameplayTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_6) == 0x0017F8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Not_PreBool_ReturnValue_4) == 0x001800, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_45) == 0x001801, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_45' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue_10) == 0x001808, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_13) == 0x001810, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_25) == 0x001818, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_25' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_6) == 0x001820, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_15) == 0x001828, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_15' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_26) == 0x00182C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_26' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_27) == 0x001830, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_27' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_14) == 0x001834, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_14) == 0x001838, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_46) == 0x00183C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_46' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_13) == 0x00183D, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_7) == 0x00183E, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_HasMatchingGameplayTag_self_CastInput_1) == 0x001840, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_HasMatchingGameplayTag_self_CastInput_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_HasMatchingGameplayTag_ReturnValue_1) == 0x001850, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_HasMatchingGameplayTag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Not_PreBool_ReturnValue_5) == 0x001851, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_7) == 0x001858, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_47) == 0x001860, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_47' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_GetActorLocation_ReturnValue_5) == 0x001864, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_GetActorLocation_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_VectorVector_ReturnValue_2) == 0x001870, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_VectorVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Conv_VectorToRotator_ReturnValue_2) == 0x00187C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Conv_VectorToRotator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSocketLocation_ReturnValue_1) == 0x001888, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSocketLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult) == 0x001894, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult_1) == 0x00191C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetGameTimeInSeconds_ReturnValue) == 0x0019A4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetGameTimeInSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_48) == 0x0019A8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_48' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_49) == 0x0019A9, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_49' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_8) == 0x0019AA, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_8) == 0x0019B0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_50) == 0x0019B8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_50' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_9) == 0x0019B9, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_10) == 0x0019BA, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_9) == 0x0019C0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_10) == 0x0019C8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_51) == 0x0019D0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_51' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_52) == 0x0019D1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_52' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_IsClosed_Variable_7) == 0x0019D2, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_IsClosed_Variable_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Select_Default_3) == 0x0019D8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_SpawnCameraLensEffect_ReturnValue) == 0x0019E0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_SpawnCameraLensEffect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsB_Player_Health_Damage_Camera_Lens_Effect) == 0x0019E8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsB_Player_Health_Damage_Camera_Lens_Effect' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_16) == 0x0019F0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_16' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsB_Player_Shield_Damage_Camera_Lens_Effect) == 0x0019F8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsB_Player_Shield_Damage_Camera_Lens_Effect' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_17) == 0x001A00, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_17' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Has_Been_Initd_Variable_8) == 0x001A01, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Has_Been_Initd_Variable_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsDedicatedServer_ReturnValue_7) == 0x001A02, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsDedicatedServer_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsDedicatedServer_ReturnValue_8) == 0x001A03, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsDedicatedServer_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Not_PreBool_ReturnValue_6) == 0x001A04, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Not_PreBool_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_HasAnyTags_ReturnValue) == 0x001A05, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_HasAnyTags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_IsClosed_Variable_8) == 0x001A06, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_IsClosed_Variable_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_RandomInteger_ReturnValue) == 0x001A08, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_RandomInteger_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Select_Default_4) == 0x001A0C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_HasAnyMatchingGameplayTags_ReturnValue) == 0x001A14, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_HasAnyMatchingGameplayTags_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_PlayLocalAnimMontage_ReturnValue_1) == 0x001A18, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_PlayLocalAnimMontage_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_11) == 0x001A1C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Select_Default_5) == 0x001A20, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Select_Default_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_11) == 0x001A28, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_53) == 0x001A30, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_53' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Select_Default_6) == 0x001A38, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Select_Default_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_ClassIsChildOf_ReturnValue) == 0x001A40, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_ClassIsChildOf_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Select_Default_7) == 0x001A48, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Select_Default_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_SpawnCameraLensEffectDirectional_ReturnValue) == 0x001A50, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_SpawnCameraLensEffectDirectional_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetController_ReturnValue_2) == 0x001A58, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetController_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsFort_Player_Controller_2) == 0x001A60, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsFort_Player_Controller_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_18) == 0x001A68, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_18' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetAbilitySystemComponent_ReturnValue_1) == 0x001A70, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetAbilitySystemComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute) == 0x001A78, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue) == 0x001A7C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute_1) == 0x001A80, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue_1) == 0x001A84, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Divide_FloatFloat_ReturnValue) == 0x001A88, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsLocalPlayerController_ReturnValue) == 0x001A8C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsLocalPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x001A90, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_12) == 0x001A94, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetAbilitySystemComponent_ReturnValue_2) == 0x001A98, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetAbilitySystemComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_12) == 0x001AA0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute_2) == 0x001AA8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue_2) == 0x001AAC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_54) == 0x001AB0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_54' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute_3) == 0x001AB1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue_3) == 0x001AB4, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Divide_FloatFloat_ReturnValue_1) == 0x001AB8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Divide_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Conv_VectorToLinearColor_ReturnValue_1) == 0x001ABC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Conv_VectorToLinearColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x001ACC, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_13) == 0x001AD0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Not_PreBool_ReturnValue_7) == 0x001AD1, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Not_PreBool_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_13) == 0x001AD8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_55) == 0x001AE0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_55' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_CreateDynamicMaterialInstance_ReturnValue_11) == 0x001AE8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_CreateDynamicMaterialInstance_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_14) == 0x001AF0, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_28) == 0x001AF8, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_28' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_AsMaterial_Instance_Dynamic_7) == 0x001B00, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_AsMaterial_Instance_Dynamic_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_DynamicCast_bSuccess_19) == 0x001B08, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_DynamicCast_bSuccess_19' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_29) == 0x001B0C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_29' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_30) == 0x001B10, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_30' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetNumMaterials_ReturnValue_15) == 0x001B14, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetNumMaterials_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_IntInt_ReturnValue_15) == 0x001B18, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_IntInt_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_56) == 0x001B1C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_56' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_14) == 0x001B1D, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetGameTimeInSeconds_ReturnValue_1) == 0x001B20, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetGameTimeInSeconds_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_ParticleSystemReference) == 0x001B28, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_ParticleSystemReference' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_FirstSocketName) == 0x001B30, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_FirstSocketName' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_SecondSocketName) == 0x001B38, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_SecondSocketName' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_Width) == 0x001B40, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_Width' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_OverrideParticleComp) == 0x001B48, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_OverrideParticleComp' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_OverideFirstSocketName) == 0x001B50, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_OverideFirstSocketName' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_OverideSecondSocketName) == 0x001B58, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_OverideSecondSocketName' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x001B60, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_57) == 0x001B64, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_57' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Less_FloatFloat_ReturnValue_2) == 0x001B65, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Less_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_BooleanAND_ReturnValue_1) == 0x001B66, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, K2Node_Event_bActive) == 0x001B67, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::K2Node_Event_bActive' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_bool_Variable_15) == 0x001B68, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_bool_Variable_15' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_58) == 0x001B69, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_58' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_59) == 0x001B6A, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_59' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_60) == 0x001B6B, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_60' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, Temp_int_Variable_16) == 0x001B6C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::Temp_int_Variable_16' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetMaterial_ReturnValue_15) == 0x001B70, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetMaterial_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Array_Add_ReturnValue_31) == 0x001B78, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Array_Add_ReturnValue_31' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_LessEqual_IntInt_ReturnValue_15) == 0x001B7C, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_LessEqual_IntInt_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_IntInt_ReturnValue_18) == 0x001B80, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_IntInt_ReturnValue_18' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_MakeLiteralByte_ReturnValue_14) == 0x001B84, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_MakeLiteralByte_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_GetSkeletalMeshForPartType_ReturnValue_14) == 0x001B88, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_GetSkeletalMeshForPartType_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_IsValid_ReturnValue_61) == 0x001B90, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_IsValid_ReturnValue_61' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic, CallFunc_Add_FloatFloat_ReturnValue) == 0x001B94, "Member 'PlayerPawn_Generic_C_ExecuteUbergraph_PlayerPawn_Generic::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.AnimTrailsNotify
 // 0x0001 (0x0001 - 0x0000)
@@ -1478,33 +839,46 @@ struct PlayerPawn_Generic_C_AnimTrailsNotify final
 public:
 	bool                                          bActive;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_AnimTrailsNotify) == 0x000001, "Wrong alignment on PlayerPawn_Generic_C_AnimTrailsNotify");
-static_assert(sizeof(PlayerPawn_Generic_C_AnimTrailsNotify) == 0x000001, "Wrong size on PlayerPawn_Generic_C_AnimTrailsNotify");
-static_assert(offsetof(PlayerPawn_Generic_C_AnimTrailsNotify, bActive) == 0x000000, "Member 'PlayerPawn_Generic_C_AnimTrailsNotify::bActive' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.AnimTrailsSetup
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct PlayerPawn_Generic_C_AnimTrailsSetup final
 {
 public:
 	class UParticleSystem*                        ParticleSystemReference;                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   FirstSocketName;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   SecondSocketName;                                  // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Width;                                             // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystemComponent*               OverrideParticleComp;                              // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   OverideFirstSocketName;                            // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   OverideSecondSocketName;                           // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         NiagaraSystemReference;                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   FirstSocketName;                                   // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   SecondSocketName;                                  // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Width;                                             // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFXSystemComponent*                     OverrideParticleComp;                              // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   OverideFirstSocketName;                            // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   OverideSecondSocketName;                           // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_AnimTrailsSetup) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_AnimTrailsSetup");
-static_assert(sizeof(PlayerPawn_Generic_C_AnimTrailsSetup) == 0x000038, "Wrong size on PlayerPawn_Generic_C_AnimTrailsSetup");
-static_assert(offsetof(PlayerPawn_Generic_C_AnimTrailsSetup, ParticleSystemReference) == 0x000000, "Member 'PlayerPawn_Generic_C_AnimTrailsSetup::ParticleSystemReference' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_AnimTrailsSetup, FirstSocketName) == 0x000008, "Member 'PlayerPawn_Generic_C_AnimTrailsSetup::FirstSocketName' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_AnimTrailsSetup, SecondSocketName) == 0x000010, "Member 'PlayerPawn_Generic_C_AnimTrailsSetup::SecondSocketName' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_AnimTrailsSetup, Width) == 0x000018, "Member 'PlayerPawn_Generic_C_AnimTrailsSetup::Width' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_AnimTrailsSetup, OverrideParticleComp) == 0x000020, "Member 'PlayerPawn_Generic_C_AnimTrailsSetup::OverrideParticleComp' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_AnimTrailsSetup, OverideFirstSocketName) == 0x000028, "Member 'PlayerPawn_Generic_C_AnimTrailsSetup::OverideFirstSocketName' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_AnimTrailsSetup, OverideSecondSocketName) == 0x000030, "Member 'PlayerPawn_Generic_C_AnimTrailsSetup::OverideSecondSocketName' has a wrong offset!");
+
+// Function PlayerPawn_Generic.PlayerPawn_Generic_C.SetBlockedByPawns
+// 0x0001 (0x0001 - 0x0000)
+struct PlayerPawn_Generic_C_SetBlockedByPawns final
+{
+public:
+	bool                                          bLocked;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function PlayerPawn_Generic.PlayerPawn_Generic_C.MeleeSwingRight
+// 0x0001 (0x0001 - 0x0000)
+struct PlayerPawn_Generic_C_MeleeSwingRight final
+{
+public:
+	bool                                          First_Right;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function PlayerPawn_Generic.PlayerPawn_Generic_C.MeleeSwingLeft
+// 0x0001 (0x0001 - 0x0000)
+struct PlayerPawn_Generic_C_MeleeSwingLeft final
+{
+public:
+	bool                                          First_Left;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.GameplayCue.Damage
 // 0x00C0 (0x00C0 - 0x0000)
@@ -1515,10 +889,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-static_assert(alignof(PlayerPawn_Generic_C_GameplayCue_Damage) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_GameplayCue_Damage");
-static_assert(sizeof(PlayerPawn_Generic_C_GameplayCue_Damage) == 0x0000C0, "Wrong size on PlayerPawn_Generic_C_GameplayCue_Damage");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Damage, EventType) == 0x000000, "Member 'PlayerPawn_Generic_C_GameplayCue_Damage::EventType' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Damage, Parameters) == 0x000008, "Member 'PlayerPawn_Generic_C_GameplayCue_Damage::Parameters' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.GameplayCue.Shield.Destroyed
 // 0x00C0 (0x00C0 - 0x0000)
@@ -1529,10 +899,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-static_assert(alignof(PlayerPawn_Generic_C_GameplayCue_Shield_Destroyed) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_GameplayCue_Shield_Destroyed");
-static_assert(sizeof(PlayerPawn_Generic_C_GameplayCue_Shield_Destroyed) == 0x0000C0, "Wrong size on PlayerPawn_Generic_C_GameplayCue_Shield_Destroyed");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Shield_Destroyed, EventType) == 0x000000, "Member 'PlayerPawn_Generic_C_GameplayCue_Shield_Destroyed::EventType' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Shield_Destroyed, Parameters) == 0x000008, "Member 'PlayerPawn_Generic_C_GameplayCue_Shield_Destroyed::Parameters' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.GameplayCue.Damage.Shielded
 // 0x00C0 (0x00C0 - 0x0000)
@@ -1543,10 +909,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-static_assert(alignof(PlayerPawn_Generic_C_GameplayCue_Damage_Shielded) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_GameplayCue_Damage_Shielded");
-static_assert(sizeof(PlayerPawn_Generic_C_GameplayCue_Damage_Shielded) == 0x0000C0, "Wrong size on PlayerPawn_Generic_C_GameplayCue_Damage_Shielded");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Damage_Shielded, EventType) == 0x000000, "Member 'PlayerPawn_Generic_C_GameplayCue_Damage_Shielded::EventType' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Damage_Shielded, Parameters) == 0x000008, "Member 'PlayerPawn_Generic_C_GameplayCue_Damage_Shielded::Parameters' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.GameplayCue.Shield.FullyCharged
 // 0x00C0 (0x00C0 - 0x0000)
@@ -1557,10 +919,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-static_assert(alignof(PlayerPawn_Generic_C_GameplayCue_Shield_FullyCharged) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_GameplayCue_Shield_FullyCharged");
-static_assert(sizeof(PlayerPawn_Generic_C_GameplayCue_Shield_FullyCharged) == 0x0000C0, "Wrong size on PlayerPawn_Generic_C_GameplayCue_Shield_FullyCharged");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Shield_FullyCharged, EventType) == 0x000000, "Member 'PlayerPawn_Generic_C_GameplayCue_Shield_FullyCharged::EventType' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Shield_FullyCharged, Parameters) == 0x000008, "Member 'PlayerPawn_Generic_C_GameplayCue_Shield_FullyCharged::Parameters' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.OnDeathPlayEffects
 // 0x00E8 (0x00E8 - 0x0000)
@@ -1571,21 +929,11 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             HitInfo;                                           // 0x0034(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             HitInfo;                                           // 0x0034(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	class AFortPawn*                              InstigatedBy;                                      // 0x00C0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 DamageCauser;                                      // 0x00C8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00D0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(PlayerPawn_Generic_C_OnDeathPlayEffects) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_OnDeathPlayEffects");
-static_assert(sizeof(PlayerPawn_Generic_C_OnDeathPlayEffects) == 0x0000E8, "Wrong size on PlayerPawn_Generic_C_OnDeathPlayEffects");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathPlayEffects, Damage) == 0x000000, "Member 'PlayerPawn_Generic_C_OnDeathPlayEffects::Damage' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathPlayEffects, DamageTags) == 0x000008, "Member 'PlayerPawn_Generic_C_OnDeathPlayEffects::DamageTags' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathPlayEffects, Momentum) == 0x000028, "Member 'PlayerPawn_Generic_C_OnDeathPlayEffects::Momentum' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathPlayEffects, HitInfo) == 0x000034, "Member 'PlayerPawn_Generic_C_OnDeathPlayEffects::HitInfo' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathPlayEffects, InstigatedBy) == 0x0000C0, "Member 'PlayerPawn_Generic_C_OnDeathPlayEffects::InstigatedBy' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathPlayEffects, DamageCauser) == 0x0000C8, "Member 'PlayerPawn_Generic_C_OnDeathPlayEffects::DamageCauser' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathPlayEffects, EffectContext) == 0x0000D0, "Member 'PlayerPawn_Generic_C_OnDeathPlayEffects::EffectContext' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Player Creates a Splash
 // 0x0030 (0x0030 - 0x0000)
@@ -1594,9 +942,6 @@ struct PlayerPawn_Generic_C_Player_Creates_a_Splash final
 public:
 	struct FTransform                             NewTransform;                                      // 0x0000(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Player_Creates_a_Splash) == 0x000010, "Wrong alignment on PlayerPawn_Generic_C_Player_Creates_a_Splash");
-static_assert(sizeof(PlayerPawn_Generic_C_Player_Creates_a_Splash) == 0x000030, "Wrong size on PlayerPawn_Generic_C_Player_Creates_a_Splash");
-static_assert(offsetof(PlayerPawn_Generic_C_Player_Creates_a_Splash, NewTransform) == 0x000000, "Member 'PlayerPawn_Generic_C_Player_Creates_a_Splash::NewTransform' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.PlayGameplayWindEffect
 // 0x0001 (0x0001 - 0x0000)
@@ -1605,9 +950,6 @@ struct PlayerPawn_Generic_C_PlayGameplayWindEffect final
 public:
 	EPlayerWindParticleEmitters                   Player_Wind_Particle_Emitter_To_Fire;              // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_PlayGameplayWindEffect) == 0x000001, "Wrong alignment on PlayerPawn_Generic_C_PlayGameplayWindEffect");
-static_assert(sizeof(PlayerPawn_Generic_C_PlayGameplayWindEffect) == 0x000001, "Wrong size on PlayerPawn_Generic_C_PlayGameplayWindEffect");
-static_assert(offsetof(PlayerPawn_Generic_C_PlayGameplayWindEffect, Player_Wind_Particle_Emitter_To_Fire) == 0x000000, "Member 'PlayerPawn_Generic_C_PlayGameplayWindEffect::Player_Wind_Particle_Emitter_To_Fire' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.OnDeathServer
 // 0x00E8 (0x00E8 - 0x0000)
@@ -1618,21 +960,11 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             HitInfo;                                           // 0x0034(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             HitInfo;                                           // 0x0034(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	class AController*                            InstigatedBy;                                      // 0x00C0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 DamageCauser;                                      // 0x00C8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00D0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(PlayerPawn_Generic_C_OnDeathServer) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_OnDeathServer");
-static_assert(sizeof(PlayerPawn_Generic_C_OnDeathServer) == 0x0000E8, "Wrong size on PlayerPawn_Generic_C_OnDeathServer");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathServer, Damage) == 0x000000, "Member 'PlayerPawn_Generic_C_OnDeathServer::Damage' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathServer, DamageTags) == 0x000008, "Member 'PlayerPawn_Generic_C_OnDeathServer::DamageTags' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathServer, Momentum) == 0x000028, "Member 'PlayerPawn_Generic_C_OnDeathServer::Momentum' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathServer, HitInfo) == 0x000034, "Member 'PlayerPawn_Generic_C_OnDeathServer::HitInfo' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathServer, InstigatedBy) == 0x0000C0, "Member 'PlayerPawn_Generic_C_OnDeathServer::InstigatedBy' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathServer, DamageCauser) == 0x0000C8, "Member 'PlayerPawn_Generic_C_OnDeathServer::DamageCauser' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDeathServer, EffectContext) == 0x0000D0, "Member 'PlayerPawn_Generic_C_OnDeathServer::EffectContext' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.MultiEndSwap
 // 0x0008 (0x0008 - 0x0000)
@@ -1641,9 +973,6 @@ struct PlayerPawn_Generic_C_MultiEndSwap final
 public:
 	class AFortWeapon*                            CurrentWeapon_0;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_MultiEndSwap) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_MultiEndSwap");
-static_assert(sizeof(PlayerPawn_Generic_C_MultiEndSwap) == 0x000008, "Wrong size on PlayerPawn_Generic_C_MultiEndSwap");
-static_assert(offsetof(PlayerPawn_Generic_C_MultiEndSwap, CurrentWeapon_0) == 0x000000, "Member 'PlayerPawn_Generic_C_MultiEndSwap::CurrentWeapon_0' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.MultiSwapWeapon
 // 0x0010 (0x0010 - 0x0000)
@@ -1653,10 +982,6 @@ public:
 	class AFortWeapon*                            New;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AFortWeapon*                            Prev;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_MultiSwapWeapon) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_MultiSwapWeapon");
-static_assert(sizeof(PlayerPawn_Generic_C_MultiSwapWeapon) == 0x000010, "Wrong size on PlayerPawn_Generic_C_MultiSwapWeapon");
-static_assert(offsetof(PlayerPawn_Generic_C_MultiSwapWeapon, New) == 0x000000, "Member 'PlayerPawn_Generic_C_MultiSwapWeapon::New' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_MultiSwapWeapon, Prev) == 0x000008, "Member 'PlayerPawn_Generic_C_MultiSwapWeapon::Prev' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.BindWeaponSwap
 // 0x0004 (0x0004 - 0x0000)
@@ -1665,9 +990,6 @@ struct PlayerPawn_Generic_C_BindWeaponSwap final
 public:
 	float                                         InDuration;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_BindWeaponSwap) == 0x000004, "Wrong alignment on PlayerPawn_Generic_C_BindWeaponSwap");
-static_assert(sizeof(PlayerPawn_Generic_C_BindWeaponSwap) == 0x000004, "Wrong size on PlayerPawn_Generic_C_BindWeaponSwap");
-static_assert(offsetof(PlayerPawn_Generic_C_BindWeaponSwap, InDuration) == 0x000000, "Member 'PlayerPawn_Generic_C_BindWeaponSwap::InDuration' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.ClientBindWeaponSwap
 // 0x0010 (0x0010 - 0x0000)
@@ -1677,10 +999,6 @@ public:
 	class AFortWeapon*                            NewWeapon;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AFortWeapon*                            PrevWeapon;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_ClientBindWeaponSwap) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_ClientBindWeaponSwap");
-static_assert(sizeof(PlayerPawn_Generic_C_ClientBindWeaponSwap) == 0x000010, "Wrong size on PlayerPawn_Generic_C_ClientBindWeaponSwap");
-static_assert(offsetof(PlayerPawn_Generic_C_ClientBindWeaponSwap, NewWeapon) == 0x000000, "Member 'PlayerPawn_Generic_C_ClientBindWeaponSwap::NewWeapon' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ClientBindWeaponSwap, PrevWeapon) == 0x000008, "Member 'PlayerPawn_Generic_C_ClientBindWeaponSwap::PrevWeapon' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.OnDisplaySentence
 // 0x0018 (0x0018 - 0x0000)
@@ -1689,9 +1007,6 @@ struct PlayerPawn_Generic_C_OnDisplaySentence final
 public:
 	class FText                                   SpeechText;                                        // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(PlayerPawn_Generic_C_OnDisplaySentence) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_OnDisplaySentence");
-static_assert(sizeof(PlayerPawn_Generic_C_OnDisplaySentence) == 0x000018, "Wrong size on PlayerPawn_Generic_C_OnDisplaySentence");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDisplaySentence, SpeechText) == 0x000000, "Member 'PlayerPawn_Generic_C_OnDisplaySentence::SpeechText' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.ReceivePossessed
 // 0x0008 (0x0008 - 0x0000)
@@ -1700,9 +1015,6 @@ struct PlayerPawn_Generic_C_ReceivePossessed final
 public:
 	class AController*                            NewController;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_ReceivePossessed) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_ReceivePossessed");
-static_assert(sizeof(PlayerPawn_Generic_C_ReceivePossessed) == 0x000008, "Wrong size on PlayerPawn_Generic_C_ReceivePossessed");
-static_assert(offsetof(PlayerPawn_Generic_C_ReceivePossessed, NewController) == 0x000000, "Member 'PlayerPawn_Generic_C_ReceivePossessed::NewController' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.OnBaseChanged
 // 0x0008 (0x0008 - 0x0000)
@@ -1711,9 +1023,6 @@ struct PlayerPawn_Generic_C_OnBaseChanged final
 public:
 	class AActor*                                 NewBase;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_OnBaseChanged) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_OnBaseChanged");
-static_assert(sizeof(PlayerPawn_Generic_C_OnBaseChanged) == 0x000008, "Wrong size on PlayerPawn_Generic_C_OnBaseChanged");
-static_assert(offsetof(PlayerPawn_Generic_C_OnBaseChanged, NewBase) == 0x000000, "Member 'PlayerPawn_Generic_C_OnBaseChanged::NewBase' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.InternalSetFirstPersonCamera
 // 0x0001 (0x0001 - 0x0000)
@@ -1722,9 +1031,6 @@ struct PlayerPawn_Generic_C_InternalSetFirstPersonCamera final
 public:
 	bool                                          NewUseFirstPersonCamera;                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_InternalSetFirstPersonCamera) == 0x000001, "Wrong alignment on PlayerPawn_Generic_C_InternalSetFirstPersonCamera");
-static_assert(sizeof(PlayerPawn_Generic_C_InternalSetFirstPersonCamera) == 0x000001, "Wrong size on PlayerPawn_Generic_C_InternalSetFirstPersonCamera");
-static_assert(offsetof(PlayerPawn_Generic_C_InternalSetFirstPersonCamera, NewUseFirstPersonCamera) == 0x000000, "Member 'PlayerPawn_Generic_C_InternalSetFirstPersonCamera::NewUseFirstPersonCamera' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.SetFirstPersonCamera
 // 0x0001 (0x0001 - 0x0000)
@@ -1733,9 +1039,6 @@ struct PlayerPawn_Generic_C_SetFirstPersonCamera final
 public:
 	bool                                          bNewUseFirstPersonCamera;                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_SetFirstPersonCamera) == 0x000001, "Wrong alignment on PlayerPawn_Generic_C_SetFirstPersonCamera");
-static_assert(sizeof(PlayerPawn_Generic_C_SetFirstPersonCamera) == 0x000001, "Wrong size on PlayerPawn_Generic_C_SetFirstPersonCamera");
-static_assert(offsetof(PlayerPawn_Generic_C_SetFirstPersonCamera, bNewUseFirstPersonCamera) == 0x000000, "Member 'PlayerPawn_Generic_C_SetFirstPersonCamera::bNewUseFirstPersonCamera' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.GameplayCue.Abilities.Activation.Generic.HarvestBuff.Tier2
 // 0x00C0 (0x00C0 - 0x0000)
@@ -1746,10 +1049,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-static_assert(alignof(PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier2) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier2");
-static_assert(sizeof(PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier2) == 0x0000C0, "Wrong size on PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier2");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier2, EventType) == 0x000000, "Member 'PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier2::EventType' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier2, Parameters) == 0x000008, "Member 'PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier2::Parameters' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.GameplayCue.Abilities.Activation.Generic.HarvestBuff.Tier1
 // 0x00C0 (0x00C0 - 0x0000)
@@ -1760,10 +1059,6 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00B8)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
-static_assert(alignof(PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier1) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier1");
-static_assert(sizeof(PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier1) == 0x0000C0, "Wrong size on PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier1");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier1, EventType) == 0x000000, "Member 'PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier1::EventType' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier1, Parameters) == 0x000008, "Member 'PlayerPawn_Generic_C_GameplayCue_Abilities_Activation_Generic_HarvestBuff_Tier1::Parameters' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -1772,9 +1067,6 @@ struct PlayerPawn_Generic_C_ReceiveTick final
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_ReceiveTick) == 0x000004, "Wrong alignment on PlayerPawn_Generic_C_ReceiveTick");
-static_assert(sizeof(PlayerPawn_Generic_C_ReceiveTick) == 0x000004, "Wrong size on PlayerPawn_Generic_C_ReceiveTick");
-static_assert(offsetof(PlayerPawn_Generic_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'PlayerPawn_Generic_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.OnWeaponEquipped
 // 0x0010 (0x0010 - 0x0000)
@@ -1784,21 +1076,14 @@ public:
 	class AFortWeapon*                            NewWeapon;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AFortWeapon*                            PrevWeapon;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_OnWeaponEquipped) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_OnWeaponEquipped");
-static_assert(sizeof(PlayerPawn_Generic_C_OnWeaponEquipped) == 0x000010, "Wrong size on PlayerPawn_Generic_C_OnWeaponEquipped");
-static_assert(offsetof(PlayerPawn_Generic_C_OnWeaponEquipped, NewWeapon) == 0x000000, "Member 'PlayerPawn_Generic_C_OnWeaponEquipped::NewWeapon' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnWeaponEquipped, PrevWeapon) == 0x000008, "Member 'PlayerPawn_Generic_C_OnWeaponEquipped::PrevWeapon' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.OnLanded
-// 0x0088 (0x0088 - 0x0000)
+// 0x008C (0x008C - 0x0000)
 struct PlayerPawn_Generic_C_OnLanded final
 {
 public:
-	struct FHitResult                             Hit;                                               // 0x0000(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             Hit;                                               // 0x0000(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(PlayerPawn_Generic_C_OnLanded) == 0x000004, "Wrong alignment on PlayerPawn_Generic_C_OnLanded");
-static_assert(sizeof(PlayerPawn_Generic_C_OnLanded) == 0x000088, "Wrong size on PlayerPawn_Generic_C_OnLanded");
-static_assert(offsetof(PlayerPawn_Generic_C_OnLanded, Hit) == 0x000000, "Member 'PlayerPawn_Generic_C_OnLanded::Hit' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.OnDamagePlayEffects
 // 0x00E8 (0x00E8 - 0x0000)
@@ -1809,21 +1094,11 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagContainer                  DamageTags;                                        // 0x0008(0x0020)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	struct FVector                                Momentum;                                          // 0x0028(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             HitInfo;                                           // 0x0034(0x0088)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             HitInfo;                                           // 0x0034(0x008C)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	class AFortPawn*                              InstigatedBy;                                      // 0x00C0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 DamageCauser;                                      // 0x00C8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayEffectContextHandle           EffectContext;                                     // 0x00D0(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(PlayerPawn_Generic_C_OnDamagePlayEffects) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_OnDamagePlayEffects");
-static_assert(sizeof(PlayerPawn_Generic_C_OnDamagePlayEffects) == 0x0000E8, "Wrong size on PlayerPawn_Generic_C_OnDamagePlayEffects");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDamagePlayEffects, Damage) == 0x000000, "Member 'PlayerPawn_Generic_C_OnDamagePlayEffects::Damage' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDamagePlayEffects, DamageTags) == 0x000008, "Member 'PlayerPawn_Generic_C_OnDamagePlayEffects::DamageTags' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDamagePlayEffects, Momentum) == 0x000028, "Member 'PlayerPawn_Generic_C_OnDamagePlayEffects::Momentum' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDamagePlayEffects, HitInfo) == 0x000034, "Member 'PlayerPawn_Generic_C_OnDamagePlayEffects::HitInfo' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDamagePlayEffects, InstigatedBy) == 0x0000C0, "Member 'PlayerPawn_Generic_C_OnDamagePlayEffects::InstigatedBy' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDamagePlayEffects, DamageCauser) == 0x0000C8, "Member 'PlayerPawn_Generic_C_OnDamagePlayEffects::DamageCauser' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_OnDamagePlayEffects, EffectContext) == 0x0000D0, "Member 'PlayerPawn_Generic_C_OnDamagePlayEffects::EffectContext' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.UserConstructionScript
 // 0x0010 (0x0010 - 0x0000)
@@ -1835,12 +1110,6 @@ public:
 	bool                                          CallFunc_Are_the_wind_and_water_RTT_passes_enabled_NewParam; // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_K2_AttachToComponent_ReturnValue_1;       // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_UserConstructionScript) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_UserConstructionScript");
-static_assert(sizeof(PlayerPawn_Generic_C_UserConstructionScript) == 0x000010, "Wrong size on PlayerPawn_Generic_C_UserConstructionScript");
-static_assert(offsetof(PlayerPawn_Generic_C_UserConstructionScript, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000000, "Member 'PlayerPawn_Generic_C_UserConstructionScript::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_UserConstructionScript, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000008, "Member 'PlayerPawn_Generic_C_UserConstructionScript::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_UserConstructionScript, CallFunc_Are_the_wind_and_water_RTT_passes_enabled_NewParam) == 0x000009, "Member 'PlayerPawn_Generic_C_UserConstructionScript::CallFunc_Are_the_wind_and_water_RTT_passes_enabled_NewParam' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_UserConstructionScript, CallFunc_K2_AttachToComponent_ReturnValue_1) == 0x00000A, "Member 'PlayerPawn_Generic_C_UserConstructionScript::CallFunc_K2_AttachToComponent_ReturnValue_1' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Create and Duplicate Effect Skeletal Meshes Parent
 // 0x01B0 (0x01B0 - 0x0000)
@@ -1851,7 +1120,7 @@ public:
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMeshComponent*                 DuplicatedSkeletalMeshComponent;                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInterface*                     Material_to_Apply;                                 // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       Empty_MID_Array;                                   // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInstanceDynamic*>       Empty_MID_Array;                                   // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	int32                                         TranslucentSortPriority;                           // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1863,7 +1132,7 @@ public:
 	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue;   // 0x0040(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0050(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0050(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	int32                                         CallFunc_GetNumMaterials_ReturnValue;              // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -1878,8 +1147,7 @@ public:
 	class USceneComponent*                        K2Node_Select_Default;                             // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_GetRelativeTransform_ReturnValue;         // 0x0080(0x0030)(IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x00B4(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x00B4(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	struct FTransform                             Temp_struct_Variable;                              // 0x0140(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Variable_1;                              // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -1891,44 +1159,6 @@ public:
 	class UMaterialInterface*                     CallFunc_Array_Get_Item_1;                         // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_1;           // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent) == 0x000010, "Wrong alignment on PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent");
-static_assert(sizeof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent) == 0x0001B0, "Wrong size on PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, BodyType) == 0x000000, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::BodyType' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, DuplicatedSkeletalMeshComponent) == 0x000008, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::DuplicatedSkeletalMeshComponent' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, Material_to_Apply) == 0x000010, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::Material_to_Apply' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, Empty_MID_Array) == 0x000018, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::Empty_MID_Array' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, TranslucentSortPriority) == 0x000028, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::TranslucentSortPriority' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_Array_LastIndex_ReturnValue) == 0x00002C, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000030, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_Array_Add_ReturnValue) == 0x000038, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_K2_AttachToComponent_ReturnValue) == 0x00003C, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_IsValid_ReturnValue) == 0x00003D, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00003E, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x00003F, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_GetSkeletalMeshForPartType_ReturnValue) == 0x000040, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_GetSkeletalMeshForPartType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_BooleanOR_ReturnValue) == 0x000048, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_GetMaterials_ReturnValue) == 0x000050, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_GetNumMaterials_ReturnValue) == 0x000060, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_GetNumMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_IsValid_ReturnValue_1) == 0x000064, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_Subtract_IntInt_ReturnValue) == 0x000068, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_NotEqual_IntInt_ReturnValue) == 0x00006C, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_IsValid_ReturnValue_2) == 0x00006D, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, Temp_int_Variable) == 0x000070, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, Temp_bool_Variable) == 0x000074, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000075, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, K2Node_Select_Default) == 0x000078, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_GetRelativeTransform_ReturnValue) == 0x000080, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_GetRelativeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_Add_IntInt_ReturnValue) == 0x0000B0, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x0000B4, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, Temp_struct_Variable) == 0x000140, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, Temp_bool_Variable_1) == 0x000170, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_AddComponent_ReturnValue) == 0x000178, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, K2Node_Select_Default_1) == 0x000180, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, Temp_int_Variable_1) == 0x000188, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_Add_IntInt_ReturnValue_1) == 0x00018C, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_Array_Get_Item) == 0x000190, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_Array_Get_Item_1) == 0x000198, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x0001A0, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Skeletal_Meshes_Parent::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.FindShieldOpacity
 // 0x0068 (0x0068 - 0x0000)
@@ -1962,30 +1192,6 @@ public:
 	float                                         CallFunc_FMax_ReturnValue_2;                       // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_FindShieldOpacity) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_FindShieldOpacity");
-static_assert(sizeof(PlayerPawn_Generic_C_FindShieldOpacity) == 0x000068, "Wrong size on PlayerPawn_Generic_C_FindShieldOpacity");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, Temp_int_Loop_Counter_Variable) == 0x000000, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Add_IntInt_ReturnValue) == 0x000004, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, Temp_int_Array_Index_Variable) == 0x000008, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, Temp_int_Array_Index_Variable_1) == 0x00000C, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, Temp_int_Loop_Counter_Variable_1) == 0x000010, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Add_IntInt_ReturnValue_1) == 0x000014, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, Temp_int_Array_Index_Variable_2) == 0x000018, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Array_Get_Item) == 0x000020, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, Temp_int_Loop_Counter_Variable_2) == 0x00002C, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Array_Get_Item_1) == 0x000030, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Array_Length_ReturnValue_1) == 0x000038, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Less_IntInt_ReturnValue) == 0x00003C, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Less_IntInt_ReturnValue_1) == 0x00003D, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Add_IntInt_ReturnValue_2) == 0x000040, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Array_Get_Item_2) == 0x000048, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Array_Length_ReturnValue_2) == 0x000050, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Less_IntInt_ReturnValue_2) == 0x000054, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_FMax_ReturnValue) == 0x000058, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_FMax_ReturnValue_1) == 0x00005C, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_FMax_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_FMax_ReturnValue_2) == 0x000060, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_FMax_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_FindShieldOpacity, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000064, "Member 'PlayerPawn_Generic_C_FindShieldOpacity::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.SetShieldMids
 // 0x0010 (0x0010 - 0x0000)
@@ -1998,12 +1204,6 @@ public:
 	float                                         Push;                                              // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Set_Push;                                          // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_SetShieldMids) == 0x000004, "Wrong alignment on PlayerPawn_Generic_C_SetShieldMids");
-static_assert(sizeof(PlayerPawn_Generic_C_SetShieldMids) == 0x000010, "Wrong size on PlayerPawn_Generic_C_SetShieldMids");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids, Highlight_Cracks) == 0x000000, "Member 'PlayerPawn_Generic_C_SetShieldMids::Highlight_Cracks' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids, Set_Highlight_Cracks) == 0x000004, "Member 'PlayerPawn_Generic_C_SetShieldMids::Set_Highlight_Cracks' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids, Push) == 0x000008, "Member 'PlayerPawn_Generic_C_SetShieldMids::Push' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids, Set_Push) == 0x00000C, "Member 'PlayerPawn_Generic_C_SetShieldMids::Set_Push' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.SetShieldMids_InternalLoop
 // 0x0040 (0x0040 - 0x0000)
@@ -2016,7 +1216,7 @@ public:
 	float                                         Push;                                              // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Set_Push;                                          // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInstanceDynamic*>       NewParam1;                                         // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInstanceDynamic*>       NewParam1;                                         // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2026,19 +1226,6 @@ public:
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_SetShieldMids_InternalLoop");
-static_assert(sizeof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop) == 0x000040, "Wrong size on PlayerPawn_Generic_C_SetShieldMids_InternalLoop");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop, Highlight_Cracks) == 0x000000, "Member 'PlayerPawn_Generic_C_SetShieldMids_InternalLoop::Highlight_Cracks' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop, Set_Highlight_Cracks) == 0x000004, "Member 'PlayerPawn_Generic_C_SetShieldMids_InternalLoop::Set_Highlight_Cracks' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop, Push) == 0x000008, "Member 'PlayerPawn_Generic_C_SetShieldMids_InternalLoop::Push' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop, Set_Push) == 0x00000C, "Member 'PlayerPawn_Generic_C_SetShieldMids_InternalLoop::Set_Push' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop, NewParam1) == 0x000010, "Member 'PlayerPawn_Generic_C_SetShieldMids_InternalLoop::NewParam1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'PlayerPawn_Generic_C_SetShieldMids_InternalLoop::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop, CallFunc_Array_Length_ReturnValue) == 0x000024, "Member 'PlayerPawn_Generic_C_SetShieldMids_InternalLoop::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop, CallFunc_Add_IntInt_ReturnValue) == 0x000028, "Member 'PlayerPawn_Generic_C_SetShieldMids_InternalLoop::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop, CallFunc_Less_IntInt_ReturnValue) == 0x00002C, "Member 'PlayerPawn_Generic_C_SetShieldMids_InternalLoop::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop, Temp_int_Array_Index_Variable) == 0x000030, "Member 'PlayerPawn_Generic_C_SetShieldMids_InternalLoop::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SetShieldMids_InternalLoop, CallFunc_Array_Get_Item) == 0x000038, "Member 'PlayerPawn_Generic_C_SetShieldMids_InternalLoop::CallFunc_Array_Get_Item' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.SlaveAMeshToTheBody
 // 0x0100 (0x0100 - 0x0000)
@@ -2056,20 +1243,8 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_32[0xE];                                       // 0x0032(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_GetRelativeTransform_ReturnValue;         // 0x0040(0x0030)(IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x0070(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x0070(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 };
-static_assert(alignof(PlayerPawn_Generic_C_SlaveAMeshToTheBody) == 0x000010, "Wrong alignment on PlayerPawn_Generic_C_SlaveAMeshToTheBody");
-static_assert(sizeof(PlayerPawn_Generic_C_SlaveAMeshToTheBody) == 0x000100, "Wrong size on PlayerPawn_Generic_C_SlaveAMeshToTheBody");
-static_assert(offsetof(PlayerPawn_Generic_C_SlaveAMeshToTheBody, Mesh_0) == 0x000000, "Member 'PlayerPawn_Generic_C_SlaveAMeshToTheBody::Mesh_0' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SlaveAMeshToTheBody, Master) == 0x000008, "Member 'PlayerPawn_Generic_C_SlaveAMeshToTheBody::Master' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SlaveAMeshToTheBody, MasterToUse) == 0x000010, "Member 'PlayerPawn_Generic_C_SlaveAMeshToTheBody::MasterToUse' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SlaveAMeshToTheBody, CallFunc_GetAttachSocketName_ReturnValue) == 0x000018, "Member 'PlayerPawn_Generic_C_SlaveAMeshToTheBody::CallFunc_GetAttachSocketName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SlaveAMeshToTheBody, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000020, "Member 'PlayerPawn_Generic_C_SlaveAMeshToTheBody::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SlaveAMeshToTheBody, CallFunc_GetAttachParent_ReturnValue) == 0x000028, "Member 'PlayerPawn_Generic_C_SlaveAMeshToTheBody::CallFunc_GetAttachParent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SlaveAMeshToTheBody, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000030, "Member 'PlayerPawn_Generic_C_SlaveAMeshToTheBody::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SlaveAMeshToTheBody, CallFunc_IsValid_ReturnValue) == 0x000031, "Member 'PlayerPawn_Generic_C_SlaveAMeshToTheBody::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SlaveAMeshToTheBody, CallFunc_GetRelativeTransform_ReturnValue) == 0x000040, "Member 'PlayerPawn_Generic_C_SlaveAMeshToTheBody::CallFunc_GetRelativeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_SlaveAMeshToTheBody, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x000070, "Member 'PlayerPawn_Generic_C_SlaveAMeshToTheBody::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.ToggleShieldVisibility
 // 0x00B0 (0x00B0 - 0x0000)
@@ -2088,19 +1263,6 @@ public:
 	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x00AB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_ToggleShieldVisibility) == 0x000010, "Wrong alignment on PlayerPawn_Generic_C_ToggleShieldVisibility");
-static_assert(sizeof(PlayerPawn_Generic_C_ToggleShieldVisibility) == 0x0000B0, "Wrong size on PlayerPawn_Generic_C_ToggleShieldVisibility");
-static_assert(offsetof(PlayerPawn_Generic_C_ToggleShieldVisibility, Temp_struct_Variable) == 0x000000, "Member 'PlayerPawn_Generic_C_ToggleShieldVisibility::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ToggleShieldVisibility, Temp_struct_Variable_1) == 0x000030, "Member 'PlayerPawn_Generic_C_ToggleShieldVisibility::Temp_struct_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ToggleShieldVisibility, CallFunc_AddComponent_ReturnValue) == 0x000060, "Member 'PlayerPawn_Generic_C_ToggleShieldVisibility::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ToggleShieldVisibility, CallFunc_AddComponent_ReturnValue_1) == 0x000068, "Member 'PlayerPawn_Generic_C_ToggleShieldVisibility::CallFunc_AddComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ToggleShieldVisibility, Temp_struct_Variable_2) == 0x000070, "Member 'PlayerPawn_Generic_C_ToggleShieldVisibility::Temp_struct_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ToggleShieldVisibility, CallFunc_AddComponent_ReturnValue_2) == 0x0000A0, "Member 'PlayerPawn_Generic_C_ToggleShieldVisibility::CallFunc_AddComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ToggleShieldVisibility, CallFunc_IsValid_ReturnValue) == 0x0000A8, "Member 'PlayerPawn_Generic_C_ToggleShieldVisibility::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ToggleShieldVisibility, CallFunc_IsValid_ReturnValue_1) == 0x0000A9, "Member 'PlayerPawn_Generic_C_ToggleShieldVisibility::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ToggleShieldVisibility, CallFunc_BooleanOR_ReturnValue) == 0x0000AA, "Member 'PlayerPawn_Generic_C_ToggleShieldVisibility::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ToggleShieldVisibility, CallFunc_BooleanOR_ReturnValue_1) == 0x0000AB, "Member 'PlayerPawn_Generic_C_ToggleShieldVisibility::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_ToggleShieldVisibility, CallFunc_BooleanOR_ReturnValue_2) == 0x0000AC, "Member 'PlayerPawn_Generic_C_ToggleShieldVisibility::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Create and Duplicate Effect Poseable Skeletal Mesh
 // 0x01C0 (0x01C0 - 0x0000)
@@ -2110,7 +1272,7 @@ public:
 	EFortCustomPartType                           BodyType;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     Material_to_Apply;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       Empty_MID_Array;                                   // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInstanceDynamic*>       Empty_MID_Array;                                   // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	int32                                         TranslucentSortPriority;                           // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPoseableMeshComponent*                 PoseableMesh;                                      // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2126,7 +1288,7 @@ public:
 	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue;   // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0060(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0060(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	int32                                         CallFunc_GetNumMaterials_ReturnValue;              // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -2148,51 +1310,13 @@ public:
 	class USceneComponent*                        K2Node_Select_Default;                             // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_GetRelativeTransform_ReturnValue;         // 0x00B0(0x0030)(IsPlainOldData, NoDestructor)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x00E4(0x0088)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetRelativeTransform_SweepHitResult;   // 0x00E4(0x008C)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	struct FTransform                             Temp_struct_Variable;                              // 0x0170(0x0030)(ConstParm, IsPlainOldData, NoDestructor)
 	bool                                          Temp_bool_Variable_1;                              // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPoseableMeshComponent*                 CallFunc_AddComponent_ReturnValue;                 // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkinnedMeshComponent*                  K2Node_Select_Default_1;                           // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh) == 0x000010, "Wrong alignment on PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh");
-static_assert(sizeof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh) == 0x0001C0, "Wrong size on PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, BodyType) == 0x000000, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::BodyType' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, Material_to_Apply) == 0x000008, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::Material_to_Apply' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, Empty_MID_Array) == 0x000010, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::Empty_MID_Array' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, TranslucentSortPriority) == 0x000020, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::TranslucentSortPriority' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, PoseableMesh) == 0x000028, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::PoseableMesh' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_Array_LastIndex_ReturnValue) == 0x000034, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000038, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000040, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_Array_Add_ReturnValue) == 0x000044, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000048, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_GetSkeletalMeshForPartType_ReturnValue) == 0x000050, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_GetSkeletalMeshForPartType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_BooleanOR_ReturnValue) == 0x000058, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_GetMaterials_ReturnValue) == 0x000060, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_GetNumMaterials_ReturnValue) == 0x000070, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_GetNumMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_IsValid_ReturnValue_1) == 0x000074, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_Subtract_IntInt_ReturnValue) == 0x000078, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_NotEqual_IntInt_ReturnValue) == 0x00007C, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_IsValid_ReturnValue_2) == 0x00007D, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, Temp_int_Variable) == 0x000080, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_Array_Get_Item) == 0x000088, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_Array_Get_Item_1) == 0x000090, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000098, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_Add_IntInt_ReturnValue) == 0x00009C, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, Temp_int_Variable_1) == 0x0000A0, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, Temp_bool_Variable) == 0x0000A4, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x0000A5, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, K2Node_Select_Default) == 0x0000A8, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_GetRelativeTransform_ReturnValue) == 0x0000B0, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_GetRelativeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000E0, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_K2_SetRelativeTransform_SweepHitResult) == 0x0000E4, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_K2_SetRelativeTransform_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, Temp_struct_Variable) == 0x000170, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, Temp_bool_Variable_1) == 0x0001A0, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, CallFunc_AddComponent_ReturnValue) == 0x0001A8, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::CallFunc_AddComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh, K2Node_Select_Default_1) == 0x0001B0, "Member 'PlayerPawn_Generic_C_Create_and_Duplicate_Effect_Poseable_Skeletal_Mesh::K2Node_Select_Default_1' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Setup FX Mesh Duplicates
 // 0x0150 (0x0150 - 0x0000)
@@ -2200,11 +1324,11 @@ struct PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates final
 {
 public:
 	class UMaterialInterface*                     Material_to_Apply;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       Charm_MID_Array;                                   // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInstanceDynamic*>       Charm_MID_Array;                                   // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 Charm_Mesh;                                        // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       Head_MID_Array;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInstanceDynamic*>       Head_MID_Array;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 Head_Mesh;                                         // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstanceDynamic*>       Body_MID_Array;                                    // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInstanceDynamic*>       Body_MID_Array;                                    // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 Body_Mesh;                                         // 0x0048(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Translucent_Sort_Order;                            // 0x0050(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Transfer_Material_Parameters;                      // 0x0054(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -2282,80 +1406,6 @@ public:
 	int32                                         K2Node_Select_Default_2;                           // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue_2;           // 0x014C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates");
-static_assert(sizeof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates) == 0x000150, "Wrong size on PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Material_to_Apply) == 0x000000, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Material_to_Apply' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Charm_MID_Array) == 0x000008, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Charm_MID_Array' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Charm_Mesh) == 0x000018, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Charm_Mesh' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Head_MID_Array) == 0x000020, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Head_MID_Array' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Head_Mesh) == 0x000030, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Head_Mesh' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Body_MID_Array) == 0x000038, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Body_MID_Array' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Body_Mesh) == 0x000048, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Body_Mesh' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Translucent_Sort_Order) == 0x000050, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Translucent_Sort_Order' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Transfer_Material_Parameters) == 0x000054, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Transfer_Material_Parameters' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_BooleanOR_ReturnValue) == 0x000055, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_BooleanOR_ReturnValue_1) == 0x000056, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_BooleanOR_ReturnValue_2) == 0x000057, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_1) == 0x000059, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_LastIndex_ReturnValue) == 0x00005C, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_2) == 0x000060, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_3) == 0x000061, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_4) == 0x000062, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_5) == 0x000063, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_6) == 0x000064, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_LastIndex_ReturnValue_1) == 0x000068, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_LastIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_7) == 0x00006C, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_8) == 0x00006D, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000070, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_LastIndex_ReturnValue_2) == 0x000078, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_LastIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_Add_ReturnValue) == 0x00007C, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x000080, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_CreateDynamicMaterialInstance_ReturnValue_2) == 0x000088, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_CreateDynamicMaterialInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_Add_ReturnValue_1) == 0x000090, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_Add_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_Add_ReturnValue_2) == 0x000094, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_Add_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_CreateDynamicMaterialInstance_ReturnValue_3) == 0x000098, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_CreateDynamicMaterialInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_CreateDynamicMaterialInstance_ReturnValue_4) == 0x0000A0, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_CreateDynamicMaterialInstance_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_Add_ReturnValue_3) == 0x0000A8, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_Add_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_Add_ReturnValue_4) == 0x0000AC, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_Add_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_CreateDynamicMaterialInstance_ReturnValue_5) == 0x0000B0, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_CreateDynamicMaterialInstance_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_Add_ReturnValue_5) == 0x0000B8, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_Add_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_MakeLiteralByte_ReturnValue) == 0x0000BC, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x0000BD, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_GetSkeletalMeshForPartType_ReturnValue) == 0x0000C0, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_GetSkeletalMeshForPartType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_GetSkeletalMeshForPartType_ReturnValue_1) == 0x0000C8, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_GetSkeletalMeshForPartType_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_9) == 0x0000D0, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_10) == 0x0000D1, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_11) == 0x0000D2, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Temp_int_Variable) == 0x0000D4, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_12) == 0x0000D8, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Add_IntInt_ReturnValue) == 0x0000DC, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_MakeLiteralByte_ReturnValue_2) == 0x0000E0, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_MakeLiteralByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_GetSkeletalMeshForPartType_ReturnValue_2) == 0x0000E8, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_GetSkeletalMeshForPartType_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Temp_bool_Variable) == 0x0000F0, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_13) == 0x0000F1, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Temp_bool_Variable_1) == 0x0000F2, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_IsValid_ReturnValue_14) == 0x0000F3, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_IsValid_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Temp_int_Variable_1) == 0x0000F4, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Temp_bool_Variable_2) == 0x0000F8, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Add_IntInt_ReturnValue_1) == 0x0000FC, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, Temp_int_Variable_2) == 0x000100, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_LastIndex_ReturnValue_3) == 0x000104, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_LastIndex_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_Get_Item) == 0x000108, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Min_ReturnValue) == 0x000110, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Min_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, K2Node_Select_Default) == 0x000114, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000118, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Add_IntInt_ReturnValue_2) == 0x00011C, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_Get_Item_1) == 0x000120, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_LastIndex_ReturnValue_4) == 0x000128, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_LastIndex_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Min_ReturnValue_1) == 0x00012C, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Min_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, K2Node_Select_Default_1) == 0x000130, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_LessEqual_IntInt_ReturnValue_1) == 0x000134, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_LessEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_Get_Item_2) == 0x000138, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Array_LastIndex_ReturnValue_5) == 0x000140, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Array_LastIndex_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_Min_ReturnValue_2) == 0x000144, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_Min_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, K2Node_Select_Default_2) == 0x000148, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates, CallFunc_LessEqual_IntInt_ReturnValue_2) == 0x00014C, "Member 'PlayerPawn_Generic_C_Setup_FX_Mesh_Duplicates::CallFunc_LessEqual_IntInt_ReturnValue_2' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.OnRep_On_Player_Built_Floor
 // 0x00B0 (0x00B0 - 0x0000)
@@ -2364,9 +1414,6 @@ struct PlayerPawn_Generic_C_OnRep_On_Player_Built_Floor final
 public:
 	struct FGameplayEventData                     K2Node_MakeStruct_GameplayEventData;               // 0x0000(0x00B0)()
 };
-static_assert(alignof(PlayerPawn_Generic_C_OnRep_On_Player_Built_Floor) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_OnRep_On_Player_Built_Floor");
-static_assert(sizeof(PlayerPawn_Generic_C_OnRep_On_Player_Built_Floor) == 0x0000B0, "Wrong size on PlayerPawn_Generic_C_OnRep_On_Player_Built_Floor");
-static_assert(offsetof(PlayerPawn_Generic_C_OnRep_On_Player_Built_Floor, K2Node_MakeStruct_GameplayEventData) == 0x000000, "Member 'PlayerPawn_Generic_C_OnRep_On_Player_Built_Floor::K2Node_MakeStruct_GameplayEventData' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Are the wind and water RTT passes enabled
 // 0x000C (0x000C - 0x0000)
@@ -2378,11 +1425,6 @@ public:
 	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Are_the_wind_and_water_RTT_passes_enabled) == 0x000004, "Wrong alignment on PlayerPawn_Generic_C_Are_the_wind_and_water_RTT_passes_enabled");
-static_assert(sizeof(PlayerPawn_Generic_C_Are_the_wind_and_water_RTT_passes_enabled) == 0x00000C, "Wrong size on PlayerPawn_Generic_C_Are_the_wind_and_water_RTT_passes_enabled");
-static_assert(offsetof(PlayerPawn_Generic_C_Are_the_wind_and_water_RTT_passes_enabled, NewParam) == 0x000000, "Member 'PlayerPawn_Generic_C_Are_the_wind_and_water_RTT_passes_enabled::NewParam' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Are_the_wind_and_water_RTT_passes_enabled, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000004, "Member 'PlayerPawn_Generic_C_Are_the_wind_and_water_RTT_passes_enabled::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Are_the_wind_and_water_RTT_passes_enabled, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000008, "Member 'PlayerPawn_Generic_C_Are_the_wind_and_water_RTT_passes_enabled::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.TriggerGameplayWindEmitter
 // 0x0048 (0x0048 - 0x0000)
@@ -2409,22 +1451,6 @@ public:
 	int32                                         CallFunc_MakeLiteralInt_ReturnValue;               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_TriggerGameplayWindEmitter");
-static_assert(sizeof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter) == 0x000048, "Wrong size on PlayerPawn_Generic_C_TriggerGameplayWindEmitter");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, Player_Wind_Particle_Emitter_To_Fire) == 0x000000, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::Player_Wind_Particle_Emitter_To_Fire' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, Temp_int_Variable) == 0x000004, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, Temp_int_Variable_1) == 0x000008, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, CallFunc_Conv_IntToByte_ReturnValue) == 0x00000C, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, CallFunc_Add_IntInt_ReturnValue) == 0x000010, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, CallFunc_GetValidValue_ReturnValue) == 0x000014, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, CallFunc_Conv_IntToByte_ReturnValue_1) == 0x000015, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::CallFunc_Conv_IntToByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, CallFunc_GetEnumeratorUserFriendlyName_ReturnValue) == 0x000018, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::CallFunc_GetEnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, CallFunc_GetEnumeratorValueFromIndex_ReturnValue) == 0x000028, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::CallFunc_GetEnumeratorValueFromIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, CallFunc_Conv_StringToName_ReturnValue) == 0x00002C, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000034, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000038, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, CallFunc_MakeLiteralInt_ReturnValue) == 0x00003C, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::CallFunc_MakeLiteralInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_TriggerGameplayWindEmitter, CallFunc_Less_IntInt_ReturnValue) == 0x000040, "Member 'PlayerPawn_Generic_C_TriggerGameplayWindEmitter::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Override Materials and Copy Parameters on Weapons Mesh
 // 0x0060 (0x0060 - 0x0000)
@@ -2434,7 +1460,7 @@ public:
 	class UMaterialInterface*                     Material_to_Apply;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0018(0x0010)(ZeroConstructor, ReferenceParm)
+	TArray<class UMaterialInterface*>             CallFunc_GetMaterials_ReturnValue;                 // 0x0018(0x0010)(ReferenceParm, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2451,23 +1477,6 @@ public:
 	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh");
-static_assert(sizeof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh) == 0x000060, "Wrong size on PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, Material_to_Apply) == 0x000000, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::Material_to_Apply' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000008, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x000010, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, CallFunc_GetMaterials_ReturnValue) == 0x000018, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::CallFunc_GetMaterials_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, CallFunc_Array_Length_ReturnValue) == 0x00002C, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, CallFunc_IsDedicatedServer_ReturnValue) == 0x000030, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, Temp_int_Loop_Counter_Variable) == 0x000034, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, Temp_int_Array_Index_Variable) == 0x000038, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, CallFunc_Less_IntInt_ReturnValue) == 0x00003C, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, CallFunc_Array_Get_Item) == 0x000040, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, CallFunc_CreateDynamicMaterialInstance_ReturnValue_2) == 0x000048, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::CallFunc_CreateDynamicMaterialInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, K2Node_DynamicCast_AsMaterial_Instance_Dynamic) == 0x000050, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::K2Node_DynamicCast_AsMaterial_Instance_Dynamic' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh, CallFunc_Add_IntInt_ReturnValue) == 0x00005C, "Member 'PlayerPawn_Generic_C_Override_Materials_and_Copy_Parameters_on_Weapons_Mesh::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Restore Previous Materials on Character Mesh
 // 0x0170 (0x0170 - 0x0000)
@@ -2569,84 +1578,6 @@ public:
 	class UMaterialInstanceDynamic*               CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_6; // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_6;    // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh");
-static_assert(sizeof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh) == 0x000170, "Wrong size on PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Loop_Counter_Variable) == 0x000000, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Add_IntInt_ReturnValue) == 0x000004, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Array_Index_Variable) == 0x000008, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsDedicatedServer_ReturnValue) == 0x00000C, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Array_Index_Variable_1) == 0x000010, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Loop_Counter_Variable_1) == 0x000014, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Add_IntInt_ReturnValue_1) == 0x000018, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Array_Index_Variable_2) == 0x00001C, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Array_Index_Variable_3) == 0x000020, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Array_Index_Variable_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetSkeletalMeshForPartType_ReturnValue) == 0x000028, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetSkeletalMeshForPartType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue) == 0x000030, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Get_Item) == 0x000040, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x00004C, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_1) == 0x00004D, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetSkeletalMeshForPartType_ReturnValue_1) == 0x000050, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetSkeletalMeshForPartType_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_1) == 0x000058, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Get_Item_1) == 0x000060, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Length_ReturnValue_1) == 0x000068, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_EqualEqual_ObjectObject_ReturnValue_1) == 0x00006C, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_EqualEqual_ObjectObject_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_2) == 0x00006D, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_3) == 0x00006E, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Array_Index_Variable_4) == 0x000070, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Array_Index_Variable_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetSkeletalMeshForPartType_ReturnValue_2) == 0x000078, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetSkeletalMeshForPartType_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_4) == 0x000080, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Length_ReturnValue_2) == 0x000084, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Loop_Counter_Variable_2) == 0x000088, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Loop_Counter_Variable_3) == 0x00008C, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Loop_Counter_Variable_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Add_IntInt_ReturnValue_2) == 0x000090, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Less_IntInt_ReturnValue) == 0x000094, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Add_IntInt_ReturnValue_3) == 0x000098, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Loop_Counter_Variable_4) == 0x00009C, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Loop_Counter_Variable_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetSkeletalMeshForPartType_ReturnValue_3) == 0x0000A0, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetSkeletalMeshForPartType_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000A8, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_5) == 0x0000A9, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Add_IntInt_ReturnValue_4) == 0x0000AC, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Length_ReturnValue_3) == 0x0000B0, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetSkeletalMeshForPartType_ReturnValue_4) == 0x0000B8, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetSkeletalMeshForPartType_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_2) == 0x0000C0, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Get_Item_2) == 0x0000C8, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Length_ReturnValue_4) == 0x0000D0, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_EqualEqual_ObjectObject_ReturnValue_2) == 0x0000D4, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_EqualEqual_ObjectObject_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Less_IntInt_ReturnValue_2) == 0x0000D5, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_6) == 0x0000D6, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_7) == 0x0000D7, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Loop_Counter_Variable_5) == 0x0000D8, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Loop_Counter_Variable_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Array_Index_Variable_5) == 0x0000DC, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Array_Index_Variable_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Get_Item_3) == 0x0000E0, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_3) == 0x0000E8, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_EqualEqual_ObjectObject_ReturnValue_3) == 0x0000F0, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_EqualEqual_ObjectObject_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_8) == 0x0000F1, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Less_IntInt_ReturnValue_3) == 0x0000F2, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Add_IntInt_ReturnValue_5) == 0x0000F4, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetSkeletalMeshForPartType_ReturnValue_5) == 0x0000F8, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetSkeletalMeshForPartType_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_4) == 0x000100, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_9) == 0x000108, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Get_Item_4) == 0x000110, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Length_ReturnValue_5) == 0x000118, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_EqualEqual_ObjectObject_ReturnValue_4) == 0x00011C, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_EqualEqual_ObjectObject_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Less_IntInt_ReturnValue_4) == 0x00011D, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_10) == 0x00011E, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Array_Index_Variable_6) == 0x000120, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Array_Index_Variable_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Get_Item_5) == 0x000128, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Get_Item_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_11) == 0x000130, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_5) == 0x000138, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_EqualEqual_ObjectObject_ReturnValue_5) == 0x000140, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_EqualEqual_ObjectObject_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, Temp_int_Loop_Counter_Variable_6) == 0x000144, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::Temp_int_Loop_Counter_Variable_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Get_Item_6) == 0x000148, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Get_Item_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_IsValid_ReturnValue_12) == 0x000150, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Less_IntInt_ReturnValue_5) == 0x000151, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Add_IntInt_ReturnValue_6) == 0x000154, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Add_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Array_Length_ReturnValue_6) == 0x000158, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Array_Length_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_Less_IntInt_ReturnValue_6) == 0x00015C, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_Less_IntInt_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_6) == 0x000160, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh, CallFunc_EqualEqual_ObjectObject_ReturnValue_6) == 0x000168, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Character_Mesh::CallFunc_EqualEqual_ObjectObject_ReturnValue_6' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Restore Previous Materials on Weapons Mesh
 // 0x0040 (0x0040 - 0x0000)
@@ -2669,19 +1600,6 @@ public:
 	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh");
-static_assert(sizeof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh) == 0x000040, "Wrong size on PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh, Weapon_to_Restore) == 0x000000, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh::Weapon_to_Restore' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh, Temp_int_Array_Index_Variable) == 0x000008, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh, CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue) == 0x000010, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh::CallFunc_GetMIDForSkeletalMeshComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh, CallFunc_IsDedicatedServer_ReturnValue) == 0x000018, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh, CallFunc_Array_Get_Item) == 0x000020, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x00002C, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh, CallFunc_IsValid_ReturnValue) == 0x00002D, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh, Temp_int_Loop_Counter_Variable) == 0x000030, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh, CallFunc_Less_IntInt_ReturnValue) == 0x000034, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh, CallFunc_Add_IntInt_ReturnValue) == 0x000038, "Member 'PlayerPawn_Generic_C_Restore_Previous_Materials_on_Weapons_Mesh::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Set Scalar Parameter on Character MIDs
 // 0x0060 (0x0060 - 0x0000)
@@ -2708,23 +1626,6 @@ public:
 	class USkeletalMeshComponent*                 CallFunc_GetSkeletalMeshForPartType_ReturnValue_5; // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs) == 0x000008, "Wrong alignment on PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs");
-static_assert(sizeof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs) == 0x000060, "Wrong size on PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, Parameter_Name) == 0x000000, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::Parameter_Name' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, Parameter_Value) == 0x000008, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::Parameter_Value' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_GetSkeletalMeshForPartType_ReturnValue) == 0x000010, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_GetSkeletalMeshForPartType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_GetSkeletalMeshForPartType_ReturnValue_1) == 0x000020, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_GetSkeletalMeshForPartType_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_GetSkeletalMeshForPartType_ReturnValue_2) == 0x000028, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_GetSkeletalMeshForPartType_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_IsValid_ReturnValue_2) == 0x000030, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_IsValid_ReturnValue_3) == 0x000031, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_GetSkeletalMeshForPartType_ReturnValue_3) == 0x000038, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_GetSkeletalMeshForPartType_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_GetSkeletalMeshForPartType_ReturnValue_4) == 0x000040, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_GetSkeletalMeshForPartType_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_IsValid_ReturnValue_4) == 0x000048, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_IsValid_ReturnValue_5) == 0x000049, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_GetSkeletalMeshForPartType_ReturnValue_5) == 0x000050, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_GetSkeletalMeshForPartType_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs, CallFunc_IsValid_ReturnValue_6) == 0x000058, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Character_MIDs::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Set Scalar Parameter on Duplicate Mesh MIDs
 // 0x0010 (0x0010 - 0x0000)
@@ -2735,11 +1636,6 @@ public:
 	float                                         Parameter_Value;                                   // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Duplicate_Mesh_MIDs) == 0x000004, "Wrong alignment on PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Duplicate_Mesh_MIDs");
-static_assert(sizeof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Duplicate_Mesh_MIDs) == 0x000010, "Wrong size on PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Duplicate_Mesh_MIDs");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Duplicate_Mesh_MIDs, Parameter_Name) == 0x000000, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Duplicate_Mesh_MIDs::Parameter_Name' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Duplicate_Mesh_MIDs, Parameter_Value) == 0x000008, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Duplicate_Mesh_MIDs::Parameter_Value' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Duplicate_Mesh_MIDs, CallFunc_IsValid_ReturnValue) == 0x00000C, "Member 'PlayerPawn_Generic_C_Set_Scalar_Parameter_on_Duplicate_Mesh_MIDs::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Set Body Type Sounds
 // 0x0002 (0x0002 - 0x0000)
@@ -2749,10 +1645,121 @@ public:
 	EFortCustomBodyType                           CallFunc_GetCharacterBodyType_ReturnValue;         // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Set_Body_Type_Sounds) == 0x000001, "Wrong alignment on PlayerPawn_Generic_C_Set_Body_Type_Sounds");
-static_assert(sizeof(PlayerPawn_Generic_C_Set_Body_Type_Sounds) == 0x000002, "Wrong size on PlayerPawn_Generic_C_Set_Body_Type_Sounds");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Body_Type_Sounds, CallFunc_GetCharacterBodyType_ReturnValue) == 0x000000, "Member 'PlayerPawn_Generic_C_Set_Body_Type_Sounds::CallFunc_GetCharacterBodyType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlayerPawn_Generic_C_Set_Body_Type_Sounds, K2Node_SwitchEnum_CmpSuccess) == 0x000001, "Member 'PlayerPawn_Generic_C_Set_Body_Type_Sounds::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+
+// Function PlayerPawn_Generic.PlayerPawn_Generic_C.EnableWaterAudio
+// 0x0080 (0x0080 - 0x0000)
+struct PlayerPawn_Generic_C_EnableWaterAudio final
+{
+public:
+	bool                                          IsEnteringWater;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Temp_object_Variable_1;                            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Temp_object_Variable_2;                            // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Temp_object_Variable_3;                            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0034(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0044(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             K2Node_Select_Default;                             // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0068(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             K2Node_Select_Default_1;                           // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function PlayerPawn_Generic.PlayerPawn_Generic_C.PlayHitSound
+// 0x00A0 (0x00A0 - 0x0000)
+struct PlayerPawn_Generic_C_PlayHitSound final
+{
+public:
+	class AFortPawn*                              Instigator_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Damage_Causer;                                     // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 HitSource;                                         // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             HitSound;                                          // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayTagAssetInterface> K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface; // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IGameplayTagAssetInterface> K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface_1; // 0x0040(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_1;                              // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0052(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_2;                              // 0x0053(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_HasAnyMatchingGameplayTags_ReturnValue;   // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_3;                              // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_56[0x2];                                       // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             K2Node_Select_Default;                             // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             K2Node_Select_Default_1;                           // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAnyMatchingGameplayTags_ReturnValue_1; // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_4;                              // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             K2Node_Select_Default_2;                           // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x007C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AController*                            CallFunc_GetController_ReturnValue;                // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerController*                  K2Node_DynamicCast_AsFort_Player_Controller;       // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function PlayerPawn_Generic.PlayerPawn_Generic_C.OnRep_BlockedByPawns
+// 0x0004 (0x0004 - 0x0000)
+struct PlayerPawn_Generic_C_OnRep_BlockedByPawns final
+{
+public:
+	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ECollisionResponse                            Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECollisionResponse                            Temp_byte_Variable_1;                              // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECollisionResponse                            K2Node_Select_Default;                             // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function PlayerPawn_Generic.PlayerPawn_Generic_C.GetShieldPercent2
+// 0x0030 (0x0030 - 0x0000)
+struct PlayerPawn_Generic_C_GetShieldPercent2 final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue;    // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute; // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue; // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute_1; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue_1; // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function PlayerPawn_Generic.PlayerPawn_Generic_C.GetHealthPercent2
+// 0x0030 (0x0030 - 0x0000)
+struct PlayerPawn_Generic_C_GetHealthPercent2 final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilitySystemComponent*                CallFunc_GetAbilitySystemComponent_ReturnValue;    // 0x0008(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute; // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue; // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetFloatAttributeFromAbilitySystemComponent_bSuccessfullyFoundAttribute_1; // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatAttributeFromAbilitySystemComponent_ReturnValue_1; // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 // Function PlayerPawn_Generic.PlayerPawn_Generic_C.Melee_Effect_Color
 // 0x000C (0x000C - 0x0000)
@@ -2761,9 +1768,6 @@ struct PlayerPawn_Generic_C_Melee_Effect_Color final
 public:
 	struct FVector                                Melee_Color_Set;                                   // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(PlayerPawn_Generic_C_Melee_Effect_Color) == 0x000004, "Wrong alignment on PlayerPawn_Generic_C_Melee_Effect_Color");
-static_assert(sizeof(PlayerPawn_Generic_C_Melee_Effect_Color) == 0x00000C, "Wrong size on PlayerPawn_Generic_C_Melee_Effect_Color");
-static_assert(offsetof(PlayerPawn_Generic_C_Melee_Effect_Color, Melee_Color_Set) == 0x000000, "Member 'PlayerPawn_Generic_C_Melee_Effect_Color::Melee_Color_Set' has a wrong offset!");
 
 }
 

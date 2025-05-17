@@ -37,6 +37,20 @@ void UPlayerSurveyMultipleChoiceStandardListItem_C::ExecuteUbergraph_PlayerSurve
 }
 
 
+// Function PlayerSurveyMultipleChoiceStandardListItem.PlayerSurveyMultipleChoiceStandardListItem_C.OnCurrentTextStyleChanged
+// (Event, Protected, BlueprintEvent)
+
+void UPlayerSurveyMultipleChoiceStandardListItem_C::OnCurrentTextStyleChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerSurveyMultipleChoiceStandardListItem_C", "OnCurrentTextStyleChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PlayerSurveyMultipleChoiceStandardListItem.PlayerSurveyMultipleChoiceStandardListItem_C.SetIndex
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -60,7 +74,7 @@ void UPlayerSurveyMultipleChoiceStandardListItem_C::SetIndex(int32 Value)
 // Function PlayerSurveyMultipleChoiceStandardListItem.PlayerSurveyMultipleChoiceStandardListItem_C.SetChoiceData
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortPlayerSurveyQuestionChoice  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortPlayerSurveyQuestionChoice&Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UPlayerSurveyMultipleChoiceStandardListItem_C::SetChoiceData(const struct FFortPlayerSurveyQuestionChoice& Value)
 {
@@ -148,7 +162,7 @@ void UPlayerSurveyMultipleChoiceStandardListItem_C::UpdateChoiceIndexText()
 
 
 // Function PlayerSurveyMultipleChoiceStandardListItem.PlayerSurveyMultipleChoiceStandardListItem_C.UpdateCheckBox
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Protected, BlueprintCallable, BlueprintEvent)
 
 void UPlayerSurveyMultipleChoiceStandardListItem_C::UpdateCheckBox()
 {
@@ -161,11 +175,25 @@ void UPlayerSurveyMultipleChoiceStandardListItem_C::UpdateCheckBox()
 }
 
 
+// Function PlayerSurveyMultipleChoiceStandardListItem.PlayerSurveyMultipleChoiceStandardListItem_C.UpdateTextStyle
+// (Protected, BlueprintCallable, BlueprintEvent)
+
+void UPlayerSurveyMultipleChoiceStandardListItem_C::UpdateTextStyle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlayerSurveyMultipleChoiceStandardListItem_C", "UpdateTextStyle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function PlayerSurveyMultipleChoiceStandardListItem.PlayerSurveyMultipleChoiceStandardListItem_C.MakeChoiceIndexText
 // (Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             Text                                                   (Parm, OutParm)
+// class FText*                            Text                                                   (Parm, OutParm)
 
 void UPlayerSurveyMultipleChoiceStandardListItem_C::MakeChoiceIndexText(int32 Index_0, class FText* Text) const
 {

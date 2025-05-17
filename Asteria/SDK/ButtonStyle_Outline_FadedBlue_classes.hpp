@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Outline_FadedBlue_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_Outline_FadedBlue_C) == 0x000008, "Wrong alignment on UButtonStyle_Outline_FadedBlue_C");
-static_assert(sizeof(UButtonStyle_Outline_FadedBlue_C) == 0x000570, "Wrong size on UButtonStyle_Outline_FadedBlue_C");
 
 }
 

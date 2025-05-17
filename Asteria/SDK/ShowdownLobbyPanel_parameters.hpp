@@ -12,283 +12,13 @@
 
 #include "FortniteUI_structs.hpp"
 #include "UMG_structs.hpp"
-#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CommonInput_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.InputTypeChanged
-// 0x0001 (0x0001 - 0x0000)
-struct ShowdownLobbyPanel_C_InputTypeChanged final
-{
-public:
-	bool                                          isGamepad;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(ShowdownLobbyPanel_C_InputTypeChanged) == 0x000001, "Wrong alignment on ShowdownLobbyPanel_C_InputTypeChanged");
-static_assert(sizeof(ShowdownLobbyPanel_C_InputTypeChanged) == 0x000001, "Wrong size on ShowdownLobbyPanel_C_InputTypeChanged");
-static_assert(offsetof(ShowdownLobbyPanel_C_InputTypeChanged, isGamepad) == 0x000000, "Member 'ShowdownLobbyPanel_C_InputTypeChanged::isGamepad' has a wrong offset!");
-
-// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.Refresh
-// 0x0358 (0x0358 - 0x0000)
-struct ShowdownLobbyPanel_C_Refresh final
-{
-public:
-	class FText                                   Temp_text_Variable;                                // 0x0000(0x0018)()
-	class FText                                   Temp_text_Variable_1;                              // 0x0018(0x0018)()
-	class FText                                   Temp_text_Variable_2;                              // 0x0030(0x0018)()
-	class FText                                   Temp_text_Variable_3;                              // 0x0048(0x0018)()
-	class FText                                   Temp_text_Variable_4;                              // 0x0060(0x0018)()
-	bool                                          Temp_bool_Variable;                                // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Temp_float_Variable;                               // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_float_Variable_1;                             // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable;                                // 0x0085(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0086(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0087(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_3;                              // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B[0x5];                                       // 0x008B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   Temp_text_Variable_5;                              // 0x0090(0x0018)()
-	EFortShowdownEventState                       Temp_byte_Variable_4;                              // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetCurrentEventScore_ReturnValue;         // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetTournamentPinUnlockScore_ReturnValue;  // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWorldCupQualifierEvent_ReturnValue;     // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00B6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00B7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         K2Node_Select_Default;                             // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortShowdownEventState                       CallFunc_GetEventTimeState_ReturnValue;            // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoCalloutMFARequirement_ReturnValue;      // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_DoCalloutMFARequirement_ReturnValue_1;    // 0x00BE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BF[0x1];                                       // 0x00BF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetTournamentPinUnlockScore_ReturnValue_1; // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetTournamentMatchCap_ReturnValue;        // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_CD[0x3];                                       // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetCurrentEventTeamNumMatchesPlayed_ReturnValue; // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetTournamentMatchCap_ReturnValue_1;      // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00E0(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0120(0x0010)(ZeroConstructor, ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0130(0x0018)()
-	int32                                         CallFunc_GetCurrentEventTeamNumMatchesPlayed_ReturnValue_1; // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetTournamentMatchCap_ReturnValue_2;      // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x0154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0155(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0156(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              Temp_byte_Variable_6;                              // 0x0157(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15A[0x6];                                      // 0x015A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0160(0x0018)()
-	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0178(0x0018)()
-	int32                                         CallFunc_GetCurrentEventScore_ReturnValue_1;       // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_194[0x4];                                      // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default_2;                           // 0x0198(0x0018)()
-	int32                                         CallFunc_GetBestEventScore_ReturnValue;            // 0x01B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x01B8(0x0040)(HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue_2;             // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0200(0x0010)(ZeroConstructor, ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0210(0x0018)()
-	ESlateVisibility                              K2Node_Select_Default_3;                           // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_229[0x7];                                      // 0x0229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0230(0x0018)()
-	int32                                         CallFunc_GetCurrentEventScore_ReturnValue_2;       // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVerticalBoxSlot*                       CallFunc_SlotAsVerticalBoxSlot_ReturnValue;        // 0x0250(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue;               // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetStartTime_ReturnValue;                 // 0x025C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_261[0x3];                                      // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0264(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_PauseAnimation_ReturnValue_1;             // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetEndTime_ReturnValue;                   // 0x027C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Temp_float_Variable_2;                             // 0x028C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0290(0x0018)()
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x02A8(0x0018)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x02C0(0x0018)()
-	class FText                                   CallFunc_TextToUpper_ReturnValue_2;                // 0x02D8(0x0018)()
-	int32                                         CallFunc_GetTournamentPinUnlockScore_ReturnValue_2; // 0x02F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_2;        // 0x02F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_3;        // 0x02F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x02F6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2F7[0x1];                                      // 0x02F7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x02F8(0x0018)()
-	class UWidget*                                K2Node_Select_Default_4;                           // 0x0310(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	ESlateVisibility                              K2Node_Select_Default_5;                           // 0x0319(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31A[0x2];                                      // 0x031A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetTournamentPinUnlockScore_ReturnValue_3; // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0320(0x0018)()
-	class FString                                 CallFunc_GetEventId_ReturnValue;                   // 0x0338(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          Temp_bool_Variable_5;                              // 0x0349(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34A[0x2];                                      // 0x034A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Select_Default_6;                           // 0x034C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0350(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ShowdownLobbyPanel_C_Refresh) == 0x000008, "Wrong alignment on ShowdownLobbyPanel_C_Refresh");
-static_assert(sizeof(ShowdownLobbyPanel_C_Refresh) == 0x000358, "Wrong size on ShowdownLobbyPanel_C_Refresh");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_text_Variable) == 0x000000, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_text_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_text_Variable_1) == 0x000018, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_text_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_text_Variable_2) == 0x000030, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_text_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_text_Variable_3) == 0x000048, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_text_Variable_3' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_text_Variable_4) == 0x000060, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_text_Variable_4' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_bool_Variable) == 0x000078, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_float_Variable) == 0x00007C, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_float_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_float_Variable_1) == 0x000080, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_float_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_bool_Variable_1) == 0x000084, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_byte_Variable) == 0x000085, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_byte_Variable_1) == 0x000086, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_bool_Variable_2) == 0x000087, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_bool_Variable_3) == 0x000088, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_byte_Variable_2) == 0x000089, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_byte_Variable_3) == 0x00008A, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_byte_Variable_3' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_text_Variable_5) == 0x000090, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_text_Variable_5' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_byte_Variable_4) == 0x0000A8, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_byte_Variable_4' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetCurrentEventScore_ReturnValue) == 0x0000AC, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetCurrentEventScore_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetTournamentPinUnlockScore_ReturnValue) == 0x0000B0, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetTournamentPinUnlockScore_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_IsWorldCupQualifierEvent_ReturnValue) == 0x0000B4, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_IsWorldCupQualifierEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0000B5, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0000B6, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_BooleanAND_ReturnValue) == 0x0000B7, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_Select_Default) == 0x0000B8, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetEventTimeState_ReturnValue) == 0x0000BC, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetEventTimeState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_DoCalloutMFARequirement_ReturnValue) == 0x0000BD, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_DoCalloutMFARequirement_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_DoCalloutMFARequirement_ReturnValue_1) == 0x0000BE, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_DoCalloutMFARequirement_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetTournamentPinUnlockScore_ReturnValue_1) == 0x0000C0, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetTournamentPinUnlockScore_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Greater_IntInt_ReturnValue) == 0x0000C4, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetTournamentMatchCap_ReturnValue) == 0x0000C8, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetTournamentMatchCap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Greater_IntInt_ReturnValue_1) == 0x0000CC, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Greater_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetCurrentEventTeamNumMatchesPlayed_ReturnValue) == 0x0000D0, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetCurrentEventTeamNumMatchesPlayed_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetTournamentMatchCap_ReturnValue_1) == 0x0000D4, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetTournamentMatchCap_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_byte_Variable_5) == 0x0000D8, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_byte_Variable_5' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Subtract_IntInt_ReturnValue) == 0x0000DC, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_MakeStruct_FormatArgumentData) == 0x0000E0, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_MakeArray_Array) == 0x000120, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Format_ReturnValue) == 0x000130, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetCurrentEventTeamNumMatchesPlayed_ReturnValue_1) == 0x000148, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetCurrentEventTeamNumMatchesPlayed_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetTournamentMatchCap_ReturnValue_2) == 0x00014C, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetTournamentMatchCap_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Subtract_IntInt_ReturnValue_1) == 0x000150, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Subtract_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GreaterEqual_IntInt_ReturnValue_1) == 0x000154, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GreaterEqual_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_BooleanAND_ReturnValue_1) == 0x000155, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_BooleanOR_ReturnValue) == 0x000156, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_byte_Variable_6) == 0x000157, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_byte_Variable_6' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_bool_Variable_4) == 0x000158, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_Select_Default_1) == 0x000159, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_MakeLiteralText_ReturnValue) == 0x000160, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_MakeLiteralText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_MakeLiteralText_ReturnValue_1) == 0x000178, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_MakeLiteralText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetCurrentEventScore_ReturnValue_1) == 0x000190, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetCurrentEventScore_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_Select_Default_2) == 0x000198, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetBestEventScore_ReturnValue) == 0x0001B0, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetBestEventScore_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_MakeStruct_FormatArgumentData_1) == 0x0001B8, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Greater_IntInt_ReturnValue_2) == 0x0001F8, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Greater_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_MakeArray_Array_1) == 0x000200, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Format_ReturnValue_1) == 0x000210, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Format_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_Select_Default_3) == 0x000228, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_TextToUpper_ReturnValue) == 0x000230, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_TextToUpper_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetCurrentEventScore_ReturnValue_2) == 0x000248, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetCurrentEventScore_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_SlotAsVerticalBoxSlot_ReturnValue) == 0x000250, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_SlotAsVerticalBoxSlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_PauseAnimation_ReturnValue) == 0x000258, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_PauseAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetStartTime_ReturnValue) == 0x00025C, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetStartTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x000260, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_MakeStruct_Margin) == 0x000264, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_MakeStruct_Margin' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_PauseAnimation_ReturnValue_1) == 0x000274, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_PauseAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Add_FloatFloat_ReturnValue) == 0x000278, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetEndTime_ReturnValue) == 0x00027C, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetEndTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_PlayAnimation_ReturnValue) == 0x000280, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000288, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_float_Variable_2) == 0x00028C, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_float_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Conv_StringToText_ReturnValue) == 0x000290, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0002A8, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_TextToUpper_ReturnValue_1) == 0x0002C0, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_TextToUpper_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_TextToUpper_ReturnValue_2) == 0x0002D8, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_TextToUpper_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetTournamentPinUnlockScore_ReturnValue_2) == 0x0002F0, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetTournamentPinUnlockScore_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GreaterEqual_IntInt_ReturnValue_2) == 0x0002F4, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GreaterEqual_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GreaterEqual_IntInt_ReturnValue_3) == 0x0002F5, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GreaterEqual_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_BooleanAND_ReturnValue_2) == 0x0002F6, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetText_ReturnValue) == 0x0002F8, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_Select_Default_4) == 0x000310, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_TextIsEmpty_ReturnValue) == 0x000318, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_Select_Default_5) == 0x000319, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_Select_Default_5' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetTournamentPinUnlockScore_ReturnValue_3) == 0x00031C, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetTournamentPinUnlockScore_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_Conv_IntToText_ReturnValue) == 0x000320, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_GetEventId_ReturnValue) == 0x000338, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_GetEventId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000348, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, Temp_bool_Variable_5) == 0x000349, "Member 'ShowdownLobbyPanel_C_Refresh::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, K2Node_Select_Default_6) == 0x00034C, "Member 'ShowdownLobbyPanel_C_Refresh::K2Node_Select_Default_6' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_Refresh, CallFunc_PlayAnimation_ReturnValue_1) == 0x000350, "Member 'ShowdownLobbyPanel_C_Refresh::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-
-// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature final
-{
-public:
-	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-static_assert(sizeof(ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-static_assert(offsetof(ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature, Button) == 0x000000, "Member 'ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
-// 0x0008 (0x0008 - 0x0000)
-struct ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature final
-{
-public:
-	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong alignment on ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
-static_assert(sizeof(ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature) == 0x000008, "Wrong size on ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature");
-static_assert(offsetof(ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature, Button) == 0x000000, "Member 'ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature::Button' has a wrong offset!");
-
-// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct ShowdownLobbyPanel_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(ShowdownLobbyPanel_C_PreConstruct) == 0x000001, "Wrong alignment on ShowdownLobbyPanel_C_PreConstruct");
-static_assert(sizeof(ShowdownLobbyPanel_C_PreConstruct) == 0x000001, "Wrong size on ShowdownLobbyPanel_C_PreConstruct");
-static_assert(offsetof(ShowdownLobbyPanel_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'ShowdownLobbyPanel_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.BrandingToggle
-// 0x0001 (0x0001 - 0x0000)
-struct ShowdownLobbyPanel_C_BrandingToggle final
-{
-public:
-	bool                                          hasBranding;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(ShowdownLobbyPanel_C_BrandingToggle) == 0x000001, "Wrong alignment on ShowdownLobbyPanel_C_BrandingToggle");
-static_assert(sizeof(ShowdownLobbyPanel_C_BrandingToggle) == 0x000001, "Wrong size on ShowdownLobbyPanel_C_BrandingToggle");
-static_assert(offsetof(ShowdownLobbyPanel_C_BrandingToggle, hasBranding) == 0x000000, "Member 'ShowdownLobbyPanel_C_BrandingToggle::hasBranding' has a wrong offset!");
-
-// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.EventSwitchUI
-// 0x0001 (0x0001 - 0x0000)
-struct ShowdownLobbyPanel_C_EventSwitchUI final
-{
-public:
-	ECommonInputType                              bNewInputType;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ShowdownLobbyPanel_C_EventSwitchUI) == 0x000001, "Wrong alignment on ShowdownLobbyPanel_C_EventSwitchUI");
-static_assert(sizeof(ShowdownLobbyPanel_C_EventSwitchUI) == 0x000001, "Wrong size on ShowdownLobbyPanel_C_EventSwitchUI");
-static_assert(offsetof(ShowdownLobbyPanel_C_EventSwitchUI, bNewInputType) == 0x000000, "Member 'ShowdownLobbyPanel_C_EventSwitchUI::bNewInputType' has a wrong offset!");
 
 // Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.ExecuteUbergraph_ShowdownLobbyPanel
 // 0x0168 (0x0168 - 0x0000)
@@ -298,8 +28,8 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECommonInputType                              K2Node_CustomEvent_bNewInputType;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCommonInputSubsystem*                  CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(ECommonInputType bNewInputType)> K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor)
+	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(ECommonInputType bNewInputType)> K2Node_CreateDelegate_OutputDelegate;            // 0x0010(0x0010)(ZeroConstructor, NoDestructor)
 	ESlateVisibility                              Temp_byte_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -364,64 +94,174 @@ public:
 	struct FMargin                                K2Node_MakeStruct_Margin_1;                        // 0x0154(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              K2Node_Select_Default_5;                           // 0x0164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel) == 0x000008, "Wrong alignment on ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel");
-static_assert(sizeof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel) == 0x000168, "Wrong size on ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, EntryPoint) == 0x000000, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_CustomEvent_bNewInputType) == 0x000004, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_CustomEvent_bNewInputType' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_GetGameInstanceSubsystem_ReturnValue) == 0x000008, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_GetGameInstanceSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_byte_Variable) == 0x000020, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_byte_Variable_1) == 0x000021, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_bool_Variable) == 0x000022, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_bool_Variable_1) == 0x000023, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_float_Variable) == 0x000024, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_float_Variable' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_float_Variable_1) == 0x000028, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_float_Variable_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_bool_Variable_2) == 0x00002C, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_bool_Variable_3) == 0x00002D, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_GetContext_ReturnValue) == 0x000030, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_GetContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_float_Variable_2) == 0x000038, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_float_Variable_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_IsUsingGamepad_ReturnValue) == 0x00003C, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_IsUsingGamepad_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_float_Variable_3) == 0x000040, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_float_Variable_3' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_ComponentBoundEvent_Button_1) == 0x000048, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_ComponentBoundEvent_Button_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_GetDynamicMaterial_ReturnValue) == 0x000050, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_GetDynamicMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_bool_Variable_4) == 0x000058, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_MakeStruct_SlateColor) == 0x000060, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_Select_Default) == 0x000088, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_MakeStruct_Margin) == 0x00008C, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_MakeStruct_Margin' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_ComponentBoundEvent_Button) == 0x0000A0, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_ComponentBoundEvent_Button' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_GetStartTime_ReturnValue) == 0x0000A8, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_GetStartTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_GetEndTime_ReturnValue) == 0x0000AC, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_GetEndTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_GetStartTime_ReturnValue_1) == 0x0000B0, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_GetStartTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_GetEndTime_ReturnValue_1) == 0x0000B4, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_GetEndTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_GetContext_ReturnValue_1) == 0x0000B8, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_GetContext_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_PauseAnimation_ReturnValue) == 0x0000C0, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_PauseAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_PauseAnimation_ReturnValue_1) == 0x0000C4, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_PauseAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_LessEqual_FloatFloat_ReturnValue) == 0x0000C8, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_LessEqual_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_Add_FloatFloat_ReturnValue) == 0x0000CC, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_PlayAnimation_ReturnValue) == 0x0000D0, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x0000D8, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_PauseAnimation_ReturnValue_2) == 0x0000DC, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_PauseAnimation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_PauseAnimation_ReturnValue_3) == 0x0000E0, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_PauseAnimation_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_LessEqual_FloatFloat_ReturnValue_1) == 0x0000E4, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_LessEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_Add_FloatFloat_ReturnValue_1) == 0x0000E8, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_Add_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x0000EC, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_PlayAnimation_ReturnValue_1) == 0x0000F0, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000F8, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_SlotAsOverlaySlot_ReturnValue) == 0x000108, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_SlotAsOverlaySlot_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_float_Variable_4) == 0x000110, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_float_Variable_4' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_Event_IsDesignTime) == 0x000114, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_SlotAsOverlaySlot_ReturnValue_1) == 0x000118, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_SlotAsOverlaySlot_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_bool_Variable_5) == 0x000120, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, Temp_float_Variable_5) == 0x000124, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::Temp_float_Variable_5' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_Select_Default_1) == 0x000128, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_PlayAnimation_ReturnValue_2) == 0x000130, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_Select_Default_2) == 0x000138, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_CustomEvent_hasBranding) == 0x00013C, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_CustomEvent_hasBranding' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, CallFunc_PlayAnimation_ReturnValue_3) == 0x000140, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::CallFunc_PlayAnimation_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_Select_Default_3) == 0x000148, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_Select_Default_4) == 0x000150, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_MakeStruct_Margin_1) == 0x000154, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_MakeStruct_Margin_1' has a wrong offset!");
-static_assert(offsetof(ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel, K2Node_Select_Default_5) == 0x000164, "Member 'ShowdownLobbyPanel_C_ExecuteUbergraph_ShowdownLobbyPanel::K2Node_Select_Default_5' has a wrong offset!");
+
+// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.EventSwitchUI
+// 0x0001 (0x0001 - 0x0000)
+struct ShowdownLobbyPanel_C_EventSwitchUI final
+{
+public:
+	ECommonInputType                              bNewInputType;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.BrandingToggle
+// 0x0001 (0x0001 - 0x0000)
+struct ShowdownLobbyPanel_C_BrandingToggle final
+{
+public:
+	bool                                          hasBranding;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct ShowdownLobbyPanel_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+
+// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_2_CommonButtonClicked__DelegateSignature final
+{
+public:
+	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct ShowdownLobbyPanel_C_BndEvt__EventDetailsButton_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature final
+{
+public:
+	class UCommonButton*                          Button;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.Refresh
+// 0x0370 (0x0370 - 0x0000)
+struct ShowdownLobbyPanel_C_Refresh final
+{
+public:
+	class FText                                   Temp_text_Variable;                                // 0x0000(0x0018)()
+	class FText                                   Temp_text_Variable_1;                              // 0x0018(0x0018)()
+	class FText                                   Temp_text_Variable_2;                              // 0x0030(0x0018)()
+	class FText                                   Temp_text_Variable_3;                              // 0x0048(0x0018)()
+	class FText                                   Temp_text_Variable_4;                              // 0x0060(0x0018)()
+	class FText                                   Temp_text_Variable_5;                              // 0x0078(0x0018)()
+	bool                                          Temp_bool_Variable;                                // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Temp_float_Variable;                               // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable_1;                             // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable;                                // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_1;                              // 0x009E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x009F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_3;                              // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable_2;                              // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_3;                              // 0x00A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortShowdownEventState                       Temp_byte_Variable_4;                              // 0x00A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_UsesScheduledMatchmaking_ReturnValue;     // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_UsesScheduledMatchmaking_ReturnValue_1;   // 0x00A5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_UsesScheduledMatchmaking_ReturnValue_2;   // 0x00A6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A7[0x1];                                       // 0x00A7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetTournamentSeriesId_ReturnValue;        // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetCurrentEventScore_ReturnValue;         // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetTournamentPinUnlockScore_ReturnValue;  // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWorldCupQualifierEvent_ReturnValue;     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              Temp_byte_Variable_5;                              // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Select_Default;                             // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortShowdownEventState                       CallFunc_GetEventTimeState_ReturnValue;            // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoCalloutMFARequirement_ReturnValue;      // 0x00CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_DoCalloutMFARequirement_ReturnValue_1;    // 0x00CE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_CF[0x1];                                       // 0x00CF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetTournamentPinUnlockScore_ReturnValue_1; // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D5[0x3];                                       // 0x00D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetTournamentMatchCap_ReturnValue;        // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_1;             // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_DD[0x3];                                       // 0x00DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetCurrentEventTeamNumMatchesPlayed_ReturnValue; // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetTournamentMatchCap_ReturnValue_1;      // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESlateVisibility                              Temp_byte_Variable_6;                              // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00F0(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0130(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0140(0x0018)()
+	int32                                         CallFunc_GetCurrentEventTeamNumMatchesPlayed_ReturnValue_1; // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetTournamentMatchCap_ReturnValue_2;      // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_1;        // 0x0164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0165(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0166(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_4;                              // 0x0167(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default_1;                           // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_5;                              // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_16B[0x5];                                      // 0x016B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                K2Node_Select_Default_2;                           // 0x0170(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0178(0x0018)()
+	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0190(0x0018)()
+	int32                                         CallFunc_GetCurrentEventScore_ReturnValue_1;       // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default_3;                           // 0x01B0(0x0018)()
+	int32                                         CallFunc_GetBestEventScore_ReturnValue;            // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x01D0(0x0040)(HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue_2;             // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array_1;                          // 0x0218(0x0010)(ReferenceParm, HasGetValueTypeHash)
+	class FText                                   CallFunc_Format_ReturnValue_1;                     // 0x0228(0x0018)()
+	ESlateVisibility                              K2Node_Select_Default_4;                           // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_TextToUpper_ReturnValue;                  // 0x0248(0x0018)()
+	int32                                         CallFunc_GetCurrentEventScore_ReturnValue_2;       // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_264[0x4];                                      // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVerticalBoxSlot*                       CallFunc_SlotAsVerticalBoxSlot_ReturnValue;        // 0x0268(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue;               // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetStartTime_ReturnValue;                 // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_FloatFloat_ReturnValue;         // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_279[0x3];                                      // 0x0279(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x027C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_PauseAnimation_ReturnValue_1;             // 0x028C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetEndTime_ReturnValue;                   // 0x0294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x02A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Temp_float_Variable_2;                             // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x02A8(0x0018)()
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x02C0(0x0018)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue_1;                // 0x02D8(0x0018)()
+	class FText                                   CallFunc_TextToUpper_ReturnValue_2;                // 0x02F0(0x0018)()
+	int32                                         CallFunc_GetTournamentPinUnlockScore_ReturnValue_2; // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_2;        // 0x030C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue_3;        // 0x030D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x030E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_30F[0x1];                                      // 0x030F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_GetText_ReturnValue;                      // 0x0310(0x0018)()
+	class UWidget*                                K2Node_Select_Default_5;                           // 0x0328(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	ESlateVisibility                              K2Node_Select_Default_6;                           // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_332[0x2];                                      // 0x0332(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetTournamentPinUnlockScore_ReturnValue_3; // 0x0334(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0338(0x0018)()
+	class FString                                 CallFunc_GetEventId_ReturnValue;                   // 0x0350(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable_6;                              // 0x0361(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_362[0x2];                                      // 0x0362(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Select_Default_7;                           // 0x0364(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function ShowdownLobbyPanel.ShowdownLobbyPanel_C.InputTypeChanged
+// 0x0001 (0x0001 - 0x0000)
+struct ShowdownLobbyPanel_C_InputTypeChanged final
+{
+public:
+	bool                                          isGamepad;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
 
 }
 

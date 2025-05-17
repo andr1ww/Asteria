@@ -10,27 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
 #include "GAB_Emote_Generic_classes.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GAB_Spray_Generic.GAB_Spray_Generic_C
-// 0x0070 (0x0A00 - 0x0990)
+// 0x0070 (0x0B78 - 0x0B08)
 class UGAB_Spray_Generic_C final : public UGAB_Emote_Generic_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAB_Spray_Generic_C;                // 0x0990(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	float                                         DecalSize;                                         // 0x0998(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99C[0x4];                                      // 0x099C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAthenaSprayItemDefinition*             MySpray;                                           // 0x09A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DecalTraceDistance;                                // 0x09A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9AC[0x4];                                      // 0x09AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAnimMontage>            DefaultSprayMontage_M;                             // 0x09B0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftObjectPtr<class UAnimMontage>            DefaultSprayMontage_F;                             // 0x09D8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAB_Spray_Generic_C;                // 0x0B08(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	float                                         DecalSize;                                         // 0x0B10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B14[0x4];                                      // 0x0B14(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAthenaSprayItemDefinition*             MySpray;                                           // 0x0B18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DecalTraceDistance;                                // 0x0B20(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B24[0x4];                                      // 0x0B24(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAnimMontage>            DefaultSprayMontage_M;                             // 0x0B28(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimMontage>            DefaultSprayMontage_F;                             // 0x0B50(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GAB_Spray_Generic(int32 EntryPoint);
@@ -48,14 +48,6 @@ public:
 		return GetDefaultObjImpl<UGAB_Spray_Generic_C>();
 	}
 };
-static_assert(alignof(UGAB_Spray_Generic_C) == 0x000008, "Wrong alignment on UGAB_Spray_Generic_C");
-static_assert(sizeof(UGAB_Spray_Generic_C) == 0x000A00, "Wrong size on UGAB_Spray_Generic_C");
-static_assert(offsetof(UGAB_Spray_Generic_C, UberGraphFrame_GAB_Spray_Generic_C) == 0x000990, "Member 'UGAB_Spray_Generic_C::UberGraphFrame_GAB_Spray_Generic_C' has a wrong offset!");
-static_assert(offsetof(UGAB_Spray_Generic_C, DecalSize) == 0x000998, "Member 'UGAB_Spray_Generic_C::DecalSize' has a wrong offset!");
-static_assert(offsetof(UGAB_Spray_Generic_C, MySpray) == 0x0009A0, "Member 'UGAB_Spray_Generic_C::MySpray' has a wrong offset!");
-static_assert(offsetof(UGAB_Spray_Generic_C, DecalTraceDistance) == 0x0009A8, "Member 'UGAB_Spray_Generic_C::DecalTraceDistance' has a wrong offset!");
-static_assert(offsetof(UGAB_Spray_Generic_C, DefaultSprayMontage_M) == 0x0009B0, "Member 'UGAB_Spray_Generic_C::DefaultSprayMontage_M' has a wrong offset!");
-static_assert(offsetof(UGAB_Spray_Generic_C, DefaultSprayMontage_F) == 0x0009D8, "Member 'UGAB_Spray_Generic_C::DefaultSprayMontage_F' has a wrong offset!");
 
 }
 

@@ -10,47 +10,53 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
-#include "FortniteGame_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_MedConsumable_Parent.GA_Athena_MedConsumable_Parent_C
-// 0x0148 (0x0A88 - 0x0940)
+// 0x0138 (0x0BE0 - 0x0AA8)
 class UGA_Athena_MedConsumable_Parent_C : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FFortGameplayAbilityMontageInfo        AnimMontageInfo;                                   // 0x0948(0x0058)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x09A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HealsHealth;                                       // 0x09A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          HasHealthCap;                                      // 0x09A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9AA[0x2];                                      // 0x09AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         HealthHealAmount;                                  // 0x09AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggerDuration;                                   // 0x09B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldHolster;                                     // 0x09B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9B5[0x3];                                      // 0x09B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   ItemIDToHolster;                                   // 0x09B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           GC_PotionConsumed;                                 // 0x09C0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 GE_EffectToApply;                                  // 0x09C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          HealsShields;                                      // 0x09D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          HasShieldCap;                                      // 0x09D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9D2[0x2];                                      // 0x09D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ShieldHealAmount;                                  // 0x09D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         Row_ShieldCap;                                     // 0x09D8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         Row_ShieldAmount;                                  // 0x09F8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         Row_HealthCap;                                     // 0x0A18(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FScalableFloat                         Row_HealthAmount;                                  // 0x0A38(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGameplayTagContainer                  Tags_FailedResponse;                               // 0x0A58(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          IgnoreCalcs;                                       // 0x0A78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          AlwaysActivate;                                    // 0x0A79(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_A7A[0x2];                                      // 0x0A7A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           EquippingCue;                                      // 0x0A7C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HealsHealth;                                       // 0x0AB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          HasHealthCap;                                      // 0x0AB9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_ABA[0x2];                                      // 0x0ABA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         HealthHealAmount;                                  // 0x0ABC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggerDuration;                                   // 0x0AC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldHolster;                                     // 0x0AC4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_AC5[0x3];                                      // 0x0AC5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ItemIDToHolster;                                   // 0x0AC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_EffectToApply;                                  // 0x0AD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HealsShields;                                      // 0x0AD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          HasShieldCap;                                      // 0x0AD9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_ADA[0x2];                                      // 0x0ADA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ShieldHealAmount;                                  // 0x0ADC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         Row_ShieldCap;                                     // 0x0AE0(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         Row_ShieldAmount;                                  // 0x0B00(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTag                           GC_PotionConsumed;                                 // 0x0B20(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         Row_HealthCap;                                     // 0x0B28(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FScalableFloat                         Row_HealthAmount;                                  // 0x0B48(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FGameplayTagContainer                  Tags_FailedResponse;                               // 0x0B68(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IgnoreCalcsForEffectApplication;                   // 0x0B88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          AlwaysActivate;                                    // 0x0B89(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B8A[0x2];                                      // 0x0B8A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           GC_EquippingCue;                                   // 0x0B8C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	float                                         OverHealing;                                       // 0x0B94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          HealthIsEffective;                                 // 0x0B98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_B99[0x7];                                      // 0x0B99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UForceFeedbackEffect*                   ForceFeedback;                                     // 0x0BA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           GC_HealthHealUsed;                                 // 0x0BA8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 GE_Channeling;                                     // 0x0BB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FActiveGameplayEffectHandle            GEH_Channeling;                                    // 0x0BB8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  QuestTags;                                         // 0x0BC0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_GA_Athena_MedConsumable_Parent(int32 EntryPoint);
@@ -63,8 +69,9 @@ public:
 	void HealthCalc();
 	void SetupGE(struct FGameplayEffectSpecHandle* Effect_Out);
 	void MakeCustomMontageInfo();
+	void OnMontageTriggered();
 
-	bool K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, struct FGameplayTagContainer* RelevantTags) const;
+	bool K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayAbilitySpecHandle& Handle, struct FGameplayTagContainer* RelevantTags) const;
 
 public:
 	static class UClass* StaticClass()
@@ -76,30 +83,6 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_MedConsumable_Parent_C>();
 	}
 };
-static_assert(alignof(UGA_Athena_MedConsumable_Parent_C) == 0x000008, "Wrong alignment on UGA_Athena_MedConsumable_Parent_C");
-static_assert(sizeof(UGA_Athena_MedConsumable_Parent_C) == 0x000A88, "Wrong size on UGA_Athena_MedConsumable_Parent_C");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, UberGraphFrame) == 0x000940, "Member 'UGA_Athena_MedConsumable_Parent_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, AnimMontageInfo) == 0x000948, "Member 'UGA_Athena_MedConsumable_Parent_C::AnimMontageInfo' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, PlayerPawn) == 0x0009A0, "Member 'UGA_Athena_MedConsumable_Parent_C::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, HealsHealth) == 0x0009A8, "Member 'UGA_Athena_MedConsumable_Parent_C::HealsHealth' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, HasHealthCap) == 0x0009A9, "Member 'UGA_Athena_MedConsumable_Parent_C::HasHealthCap' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, HealthHealAmount) == 0x0009AC, "Member 'UGA_Athena_MedConsumable_Parent_C::HealthHealAmount' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, TriggerDuration) == 0x0009B0, "Member 'UGA_Athena_MedConsumable_Parent_C::TriggerDuration' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, ShouldHolster) == 0x0009B4, "Member 'UGA_Athena_MedConsumable_Parent_C::ShouldHolster' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, ItemIDToHolster) == 0x0009B8, "Member 'UGA_Athena_MedConsumable_Parent_C::ItemIDToHolster' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, GC_PotionConsumed) == 0x0009C0, "Member 'UGA_Athena_MedConsumable_Parent_C::GC_PotionConsumed' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, GE_EffectToApply) == 0x0009C8, "Member 'UGA_Athena_MedConsumable_Parent_C::GE_EffectToApply' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, HealsShields) == 0x0009D0, "Member 'UGA_Athena_MedConsumable_Parent_C::HealsShields' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, HasShieldCap) == 0x0009D1, "Member 'UGA_Athena_MedConsumable_Parent_C::HasShieldCap' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, ShieldHealAmount) == 0x0009D4, "Member 'UGA_Athena_MedConsumable_Parent_C::ShieldHealAmount' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, Row_ShieldCap) == 0x0009D8, "Member 'UGA_Athena_MedConsumable_Parent_C::Row_ShieldCap' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, Row_ShieldAmount) == 0x0009F8, "Member 'UGA_Athena_MedConsumable_Parent_C::Row_ShieldAmount' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, Row_HealthCap) == 0x000A18, "Member 'UGA_Athena_MedConsumable_Parent_C::Row_HealthCap' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, Row_HealthAmount) == 0x000A38, "Member 'UGA_Athena_MedConsumable_Parent_C::Row_HealthAmount' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, Tags_FailedResponse) == 0x000A58, "Member 'UGA_Athena_MedConsumable_Parent_C::Tags_FailedResponse' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, IgnoreCalcs) == 0x000A78, "Member 'UGA_Athena_MedConsumable_Parent_C::IgnoreCalcs' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, AlwaysActivate) == 0x000A79, "Member 'UGA_Athena_MedConsumable_Parent_C::AlwaysActivate' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_MedConsumable_Parent_C, EquippingCue) == 0x000A7C, "Member 'UGA_Athena_MedConsumable_Parent_C::EquippingCue' has a wrong offset!");
 
 }
 

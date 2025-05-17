@@ -37,6 +37,68 @@ void UCreativeServerOptionsTile_C::ExecuteUbergraph_CreativeServerOptionsTile(in
 }
 
 
+// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UCreativeServerOptionsTile_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeServerOptionsTile_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.SetBackgroundImage
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   ArrayIndex                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCreativeServerOptionsTile_C::SetBackgroundImage(int32 ArrayIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeServerOptionsTile_C", "SetBackgroundImage");
+
+	Params::CreativeServerOptionsTile_C_SetBackgroundImage Parms{};
+
+	Parms.ArrayIndex = ArrayIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.BP_OnUnhovered
+// (Event, Protected, BlueprintEvent)
+
+void UCreativeServerOptionsTile_C::BP_OnUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeServerOptionsTile_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void UCreativeServerOptionsTile_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeServerOptionsTile_C", "BP_OnHovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.InputMethodChanged
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -96,6 +158,86 @@ void UCreativeServerOptionsTile_C::BP_OnSelected()
 		Func = Class->GetFunction("CreativeServerOptionsTile_C", "BP_OnSelected");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.BndEvt__Button_ShowFriends_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCreativeServerOptionsTile_C::BndEvt__Button_ShowFriends_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeServerOptionsTile_C", "BndEvt__Button_ShowFriends_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
+
+	Params::CreativeServerOptionsTile_C_BndEvt__Button_ShowFriends_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.BndEvt__Button_CloseFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCreativeServerOptionsTile_C::BndEvt__Button_CloseFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeServerOptionsTile_C", "BndEvt__Button_CloseFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
+
+	Params::CreativeServerOptionsTile_C_BndEvt__Button_CloseFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
+
+	Parms.Button = Button;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.SetBPData
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class UFortCreativeServerInfo*    ServerInfo                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCreativeServerOptionsTile_C::SetBPData(const class UFortCreativeServerInfo* ServerInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeServerOptionsTile_C", "SetBPData");
+
+	Params::CreativeServerOptionsTile_C_SetBPData Parms{};
+
+	Parms.ServerInfo = ServerInfo;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UCreativeServerOptionsTile_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CreativeServerOptionsTile_C", "PreConstruct");
+
+	Params::CreativeServerOptionsTile_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -159,95 +301,21 @@ void UCreativeServerOptionsTile_C::BndEvt__IconTextButton_K2Node_ComponentBoundE
 }
 
 
-// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.SetBPData
-// (Event, Protected, BlueprintEvent)
+// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.OnLoaded_3534B041413498BC4DD6D2B727558DF9
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFortCreativeServerInfo*          ServerInfo                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCreativeServerOptionsTile_C::SetBPData(const class UFortCreativeServerInfo* ServerInfo)
+void UCreativeServerOptionsTile_C::OnLoaded_3534B041413498BC4DD6D2B727558DF9(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("CreativeServerOptionsTile_C", "SetBPData");
+		Func = Class->GetFunction("CreativeServerOptionsTile_C", "OnLoaded_3534B041413498BC4DD6D2B727558DF9");
 
-	Params::CreativeServerOptionsTile_C_SetBPData Parms{};
+	Params::CreativeServerOptionsTile_C_OnLoaded_3534B041413498BC4DD6D2B727558DF9 Parms{};
 
-	Parms.ServerInfo = ServerInfo;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.BndEvt__Button_CloseFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UCreativeServerOptionsTile_C::BndEvt__Button_CloseFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativeServerOptionsTile_C", "BndEvt__Button_CloseFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature");
-
-	Params::CreativeServerOptionsTile_C_BndEvt__Button_CloseFriends_K2Node_ComponentBoundEvent_1_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.BndEvt__Button_ShowFriends_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UCommonButton*                    Button                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UCreativeServerOptionsTile_C::BndEvt__Button_ShowFriends_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativeServerOptionsTile_C", "BndEvt__Button_ShowFriends_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature");
-
-	Params::CreativeServerOptionsTile_C_BndEvt__Button_ShowFriends_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature Parms{};
-
-	Parms.Button = Button;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UCreativeServerOptionsTile_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativeServerOptionsTile_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UCreativeServerOptionsTile_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativeServerOptionsTile_C", "PreConstruct");
-
-	Params::CreativeServerOptionsTile_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -268,26 +336,6 @@ void UCreativeServerOptionsTile_C::InitServerInfo(class UFortCreativeServerInfo*
 	Params::CreativeServerOptionsTile_C_InitServerInfo Parms{};
 
 	Parms.ServerInfo = ServerInfo;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function CreativeServerOptionsTile.CreativeServerOptionsTile_C.SetBGImage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   ArrayIdx                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UCreativeServerOptionsTile_C::SetBGImage(int32 ArrayIdx)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CreativeServerOptionsTile_C", "SetBGImage");
-
-	Params::CreativeServerOptionsTile_C_SetBGImage Parms{};
-
-	Parms.ArrayIdx = ArrayIdx;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

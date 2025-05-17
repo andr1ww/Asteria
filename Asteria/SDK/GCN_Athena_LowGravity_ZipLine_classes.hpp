@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GCN_Athena_LowGravity_ZipLine.GCN_Athena_LowGravity_ZipLine_C
-// 0x0008 (0x0390 - 0x0388)
+// 0x0008 (0x0370 - 0x0368)
 class AGCN_Athena_LowGravity_ZipLine_C final : public AGCN_Athena_LowGravity_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Athena_LowGravity_ZipLine_C;    // 0x0388(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GCN_Athena_LowGravity_ZipLine_C;    // 0x0368(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_GCN_Athena_LowGravity_ZipLine(int32 EntryPoint);
@@ -38,9 +38,6 @@ public:
 		return GetDefaultObjImpl<AGCN_Athena_LowGravity_ZipLine_C>();
 	}
 };
-static_assert(alignof(AGCN_Athena_LowGravity_ZipLine_C) == 0x000008, "Wrong alignment on AGCN_Athena_LowGravity_ZipLine_C");
-static_assert(sizeof(AGCN_Athena_LowGravity_ZipLine_C) == 0x000390, "Wrong size on AGCN_Athena_LowGravity_ZipLine_C");
-static_assert(offsetof(AGCN_Athena_LowGravity_ZipLine_C, UberGraphFrame_GCN_Athena_LowGravity_ZipLine_C) == 0x000388, "Member 'AGCN_Athena_LowGravity_ZipLine_C::UberGraphFrame_GCN_Athena_LowGravity_ZipLine_C' has a wrong offset!");
 
 }
 

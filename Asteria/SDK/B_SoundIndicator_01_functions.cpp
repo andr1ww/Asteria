@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function B_SoundIndicator_01.B_SoundIndicator_01_C.ExecuteUbergraph_B_SoundIndicator_01
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -37,54 +37,52 @@ void AB_SoundIndicator_01_C::ExecuteUbergraph_B_SoundIndicator_01(int32 EntryPoi
 }
 
 
-// Function B_SoundIndicator_01.B_SoundIndicator_01_C.OnEffectActivated
-// (Event, Public, BlueprintEvent)
+// Function B_SoundIndicator_01.B_SoundIndicator_01_C.GetDefaultIcon
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture*                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_SoundIndicator_01_C::OnEffectActivated()
+class UTexture* AB_SoundIndicator_01_C::GetDefaultIcon()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_SoundIndicator_01_C", "OnEffectActivated");
+		Func = Class->GetFunction("B_SoundIndicator_01_C", "GetDefaultIcon");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::B_SoundIndicator_01_C_GetDefaultIcon Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
-// Function B_SoundIndicator_01.B_SoundIndicator_01_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function B_SoundIndicator_01.B_SoundIndicator_01_C.GetDefaultTint
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_SoundIndicator_01_C::ReceiveBeginPlay()
+struct FLinearColor AB_SoundIndicator_01_C::GetDefaultTint()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_SoundIndicator_01_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("B_SoundIndicator_01_C", "GetDefaultTint");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::B_SoundIndicator_01_C_GetDefaultTint Parms{};
 
+	UObject::ProcessEvent(Func, &Parms);
 
-// Function B_SoundIndicator_01.B_SoundIndicator_01_C.UpdateEmitterStates
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void AB_SoundIndicator_01_C::UpdateEmitterStates()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_SoundIndicator_01_C", "UpdateEmitterStates");
-
-	UObject::ProcessEvent(Func, nullptr);
+	return Parms.ReturnValue;
 }
 
 
 // Function B_SoundIndicator_01.B_SoundIndicator_01_C.GetWeaponCurve
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FRuntimeFloatCurve               ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-struct FRuntimeFloatCurve AB_SoundIndicator_01_C::GetWeaponCurve()
+struct FRuntimeFloatCurve AB_SoundIndicator_01_C::GetWeaponCurve() const
 {
 	static class UFunction* Func = nullptr;
 
@@ -99,24 +97,23 @@ struct FRuntimeFloatCurve AB_SoundIndicator_01_C::GetWeaponCurve()
 }
 
 
-// Function B_SoundIndicator_01.B_SoundIndicator_01_C.CalculateFiringAngle
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function B_SoundIndicator_01.B_SoundIndicator_01_C.GetStrengthCurveForActiveType
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// float                                   DotResult                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FRuntimeFloatCurve               ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void AB_SoundIndicator_01_C::CalculateFiringAngle(float* DotResult)
+struct FRuntimeFloatCurve AB_SoundIndicator_01_C::GetStrengthCurveForActiveType() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_SoundIndicator_01_C", "CalculateFiringAngle");
+		Func = Class->GetFunction("B_SoundIndicator_01_C", "GetStrengthCurveForActiveType");
 
-	Params::B_SoundIndicator_01_C_CalculateFiringAngle Parms{};
+	Params::B_SoundIndicator_01_C_GetStrengthCurveForActiveType Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (DotResult != nullptr)
-		*DotResult = Parms.DotResult;
+	return Parms.ReturnValue;
 }
 
 }

@@ -10,44 +10,42 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ProjectileTrajectory_ExplosiveBow.BP_ProjectileTrajectory_ExplosiveBow_C
-// 0x0088 (0x02C8 - 0x0240)
+// 0x0070 (0x02A8 - 0x0238)
 class ABP_ProjectileTrajectory_ExplosiveBow_C final : public AFortProjectileTrajectory
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Target;                                            // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USplineComponent*                       Spline;                                            // 0x0250(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0258(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxMeshCount;                                      // 0x0260(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_264[0x4];                                      // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class USplineMeshComponent*>           SplineMeshComponents;                              // 0x0268(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UMaterialInstanceDynamic*               SplineMID;                                         // 0x0278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                Trajectory_Owner;                                  // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           Update_Timer_Handle;                               // 0x0288(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                EndPointOffset;                                    // 0x0290(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Right;                                             // 0x029C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Up;                                                // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SplineMeshLength;                                  // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SplineMeshOffsetDistance;                          // 0x02A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AB_Ranged_Generic_Athena_C*             OwnerWeapon;                                       // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                MuzzleOffset;                                      // 0x02B8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Target;                                            // 0x0240(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USplineComponent*                       Spline;                                            // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxMeshCount;                                      // 0x0250(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               SplineMID;                                         // 0x0258(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Trajectory_Owner;                                  // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           Update_Timer_Handle;                               // 0x0268(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                EndPointOffset;                                    // 0x0270(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Right;                                             // 0x027C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Up;                                                // 0x0280(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SplineMeshLength;                                  // 0x0284(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SplineMeshOffsetDistance;                          // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AB_Ranged_Generic_Athena_C*             OwnerWeapon;                                       // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                MuzzleOffset;                                      // 0x0298(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_ProjectileTrajectory_ExplosiveBow(int32 EntryPoint);
+	void SetTrajectorySpline(const TArray<struct FVector>& SplinePoints, const TArray<struct FVector>& SplineTangents);
 	void Pulse();
-	void SetTrajectoryFromNative(const TArray<struct FVector>& SplinePoints, const TArray<struct FVector>& SplineTangents);
 	void ReceiveBeginPlay();
-	void SetTrajectorySpline(TArray<struct FVector>& SplinePoints, TArray<struct FVector>& SplineTangents);
+	void SetTrajectorySplineInternal(TArray<struct FVector>& SplinePoints, TArray<struct FVector>& SplineTangents);
 	void UpdateFromTrajectoryOwner();
 	void SetShouldUpdateFromOwner(bool ShouldUpdate, class UObject* Owner_0, float Interval);
 
@@ -61,24 +59,6 @@ public:
 		return GetDefaultObjImpl<ABP_ProjectileTrajectory_ExplosiveBow_C>();
 	}
 };
-static_assert(alignof(ABP_ProjectileTrajectory_ExplosiveBow_C) == 0x000008, "Wrong alignment on ABP_ProjectileTrajectory_ExplosiveBow_C");
-static_assert(sizeof(ABP_ProjectileTrajectory_ExplosiveBow_C) == 0x0002C8, "Wrong size on ABP_ProjectileTrajectory_ExplosiveBow_C");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, UberGraphFrame) == 0x000240, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, Target) == 0x000248, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::Target' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, Spline) == 0x000250, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::Spline' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, DefaultSceneRoot) == 0x000258, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, MaxMeshCount) == 0x000260, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::MaxMeshCount' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, SplineMeshComponents) == 0x000268, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::SplineMeshComponents' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, SplineMID) == 0x000278, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::SplineMID' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, Trajectory_Owner) == 0x000280, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::Trajectory_Owner' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, Update_Timer_Handle) == 0x000288, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::Update_Timer_Handle' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, EndPointOffset) == 0x000290, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::EndPointOffset' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, Right) == 0x00029C, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::Right' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, Up) == 0x0002A0, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::Up' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, SplineMeshLength) == 0x0002A4, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::SplineMeshLength' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, SplineMeshOffsetDistance) == 0x0002A8, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::SplineMeshOffsetDistance' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, OwnerWeapon) == 0x0002B0, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::OwnerWeapon' has a wrong offset!");
-static_assert(offsetof(ABP_ProjectileTrajectory_ExplosiveBow_C, MuzzleOffset) == 0x0002B8, "Member 'ABP_ProjectileTrajectory_ExplosiveBow_C::MuzzleOffset' has a wrong offset!");
 
 }
 

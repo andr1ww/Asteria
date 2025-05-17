@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UHuskStrength07_C>();
 	}
 };
-static_assert(alignof(UHuskStrength07_C) == 0x000008, "Wrong alignment on UHuskStrength07_C");
-static_assert(sizeof(UHuskStrength07_C) == 0x000068, "Wrong size on UHuskStrength07_C");
 
 }
 

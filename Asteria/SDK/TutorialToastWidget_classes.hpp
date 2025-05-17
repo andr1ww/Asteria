@@ -18,24 +18,24 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TutorialToastWidget.TutorialToastWidget_C
-// 0x00A0 (0x02D8 - 0x0238)
+// 0x00A0 (0x0328 - 0x0288)
 class UTutorialToastWidget_C final : public UCommonUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Outro;                                             // 0x0240(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Intro;                                             // 0x0248(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Bolt;                                              // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Description;                                       // 0x0258(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               FlashingBang;                                      // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SmallPreviewImageSB;                               // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SmallPreviewPortrait;                              // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               SpecialToast;                                      // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Title;                                             // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnFinishedToast;                                   // 0x0288(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TSoftObjectPtr<class UTexture2D>              Dev_TestImage;                                     // 0x0298(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              OnToastClicked;                                    // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          DoNotUseTimerToDismiss;                            // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0288(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Outro;                                             // 0x0290(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Intro;                                             // 0x0298(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Bolt;                                              // 0x02A0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Description;                                       // 0x02A8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               FlashingBang;                                      // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SmallPreviewImageSB;                               // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SmallPreviewPortrait;                              // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               SpecialToast;                                      // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Title;                                             // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnFinishedToast;                                   // 0x02D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TSoftObjectPtr<class UTexture2D>              Dev_TestImage;                                     // 0x02E8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              OnToastClicked;                                    // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          DoNotUseTimerToDismiss;                            // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 
 public:
 	struct FEventReply OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
@@ -63,22 +63,6 @@ public:
 		return GetDefaultObjImpl<UTutorialToastWidget_C>();
 	}
 };
-static_assert(alignof(UTutorialToastWidget_C) == 0x000008, "Wrong alignment on UTutorialToastWidget_C");
-static_assert(sizeof(UTutorialToastWidget_C) == 0x0002D8, "Wrong size on UTutorialToastWidget_C");
-static_assert(offsetof(UTutorialToastWidget_C, UberGraphFrame) == 0x000238, "Member 'UTutorialToastWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, Outro) == 0x000240, "Member 'UTutorialToastWidget_C::Outro' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, Intro) == 0x000248, "Member 'UTutorialToastWidget_C::Intro' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, Bolt) == 0x000250, "Member 'UTutorialToastWidget_C::Bolt' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, Description) == 0x000258, "Member 'UTutorialToastWidget_C::Description' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, FlashingBang) == 0x000260, "Member 'UTutorialToastWidget_C::FlashingBang' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, SmallPreviewImageSB) == 0x000268, "Member 'UTutorialToastWidget_C::SmallPreviewImageSB' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, SmallPreviewPortrait) == 0x000270, "Member 'UTutorialToastWidget_C::SmallPreviewPortrait' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, SpecialToast) == 0x000278, "Member 'UTutorialToastWidget_C::SpecialToast' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, Title) == 0x000280, "Member 'UTutorialToastWidget_C::Title' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, OnFinishedToast) == 0x000288, "Member 'UTutorialToastWidget_C::OnFinishedToast' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, Dev_TestImage) == 0x000298, "Member 'UTutorialToastWidget_C::Dev_TestImage' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, OnToastClicked) == 0x0002C0, "Member 'UTutorialToastWidget_C::OnToastClicked' has a wrong offset!");
-static_assert(offsetof(UTutorialToastWidget_C, DoNotUseTimerToDismiss) == 0x0002D0, "Member 'UTutorialToastWidget_C::DoNotUseTimerToDismiss' has a wrong offset!");
 
 }
 

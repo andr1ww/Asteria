@@ -21,7 +21,7 @@ namespace SDK
 class UAutomationUtilsBlueprintLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static void TakeGameplayAutomationScreenshot(const class FString& ScreenshotName, float MaxGlobalError, float MaxLocalError);
+	static void TakeGameplayAutomationScreenshot(const class FString& ScreenshotName, float MaxGlobalError, float MaxLocalError, const class FString& MapNameOverride);
 
 public:
 	static class UClass* StaticClass()
@@ -33,8 +33,6 @@ public:
 		return GetDefaultObjImpl<UAutomationUtilsBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UAutomationUtilsBlueprintLibrary) == 0x000008, "Wrong alignment on UAutomationUtilsBlueprintLibrary");
-static_assert(sizeof(UAutomationUtilsBlueprintLibrary) == 0x000028, "Wrong size on UAutomationUtilsBlueprintLibrary");
 
 }
 

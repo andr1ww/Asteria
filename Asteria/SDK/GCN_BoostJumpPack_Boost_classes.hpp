@@ -33,8 +33,6 @@ public:
 		return GetDefaultObjImpl<UGCN_BoostJumpPack_Boost_C>();
 	}
 };
-static_assert(alignof(UGCN_BoostJumpPack_Boost_C) == 0x000008, "Wrong alignment on UGCN_BoostJumpPack_Boost_C");
-static_assert(sizeof(UGCN_BoostJumpPack_Boost_C) == 0x000080, "Wrong size on UGCN_BoostJumpPack_Boost_C");
 
 }
 

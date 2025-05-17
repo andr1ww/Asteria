@@ -19,18 +19,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass CreativeLobbyAd.CreativeLobbyAd_C
-// 0x0028 (0x02D0 - 0x02A8)
+// 0x0028 (0x0320 - 0x02F8)
 class UCreativeLobbyAd_C final : public UFortCreativeAdTile
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       Text_Description;                                  // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_Header;                                       // 0x02B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_SubHeader;                                    // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonBorder*                          Violator;                                          // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonTextBlock*                       Text_Description;                                  // 0x0300(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_Header;                                       // 0x0308(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       Text_SubHeader;                                    // 0x0310(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonBorder*                          Violator;                                          // 0x0318(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_CreativeLobbyAd(int32 EntryPoint);
+	void Construct();
+	void PreConstruct(bool IsDesignTime);
 	void OnCMSDataUpdated();
 
 public:
@@ -43,13 +45,6 @@ public:
 		return GetDefaultObjImpl<UCreativeLobbyAd_C>();
 	}
 };
-static_assert(alignof(UCreativeLobbyAd_C) == 0x000008, "Wrong alignment on UCreativeLobbyAd_C");
-static_assert(sizeof(UCreativeLobbyAd_C) == 0x0002D0, "Wrong size on UCreativeLobbyAd_C");
-static_assert(offsetof(UCreativeLobbyAd_C, UberGraphFrame) == 0x0002A8, "Member 'UCreativeLobbyAd_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCreativeLobbyAd_C, Text_Description) == 0x0002B0, "Member 'UCreativeLobbyAd_C::Text_Description' has a wrong offset!");
-static_assert(offsetof(UCreativeLobbyAd_C, Text_Header) == 0x0002B8, "Member 'UCreativeLobbyAd_C::Text_Header' has a wrong offset!");
-static_assert(offsetof(UCreativeLobbyAd_C, Text_SubHeader) == 0x0002C0, "Member 'UCreativeLobbyAd_C::Text_SubHeader' has a wrong offset!");
-static_assert(offsetof(UCreativeLobbyAd_C, Violator) == 0x0002C8, "Member 'UCreativeLobbyAd_C::Violator' has a wrong offset!");
 
 }
 

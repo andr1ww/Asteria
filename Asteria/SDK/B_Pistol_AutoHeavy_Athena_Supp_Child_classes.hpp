@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "B_Pistol_AutoHeavy_Athena_classes.hpp"
+#include "B_Pistol_Auto_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Pistol_AutoHeavy_Athena_Supp_Child.B_Pistol_AutoHeavy_Athena_Supp_Child_C
-// 0x0000 (0x0DB0 - 0x0DB0)
-class AB_Pistol_AutoHeavy_Athena_Supp_Child_C final : public AB_Pistol_AutoHeavy_Athena_C
+// 0x0000 (0x1310 - 0x1310)
+class AB_Pistol_AutoHeavy_Athena_Supp_Child_C final : public AB_Pistol_Auto_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<AB_Pistol_AutoHeavy_Athena_Supp_Child_C>();
 	}
 };
-static_assert(alignof(AB_Pistol_AutoHeavy_Athena_Supp_Child_C) == 0x000008, "Wrong alignment on AB_Pistol_AutoHeavy_Athena_Supp_Child_C");
-static_assert(sizeof(AB_Pistol_AutoHeavy_Athena_Supp_Child_C) == 0x000DB0, "Wrong size on AB_Pistol_AutoHeavy_Athena_Supp_Child_C");
 
 }
 

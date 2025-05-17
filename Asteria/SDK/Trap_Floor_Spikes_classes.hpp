@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "FortniteGame_classes.hpp"
 #include "GameplayAbilities_structs.hpp"
 
 
@@ -21,44 +21,45 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Trap_Floor_Spikes.Trap_Floor_Spikes_C
-// 0x00B8 (0x0D20 - 0x0C68)
+// 0x00B8 (0x0E00 - 0x0D48)
 class ATrap_Floor_Spikes_C final : public ABuildingTrapFloor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0C68(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Spike_Mesh;                                        // 0x0C70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          Trigger;                                           // 0x0C78(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Root;                                              // 0x0C80(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         ResetSpikes_LERP_FCB6779D4DCA9F66ECE8A7B3FDDF9459; // 0x0C88(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            ResetSpikes__Direction_FCB6779D4DCA9F66ECE8A7B3FDDF9459; // 0x0C8C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C8D[0x3];                                      // 0x0C8D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     ResetSpikes;                                       // 0x0C90(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Retract_LERP_0B9D97AE4B5C790D47D67889C6EAE1CD;     // 0x0C98(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Retract__Direction_0B9D97AE4B5C790D47D67889C6EAE1CD; // 0x0C9C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C9D[0x3];                                      // 0x0C9D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Retract;                                           // 0x0CA0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Fire_LERP_31BA074043AA09D9C415BAAA81B9DCBF;        // 0x0CA8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            Fire__Direction_31BA074043AA09D9C415BAAA81B9DCBF;  // 0x0CAC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CAD[0x3];                                      // 0x0CAD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     Fire;                                              // 0x0CB0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              Place_Trap_Sound;                                  // 0x0CB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              Trap_Active_Sound;                                 // 0x0CC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              Reload_Sound;                                      // 0x0CC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              Trap_Explode_Sound;                                // 0x0CD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundCue*                              Trap_Fire_Sound;                                   // 0x0CD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SpikeRestingScale;                                 // 0x0CE0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SpikeActiveScale;                                  // 0x0CE4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SpikeHoldOnFireLength;                             // 0x0CE8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CEC[0x4];                                      // 0x0CEC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               SpikesMID;                                         // 0x0CF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SweepExponent;                                     // 0x0CF8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           SweepColor;                                        // 0x0CFC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SweepSpeed;                                        // 0x0D0C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     FriendlyTrapMaterial;                              // 0x0D10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     NormalSpikeMaterial;                               // 0x0D18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0D48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Spike_Mesh;                                        // 0x0D50(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          Trigger;                                           // 0x0D58(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Root;                                              // 0x0D60(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         ResetSpikes_LERP_FCB6779D4DCA9F66ECE8A7B3FDDF9459; // 0x0D68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            ResetSpikes__Direction_FCB6779D4DCA9F66ECE8A7B3FDDF9459; // 0x0D6C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D6D[0x3];                                      // 0x0D6D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     ResetSpikes;                                       // 0x0D70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Retract_LERP_0B9D97AE4B5C790D47D67889C6EAE1CD;     // 0x0D78(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Retract__Direction_0B9D97AE4B5C790D47D67889C6EAE1CD; // 0x0D7C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D7D[0x3];                                      // 0x0D7D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Retract;                                           // 0x0D80(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Fire_LERP_31BA074043AA09D9C415BAAA81B9DCBF;        // 0x0D88(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            Fire__Direction_31BA074043AA09D9C415BAAA81B9DCBF;  // 0x0D8C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D8D[0x3];                                      // 0x0D8D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     Fire;                                              // 0x0D90(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              Place_Trap_Sound;                                  // 0x0D98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              Trap_Active_Sound;                                 // 0x0DA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              Reload_Sound;                                      // 0x0DA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              Trap_Explode_Sound;                                // 0x0DB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundCue*                              Trap_Fire_Sound;                                   // 0x0DB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SpikeRestingScale;                                 // 0x0DC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SpikeActiveScale;                                  // 0x0DC4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SpikeHoldOnFireLength;                             // 0x0DC8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DCC[0x4];                                      // 0x0DCC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               SpikesMID;                                         // 0x0DD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SweepExponent;                                     // 0x0DD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           SweepColor;                                        // 0x0DDC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SweepSpeed;                                        // 0x0DEC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     FriendlyTrapMaterial;                              // 0x0DF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     NormalSpikeMaterial;                               // 0x0DF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Trap_Floor_Spikes(int32 EntryPoint);
+	void SwitchToAlternateMaterial();
 	void OnInitTeam();
 	void OnWorldReady();
 	void OnOutOfDurability();
@@ -89,35 +90,6 @@ public:
 		return GetDefaultObjImpl<ATrap_Floor_Spikes_C>();
 	}
 };
-static_assert(alignof(ATrap_Floor_Spikes_C) == 0x000008, "Wrong alignment on ATrap_Floor_Spikes_C");
-static_assert(sizeof(ATrap_Floor_Spikes_C) == 0x000D20, "Wrong size on ATrap_Floor_Spikes_C");
-static_assert(offsetof(ATrap_Floor_Spikes_C, UberGraphFrame) == 0x000C68, "Member 'ATrap_Floor_Spikes_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Spike_Mesh) == 0x000C70, "Member 'ATrap_Floor_Spikes_C::Spike_Mesh' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Trigger) == 0x000C78, "Member 'ATrap_Floor_Spikes_C::Trigger' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Root) == 0x000C80, "Member 'ATrap_Floor_Spikes_C::Root' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, ResetSpikes_LERP_FCB6779D4DCA9F66ECE8A7B3FDDF9459) == 0x000C88, "Member 'ATrap_Floor_Spikes_C::ResetSpikes_LERP_FCB6779D4DCA9F66ECE8A7B3FDDF9459' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, ResetSpikes__Direction_FCB6779D4DCA9F66ECE8A7B3FDDF9459) == 0x000C8C, "Member 'ATrap_Floor_Spikes_C::ResetSpikes__Direction_FCB6779D4DCA9F66ECE8A7B3FDDF9459' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, ResetSpikes) == 0x000C90, "Member 'ATrap_Floor_Spikes_C::ResetSpikes' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Retract_LERP_0B9D97AE4B5C790D47D67889C6EAE1CD) == 0x000C98, "Member 'ATrap_Floor_Spikes_C::Retract_LERP_0B9D97AE4B5C790D47D67889C6EAE1CD' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Retract__Direction_0B9D97AE4B5C790D47D67889C6EAE1CD) == 0x000C9C, "Member 'ATrap_Floor_Spikes_C::Retract__Direction_0B9D97AE4B5C790D47D67889C6EAE1CD' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Retract) == 0x000CA0, "Member 'ATrap_Floor_Spikes_C::Retract' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Fire_LERP_31BA074043AA09D9C415BAAA81B9DCBF) == 0x000CA8, "Member 'ATrap_Floor_Spikes_C::Fire_LERP_31BA074043AA09D9C415BAAA81B9DCBF' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Fire__Direction_31BA074043AA09D9C415BAAA81B9DCBF) == 0x000CAC, "Member 'ATrap_Floor_Spikes_C::Fire__Direction_31BA074043AA09D9C415BAAA81B9DCBF' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Fire) == 0x000CB0, "Member 'ATrap_Floor_Spikes_C::Fire' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Place_Trap_Sound) == 0x000CB8, "Member 'ATrap_Floor_Spikes_C::Place_Trap_Sound' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Trap_Active_Sound) == 0x000CC0, "Member 'ATrap_Floor_Spikes_C::Trap_Active_Sound' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Reload_Sound) == 0x000CC8, "Member 'ATrap_Floor_Spikes_C::Reload_Sound' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Trap_Explode_Sound) == 0x000CD0, "Member 'ATrap_Floor_Spikes_C::Trap_Explode_Sound' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, Trap_Fire_Sound) == 0x000CD8, "Member 'ATrap_Floor_Spikes_C::Trap_Fire_Sound' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, SpikeRestingScale) == 0x000CE0, "Member 'ATrap_Floor_Spikes_C::SpikeRestingScale' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, SpikeActiveScale) == 0x000CE4, "Member 'ATrap_Floor_Spikes_C::SpikeActiveScale' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, SpikeHoldOnFireLength) == 0x000CE8, "Member 'ATrap_Floor_Spikes_C::SpikeHoldOnFireLength' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, SpikesMID) == 0x000CF0, "Member 'ATrap_Floor_Spikes_C::SpikesMID' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, SweepExponent) == 0x000CF8, "Member 'ATrap_Floor_Spikes_C::SweepExponent' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, SweepColor) == 0x000CFC, "Member 'ATrap_Floor_Spikes_C::SweepColor' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, SweepSpeed) == 0x000D0C, "Member 'ATrap_Floor_Spikes_C::SweepSpeed' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, FriendlyTrapMaterial) == 0x000D10, "Member 'ATrap_Floor_Spikes_C::FriendlyTrapMaterial' has a wrong offset!");
-static_assert(offsetof(ATrap_Floor_Spikes_C, NormalSpikeMaterial) == 0x000D18, "Member 'ATrap_Floor_Spikes_C::NormalSpikeMaterial' has a wrong offset!");
 
 }
 

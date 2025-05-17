@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
-#include "Engine_structs.hpp"
-#include "CommonInput_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "FortniteGame_structs.hpp"
+#include "CommonInput_structs.hpp"
+#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -21,77 +21,76 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass TabGamePadConfig_v3.TabGamePadConfig_v3_C
-// 0x00F8 (0x03B0 - 0x02B8)
+// 0x00F8 (0x0468 - 0x0370)
 class UTabGamePadConfig_v3_C final : public UFortGamepadInputOptions
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UGamepadInfoSelectorPanel_v3_C*         GamepadInfoSelectorPanel_v3;                       // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UGamepadMappingInfo_v3_C*               GamepadMappingInfo_v3;                             // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              GamepadMappingInfoChanged;                         // 0x02D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<class FString>                         InputPresets;                                      // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class FText>                           InputPresetNames_NoCustom;                         // 0x02F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	int32                                         PresetMappingIndex;                                // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         PlatformMappingIndex;                              // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CustomInputTemplatePresetIndex;                    // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_30C[0x4];                                      // 0x030C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGamepadKeyTextButton_C*                DisplayObject;                                     // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFortInputActionGroup                         CurrentInputActionGroup;                           // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CustomResetToDefaultConfig;                        // 0x031C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FKey                                   CustomKeySelection;                                // 0x0320(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class FName                                   CustomActionSelection;                             // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CustomInputActionGroupSelectionIndex;              // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CustomActionSelectionIndex;                        // 0x0344(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FKey                                   Key_None;                                          // 0x0348(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class UClass*                                 RadioButtonClass;                                  // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 RadioButtonStyle;                                  // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UFortOptionsMenuInputData*>      InputDataForActionsPanel;                          // 0x0370(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TMulticastInlineDelegate<void()>              TabGamePadConfigBack;                              // 0x0380(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void()>              TabGamePadConfigApply;                             // 0x0390(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(TArray<class FText>& ScreenLabels)> TabGamePadActionsThatNeedBinds;                    // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0370(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UGamepadInfoSelectorPanel_v3_C*         GamepadInfoSelectorPanel_v3;                       // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UGamepadMappingInfo_v3_C*               GamepadMappingInfo_v3;                             // 0x0380(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              GamepadMappingInfoChanged;                         // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<class FString>                         InputPresets;                                      // 0x0398(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<class FText>                           InputPresetNames_NoCustom;                         // 0x03A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         PresetMappingIndex;                                // 0x03B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         PlatformMappingIndex;                              // 0x03BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CustomInputTemplatePresetIndex;                    // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C4[0x4];                                      // 0x03C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGamepadKeyTextButton_C*                DisplayObject;                                     // 0x03C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFortInputActionGroup                         CurrentInputActionGroup;                           // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D1[0x3];                                      // 0x03D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CustomResetToDefaultConfig;                        // 0x03D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   CustomKeySelection;                                // 0x03D8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class FName                                   CustomActionSelection;                             // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CustomInputActionGroupSelectionIndex;              // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CustomActionSelectionIndex;                        // 0x03FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FKey                                   Key_None;                                          // 0x0400(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UClass*                                 RadioButtonClass;                                  // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 RadioButtonStyle;                                  // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UFortOptionsMenuInputData*>      InputDataForActionsPanel;                          // 0x0428(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              TabGamePadConfigBack;                              // 0x0438(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void()>              TabGamePadConfigApply;                             // 0x0448(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(TArray<class FText>& ScreenLabels)> TabGamePadActionsThatNeedBinds; // 0x0458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void GamepadInfoSelectorNavRight();
-	void AreWeOkayWithThisChange(class FName ActionName, const struct FKey& Key, bool* IsOkay);
-	void HandleGamepadInfoSelectorFocus();
-	void NavigateToSelectedConfig();
-	void ChangeCustomClearVisibilityForInputType(ECommonInputType InputType);
-	void ChangeCustomResetVisibilityForInputType(ECommonInputType InputType);
-	void HandleGamepadInfoSelectorApply();
-	void HandleGamepadInfoSelectorBack();
-	void ChangeCustomTabListVisibilityForInputType(ECommonInputType Selection);
-	TArray<struct FConfirmationDialogAction> CreateCustomResetToDefaultList();
-	void CloseCustomActionsPanel(bool FocusLastButton);
-	void SelectSameItemInActionsList();
-	void SetupDisplayObject(class FName ActionName, const struct FKey& Key, class UGamepadKeyTextButton_C** DisplayObject_0);
-	bool IsCustomConfig(int32 PresetIndex);
-	bool IsConsole();
-	void HandleGamepadMappingInfoChange();
-	void GetCurrentPlatformIndex(int32* PlatformIndex);
-	void UpdateData();
-	void PreConstructData();
-	void InitializeData();
-	void DialogResult_017CD690454514A07B4DE5BE109AEC6E(EFortDialogResult Result, class FName ResultName);
-	void DialogResult_7D7E06D747FFEF9849D3CAA2D3D91717(EFortDialogResult Result, class FName ResultName);
-	void Gamepad_Config_Changed(class UCommonButton* AssociatedButton, int32 ButtonIndex);
-	void GamepadPlatformConfigChanged(class UCommonButton* AssociatedButton, int32 ButtonIndex);
-	void CenterOnTab();
-	void UpdateOptionsTab();
-	void CustomDoResetToDefault();
-	void CustomKeySelected_Bind(const struct FKey& Key);
-	void CustomActionSelected_Bind(int32 SelectedIndex, class FName ActionName);
-	void CustomClosedUsingBack_Bind();
-	void CustomClearButton_Bind();
-	void ModesTabSelected_Bind(class FName TabId);
-	void Construct();
-	void HandleUsingGamepadChanged(ECommonInputType NewInputType);
-	void OnTabDeactivated_Bind();
-	void OnTabActivated_Bind();
-	void DeadZoneLookSettingValueChanged_Bind(float Value);
-	void DeadZoneMoveSettingValueChanged_Bind(float Value);
-	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_TabGamePadConfig_v3(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void DeadZoneMoveSettingValueChanged_Bind(float Value);
+	void DeadZoneLookSettingValueChanged_Bind(float Value);
+	void OnTabActivated_Bind();
+	void OnTabDeactivated_Bind();
+	void HandleUsingGamepadChanged(ECommonInputType NewInputType);
+	void Construct();
+	void ModesTabSelected_Bind(class FName TabId);
+	void CustomClearButton_Bind();
+	void CustomClosedUsingBack_Bind();
+	void CustomActionSelected_Bind(int32 SelectedIndex, class FName ActionName);
+	void CustomKeySelected_Bind(const struct FKey& Key);
+	void CustomDoResetToDefault();
+	void UpdateOptionsTab();
+	void CenterOnTab();
+	void GamepadPlatformConfigChanged(class UCommonButton* AssociatedButton, int32 ButtonIndex);
+	void Gamepad_Config_Changed(class UCommonButton* AssociatedButton, int32 ButtonIndex);
+	void DialogResult_7D7E06D747FFEF9849D3CAA2D3D91717(EFortDialogResult Result, class FName ResultName);
+	void DialogResult_017CD690454514A07B4DE5BE109AEC6E(EFortDialogResult Result, class FName ResultName);
+	void InitializeData();
+	void PreConstructData();
+	void UpdateData();
+	void GetCurrentPlatformIndex(int32* PlatformIndex);
+	void HandleGamepadMappingInfoChange();
+	bool IsCustomConfig(int32 PresetIndex);
+	void SetupDisplayObject(class FName ActionName, const struct FKey& Key, class UGamepadKeyTextButton_C** DisplayObject_0);
+	void SelectSameItemInActionsList();
+	void CloseCustomActionsPanel(bool FocusLastButton);
+	TArray<struct FConfirmationDialogAction> CreateCustomResetToDefaultList();
+	void ChangeCustomTabListVisibilityForInputType(ECommonInputType Selection);
+	void HandleGamepadInfoSelectorBack();
+	void HandleGamepadInfoSelectorApply();
+	void ChangeCustomResetVisibilityForInputType(ECommonInputType InputType);
+	void ChangeCustomClearVisibilityForInputType(ECommonInputType InputType);
+	void NavigateToSelectedConfig();
+	void HandleGamepadInfoSelectorFocus();
+	void AreWeOkayWithThisChange(class FName ActionName, const struct FKey& Key, bool* IsOkay);
+	void GamepadInfoSelectorNavRight();
 
 public:
 	static class UClass* StaticClass()
@@ -103,31 +102,6 @@ public:
 		return GetDefaultObjImpl<UTabGamePadConfig_v3_C>();
 	}
 };
-static_assert(alignof(UTabGamePadConfig_v3_C) == 0x000008, "Wrong alignment on UTabGamePadConfig_v3_C");
-static_assert(sizeof(UTabGamePadConfig_v3_C) == 0x0003B0, "Wrong size on UTabGamePadConfig_v3_C");
-static_assert(offsetof(UTabGamePadConfig_v3_C, UberGraphFrame) == 0x0002B8, "Member 'UTabGamePadConfig_v3_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, GamepadInfoSelectorPanel_v3) == 0x0002C0, "Member 'UTabGamePadConfig_v3_C::GamepadInfoSelectorPanel_v3' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, GamepadMappingInfo_v3) == 0x0002C8, "Member 'UTabGamePadConfig_v3_C::GamepadMappingInfo_v3' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, GamepadMappingInfoChanged) == 0x0002D0, "Member 'UTabGamePadConfig_v3_C::GamepadMappingInfoChanged' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, InputPresets) == 0x0002E0, "Member 'UTabGamePadConfig_v3_C::InputPresets' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, InputPresetNames_NoCustom) == 0x0002F0, "Member 'UTabGamePadConfig_v3_C::InputPresetNames_NoCustom' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, PresetMappingIndex) == 0x000300, "Member 'UTabGamePadConfig_v3_C::PresetMappingIndex' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, PlatformMappingIndex) == 0x000304, "Member 'UTabGamePadConfig_v3_C::PlatformMappingIndex' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, CustomInputTemplatePresetIndex) == 0x000308, "Member 'UTabGamePadConfig_v3_C::CustomInputTemplatePresetIndex' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, DisplayObject) == 0x000310, "Member 'UTabGamePadConfig_v3_C::DisplayObject' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, CurrentInputActionGroup) == 0x000318, "Member 'UTabGamePadConfig_v3_C::CurrentInputActionGroup' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, CustomResetToDefaultConfig) == 0x00031C, "Member 'UTabGamePadConfig_v3_C::CustomResetToDefaultConfig' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, CustomKeySelection) == 0x000320, "Member 'UTabGamePadConfig_v3_C::CustomKeySelection' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, CustomActionSelection) == 0x000338, "Member 'UTabGamePadConfig_v3_C::CustomActionSelection' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, CustomInputActionGroupSelectionIndex) == 0x000340, "Member 'UTabGamePadConfig_v3_C::CustomInputActionGroupSelectionIndex' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, CustomActionSelectionIndex) == 0x000344, "Member 'UTabGamePadConfig_v3_C::CustomActionSelectionIndex' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, Key_None) == 0x000348, "Member 'UTabGamePadConfig_v3_C::Key_None' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, RadioButtonClass) == 0x000360, "Member 'UTabGamePadConfig_v3_C::RadioButtonClass' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, RadioButtonStyle) == 0x000368, "Member 'UTabGamePadConfig_v3_C::RadioButtonStyle' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, InputDataForActionsPanel) == 0x000370, "Member 'UTabGamePadConfig_v3_C::InputDataForActionsPanel' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, TabGamePadConfigBack) == 0x000380, "Member 'UTabGamePadConfig_v3_C::TabGamePadConfigBack' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, TabGamePadConfigApply) == 0x000390, "Member 'UTabGamePadConfig_v3_C::TabGamePadConfigApply' has a wrong offset!");
-static_assert(offsetof(UTabGamePadConfig_v3_C, TabGamePadActionsThatNeedBinds) == 0x0003A0, "Member 'UTabGamePadConfig_v3_C::TabGamePadActionsThatNeedBinds' has a wrong offset!");
 
 }
 

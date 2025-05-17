@@ -18,12 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CreativeTeamColors.CreativeTeamColors_C
-// 0x0020 (0x0250 - 0x0230)
+// 0x0020 (0x0220 - 0x0200)
 class UCreativeTeamColors_C final : public USceneComponent
 {
 public:
-	TArray<struct FLinearColor>                   TeamLightColors;                                   // 0x0230(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FLinearColor>                   TeamSelectorColors;                                // 0x0240(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FLinearColor>                   TeamLightColors;                                   // 0x0200(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TArray<struct FLinearColor>                   TeamSelectorColors;                                // 0x0210(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,10 +36,6 @@ public:
 		return GetDefaultObjImpl<UCreativeTeamColors_C>();
 	}
 };
-static_assert(alignof(UCreativeTeamColors_C) == 0x000008, "Wrong alignment on UCreativeTeamColors_C");
-static_assert(sizeof(UCreativeTeamColors_C) == 0x000250, "Wrong size on UCreativeTeamColors_C");
-static_assert(offsetof(UCreativeTeamColors_C, TeamLightColors) == 0x000230, "Member 'UCreativeTeamColors_C::TeamLightColors' has a wrong offset!");
-static_assert(offsetof(UCreativeTeamColors_C, TeamSelectorColors) == 0x000240, "Member 'UCreativeTeamColors_C::TeamSelectorColors' has a wrong offset!");
 
 }
 

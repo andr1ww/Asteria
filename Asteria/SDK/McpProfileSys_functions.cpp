@@ -20,7 +20,7 @@ namespace SDK
 // Function McpProfileSys.McpProfile.DeleteAllProfiles
 // (Final, Net, NetReliable, NetRequest, Native, Event, Private, HasOutParams)
 // Parameters:
-// struct FClientUrlContext                Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+// struct FClientUrlContext*               Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 
 void UMcpProfile::DeleteAllProfiles(struct FClientUrlContext* Context)
 {
@@ -46,7 +46,7 @@ void UMcpProfile::DeleteAllProfiles(struct FClientUrlContext* Context)
 // Function McpProfileSys.McpProfile.DeleteProfile
 // (Final, Net, NetReliable, NetRequest, Native, Event, Private, HasOutParams)
 // Parameters:
-// struct FClientUrlContext                Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+// struct FClientUrlContext*               Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 
 void UMcpProfile::DeleteProfile(struct FClientUrlContext* Context)
 {
@@ -72,9 +72,9 @@ void UMcpProfile::DeleteProfile(struct FClientUrlContext* Context)
 // Function McpProfileSys.McpProfile.LockProfileForWrite
 // (Final, Net, NetReliable, NetRequest, Native, Event, Private, HasOutParams)
 // Parameters:
-// class FString                           Code                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Code                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Timeout                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FDedicatedServerUrlContext       Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+// struct FDedicatedServerUrlContext*      Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 
 void UMcpProfile::LockProfileForWrite(const class FString& Code, int32 Timeout, struct FDedicatedServerUrlContext* Context)
 {
@@ -103,7 +103,7 @@ void UMcpProfile::LockProfileForWrite(const class FString& Code, int32 Timeout, 
 // Function McpProfileSys.McpProfile.QueryProfile
 // (Final, Net, NetReliable, NetRequest, Native, Event, Private, HasOutParams)
 // Parameters:
-// struct FBaseUrlContext                  Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+// struct FBaseUrlContext*                 Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 
 void UMcpProfile::QueryProfile(struct FBaseUrlContext* Context)
 {
@@ -129,7 +129,7 @@ void UMcpProfile::QueryProfile(struct FBaseUrlContext* Context)
 // Function McpProfileSys.McpProfile.QueryPublicProfile
 // (Final, Net, NetReliable, NetRequest, Native, Event, Private, HasOutParams)
 // Parameters:
-// struct FBaseUrlContext                  Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+// struct FBaseUrlContext*                 Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 
 void UMcpProfile::QueryPublicProfile(struct FBaseUrlContext* Context)
 {
@@ -155,8 +155,8 @@ void UMcpProfile::QueryPublicProfile(struct FBaseUrlContext* Context)
 // Function McpProfileSys.McpProfile.UnlockProfileForWrite
 // (Final, Net, NetReliable, NetRequest, Native, Event, Private, HasOutParams)
 // Parameters:
-// class FString                           Code                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FDedicatedServerUrlContext       Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
+// const class FString&                    Code                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FDedicatedServerUrlContext*      Context                                                (Parm, OutParm, RepSkip, NativeAccessSpecifierPublic)
 
 void UMcpProfile::UnlockProfileForWrite(const class FString& Code, struct FDedicatedServerUrlContext* Context)
 {

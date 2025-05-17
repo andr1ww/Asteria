@@ -10,20 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GCNL_PurpleStuff.GCNL_PurpleStuff_C
-// 0x0010 (0x0348 - 0x0338)
+// 0x0010 (0x0328 - 0x0318)
 class AGCNL_PurpleStuff_C final : public AFortGameplayCueNotify_Looping
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0338(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class APlayerPawn_Athena_Generic_C*           PlayerActor;                                       // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0318(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class APlayerPawn_Athena_Generic_C*           PlayerActor;                                       // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GCNL_PurpleStuff(int32 EntryPoint);
@@ -42,10 +42,6 @@ public:
 		return GetDefaultObjImpl<AGCNL_PurpleStuff_C>();
 	}
 };
-static_assert(alignof(AGCNL_PurpleStuff_C) == 0x000008, "Wrong alignment on AGCNL_PurpleStuff_C");
-static_assert(sizeof(AGCNL_PurpleStuff_C) == 0x000348, "Wrong size on AGCNL_PurpleStuff_C");
-static_assert(offsetof(AGCNL_PurpleStuff_C, UberGraphFrame) == 0x000338, "Member 'AGCNL_PurpleStuff_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AGCNL_PurpleStuff_C, PlayerActor) == 0x000340, "Member 'AGCNL_PurpleStuff_C::PlayerActor' has a wrong offset!");
 
 }
 

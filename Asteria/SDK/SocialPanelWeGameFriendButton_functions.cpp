@@ -37,20 +37,6 @@ void USocialPanelWeGameFriendButton_C::ExecuteUbergraph_SocialPanelWeGameFriendB
 }
 
 
-// Function SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
-
-void USocialPanelWeGameFriendButton_C::BP_OnHovered()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SocialPanelWeGameFriendButton_C", "BP_OnHovered");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C.BP_OnUnhovered
 // (Event, Protected, BlueprintEvent)
 
@@ -60,6 +46,20 @@ void USocialPanelWeGameFriendButton_C::BP_OnUnhovered()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("SocialPanelWeGameFriendButton_C", "BP_OnUnhovered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SocialPanelWeGameFriendButton.SocialPanelWeGameFriendButton_C.BP_OnHovered
+// (Event, Protected, BlueprintEvent)
+
+void USocialPanelWeGameFriendButton_C::BP_OnHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SocialPanelWeGameFriendButton_C", "BP_OnHovered");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

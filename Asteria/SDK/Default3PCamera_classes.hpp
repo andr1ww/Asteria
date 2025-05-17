@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UDefault3PCamera_C>();
 	}
 };
-static_assert(alignof(UDefault3PCamera_C) == 0x000008, "Wrong alignment on UDefault3PCamera_C");
-static_assert(sizeof(UDefault3PCamera_C) == 0x000138, "Wrong size on UDefault3PCamera_C");
 
 }
 

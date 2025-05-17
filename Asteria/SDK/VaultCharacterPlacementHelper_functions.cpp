@@ -20,9 +20,9 @@ namespace SDK
 // Function VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UpdatePosition For Camera
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EFrontEndCamera                         FrontendCamera                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFrontEndCamera                         FrontEndCamera                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AVaultCharacterPlacementHelper_C::UpdatePosition_For_Camera(EFrontEndCamera FrontendCamera)
+void AVaultCharacterPlacementHelper_C::UpdatePosition_For_Camera(EFrontEndCamera FrontEndCamera)
 {
 	static class UFunction* Func = nullptr;
 
@@ -31,7 +31,7 @@ void AVaultCharacterPlacementHelper_C::UpdatePosition_For_Camera(EFrontEndCamera
 
 	Params::VaultCharacterPlacementHelper_C_UpdatePosition_For_Camera Parms{};
 
-	Parms.FrontendCamera = FrontendCamera;
+	Parms.FrontEndCamera = FrontEndCamera;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

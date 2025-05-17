@@ -10,36 +10,25 @@
 
 #include "Basic.hpp"
 
-#include "FortniteGame_structs.hpp"
 #include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
+#include "FortniteGame_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ItemInfoWidget.ItemInfoWidget_C
-// 0x0040 (0x0278 - 0x0238)
+// 0x0010 (0x02B8 - 0x02A8)
 class UItemInfoWidget_C final : public UFortItemInfoWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0238(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UOverlay*                               MainViewItemInfoOverlay;                           // 0x0240(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           MainViewItemInfoVB;                                // 0x0248(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 RarityGlow;                                        // 0x0250(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Rule;                                              // 0x0258(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_Desc;                                         // 0x0260(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_ItemType;                                     // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCommonTextBlock*                       Text_Name;                                         // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 RarityGlow;                                        // 0x02B0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void GenerateItemName(class UFortItemDefinition* ItemDefinition, int32 Quantity, class FText* DisplayName);
-	void Update_Text(class UFortItemDefinition* ItemDefinition, int32 Count);
-	void PopulateUsingItem(class UFortItem* NewItem);
-	void PopulateUsingItemDefinition(class UFortItemDefinition* NewItem);
-	void Populate_Internal(class UFortItemDefinition* ItemDefinition, int32 Count);
-	void Construct();
 	void ExecuteUbergraph_ItemInfoWidget(int32 EntryPoint);
+	void SetRarityMaterialValues(class UFortItemDefinition* ItemDefinition);
 
 public:
 	static class UClass* StaticClass()
@@ -51,16 +40,6 @@ public:
 		return GetDefaultObjImpl<UItemInfoWidget_C>();
 	}
 };
-static_assert(alignof(UItemInfoWidget_C) == 0x000008, "Wrong alignment on UItemInfoWidget_C");
-static_assert(sizeof(UItemInfoWidget_C) == 0x000278, "Wrong size on UItemInfoWidget_C");
-static_assert(offsetof(UItemInfoWidget_C, UberGraphFrame) == 0x000238, "Member 'UItemInfoWidget_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UItemInfoWidget_C, MainViewItemInfoOverlay) == 0x000240, "Member 'UItemInfoWidget_C::MainViewItemInfoOverlay' has a wrong offset!");
-static_assert(offsetof(UItemInfoWidget_C, MainViewItemInfoVB) == 0x000248, "Member 'UItemInfoWidget_C::MainViewItemInfoVB' has a wrong offset!");
-static_assert(offsetof(UItemInfoWidget_C, RarityGlow) == 0x000250, "Member 'UItemInfoWidget_C::RarityGlow' has a wrong offset!");
-static_assert(offsetof(UItemInfoWidget_C, Rule) == 0x000258, "Member 'UItemInfoWidget_C::Rule' has a wrong offset!");
-static_assert(offsetof(UItemInfoWidget_C, Text_Desc) == 0x000260, "Member 'UItemInfoWidget_C::Text_Desc' has a wrong offset!");
-static_assert(offsetof(UItemInfoWidget_C, Text_ItemType) == 0x000268, "Member 'UItemInfoWidget_C::Text_ItemType' has a wrong offset!");
-static_assert(offsetof(UItemInfoWidget_C, Text_Name) == 0x000270, "Member 'UItemInfoWidget_C::Text_Name' has a wrong offset!");
 
 }
 

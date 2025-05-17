@@ -17,41 +17,6 @@
 namespace SDK
 {
 
-// Function RewardInfoSimpleWidget.RewardInfoSimpleWidget_C.GetDisplayName
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             DisplayName                                            (Parm, OutParm)
-
-void URewardInfoSimpleWidget_C::GetDisplayName(class FText* DisplayName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RewardInfoSimpleWidget_C", "GetDisplayName");
-
-	Params::RewardInfoSimpleWidget_C_GetDisplayName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (DisplayName != nullptr)
-		*DisplayName = std::move(Parms.DisplayName);
-}
-
-
-// Function RewardInfoSimpleWidget.RewardInfoSimpleWidget_C.HandleDifferentItemOrQuantitySetBP
-// (Event, Protected, BlueprintEvent)
-
-void URewardInfoSimpleWidget_C::HandleDifferentItemOrQuantitySetBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("RewardInfoSimpleWidget_C", "HandleDifferentItemOrQuantitySetBP");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function RewardInfoSimpleWidget.RewardInfoSimpleWidget_C.ExecuteUbergraph_RewardInfoSimpleWidget
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -69,6 +34,41 @@ void URewardInfoSimpleWidget_C::ExecuteUbergraph_RewardInfoSimpleWidget(int32 En
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function RewardInfoSimpleWidget.RewardInfoSimpleWidget_C.HandleDifferentItemOrQuantitySetBP
+// (Event, Protected, BlueprintEvent)
+
+void URewardInfoSimpleWidget_C::HandleDifferentItemOrQuantitySetBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RewardInfoSimpleWidget_C", "HandleDifferentItemOrQuantitySetBP");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function RewardInfoSimpleWidget.RewardInfoSimpleWidget_C.GetDisplayName
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText*                            DisplayName                                            (Parm, OutParm)
+
+void URewardInfoSimpleWidget_C::GetDisplayName(class FText* DisplayName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RewardInfoSimpleWidget_C", "GetDisplayName");
+
+	Params::RewardInfoSimpleWidget_C_GetDisplayName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (DisplayName != nullptr)
+		*DisplayName = std::move(Parms.DisplayName);
 }
 
 }

@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function StoreMain_OfferDetailsAttribute.StoreMain_OfferDetailsAttribute_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UStoreMain_OfferDetailsAttribute_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StoreMain_OfferDetailsAttribute_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function StoreMain_OfferDetailsAttribute.StoreMain_OfferDetailsAttribute_C.ExecuteUbergraph_StoreMain_OfferDetailsAttribute
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UStoreMain_OfferDetailsAttribute_C::ExecuteUbergraph_StoreMain_OfferDetails
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function StoreMain_OfferDetailsAttribute.StoreMain_OfferDetailsAttribute_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UStoreMain_OfferDetailsAttribute_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StoreMain_OfferDetailsAttribute_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

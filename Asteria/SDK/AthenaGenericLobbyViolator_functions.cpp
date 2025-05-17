@@ -20,8 +20,8 @@ namespace SDK
 // Function AthenaGenericLobbyViolator.AthenaGenericLobbyViolator_C.SetGamemodeName
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FText                             Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-// class FText                             SubText_0                                              (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      SubText_0                                              (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UAthenaGenericLobbyViolator_C::SetGamemodeName(const class FText& Name_0, const class FText& SubText_0)
 {

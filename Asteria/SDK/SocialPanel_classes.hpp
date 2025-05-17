@@ -18,23 +18,25 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SocialPanel.SocialPanel_C
-// 0x0038 (0x0388 - 0x0350)
+// 0x0030 (0x04E0 - 0x04B0)
 class USocialPanel_C final : public UFortSocialPanel
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnOpened;                                          // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UImage*                                 Image_Back;                                        // 0x0360(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULightbox_C*                            Lightbox;                                          // 0x0368(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USafeZone*                              SafeZone_0;                                        // 0x0370(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USocialPanel_TopBarExtension_C*         SocialPanel_TopBarExtension;                       // 0x0378(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          bIsClosing;                                        // 0x0380(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnOpened;                                          // 0x04B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UImage*                                 Image_Back;                                        // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class ULightbox_C*                            Lightbox;                                          // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USafeZone*                              SafeZone_0;                                        // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USocialPanel_TopBarExtension_C*         SocialPanel_TopBarExtension;                       // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_SocialPanel(int32 EntryPoint);
-	void PopSocialPanel();
+	void Destruct();
+	void HandleIntroEnded();
+	void OnBeginIntro();
+	void OnBeginOutro();
+	void HandleOutroEnded();
 	void ClosePanel();
-	void OnActivated();
 	void BndEvt__SocialPanel_TopBarExtension_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	struct FEventReply OnMouseButtonDown_0(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void ClosePanelAfterAnimation();
@@ -50,15 +52,6 @@ public:
 		return GetDefaultObjImpl<USocialPanel_C>();
 	}
 };
-static_assert(alignof(USocialPanel_C) == 0x000008, "Wrong alignment on USocialPanel_C");
-static_assert(sizeof(USocialPanel_C) == 0x000388, "Wrong size on USocialPanel_C");
-static_assert(offsetof(USocialPanel_C, UberGraphFrame) == 0x000350, "Member 'USocialPanel_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USocialPanel_C, OnOpened) == 0x000358, "Member 'USocialPanel_C::OnOpened' has a wrong offset!");
-static_assert(offsetof(USocialPanel_C, Image_Back) == 0x000360, "Member 'USocialPanel_C::Image_Back' has a wrong offset!");
-static_assert(offsetof(USocialPanel_C, Lightbox) == 0x000368, "Member 'USocialPanel_C::Lightbox' has a wrong offset!");
-static_assert(offsetof(USocialPanel_C, SafeZone_0) == 0x000370, "Member 'USocialPanel_C::SafeZone_0' has a wrong offset!");
-static_assert(offsetof(USocialPanel_C, SocialPanel_TopBarExtension) == 0x000378, "Member 'USocialPanel_C::SocialPanel_TopBarExtension' has a wrong offset!");
-static_assert(offsetof(USocialPanel_C, bIsClosing) == 0x000380, "Member 'USocialPanel_C::bIsClosing' has a wrong offset!");
 
 }
 

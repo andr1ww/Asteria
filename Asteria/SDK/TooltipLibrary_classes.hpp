@@ -26,7 +26,6 @@ public:
 	static void Set_Enabled_And_Tooltip_Text(class UWidget* Widget, bool Enabled, const class FText& Tooltip_Text, class UObject* __WorldContext);
 	static void Create_Item_Tooltip(class APlayerController* Owning_Player, const class FText& Header_Text, class USlateBrushAsset* Header_Icon, class UFortItem* Item, int32 OverrideQuantity, class UObject* __WorldContext, class UWidget** Return_Value);
 	static void Create_Compare_Item_Tooltip(class APlayerController* Owning_Player, const class FText& Header_Text, class USlateBrushAsset* Header_Icon, class UFortItem* Item, class UFortItem* ComparedItem, class UObject* __WorldContext, class UWidget** Return_Value);
-	static void Create_Basic_Multi_Line_Tooltip(class APlayerController* Owning_Player, TArray<class FText>& Body_Text, const class FText& Header_Text, class USlateBrushAsset* Icon_Brush, class UObject* __WorldContext, class UUserWidget** Output);
 	static void CreateXPTooltip(class APlayerController* Owner, const class FText& Header, const class FText& CommanderXP, const class FText& BoostXP, const class FText& RestXP, const class FText& Body, class UObject* __WorldContext, class UCommonUserWidget** Out);
 
 public:
@@ -39,8 +38,6 @@ public:
 		return GetDefaultObjImpl<UTooltipLibrary_C>();
 	}
 };
-static_assert(alignof(UTooltipLibrary_C) == 0x000008, "Wrong alignment on UTooltipLibrary_C");
-static_assert(sizeof(UTooltipLibrary_C) == 0x000028, "Wrong size on UTooltipLibrary_C");
 
 }
 

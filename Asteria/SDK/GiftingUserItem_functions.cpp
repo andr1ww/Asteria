@@ -17,6 +17,46 @@
 namespace SDK
 {
 
+// Function GiftingUserItem.GiftingUserItem_C.ExecuteUbergraph_GiftingUserItem
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGiftingUserItem_C::ExecuteUbergraph_GiftingUserItem(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GiftingUserItem_C", "ExecuteUbergraph_GiftingUserItem");
+
+	Params::GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GiftingUserItem.GiftingUserItem_C.UpdateMessageText
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      NewMessage                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UGiftingUserItem_C::UpdateMessageText(const class FText& NewMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GiftingUserItem_C", "UpdateMessageText");
+
+	Params::GiftingUserItem_C_UpdateMessageText Parms{};
+
+	Parms.NewMessage = std::move(NewMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GiftingUserItem.GiftingUserItem_C.SetSelectionState
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -34,46 +74,6 @@ void UGiftingUserItem_C::SetSelectionState(ESelectionState NewState, bool bAnima
 
 	Parms.NewState = NewState;
 	Parms.bAnimateOnSelect = bAnimateOnSelect;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GiftingUserItem.GiftingUserItem_C.UpdateMessageText
-// (Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// class FText                             NewMessage                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UGiftingUserItem_C::UpdateMessageText(const class FText& NewMessage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingUserItem_C", "UpdateMessageText");
-
-	Params::GiftingUserItem_C_UpdateMessageText Parms{};
-
-	Parms.NewMessage = std::move(NewMessage);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GiftingUserItem.GiftingUserItem_C.ExecuteUbergraph_GiftingUserItem
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGiftingUserItem_C::ExecuteUbergraph_GiftingUserItem(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GiftingUserItem_C", "ExecuteUbergraph_GiftingUserItem");
-
-	Params::GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -11,37 +11,39 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C
-// 0x0048 (0x0288 - 0x0240)
-class AFort_Entry_Music_Controller_BP_C final : public AActor
+// 0x0048 (0x0268 - 0x0220)
+class AFort_Entry_Music_Controller_BP_C final : public AFortEntryMusicController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0240(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAudioComponent*                        Enter_Menu_Loop;                                   // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        MenuMusic_B;                                       // 0x0250(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        MenuMusic_A;                                       // 0x0258(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        LoginMusic;                                        // 0x0260(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         FadeOutTime;                                       // 0x0268(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             CurrentMusic;                                      // 0x0270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Music_Activate_Override;                        // 0x0278(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_279[0x7];                                      // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAthenaMusicPackItemDefinition*         MusicPackToPlayLater;                              // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0220(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAudioComponent*                        Enter_Menu_Loop;                                   // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        MenuMusic_B;                                       // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        MenuMusic_A;                                       // 0x0238(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        LoginMusic;                                        // 0x0240(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         FadeOutTime;                                       // 0x0248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             CurrentMusic;                                      // 0x0250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_Music_Activate_Override;                        // 0x0258(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_259[0x7];                                      // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAthenaMusicPackItemDefinition*         MusicPackToPlayLater;                              // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnMusicPackChanged(const class UAthenaMusicPackItemDefinition* NewMusicPack);
+	void Change_Music(class USoundBase* New_Music, float StartTime);
 	void ListenToMusicPacks();
-	void Change_Music(class USoundBase* New_Music);
+	void OnMusicPackChanged(const class UAthenaMusicPackItemDefinition* NewMusicPack, float StartTimeOffset);
 	void Lobby_Music_Override(bool Lobby_Music_Activate, class USoundBase* New_Music);
 	void MakeNextMusicPackStartFromBeginning();
 	void DelayedPlayMusicPack(class UAthenaMusicPackItemDefinition* MusicPackToPlayLater_0);
 	void ClearDelayedPlayMusicPack();
+	void PlayEquippedMusicPack();
+	void StartMusic();
 	void ExecuteUbergraph_Fort_Entry_Music_Controller_BP(int32 EntryPoint);
 
 public:
@@ -54,17 +56,6 @@ public:
 		return GetDefaultObjImpl<AFort_Entry_Music_Controller_BP_C>();
 	}
 };
-static_assert(alignof(AFort_Entry_Music_Controller_BP_C) == 0x000008, "Wrong alignment on AFort_Entry_Music_Controller_BP_C");
-static_assert(sizeof(AFort_Entry_Music_Controller_BP_C) == 0x000288, "Wrong size on AFort_Entry_Music_Controller_BP_C");
-static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, UberGraphFrame) == 0x000240, "Member 'AFort_Entry_Music_Controller_BP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, Enter_Menu_Loop) == 0x000248, "Member 'AFort_Entry_Music_Controller_BP_C::Enter_Menu_Loop' has a wrong offset!");
-static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, MenuMusic_B) == 0x000250, "Member 'AFort_Entry_Music_Controller_BP_C::MenuMusic_B' has a wrong offset!");
-static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, MenuMusic_A) == 0x000258, "Member 'AFort_Entry_Music_Controller_BP_C::MenuMusic_A' has a wrong offset!");
-static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, LoginMusic) == 0x000260, "Member 'AFort_Entry_Music_Controller_BP_C::LoginMusic' has a wrong offset!");
-static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, FadeOutTime) == 0x000268, "Member 'AFort_Entry_Music_Controller_BP_C::FadeOutTime' has a wrong offset!");
-static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, CurrentMusic) == 0x000270, "Member 'AFort_Entry_Music_Controller_BP_C::CurrentMusic' has a wrong offset!");
-static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, Is_Music_Activate_Override) == 0x000278, "Member 'AFort_Entry_Music_Controller_BP_C::Is_Music_Activate_Override' has a wrong offset!");
-static_assert(offsetof(AFort_Entry_Music_Controller_BP_C, MusicPackToPlayLater) == 0x000280, "Member 'AFort_Entry_Music_Controller_BP_C::MusicPackToPlayLater' has a wrong offset!");
 
 }
 

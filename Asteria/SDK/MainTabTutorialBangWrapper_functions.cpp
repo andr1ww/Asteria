@@ -41,7 +41,7 @@ void UMainTabTutorialBangWrapper_C::SetShouldSuppressBang(bool ShouldSuppressBan
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EFortUIFeature                          UIFeature                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             RevealText                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// const class FText&                      RevealText                                             (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UMainTabTutorialBangWrapper_C::SetUIFeatureRevealData(EFortUIFeature UIFeature, const class FText& RevealText)
 {
@@ -62,7 +62,7 @@ void UMainTabTutorialBangWrapper_C::SetUIFeatureRevealData(EFortUIFeature UIFeat
 // Function MainTabTutorialBangWrapper.MainTabTutorialBangWrapper_C.Adjust Bang Image Translation
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector2D                        Translation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 Translation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UMainTabTutorialBangWrapper_C::Adjust_Bang_Image_Translation(const struct FVector2D& Translation)
 {

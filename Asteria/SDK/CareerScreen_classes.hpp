@@ -11,39 +11,34 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUI_classes.hpp"
-#include "UMG_structs.hpp"
-#include "FortniteUI_structs.hpp"
+#include "FortniteUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass CareerScreen.CareerScreen_C
-// 0x0028 (0x0348 - 0x0320)
-class UCareerScreen_C final : public UCommonActivatablePanel
+// 0x0050 (0x0508 - 0x04B8)
+class UCareerScreen_C final : public UAthenaCareerScreen
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UHorizontalBox*                         HorizontalBox_2;                                   // 0x0328(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULandingPageTile_C*                     LeaderboardsBtn;                                   // 0x0330(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULandingPageTile_C*                     ProfileBtn;                                        // 0x0338(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class ULandingPageTile_C*                     ReplaysBtn;                                        // 0x0340(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x04B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetSwitcher*                        FeatDisplaySwitcher;                               // 0x04C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 GradOvr;                                           // 0x04C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonRichTextBlock*                   NoAchievementMessage;                              // 0x04D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCommonTextBlock*                       SeasonHeadingTextLabel;                            // 0x04D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Switcher;                                          // 0x04E0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    Input_ReplayCinematic;                             // 0x04E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	class UActivatableMovieWidget_C*              ActivatableMovieWidget;                            // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AutoPlayVideo;                                     // 0x0500(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void ApplyHotfixButtonStates();
-	void GetFirstInteractableWidget(class UWidget** Widget);
-	void SetupButtonStates();
-	void Construct();
-	void OnActivated();
-	void OnDeactivated();
-	void ShowReplayBrowser();
-	void BndEvt__ProfileStatsBtn_K2Node_ComponentBoundEvent_211_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void BndEvt__ProfileBtn_K2Node_ComponentBoundEvent_228_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void BndEvt__LeaderboardsBtn_K2Node_ComponentBoundEvent_245_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void BndEvt__ReplaysBtn_K2Node_ComponentBoundEvent_262_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
-	void BndEvt__RecentGamesBtn_K2Node_ComponentBoundEvent_279_CommonButtonClicked__DelegateSignature(class UCommonButton* Button);
 	void ExecuteUbergraph_CareerScreen(int32 EntryPoint);
+	void OnInitialized();
+	void BP_OnActivated();
+	void ShowFeats(bool bHasCompletedFeats);
+	void PlayCinematic();
+	void ReplayCinematic(bool* PassThrough);
 
 public:
 	static class UClass* StaticClass()
@@ -55,13 +50,6 @@ public:
 		return GetDefaultObjImpl<UCareerScreen_C>();
 	}
 };
-static_assert(alignof(UCareerScreen_C) == 0x000008, "Wrong alignment on UCareerScreen_C");
-static_assert(sizeof(UCareerScreen_C) == 0x000348, "Wrong size on UCareerScreen_C");
-static_assert(offsetof(UCareerScreen_C, UberGraphFrame) == 0x000320, "Member 'UCareerScreen_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UCareerScreen_C, HorizontalBox_2) == 0x000328, "Member 'UCareerScreen_C::HorizontalBox_2' has a wrong offset!");
-static_assert(offsetof(UCareerScreen_C, LeaderboardsBtn) == 0x000330, "Member 'UCareerScreen_C::LeaderboardsBtn' has a wrong offset!");
-static_assert(offsetof(UCareerScreen_C, ProfileBtn) == 0x000338, "Member 'UCareerScreen_C::ProfileBtn' has a wrong offset!");
-static_assert(offsetof(UCareerScreen_C, ReplaysBtn) == 0x000340, "Member 'UCareerScreen_C::ReplaysBtn' has a wrong offset!");
 
 }
 

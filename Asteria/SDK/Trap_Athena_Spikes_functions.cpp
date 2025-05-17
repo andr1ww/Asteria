@@ -83,7 +83,7 @@ void ATrap_Athena_Spikes_C::OnOutOfDurability()
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EGameplayCueEvent                       EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayCueParameters           Parameters                                             (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+// const struct FGameplayCueParameters&    Parameters                                             (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 
 void ATrap_Athena_Spikes_C::GameplayCue_Abilities_Activation_Traps_ActivateTrap(EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters)
 {
@@ -140,6 +140,46 @@ void ATrap_Athena_Spikes_C::OnReloadEnd()
 		Func = Class->GetFunction("Trap_Athena_Spikes_C", "OnReloadEnd");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Trap_Athena_Spikes.Trap_Athena_Spikes_C.OnLoaded_8A9D6DF7414FFDD42BE9FCB155F39B4D
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATrap_Athena_Spikes_C::OnLoaded_8A9D6DF7414FFDD42BE9FCB155F39B4D(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Trap_Athena_Spikes_C", "OnLoaded_8A9D6DF7414FFDD42BE9FCB155F39B4D");
+
+	Params::Trap_Athena_Spikes_C_OnLoaded_8A9D6DF7414FFDD42BE9FCB155F39B4D Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Trap_Athena_Spikes.Trap_Athena_Spikes_C.OnLoaded_8E622EE64F2AF153BE7162BA1D8EBCC1
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATrap_Athena_Spikes_C::OnLoaded_8E622EE64F2AF153BE7162BA1D8EBCC1(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Trap_Athena_Spikes_C", "OnLoaded_8E622EE64F2AF153BE7162BA1D8EBCC1");
+
+	Params::Trap_Athena_Spikes_C_OnLoaded_8E622EE64F2AF153BE7162BA1D8EBCC1 Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -279,7 +319,7 @@ void ATrap_Athena_Spikes_C::SetSpikePosition(float NewSpikePosition)
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   SweepSpeed_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     SweepColor_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              SweepColor_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   SweepExponent_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ATrap_Athena_Spikes_C::MaterialSweepOnSpikes(float SweepSpeed_0, const struct FLinearColor& SweepColor_0, float SweepExponent_0)
@@ -300,7 +340,7 @@ void ATrap_Athena_Spikes_C::MaterialSweepOnSpikes(float SweepSpeed_0, const stru
 
 
 // Function Trap_Athena_Spikes.Trap_Athena_Spikes_C. ChangeToFriendlyMaterial
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ATrap_Athena_Spikes_C::_ChangeToFriendlyMaterial()
 {

@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UAthena_ButtonStyle_LockerTab_C>();
 	}
 };
-static_assert(alignof(UAthena_ButtonStyle_LockerTab_C) == 0x000008, "Wrong alignment on UAthena_ButtonStyle_LockerTab_C");
-static_assert(sizeof(UAthena_ButtonStyle_LockerTab_C) == 0x000570, "Wrong size on UAthena_ButtonStyle_LockerTab_C");
 
 }
 

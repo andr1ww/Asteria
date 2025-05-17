@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+
 
 namespace SDK::Params
 {
@@ -21,9 +23,15 @@ struct SK_M249_Skeleton_Dynamic_AnimBP_C_ExecuteUbergraph_SK_M249_Skeleton_Dynam
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(SK_M249_Skeleton_Dynamic_AnimBP_C_ExecuteUbergraph_SK_M249_Skeleton_Dynamic_AnimBP) == 0x000004, "Wrong alignment on SK_M249_Skeleton_Dynamic_AnimBP_C_ExecuteUbergraph_SK_M249_Skeleton_Dynamic_AnimBP");
-static_assert(sizeof(SK_M249_Skeleton_Dynamic_AnimBP_C_ExecuteUbergraph_SK_M249_Skeleton_Dynamic_AnimBP) == 0x000004, "Wrong size on SK_M249_Skeleton_Dynamic_AnimBP_C_ExecuteUbergraph_SK_M249_Skeleton_Dynamic_AnimBP");
-static_assert(offsetof(SK_M249_Skeleton_Dynamic_AnimBP_C_ExecuteUbergraph_SK_M249_Skeleton_Dynamic_AnimBP, EntryPoint) == 0x000000, "Member 'SK_M249_Skeleton_Dynamic_AnimBP_C_ExecuteUbergraph_SK_M249_Skeleton_Dynamic_AnimBP::EntryPoint' has a wrong offset!");
+
+// Function SK_M249_Skeleton_Dynamic_AnimBP.SK_M249_Skeleton_Dynamic_AnimBP_C.AnimGraph
+// 0x0020 (0x0020 - 0x0000)
+struct SK_M249_Skeleton_Dynamic_AnimBP_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              InPose;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
+};
 
 }
 

@@ -88,7 +88,7 @@ void AB_ShootingTarget_Master_C::Target_Movement_Audio(bool Jump_Up_)
 // Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.SpawnWeakpointFX
 // (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FTransform                       ImpactTransform                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FTransform&                ImpactTransform                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 
 void AB_ShootingTarget_Master_C::SpawnWeakpointFX(const struct FTransform& ImpactTransform)
 {
@@ -285,6 +285,66 @@ void AB_ShootingTarget_Master_C::BndEvt__FortMinigameProgress_K2Node_ComponentBo
 }
 
 
+// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AB_ShootingTarget_Master_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_ShootingTarget_Master_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.OnDamageServer
+// (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTagContainer&     DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FVector&                   Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayEffectContextHandle&EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AB_ShootingTarget_Master_C::OnDamageServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_ShootingTarget_Master_C", "OnDamageServer");
+
+	Params::B_ShootingTarget_Master_C_OnDamageServer Parms{};
+
+	Parms.Damage = Damage;
+	Parms.DamageTags = std::move(DamageTags);
+	Parms.Momentum = std::move(Momentum);
+	Parms.HitInfo = std::move(HitInfo);
+	Parms.InstigatedBy = InstigatedBy;
+	Parms.DamageCauser = DamageCauser;
+	Parms.EffectContext = std::move(EffectContext);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.KnockdownTarget
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void AB_ShootingTarget_Master_C::KnockdownTarget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_ShootingTarget_Master_C", "KnockdownTarget");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.BndEvt__ProximityTrigger_K2Node_ComponentBoundEvent_3_ComponentBeginOverlapSignature__DelegateSignature
 // (HasOutParams, BlueprintEvent)
 // Parameters:
@@ -293,7 +353,7 @@ void AB_ShootingTarget_Master_C::BndEvt__FortMinigameProgress_K2Node_ComponentBo
 // class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FHitResult                       SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
 void AB_ShootingTarget_Master_C::BndEvt__ProximityTrigger_K2Node_ComponentBoundEvent_3_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
@@ -329,47 +389,21 @@ void AB_ShootingTarget_Master_C::BndEvt__ToyOptionsComponent_K2Node_ComponentBou
 }
 
 
-// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void AB_ShootingTarget_Master_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_ShootingTarget_Master_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.OnDamageServer
-// (BlueprintAuthorityOnly, Event, Public, HasOutParams, BlueprintEvent)
+// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.PopUpTarget
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayTagContainer            DamageTags                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FVector                          Momentum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FHitResult                       HitInfo                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// class AController*                      InstigatedBy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayEffectContextHandle     EffectContext                                          (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    MinigameJustStartedOrStopped                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AB_ShootingTarget_Master_C::OnDamageServer(float Damage, const struct FGameplayTagContainer& DamageTags, const struct FVector& Momentum, const struct FHitResult& HitInfo, class AController* InstigatedBy, class AActor* DamageCauser, const struct FGameplayEffectContextHandle& EffectContext)
+void AB_ShootingTarget_Master_C::PopUpTarget(bool MinigameJustStartedOrStopped)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_ShootingTarget_Master_C", "OnDamageServer");
+		Func = Class->GetFunction("B_ShootingTarget_Master_C", "PopUpTarget");
 
-	Params::B_ShootingTarget_Master_C_OnDamageServer Parms{};
+	Params::B_ShootingTarget_Master_C_PopUpTarget Parms{};
 
-	Parms.Damage = Damage;
-	Parms.DamageTags = std::move(DamageTags);
-	Parms.Momentum = std::move(Momentum);
-	Parms.HitInfo = std::move(HitInfo);
-	Parms.InstigatedBy = InstigatedBy;
-	Parms.DamageCauser = DamageCauser;
-	Parms.EffectContext = std::move(EffectContext);
+	Parms.MinigameJustStartedOrStopped = MinigameJustStartedOrStopped;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -403,37 +437,23 @@ void AB_ShootingTarget_Master_C::BndEvt__FortMinigameProgress_K2Node_ComponentBo
 }
 
 
-// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.PopUpTarget
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.OnLoaded_068F5161459B8B1AEAD4A0B19781287D
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    MinigameJustStartedOrStopped                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AB_ShootingTarget_Master_C::PopUpTarget(bool MinigameJustStartedOrStopped)
+void AB_ShootingTarget_Master_C::OnLoaded_068F5161459B8B1AEAD4A0B19781287D(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("B_ShootingTarget_Master_C", "PopUpTarget");
+		Func = Class->GetFunction("B_ShootingTarget_Master_C", "OnLoaded_068F5161459B8B1AEAD4A0B19781287D");
 
-	Params::B_ShootingTarget_Master_C_PopUpTarget Parms{};
+	Params::B_ShootingTarget_Master_C_OnLoaded_068F5161459B8B1AEAD4A0B19781287D Parms{};
 
-	Parms.MinigameJustStartedOrStopped = MinigameJustStartedOrStopped;
+	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.KnockdownTarget
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-
-void AB_ShootingTarget_Master_C::KnockdownTarget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_ShootingTarget_Master_C", "KnockdownTarget");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -448,26 +468,6 @@ void AB_ShootingTarget_Master_C::OnReady_A57ED5A14BEB6A98DB20D88D1582D58A()
 		Func = Class->GetFunction("B_ShootingTarget_Master_C", "OnReady_A57ED5A14BEB6A98DB20D88D1582D58A");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.OnLoaded_E00ACB5548EAE7DC61ECB69BAE5C78CA
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AB_ShootingTarget_Master_C::OnLoaded_E00ACB5548EAE7DC61ECB69BAE5C78CA(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("B_ShootingTarget_Master_C", "OnLoaded_E00ACB5548EAE7DC61ECB69BAE5C78CA");
-
-	Params::B_ShootingTarget_Master_C_OnLoaded_E00ACB5548EAE7DC61ECB69BAE5C78CA Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -559,7 +559,7 @@ void AB_ShootingTarget_Master_C::PopUpTimeline__FinishedFunc()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    MinigameJustStartedOrStopped                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    CanPopUp_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   CanPopUp_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AB_ShootingTarget_Master_C::CanPopUp(bool MinigameJustStartedOrStopped, bool* CanPopUp_0)
 {
@@ -596,8 +596,8 @@ void AB_ShootingTarget_Master_C::ResetWeakPoints()
 // Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.WeakPointWasHit
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FHitResult                       Hit_Result                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-// class UPrimitiveComponent*              HitComponent                                           (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                Hit_Result                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// class UPrimitiveComponent**             HitComponent                                           (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool AB_ShootingTarget_Master_C::WeakPointWasHit(const struct FHitResult& Hit_Result, class UPrimitiveComponent** HitComponent)
@@ -647,7 +647,7 @@ void AB_ShootingTarget_Master_C::PrepareChosenTarget(class UStaticMeshComponent*
 // Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.CalculateScore
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   ScoreToAward                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  ScoreToAward                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AB_ShootingTarget_Master_C::CalculateScore(int32* ScoreToAward)
 {
@@ -669,8 +669,8 @@ void AB_ShootingTarget_Master_C::CalculateScore(int32* ScoreToAward)
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AFortPlayerController*            FortPlayerController                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ScoreAwarded                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TeamAwardedPoints                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  ScoreAwarded                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  TeamAwardedPoints                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AB_ShootingTarget_Master_C::AwardScore(class AFortPlayerController* FortPlayerController, int32* ScoreAwarded, int32* TeamAwardedPoints)
 {
@@ -694,11 +694,11 @@ void AB_ShootingTarget_Master_C::AwardScore(class AFortPlayerController* FortPla
 
 
 // Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.ShouldTriggerTarget
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          Overlapping_Actor                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UPrimitiveComponent*              Overlapping_Component                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AB_ShootingTarget_Master_C::ShouldTriggerTarget(class UObject* Overlapping_Actor, class UPrimitiveComponent* Overlapping_Component, bool* Result)
 {
@@ -722,7 +722,7 @@ void AB_ShootingTarget_Master_C::ShouldTriggerTarget(class UObject* Overlapping_
 // Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.MinigameIsRunning
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    MinigameIsRunning_0                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   MinigameIsRunning_0                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AB_ShootingTarget_Master_C::MinigameIsRunning(bool* MinigameIsRunning_0)
 {
@@ -902,8 +902,8 @@ void AB_ShootingTarget_Master_C::SetAimAssistEnabled(bool NewType)
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   Damage                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayTagContainer            InTags                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FGameplayEffectContextHandle     EffectContext                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayTagContainer&     InTags                                                 (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGameplayEffectContextHandle&EffectContext                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class AController*                      EventInstigator                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -952,11 +952,11 @@ void AB_ShootingTarget_Master_C::UpdateHealthBarVisibility(bool ShouldShowBar)
 // Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.IsWithinWeakpointBounds
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                          Impact_location                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class USceneComponent*                  Component                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   Impact_Location                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class USceneComponent*            Component                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
-bool AB_ShootingTarget_Master_C::IsWithinWeakpointBounds(const struct FVector& Impact_location, const class USceneComponent* Component)
+bool AB_ShootingTarget_Master_C::IsWithinWeakpointBounds(const struct FVector& Impact_Location, const class USceneComponent* Component)
 {
 	static class UFunction* Func = nullptr;
 
@@ -965,7 +965,7 @@ bool AB_ShootingTarget_Master_C::IsWithinWeakpointBounds(const struct FVector& I
 
 	Params::B_ShootingTarget_Master_C_IsWithinWeakpointBounds Parms{};
 
-	Parms.Impact_location = std::move(Impact_location);
+	Parms.Impact_Location = std::move(Impact_Location);
 	Parms.Component = Component;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -979,7 +979,7 @@ bool AB_ShootingTarget_Master_C::IsWithinWeakpointBounds(const struct FVector& I
 // Parameters:
 // class UFortWeaponItemDefinition*        WeaponData                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   InDamage                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   OutDamage                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float*                                  OutDamage                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AB_ShootingTarget_Master_C::CalculateDamageFromWeaponData(class UFortWeaponItemDefinition* WeaponData, float InDamage, float* OutDamage)
 {
@@ -1004,7 +1004,7 @@ void AB_ShootingTarget_Master_C::CalculateDamageFromWeaponData(class UFortWeapon
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          DamageCauser                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFortWeaponItemDefinition*        OutWeaponData                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortWeaponItemDefinition**       OutWeaponData                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void AB_ShootingTarget_Master_C::GetWeaponDataFromDamageCauser(class UObject* DamageCauser, class UFortWeaponItemDefinition** OutWeaponData)
 {
@@ -1027,7 +1027,7 @@ void AB_ShootingTarget_Master_C::GetWeaponDataFromDamageCauser(class UObject* Da
 // Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.WeakPointArrayContainsItems
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    ArrayContainsItems                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool*                                   ArrayContainsItems                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void AB_ShootingTarget_Master_C::WeakPointArrayContainsItems(bool* ArrayContainsItems)
 {
@@ -1045,6 +1045,34 @@ void AB_ShootingTarget_Master_C::WeakPointArrayContainsItems(bool* ArrayContains
 }
 
 
+// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.RestoreToMaxHealth
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AB_ShootingTarget_Master_C::RestoreToMaxHealth()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_ShootingTarget_Master_C", "RestoreToMaxHealth");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.OnRep_TargetMeshSetting
+// (BlueprintCallable, BlueprintEvent)
+
+void AB_ShootingTarget_Master_C::OnRep_TargetMeshSetting()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_ShootingTarget_Master_C", "OnRep_TargetMeshSetting");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.GetCollisionStaticMesh
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -1058,6 +1086,26 @@ class UStaticMesh* AB_ShootingTarget_Master_C::GetCollisionStaticMesh() const
 		Func = Class->GetFunction("B_ShootingTarget_Master_C", "GetCollisionStaticMesh");
 
 	Params::B_ShootingTarget_Master_C_GetCollisionStaticMesh Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function B_ShootingTarget_Master.B_ShootingTarget_Master_C.GetMeshComponents
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// TArray<class UMeshComponent*>           ReturnValue                                            (Parm, OutParm, ReturnParm, ContainsInstancedReference, HasGetValueTypeHash)
+
+TArray<class UMeshComponent*> AB_ShootingTarget_Master_C::GetMeshComponents() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("B_ShootingTarget_Master_C", "GetMeshComponents");
+
+	Params::B_ShootingTarget_Master_C_GetMeshComponents Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Hookgun_Athena.B_Hookgun_Athena_C
-// 0x0018 (0x0DC0 - 0x0DA8)
+// 0x0018 (0x1328 - 0x1310)
 class AB_Hookgun_Athena_C final : public AB_Ranged_Generic_C
 {
 public:
-	struct FTimerHandle                           Timer;                                             // 0x0DA8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AFortPlayerPawnAthena*                  Player_Pawn;                                       // 0x0DB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Debug;                                             // 0x0DB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FTimerHandle                           Timer;                                             // 0x1310(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AFortPlayerPawnAthena*                  Player_Pawn;                                       // 0x1318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Debug;                                             // 0x1320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	static class UClass* StaticClass()
@@ -36,11 +36,6 @@ public:
 		return GetDefaultObjImpl<AB_Hookgun_Athena_C>();
 	}
 };
-static_assert(alignof(AB_Hookgun_Athena_C) == 0x000008, "Wrong alignment on AB_Hookgun_Athena_C");
-static_assert(sizeof(AB_Hookgun_Athena_C) == 0x000DC0, "Wrong size on AB_Hookgun_Athena_C");
-static_assert(offsetof(AB_Hookgun_Athena_C, Timer) == 0x000DA8, "Member 'AB_Hookgun_Athena_C::Timer' has a wrong offset!");
-static_assert(offsetof(AB_Hookgun_Athena_C, Player_Pawn) == 0x000DB0, "Member 'AB_Hookgun_Athena_C::Player_Pawn' has a wrong offset!");
-static_assert(offsetof(AB_Hookgun_Athena_C, Debug) == 0x000DB8, "Member 'AB_Hookgun_Athena_C::Debug' has a wrong offset!");
 
 }
 

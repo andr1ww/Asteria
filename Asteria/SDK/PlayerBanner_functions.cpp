@@ -54,7 +54,7 @@ void UPlayerBanner_C::Destruct()
 // Function PlayerBanner.PlayerBanner_C.Account Info Changed
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortPublicAccountInfo           NewInfo                                                (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// const struct FFortPublicAccountInfo&    NewInfo                                                (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 
 void UPlayerBanner_C::Account_Info_Changed(const struct FFortPublicAccountInfo& NewInfo)
 {
@@ -71,31 +71,11 @@ void UPlayerBanner_C::Account_Info_Changed(const struct FFortPublicAccountInfo& 
 }
 
 
-// Function PlayerBanner.PlayerBanner_C.OnTeamMemberStateChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortTeamMemberInfo              TeamMemberInfo                                         (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UPlayerBanner_C::OnTeamMemberStateChanged(const struct FFortTeamMemberInfo& TeamMemberInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlayerBanner_C", "OnTeamMemberStateChanged");
-
-	Params::PlayerBanner_C_OnTeamMemberStateChanged Parms{};
-
-	Parms.TeamMemberInfo = std::move(TeamMemberInfo);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function PlayerBanner.PlayerBanner_C.SetBannerImage
-// (Private, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortHomeBaseInfo                Image_info                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-// bool                                    Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FFortHomeBaseInfo&         Image_info                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 void UPlayerBanner_C::SetBannerImage(const struct FFortHomeBaseInfo& Image_info, bool* Success)
 {
@@ -158,7 +138,7 @@ void UPlayerBanner_C::SetBannerColorId(class FName InBannerColorId)
 // Function PlayerBanner.PlayerBanner_C.SetBannerOwner
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FUniqueNetIdRepl                 OwnerId                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const struct FUniqueNetIdRepl&          OwnerId                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
 void UPlayerBanner_C::SetBannerOwner(const struct FUniqueNetIdRepl& OwnerId)
 {
@@ -178,7 +158,7 @@ void UPlayerBanner_C::SetBannerOwner(const struct FUniqueNetIdRepl& OwnerId)
 // Function PlayerBanner.PlayerBanner_C.GetBannerMID
 // (Private, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UMaterialInstanceDynamic*         BannerMID                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInstanceDynamic**        BannerMID                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void UPlayerBanner_C::GetBannerMID(class UMaterialInstanceDynamic** BannerMID)
 {
@@ -341,7 +321,7 @@ void UPlayerBanner_C::SetBannerIconAndColorFromProfile()
 
 
 // Function PlayerBanner.PlayerBanner_C.SetupSurround
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UPlayerBanner_C::SetupSurround()
 {

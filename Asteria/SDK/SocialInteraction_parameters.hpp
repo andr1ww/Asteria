@@ -36,20 +36,6 @@ public:
 	bool                                          CallFunc_EqualEqual_NameName_ReturnValue_1;        // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction) == 0x000008, "Wrong alignment on SocialInteraction_C_ExecuteUbergraph_SocialInteraction");
-static_assert(sizeof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction) == 0x000028, "Wrong size on SocialInteraction_C_ExecuteUbergraph_SocialInteraction");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, EntryPoint) == 0x000000, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::EntryPoint' has a wrong offset!");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, Temp_bool_Variable) == 0x000004, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, Temp_byte_Variable) == 0x000005, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, Temp_byte_Variable_1) == 0x000006, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, CallFunc_IsPlatformOnlyFriend_ReturnValue) == 0x000018, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::CallFunc_IsPlatformOnlyFriend_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, CallFunc_GetInteractionName_ReturnValue) == 0x00001C, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::CallFunc_GetInteractionName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000024, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, K2Node_Select_Default) == 0x000025, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, CallFunc_EqualEqual_NameName_ReturnValue_1) == 0x000026, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::CallFunc_EqualEqual_NameName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(SocialInteraction_C_ExecuteUbergraph_SocialInteraction, CallFunc_BooleanOR_ReturnValue) == 0x000027, "Member 'SocialInteraction_C_ExecuteUbergraph_SocialInteraction::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
 }
 

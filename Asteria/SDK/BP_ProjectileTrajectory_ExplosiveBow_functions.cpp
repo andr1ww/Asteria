@@ -37,6 +37,28 @@ void ABP_ProjectileTrajectory_ExplosiveBow_C::ExecuteUbergraph_BP_ProjectileTraj
 }
 
 
+// Function BP_ProjectileTrajectory_ExplosiveBow.BP_ProjectileTrajectory_ExplosiveBow_C.SetTrajectorySpline
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<struct FVector>&           SplinePoints                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// const TArray<struct FVector>&           SplineTangents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+
+void ABP_ProjectileTrajectory_ExplosiveBow_C::SetTrajectorySpline(const TArray<struct FVector>& SplinePoints, const TArray<struct FVector>& SplineTangents)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ProjectileTrajectory_ExplosiveBow_C", "SetTrajectorySpline");
+
+	Params::BP_ProjectileTrajectory_ExplosiveBow_C_SetTrajectorySpline Parms{};
+
+	Parms.SplinePoints = std::move(SplinePoints);
+	Parms.SplineTangents = std::move(SplineTangents);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_ProjectileTrajectory_ExplosiveBow.BP_ProjectileTrajectory_ExplosiveBow_C.Pulse
 // (BlueprintCallable, BlueprintEvent)
 
@@ -48,28 +70,6 @@ void ABP_ProjectileTrajectory_ExplosiveBow_C::Pulse()
 		Func = Class->GetFunction("BP_ProjectileTrajectory_ExplosiveBow_C", "Pulse");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ProjectileTrajectory_ExplosiveBow.BP_ProjectileTrajectory_ExplosiveBow_C.SetTrajectoryFromNative
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FVector>                  SplinePoints                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>                  SplineTangents                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-
-void ABP_ProjectileTrajectory_ExplosiveBow_C::SetTrajectoryFromNative(const TArray<struct FVector>& SplinePoints, const TArray<struct FVector>& SplineTangents)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ProjectileTrajectory_ExplosiveBow_C", "SetTrajectoryFromNative");
-
-	Params::BP_ProjectileTrajectory_ExplosiveBow_C_SetTrajectoryFromNative Parms{};
-
-	Parms.SplinePoints = std::move(SplinePoints);
-	Parms.SplineTangents = std::move(SplineTangents);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -87,20 +87,20 @@ void ABP_ProjectileTrajectory_ExplosiveBow_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_ProjectileTrajectory_ExplosiveBow.BP_ProjectileTrajectory_ExplosiveBow_C.SetTrajectorySpline
+// Function BP_ProjectileTrajectory_ExplosiveBow.BP_ProjectileTrajectory_ExplosiveBow_C.SetTrajectorySplineInternal
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FVector>                  SplinePoints                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FVector>                  SplineTangents                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FVector>&                 SplinePoints                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// TArray<struct FVector>&                 SplineTangents                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
 
-void ABP_ProjectileTrajectory_ExplosiveBow_C::SetTrajectorySpline(TArray<struct FVector>& SplinePoints, TArray<struct FVector>& SplineTangents)
+void ABP_ProjectileTrajectory_ExplosiveBow_C::SetTrajectorySplineInternal(TArray<struct FVector>& SplinePoints, TArray<struct FVector>& SplineTangents)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ProjectileTrajectory_ExplosiveBow_C", "SetTrajectorySpline");
+		Func = Class->GetFunction("BP_ProjectileTrajectory_ExplosiveBow_C", "SetTrajectorySplineInternal");
 
-	Params::BP_ProjectileTrajectory_ExplosiveBow_C_SetTrajectorySpline Parms{};
+	Params::BP_ProjectileTrajectory_ExplosiveBow_C_SetTrajectorySplineInternal Parms{};
 
 	Parms.SplinePoints = std::move(SplinePoints);
 	Parms.SplineTangents = std::move(SplineTangents);

@@ -34,8 +34,6 @@ public:
 		return GetDefaultObjImpl<UAnimNotifyState_DisablePawnRotation_C>();
 	}
 };
-static_assert(alignof(UAnimNotifyState_DisablePawnRotation_C) == 0x000008, "Wrong alignment on UAnimNotifyState_DisablePawnRotation_C");
-static_assert(sizeof(UAnimNotifyState_DisablePawnRotation_C) == 0x000030, "Wrong size on UAnimNotifyState_DisablePawnRotation_C");
 
 }
 

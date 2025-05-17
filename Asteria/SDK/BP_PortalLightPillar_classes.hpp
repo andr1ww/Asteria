@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PortalLightPillar.BP_PortalLightPillar_C
-// 0x0008 (0x0298 - 0x0290)
+// 0x0008 (0x0278 - 0x0270)
 class ABP_PortalLightPillar_C final : public AEmitter
 {
 public:
-	class UAudioComponent*                        PillarSound;                                       // 0x0290(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        PillarSound;                                       // 0x0270(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -33,9 +33,6 @@ public:
 		return GetDefaultObjImpl<ABP_PortalLightPillar_C>();
 	}
 };
-static_assert(alignof(ABP_PortalLightPillar_C) == 0x000008, "Wrong alignment on ABP_PortalLightPillar_C");
-static_assert(sizeof(ABP_PortalLightPillar_C) == 0x000298, "Wrong size on ABP_PortalLightPillar_C");
-static_assert(offsetof(ABP_PortalLightPillar_C, PillarSound) == 0x000290, "Member 'ABP_PortalLightPillar_C::PillarSound' has a wrong offset!");
 
 }
 

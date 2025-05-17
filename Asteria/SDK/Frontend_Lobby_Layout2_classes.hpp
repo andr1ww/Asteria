@@ -11,26 +11,15 @@
 #include "Basic.hpp"
 
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass Frontend_Lobby_Layout2.Frontend_Lobby_Layout2_C
-// 0x0018 (0x0270 - 0x0258)
+// 0x0000 (0x0238 - 0x0238)
 class AFrontend_Lobby_Layout2_C final : public AFortLevelScriptActor
 {
-public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0258(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class FName                                   CurrentBackgroundLevelName;                        // 0x0260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   NewBackgroundLevelName;                            // 0x0268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-public:
-	void ExecuteUbergraph_Frontend_Lobby_Layout2(int32 EntryPoint);
-	void OnBackgroundChanged();
-	void ReceiveBeginPlay();
-
 public:
 	static class UClass* StaticClass()
 	{
@@ -41,11 +30,6 @@ public:
 		return GetDefaultObjImpl<AFrontend_Lobby_Layout2_C>();
 	}
 };
-static_assert(alignof(AFrontend_Lobby_Layout2_C) == 0x000008, "Wrong alignment on AFrontend_Lobby_Layout2_C");
-static_assert(sizeof(AFrontend_Lobby_Layout2_C) == 0x000270, "Wrong size on AFrontend_Lobby_Layout2_C");
-static_assert(offsetof(AFrontend_Lobby_Layout2_C, UberGraphFrame) == 0x000258, "Member 'AFrontend_Lobby_Layout2_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AFrontend_Lobby_Layout2_C, CurrentBackgroundLevelName) == 0x000260, "Member 'AFrontend_Lobby_Layout2_C::CurrentBackgroundLevelName' has a wrong offset!");
-static_assert(offsetof(AFrontend_Lobby_Layout2_C, NewBackgroundLevelName) == 0x000268, "Member 'AFrontend_Lobby_Layout2_C::NewBackgroundLevelName' has a wrong offset!");
 
 }
 

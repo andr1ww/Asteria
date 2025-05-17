@@ -10,30 +10,32 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
-#include "FortniteGame_classes.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Athena_Enemy_Apply_SneakySnowman.GA_Athena_Enemy_Apply_SneakySnowman_C
-// 0x0068 (0x09A8 - 0x0940)
+// 0x0078 (0x0B20 - 0x0AA8)
 class UGA_Athena_Enemy_Apply_SneakySnowman_C final : public UFortGameplayAbility
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0940(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   HolsterSnowman;                                    // 0x0950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AAthena_Enemy_Player_SneakySnowman_C*   EnemySnowman;                                      // 0x0958(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FScalableFloat                         SnowmanDuration;                                   // 0x0960(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UAnimMontage*                           ExitAnimation;                                     // 0x0980(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           EndAbilityTimer;                                   // 0x0988(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           EndAbilitySequenceTimer;                           // 0x0990(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           WeaponCheckTimer;                                  // 0x0998(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           EquippingCue;                                      // 0x09A0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AA8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   HolsterSnowman;                                    // 0x0AB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AAthena_Enemy_Player_SneakySnowman_C*   EnemySnowman;                                      // 0x0AC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FScalableFloat                         SnowmanDuration;                                   // 0x0AC8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UAnimMontage*                           ExitAnimation;                                     // 0x0AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           EndAbilityTimer;                                   // 0x0AF0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           EndAbilitySequenceTimer;                           // 0x0AF8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           WeaponCheckTimer;                                  // 0x0B00(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           EquippingCue;                                      // 0x0B08(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           T_TraitVehicle;                                    // 0x0B10(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           T_MountedTurret;                                   // 0x0B18(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Athena_Enemy_Apply_SneakySnowman(int32 EntryPoint);
@@ -59,18 +61,6 @@ public:
 		return GetDefaultObjImpl<UGA_Athena_Enemy_Apply_SneakySnowman_C>();
 	}
 };
-static_assert(alignof(UGA_Athena_Enemy_Apply_SneakySnowman_C) == 0x000008, "Wrong alignment on UGA_Athena_Enemy_Apply_SneakySnowman_C");
-static_assert(sizeof(UGA_Athena_Enemy_Apply_SneakySnowman_C) == 0x0009A8, "Wrong size on UGA_Athena_Enemy_Apply_SneakySnowman_C");
-static_assert(offsetof(UGA_Athena_Enemy_Apply_SneakySnowman_C, UberGraphFrame) == 0x000940, "Member 'UGA_Athena_Enemy_Apply_SneakySnowman_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_Enemy_Apply_SneakySnowman_C, PlayerPawn) == 0x000948, "Member 'UGA_Athena_Enemy_Apply_SneakySnowman_C::PlayerPawn' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_Enemy_Apply_SneakySnowman_C, HolsterSnowman) == 0x000950, "Member 'UGA_Athena_Enemy_Apply_SneakySnowman_C::HolsterSnowman' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_Enemy_Apply_SneakySnowman_C, EnemySnowman) == 0x000958, "Member 'UGA_Athena_Enemy_Apply_SneakySnowman_C::EnemySnowman' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_Enemy_Apply_SneakySnowman_C, SnowmanDuration) == 0x000960, "Member 'UGA_Athena_Enemy_Apply_SneakySnowman_C::SnowmanDuration' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_Enemy_Apply_SneakySnowman_C, ExitAnimation) == 0x000980, "Member 'UGA_Athena_Enemy_Apply_SneakySnowman_C::ExitAnimation' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_Enemy_Apply_SneakySnowman_C, EndAbilityTimer) == 0x000988, "Member 'UGA_Athena_Enemy_Apply_SneakySnowman_C::EndAbilityTimer' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_Enemy_Apply_SneakySnowman_C, EndAbilitySequenceTimer) == 0x000990, "Member 'UGA_Athena_Enemy_Apply_SneakySnowman_C::EndAbilitySequenceTimer' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_Enemy_Apply_SneakySnowman_C, WeaponCheckTimer) == 0x000998, "Member 'UGA_Athena_Enemy_Apply_SneakySnowman_C::WeaponCheckTimer' has a wrong offset!");
-static_assert(offsetof(UGA_Athena_Enemy_Apply_SneakySnowman_C, EquippingCue) == 0x0009A0, "Member 'UGA_Athena_Enemy_Apply_SneakySnowman_C::EquippingCue' has a wrong offset!");
 
 }
 

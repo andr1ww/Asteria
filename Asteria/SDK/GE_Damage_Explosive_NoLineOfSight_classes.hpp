@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GE_Damage_Explosive_NoLineOfSight.GE_Damage_Explosive_NoLineOfSight_C
-// 0x0000 (0x05F0 - 0x05F0)
+// 0x0000 (0x07B8 - 0x07B8)
 class UGE_Damage_Explosive_NoLineOfSight_C final : public UGE_Ranged_GenericDamage_Explosive_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UGE_Damage_Explosive_NoLineOfSight_C>();
 	}
 };
-static_assert(alignof(UGE_Damage_Explosive_NoLineOfSight_C) == 0x000008, "Wrong alignment on UGE_Damage_Explosive_NoLineOfSight_C");
-static_assert(sizeof(UGE_Damage_Explosive_NoLineOfSight_C) == 0x0005F0, "Wrong size on UGE_Damage_Explosive_NoLineOfSight_C");
 
 }
 

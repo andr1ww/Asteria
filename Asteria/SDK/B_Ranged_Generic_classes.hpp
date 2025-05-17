@@ -10,110 +10,126 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "PhysicsCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "En_ShellTypes_01_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "FortniteGame_structs.hpp"
 #include "FortniteGame_classes.hpp"
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass B_Ranged_Generic.B_Ranged_Generic_C
-// 0x01C8 (0x0DA8 - 0x0BE0)
+// 0x02D0 (0x1310 - 0x1040)
 class AB_Ranged_Generic_C : public AFortWeaponRanged
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BE0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UParticleSystemComponent*               Reload_Empty_;                                     // 0x0BE8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Shells_empty_;                                     // 0x0BF0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   ScopeMesh1P;                                       // 0x0BF8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Muzzle_Empty_;                                     // 0x0C00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         AnimateScopePostProcess_DownSightPostProcessAmount_393D8BA5486879173797EF8C9B8D4642; // 0x0C08(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            AnimateScopePostProcess__Direction_393D8BA5486879173797EF8C9B8D4642; // 0x0C0C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C0D[0x3];                                      // 0x0C0D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     AnimateScopePostProcess;                           // 0x0C10(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        MuzzleParticleSystem;                              // 0x0C18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        WeaponDurabilityDestroyEffect;                     // 0x0C20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        WeaponDurabilityDestroyEffectIcon;                 // 0x0C28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseDestroyEffect;                                  // 0x0C30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Use_Reload_Particles;                              // 0x0C31(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C32[0x6];                                      // 0x0C32(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        Reload_ParticleSystem;                             // 0x0C38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LastPlayFXTime;                                    // 0x0C40(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MinPlayFXTime;                                     // 0x0C44(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseShellsOnFire_;                                  // 0x0C48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          UseShellsOnReload_;                                // 0x0C49(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          UseShellsOnPump_;                                  // 0x0C4A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C4B[0x5];                                      // 0x0C4B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        ShellsParticleSystemTemplate;                      // 0x0C50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ReloadSocketName;                                  // 0x0C58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AFortAIPawn*>                    Array_Of_Active_Enemy_AI;                          // 0x0C60(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	bool                                          Scope___Render_Enemies_To_Custom_Depth_Buffer;     // 0x0C70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_C71[0x3];                                      // 0x0C71(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Shells_Socket_Name;                                // 0x0C74(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	En_ShellTypes_01                              ShellTypeSelect;                                   // 0x0C7C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C7D[0x3];                                      // 0x0C7D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Shells_Spawn_Rate_Scale;                           // 0x0C80(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ShellsRotationRate;                                // 0x0C84(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Shells_Velocity;                                   // 0x0C90(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Shells_Gravity;                                    // 0x0C9C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Shells_Lifetime;                                   // 0x0CA8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Shells_Size;                                       // 0x0CAC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Shells_Time_Dilation;                              // 0x0CB8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_Scope_Vignette_Blur_Screen_Percentage;      // 0x0CBC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Scope_Camera_Offset_Amount;                        // 0x0CC0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          SmallShells;                                       // 0x0CC4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          MediumShells;                                      // 0x0CC5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          LargeShells;                                       // 0x0CC6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          ShotgunShells;                                     // 0x0CC7(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          EnergyShells;                                      // 0x0CC8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_CC9[0x3];                                      // 0x0CC9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Inherit_Parent_Velocity;                           // 0x0CCC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Cylindrical_Radius;                                // 0x0CD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Cylindrical_Height;                                // 0x0CD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DebugShellsSocket_;                                // 0x0CD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Use_2_Post_Processes_For_the_Scope;                // 0x0CD9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
-	uint8                                         Pad_CDA[0x6];                                      // 0x0CDA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USoundBase*                             Sound_ScopeZoomIn;                                 // 0x0CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Sound_ScopeZoomOut;                                // 0x0CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               Alteration_Ambient_PS;                             // 0x0CF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  ReticleHUDElementTags;                             // 0x0CF8(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          Is_Wind_Enabled;                                   // 0x0D18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D19[0x7];                                      // 0x0D19(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UParticleSystem*                        MuzzleWindParticleSystem;                          // 0x0D20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystem*                        MuzzleParticleSystem1P;                            // 0x0D28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ShouldHideReticleAfterDelay;                       // 0x0D30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D31[0x7];                                      // 0x0D31(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPostProcessComponent*                  DownScopePostProcessSpawned;                       // 0x0D38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPostProcessComponent*                  DownScopePostProcessSpawned2;                      // 0x0D40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UParticleSystemComponent*               MuzzleWindParticleSpawned;                         // 0x0D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         StencilBufferValue;                                // 0x0D50(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D54[0x4];                                      // 0x0D54(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            Curve_PitchOffset;                                 // 0x0D58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USoundBase*                             Sound_ScopedInLoop;                                // 0x0D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        ScopeZoomInComp;                                   // 0x0D68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        ScopedInLoopComp;                                  // 0x0D70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAudioComponent*                        ScopeZoomOutComp;                                  // 0x0D78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Alteration_Ambient_PS_Max_Draw_Distance;           // 0x0D80(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Muzzle_PS_Max_Draw_Distance;                       // 0x0D84(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Beam_PS_Max_Draw_Distance;                         // 0x0D88(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Reload_PS_Max_Draw_Distance;                       // 0x0D8C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Shells_PS_Max_Draw_Distance;                       // 0x0D90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D94[0x4];                                      // 0x0D94(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool AimDownsights)> onAimDownSightsChanged;                            // 0x0D98(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1040(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UParticleSystemComponent*               Reload_Empty_;                                     // 0x1048(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   ScopeMesh1P;                                       // 0x1050(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Muzzle_Empty_;                                     // 0x1058(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         AnimateScopePostProcess_DownSightPostProcessAmount_393D8BA5486879173797EF8C9B8D4642; // 0x1060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            AnimateScopePostProcess__Direction_393D8BA5486879173797EF8C9B8D4642; // 0x1064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1065[0x3];                                     // 0x1065(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     AnimateScopePostProcess;                           // 0x1068(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        MuzzleParticleSystem;                              // 0x1070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        WeaponDurabilityDestroyEffect;                     // 0x1078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        WeaponDurabilityDestroyEffectIcon;                 // 0x1080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseDestroyEffect;                                  // 0x1088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Use_Reload_Particles;                              // 0x1089(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_108A[0x6];                                     // 0x108A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystem*                        Reload_ParticleSystem;                             // 0x1090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LastPlayFXTime;                                    // 0x1098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MinPlayFXTime;                                     // 0x109C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseShellsOnFire_;                                  // 0x10A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          UseShellsOnReload_;                                // 0x10A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          UseShellsOnPump_;                                  // 0x10A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_10A3[0x5];                                     // 0x10A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               Shells_empty_;                                     // 0x10A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        ShellsParticleSystemTemplate;                      // 0x10B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ReloadSocketName;                                  // 0x10B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AFortAIPawn*>                    Array_Of_Active_Enemy_AI;                          // 0x10C0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          Scope___Render_Enemies_To_Custom_Depth_Buffer;     // 0x10D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	uint8                                         Pad_10D1[0x3];                                     // 0x10D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Shells_Socket_Name;                                // 0x10D4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	En_ShellTypes_01                              ShellTypeSelect;                                   // 0x10DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10DD[0x3];                                     // 0x10DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Shells_Spawn_Rate_Scale;                           // 0x10E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ShellsRotationRate;                                // 0x10E4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Shells_Velocity;                                   // 0x10F0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Shells_Gravity;                                    // 0x10FC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Shells_Lifetime;                                   // 0x1108(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Shells_Size;                                       // 0x110C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Shells_Time_Dilation;                              // 0x1118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_Scope_Vignette_Blur_Screen_Percentage;      // 0x111C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Scope_Camera_Offset_Amount;                        // 0x1120(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          SmallShells;                                       // 0x1124(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          MediumShells;                                      // 0x1125(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          LargeShells;                                       // 0x1126(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          ShotgunShells;                                     // 0x1127(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          EnergyShells;                                      // 0x1128(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1129[0x3];                                     // 0x1129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Inherit_Parent_Velocity;                           // 0x112C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Cylindrical_Radius;                                // 0x1130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Cylindrical_Height;                                // 0x1134(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DebugShellsSocket_;                                // 0x1138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1139[0x7];                                     // 0x1139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USoundBase*                             Sound_ScopeZoomIn;                                 // 0x1140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sound_ScopeZoomOut;                                // 0x1148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystemComponent*               Alteration_Ambient_PS;                             // 0x1150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  ReticleHUDElementTags;                             // 0x1158(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          Is_Wind_Enabled;                                   // 0x1178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1179[0x7];                                     // 0x1179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystem*                        MuzzleWindParticleSystem;                          // 0x1180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UParticleSystem*                        MuzzleParticleSystem1P;                            // 0x1188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldHideReticleAfterDelay;                       // 0x1190(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1191[0x7];                                     // 0x1191(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UParticleSystemComponent*               MuzzleWindParticleSpawned;                         // 0x1198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         StencilBufferValue;                                // 0x11A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11A4[0x4];                                     // 0x11A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            Curve_PitchOffset;                                 // 0x11A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USoundBase*                             Sound_ScopedInLoop;                                // 0x11B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        ScopeZoomInComp;                                   // 0x11B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        ScopedInLoopComp;                                  // 0x11C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAudioComponent*                        ScopeZoomOutComp;                                  // 0x11C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Alteration_Ambient_PS_Max_Draw_Distance;           // 0x11D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Muzzle_PS_Max_Draw_Distance;                       // 0x11D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Beam_PS_Max_Draw_Distance;                         // 0x11D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Reload_PS_Max_Draw_Distance;                       // 0x11DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Shells_PS_Max_Draw_Distance;                       // 0x11E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11E4[0x4];                                     // 0x11E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool AimDownsights)> onAimDownSightsChanged;                       // 0x11E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          IsMuzzleNiagara;                                   // 0x11F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11F9[0x7];                                     // 0x11F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraSystem*                         MuzzleNiagaraSystemInstance;                       // 0x1200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UNiagaraSystem>          MuzzleNiagaraSystemAsset;                          // 0x1208(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UNiagaraComponent*                      MuzzleNiagaraComponentInstance;                    // 0x1230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UParticleSystemComponent*>       MuzzleParticleSystemComponents;                    // 0x1238(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference, HasGetValueTypeHash)
+	float                                         Muzzle_ChanceOfLargeFlash;                         // 0x1248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Muzzle_FlashLarge_MinScale;                        // 0x124C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Muzzle_FlashLarge_MaxScale;                        // 0x1250(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Muzzle_FlashSmall_MinScale;                        // 0x1254(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Muzzle_FlashSmall_MaxScale;                        // 0x1258(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Shell_Color;                                       // 0x125C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_126C[0x4];                                     // 0x126C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<En_ShellTypes_01, class FName>           Shell_Burst_Names;                                 // 0x1270(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<En_ShellTypes_01, bool>                  Shell_Bools;                                       // 0x12C0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_B_Ranged_Generic(int32 EntryPoint);
+	void OnApplyFireModeData(class UFortWeaponFireModeData* FireModeData);
+	void LoadNiagaraMuzzleSoftObject();
+	void OnStartOverheated();
+	void OnPlayImpactFX(const struct FHitResult& HitResult, EPhysicalSurface ImpactPhysicalSurface, class UFXSystemComponent* SpawnedPSC);
 	void ForceScopeBackImmediatly();
 	void ShellEjectionOff();
 	void Bind_on_Effects_Quality();
 	void ShellEjectionFixOn();
 	void PitchUpOnRateOfFireChange(float NewRateOfFire);
 	void BindFireRateChange();
-	void SetupScopePostProcess();
 	void ForceScopeFX();
 	void UnhideFirstPersonStuffPart1();
 	void UnhideFirstPersonStuffPart2(int32 Which_Call);
@@ -128,7 +144,7 @@ public:
 	void HideWeapon();
 	void ShowWeaponMesh();
 	void HideWeaponMesh();
-	void OnWeaponVisibilityChanged(bool bVisible);
+	void OnWeaponVisibilityChanged(bool bVisible, bool bSetForLocalControllerOnly);
 	void ReceiveBeginPlay();
 	void SetWeaponPierceThrough_ClientRep(bool Enable, int32 TargetLimit);
 	void SetWeaponPierceThrough(bool Enable, int32 TargetLimit);
@@ -148,6 +164,7 @@ public:
 	void OnLoaded_83457BA843174AC6288682A342EBEAD9(class UObject* Loaded);
 	void OnLoaded_3A9BBE884A5C5966375089938B7DC0CA(class UObject* Loaded);
 	void OnLoaded_4DE6158742ED7EE528BC98A240A81632(class UObject* Loaded);
+	void OnLoaded_4D1409A247BFDB4C074B628406FC7A72(class UObject* Loaded);
 	void AnimateScopePostProcess__UpdateFunc();
 	void AnimateScopePostProcess__FinishedFunc();
 	void UserConstructionScript();
@@ -169,6 +186,9 @@ public:
 	void SetPostProcessParams(float InputPin);
 	void StartScopedAudio();
 	void StopScopedAudio();
+	void SetActiveMuzzleComponent(bool NiagaraEnabled);
+	void GetActiveMuzzleComponents(TArray<class UFXSystemComponent*>* NewParam);
+	void GetScopeParameters(class UStaticMeshComponent** ScopeComponent, struct FVector2D* DepthOfFieldVignetteRange, float* WeaponSightsCameraOffset);
 
 public:
 	static class UClass* StaticClass()
@@ -180,75 +200,6 @@ public:
 		return GetDefaultObjImpl<AB_Ranged_Generic_C>();
 	}
 };
-static_assert(alignof(AB_Ranged_Generic_C) == 0x000008, "Wrong alignment on AB_Ranged_Generic_C");
-static_assert(sizeof(AB_Ranged_Generic_C) == 0x000DA8, "Wrong size on AB_Ranged_Generic_C");
-static_assert(offsetof(AB_Ranged_Generic_C, UberGraphFrame) == 0x000BE0, "Member 'AB_Ranged_Generic_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Reload_Empty_) == 0x000BE8, "Member 'AB_Ranged_Generic_C::Reload_Empty_' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Shells_empty_) == 0x000BF0, "Member 'AB_Ranged_Generic_C::Shells_empty_' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, ScopeMesh1P) == 0x000BF8, "Member 'AB_Ranged_Generic_C::ScopeMesh1P' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Muzzle_Empty_) == 0x000C00, "Member 'AB_Ranged_Generic_C::Muzzle_Empty_' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, AnimateScopePostProcess_DownSightPostProcessAmount_393D8BA5486879173797EF8C9B8D4642) == 0x000C08, "Member 'AB_Ranged_Generic_C::AnimateScopePostProcess_DownSightPostProcessAmount_393D8BA5486879173797EF8C9B8D4642' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, AnimateScopePostProcess__Direction_393D8BA5486879173797EF8C9B8D4642) == 0x000C0C, "Member 'AB_Ranged_Generic_C::AnimateScopePostProcess__Direction_393D8BA5486879173797EF8C9B8D4642' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, AnimateScopePostProcess) == 0x000C10, "Member 'AB_Ranged_Generic_C::AnimateScopePostProcess' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, MuzzleParticleSystem) == 0x000C18, "Member 'AB_Ranged_Generic_C::MuzzleParticleSystem' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, WeaponDurabilityDestroyEffect) == 0x000C20, "Member 'AB_Ranged_Generic_C::WeaponDurabilityDestroyEffect' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, WeaponDurabilityDestroyEffectIcon) == 0x000C28, "Member 'AB_Ranged_Generic_C::WeaponDurabilityDestroyEffectIcon' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, UseDestroyEffect) == 0x000C30, "Member 'AB_Ranged_Generic_C::UseDestroyEffect' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Use_Reload_Particles) == 0x000C31, "Member 'AB_Ranged_Generic_C::Use_Reload_Particles' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Reload_ParticleSystem) == 0x000C38, "Member 'AB_Ranged_Generic_C::Reload_ParticleSystem' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, LastPlayFXTime) == 0x000C40, "Member 'AB_Ranged_Generic_C::LastPlayFXTime' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, MinPlayFXTime) == 0x000C44, "Member 'AB_Ranged_Generic_C::MinPlayFXTime' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, UseShellsOnFire_) == 0x000C48, "Member 'AB_Ranged_Generic_C::UseShellsOnFire_' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, UseShellsOnReload_) == 0x000C49, "Member 'AB_Ranged_Generic_C::UseShellsOnReload_' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, UseShellsOnPump_) == 0x000C4A, "Member 'AB_Ranged_Generic_C::UseShellsOnPump_' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, ShellsParticleSystemTemplate) == 0x000C50, "Member 'AB_Ranged_Generic_C::ShellsParticleSystemTemplate' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, ReloadSocketName) == 0x000C58, "Member 'AB_Ranged_Generic_C::ReloadSocketName' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Array_Of_Active_Enemy_AI) == 0x000C60, "Member 'AB_Ranged_Generic_C::Array_Of_Active_Enemy_AI' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Scope___Render_Enemies_To_Custom_Depth_Buffer) == 0x000C70, "Member 'AB_Ranged_Generic_C::Scope___Render_Enemies_To_Custom_Depth_Buffer' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Shells_Socket_Name) == 0x000C74, "Member 'AB_Ranged_Generic_C::Shells_Socket_Name' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, ShellTypeSelect) == 0x000C7C, "Member 'AB_Ranged_Generic_C::ShellTypeSelect' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Shells_Spawn_Rate_Scale) == 0x000C80, "Member 'AB_Ranged_Generic_C::Shells_Spawn_Rate_Scale' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, ShellsRotationRate) == 0x000C84, "Member 'AB_Ranged_Generic_C::ShellsRotationRate' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Shells_Velocity) == 0x000C90, "Member 'AB_Ranged_Generic_C::Shells_Velocity' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Shells_Gravity) == 0x000C9C, "Member 'AB_Ranged_Generic_C::Shells_Gravity' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Shells_Lifetime) == 0x000CA8, "Member 'AB_Ranged_Generic_C::Shells_Lifetime' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Shells_Size) == 0x000CAC, "Member 'AB_Ranged_Generic_C::Shells_Size' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Shells_Time_Dilation) == 0x000CB8, "Member 'AB_Ranged_Generic_C::Shells_Time_Dilation' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Target_Scope_Vignette_Blur_Screen_Percentage) == 0x000CBC, "Member 'AB_Ranged_Generic_C::Target_Scope_Vignette_Blur_Screen_Percentage' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Scope_Camera_Offset_Amount) == 0x000CC0, "Member 'AB_Ranged_Generic_C::Scope_Camera_Offset_Amount' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, SmallShells) == 0x000CC4, "Member 'AB_Ranged_Generic_C::SmallShells' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, MediumShells) == 0x000CC5, "Member 'AB_Ranged_Generic_C::MediumShells' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, LargeShells) == 0x000CC6, "Member 'AB_Ranged_Generic_C::LargeShells' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, ShotgunShells) == 0x000CC7, "Member 'AB_Ranged_Generic_C::ShotgunShells' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, EnergyShells) == 0x000CC8, "Member 'AB_Ranged_Generic_C::EnergyShells' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Inherit_Parent_Velocity) == 0x000CCC, "Member 'AB_Ranged_Generic_C::Inherit_Parent_Velocity' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Cylindrical_Radius) == 0x000CD0, "Member 'AB_Ranged_Generic_C::Cylindrical_Radius' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Cylindrical_Height) == 0x000CD4, "Member 'AB_Ranged_Generic_C::Cylindrical_Height' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, DebugShellsSocket_) == 0x000CD8, "Member 'AB_Ranged_Generic_C::DebugShellsSocket_' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Use_2_Post_Processes_For_the_Scope) == 0x000CD9, "Member 'AB_Ranged_Generic_C::Use_2_Post_Processes_For_the_Scope' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Sound_ScopeZoomIn) == 0x000CE0, "Member 'AB_Ranged_Generic_C::Sound_ScopeZoomIn' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Sound_ScopeZoomOut) == 0x000CE8, "Member 'AB_Ranged_Generic_C::Sound_ScopeZoomOut' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Alteration_Ambient_PS) == 0x000CF0, "Member 'AB_Ranged_Generic_C::Alteration_Ambient_PS' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, ReticleHUDElementTags) == 0x000CF8, "Member 'AB_Ranged_Generic_C::ReticleHUDElementTags' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Is_Wind_Enabled) == 0x000D18, "Member 'AB_Ranged_Generic_C::Is_Wind_Enabled' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, MuzzleWindParticleSystem) == 0x000D20, "Member 'AB_Ranged_Generic_C::MuzzleWindParticleSystem' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, MuzzleParticleSystem1P) == 0x000D28, "Member 'AB_Ranged_Generic_C::MuzzleParticleSystem1P' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, ShouldHideReticleAfterDelay) == 0x000D30, "Member 'AB_Ranged_Generic_C::ShouldHideReticleAfterDelay' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, DownScopePostProcessSpawned) == 0x000D38, "Member 'AB_Ranged_Generic_C::DownScopePostProcessSpawned' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, DownScopePostProcessSpawned2) == 0x000D40, "Member 'AB_Ranged_Generic_C::DownScopePostProcessSpawned2' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, MuzzleWindParticleSpawned) == 0x000D48, "Member 'AB_Ranged_Generic_C::MuzzleWindParticleSpawned' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, StencilBufferValue) == 0x000D50, "Member 'AB_Ranged_Generic_C::StencilBufferValue' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Curve_PitchOffset) == 0x000D58, "Member 'AB_Ranged_Generic_C::Curve_PitchOffset' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Sound_ScopedInLoop) == 0x000D60, "Member 'AB_Ranged_Generic_C::Sound_ScopedInLoop' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, ScopeZoomInComp) == 0x000D68, "Member 'AB_Ranged_Generic_C::ScopeZoomInComp' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, ScopedInLoopComp) == 0x000D70, "Member 'AB_Ranged_Generic_C::ScopedInLoopComp' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, ScopeZoomOutComp) == 0x000D78, "Member 'AB_Ranged_Generic_C::ScopeZoomOutComp' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Alteration_Ambient_PS_Max_Draw_Distance) == 0x000D80, "Member 'AB_Ranged_Generic_C::Alteration_Ambient_PS_Max_Draw_Distance' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Muzzle_PS_Max_Draw_Distance) == 0x000D84, "Member 'AB_Ranged_Generic_C::Muzzle_PS_Max_Draw_Distance' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Beam_PS_Max_Draw_Distance) == 0x000D88, "Member 'AB_Ranged_Generic_C::Beam_PS_Max_Draw_Distance' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Reload_PS_Max_Draw_Distance) == 0x000D8C, "Member 'AB_Ranged_Generic_C::Reload_PS_Max_Draw_Distance' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, Shells_PS_Max_Draw_Distance) == 0x000D90, "Member 'AB_Ranged_Generic_C::Shells_PS_Max_Draw_Distance' has a wrong offset!");
-static_assert(offsetof(AB_Ranged_Generic_C, onAimDownSightsChanged) == 0x000D98, "Member 'AB_Ranged_Generic_C::onAimDownSightsChanged' has a wrong offset!");
 
 }
 

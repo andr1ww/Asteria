@@ -54,55 +54,6 @@ public:
 	class AFortPlayerPawnAthena*                  K2Node_DynamicCast_AsFort_Player_Pawn_Athena;      // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist) == 0x000008, "Wrong alignment on DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist");
-static_assert(sizeof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist) == 0x000220, "Wrong size on DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, EntryPoint) == 0x000000, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::EntryPoint' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, CallFunc_GetInstigator_ReturnValue) == 0x000008, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::CallFunc_GetInstigator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_DynamicCast_AsFort_Player_Pawn) == 0x000010, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_DynamicCast_AsFort_Player_Pawn' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_CreateDelegate_OutputDelegate) == 0x00001C, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, CallFunc_IsDrivingVehicle_ReturnValue) == 0x00002C, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::CallFunc_IsDrivingVehicle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_CreateDelegate_OutputDelegate_1) == 0x000030, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, CallFunc_GetInstigator_ReturnValue_1) == 0x000040, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::CallFunc_GetInstigator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_MakeStruct_GameplayEventData) == 0x000048, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_MakeStruct_GameplayEventData' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_MakeStruct_GameplayEventData_1) == 0x0000F8, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_MakeStruct_GameplayEventData_1' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, CallFunc_GetInstigator_ReturnValue_2) == 0x0001A8, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::CallFunc_GetInstigator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_Event_FortDecoHelper_2) == 0x0001B0, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_Event_FortDecoHelper_2' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_Event_FortDecoHelper_1) == 0x0001B8, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_Event_FortDecoHelper_1' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_Event_FortDecoHelper) == 0x0001C0, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_Event_FortDecoHelper' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, CallFunc_GetValueAtLevel_ReturnValue) == 0x0001C8, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::CallFunc_GetValueAtLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, CallFunc_GetInstigator_ReturnValue_3) == 0x0001D0, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::CallFunc_GetInstigator_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x0001D8, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_DynamicCast_AsFort_Player_Pawn_1) == 0x0001E0, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_DynamicCast_AsFort_Player_Pawn_1' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_DynamicCast_bSuccess_1) == 0x0001E8, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, CallFunc_GetInstigator_ReturnValue_4) == 0x0001F0, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::CallFunc_GetInstigator_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_DynamicCast_AsFort_Player_Pawn_2) == 0x0001F8, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_DynamicCast_AsFort_Player_Pawn_2' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_DynamicCast_bSuccess_2) == 0x000200, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, CallFunc_GetInstigator_ReturnValue_5) == 0x000208, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::CallFunc_GetInstigator_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_DynamicCast_AsFort_Player_Pawn_Athena) == 0x000210, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_DynamicCast_AsFort_Player_Pawn_Athena' has a wrong offset!");
-static_assert(offsetof(DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist, K2Node_DynamicCast_bSuccess_3) == 0x000218, "Member 'DA_SpookyMist_C_ExecuteUbergraph_DA_SpookyMist::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-
-// Function DA_SpookyMist.DA_SpookyMist_C.BPPressSecondaryFire
-// 0x0008 (0x0008 - 0x0000)
-struct DA_SpookyMist_C_BPPressSecondaryFire final
-{
-public:
-	class AFortDecoHelper*                        FortDecoHelper;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(DA_SpookyMist_C_BPPressSecondaryFire) == 0x000008, "Wrong alignment on DA_SpookyMist_C_BPPressSecondaryFire");
-static_assert(sizeof(DA_SpookyMist_C_BPPressSecondaryFire) == 0x000008, "Wrong size on DA_SpookyMist_C_BPPressSecondaryFire");
-static_assert(offsetof(DA_SpookyMist_C_BPPressSecondaryFire, FortDecoHelper) == 0x000000, "Member 'DA_SpookyMist_C_BPPressSecondaryFire::FortDecoHelper' has a wrong offset!");
-
-// Function DA_SpookyMist.DA_SpookyMist_C.BPPressTrigger
-// 0x0008 (0x0008 - 0x0000)
-struct DA_SpookyMist_C_BPPressTrigger final
-{
-public:
-	class AFortDecoHelper*                        FortDecoHelper;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(DA_SpookyMist_C_BPPressTrigger) == 0x000008, "Wrong alignment on DA_SpookyMist_C_BPPressTrigger");
-static_assert(sizeof(DA_SpookyMist_C_BPPressTrigger) == 0x000008, "Wrong size on DA_SpookyMist_C_BPPressTrigger");
-static_assert(offsetof(DA_SpookyMist_C_BPPressTrigger, FortDecoHelper) == 0x000000, "Member 'DA_SpookyMist_C_BPPressTrigger::FortDecoHelper' has a wrong offset!");
 
 // Function DA_SpookyMist.DA_SpookyMist_C.BPReleaseSecondaryFire
 // 0x0008 (0x0008 - 0x0000)
@@ -111,9 +62,22 @@ struct DA_SpookyMist_C_BPReleaseSecondaryFire final
 public:
 	class AFortDecoHelper*                        FortDecoHelper;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(DA_SpookyMist_C_BPReleaseSecondaryFire) == 0x000008, "Wrong alignment on DA_SpookyMist_C_BPReleaseSecondaryFire");
-static_assert(sizeof(DA_SpookyMist_C_BPReleaseSecondaryFire) == 0x000008, "Wrong size on DA_SpookyMist_C_BPReleaseSecondaryFire");
-static_assert(offsetof(DA_SpookyMist_C_BPReleaseSecondaryFire, FortDecoHelper) == 0x000000, "Member 'DA_SpookyMist_C_BPReleaseSecondaryFire::FortDecoHelper' has a wrong offset!");
+
+// Function DA_SpookyMist.DA_SpookyMist_C.BPPressTrigger
+// 0x0008 (0x0008 - 0x0000)
+struct DA_SpookyMist_C_BPPressTrigger final
+{
+public:
+	class AFortDecoHelper*                        FortDecoHelper;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+
+// Function DA_SpookyMist.DA_SpookyMist_C.BPPressSecondaryFire
+// 0x0008 (0x0008 - 0x0000)
+struct DA_SpookyMist_C_BPPressSecondaryFire final
+{
+public:
+	class AFortDecoHelper*                        FortDecoHelper;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
 
 }
 

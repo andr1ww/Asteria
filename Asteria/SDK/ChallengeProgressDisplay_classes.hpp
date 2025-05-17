@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "FortniteUI_classes.hpp"
 
 
@@ -17,9 +18,20 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ChallengeProgressDisplay.ChallengeProgressDisplay_C
-// 0x0000 (0x0240 - 0x0240)
+// 0x0020 (0x0290 - 0x0270)
 class UChallengeProgressDisplay_C final : public UAthenaChallengeProgressBar
 {
+public:
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       SelectedHovered;                                   // 0x0278(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class USizeBox*                               SizeBoxProgressContainer;                          // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	float                                         Text_Desired_Minimum_Width;                        // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ExecuteUbergraph_ChallengeProgressDisplay(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SelectedHoveredFunc();
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -30,8 +42,6 @@ public:
 		return GetDefaultObjImpl<UChallengeProgressDisplay_C>();
 	}
 };
-static_assert(alignof(UChallengeProgressDisplay_C) == 0x000008, "Wrong alignment on UChallengeProgressDisplay_C");
-static_assert(sizeof(UChallengeProgressDisplay_C) == 0x000240, "Wrong size on UChallengeProgressDisplay_C");
 
 }
 

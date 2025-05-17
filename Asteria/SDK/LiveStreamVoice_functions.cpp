@@ -66,7 +66,7 @@ void ULiveStreamVoiceSubsystem::EnableLocalVoiceProcessing(uint8 LocalUserNum, b
 // Function LiveStreamVoice.LiveStreamVoiceSubsystem.SetVoiceSettings
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// struct FVoiceSettings                   InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// const struct FVoiceSettings&            InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 void ULiveStreamVoiceSubsystem::SetVoiceSettings(const struct FVoiceSettings& InSettings)
 {

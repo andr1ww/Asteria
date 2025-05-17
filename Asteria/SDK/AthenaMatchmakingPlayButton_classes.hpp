@@ -11,25 +11,31 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CommonUI_classes.hpp"
+#include "FortniteGame_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass AthenaMatchmakingPlayButton.AthenaMatchmakingPlayButton_C
-// 0x0018 (0x0B60 - 0x0B48)
-class UAthenaMatchmakingPlayButton_C final : public UCommonButton
+// 0x0040 (0x0C00 - 0x0BC0)
+class UAthenaMatchmakingPlayButton_C final : public UAthenaMatchmakingPlayButtonBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B48(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0B50(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UMatchmakingInputIndicator_C*           MatchmakingInputIndicator;                         // 0x0B58(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0BC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       Disabled;                                          // 0x0BC8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       PlayShine;                                         // 0x0BD0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnHovered;                                         // 0x0BD8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCommonTextBlock*                       CenterButtonTextWidget;                            // 0x0BE0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_ButtonTop;                                   // 0x0BE8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Shadow;                                      // 0x0BF0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UMatchmakingInputIndicator_C*           MatchmakingInputIndicator;                         // 0x0BF8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetButtonText(const class FText& InText);
-	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_AthenaMatchmakingPlayButton(int32 EntryPoint);
+	void BP_OnUnhovered();
+	void BP_OnHovered();
+	void SetButtonText(const class FText& InText);
 
 public:
 	static class UClass* StaticClass()
@@ -41,11 +47,6 @@ public:
 		return GetDefaultObjImpl<UAthenaMatchmakingPlayButton_C>();
 	}
 };
-static_assert(alignof(UAthenaMatchmakingPlayButton_C) == 0x000008, "Wrong alignment on UAthenaMatchmakingPlayButton_C");
-static_assert(sizeof(UAthenaMatchmakingPlayButton_C) == 0x000B60, "Wrong size on UAthenaMatchmakingPlayButton_C");
-static_assert(offsetof(UAthenaMatchmakingPlayButton_C, UberGraphFrame) == 0x000B48, "Member 'UAthenaMatchmakingPlayButton_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UAthenaMatchmakingPlayButton_C, CenterButtonTextWidget) == 0x000B50, "Member 'UAthenaMatchmakingPlayButton_C::CenterButtonTextWidget' has a wrong offset!");
-static_assert(offsetof(UAthenaMatchmakingPlayButton_C, MatchmakingInputIndicator) == 0x000B58, "Member 'UAthenaMatchmakingPlayButton_C::MatchmakingInputIndicator' has a wrong offset!");
 
 }
 

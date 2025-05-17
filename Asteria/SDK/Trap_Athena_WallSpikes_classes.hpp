@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Trap_Athena_WallSpikes.Trap_Athena_WallSpikes_C
-// 0x0008 (0x0D30 - 0x0D28)
+// 0x0008 (0x0E78 - 0x0E70)
 class ATrap_Athena_WallSpikes_C final : public ATrap_Athena_Spikes_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_Trap_Athena_WallSpikes_C;           // 0x0D28(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_Trap_Athena_WallSpikes_C;           // 0x0E70(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_Trap_Athena_WallSpikes(int32 EntryPoint);
@@ -38,9 +38,6 @@ public:
 		return GetDefaultObjImpl<ATrap_Athena_WallSpikes_C>();
 	}
 };
-static_assert(alignof(ATrap_Athena_WallSpikes_C) == 0x000008, "Wrong alignment on ATrap_Athena_WallSpikes_C");
-static_assert(sizeof(ATrap_Athena_WallSpikes_C) == 0x000D30, "Wrong size on ATrap_Athena_WallSpikes_C");
-static_assert(offsetof(ATrap_Athena_WallSpikes_C, UberGraphFrame_Trap_Athena_WallSpikes_C) == 0x000D28, "Member 'ATrap_Athena_WallSpikes_C::UberGraphFrame_Trap_Athena_WallSpikes_C' has a wrong offset!");
 
 }
 

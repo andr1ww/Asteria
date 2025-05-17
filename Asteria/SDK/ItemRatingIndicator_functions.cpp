@@ -31,6 +31,20 @@ void UItemRatingIndicator_C::HandleViewModelChanged()
 }
 
 
+// Function ItemRatingIndicator.ItemRatingIndicator_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UItemRatingIndicator_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ItemRatingIndicator_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ItemRatingIndicator.ItemRatingIndicator_C.ExecuteUbergraph_ItemRatingIndicator
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:

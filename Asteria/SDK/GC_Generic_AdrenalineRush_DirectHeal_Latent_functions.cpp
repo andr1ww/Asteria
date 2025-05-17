@@ -42,7 +42,7 @@ void AGC_Generic_AdrenalineRush_DirectHeal_Latent_C::ExecuteUbergraph_GC_Generic
 // Parameters:
 // class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EGameplayCueEvent                       EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayCueParameters           Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 
 void AGC_Generic_AdrenalineRush_DirectHeal_Latent_C::K2_HandleGameplayCue(class AActor* MyTarget, EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters)
 {
@@ -131,17 +131,23 @@ void AGC_Generic_AdrenalineRush_DirectHeal_Latent_C::Duplicate_Meshes(class AFor
 }
 
 
-// Function GC_Generic_AdrenalineRush_DirectHeal_Latent.GC_Generic_AdrenalineRush_DirectHeal_Latent_C.Destroy Meshes
+// Function GC_Generic_AdrenalineRush_DirectHeal_Latent.GC_Generic_AdrenalineRush_DirectHeal_Latent_C.Toggle Mesh Visibility
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Visibility                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AGC_Generic_AdrenalineRush_DirectHeal_Latent_C::Destroy_Meshes()
+void AGC_Generic_AdrenalineRush_DirectHeal_Latent_C::Toggle_Mesh_Visibility(bool Visibility)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GC_Generic_AdrenalineRush_DirectHeal_Latent_C", "Destroy Meshes");
+		Func = Class->GetFunction("GC_Generic_AdrenalineRush_DirectHeal_Latent_C", "Toggle Mesh Visibility");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GC_Generic_AdrenalineRush_DirectHeal_Latent_C_Toggle_Mesh_Visibility Parms{};
+
+	Parms.Visibility = Visibility;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

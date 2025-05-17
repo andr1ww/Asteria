@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UButtonStyle_Feature_MobileCloseX_C>();
 	}
 };
-static_assert(alignof(UButtonStyle_Feature_MobileCloseX_C) == 0x000008, "Wrong alignment on UButtonStyle_Feature_MobileCloseX_C");
-static_assert(sizeof(UButtonStyle_Feature_MobileCloseX_C) == 0x000570, "Wrong size on UButtonStyle_Feature_MobileCloseX_C");
 
 }
 

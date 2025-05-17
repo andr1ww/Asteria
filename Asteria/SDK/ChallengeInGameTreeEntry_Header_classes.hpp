@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass ChallengeInGameTreeEntry_Header.ChallengeInGameTreeEntry_Header_C
-// 0x0028 (0x0288 - 0x0260)
+// 0x0028 (0x02E0 - 0x02B8)
 class UChallengeInGameTreeEntry_Header_C final : public UAthenaChallengeTreeEntry_ChallengeSet
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       OnExpand;                                          // 0x0268(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       OnHover;                                           // 0x0270(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UBorder*                                AnimBoundEntryBorder;                              // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                BaseColorBorder;                                   // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UWidgetAnimation*                       OnExpand;                                          // 0x02C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       OnHover;                                           // 0x02C8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UBorder*                                AnimBoundEntryBorder;                              // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                BaseColorBorder;                                   // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
+	void ExecuteUbergraph_ChallengeInGameTreeEntry_Header(int32 EntryPoint);
+	void OnChallengeSetEstablished(const struct FFortChallengeSetStyle& DisplayStyle);
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
 	void OnMouseLeave(const struct FPointerEvent& MouseEvent);
 	void OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void OnChallengeSetEstablished(const struct FFortChallengeSetStyle& DisplayStyle);
-	void ExecuteUbergraph_ChallengeInGameTreeEntry_Header(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -45,13 +45,6 @@ public:
 		return GetDefaultObjImpl<UChallengeInGameTreeEntry_Header_C>();
 	}
 };
-static_assert(alignof(UChallengeInGameTreeEntry_Header_C) == 0x000008, "Wrong alignment on UChallengeInGameTreeEntry_Header_C");
-static_assert(sizeof(UChallengeInGameTreeEntry_Header_C) == 0x000288, "Wrong size on UChallengeInGameTreeEntry_Header_C");
-static_assert(offsetof(UChallengeInGameTreeEntry_Header_C, UberGraphFrame) == 0x000260, "Member 'UChallengeInGameTreeEntry_Header_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UChallengeInGameTreeEntry_Header_C, OnExpand) == 0x000268, "Member 'UChallengeInGameTreeEntry_Header_C::OnExpand' has a wrong offset!");
-static_assert(offsetof(UChallengeInGameTreeEntry_Header_C, OnHover) == 0x000270, "Member 'UChallengeInGameTreeEntry_Header_C::OnHover' has a wrong offset!");
-static_assert(offsetof(UChallengeInGameTreeEntry_Header_C, AnimBoundEntryBorder) == 0x000278, "Member 'UChallengeInGameTreeEntry_Header_C::AnimBoundEntryBorder' has a wrong offset!");
-static_assert(offsetof(UChallengeInGameTreeEntry_Header_C, BaseColorBorder) == 0x000280, "Member 'UChallengeInGameTreeEntry_Header_C::BaseColorBorder' has a wrong offset!");
 
 }
 

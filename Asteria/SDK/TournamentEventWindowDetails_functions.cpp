@@ -17,31 +17,23 @@
 namespace SDK
 {
 
-// Function TournamentEventWindowDetails.TournamentEventWindowDetails_C.RefreshDataBP
-// (Event, Protected, BlueprintEvent)
+// Function TournamentEventWindowDetails.TournamentEventWindowDetails_C.ExecuteUbergraph_TournamentEventWindowDetails
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTournamentEventWindowDetails_C::RefreshDataBP()
+void UTournamentEventWindowDetails_C::ExecuteUbergraph_TournamentEventWindowDetails(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TournamentEventWindowDetails_C", "RefreshDataBP");
+		Func = Class->GetFunction("TournamentEventWindowDetails_C", "ExecuteUbergraph_TournamentEventWindowDetails");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::TournamentEventWindowDetails_C_ExecuteUbergraph_TournamentEventWindowDetails Parms{};
 
+	Parms.EntryPoint = EntryPoint;
 
-// Function TournamentEventWindowDetails.TournamentEventWindowDetails_C.EventColorize
-// (BlueprintCallable, BlueprintEvent)
-
-void UTournamentEventWindowDetails_C::EventColorize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TournamentEventWindowDetails_C", "EventColorize");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -165,23 +157,31 @@ void UTournamentEventWindowDetails_C::BndEvt__Button_Leaderboard_K2Node_Componen
 }
 
 
-// Function TournamentEventWindowDetails.TournamentEventWindowDetails_C.ExecuteUbergraph_TournamentEventWindowDetails
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function TournamentEventWindowDetails.TournamentEventWindowDetails_C.EventColorize
+// (BlueprintCallable, BlueprintEvent)
 
-void UTournamentEventWindowDetails_C::ExecuteUbergraph_TournamentEventWindowDetails(int32 EntryPoint)
+void UTournamentEventWindowDetails_C::EventColorize()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TournamentEventWindowDetails_C", "ExecuteUbergraph_TournamentEventWindowDetails");
+		Func = Class->GetFunction("TournamentEventWindowDetails_C", "EventColorize");
 
-	Params::TournamentEventWindowDetails_C_ExecuteUbergraph_TournamentEventWindowDetails Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function TournamentEventWindowDetails.TournamentEventWindowDetails_C.RefreshDataBP
+// (Event, Protected, BlueprintEvent)
+
+void UTournamentEventWindowDetails_C::RefreshDataBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentEventWindowDetails_C", "RefreshDataBP");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

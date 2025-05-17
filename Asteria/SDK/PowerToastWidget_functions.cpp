@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function PowerToastWidget.PowerToastWidget_C.ExecuteUbergraph_PowerToastWidget
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UPowerToastWidget_C::ExecuteUbergraph_PowerToastWidget(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PowerToastWidget_C", "ExecuteUbergraph_PowerToastWidget");
-
-	Params::PowerToastWidget_C_ExecuteUbergraph_PowerToastWidget Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function PowerToastWidget.PowerToastWidget_C.HandleAnimationDelay
 // (BlueprintCallable, BlueprintEvent)
 
@@ -54,8 +34,8 @@ void UPowerToastWidget_C::HandleAnimationDelay()
 // Function PowerToastWidget.PowerToastWidget_C.OnMouseEnter
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UPowerToastWidget_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
@@ -76,7 +56,7 @@ void UPowerToastWidget_C::OnMouseEnter(const struct FGeometry& MyGeometry, const
 // Function PowerToastWidget.PowerToastWidget_C.OnMouseLeave
 // (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// struct FPointerEvent                    MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
 void UPowerToastWidget_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 {
@@ -90,20 +70,6 @@ void UPowerToastWidget_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
 	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PowerToastWidget.PowerToastWidget_C.ShowToast
-// (Event, Protected, BlueprintEvent)
-
-void UPowerToastWidget_C::ShowToast()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PowerToastWidget_C", "ShowToast");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -146,6 +112,54 @@ void UPowerToastWidget_C::WidgetAnimationEvt_Outro_K2Node_WidgetAnimationEvent_2
 		Func = Class->GetFunction("PowerToastWidget_C", "WidgetAnimationEvt_Outro_K2Node_WidgetAnimationEvent_2");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PowerToastWidget.PowerToastWidget_C.ShowToast
+// (Event, Protected, BlueprintEvent)
+
+void UPowerToastWidget_C::ShowToast()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PowerToastWidget_C", "ShowToast");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PowerToastWidget.PowerToastWidget_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UPowerToastWidget_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PowerToastWidget_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function PowerToastWidget.PowerToastWidget_C.ExecuteUbergraph_PowerToastWidget
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UPowerToastWidget_C::ExecuteUbergraph_PowerToastWidget(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PowerToastWidget_C", "ExecuteUbergraph_PowerToastWidget");
+
+	Params::PowerToastWidget_C_ExecuteUbergraph_PowerToastWidget Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

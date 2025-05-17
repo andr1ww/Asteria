@@ -37,6 +37,20 @@ void ATrap_Floor_Spikes_C::ExecuteUbergraph_Trap_Floor_Spikes(int32 EntryPoint)
 }
 
 
+// Function Trap_Floor_Spikes.Trap_Floor_Spikes_C.SwitchToAlternateMaterial
+// (BlueprintCosmetic, Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ATrap_Floor_Spikes_C::SwitchToAlternateMaterial()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Trap_Floor_Spikes_C", "SwitchToAlternateMaterial");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Trap_Floor_Spikes.Trap_Floor_Spikes_C.OnInitTeam
 // (Event, Protected, BlueprintEvent)
 
@@ -83,7 +97,7 @@ void ATrap_Floor_Spikes_C::OnOutOfDurability()
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EGameplayCueEvent                       EventType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayCueParameters           Parameters                                             (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+// const struct FGameplayCueParameters&    Parameters                                             (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 
 void ATrap_Floor_Spikes_C::GameplayCue_Abilities_Activation_Traps_ActivateTrap(EGameplayCueEvent EventType, const struct FGameplayCueParameters& Parameters)
 {
@@ -279,7 +293,7 @@ void ATrap_Floor_Spikes_C::SetSpikePosition(float NewSpikePosition)
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   SweepSpeed_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FLinearColor                     SweepColor_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FLinearColor&              SweepColor_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   SweepExponent_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 void ATrap_Floor_Spikes_C::MaterialSweepOnSpikes(float SweepSpeed_0, const struct FLinearColor& SweepColor_0, float SweepExponent_0)
@@ -300,7 +314,7 @@ void ATrap_Floor_Spikes_C::MaterialSweepOnSpikes(float SweepSpeed_0, const struc
 
 
 // Function Trap_Floor_Spikes.Trap_Floor_Spikes_C. ChangeToFriendlyMaterial
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
 void ATrap_Floor_Spikes_C::_ChangeToFriendlyMaterial()
 {

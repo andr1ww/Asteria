@@ -17,41 +17,117 @@
 namespace SDK
 {
 
-// Function EventLeaderboardEntry.EventLeaderboardEntry_C.SetTeamDisplayNames
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function EventLeaderboardEntry.EventLeaderboardEntry_C.ExecuteUbergraph_EventLeaderboardEntry
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UFortEventLeaderboardEntryData*   Entry_Data                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardEntry_C::SetTeamDisplayNames(class UFortEventLeaderboardEntryData* Entry_Data)
+void UEventLeaderboardEntry_C::ExecuteUbergraph_EventLeaderboardEntry(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardEntry_C", "SetTeamDisplayNames");
+		Func = Class->GetFunction("EventLeaderboardEntry_C", "ExecuteUbergraph_EventLeaderboardEntry");
 
-	Params::EventLeaderboardEntry_C_SetTeamDisplayNames Parms{};
+	Params::EventLeaderboardEntry_C_ExecuteUbergraph_EventLeaderboardEntry Parms{};
 
-	Parms.Entry_Data = Entry_Data;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function EventLeaderboardEntry.EventLeaderboardEntry_C.SetEntryDetails
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function EventLeaderboardEntry.EventLeaderboardEntry_C.OnTeammateDisplayNameAdded
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// class UFortEventLeaderboardEntryData*   EntryData                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UFortEventLeaderboardEntryData*LeaderboardEntryData                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardEntry_C::SetEntryDetails(class UFortEventLeaderboardEntryData* EntryData)
+void UEventLeaderboardEntry_C::OnTeammateDisplayNameAdded(const class UFortEventLeaderboardEntryData* LeaderboardEntryData)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardEntry_C", "SetEntryDetails");
+		Func = Class->GetFunction("EventLeaderboardEntry_C", "OnTeammateDisplayNameAdded");
 
-	Params::EventLeaderboardEntry_C_SetEntryDetails Parms{};
+	Params::EventLeaderboardEntry_C_OnTeammateDisplayNameAdded Parms{};
 
-	Parms.EntryData = EntryData;
+	Parms.LeaderboardEntryData = LeaderboardEntryData;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function EventLeaderboardEntry.EventLeaderboardEntry_C.EventColorize
+// (BlueprintCallable, BlueprintEvent)
+
+void UEventLeaderboardEntry_C::EventColorize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardEntry_C", "EventColorize");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function EventLeaderboardEntry.EventLeaderboardEntry_C.EventStyleEntry
+// (BlueprintCallable, BlueprintEvent)
+
+void UEventLeaderboardEntry_C::EventStyleEntry()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardEntry_C", "EventStyleEntry");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function EventLeaderboardEntry.EventLeaderboardEntry_C.BP_OnDeselected
+// (Event, Protected, BlueprintEvent)
+
+void UEventLeaderboardEntry_C::BP_OnDeselected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardEntry_C", "BP_OnDeselected");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function EventLeaderboardEntry.EventLeaderboardEntry_C.BP_OnSelected
+// (Event, Protected, BlueprintEvent)
+
+void UEventLeaderboardEntry_C::BP_OnSelected()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardEntry_C", "BP_OnSelected");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function EventLeaderboardEntry.EventLeaderboardEntry_C.OnListItemObjectSet
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UEventLeaderboardEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("EventLeaderboardEntry_C", "OnListItemObjectSet");
+
+	Params::EventLeaderboardEntry_C_OnListItemObjectSet Parms{};
+
+	Parms.ListItemObject = ListItemObject;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,117 +153,41 @@ void UEventLeaderboardEntry_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function EventLeaderboardEntry.EventLeaderboardEntry_C.OnListItemObjectSet
-// (Event, Protected, BlueprintEvent)
+// Function EventLeaderboardEntry.EventLeaderboardEntry_C.SetEntryDetails
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          ListItemObject                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortEventLeaderboardEntryData*   EntryData                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardEntry_C::OnListItemObjectSet(class UObject* ListItemObject)
+void UEventLeaderboardEntry_C::SetEntryDetails(class UFortEventLeaderboardEntryData* EntryData)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardEntry_C", "OnListItemObjectSet");
+		Func = Class->GetFunction("EventLeaderboardEntry_C", "SetEntryDetails");
 
-	Params::EventLeaderboardEntry_C_OnListItemObjectSet Parms{};
+	Params::EventLeaderboardEntry_C_SetEntryDetails Parms{};
 
-	Parms.ListItemObject = ListItemObject;
+	Parms.EntryData = EntryData;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function EventLeaderboardEntry.EventLeaderboardEntry_C.BP_OnSelected
-// (Event, Protected, BlueprintEvent)
-
-void UEventLeaderboardEntry_C::BP_OnSelected()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardEntry_C", "BP_OnSelected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EventLeaderboardEntry.EventLeaderboardEntry_C.BP_OnDeselected
-// (Event, Protected, BlueprintEvent)
-
-void UEventLeaderboardEntry_C::BP_OnDeselected()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardEntry_C", "BP_OnDeselected");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EventLeaderboardEntry.EventLeaderboardEntry_C.EventStyleEntry
-// (BlueprintCallable, BlueprintEvent)
-
-void UEventLeaderboardEntry_C::EventStyleEntry()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardEntry_C", "EventStyleEntry");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EventLeaderboardEntry.EventLeaderboardEntry_C.EventColorize
-// (BlueprintCallable, BlueprintEvent)
-
-void UEventLeaderboardEntry_C::EventColorize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardEntry_C", "EventColorize");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function EventLeaderboardEntry.EventLeaderboardEntry_C.OnTeammateDisplayNameAdded
-// (Event, Protected, BlueprintEvent)
+// Function EventLeaderboardEntry.EventLeaderboardEntry_C.SetTeamDisplayNames
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UFortEventLeaderboardEntryData*   LeaderboardEntryData                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFortEventLeaderboardEntryData*   Entry_Data                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UEventLeaderboardEntry_C::OnTeammateDisplayNameAdded(const class UFortEventLeaderboardEntryData* LeaderboardEntryData)
+void UEventLeaderboardEntry_C::SetTeamDisplayNames(class UFortEventLeaderboardEntryData* Entry_Data)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardEntry_C", "OnTeammateDisplayNameAdded");
+		Func = Class->GetFunction("EventLeaderboardEntry_C", "SetTeamDisplayNames");
 
-	Params::EventLeaderboardEntry_C_OnTeammateDisplayNameAdded Parms{};
+	Params::EventLeaderboardEntry_C_SetTeamDisplayNames Parms{};
 
-	Parms.LeaderboardEntryData = LeaderboardEntryData;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function EventLeaderboardEntry.EventLeaderboardEntry_C.ExecuteUbergraph_EventLeaderboardEntry
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UEventLeaderboardEntry_C::ExecuteUbergraph_EventLeaderboardEntry(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("EventLeaderboardEntry_C", "ExecuteUbergraph_EventLeaderboardEntry");
-
-	Params::EventLeaderboardEntry_C_ExecuteUbergraph_EventLeaderboardEntry Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.Entry_Data = Entry_Data;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

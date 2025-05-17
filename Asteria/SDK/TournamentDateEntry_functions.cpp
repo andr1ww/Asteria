@@ -17,41 +17,21 @@
 namespace SDK
 {
 
-// Function TournamentDateEntry.TournamentDateEntry_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function TournamentDateEntry.TournamentDateEntry_C.ExecuteUbergraph_TournamentDateEntry
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTournamentDateEntry_C::PreConstruct(bool IsDesignTime)
+void UTournamentDateEntry_C::ExecuteUbergraph_TournamentDateEntry(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TournamentDateEntry_C", "PreConstruct");
+		Func = Class->GetFunction("TournamentDateEntry_C", "ExecuteUbergraph_TournamentDateEntry");
 
-	Params::TournamentDateEntry_C_PreConstruct Parms{};
+	Params::TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function TournamentDateEntry.TournamentDateEntry_C.EventColor
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FFortTournamentDisplayInfo       showdownData                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UTournamentDateEntry_C::EventColor(const struct FFortTournamentDisplayInfo& showdownData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TournamentDateEntry_C", "EventColor");
-
-	Params::TournamentDateEntry_C_EventColor Parms{};
-
-	Parms.showdownData = std::move(showdownData);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -71,21 +51,41 @@ void UTournamentDateEntry_C::RefreshDataBP()
 }
 
 
-// Function TournamentDateEntry.TournamentDateEntry_C.ExecuteUbergraph_TournamentDateEntry
-// (Final, UbergraphFunction, HasDefaults)
+// Function TournamentDateEntry.TournamentDateEntry_C.EventColor
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FFortTournamentDisplayInfo&showdownData                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UTournamentDateEntry_C::ExecuteUbergraph_TournamentDateEntry(int32 EntryPoint)
+void UTournamentDateEntry_C::EventColor(const struct FFortTournamentDisplayInfo& showdownData)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TournamentDateEntry_C", "ExecuteUbergraph_TournamentDateEntry");
+		Func = Class->GetFunction("TournamentDateEntry_C", "EventColor");
 
-	Params::TournamentDateEntry_C_ExecuteUbergraph_TournamentDateEntry Parms{};
+	Params::TournamentDateEntry_C_EventColor Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.showdownData = std::move(showdownData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function TournamentDateEntry.TournamentDateEntry_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UTournamentDateEntry_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TournamentDateEntry_C", "PreConstruct");
+
+	Params::TournamentDateEntry_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

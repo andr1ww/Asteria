@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UTextStyle_BurbankSmall_XS_NA_C>();
 	}
 };
-static_assert(alignof(UTextStyle_BurbankSmall_XS_NA_C) == 0x000008, "Wrong alignment on UTextStyle_BurbankSmall_XS_NA_C");
-static_assert(sizeof(UTextStyle_BurbankSmall_XS_NA_C) == 0x000148, "Wrong size on UTextStyle_BurbankSmall_XS_NA_C");
 
 }
 

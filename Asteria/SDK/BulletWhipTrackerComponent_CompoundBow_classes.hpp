@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BulletWhipTrackerComponent_CompoundBow.BulletWhipTrackerComponent_CompoundBow_C
-// 0x0000 (0x0110 - 0x0110)
+// 0x0000 (0x00F0 - 0x00F0)
 class UBulletWhipTrackerComponent_CompoundBow_C final : public UBulletWhipTrackerComponent_C
 {
 public:
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UBulletWhipTrackerComponent_CompoundBow_C>();
 	}
 };
-static_assert(alignof(UBulletWhipTrackerComponent_CompoundBow_C) == 0x000008, "Wrong alignment on UBulletWhipTrackerComponent_CompoundBow_C");
-static_assert(sizeof(UBulletWhipTrackerComponent_CompoundBow_C) == 0x000110, "Wrong size on UBulletWhipTrackerComponent_CompoundBow_C");
 
 }
 

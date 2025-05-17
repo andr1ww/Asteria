@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function StatsListItemWIdget.StatsListItemWIdget_C.Populate-Update
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UStatsListItemWIdget_C::Populate_Update()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("StatsListItemWIdget_C", "Populate-Update");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function StatsListItemWIdget.StatsListItemWIdget_C.Initial Reset
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -40,6 +26,20 @@ void UStatsListItemWIdget_C::Initial_Reset()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("StatsListItemWIdget_C", "Initial Reset");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function StatsListItemWIdget.StatsListItemWIdget_C.Populate-Update
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UStatsListItemWIdget_C::Populate_Update()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("StatsListItemWIdget_C", "Populate-Update");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -88,7 +88,7 @@ class UWidget* UStatsListItemWIdget_C::GetListItemTooltipWidget()
 // Function StatsListItemWIdget.StatsListItemWIdget_C.SetStatIcon
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSlateBrush                      NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FSlateBrush&               NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UStatsListItemWIdget_C::SetStatIcon(const struct FSlateBrush& NewParam)
 {
@@ -108,7 +108,7 @@ void UStatsListItemWIdget_C::SetStatIcon(const struct FSlateBrush& NewParam)
 // Function StatsListItemWIdget.StatsListItemWIdget_C.UpdateBuffArrows
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortDisplayAttribute            CurrentAttribute                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortDisplayAttribute&     CurrentAttribute                                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UStatsListItemWIdget_C::UpdateBuffArrows(const struct FFortDisplayAttribute& CurrentAttribute)
 {
@@ -128,7 +128,7 @@ void UStatsListItemWIdget_C::UpdateBuffArrows(const struct FFortDisplayAttribute
 // Function StatsListItemWIdget.StatsListItemWIdget_C.UpdateBasicPairLabel
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortDisplayAttribute            CurrentAttribute                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortDisplayAttribute&     CurrentAttribute                                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UStatsListItemWIdget_C::UpdateBasicPairLabel(const struct FFortDisplayAttribute& CurrentAttribute)
 {
@@ -148,7 +148,7 @@ void UStatsListItemWIdget_C::UpdateBasicPairLabel(const struct FFortDisplayAttri
 // Function StatsListItemWIdget.StatsListItemWIdget_C.UpdateValueText
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortDisplayAttribute            CurrentAttribute                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortDisplayAttribute&     CurrentAttribute                                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UStatsListItemWIdget_C::UpdateValueText(const struct FFortDisplayAttribute& CurrentAttribute)
 {
@@ -168,7 +168,7 @@ void UStatsListItemWIdget_C::UpdateValueText(const struct FFortDisplayAttribute&
 // Function StatsListItemWIdget.StatsListItemWIdget_C.UpdateType
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortDisplayAttribute            CurrentAttribute                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortDisplayAttribute&     CurrentAttribute                                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UStatsListItemWIdget_C::UpdateType(const struct FFortDisplayAttribute& CurrentAttribute)
 {
@@ -188,7 +188,7 @@ void UStatsListItemWIdget_C::UpdateType(const struct FFortDisplayAttribute& Curr
 // Function StatsListItemWIdget.StatsListItemWIdget_C.UpdateColors
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FFortDisplayAttribute            CurrentAttribute                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// const struct FFortDisplayAttribute&     CurrentAttribute                                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
 void UStatsListItemWIdget_C::UpdateColors(const struct FFortDisplayAttribute& CurrentAttribute)
 {

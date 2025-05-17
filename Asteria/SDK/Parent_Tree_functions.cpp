@@ -17,49 +17,35 @@
 namespace SDK
 {
 
-// Function Parent_Tree.Parent_Tree_C.ExecuteUbergraph_Parent_Tree
-// (Final, UbergraphFunction)
+// Function Parent_Tree.Parent_Tree_C.RemoveTestWind
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   BlendTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AParent_Tree_C::ExecuteUbergraph_Parent_Tree(int32 EntryPoint)
+void AParent_Tree_C::RemoveTestWind(float BlendTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Parent_Tree_C", "ExecuteUbergraph_Parent_Tree");
+		Func = Class->GetFunction("Parent_Tree_C", "RemoveTestWind");
 
-	Params::Parent_Tree_C_ExecuteUbergraph_Parent_Tree Parms{};
+	Params::Parent_Tree_C_RemoveTestWind Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.BlendTime = BlendTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function Parent_Tree.Parent_Tree_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function Parent_Tree.Parent_Tree_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void AParent_Tree_C::ReceiveBeginPlay()
+void AParent_Tree_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Parent_Tree_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Parent_Tree.Parent_Tree_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void AParent_Tree_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Parent_Tree_C", "ReceiveDestroyed");
+		Func = Class->GetFunction("Parent_Tree_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -87,35 +73,49 @@ void AParent_Tree_C::ChangeWindIntensity(float Intensity, float Time_It_Takes_To
 }
 
 
-// Function Parent_Tree.Parent_Tree_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Parent_Tree.Parent_Tree_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
 
-void AParent_Tree_C::UserConstructionScript()
+void AParent_Tree_C::ReceiveDestroyed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Parent_Tree_C", "UserConstructionScript");
+		Func = Class->GetFunction("Parent_Tree_C", "ReceiveDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Parent_Tree.Parent_Tree_C.RemoveTestWind
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   BlendTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function Parent_Tree.Parent_Tree_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void AParent_Tree_C::RemoveTestWind(float BlendTime)
+void AParent_Tree_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Parent_Tree_C", "RemoveTestWind");
+		Func = Class->GetFunction("Parent_Tree_C", "ReceiveBeginPlay");
 
-	Params::Parent_Tree_C_RemoveTestWind Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.BlendTime = BlendTime;
+
+// Function Parent_Tree.Parent_Tree_C.ExecuteUbergraph_Parent_Tree
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AParent_Tree_C::ExecuteUbergraph_Parent_Tree(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Parent_Tree_C", "ExecuteUbergraph_Parent_Tree");
+
+	Params::Parent_Tree_C_ExecuteUbergraph_Parent_Tree Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

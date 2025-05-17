@@ -18,12 +18,11 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass SquadMarker.SquadMarker_C
-// 0x0010 (0x0528 - 0x0518)
+// 0x0008 (0x05D0 - 0x05C8)
 class USquadMarker_C final : public UAthenaSquadIndicator
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0518(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 burst;                                             // 0x0520(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05C8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_SquadMarker(int32 EntryPoint);
@@ -38,10 +37,6 @@ public:
 		return GetDefaultObjImpl<USquadMarker_C>();
 	}
 };
-static_assert(alignof(USquadMarker_C) == 0x000008, "Wrong alignment on USquadMarker_C");
-static_assert(sizeof(USquadMarker_C) == 0x000528, "Wrong size on USquadMarker_C");
-static_assert(offsetof(USquadMarker_C, UberGraphFrame) == 0x000518, "Member 'USquadMarker_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(USquadMarker_C, burst) == 0x000520, "Member 'USquadMarker_C::burst' has a wrong offset!");
 
 }
 

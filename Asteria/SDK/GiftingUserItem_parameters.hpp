@@ -16,30 +16,6 @@
 namespace SDK::Params
 {
 
-// Function GiftingUserItem.GiftingUserItem_C.SetSelectionState
-// 0x0002 (0x0002 - 0x0000)
-struct GiftingUserItem_C_SetSelectionState final
-{
-public:
-	ESelectionState                               NewState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bAnimateOnSelect;                                  // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(GiftingUserItem_C_SetSelectionState) == 0x000001, "Wrong alignment on GiftingUserItem_C_SetSelectionState");
-static_assert(sizeof(GiftingUserItem_C_SetSelectionState) == 0x000002, "Wrong size on GiftingUserItem_C_SetSelectionState");
-static_assert(offsetof(GiftingUserItem_C_SetSelectionState, NewState) == 0x000000, "Member 'GiftingUserItem_C_SetSelectionState::NewState' has a wrong offset!");
-static_assert(offsetof(GiftingUserItem_C_SetSelectionState, bAnimateOnSelect) == 0x000001, "Member 'GiftingUserItem_C_SetSelectionState::bAnimateOnSelect' has a wrong offset!");
-
-// Function GiftingUserItem.GiftingUserItem_C.UpdateMessageText
-// 0x0018 (0x0018 - 0x0000)
-struct GiftingUserItem_C_UpdateMessageText final
-{
-public:
-	class FText                                   NewMessage;                                        // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(GiftingUserItem_C_UpdateMessageText) == 0x000008, "Wrong alignment on GiftingUserItem_C_UpdateMessageText");
-static_assert(sizeof(GiftingUserItem_C_UpdateMessageText) == 0x000018, "Wrong size on GiftingUserItem_C_UpdateMessageText");
-static_assert(offsetof(GiftingUserItem_C_UpdateMessageText, NewMessage) == 0x000000, "Member 'GiftingUserItem_C_UpdateMessageText::NewMessage' has a wrong offset!");
-
 // Function GiftingUserItem.GiftingUserItem_C.ExecuteUbergraph_GiftingUserItem
 // 0x0030 (0x0030 - 0x0000)
 struct GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem final
@@ -54,15 +30,23 @@ public:
 	class FText                                   K2Node_Event_NewMessage;                           // 0x0010(0x0018)(ConstParm)
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem) == 0x000008, "Wrong alignment on GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem");
-static_assert(sizeof(GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem) == 0x000030, "Wrong size on GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem");
-static_assert(offsetof(GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem, EntryPoint) == 0x000000, "Member 'GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem::EntryPoint' has a wrong offset!");
-static_assert(offsetof(GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem, K2Node_Event_NewState) == 0x000004, "Member 'GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem::K2Node_Event_NewState' has a wrong offset!");
-static_assert(offsetof(GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem, K2Node_Event_bAnimateOnSelect) == 0x000005, "Member 'GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem::K2Node_Event_bAnimateOnSelect' has a wrong offset!");
-static_assert(offsetof(GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem, K2Node_SwitchEnum_CmpSuccess) == 0x000006, "Member 'GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem, K2Node_Event_NewMessage) == 0x000010, "Member 'GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem::K2Node_Event_NewMessage' has a wrong offset!");
-static_assert(offsetof(GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem, CallFunc_TextIsEmpty_ReturnValue) == 0x000028, "Member 'GiftingUserItem_C_ExecuteUbergraph_GiftingUserItem::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+
+// Function GiftingUserItem.GiftingUserItem_C.UpdateMessageText
+// 0x0018 (0x0018 - 0x0000)
+struct GiftingUserItem_C_UpdateMessageText final
+{
+public:
+	class FText                                   NewMessage;                                        // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
+// Function GiftingUserItem.GiftingUserItem_C.SetSelectionState
+// 0x0002 (0x0002 - 0x0000)
+struct GiftingUserItem_C_SetSelectionState final
+{
+public:
+	ESelectionState                               NewState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bAnimateOnSelect;                                  // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
 
 }
 

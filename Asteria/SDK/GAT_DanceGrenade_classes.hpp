@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GAT_DanceGrenade.GAT_DanceGrenade_C
-// 0x0010 (0x0968 - 0x0958)
+// 0x0010 (0x0AD0 - 0x0AC0)
 class UGAT_DanceGrenade_C final : public UGAT_TriggeredAbility_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_DanceGrenade_C;                 // 0x0958(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0960(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GAT_DanceGrenade_C;                 // 0x0AC0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AFortPlayerPawn*                        PlayerPawn;                                        // 0x0AC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GAT_DanceGrenade(int32 EntryPoint);
@@ -39,10 +39,6 @@ public:
 		return GetDefaultObjImpl<UGAT_DanceGrenade_C>();
 	}
 };
-static_assert(alignof(UGAT_DanceGrenade_C) == 0x000008, "Wrong alignment on UGAT_DanceGrenade_C");
-static_assert(sizeof(UGAT_DanceGrenade_C) == 0x000968, "Wrong size on UGAT_DanceGrenade_C");
-static_assert(offsetof(UGAT_DanceGrenade_C, UberGraphFrame_GAT_DanceGrenade_C) == 0x000958, "Member 'UGAT_DanceGrenade_C::UberGraphFrame_GAT_DanceGrenade_C' has a wrong offset!");
-static_assert(offsetof(UGAT_DanceGrenade_C, PlayerPawn) == 0x000960, "Member 'UGAT_DanceGrenade_C::PlayerPawn' has a wrong offset!");
 
 }
 

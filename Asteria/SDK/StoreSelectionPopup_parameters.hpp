@@ -23,10 +23,6 @@ public:
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(StoreSelectionPopup_C_ExecuteUbergraph_StoreSelectionPopup) == 0x000008, "Wrong alignment on StoreSelectionPopup_C_ExecuteUbergraph_StoreSelectionPopup");
-static_assert(sizeof(StoreSelectionPopup_C_ExecuteUbergraph_StoreSelectionPopup) == 0x000010, "Wrong size on StoreSelectionPopup_C_ExecuteUbergraph_StoreSelectionPopup");
-static_assert(offsetof(StoreSelectionPopup_C_ExecuteUbergraph_StoreSelectionPopup, EntryPoint) == 0x000000, "Member 'StoreSelectionPopup_C_ExecuteUbergraph_StoreSelectionPopup::EntryPoint' has a wrong offset!");
-static_assert(offsetof(StoreSelectionPopup_C_ExecuteUbergraph_StoreSelectionPopup, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'StoreSelectionPopup_C_ExecuteUbergraph_StoreSelectionPopup::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 
 }
 

@@ -26,17 +26,6 @@ enum class EHotfixResult : uint8
 	EHotfixResult_MAX                        = 5,
 };
 
-// Enum Hotfix.EPatchCheckResult
-// NumValues: 0x0005
-enum class EPatchCheckResult : uint8
-{
-	NoPatchRequired                          = 0,
-	PatchRequired                            = 1,
-	NoLoggedInUser                           = 2,
-	PatchCheckFailure                        = 3,
-	EPatchCheckResult_MAX                    = 4,
-};
-
 // Enum Hotfix.EUpdateCompletionStatus
 // NumValues: 0x000A
 enum class EUpdateCompletionStatus : uint8

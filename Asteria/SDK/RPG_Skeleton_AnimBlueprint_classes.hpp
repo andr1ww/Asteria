@@ -19,18 +19,21 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass RPG_Skeleton_AnimBlueprint.RPG_Skeleton_AnimBlueprint_C
-// 0x0090 (0x02F8 - 0x0268)
+// 0x00A0 (0x0360 - 0x02C0)
 class URPG_Skeleton_AnimBlueprint_C final : public UAnimInstance
 {
 public:
-	uint8                                         Pad_268[0x8];                                      // 0x0268(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root_F7E820434538DD4C6AD2A1B5BCE33A39; // 0x0278(0x0020)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_782D94BD4EFDE1439B44CB93C212AD03; // 0x0298(0x0048)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose_829520A14F89D74E64C7AEBBB88029DD; // 0x02E0(0x0018)()
+	uint8                                         Pad_2B8[0x8];                                      // 0x02B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimInstanceSubsystemData             AnimBlueprintClassSubsystem_PropertyAccess;        // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x02D0(0x0030)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x0300(0x0048)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x0348(0x0018)()
 
 public:
 	void ExecuteUbergraph_RPG_Skeleton_AnimBlueprint(int32 EntryPoint);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
 
 public:
 	static class UClass* StaticClass()
@@ -42,12 +45,6 @@ public:
 		return GetDefaultObjImpl<URPG_Skeleton_AnimBlueprint_C>();
 	}
 };
-static_assert(alignof(URPG_Skeleton_AnimBlueprint_C) == 0x000008, "Wrong alignment on URPG_Skeleton_AnimBlueprint_C");
-static_assert(sizeof(URPG_Skeleton_AnimBlueprint_C) == 0x0002F8, "Wrong size on URPG_Skeleton_AnimBlueprint_C");
-static_assert(offsetof(URPG_Skeleton_AnimBlueprint_C, UberGraphFrame) == 0x000270, "Member 'URPG_Skeleton_AnimBlueprint_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(URPG_Skeleton_AnimBlueprint_C, AnimGraphNode_Root_F7E820434538DD4C6AD2A1B5BCE33A39) == 0x000278, "Member 'URPG_Skeleton_AnimBlueprint_C::AnimGraphNode_Root_F7E820434538DD4C6AD2A1B5BCE33A39' has a wrong offset!");
-static_assert(offsetof(URPG_Skeleton_AnimBlueprint_C, AnimGraphNode_Slot_782D94BD4EFDE1439B44CB93C212AD03) == 0x000298, "Member 'URPG_Skeleton_AnimBlueprint_C::AnimGraphNode_Slot_782D94BD4EFDE1439B44CB93C212AD03' has a wrong offset!");
-static_assert(offsetof(URPG_Skeleton_AnimBlueprint_C, AnimGraphNode_LocalRefPose_829520A14F89D74E64C7AEBBB88029DD) == 0x0002E0, "Member 'URPG_Skeleton_AnimBlueprint_C::AnimGraphNode_LocalRefPose_829520A14F89D74E64C7AEBBB88029DD' has a wrong offset!");
 
 }
 

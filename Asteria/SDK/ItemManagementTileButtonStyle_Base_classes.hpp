@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<UItemManagementTileButtonStyle_Base_C>();
 	}
 };
-static_assert(alignof(UItemManagementTileButtonStyle_Base_C) == 0x000008, "Wrong alignment on UItemManagementTileButtonStyle_Base_C");
-static_assert(sizeof(UItemManagementTileButtonStyle_Base_C) == 0x000570, "Wrong size on UItemManagementTileButtonStyle_Base_C");
 
 }
 

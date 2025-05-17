@@ -17,8 +17,8 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass B_Assault_Surgical_Athena.B_Assault_Surgical_Athena_C
-// 0x0000 (0x0DA8 - 0x0DA8)
-class AB_Assault_Surgical_Athena_C final : public AB_Assault_Generic_C
+// 0x0000 (0x1310 - 0x1310)
+class AB_Assault_Surgical_Athena_C : public AB_Assault_Generic_C
 {
 public:
 	static class UClass* StaticClass()
@@ -30,8 +30,6 @@ public:
 		return GetDefaultObjImpl<AB_Assault_Surgical_Athena_C>();
 	}
 };
-static_assert(alignof(AB_Assault_Surgical_Athena_C) == 0x000008, "Wrong alignment on AB_Assault_Surgical_Athena_C");
-static_assert(sizeof(AB_Assault_Surgical_Athena_C) == 0x000DA8, "Wrong size on AB_Assault_Surgical_Athena_C");
 
 }
 

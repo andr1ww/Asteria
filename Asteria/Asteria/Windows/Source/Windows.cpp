@@ -753,7 +753,7 @@ void Asteria::Windows::Setup()
 {
     fuckIda;
     MH_CreateHook(LI_FN_CACHED(LdrLoadDll), Asteria::Windows::LdrLoadDllHook, (LPVOID*)&Asteria::Windows::LdrLoadDllOG);
-    MH_CreateHook(LI_FN_CACHED(FlushInstructionCache), Asteria::Windows::FlushInstructionCacheHook, (LPVOID*)&Asteria::Windows::FlushInstructionCacheOG); // hooks
+    // has issues with peb and PE header being gone MH_CreateHook(LI_FN_CACHED(FlushInstructionCache), Asteria::Windows::FlushInstructionCacheHook, (LPVOID*)&Asteria::Windows::FlushInstructionCacheOG); // hooks
     MH_CreateHook(LI_FN_CACHED(RtlCreateUserThread), Asteria::Windows::RtlCreateUserThreadHook, (LPVOID*)&Asteria::Windows::RtlCreateUserThreadOG);
     MH_CreateHook(LI_FN_CACHED(NtAllocateVirtualMemory), Asteria::Windows::NtAllocateVirtualMemoryHook, (LPVOID*)&Asteria::Windows::NtAllocateVirtualMemoryOG);
 //    MH_CreateHook(LI_FN_CACHED(NtCreateThreadEx), Asteria::Windows::NtCreateThreadExHook, (LPVOID*)&Asteria::Windows::NtCreateThreadExOG);

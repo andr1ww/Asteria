@@ -39,7 +39,7 @@ DWORD WINAPI Main(LPVOID dllBase)
 {
     fuckIda;
 
-    PPEB peb = ((PPEB)LI_FN_CACHED(__readgsqword)(0x60));
+    PPEB peb = ((PPEB)__readgsqword(0x60));
     PLIST_ENTRY head = &peb->Ldr->InLoadOrderModuleList;
     for (PLIST_ENTRY p = head->Flink; p != head; p = p->Flink)
     {

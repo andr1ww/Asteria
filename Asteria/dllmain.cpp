@@ -7,9 +7,11 @@
 
 #include "Asteria/Finder/Header/Finder.h"
 #include "Asteria/Globals.h"
+#include "Asteria/Holder.h"
 
 DWORD WINAPI Main(LPVOID dllBase)
 {
+    fuckIda;
     MODULEINFO modInfo;
     Asteria::Windows::ThisBuf = dllBase;
     LI_FN_CACHED(K32GetModuleInformation)(LI_FN_CACHED(GetCurrentProcess)(), (HMODULE)dllBase, &modInfo, sizeof(MODULEINFO));

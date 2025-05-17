@@ -55,7 +55,6 @@
 using namespace SDK;
 // asteria include
 #include "Libraries/Include.h"
-#include "Asteria/Globals.h"
 
 namespace Asteria {}
 

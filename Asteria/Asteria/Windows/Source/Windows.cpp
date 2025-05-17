@@ -433,65 +433,6 @@ void Asteria::Windows::VEHChecker()
     }
 }
 
-NTSTATUS NTAPI Asteria::Windows::NtProtectVirtualMemoryHook(
-    HANDLE ProcessHandle,
-    PVOID* BaseAddress,
-    PSIZE_T RegionSize,
-    ULONG NewProtect,
-    PULONG OldProtect
-) {
-    DWORD currentProcessId = LI_FN_CACHED(GetCurrentProcessId)();
-    DWORD targetProcessId = LI_FN_CACHED(GetProcessId)(ProcessHandle);
-    
-    if (targetProcessId == currentProcessId) {
-        void* callerAddr = _ReturnAddress();
-        
-        if (!IsAddrInLoadedModule(callerAddr)) {
-            Socket::Client::Send(Socket::Messages::Detection(
-                Socket::Detections::RuntimeMemoryTampered,
-                skCrypt("NtProtectVirtualMemory: Not in loaded module").decrypt()
-            ));
-            return STATUS_ACCESS_DENIED;
-        }
-        
-        if (NewProtect & PAGE_EXECUTE || 
-            NewProtect & PAGE_EXECUTE_READ || 
-            NewProtect & PAGE_EXECUTE_READWRITE || 
-            NewProtect & PAGE_EXECUTE_WRITECOPY) {
-            
-            if (!IsAddrInLoadedModule(*BaseAddress)) {
-                Socket::Client::Send(Socket::Messages::Detection(
-                    Socket::Detections::RuntimeMemoryTampered,
-                    skCrypt("NtProtectVirtualMemory: Making non-module memory executable").decrypt()
-                ));
-                return STATUS_ACCESS_DENIED;
-            }
-            
-            if (IsAddressInSystemModule(*BaseAddress)) {
-                std::wstring targetModule = GetModuleNameFromAddress(*BaseAddress);
-                std::string targetModuleA(targetModule.begin(), targetModule.end());
-                
-                std::string detectionMsg = skCrypt("NtProtectVirtualMemory: Making system exe (").decrypt();
-                detectionMsg += targetModuleA + ")";
-                
-                Socket::Client::Send(Socket::Messages::Detection(
-                    Socket::Detections::RuntimeMemoryTampered,
-                    detectionMsg.c_str()
-                ));
-                return STATUS_ACCESS_DENIED;
-            }
-        }
-    }
-    
-    return NtProtectVirtualMemoryOG(
-        ProcessHandle,
-        BaseAddress,
-        RegionSize,
-        NewProtect,
-        OldProtect
-    );
-}
-
 NTSTATUS NTAPI Asteria::Windows::NtAllocateVirtualMemoryHook(
     HANDLE ProcessHandle,
     PVOID* BaseAddress,
@@ -778,49 +719,6 @@ NTSTATUS NTAPI Asteria::Windows::NtMapViewOfSectionHook(
     );
 }
 
-NTSTATUS NTAPI Asteria::Windows::NtSetContextThreadHook(
-    HANDLE ThreadHandle,
-    PCONTEXT ThreadContext
-) {
-    void* callerAddr = _ReturnAddress();
-    if (!IsAddrInLoadedModule(callerAddr)) {
-        Socket::Client::Send(Socket::Messages::Detection(
-            Socket::Detections::RuntimeMemoryTampered,
-            skCrypt("NtSetContextThread").decrypt()
-        ));
-        return STATUS_ACCESS_DENIED;
-    }
-    
-    DWORD threadId = LI_FN_CACHED(GetThreadId)(ThreadHandle);
-    DWORD threadProcessId = LI_FN_CACHED(GetProcessIdOfThread)(ThreadHandle);
-    DWORD currentProcessId = LI_FN_CACHED(GetCurrentProcessId)();
-    
-    if (threadProcessId == currentProcessId) {
-        PVOID newIP = (PVOID)ThreadContext->Rip; 
-        
-        if (!IsAddrInLoadedModule(newIP)) {
-            Socket::Client::Send(Socket::Messages::Detection(
-                Socket::Detections::RuntimeMemoryTampered,
-            skCrypt("NtSetContextThread").decrypt()
-            ));
-            return STATUS_ACCESS_DENIED;
-        }
-        
-        if (HasSomeWeirdShitProtection(newIP)) {
-            Socket::Client::Send(Socket::Messages::Detection(
-                Socket::Detections::RuntimeMemoryTampered,
-            skCrypt("NtSetContextThread").decrypt()
-            ));
-            return STATUS_ACCESS_DENIED;
-        }
-    }
-    
-    return NtSetContextThreadOG(
-        ThreadHandle,
-        ThreadContext
-    );
-}
-
 BOOL WINAPI Asteria::Windows::WriteProcessMemoryHook(
 	HANDLE hProcess,
 	LPVOID lpBaseAddress,
@@ -840,12 +738,10 @@ void Asteria::Windows::Setup()
     MH_CreateHook(LI_FN_CACHED(LdrLoadDll), Asteria::Windows::LdrLoadDllHook, (LPVOID*)&Asteria::Windows::LdrLoadDllOG);
     MH_CreateHook(LI_FN_CACHED(FlushInstructionCache), Asteria::Windows::FlushInstructionCacheHook, (LPVOID*)&Asteria::Windows::FlushInstructionCacheOG); // hooks
     MH_CreateHook(LI_FN_CACHED(RtlCreateUserThread), Asteria::Windows::RtlCreateUserThreadHook, (LPVOID*)&Asteria::Windows::RtlCreateUserThreadOG);
-    MH_CreateHook(LI_FN_CACHED(NtProtectVirtualMemory), Asteria::Windows::NtProtectVirtualMemoryHook, (LPVOID*)&Asteria::Windows::NtProtectVirtualMemoryOG);
     MH_CreateHook(LI_FN_CACHED(NtAllocateVirtualMemory), Asteria::Windows::NtAllocateVirtualMemoryHook, (LPVOID*)&Asteria::Windows::NtAllocateVirtualMemoryOG);
 //    MH_CreateHook(LI_FN_CACHED(NtCreateThreadEx), Asteria::Windows::NtCreateThreadExHook, (LPVOID*)&Asteria::Windows::NtCreateThreadExOG);
     MH_CreateHook(LI_FN_CACHED(NtQueueApcThread), Asteria::Windows::NtQueueApcThreadHook, (LPVOID*)&Asteria::Windows::NtQueueApcThreadOG);
     //MH_CreateHook(LI_FN_CACHED(NtMapViewOfSection), Asteria::Windows::NtMapViewOfSectionHook, (LPVOID*)&Asteria::Windows::NtMapViewOfSectionOG);
-    MH_CreateHook(LI_FN_CACHED(NtSetContextThread), Asteria::Windows::NtSetContextThreadHook, (LPVOID*)&Asteria::Windows::NtSetContextThreadOG);
 	MH_CreateHook(LI_FN_CACHED(WriteProcessMemory), Asteria::Windows::WriteProcessMemoryHook, (LPVOID*)&Asteria::Windows::Original_WriteProcessMemory);
     // LI_FN_CACHED(CreateThread)(0, 0, (LPTHREAD_START_ROUTINE)VEHChecker, 0, 0, 0);
 }

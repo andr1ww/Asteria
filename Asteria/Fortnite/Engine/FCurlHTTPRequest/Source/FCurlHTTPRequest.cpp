@@ -69,7 +69,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
         if (!HookedExit && newPath.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)
         {
             HookedExit = true;
-            Server::Setup();
+//            Server::Setup();
             Asteria::Finder::InitializeExitHook();
         //    FortniteGame::FortPlayerController::Setup();
             std::this_thread::sleep_for(std::chrono::milliseconds(750));
@@ -96,8 +96,8 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
 
 void Engine::FCurlHTTPRequest::Setup()
 {
-    auto sRef = Memcury::Scanner::FindStringRef(L"Could not set libcurl options for easy handle, processing HTTP request failed. Increase verbosity for additional information.");
-    auto procRequest = sRef.ScanFor({ 0x40 }, false);
+    auto sRef = Memcury::Scanner::FindStringRef(L"STAT_FCurlHttpRequest_ProcessRequest");
+    auto procRequest = sRef.ScanFor({ 0x4C, 0x8B, 0xDC }, false);
     auto procRequestVft = (void **) Memcury::Scanner::FindVftPtr(procRequest.Get()).Get();
     DWORD dwProtection;
     VirtualProtect(procRequestVft, 8, PAGE_EXECUTE_READWRITE, &dwProtection);

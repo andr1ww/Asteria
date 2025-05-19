@@ -9,6 +9,7 @@ namespace Asteria::Socket::Detections
         D3D11CreateDeviceAndSwapChainFlagged,
         RuntimeMemoryTampered,
         LDRLoadDLLFlagged,
-        ExternalDetection
+        ExternalDetection,
+        UnhookedFunction
     };
 }

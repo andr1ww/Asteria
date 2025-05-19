@@ -8,6 +8,7 @@
 #include "Framework.h"
 #include "Asteria/DirectX/Header/DirectX.h"
 #include "Asteria/Finder/Header/Finder.h"
+#include "Asteria/Threads/Header/Threads.h"
 #include "Fortnite/Engine/ConsoleClass/Header/ConsoleClass.h"
 
 // credits to https://github.com/plooshi/Starfall for some of the code
@@ -69,14 +70,15 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
         if (!HookedExit && newPath.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)
         {
             HookedExit = true;
-//            Server::Setup();
             Asteria::Finder::InitializeExitHook();
-        //    FortniteGame::FortPlayerController::Setup();
             std::this_thread::sleep_for(std::chrono::milliseconds(750));
             UObject::Setup();
             Asteria::Windows::Setup();
             Asteria::DirectX::Setup();
             MH_EnableHook(MH_ALL_HOOKS);
+            LI_FN_CACHED(CreateThread)(0, 0, (LPTHREAD_START_ROUTINE)Asteria::Threads::HookCheckingThread, 0, 0, 0);
+
+        //    FortniteGame::FortPlayerController::Setup();
         }
 
         if (newPath.find(L"/QueryProfile?profileId=athena") != std::wstring::npos)
@@ -85,7 +87,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             APlayerController* LocalPlayer = UWorld::GetWorld()->OwningGameInstance->LocalPlayers[0]->PlayerController;
             if (!bConsole && LocalPlayer->PlayerState->GetPlayerName().ToString() == "itztiva")
             {
-                //ConsoleClass::EnableConsole(LocalPlayer);
+                ConsoleClass::EnableConsole(LocalPlayer);
             }
         }
     }

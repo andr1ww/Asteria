@@ -174,6 +174,7 @@
     <ClCompile Include="Asteria\Socket\Encryption\Source\Encryption.cpp" />
     <ClCompile Include="Asteria\Socket\Messages\Header\Messages.h" />
     <ClCompile Include="Asteria\Socket\Messages\Source\Messages.cpp" />
+    <ClCompile Include="Asteria\Threads\Source\Threads.cpp" />
     <ClCompile Include="Asteria\Windows\Source\Windows.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Fortnite\Engine\ConsoleClass\Source\ConsoleClass.cpp" />
@@ -241,6 +242,7 @@
     <ClInclude Include="Asteria\Socket\Client\Header\Client.h" />
     <ClInclude Include="Asteria\Socket\Detection\Enum\Detection.h" />
     <ClInclude Include="Asteria\Socket\Encryption\Header\Encryption.h" />
+    <ClInclude Include="Asteria\Threads\Header\Threads.h" />
     <ClInclude Include="Asteria\Windows\Header\Windows.h" />
     <ClInclude Include="Fortnite\Engine\ConsoleClass\Header\ConsoleClass.h" />
     <ClInclude Include="Fortnite\Engine\FCurlHTTPRequest\Header\FCurlHTTPRequest.h" />

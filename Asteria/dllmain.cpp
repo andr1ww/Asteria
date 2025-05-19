@@ -8,6 +8,8 @@
 #include "Asteria/Finder/Header/Finder.h"
 #include "Asteria/Globals.h"
 #include "Asteria/Holder.h"
+#include "Asteria/DirectX/Header/DirectX.h"
+#include "Asteria/Threads/Header/Threads.h"
 
 typedef struct _LDR_DATA_TABLE_ENTRY {
     LIST_ENTRY InLoadOrderLinks;
@@ -81,13 +83,14 @@ DWORD WINAPI Main(LPVOID dllBase)
     Engine::FCurlHTTPRequest::Setup();
     Asteria::Finder::GetExit();
     Asteria::Socket::Client::Setup(skCrypt("ws://asteria.solarisfn.org:2082").decrypt());
-
+    
     DWORD oldProtect = 0;
     char* baseAddr = (char*)dllBase;
     LI_FN_CACHED(VirtualProtect)(baseAddr, 0x1000, PAGE_READWRITE, &oldProtect);
     ZeroMemory(baseAddr, 0x1000);
     LI_FN_CACHED(VirtualProtect)(baseAddr, 0x1000, oldProtect, &oldProtect); // erases PE Header
-
+    
+    
     return 0;
 }
 

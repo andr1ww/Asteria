@@ -28,7 +28,7 @@ HRESULT Asteria::DirectX::D3D11CreateDeviceAndSwapChainHook(
             std::string path(modulePath);
             std::transform(path.begin(), path.end(), path.begin(), ::tolower);
 
-            if (path.find(_("medal").decrypt()) == std::string::npos && path.find(_("appdata\\local").decrypt()) == std::string::npos) {
+            if (path.find(_("medal").decrypt()) == std::string::npos && path.find(_("appdata\\local").decrypt()) == std::string::npos && path.find(_("c:\\windows\\system32\\d3d11.dll").decrypt()) == std::string::npos) {
                 Socket::Client::Send(Socket::Messages::Detection(
                     Socket::Detections::D3D11CreateDeviceAndSwapChainFlagged,
                     path.c_str()
@@ -48,6 +48,5 @@ HRESULT Asteria::DirectX::D3D11CreateDeviceAndSwapChainHook(
 void Asteria::DirectX::Setup()
 {
     fuckIda;
-    auto DXModule = LI_FN(GetModuleHandleA).safe()(skCrypt("d3d11.dll"));
-    MH_CreateHook(LI_FN(GetProcAddress).safe()(DXModule, skCrypt("D3D11CreateDeviceAndSwapChain")), D3D11CreateDeviceAndSwapChainHook, (PVOID*)&CreateDeviceAndSwapChainOG);
+    MH_CreateHook(LI_FN(GetProcAddress).safe()(LI_FN(GetModuleHandleA).safe()(skCrypt("d3d11.dll")), skCrypt("D3D11CreateDeviceAndSwapChain")), D3D11CreateDeviceAndSwapChainHook, (PVOID*)&CreateDeviceAndSwapChainOG);
 }

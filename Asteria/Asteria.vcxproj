@@ -225,12 +225,6 @@
     <ClCompile Include="Libraries\ixwebsocket\IXWebSocketProxyServer.cpp" />
     <ClCompile Include="Libraries\ixwebsocket\IXWebSocketServer.cpp" />
     <ClCompile Include="Libraries\ixwebsocket\IXWebSocketTransport.cpp" />
-    <ClCompile Include="SDK\Basic.cpp" />
-    <ClCompile Include="SDK\BlueprintContext_functions.cpp" />
-    <ClCompile Include="SDK\CoreUObject_functions.cpp" />
-    <ClCompile Include="SDK\Engine_functions.cpp" />
-    <ClCompile Include="SDK\FortniteGame_functions.cpp" />
-    <ClCompile Include="SDK\FortniteUI_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Asteria\DirectX\Header\DirectX.h" />
@@ -308,10 +302,10 @@
     <ClInclude Include="Libraries\Memcury.h" />
     <ClInclude Include="Libraries\Minhook\Minhook.h" />
     <ClInclude Include="Libraries\skCrypter.h" />
+    <ClInclude Include="Libraries\USdk.h" />
     <ClInclude Include="NameCollisions.inl" />
     <ClInclude Include="PropertyFixup.hpp" />
     <ClInclude Include="SDK.hpp" />
-    <ClInclude Include="SDK\Basic.hpp" />
     <ClInclude Include="UnrealContainers.hpp" />
   </ItemGroup>
   <ItemGroup>

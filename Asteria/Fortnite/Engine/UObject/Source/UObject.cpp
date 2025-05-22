@@ -6,7 +6,7 @@
 #include "Framework.h"
 #include "Asteria/Holder.h"
 
-typedef void (*ProcessEventFn)(SDK::UObject*, UFunction*, void*);
+typedef void (*ProcessEventFn)(UObject*, UFunction*, void*);
 ProcessEventFn OG_ProcessEvent = nullptr;
 void Engine::UObject::ProcessEventHook(SDK::UObject* Object, UFunction* Function, void* Params)
 {
@@ -92,7 +92,7 @@ void Engine::UObject::Setup()
 {
     fuckIda;
     MH_CreateHook(
-        reinterpret_cast<void*>(ImageBase + SDK::Offsets::ProcessEvent),
+        reinterpret_cast<void*>(Asteria::Holder::SDK_ProcessEvent),
         &ProcessEventHook,
         reinterpret_cast<void**>(&OG_ProcessEvent)
     );

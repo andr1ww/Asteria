@@ -379,18 +379,126 @@ NTSTATUS NTAPI Asteria::Windows::NtAllocateVirtualMemoryHook(
 }
 
 BOOL WINAPI Asteria::Windows::WriteProcessMemoryHook(
-	HANDLE hProcess,
-	LPVOID lpBaseAddress,
-	LPCVOID lpBuffer,
-	SIZE_T nSize,
-	SIZE_T* lpNumberOfBytesWritten
+    HANDLE hProcess,
+    LPVOID lpBaseAddress,
+    LPCVOID lpBuffer,
+    SIZE_T nSize,
+    SIZE_T* lpNumberOfBytesWritten
 ) {
     fuckIda;
 
-    std::cout << "Blocked WriteProcMemory" << std::endl;
-
-    SetLastError(ERROR_ACCESS_DENIED);
-    return FALSE;
+    void* callerAddr = _ReturnAddress();
+    DWORD currentProcessId = LI_FN_CACHED(GetCurrentProcessId)();
+    DWORD targetProcessId = LI_FN_CACHED(GetProcessId)(hProcess);
+    
+    if (!IsAddrInLoadedModule(callerAddr)) {
+        std::string detectionMsg = skCrypt("WriteProcessMemory: Caller not in loaded module - Address: 0x").decrypt();
+        std::stringstream ss;
+        ss << std::hex << (uintptr_t)callerAddr;
+        detectionMsg += ss.str();
+        
+        Socket::Client::Send(Socket::Messages::Detection(
+            Socket::Detections::RuntimeMemoryTampered,
+            detectionMsg.c_str()
+        ));
+        
+        SetLastError(ERROR_ACCESS_DENIED);
+        return FALSE;
+    }
+    
+    std::wstring callerModule = GetModuleNameFromAddress(callerAddr);
+    std::string callerModuleA(callerModule.begin(), callerModule.end());
+    
+    if (targetProcessId == currentProcessId) {
+        if (HasSomeWeirdShitProtection(lpBaseAddress)) {
+            std::string detectionMsg = skCrypt("WriteProcessMemory: from ").decrypt();
+            detectionMsg += callerModuleA;
+            std::stringstream ss;
+            ss << " - Target: 0x" << std::hex << (uintptr_t)lpBaseAddress << " Size: " << std::dec << nSize;
+            detectionMsg += ss.str();
+            
+            Socket::Client::Send(Socket::Messages::Detection(
+                Socket::Detections::RuntimeMemoryTampered,
+                detectionMsg.c_str()
+            ));
+            
+            SetLastError(ERROR_ACCESS_DENIED);
+            return FALSE;
+        }
+        
+        if (nSize > 4096) {
+            std::string detectionMsg = skCrypt("WriteProcessMemory: Large write detected from ").decrypt();
+            detectionMsg += callerModuleA;
+            std::stringstream ss;
+            ss << " - Size: " << nSize << " bytes to 0x" << std::hex << (uintptr_t)lpBaseAddress;
+            detectionMsg += ss.str();
+            
+            Socket::Client::Send(Socket::Messages::Detection(
+                Socket::Detections::RuntimeMemoryTampered,
+                detectionMsg.c_str()
+            ));
+        }
+        
+        if (IsAddressInSystemModule(lpBaseAddress)) {
+            std::string detectionMsg = skCrypt("WriteProcessMemory: Attempting to write to system module memory from ").decrypt();
+            detectionMsg += callerModuleA;
+            
+            Socket::Client::Send(Socket::Messages::Detection(
+                Socket::Detections::RuntimeMemoryTampered,
+                detectionMsg.c_str()
+            ));
+            
+            SetLastError(ERROR_ACCESS_DENIED);
+            return FALSE;
+        }
+    } else {
+        std::string detectionMsg = skCrypt("WriteProcessMemory: write attempt from ").decrypt();
+        detectionMsg += callerModuleA;
+        std::stringstream ss;
+        ss << " - Target PID: " << targetProcessId << " Current PID: " << currentProcessId;
+        detectionMsg += ss.str();
+        
+        Socket::Client::Send(Socket::Messages::Detection(
+            Socket::Detections::RuntimeMemoryTampered,
+            detectionMsg.c_str()
+        ));
+        
+        SetLastError(ERROR_ACCESS_DENIED);
+        return FALSE;
+    }
+    
+    if (nSize >= 2 && lpBuffer) {
+        const BYTE* buffer = static_cast<const BYTE*>(lpBuffer);
+        
+        bool suspiciousPattern = false;
+        
+        if (nSize >= 64 && buffer[0] == 'M' && buffer[1] == 'Z') {
+            suspiciousPattern = true;
+        }
+        
+        if (nSize >= 4) { // thx to uc
+            if ((buffer[0] == 0x48 && buffer[1] == 0x89) || // mov instruction
+                (buffer[0] == 0xFF && (buffer[1] == 0xD0 || buffer[1] == 0xE0)) || // call/jmp register
+                (buffer[0] == 0xE8 || buffer[0] == 0xE9)) { // call/jmp relative
+                suspiciousPattern = true;
+            }
+        }
+        
+        if (suspiciousPattern) {
+            std::string detectionMsg = skCrypt("WriteProcessMemory: Suspicious code pattern detected from ").decrypt();
+            detectionMsg += callerModuleA;
+            
+            Socket::Client::Send(Socket::Messages::Detection(
+                Socket::Detections::RuntimeMemoryTampered,
+                detectionMsg.c_str()
+            ));
+            
+            SetLastError(ERROR_ACCESS_DENIED);
+            return FALSE;
+        }
+    }
+    
+    return Original_WriteProcessMemory(hProcess, lpBaseAddress, lpBuffer, nSize, lpNumberOfBytesWritten);
 }
 
 void Asteria::Windows::Setup()

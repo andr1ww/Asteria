@@ -986,6 +986,92 @@ namespace Memcury
             return *this;
         }
 
+        template <size_t S>
+   inline auto ScanFor(std::array<uint8_t, S> opcodesToFind, bool forward = true, int toSkip = 0, int bytesToSkip = 1, int Radius = 2048) -> Scanner
+        {
+            const auto scanBytes = _address.GetAs<std::uint8_t*>();
+            if (!scanBytes) return *this;
+
+            bool bFound = false;
+
+            for (auto i = (forward ? bytesToSkip : -bytesToSkip); forward ? (i < Radius + bytesToSkip) : (i > -Radius - bytesToSkip); forward ? i++ : i--)
+            {
+                bool found = true;
+
+                for (int k = 0; k < opcodesToFind.size() && found; k++)
+                {
+                    auto& currentOpcode = opcodesToFind[k];
+
+                    if (currentOpcode == 0xff)
+                        continue;
+                    // LOG_INFO(LogDev, "[{} 0x{:x}] 0x{:x}", i, __int64(&scanBytes[i]) - __int64(GetModuleHandleW(0)), currentOpcode);
+
+                    found = currentOpcode == scanBytes[i + k];
+                }
+
+                if (found)
+                {
+                    _address = &scanBytes[i];
+                    if (toSkip != 0)
+                    {
+                        return ScanFor(opcodesToFind, forward, toSkip - 1);
+                    }
+
+                    bFound = true;
+
+                    break;
+                }
+            }
+
+            if (!bFound)
+            {
+            }
+
+            return *this;
+        }
+
+        inline auto ScanFor(const char* pattern, bool forward = true, int toSkip = 0, int bytesToSkip = 1, int Radius = 2048) -> Scanner
+        {
+            const auto scanBytes = _address.GetAs<std::uint8_t*>();
+
+            bool bFound = false;
+
+            auto opcodesToFind = ASM::pattern2bytes(pattern);
+            for (auto i = (forward ? bytesToSkip : -bytesToSkip); forward ? (i < Radius + bytesToSkip) : (i > -Radius - bytesToSkip); forward ? i++ : i--)
+            {
+                bool found = true;
+
+                for (uint32_t k = 0; k < opcodesToFind.size() && found; k++)
+                {
+                    auto& currentOpcode = opcodesToFind[k];
+
+                    if (currentOpcode == 0xff)
+                        continue;
+                    
+                    found = currentOpcode == scanBytes[i + k];
+                }
+
+                if (found)
+                {
+                    _address = &scanBytes[i];
+                    if (toSkip != 0)
+                    {
+                        return ScanFor(pattern, forward, toSkip - 1);
+                    }
+
+                    bFound = true;
+
+                    break;
+                }
+            }
+            
+            if (!bFound)
+            {
+            }
+
+            return *this;
+        }
+
         inline auto ScanFor(std::vector<uint8_t> opcodesToFind, bool forward = true, int toSkip = 0) -> Scanner
         {
             const auto scanBytes = _address.GetAs<std::uint8_t*>();

@@ -20,7 +20,7 @@ typedef UObject* (__fastcall* f_StaticConstructObject_Internal)(
     UClass* Class,
     UObject* InOuter,
     void* Name,
-    EObjectFlags SetFlags,
+    //EObjectFlags SetFlags,
     EInternalObjectFlags InternalSetFlags,
     UObject* Template,
     bool  bCopyTransientsFromClassDefaults,
@@ -31,5 +31,5 @@ static f_StaticConstructObject_Internal StaticConstructObject_Internal;
 
 namespace Engine::ConsoleClass
 {
-    void EnableConsole(APlayerController* Player);
+  //  void EnableConsole(APlayerController* Player);
 }

@@ -8,5 +8,6 @@
 #include "ixwebsocket/IXNetSystem.h"
 #include "LazyImporter.hpp"
 #include "json.hpp"
+#include "USdk.h"
 #pragma comment(lib, "Ws2_32.lib")  
 #pragma comment(lib, "Crypt32.lib")

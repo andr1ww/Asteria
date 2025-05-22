@@ -2,7 +2,7 @@
 #include "../Header/Server.h"
 #include "Asteria/Holder.h"
 
-void Engine::Server::ServerMove_PerformMovement(UCharacterMovementComponent* Comp,
+/*void Engine::Server::ServerMove_PerformMovement(UCharacterMovementComponent* Comp,
     float TimeStamp,
     FVector_NetQuantize10 InAccel,
     FVector_NetQuantize100 ClientLoc,
@@ -19,4 +19,4 @@ void Engine::Server::ServerMove_PerformMovement(UCharacterMovementComponent* Com
 void Engine::Server::Setup()
 {
     Hook<UFortMovementComp_CharacterAthena>(uintptr_t(0x134), ServerMove_PerformMovement, ServerMove_PerformMovementOG);
-}
+} */

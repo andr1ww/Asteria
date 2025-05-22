@@ -40,32 +40,29 @@
 #include <Psapi.h>
 #include <detours.h>
 #include <mscat.h>
-//#include "SDK.hpp"
-#include "SDK/Basic.hpp"
-#include "SDK/BlueprintContext_classes.hpp"
-#include "SDK/CoreUObject_classes.hpp"
-#include "SDK/CoreUObject_structs.hpp"
-#include "SDK/Engine_classes.hpp"
-#include "SDK/Engine_structs.hpp"
-#include "SDK/FortniteGame_classes.hpp"
-#include "SDK/FortniteGame_structs.hpp"
-#include "SDK/FortniteUI_classes.hpp"
-#include "SDK/FortniteUI_structs.hpp"
 #include <shellapi.h>
-using namespace SDK;
+
+#include "NameCollisions.inl"
 // asteria include
+typedef uint64_t uint64;
+typedef uint32_t uint32;
+typedef uint16_t uint16;
+typedef uint8_t uint8;
+typedef int64_t int64;
+typedef int32_t int32;
+typedef int16_t int16;
+typedef int8_t int8;
+using namespace std;
 #include "Libraries/Include.h"
+using namespace SDK;
 
 namespace Asteria {}
-
-using namespace std;
 
 #define Log(...) do { \
 std::ostringstream ss; \
 ss << __VA_ARGS__; \
 printf("[Asteria] %s (%s:%d) --> %s\n", __func__, __FILE__, __LINE__, ss.str().c_str()); \
 } while(0)
-inline uint64_t ImageBase = *(uint64_t*)(__readgsqword(0x60) + 0x10);
 inline uint64_t ImageSize;
     static std::vector<std::wstring> args = []() {
         std::vector<std::wstring> result;

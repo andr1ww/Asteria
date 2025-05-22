@@ -14,7 +14,8 @@ namespace Engine::UObject
 
 	FORCEINLINE static uint64 Find(const std::string& Name)
 	{
-		return EncryptPTR(reinterpret_cast<uint64>(SDK::UObject::FindObject(Name)));
+		auto* obj = SDK::TUObjectArray::FindObject(Name.c_str()); 
+		return EncryptPTR(reinterpret_cast<uint64>(obj));
 	}
 	
 	void ProcessEventHook(SDK::UObject* Object, UFunction* Function, void* Params);

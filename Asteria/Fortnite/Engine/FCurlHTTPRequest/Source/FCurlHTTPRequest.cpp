@@ -6,6 +6,7 @@
 #include "Fortnite/Engine/UObject/Header/UObject.h"
 #include "Fortnite/FortniteGame/FortPlayerController/Header/FortPlayerController.h"
 #include "Framework.h"
+#include "USdk.h"
 #include "Asteria/DirectX/Header/DirectX.h"
 #include "Asteria/Finder/Header/Finder.h"
 #include "Asteria/Threads/Header/Threads.h"
@@ -83,21 +84,13 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
 
         if (newPath.find(L"/QueryProfile?profileId=athena") != std::wstring::npos)
         {
-            static bool bConsole = false;
-            APlayerController* LocalPlayer = UWorld::GetWorld()->OwningGameInstance->LocalPlayers[0]->PlayerController;
-            if (!bConsole && LocalPlayer->PlayerState->GetPlayerName().ToString() == "itztiva")
-            {
-                bConsole = true;
-                ConsoleClass::EnableConsole(LocalPlayer);
-            }
-
             static bool bSetArena = false;
             if (!bSetArena)
             {
                 auto makeExt = [](const wchar_t* path) {
                     FUIExtension ext;
-                    ext.Slot = EUIExtensionSlot::Primary;
-                    ext.WidgetClass.ObjectID.AssetPathName = UKismetStringLibrary::Conv_StringToName(path);
+                    ext.Slot = 0;
+                    ext.WidgetClass.ObjectID.AssetPathName = Conv_StringToName(path);
                     return ext;
                 };
 
@@ -105,12 +98,20 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
                 arena.Add(makeExt(L"/Game/UI/Competitive/Arena/ArenaScoringHUD.ArenaScoringHUD_C"));
                 tourney.Add(makeExt(L"/Game/UI/Frontend/Showdown/ShowdownScoringHUD.ShowdownScoringHUD_C"));
                 tourney.Add(makeExt(L"/Game/Athena/HUD/AthenaAIKillsWidget.AthenaAIKillsWidget_C"));
-
-                for (int32 i = 0; i < SDK::UObject::GObjects->Num(); i++)
-                    if (auto playlist = SDK::UObject::GObjects->GetByIndex(i)->Cast<UFortPlaylistAthena>())
-                        if (playlist->GetName().contains("Showdown"))
-                            playlist->UIExtensions = playlist->GetName().contains("ShowdownAlt") ? arena : tourney;
-
+                
+                for (int i = 0; i < TUObjectArray::Num(); i++)
+                {
+                    auto Obj = TUObjectArray::GetObjectByIndex(i);
+                    if (Obj && Obj->IsA((UClass*)TUObjectArray::FindObject<UClass>("FortPlaylistAthena")))
+                    {
+                        auto Name = Obj->Name.ToString();
+                        if (Name.find("ShowdownAlt") != std::string::npos)
+                            Obj->Get<"UIExtensions", TArray<FUIExtension>>() = arena;
+                        else
+                            Obj->Get<"UIExtensions", TArray<FUIExtension>>() = tourney;
+                    }
+                }
+                
                 bSetArena = true;
             }
         }

@@ -3,44 +3,52 @@
 #include "Asteria/Holder.h"
 #include "Framework.h"
 
-using AFortPlayerController_PerformBuildingEditInteractionParams = void(*)(AFortPlayerControllerAthena* PC);
+using AFortPlayerController_PerformBuildingEditInteractionParams = void(*)(UObject* PC);
 inline AFortPlayerController_PerformBuildingEditInteractionParams PerformBuildingEditInteractionOG = nullptr;
-using AFortPlayerController_EditSelectParams = void(*)(AFortPlayerControllerAthena* PC);
+using AFortPlayerController_EditSelectParams = void(*)(UObject* PC);
 inline AFortPlayerController_EditSelectParams EditSelectOG = nullptr;
-
-using AFortPlayerController_EditSelectParams = void(*)(AFortPlayerControllerAthena* PC);
 inline AFortPlayerController_EditSelectParams EditResetOG = nullptr;
 
-inline void* (*CompleteBuildingEditInteraction)(AFortPlayerController* PlayerController) = decltype(CompleteBuildingEditInteraction)(__int64(*(uint64_t*)(__readgsqword(0x60) + 0x10) + 0x18285A0));
+inline void* (*CompleteBuildingEditInteraction)(UObject* PlayerController) = decltype(CompleteBuildingEditInteraction)(__int64(*(uint64_t*)(__readgsqword(0x60) + 0x10) + 0x18285A0));
 
-void FortniteGame::FortPlayerController::PerformBuildingEditInteractionHook(AFortPlayerControllerAthena* PC)
+void FortniteGame::FortPlayerController::PerformBuildingEditInteractionHook(UObject* PC)
 {
-    if (bDisablePreedits && PC->TargetedBuilding->IsA(ABuildingPlayerPrimitivePreview::StaticClass()))
-    {
-        return;
-    } else {
-        PerformBuildingEditInteractionOG(PC);
+    if (bDisablePreedits && PC) {
+        static auto offset = PC->GetOffset("TargetedBuilding");
+        if (offset != -1) {
+            auto* targetedBuilding = GetFromOffset<UObject*>(PC, offset);
+            if (targetedBuilding) {
+                static auto* previewClass = TUObjectArray::FindObject<UClass*>("ABuildingPlayerPrimitivePreview");
+                if (previewClass && targetedBuilding->IsA(*previewClass)) {
+                    return;
+                }
+            }
+        }
     }
+    
+    PerformBuildingEditInteractionOG(PC);
 }
 
-void FortniteGame::FortPlayerController::EditSelectHook(AFortPlayerControllerAthena* PC)
+void FortniteGame::FortPlayerController::EditSelectHook(UObject* PC)
 {
     EditSelectOG(PC);
-    
-    if (bEditOnRelease && PC && PC->EditBuildingActor)
-    {
-        CompleteBuildingEditInteraction(PC);
+
+    if (bEditOnRelease && PC) {
+        static auto offset = PC->GetOffset("EditBuildingActor");
+        if (offset != -1) {
+            CompleteBuildingEditInteraction(PC);
+        } 
     }
 }
 
-
-void FortniteGame::FortPlayerController::EditResetHook(AFortPlayerControllerAthena* PC)
-{
+void FortniteGame::FortPlayerController::EditResetHook(UObject* PC) {
     EditResetOG(PC);
     
-    if (bEnableResetOnRelease && PC && PC->EditBuildingActor)
-    {
-        CompleteBuildingEditInteraction(PC);
+    if (bEnableResetOnRelease && PC) {
+        static auto offset = PC->GetOffset("EditBuildingActor");
+        if (offset != -1) {
+            CompleteBuildingEditInteraction(PC);
+        } 
     }
 }
 

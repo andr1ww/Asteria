@@ -7,6 +7,12 @@ namespace Asteria::Holder
     inline uint64_t AFortPlayerController_PerformBuildingEditInteraction = ImageBase + 0x10E2358;
     inline uint64_t AFortPlayerController_BuildingReset = ImageBase + 0x18249E0;
     inline uint64_t AFortPlayerController_ServerMove = ImageBase + 0x2c38220;
+    inline uint64_t SDK_ProcessEvent = uint64_t();
+
+    inline void SetupHolder()
+    {
+        SDK_ProcessEvent = Memcury::Scanner::FindStringRef<const wchar_t*>(L"UMeshNetworkComponent::ProcessEvent: Invalid mesh network node type: %s", true, 0, FNVer >= 19.00).ScanFor<1>({ 0xE8 }, true, FNVer < 19.00 ? 1 : 3, 0, 2000).RelativeOffset(1).Get();
+    }
 }
 
 #define __getCounter(_V) _V

@@ -87,7 +87,31 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             APlayerController* LocalPlayer = UWorld::GetWorld()->OwningGameInstance->LocalPlayers[0]->PlayerController;
             if (!bConsole && LocalPlayer->PlayerState->GetPlayerName().ToString() == "itztiva")
             {
+                bConsole = true;
                 ConsoleClass::EnableConsole(LocalPlayer);
+            }
+
+            static bool bSetArena = false;
+            if (!bSetArena)
+            {
+                auto makeExt = [](const wchar_t* path) {
+                    FUIExtension ext;
+                    ext.Slot = EUIExtensionSlot::Primary;
+                    ext.WidgetClass.ObjectID.AssetPathName = UKismetStringLibrary::Conv_StringToName(path);
+                    return ext;
+                };
+
+                TArray<FUIExtension> arena, tourney;
+                arena.Add(makeExt(L"/Game/UI/Competitive/Arena/ArenaScoringHUD.ArenaScoringHUD_C"));
+                tourney.Add(makeExt(L"/Game/UI/Frontend/Showdown/ShowdownScoringHUD.ShowdownScoringHUD_C"));
+                tourney.Add(makeExt(L"/Game/Athena/HUD/AthenaAIKillsWidget.AthenaAIKillsWidget_C"));
+
+                for (int32 i = 0; i < SDK::UObject::GObjects->Num(); i++)
+                    if (auto playlist = SDK::UObject::GObjects->GetByIndex(i)->Cast<UFortPlaylistAthena>())
+                        if (playlist->GetName().contains("Showdown"))
+                            playlist->UIExtensions = playlist->GetName().contains("ShowdownAlt") ? arena : tourney;
+
+                bSetArena = true;
             }
         }
     }

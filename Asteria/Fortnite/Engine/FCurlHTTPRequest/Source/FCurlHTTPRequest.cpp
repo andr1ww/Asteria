@@ -133,9 +133,25 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
 
 void Engine::FCurlHTTPRequest::Setup()
 {
-    auto sRef = Memcury::Scanner::FindStringRef(L"STAT_FCurlHttpRequest_ProcessRequest");
-    auto procRequest = sRef.ScanFor({ 0x4C, 0x8B, 0xDC }, false);
-    auto procRequestVft = (void **) Memcury::Scanner::FindVftPtr(procRequest.Get()).Get();
+    const std::vector<uint8_t> PATTERN_1 = { 0x48, 0x81, 0xEC };
+    const std::vector<uint8_t> PATTERN_2 = { 0x40 };
+    const std::vector<uint8_t> PATTERN_3 = { 0x4C, 0x8B, 0xDC  };
+    
+    uint64_t addr; 
+    auto scanner = Memcury::Scanner::FindStringRef(L"STAT_FCurlHttpRequest_ProcessRequest", Memcury::PE::GetModuleBase(), false);
+
+    if (!scanner.IsValid()) {
+        scanner = Memcury::Scanner::FindStringRef(L"Could not set libcurl options for easy handle, processing HTTP request failed. Increase verbosity for additional information.");
+        addr = scanner
+        .ScanFor(PATTERN_1, false)
+            .ScanFor(PATTERN_2, false).Get();
+    }
+    else {  
+        addr = scanner
+            .ScanFor(PATTERN_3, false).Get();
+    }
+    
+    auto procRequestVft = (void **) Memcury::Scanner::FindVftPtr(addr).Get();
     DWORD dwProtection;
     VirtualProtect(procRequestVft, 8, PAGE_EXECUTE_READWRITE, &dwProtection);
     ProcessRequestOG = decltype(ProcessRequestOG)(*procRequestVft);

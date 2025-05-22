@@ -52,10 +52,10 @@ typedef int64_t int64;
 typedef int32_t int32;
 typedef int16_t int16;
 typedef int8_t int8;
+inline auto ImageBase = *(uint64_t*)(__readgsqword(0x60) + 0x10);
 using namespace std;
 #include "Libraries/Include.h"
 using namespace SDK;
-
 namespace Asteria {}
 
 #define Log(...) do { \

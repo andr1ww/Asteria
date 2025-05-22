@@ -19,8 +19,6 @@ void Asteria::Threads::HookCheckingThread()
     Funcs checks[] = {
         { D3D11CreateDeviceAndSwapChain, "D3D11CreateDeviceAndSwapChain" },
         { LI_FN_CACHED(LdrLoadDll), "LdrLoadDll" },
-        { LI_FN_CACHED(NtAllocateVirtualMemory), "NtAllocateVirtualMemory" },
-        { LI_FN_CACHED(WriteProcessMemory), "WriteProcessMemory" }
     };
     
     while (true)

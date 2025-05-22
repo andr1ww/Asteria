@@ -91,6 +91,10 @@ void Engine::UObject::ProcessEventHook(SDK::UObject* Object, UFunction* Function
 void Engine::UObject::Setup()
 {
     fuckIda;
+    if (!Asteria::Holder::SDK_ProcessEvent)
+    {
+        return;
+    }
     MH_CreateHook(
         reinterpret_cast<void*>(Asteria::Holder::SDK_ProcessEvent),
         &ProcessEventHook,

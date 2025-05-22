@@ -13,44 +13,32 @@ inline void* (*CompleteBuildingEditInteraction)(UObject* PlayerController) = dec
 
 void FortniteGame::FortPlayerController::PerformBuildingEditInteractionHook(UObject* PC)
 {
-    if (bDisablePreedits && PC) {
-        static auto offset = PC->GetOffset("TargetedBuilding");
-        if (offset != -1) {
-            auto* targetedBuilding = GetFromOffset<UObject*>(PC, offset);
-            if (targetedBuilding) {
-                static auto* previewClass = TUObjectArray::FindObject<UClass*>("ABuildingPlayerPrimitivePreview");
-                if (previewClass && targetedBuilding->IsA(*previewClass)) {
-                    return;
-                }
-            }
-        }
+    if (bDisablePreedits && PC->Get<UObject*>(L"TargetedBuilding")->IsA(TUObjectArray::FindObject<UClass>("ABuildingPlayerPrimitivePreview")))
+    {
+        return;
+    } else {
+        PerformBuildingEditInteractionOG(PC);
     }
-    
-    PerformBuildingEditInteractionOG(PC);
 }
 
 void FortniteGame::FortPlayerController::EditSelectHook(UObject* PC)
 {
     EditSelectOG(PC);
 
-    if (bEditOnRelease && PC) {
-        static auto offset = PC->GetOffset("EditBuildingActor");
-        if (offset != -1) {
-            CompleteBuildingEditInteraction(PC);
-        } 
+    if (bEditOnRelease && PC && PC->Get<UObject*>(L"EditBuildingActor"))
+    {
+        CompleteBuildingEditInteraction(PC);
     }
 }
 
-void FortniteGame::FortPlayerController::EditResetHook(UObject* PC) {
+void FortniteGame::FortPlayerController::EditResetHook(UObject* PC)
+{
     EditResetOG(PC);
-    
-    if (bEnableResetOnRelease && PC) {
-        static auto offset = PC->GetOffset("EditBuildingActor");
-        if (offset != -1) {
-            CompleteBuildingEditInteraction(PC);
-        } 
+    if (bEnableResetOnRelease && PC && PC->Get<UObject*>(L"EditBuildingActor"))
+    {
+        CompleteBuildingEditInteraction(PC);
     }
-}
+} 
 
 void FortniteGame::FortPlayerController::Setup()
 {

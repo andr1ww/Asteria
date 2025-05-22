@@ -11,9 +11,13 @@ namespace Asteria::Holder
 
     inline void SetupHolder()
     {
-        SDK_ProcessEvent = Memcury::Scanner::FindStringRef<const wchar_t*>(L"UMeshNetworkComponent::ProcessEvent: Invalid mesh network node type: %s", true, 0, FNVer >= 19.00).ScanFor<1>({ 0xE8 }, true, FNVer < 19.00 ? 1 : 3, 0, 2000).RelativeOffset(1).Get();
-    }
-}
+        SDK_ProcessEvent = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"UMeshNetworkComponent::ProcessEvent: Invalid mesh network node type: %s").decrypt(), true, 0, FNVer >= 19.00).ScanFor<1>({ 0xE8 }, true, FNVer < 19.00 ? 1 : 3, 0, 2000).RelativeOffset(1).Get();
+        if (!SDK_ProcessEvent)
+        {
+            Log("Failed to find SDK_ProcessEvent");
+        }
+    } 
+} 
 
 #define __getCounter(_V) _V
 #define _getCounter(_V) __getCounter(_V)

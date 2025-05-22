@@ -27,7 +27,7 @@ string Asteria::Hardware::Init()
             Name.c_str(),
             GENERIC_READ | GENERIC_WRITE,
             FILE_SHARE_READ | FILE_SHARE_WRITE,
-            nullptr,
+            nullptr, 
             OPEN_EXISTING,
             0,
             nullptr

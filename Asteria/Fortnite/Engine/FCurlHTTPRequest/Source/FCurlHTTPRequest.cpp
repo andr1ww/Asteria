@@ -7,6 +7,7 @@
 #include "Fortnite/FortniteGame/FortPlayerController/Header/FortPlayerController.h"
 #include "Framework.h"
 #include "USdk.h"
+#include "Asteria/Holder.h"
 #include "Asteria/DirectX/Header/DirectX.h"
 #include "Asteria/Finder/Header/Finder.h"
 #include "Asteria/Threads/Header/Threads.h"
@@ -72,6 +73,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
         {
             HookedExit = true;
             Asteria::Finder::InitializeExitHook();
+            Asteria::Holder::SetupHolder();
             std::this_thread::sleep_for(std::chrono::milliseconds(750));
             UObject::Setup();
             Asteria::Windows::Setup();
@@ -87,17 +89,17 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             static bool bSetArena = false;
             if (!bSetArena)
             {
-                auto makeExt = [](const wchar_t* path) {
+                auto makeExt = [](const wchar_t* path, int32 slot) {
                     FUIExtension ext;
-                    ext.Slot = 0;
+                    ext.Slot = slot;
                     ext.WidgetClass.ObjectID.AssetPathName = Conv_StringToName(path);
                     return ext;
                 };
 
                 TArray<FUIExtension> arena, tourney;
-                arena.Add(makeExt(L"/Game/UI/Competitive/Arena/ArenaScoringHUD.ArenaScoringHUD_C"));
-                tourney.Add(makeExt(L"/Game/UI/Frontend/Showdown/ShowdownScoringHUD.ShowdownScoringHUD_C"));
-                tourney.Add(makeExt(L"/Game/Athena/HUD/AthenaAIKillsWidget.AthenaAIKillsWidget_C"));
+                arena.Add(makeExt(L"/Game/UI/Competitive/Arena/ArenaScoringHUD.ArenaScoringHUD_C", 0));
+                tourney.Add(makeExt(L"/Game/UI/Frontend/Showdown/ShowdownScoringHUD.ShowdownScoringHUD_C", 0));
+                tourney.Add(makeExt(L"/Game/Athena/HUD/AthenaAIKillsWidget.AthenaAIKillsWidget_C", 2));
                 
                 for (int i = 0; i < TUObjectArray::Num(); i++)
                 {
@@ -106,9 +108,9 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
                     {
                         auto Name = Obj->Name.ToString();
                         if (Name.find("ShowdownAlt") != std::string::npos)
-                            Obj->Get<"UIExtensions", TArray<FUIExtension>>() = arena;
+                            Obj->Get<TArray<FUIExtension>>(L"UIExtensions") = arena;
                         else
-                            Obj->Get<"UIExtensions", TArray<FUIExtension>>() = tourney;
+                            Obj->Get<TArray<FUIExtension>>(L"UIExtensions") = tourney;
                     }
                 }
                 

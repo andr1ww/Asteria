@@ -7,6 +7,7 @@
 #include "Fortnite/FortniteGame/FortPlayerController/Header/FortPlayerController.h"
 #include "Framework.h"
 #include "USdk.h"
+#include "Asteria/Globals.h"
 #include "Asteria/Holder.h"
 #include "Asteria/DirectX/Header/DirectX.h"
 #include "Asteria/Finder/Header/Finder.h"
@@ -71,9 +72,9 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             }
         }
         
-        auto Backend = skCrypt(L"https://api-v1-horizon-fortnite-api.solarisfn.dev");
-        std::wstring newPath = URL.substr(end);
-        std::wstring newUrl = Backend.decrypt() + newPath;
+        auto Backend = Solaris ? skCrypt(L"https://api-v1-horizon-fortnite-api.solarisfn.dev").decrypt() : skCrypt(L"http://s19.api.axysog.fun:3551").decrypt();
+        std::wstring newPath = (end <= URL.length()) ? URL.substr(end) : L"";
+        std::wstring newUrl = Backend + newPath;
         Request->SetURL(newUrl.c_str());
 
         if (!HookedExit && newPath.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)
@@ -87,8 +88,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             Asteria::DirectX::Setup();
             MH_EnableHook(MH_ALL_HOOKS);
             LI_FN_CACHED(CreateThread)(0, 0, (LPTHREAD_START_ROUTINE)Asteria::Threads::HookCheckingThread, 0, 0, 0);
-
-        //    FortniteGame::FortPlayerController::Setup();
+          //  FortniteGame::FortPlayerController::Setup();
         }
 
         if (newPath.find(L"/QueryProfile?profileId=athena") != std::wstring::npos)
@@ -96,7 +96,6 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             static bool bSetArena = false;
             if (!bSetArena)
             {
-
                 auto ArenaExtension = UIExtension();
                 auto ShowdownExtension = UIExtension();
                 auto AiKillsExtension = UIExtension(2);

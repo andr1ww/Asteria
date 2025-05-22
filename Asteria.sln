@@ -8,6 +8,7 @@ Global
 		Debug|x64 = Debug|x64
 		Release|Win32 = Release|Win32
 		Release|x64 = Release|x64
+		Axys|x64 = Axys|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2CF27DC9-1FC1-4B69-95CE-C205171C7EF8}.Debug|Win32.ActiveCfg = Debug|Win32
@@ -18,5 +19,7 @@ Global
 		{2CF27DC9-1FC1-4B69-95CE-C205171C7EF8}.Release|Win32.Build.0 = Release|Win32
 		{2CF27DC9-1FC1-4B69-95CE-C205171C7EF8}.Release|x64.ActiveCfg = Release|x64
 		{2CF27DC9-1FC1-4B69-95CE-C205171C7EF8}.Release|x64.Build.0 = Release|x64
+		{2CF27DC9-1FC1-4B69-95CE-C205171C7EF8}.Axys|x64.ActiveCfg = Axys|x64
+		{2CF27DC9-1FC1-4B69-95CE-C205171C7EF8}.Axys|x64.Build.0 = Axys|x64
 	EndGlobalSection
 EndGlobal

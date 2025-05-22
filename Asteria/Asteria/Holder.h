@@ -3,10 +3,10 @@
 
 namespace Asteria::Holder
 {
-    inline uint64_t AFortPlayerController_EditSelect = ImageBase + 0x18249C0;
-    inline uint64_t AFortPlayerController_PerformBuildingEditInteraction = ImageBase + 0x10E2358;
-    inline uint64_t AFortPlayerController_BuildingReset = ImageBase + 0x18249E0;
-    inline uint64_t AFortPlayerController_ServerMove = ImageBase + 0x2c38220;
+    inline uint64_t AFortPlayerController_EditSelect = uint64_t();
+    inline uint64_t AFortPlayerController_PerformBuildingEditInteraction = uint64_t();
+    inline uint64_t AFortPlayerController_BuildingReset = uint64_t();
+    inline uint64_t AFortPlayerController_CompleteBuildingEditInteraction = uint64_t();
     inline uint64_t SDK_ProcessEvent = uint64_t();
 
     inline void SetupHolder()
@@ -16,8 +16,48 @@ namespace Asteria::Holder
         {
             Log("Failed to find SDK_ProcessEvent");
         }
+        
+        auto editModeRef = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"EditModeInputComponent0").decrypt(), true, 0).Get();
+        if (editModeRef)
+        {
+            auto editSelectAddr = Memcury::Scanner(editModeRef).ScanFor(std::array<uint8_t, 3>{ 0x48, 0x8D, 0x05 }, true, 1, 1, 2048).Get();
+            if (editSelectAddr)
+            {
+                AFortPlayerController_EditSelect = Memcury::Scanner(editSelectAddr).RelativeOffset(3).Get();
+            }
+
+            auto resetSelectAddr = Memcury::Scanner(editModeRef).ScanFor(std::array<uint8_t, 3>{ 0x48, 0x8D, 0x05 }, true, 2, 1, 2048).Get();
+            if (resetSelectAddr)
+            {
+                AFortPlayerController_BuildingReset = Memcury::Scanner(resetSelectAddr).RelativeOffset(3).Get();
+
+                auto completeEditRef = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"CompleteBuildingEditInteraction").decrypt(), true, 0).Get();
+                if (completeEditRef)
+                {
+                    auto completeEditAddr = Memcury::Scanner(completeEditRef).ScanFor(std::array<uint8_t, 2>{ 0x48, 0x8D }, false, 1, 1, 2048).Get();
+                    if (!completeEditAddr)
+                    {
+                        completeEditAddr = Memcury::Scanner(completeEditRef).ScanFor(std::array<uint8_t, 2>{ 0x4C, 0x8D }, false, 1, 1, 2048).Get();
+                    }
+                    
+                    if (completeEditAddr)
+                    {
+                        AFortPlayerController_CompleteBuildingEditInteraction = Memcury::Scanner(completeEditAddr).RelativeOffset(3).Get();
+                    }
+                }
+            }
+            auto performEditRef = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"PerformBuildingEditInteraction").decrypt(), true, 0).Get();
+            if (performEditRef)
+            {
+                auto performEditAddr = Memcury::Scanner(performEditRef - 0x28).ScanFor("48 8D 05", true, 0, 1, 0x50).Get();
+                if (performEditAddr)
+                {
+                    AFortPlayerController_PerformBuildingEditInteraction = Memcury::Scanner(performEditAddr).RelativeOffset(3).Get();
+                }
+            }
+        }
     } 
-} 
+}
 
 #define __getCounter(_V) _V
 #define _getCounter(_V) __getCounter(_V)

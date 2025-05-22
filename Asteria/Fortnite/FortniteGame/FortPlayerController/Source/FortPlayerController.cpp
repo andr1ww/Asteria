@@ -13,30 +13,39 @@ inline void* (*CompleteBuildingEditInteraction)(UObject* PlayerController) = dec
 
 void FortniteGame::FortPlayerController::PerformBuildingEditInteractionHook(UObject* PC)
 {
-    if (bDisablePreedits && PC->Get<UObject*>(L"TargetedBuilding")->IsA(TUObjectArray::FindObject<UClass>("ABuildingPlayerPrimitivePreview")))
+    if (FNVer <= 15.00)
     {
-        return;
-    } else {
-        PerformBuildingEditInteractionOG(PC);
+        if (bDisablePreedits && PC->Get<UObject*>(L"TargetedBuilding")->IsA(TUObjectArray::FindObject<UClass>("ABuildingPlayerPrimitivePreview")))
+        {
+            return;
+        } else {
+            PerformBuildingEditInteractionOG(PC);
+        }
     }
 }
 
 void FortniteGame::FortPlayerController::EditSelectHook(UObject* PC)
 {
-    EditSelectOG(PC);
-
-    if (bEditOnRelease && PC && PC->Get<UObject*>(L"EditBuildingActor"))
+    if (FNVer <= 10.40)
     {
-        CompleteBuildingEditInteraction(PC);
+        EditSelectOG(PC);
+
+        if (bEditOnRelease && PC && PC->Get<UObject*>(L"EditBuildingActor"))
+        {
+            CompleteBuildingEditInteraction(PC);
+        }
     }
 }
 
 void FortniteGame::FortPlayerController::EditResetHook(UObject* PC)
 {
-    EditResetOG(PC);
-    if (bEnableResetOnRelease && PC && PC->Get<UObject*>(L"EditBuildingActor"))
+    if (FNVer <= 24.20)
     {
-        CompleteBuildingEditInteraction(PC);
+        EditResetOG(PC);
+        if (bEnableResetOnRelease && PC && PC->Get<UObject*>(L"EditBuildingActor"))
+        {
+            CompleteBuildingEditInteraction(PC);
+        }
     }
 } 
 

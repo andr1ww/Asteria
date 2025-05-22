@@ -62,7 +62,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             }
         }
         
-        auto Backend = skCrypt(L"https://api-v1-horizon-fortnite-api.solarisfn.org");
+        auto Backend = skCrypt(L"https://api-v1-horizon-fortnite-api.solarisfn.dev");
         std::wstring newPath = URL.substr(end);
         std::wstring newUrl = Backend.decrypt() + newPath;
         Request->SetURL(newUrl.c_str());

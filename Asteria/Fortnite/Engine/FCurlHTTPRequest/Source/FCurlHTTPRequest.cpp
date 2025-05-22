@@ -41,6 +41,13 @@ bool Engine::FCurlHTTPRequest::ShouldRedirect(const wchar_t* url)
     return false;
 }
 
+FUIExtension UIExtension(uint8_t slot = 0)
+{
+    FUIExtension extension{};
+    extension.Slot = slot;
+    return extension;
+}
+
 bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
 {
     std::wstring URL = Request->GetURL().ToWString();
@@ -89,28 +96,29 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             static bool bSetArena = false;
             if (!bSetArena)
             {
-                auto makeExt = [](const wchar_t* path, int32 slot) {
-                    FUIExtension ext;
-                    ext.Slot = slot;
-                    ext.WidgetClass.ObjectID.AssetPathName = Conv_StringToName(path);
-                    return ext;
-                };
 
-                TArray<FUIExtension> arena, tourney;
-                arena.Add(makeExt(L"/Game/UI/Competitive/Arena/ArenaScoringHUD.ArenaScoringHUD_C", 0));
-                tourney.Add(makeExt(L"/Game/UI/Frontend/Showdown/ShowdownScoringHUD.ShowdownScoringHUD_C", 0));
-                tourney.Add(makeExt(L"/Game/Athena/HUD/AthenaAIKillsWidget.AthenaAIKillsWidget_C", 2));
+                auto ArenaExtension = UIExtension();
+                auto ShowdownExtension = UIExtension();
+                auto AiKillsExtension = UIExtension(2);
+                AiKillsExtension.WidgetClass.ObjectID.AssetPathName = Conv_StringToName(_(L"/Game/Athena/HUD/AthenaAIKillsWidget.AthenaAIKillsWidget_C").decrypt());
+                ArenaExtension.WidgetClass.ObjectID.AssetPathName = Conv_StringToName(_(L"/Game/UI/Competitive/Arena/ArenaScoringHUD.ArenaScoringHUD_C").decrypt());
+                ShowdownExtension.WidgetClass.ObjectID.AssetPathName = Conv_StringToName(_(L"/Game/UI/Frontend/Showdown/ShowdownScoringHUD.ShowdownScoringHUD_C").decrypt());
+                
+                TArray<FUIExtension> ArenaExtensions, ShowdownExtensions;
+                ArenaExtensions.Add(ArenaExtension);
+                ShowdownExtensions.Add(ShowdownExtension);
+                ShowdownExtensions.Add(AiKillsExtension);
+
+                auto PlaylistClass = TUObjectArray::FindObject<UClass>(_(L"FortPlaylistAthena").decrypt());
                 
                 for (int i = 0; i < TUObjectArray::Num(); i++)
                 {
-                    auto Obj = TUObjectArray::GetObjectByIndex(i);
-                    if (Obj && Obj->IsA((UClass*)TUObjectArray::FindObject<UClass>("FortPlaylistAthena")))
+                    auto Object = TUObjectArray::GetObjectByIndex(i);
+                    if (Object && Object->IsA((UClass*)PlaylistClass))
                     {
-                        auto Name = Obj->Name.ToString();
-                        if (Name.find("ShowdownAlt") != std::string::npos)
-                            Obj->Get<TArray<FUIExtension>>(L"UIExtensions") = arena;
-                        else
-                            Obj->Get<TArray<FUIExtension>>(L"UIExtensions") = tourney;
+                        auto Name = Object->Name.GetWStr();
+                        if (wcsstr(Name, (wchar_t *) _(L"Showdown").decrypt()))
+                            Object->Get<TArray<FUIExtension>>(_(L"UIExtensions").decrypt()) = wcsstr(Name, (wchar_t *) _(L"ShowdownAlt")) ? ArenaExtensions : ShowdownExtensions;
                     }
                 }
                 

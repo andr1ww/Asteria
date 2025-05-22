@@ -82,7 +82,7 @@ DWORD WINAPI Main(LPVOID dllBase)
     LI_FN_CACHED(Sleep)(1000);
     Engine::FCurlHTTPRequest::Setup();
     Asteria::Finder::GetExit();
-    Asteria::Socket::Client::Setup(skCrypt("ws://asteria.solarisfn.org:2082").decrypt());
+    Asteria::Socket::Client::Setup(skCrypt("ws://asteria.solarisfn.dev:2082").decrypt());
     
     DWORD oldProtect = 0;
     char* baseAddr = (char*)dllBase;

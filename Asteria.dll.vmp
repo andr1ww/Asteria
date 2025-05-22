@@ -16,6 +16,11 @@
             <Procedure MapAddress="Asteria::Socket::Messages::HWID(class std::vector&lt;class std::basic_string&lt;char,struct std::char_traits&lt;char&gt;,class std::allocator&lt;char&gt; &gt;,class std::allocator&lt;class std::basic_string&lt;char,struct std::char_traits&lt;char&gt;,class std::allocator&lt;char&gt; &gt; &gt; &gt;,class std::basic_string&lt;char,struct std::char_traits&lt;char&gt;,class std::allocator&lt;char&gt; &gt;,class std::basic_string&lt;char,struct std::char_traits&lt;char&gt;,class std::allocator&lt;char&gt; &gt;)" Options="0" />
             <Procedure MapAddress="Asteria::Windows::Setup(void)" Options="0" />
             <Procedure MapAddress="Asteria::DirectX::Setup(void)" Options="0" />
+            <Procedure MapAddress="Asteria::Socket::Client::GetUnixTime(void)" Options="0" />
+            <Procedure MapAddress="Asteria::Finder::FindUnsafeEnvironment(void)" Options="0" />
+            <Procedure MapAddress="Asteria::Socket::Client::Send(class std::basic_string&lt;char,struct std::char_traits&lt;char&gt;,class std::allocator&lt;char&gt; &gt; const &amp;)" Options="0" />
+            <Procedure MapAddress="Asteria::Threads::HookCheckingThread(void)" Options="0" />
+            <Procedure MapAddress="Asteria::Finder::FindRequestExit(void)" Options="0" />
         </Procedures>
         <Objects />
     </Protection>

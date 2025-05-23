@@ -80,11 +80,13 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
         if (!HookedExit && newPath.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)
         {
             HookedExit = true;
+#if Solaris
             Asteria::Finder::InitializeExitHook();
+#endif
             Asteria::Holder::SetupHolder();
             std::this_thread::sleep_for(std::chrono::milliseconds(750));
-            FortniteGame::FortPlayerController::Setup();
-            std::this_thread::sleep_for(std::chrono::milliseconds(750));
+      /*      FortniteGame::FortPlayerController::Setup();
+            std::this_thread::sleep_for(std::chrono::milliseconds(750)); */
             UObject::Setup();
             Asteria::Windows::Setup();
             Asteria::DirectX::Setup();
@@ -135,8 +137,9 @@ void Engine::FCurlHTTPRequest::Setup()
 {
     const std::vector<uint8_t> PATTERN_1 = { 0x48, 0x81, 0xEC };
     const std::vector<uint8_t> PATTERN_2 = { 0x40 };
-    const std::vector<uint8_t> PATTERN_3 = { 0x4C, 0x8B, 0xDC  };
-    
+    const std::vector<uint8_t> PATTERN_3 = { 0x4C, 0x8B, 0xDC };
+    const std::vector<uint8_t> PATTERN_4 = { 0x48, 0x8B, 0xC4 };
+
     uint64_t addr; 
     auto scanner = Memcury::Scanner::FindStringRef(L"STAT_FCurlHttpRequest_ProcessRequest", Memcury::PE::GetModuleBase(), false);
 
@@ -148,14 +151,18 @@ void Engine::FCurlHTTPRequest::Setup()
     }
     else {  
         addr = scanner
-            .ScanFor(PATTERN_3, false).Get();
+            .ScanFor(PATTERN_3, false)
+            .ScanFor(PATTERN_4, false).Get();
     }
-    
-    auto procRequestVft = (void **) Memcury::Scanner::FindVftPtr(addr).Get();
-    DWORD dwProtection;
-    VirtualProtect(procRequestVft, 8, PAGE_EXECUTE_READWRITE, &dwProtection);
-    ProcessRequestOG = decltype(ProcessRequestOG)(*procRequestVft);
-    *procRequestVft = ProcessRequest;
-    DWORD dwTemp;
-    VirtualProtect(procRequestVft, 8, dwProtection, &dwTemp);
+
+    if (addr)
+    {
+        auto procRequestVft = (void **) Memcury::Scanner::FindVftPtr(addr).Get();
+        DWORD dwProtection;
+        VirtualProtect(procRequestVft, 8, PAGE_EXECUTE_READWRITE, &dwProtection);
+        ProcessRequestOG = decltype(ProcessRequestOG)(*procRequestVft);
+        *procRequestVft = ProcessRequest;
+        DWORD dwTemp;
+        VirtualProtect(procRequestVft, 8, dwProtection, &dwTemp);
+    }
 }

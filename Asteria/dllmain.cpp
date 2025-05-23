@@ -4,7 +4,6 @@
 #include "Fortnite/Engine/FCurlHTTPRequest/Header/FCurlHTTPRequest.h"
 #include "Fortnite/Engine/UObject/Header/UObject.h"
 #include <Asteria/Windows/Header/Windows.h>
-
 #include "Asteria/Finder/Header/Finder.h"
 #include "Asteria/Globals.h"
 #include "Asteria/Holder.h"
@@ -41,7 +40,7 @@ DWORD WINAPI Main(LPVOID dllBase)
 {
     fuckIda;
 
-/*    PPEB peb = ((PPEB)__readgsqword(0x60));
+    PPEB peb = ((PPEB)__readgsqword(0x60));
     PLIST_ENTRY head = &peb->Ldr->InLoadOrderModuleList;
     for (PLIST_ENTRY p = head->Flink; p != head; p = p->Flink)
     {
@@ -58,7 +57,7 @@ DWORD WINAPI Main(LPVOID dllBase)
             entry->InInitializationOrderLinks.Flink->Blink = entry->InInitializationOrderLinks.Blink;
             break;
         }
-    } // unlinks PEB  */
+    } // unlinks PEB  
 
     MODULEINFO modInfo;
     Asteria::Windows::ThisBuf = dllBase;
@@ -81,15 +80,20 @@ DWORD WINAPI Main(LPVOID dllBase)
     MH_Initialize();
     LI_FN_CACHED(Sleep)(1000);
     Engine::FCurlHTTPRequest::Setup();
+#if Solaris
     Asteria::Finder::GetExit();
-    Asteria::Socket::Client::Setup(Solaris ? skCrypt("ws://asteria.solarisfn.dev:2082").decrypt(): skCrypt("ws://axys.astera-ac.xyz:2082").decrypt());
+    Asteria::Socket::Client::Setup(skCrypt("ws://asteria.solarisfn.dev:2082").decrypt());
+#endif
+    
+#if Axys
+    Asteria::Socket::Client::Setup(skCrypt("ws://axys.asteria-ac.xyz:2082").decrypt());
+#endif
     
     DWORD oldProtect = 0;
     char* baseAddr = (char*)dllBase;
     LI_FN_CACHED(VirtualProtect)(baseAddr, 0x1000, PAGE_READWRITE, &oldProtect);
     ZeroMemory(baseAddr, 0x1000);
     LI_FN_CACHED(VirtualProtect)(baseAddr, 0x1000, oldProtect, &oldProtect); // erases PE Header
-    
     
     return 0;
 }

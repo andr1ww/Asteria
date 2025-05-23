@@ -20,7 +20,6 @@ void Asteria::Socket::Client::Setup(string URL)
     Cleanup();
     if (!ix::initNetSystem())
     {
-        Log("wow");
         return;
     }
 
@@ -106,11 +105,9 @@ void Asteria::Socket::Client::OnMessageCallback(const ix::WebSocketMessagePtr& M
         LI_FN_CACHED(TerminateProcess)(LI_FN_CACHED(GetCurrentProcess)(), 0);
         break;
     case ix::WebSocketMessageType::Error:
-        {
-            bIsConnectionOpen = false;
-            LI_FN_CACHED(TerminateProcess)(LI_FN_CACHED(GetCurrentProcess)(), 0);
-            break;
-        }
+        bIsConnectionOpen = false;
+        LI_FN_CACHED(TerminateProcess)(LI_FN_CACHED(GetCurrentProcess)(), 0);
+        break;
     default:
         break;
     }

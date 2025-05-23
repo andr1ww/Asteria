@@ -17,7 +17,7 @@ void FortniteGame::FortPlayerController::PerformBuildingEditInteractionHook(UObj
     if (FNVer <= 15.00)
     {
         if (bDisablePreedits && PC->Get<UObject*>(L"TargetedBuilding")->IsA(TUObjectArray::FindObject<UClass>("ABuildingPlayerPrimitivePreview")))
-        {l
+        {
             return;
         } else {
             PerformBuildingEditInteractionOG(PC);

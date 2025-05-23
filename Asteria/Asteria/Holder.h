@@ -29,25 +29,29 @@ namespace Asteria::Holder
             auto resetSelectAddr = Memcury::Scanner(editModeRef).ScanFor(std::array<uint8_t, 3>{ 0x48, 0x8D, 0x05 }, true, 2, 1, 2048).Get();
             if (resetSelectAddr)
                 AFortPlayerController_BuildingReset = Memcury::Scanner(resetSelectAddr).RelativeOffset(3).Get();
-            
-            auto completeEditRef = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"CompleteBuildingEditInteraction").decrypt(), true, 0, editModeRef, 0x300).Get();
+
+            auto completeEditRef = Memcury::Scanner::FindStringRef("CompleteBuildingEditInteraction", true, 0, editModeRef, 0x300).Get();
             if (completeEditRef)
             {
-                auto completeEditAddr = Memcury::Scanner(completeEditRef).ScanFor( {0x4C, 0x8D, 0x05 }, true, 0).Get();
+                auto completeEditAddr = Memcury::Scanner(completeEditRef).ScanFor(std::array<uint8_t, 2>{ 0x48, 0x8D }, false, 0, 1, 0x50).Get();
                 if (completeEditAddr)
                 {
                     AFortPlayerController_CompleteBuildingEditInteraction = Memcury::Scanner(completeEditAddr).RelativeOffset(3).Get();
                 }
             }
 
-            AFortPlayerController_PerformBuildingEditInteraction = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"PerformBuildingEditInteraction").decrypt(), true)
-.ScanFor({ 0x48, 0x8D, 0x05 }, false, 0)
-.RelativeOffset(3)
-.Get();
+            auto performEditRef = Memcury::Scanner::FindStringRef("PerformBuildingEditInteraction", true, 0, editModeRef, 0x300).Get();
+            if (performEditRef)
+            {
+                auto performEditAddr = Memcury::Scanner(performEditRef).ScanFor(std::array<uint8_t, 2>{ 0x48, 0x8D }, true, 0, 1, 0x50).Get();
+                if (performEditAddr)
+                {
+                    AFortPlayerController_PerformBuildingEditInteraction = Memcury::Scanner(performEditAddr).RelativeOffset(3).Get();
+                }
+            }
         }
     }
 }
-
 #define __getCounter(_V) _V
 #define _getCounter(_V) __getCounter(_V)
 #define getCounter() _getCounter(__COUNTER__)

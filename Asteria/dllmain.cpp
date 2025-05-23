@@ -41,7 +41,7 @@ DWORD WINAPI Main(LPVOID dllBase)
 {
     fuckIda;
 
-    PPEB peb = ((PPEB)__readgsqword(0x60));
+/*    PPEB peb = ((PPEB)__readgsqword(0x60));
     PLIST_ENTRY head = &peb->Ldr->InLoadOrderModuleList;
     for (PLIST_ENTRY p = head->Flink; p != head; p = p->Flink)
     {
@@ -58,7 +58,7 @@ DWORD WINAPI Main(LPVOID dllBase)
             entry->InInitializationOrderLinks.Flink->Blink = entry->InInitializationOrderLinks.Blink;
             break;
         }
-    } // unlinks PEB 
+    } // unlinks PEB  */
 
     MODULEINFO modInfo;
     Asteria::Windows::ThisBuf = dllBase;

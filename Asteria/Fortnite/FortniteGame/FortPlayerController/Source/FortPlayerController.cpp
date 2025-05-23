@@ -13,10 +13,11 @@ inline void* (*CompleteBuildingEditInteraction)(UObject* PlayerController) = dec
 
 void FortniteGame::FortPlayerController::PerformBuildingEditInteractionHook(UObject* PC)
 {
+    Log("ok!!?!");
     if (FNVer <= 15.00)
     {
         if (bDisablePreedits && PC->Get<UObject*>(L"TargetedBuilding")->IsA(TUObjectArray::FindObject<UClass>("ABuildingPlayerPrimitivePreview")))
-        {
+        {l
             return;
         } else {
             PerformBuildingEditInteractionOG(PC);
@@ -62,11 +63,11 @@ void FortniteGame::FortPlayerController::Setup()
     {
         std::string message = "Hooking AFortPlayerController_PerformBuildingEditInteraction, %llx";
         Log(message.c_str(), Asteria::Holder::AFortPlayerController_PerformBuildingEditInteraction - ImageBase);
-/*        MH_CreateHook(
+        MH_CreateHook(
             (LPVOID)Asteria::Holder::AFortPlayerController_PerformBuildingEditInteraction,
             &PerformBuildingEditInteractionHook,
             reinterpret_cast<void**>(&PerformBuildingEditInteractionOG)
-        ); */
+        ); 
     } else
     {
         Log("Failed to hook PerformBuildingEditInteraction");

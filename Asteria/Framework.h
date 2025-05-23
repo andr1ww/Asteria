@@ -59,10 +59,11 @@ using namespace SDK;
 namespace Asteria {}
 
 #define Log(...) do { \
-std::ostringstream ss; \
-ss << __VA_ARGS__; \
-printf("[Asteria] %s (%s:%d) --> %s\n", __func__, __FILE__, __LINE__, ss.str().c_str()); \
+char buffer[1024]; \
+snprintf(buffer, sizeof(buffer), __VA_ARGS__); \
+printf("[Asteria] %s (%s:%d) --> %s\n", __func__, __FILE__, __LINE__, buffer); \
 } while(0)
+
 inline uint64_t ImageSize;
     static std::vector<std::wstring> args = []() {
         std::vector<std::wstring> result;

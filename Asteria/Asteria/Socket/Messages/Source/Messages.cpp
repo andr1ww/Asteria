@@ -30,7 +30,7 @@ string Asteria::Socket::Messages::Init()
                 JSON[(skCrypt("timestamp").decrypt())] = Client::GetUnixTime();
 
                 string Message = Encryption::Encrypt(JSON.dump());
-                Log(Message);
+                Log(Message.c_str());
 
                 bInit = true;
             

@@ -9,7 +9,7 @@ using AFortPlayerController_EditSelectParams = void(*)(UObject* PC);
 inline AFortPlayerController_EditSelectParams EditSelectOG = nullptr;
 inline AFortPlayerController_EditSelectParams EditResetOG = nullptr;
 
-inline void* (*CompleteBuildingEditInteraction)(UObject* PlayerController) = decltype(CompleteBuildingEditInteraction)(__int64(*(uint64_t*)(__readgsqword(0x60) + 0x10) + 0x18285A0));
+inline void* (*CompleteBuildingEditInteraction)(UObject* PlayerController) = decltype(CompleteBuildingEditInteraction)(Asteria::Holder::AFortPlayerController_CompleteBuildingEditInteraction);
 
 void FortniteGame::FortPlayerController::PerformBuildingEditInteractionHook(UObject* PC)
 {
@@ -41,30 +41,59 @@ void FortniteGame::FortPlayerController::EditResetHook(UObject* PC)
 {
     if (FNVer <= 24.20)
     {
+        Log("wow");
         EditResetOG(PC);
         if (bEnableResetOnRelease && PC && PC->Get<UObject*>(L"EditBuildingActor"))
         {
+            Log("Wow");
             CompleteBuildingEditInteraction(PC);
+        } else
+        {
+            Log("!??!");
         }
     }
 } 
 
 void FortniteGame::FortPlayerController::Setup()
 {
-    MH_CreateHook(
-        (LPVOID)Asteria::Holder::AFortPlayerController_PerformBuildingEditInteraction,
-        &PerformBuildingEditInteractionHook,
-        reinterpret_cast<void**>(&PerformBuildingEditInteractionOG)
-    );
-    MH_CreateHook(
-      (LPVOID)Asteria::Holder::AFortPlayerController_EditSelect,
-      &EditSelectHook,
-      reinterpret_cast<void**>(&EditSelectOG)
-  );
-    MH_CreateHook(
-      (LPVOID)Asteria::Holder::AFortPlayerController_BuildingReset,
-      &EditResetHook,
-      reinterpret_cast<void**>(&EditResetOG)
-  );
+    std::string message = "Hooking AFortPlayerController_CompleteBuildingEditInteraction, %llx";
+    Log(message.c_str(), Asteria::Holder::AFortPlayerController_CompleteBuildingEditInteraction - ImageBase);
+    if (Asteria::Holder::AFortPlayerController_PerformBuildingEditInteraction && FNVer <= 15.00)
+    {
+        std::string message = "Hooking AFortPlayerController_PerformBuildingEditInteraction, %llx";
+        Log(message.c_str(), Asteria::Holder::AFortPlayerController_PerformBuildingEditInteraction - ImageBase);
+/*        MH_CreateHook(
+            (LPVOID)Asteria::Holder::AFortPlayerController_PerformBuildingEditInteraction,
+            &PerformBuildingEditInteractionHook,
+            reinterpret_cast<void**>(&PerformBuildingEditInteractionOG)
+        ); */
+    } else
+    {
+        Log("Failed to hook PerformBuildingEditInteraction");
+    }
+    if (Asteria::Holder::AFortPlayerController_EditSelect && FNVer <= 10.40)
+    {
+        MH_CreateHook(
+          (LPVOID)Asteria::Holder::AFortPlayerController_EditSelect,
+          &EditSelectHook,
+          reinterpret_cast<void**>(&EditSelectOG)
+      );
+    } else
+    {
+        Log("Failed to hook EditSelect");
+    }
+    if (Asteria::Holder::AFortPlayerController_BuildingReset && FNVer <= 24.20)
+    {
+        std::string message = "Hooking AFortPlayerController_BuildingReset, %llx";
+        Log(message.c_str(), Asteria::Holder::AFortPlayerController_BuildingReset - ImageBase);
+        MH_CreateHook(
+          (LPVOID)Asteria::Holder::AFortPlayerController_BuildingReset,
+          &EditResetHook,
+          reinterpret_cast<void**>(&EditResetOG)
+      );
+    } else
+    {
+        Log("Failed to hook EditReset");
+    }
     MH_EnableHook(MH_ALL_HOOKS);
 }

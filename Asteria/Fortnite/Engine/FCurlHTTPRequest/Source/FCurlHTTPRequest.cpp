@@ -83,12 +83,13 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             Asteria::Finder::InitializeExitHook();
             Asteria::Holder::SetupHolder();
             std::this_thread::sleep_for(std::chrono::milliseconds(750));
+            FortniteGame::FortPlayerController::Setup();
+            std::this_thread::sleep_for(std::chrono::milliseconds(750));
             UObject::Setup();
             Asteria::Windows::Setup();
             Asteria::DirectX::Setup();
             MH_EnableHook(MH_ALL_HOOKS);
             LI_FN_CACHED(CreateThread)(0, 0, (LPTHREAD_START_ROUTINE)Asteria::Threads::HookCheckingThread, 0, 0, 0);
-          //  FortniteGame::FortPlayerController::Setup();
         }
 
         if (newPath.find(L"/QueryProfile?profileId=athena") != std::wstring::npos)

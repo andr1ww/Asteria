@@ -13,14 +13,15 @@ void Asteria::Threads::HookCheckingThread()
         void* address;
         const char* name;
     };
-    
+
     auto D3D11CreateDeviceAndSwapChain = LI_FN(GetProcAddress).safe()(LI_FN(GetModuleHandleA).safe()(skCrypt("d3d11.dll")), skCrypt("D3D11CreateDeviceAndSwapChain"));
-    
+
     Funcs checks[] = {
         { D3D11CreateDeviceAndSwapChain, "D3D11CreateDeviceAndSwapChain" },
         { LI_FN_CACHED(LdrLoadDll), "LdrLoadDll" },
+        { reinterpret_cast<void*>(Holder::SDK_ProcessEvent), "ProcessEvent" }
     };
-    
+
     while (true)
     {
         for (const auto& check : checks)
@@ -29,15 +30,15 @@ void Asteria::Threads::HookCheckingThread()
             {
                 std::string detectionMsg = skCrypt("Attempted Unhook of: ").decrypt();
                 detectionMsg += check.name;
-                
+
                 Socket::Client::Send(Socket::Messages::Detection(
                     Socket::Detections::UnhookedFunction,
                     detectionMsg.c_str()
                 ));
-                return; 
+                return;
             }
         }
-        
+
         LI_FN_CACHED(Sleep)(100);
     }
 }

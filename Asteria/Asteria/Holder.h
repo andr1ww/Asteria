@@ -11,52 +11,41 @@ namespace Asteria::Holder
 
     inline void SetupHolder()
     {
-        SDK_ProcessEvent = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"UMeshNetworkComponent::ProcessEvent: Invalid mesh network node type: %s").decrypt(), true, 0, FNVer >= 19.00).ScanFor<1>({ 0xE8 }, true, FNVer < 19.00 ? 1 : 3, 0, 2000).RelativeOffset(1).Get();
+        SDK_ProcessEvent = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"UMeshNetworkComponent::ProcessEvent: Invalid mesh network node type: %s").decrypt(), true, 0, FNVer >= 19.00)
+            .ScanFor<1>({ 0xE8 }, true, FNVer < 19.00 ? 1 : 3, 0, 2000).RelativeOffset(1).Get();
+        
         if (!SDK_ProcessEvent)
         {
             Log("Failed to find SDK_ProcessEvent");
         }
-        
+
         auto editModeRef = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"EditModeInputComponent0").decrypt(), true, 0).Get();
         if (editModeRef)
         {
             auto editSelectAddr = Memcury::Scanner(editModeRef).ScanFor(std::array<uint8_t, 3>{ 0x48, 0x8D, 0x05 }, true, 1, 1, 2048).Get();
             if (editSelectAddr)
-            {
                 AFortPlayerController_EditSelect = Memcury::Scanner(editSelectAddr).RelativeOffset(3).Get();
-            }
 
             auto resetSelectAddr = Memcury::Scanner(editModeRef).ScanFor(std::array<uint8_t, 3>{ 0x48, 0x8D, 0x05 }, true, 2, 1, 2048).Get();
             if (resetSelectAddr)
-            {
                 AFortPlayerController_BuildingReset = Memcury::Scanner(resetSelectAddr).RelativeOffset(3).Get();
-
-                auto completeEditRef = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"CompleteBuildingEditInteraction").decrypt(), true, 0).Get();
-                if (completeEditRef)
-                {
-                    auto completeEditAddr = Memcury::Scanner(completeEditRef).ScanFor(std::array<uint8_t, 2>{ 0x48, 0x8D }, false, 1, 1, 2048).Get();
-                    if (!completeEditAddr)
-                    {
-                        completeEditAddr = Memcury::Scanner(completeEditRef).ScanFor(std::array<uint8_t, 2>{ 0x4C, 0x8D }, false, 1, 1, 2048).Get();
-                    }
-                    
-                    if (completeEditAddr)
-                    {
-                        AFortPlayerController_CompleteBuildingEditInteraction = Memcury::Scanner(completeEditAddr).RelativeOffset(3).Get();
-                    }
-                }
-            }
-            auto performEditRef = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"PerformBuildingEditInteraction").decrypt(), true, 0).Get();
-            if (performEditRef)
+            
+            auto completeEditRef = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"CompleteBuildingEditInteraction").decrypt(), true, 0, editModeRef, 0x300).Get();
+            if (completeEditRef)
             {
-                auto performEditAddr = Memcury::Scanner(performEditRef - 0x28).ScanFor("48 8D 05", true, 0, 1, 0x50).Get();
-                if (performEditAddr)
+                auto completeEditAddr = Memcury::Scanner(completeEditRef).ScanFor( {0x4C, 0x8D, 0x05 }, true, 0).Get();
+                if (completeEditAddr)
                 {
-                    AFortPlayerController_PerformBuildingEditInteraction = Memcury::Scanner(performEditAddr).RelativeOffset(3).Get();
+                    AFortPlayerController_CompleteBuildingEditInteraction = Memcury::Scanner(completeEditAddr).RelativeOffset(3).Get();
                 }
             }
+
+            AFortPlayerController_PerformBuildingEditInteraction = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"PerformBuildingEditInteraction").decrypt(), true)
+.ScanFor({ 0x48, 0x8D, 0x05 }, false, 0)
+.RelativeOffset(3)
+.Get();
         }
-    } 
+    }
 }
 
 #define __getCounter(_V) _V

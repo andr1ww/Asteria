@@ -138,7 +138,7 @@ NTSTATUS __stdcall Asteria::Windows::LdrLoadDllHook(PWCHAR SearchPath_, PULONG L
     fuckIda;
     std::wstring ws = Name->Buffer;
     std::string s( ws.begin(), ws.end() );
-    Log(s);
+    Log(s.c_str());
     switch (IMGUILoadCTR)
     {
     case 0:

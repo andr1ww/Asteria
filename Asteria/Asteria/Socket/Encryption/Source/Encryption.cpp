@@ -5,6 +5,7 @@
 #include <vector>
 #include <cstdio>
 #include <sstream>
+#include <cstring>
 
 #include "Asteria/Holder.h"
 
@@ -13,11 +14,33 @@ struct Result {
     std::string encryptedHash;
     
     std::string serialize() const {
-        return encryptedData + "|" + encryptedHash;
+        fuckIda;
+        std::string result;
+        uint32_t dataLen = static_cast<uint32_t>(encryptedData.length());
+        result.append(reinterpret_cast<const char*>(&dataLen), sizeof(dataLen));
+        result.append(encryptedData);
+        result.append(encryptedHash);
+        return result;
+    }
+    
+    static Result deserialize(const std::string& serialized) {
+        fuckIda;
+        Result result;
+        if (serialized.length() < sizeof(uint32_t)) return result;
+        
+        uint32_t dataLen;
+        std::memcpy(&dataLen, serialized.data(), sizeof(dataLen));
+        
+        if (serialized.length() < sizeof(uint32_t) + dataLen) return result;
+        
+        result.encryptedData = serialized.substr(sizeof(uint32_t), dataLen);
+        result.encryptedHash = serialized.substr(sizeof(uint32_t) + dataLen);
+        return result;
     }
 };
 
 Result Main(const std::string& plainText) {
+    fuckIda;
     static auto publicKeyEncrypted =
         skCrypt(R"(-----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAv4uZAFYdLMFtULQMpNop
@@ -148,13 +171,33 @@ Mcleb0xxrVdTfNXvIXkpiA0CAwEAAQ==
     return result;
 }
 
+
 std::string Asteria::Socket::Encryption::Encrypt(const std::string& plainText) {
+    fuckIda;
     auto result = Main(plainText);
-    return result.serialize(); // ret = "data|hash"
+    std::string binaryData = result.serialize(); 
+    
+    BIO *bio, *b64;
+    BUF_MEM *bufferPtr;
+    
+    b64 = BIO_new(BIO_f_base64());
+    bio = BIO_new(BIO_s_mem());
+    bio = BIO_push(b64, bio);
+    
+    BIO_set_flags(bio, BIO_FLAGS_BASE64_NO_NL);
+    BIO_write(bio, binaryData.data(), binaryData.length());
+    BIO_flush(bio);
+    BIO_get_mem_ptr(bio, &bufferPtr);
+    
+    std::string base64Result(bufferPtr->data, bufferPtr->length);
+    BIO_free_all(bio);
+    
+    return base64Result;
 }
 
 std::wstring Asteria::Socket::Encryption::Encrypt(const std::wstring& plainText) {
+    fuckIda;
     const std::string plainTextA(plainText.begin(), plainText.end());
-    std::string result = Encrypt(plainTextA);
-    return { result.begin(), result.end() };
+    std::string base64Result = Encrypt(plainTextA);
+    return { base64Result.begin(), base64Result.end() };
 }

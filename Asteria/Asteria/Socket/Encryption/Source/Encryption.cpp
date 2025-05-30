@@ -1,10 +1,23 @@
 ﻿#include "Framework.h"
 #include "../Header/Encryption.h"
 
+#include <openssl/sha.h>
+#include <vector>
+#include <cstdio>
+#include <sstream>
+
 #include "Asteria/Holder.h"
 
-std::string Asteria::Socket::Encryption::Encrypt(const std::string& plainText) {
-    fuckIda;
+struct Result {
+    std::string encryptedData;
+    std::string encryptedHash;
+    
+    std::string serialize() const {
+        return encryptedData + "|" + encryptedHash;
+    }
+};
+
+Result Main(const std::string& plainText) {
     static auto publicKeyEncrypted =
         skCrypt(R"(-----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAv4uZAFYdLMFtULQMpNop
@@ -23,95 +36,125 @@ Mcleb0xxrVdTfNXvIXkpiA0CAwEAAQ==
 
     const std::string publicKeyStr = publicKeyEncrypted.decrypt();
     publicKeyEncrypted.encrypt();
-    
+
     BIO* bio = BIO_new_mem_buf(publicKeyStr.data(), publicKeyStr.size());
     if (!bio) {
-        Log("RSA Encryption Error: BIO_new_mem_buf failed");
         return {};
     }
-    
+
     EVP_PKEY* publicKey = PEM_read_bio_PUBKEY(bio, nullptr, nullptr, nullptr);
     if (!publicKey) {
-        Log("RSA Encryption Error: PEM_read_bio_PUBKEY failed");
         BIO_free(bio);
         return {};
     }
-    
+
     EVP_PKEY_CTX* ctx = EVP_PKEY_CTX_new(publicKey, nullptr);
     if (!ctx) {
-        Log("RSA Encryption Error: EVP_PKEY_CTX_new failed");
         EVP_PKEY_free(publicKey);
         BIO_free(bio);
         return {};
     }
-    
+
     if (EVP_PKEY_encrypt_init(ctx) <= 0 ||
         EVP_PKEY_CTX_set_rsa_padding(ctx, RSA_PKCS1_OAEP_PADDING) <= 0 ||
         EVP_PKEY_CTX_set_rsa_oaep_md(ctx, EVP_sha256()) <= 0) {
-        
+
         unsigned long errorCode = ERR_get_error();
         char errorMsg[256] = {0};
         ERR_error_string_n(errorCode, errorMsg, sizeof(errorMsg));
-        Log("RSA Encryption Error: Context setup failed: %s", errorMsg);
-        
+
         EVP_PKEY_CTX_free(ctx);
         EVP_PKEY_free(publicKey);
         BIO_free(bio);
         return {};
     }
-    
+
     size_t cipherLen = 0;
-    if (EVP_PKEY_encrypt(ctx, nullptr, &cipherLen, 
-                         reinterpret_cast<const unsigned char*>(plainText.data()), 
-                         plainText.size()) <= 0) {
-        
-        unsigned long errorCode = ERR_get_error();
-        char errorMsg[256] = {0};
-        ERR_error_string_n(errorCode, errorMsg, sizeof(errorMsg));
-        Log("RSA Encryption Error: Buffer sizing failed: %s", errorMsg);
-        
-        EVP_PKEY_CTX_free(ctx);
-        EVP_PKEY_free(publicKey);
-        BIO_free(bio);
-        return {};
-    }
-    
-    std::vector<uint8_t> encryptedData(cipherLen);
-    if (EVP_PKEY_encrypt(ctx, encryptedData.data(), &cipherLen,
+    if (EVP_PKEY_encrypt(ctx, nullptr, &cipherLen,
                          reinterpret_cast<const unsigned char*>(plainText.data()),
                          plainText.size()) <= 0) {
-                         
+
         unsigned long errorCode = ERR_get_error();
         char errorMsg[256] = {0};
         ERR_error_string_n(errorCode, errorMsg, sizeof(errorMsg));
-        Log("RSA Encryption Error: Encryption operation failed: %s", errorMsg);
-        
+
         EVP_PKEY_CTX_free(ctx);
         EVP_PKEY_free(publicKey);
         BIO_free(bio);
         return {};
     }
-    
+
+    std::vector<uint8_t> firstEncryptedData(cipherLen);
+    if (EVP_PKEY_encrypt(ctx, firstEncryptedData.data(), &cipherLen,
+                         reinterpret_cast<const unsigned char*>(plainText.data()),
+                         plainText.size()) <= 0) {
+
+        unsigned long errorCode = ERR_get_error();
+        char errorMsg[256] = {0};
+        ERR_error_string_n(errorCode, errorMsg, sizeof(errorMsg));
+
+        EVP_PKEY_CTX_free(ctx);
+        EVP_PKEY_free(publicKey);
+        BIO_free(bio);
+        return {};
+    }
+
+    uint8_t hash[SHA256_DIGEST_LENGTH];
+    SHA256(firstEncryptedData.data(), firstEncryptedData.size(), hash);
+
+    cipherLen = 0;
+    if (EVP_PKEY_encrypt(ctx, nullptr, &cipherLen, hash, SHA256_DIGEST_LENGTH) <= 0) {
+        unsigned long errorCode = ERR_get_error();
+        char errorMsg[256] = {0};
+        ERR_error_string_n(errorCode, errorMsg, sizeof(errorMsg));
+
+        EVP_PKEY_CTX_free(ctx);
+        EVP_PKEY_free(publicKey);
+        BIO_free(bio);
+        return {};
+    }
+
+    std::vector<uint8_t> secondEncryptedData(cipherLen);
+    if (EVP_PKEY_encrypt(ctx, secondEncryptedData.data(), &cipherLen, hash, SHA256_DIGEST_LENGTH) <= 0) {
+        unsigned long errorCode = ERR_get_error();
+        char errorMsg[256] = {0};
+        ERR_error_string_n(errorCode, errorMsg, sizeof(errorMsg));
+
+        EVP_PKEY_CTX_free(ctx);
+        EVP_PKEY_free(publicKey);
+        BIO_free(bio);
+        return {};
+    }
+
     EVP_PKEY_CTX_free(ctx);
     EVP_PKEY_free(publicKey);
     BIO_free(bio);
+
+    auto toHex = [](const std::vector<uint8_t>& data) -> std::string {
+        std::string hexResult;
+        hexResult.reserve(data.size() * 2);
+        for (const uint8_t byte : data) {
+            char hex[3];
+            snprintf(hex, sizeof(hex), "%02X", byte);
+            hexResult += hex;
+        }
+        return hexResult;
+    };
+
+    Result result;
+    result.encryptedData = toHex(firstEncryptedData);
+    result.encryptedHash = toHex(secondEncryptedData);
     
-    std::string hexResult;
-    hexResult.reserve(encryptedData.size() * 2);
-    
-    for (const uint8_t byte : encryptedData) {
-        char hex[3];
-        snprintf(hex, sizeof(hex), "%02X", byte);
-        hexResult += hex;
-    }
-    
-    return hexResult;
+    return result;
+}
+
+std::string Asteria::Socket::Encryption::Encrypt(const std::string& plainText) {
+    auto result = Main(plainText);
+    return result.serialize(); // ret = "data|hash"
 }
 
 std::wstring Asteria::Socket::Encryption::Encrypt(const std::wstring& plainText) {
-    fuckIda;
     const std::string plainTextA(plainText.begin(), plainText.end());
-    const std::string string = Encrypt(plainTextA);
-
-    return { string.begin(), string.end() };
+    std::string result = Encrypt(plainTextA);
+    return { result.begin(), result.end() };
 }

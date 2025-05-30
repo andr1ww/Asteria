@@ -2,7 +2,7 @@
 
 namespace Asteria::Globals
 {
-    inline bool bConsole = false;
-#define Axys true
-#define Solaris false
+    inline bool bConsole = true;
+#define Axys false
+#define Solaris true
 } 

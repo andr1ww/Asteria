@@ -36,9 +36,31 @@ typedef struct _PEB {
     PPEB_LDR_DATA Ldr;
 } PEB, *PPEB;
 
+static uintptr_t pakPatchAddr = 0;
+
+static int i = 0;
+int64_t pakPatch(int64_t a1, int64_t a2, int64_t a3, int64_t a4, int64_t a5, int64_t a6)
+{
+    i++;
+    *(DWORD*)a1 = 0;
+    if (i == 27)
+        MH_DisableHook((LPVOID)pakPatchAddr);
+    return a1;
+}
+
 DWORD WINAPI Main(LPVOID dllBase)
 {
     fuckIda;
+    MH_Initialize();
+    if (FNVer >= 14.40)
+    {
+        pakPatchAddr = Memcury::Scanner::FindPattern("40 55 53 56 57 41 56 41 57 48 8D 6C 24 ? 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 45 ? 4D 8B F1").Get();
+        if (!pakPatchAddr)
+            pakPatchAddr = Memcury::Scanner::FindPattern("40 55 53 56 57 41 56 41 57 48 8D 6C 24 ? 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 45 ? 45 33 FF 49 8B F1").Get();
+
+        MH_CreateHook((LPVOID)pakPatchAddr, (LPVOID)pakPatch, nullptr);
+        MH_EnableHook((LPVOID)pakPatchAddr);
+    }
 
     PPEB peb = ((PPEB)__readgsqword(0x60));
     PLIST_ENTRY head = &peb->Ldr->InLoadOrderModuleList;
@@ -77,7 +99,6 @@ DWORD WINAPI Main(LPVOID dllBase)
         freopen_s(&f, "CONIN$", "r", stdin);
     }
 
-    MH_Initialize();
     LI_FN_CACHED(Sleep)(1000);
     Engine::FCurlHTTPRequest::Setup();
 #if Solaris

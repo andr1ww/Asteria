@@ -94,6 +94,7 @@ void Asteria::Socket::Client::OnMessageCallback(const ix::WebSocketMessagePtr& M
         {
             bIsConnectionOpen = true;
             string Message = Messages::Init();
+            Log(Message.c_str());
             Send(Message);
             bShouldRunHeartbeat = true;
             HeartbeatThread = std::make_unique<std::thread>(HeartbeatLoop);

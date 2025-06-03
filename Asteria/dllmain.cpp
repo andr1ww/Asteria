@@ -99,7 +99,7 @@ DWORD WINAPI Main(LPVOID dllBase)
         freopen_s(&f, "CONIN$", "r", stdin);
     }
 
-    LI_FN_CACHED(Sleep)(1000);
+    LI_FN_CACHED(Sleep)(2000);
     Engine::FCurlHTTPRequest::Setup();
     Asteria::Holder::InitBackend();
     if (FNVer == 14.40) Asteria::Finder::GetExit();

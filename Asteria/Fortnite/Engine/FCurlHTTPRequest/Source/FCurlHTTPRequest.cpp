@@ -72,9 +72,9 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
             }
         }
         
-        auto Backend = Solaris ? skCrypt(L"https://api-v1-horizon-fortnite-api.solarisfn.dev").decrypt() : skCrypt(L"http://s19.api.axysog.fun:3551").decrypt();
+        
         std::wstring newPath = (end <= URL.length()) ? URL.substr(end) : L"";
-        std::wstring newUrl = Backend + newPath;
+        std::wstring newUrl =  Asteria::Holder::Backend + newPath;
         Request->SetURL(newUrl.c_str());
 
         if (!HookedExit && newPath.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)

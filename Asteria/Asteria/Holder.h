@@ -8,7 +8,85 @@ namespace Asteria::Holder
     inline uint64_t AFortPlayerController_BuildingReset = uint64_t();
     inline uint64_t AFortPlayerController_CompleteBuildingEditInteraction = uint64_t();
     inline uint64_t SDK_ProcessEvent = uint64_t();
+    inline wstring Backend = L"";
 
+    inline void InitBackend()
+    {
+        try {
+            for (const auto& arg : args) {
+                if (arg.find(L"-a=") == 0 && arg.length() > 3) {
+                    string s(arg.substr(3).begin(), arg.substr(3).end()), d, p;
+                    const string c = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+                    int v = 0, b = -8;
+                    for (char x : s) { 
+                        if (c.find(x) == string::npos) break; 
+                        v = (v << 6) + c.find(x); 
+                        b += 6; 
+                        if (b >= 0) { 
+                            d.push_back(char((v >> b) & 0xFF)); 
+                            b -= 8; 
+                        } 
+                    }
+                    size_t f = d.find('.'), z = d.find('.', f + 1); 
+                    if (f == string::npos || z == string::npos) continue;
+                    string pb = d.substr(f + 1, z - f - 1); 
+                    while (pb.length() % 4) pb += '=';
+                
+                    v = 0; b = -8; 
+                    for (char x : pb) { 
+                        if (c.find(x) == string::npos) break; 
+                        v = (v << 6) + c.find(x); 
+                        b += 6; 
+                        if (b >= 0) { 
+                            p.push_back(char((v >> b) & 0xFF)); 
+                            b -= 8; 
+                        } 
+                    }
+                    string safe_payload = p.length() > 500 ? p.substr(0, 500) + "..." : p;
+                    string search_pattern = "\"issuer\":";
+                    size_t issuer_pos = p.find(search_pattern);
+                    if (issuer_pos != string::npos) {
+                        size_t value_start = issuer_pos + search_pattern.length();
+                        while (value_start < p.length() && (p[value_start] == ' ' || p[value_start] == '\t')) {
+                            value_start++;
+                        }
+                        if (value_start < p.length() && p[value_start] == '"') {
+                            value_start++; 
+                            size_t value_end = value_start;
+                            while (value_end < p.length() && p[value_end] != '"') {
+                                value_end++;
+                            }
+                        
+                            if (value_end < p.length() && value_end > value_start) {
+                                string iss = p.substr(value_start, value_end - value_start);
+                                if (!iss.empty() && iss.length() < 200) {
+                                    constexpr int bufSize = 256;
+                                    char buffer[bufSize] = {0};
+                                
+                                    size_t copy_len = min(iss.length(), static_cast<size_t>(bufSize - 1));
+                                    strncpy_s(buffer, bufSize, iss.c_str(), copy_len);
+                                    buffer[copy_len] = '\0'; 
+
+                                    auto crypter = skc::skCrypter<bufSize, __TIME__[4], __TIME__[7], char>(buffer);
+                                    char* decrypted = crypter.decrypt();
+                                
+                                    if (decrypted != nullptr) {
+                                        size_t decrypted_len = strnlen(decrypted, bufSize);
+                                        Backend = wstring(decrypted, decrypted + decrypted_len);
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        catch (...) {
+            Log("stupid");
+        }
+    }
+    
     inline void SetupHolder()
     {
         SDK_ProcessEvent = Memcury::Scanner::FindStringRef<const wchar_t*>(_(L"UMeshNetworkComponent::ProcessEvent: Invalid mesh network node type: %s").decrypt(), true, 0, FNVer >= 19.00)

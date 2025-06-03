@@ -10,6 +10,25 @@
 string Asteria::Socket::Messages::Init()
 {
     fuckIda;
+    static bool bSetBackend = false;
+    if (!bSetBackend && !Holder::Backend.empty())
+    {
+        bSetBackend = true;
+        nlohmann::json JSON{};
+        JSON[(skCrypt("message_type").decrypt())] = _("backend").decrypt();
+        std::string backend_str(Holder::Backend.begin(), Holder::Backend.end());
+        JSON[(skCrypt("url").decrypt())] = backend_str;
+
+        string Message = Encryption::Encrypt(JSON.dump());
+        return Message;
+    }
+
+    Init();
+}
+
+string Asteria::Socket::Messages::Register()
+{
+    fuckIda;
     static bool bInit = false;
     if (!bInit)
     {

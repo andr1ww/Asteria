@@ -52,7 +52,7 @@ DWORD WINAPI Main(LPVOID dllBase)
 {
     fuckIda;
     MH_Initialize();
-    if (FNVer >= 14.40)
+    if (FNVer == 14.40)
     {
         pakPatchAddr = Memcury::Scanner::FindPattern("40 55 53 56 57 41 56 41 57 48 8D 6C 24 ? 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 45 ? 4D 8B F1").Get();
         if (!pakPatchAddr)
@@ -101,6 +101,8 @@ DWORD WINAPI Main(LPVOID dllBase)
 
     LI_FN_CACHED(Sleep)(1000);
     Engine::FCurlHTTPRequest::Setup();
+    Asteria::Holder::InitBackend();
+    
 #if Solaris
     Asteria::Finder::GetExit();
     Asteria::Socket::Client::Setup(skCrypt("ws://asteria.solarisfn.dev:2082").decrypt());

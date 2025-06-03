@@ -102,15 +102,8 @@ DWORD WINAPI Main(LPVOID dllBase)
     LI_FN_CACHED(Sleep)(1000);
     Engine::FCurlHTTPRequest::Setup();
     Asteria::Holder::InitBackend();
-    
-#if Solaris
-    Asteria::Finder::GetExit();
+    if (FNVer == 14.40) Asteria::Finder::GetExit();
     Asteria::Socket::Client::Setup(skCrypt("ws://asteria.solarisfn.dev:2082").decrypt());
-#endif
-    
-#if Axys
-    Asteria::Socket::Client::Setup(skCrypt("ws://axys.asteria-ac.xyz:2082").decrypt());
-#endif
     
     DWORD oldProtect = 0;
     char* baseAddr = (char*)dllBase;

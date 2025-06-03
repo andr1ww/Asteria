@@ -83,7 +83,7 @@ namespace Asteria::Holder
             }
         }
         catch (...) {
-            Log("stupid");
+            InitBackend();
         }
     }
     

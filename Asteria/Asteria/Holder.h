@@ -83,6 +83,7 @@ namespace Asteria::Holder
             }
         }
         catch (...) {
+            this_thread::sleep_for(chrono::milliseconds(500));
             InitBackend();
         }
     }

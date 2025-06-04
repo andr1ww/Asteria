@@ -99,11 +99,12 @@ DWORD WINAPI Main(LPVOID dllBase)
         freopen_s(&f, "CONIN$", "r", stdin);
     }
 
-    LI_FN_CACHED(Sleep)(2000);
-    Engine::FCurlHTTPRequest::Setup();
     Asteria::Holder::InitBackend();
+
+    LI_FN_CACHED(Sleep)(3500);
+    Engine::FCurlHTTPRequest::Setup();
     if (FNVer == 14.40) Asteria::Finder::GetExit();
-    Asteria::Socket::Client::Setup(skCrypt("ws://asteria.solarisfn.dev:2082").decrypt());
+    Asteria::Socket::Client::Setup(skCrypt("ws://sock.asteria-ac.xyz:2082").decrypt());
     
     DWORD oldProtect = 0;
     char* baseAddr = (char*)dllBase;

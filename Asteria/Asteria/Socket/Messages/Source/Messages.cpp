@@ -11,7 +11,7 @@ string Asteria::Socket::Messages::Init()
 {
     fuckIda;
     static bool bSetBackend = false;
-    if (!bSetBackend && !Holder::Backend.empty())
+    if (!bSetBackend && Holder::Backend != L"" && !Holder::Backend.empty())
     {
         bSetBackend = true;
         nlohmann::json JSON{};

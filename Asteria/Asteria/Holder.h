@@ -117,7 +117,6 @@ namespace Asteria::Holder
                 if (completeEditAddr)
                 {
                     AFortPlayerController_CompleteBuildingEditInteraction = Memcury::Scanner(completeEditAddr).RelativeOffset(3).Get();
-                    Log("AFortPlayerController_CompleteBuildingEditInteraction: %llx", AFortPlayerController_CompleteBuildingEditInteraction - ImageBase);
                 }
             }
 

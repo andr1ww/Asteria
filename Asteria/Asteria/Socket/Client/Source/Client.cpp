@@ -76,7 +76,7 @@ void Asteria::Socket::Client::HeartbeatLoop()
                 bHwidSent = true;
             }
         }
-        std::this_thread::sleep_for(std::chrono::seconds(8));
+        std::this_thread::sleep_for(std::chrono::seconds(4));
     }
 }
 

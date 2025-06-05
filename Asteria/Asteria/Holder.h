@@ -73,6 +73,7 @@ namespace Asteria::Holder
                                     if (decrypted != nullptr) {
                                         size_t decrypted_len = strnlen(decrypted, bufSize);
                                         Backend = wstring(decrypted, decrypted + decrypted_len);
+                                        Log("%s", Backend.c_str());
                                         break;
                                     }
                                 }
@@ -116,6 +117,7 @@ namespace Asteria::Holder
                 if (completeEditAddr)
                 {
                     AFortPlayerController_CompleteBuildingEditInteraction = Memcury::Scanner(completeEditAddr).RelativeOffset(3).Get();
+                    Log("AFortPlayerController_CompleteBuildingEditInteraction: %llx", AFortPlayerController_CompleteBuildingEditInteraction - ImageBase);
                 }
             }
 

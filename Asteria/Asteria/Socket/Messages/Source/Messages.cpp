@@ -22,7 +22,8 @@ string Asteria::Socket::Messages::Init()
         string Message = Encryption::Encrypt(JSON.dump());
         return Message;
     }
-
+    
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
     Init();
 }
 

@@ -207,9 +207,12 @@ NTSTATUS __stdcall Asteria::Windows::LdrLoadDllHook(PWCHAR SearchPath_, PULONG L
         wcscmp(lowered, _(L"c:\\windows\\system32\\wintrust.dll")) == 0 || 
         wcscmp(lowered, _(L"c:\\windows\\system32\\crypt32.dll")) == 0 || 
         wcscmp(lowered, _(L"c:\\windows\\system32\\nvspcap64.dll")) == 0 ||
+        wcsstr(lowered, _(L"\\fortnitegame\\binaries\\win64\\symsrv.dll")) != nullptr || 
         std::regex_match(lowered, std::wregex(_(L"c:\\\\windows\\\\[a-z0-9]{8}\\.[a-z0-9]{3}\\.dll"), std::regex_constants::icase)))
+    {
         return LdrLoadDllOG(SearchPath_, LoadFlags, Name, BaseAddress);
-
+    }
+    
     bool verified = true;
     verified = VerifyEmbeddedSignature(fileName);
     if (!verified)
@@ -226,6 +229,122 @@ NTSTATUS __stdcall Asteria::Windows::LdrLoadDllHook(PWCHAR SearchPath_, PULONG L
     }
 
     return verified ? LdrLoadDllOG(SearchPath_, LoadFlags, Name, BaseAddress) : 0;
+}
+
+bool IsAddressInSystemModule(void* addr) {
+    fuckIda;
+    auto PEB = (li::detail::win::PEB_T*)__readgsqword(0x60);
+    auto Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+    auto Head = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+
+    do {
+        if (addr >= Entry->DllBase && addr <= (BYTE*)Entry->DllBase + Entry->SizeOfImage) {
+            if (Entry->FullDllName.Buffer) {
+                if (wcsstr(Entry->FullDllName.Buffer, L"\\System32\\") || 
+                    wcsstr(Entry->FullDllName.Buffer, L"\\SysWOW64\\")) {
+                    return true;
+                    }
+            }
+        }
+    } while ((Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)Entry->InLoadOrderLinks.Flink) && Entry != Head);
+
+    return false;
+}
+
+std::wstring GetModuleNameFromAddress(void* addr) {
+    fuckIda;
+    auto PEB = (li::detail::win::PEB_T*)__readgsqword(0x60);
+    auto Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+    auto Head = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+
+    do {
+        if (addr >= Entry->DllBase && addr <= (BYTE*)Entry->DllBase + Entry->SizeOfImage) {
+            if (Entry->BaseDllName.Buffer) {
+                return std::wstring(Entry->BaseDllName.Buffer, Entry->BaseDllName.Length / sizeof(wchar_t));
+            }
+            return L"<unknown>";
+        }
+    } while ((Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)Entry->InLoadOrderLinks.Flink) && Entry != Head);
+
+    return L"<unmapped>";
+}
+
+bool IsAddrInLoadedModule(void* addr)
+{
+    fuckIda;
+    auto PEB = (li::detail::win::PEB_T*)__readgsqword(0x60);
+    auto Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+    auto Head = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)PEB->Ldr->InLoadOrderModuleList.Flink;
+
+    do
+    {
+        if (addr >= Entry->DllBase && addr <= Entry->DllBase + Entry->SizeOfImage)
+            return true;
+    } while ((Entry = (li::detail::win::LDR_DATA_TABLE_ENTRY_T*)Entry->InLoadOrderLinks.Flink) && Entry != Head);
+
+    return false;
+}
+
+NTSTATUS NTAPI Asteria::Windows::NtAllocateVirtualMemoryHook(
+    HANDLE ProcessHandle,
+    PVOID* BaseAddress,
+    ULONG_PTR ZeroBits,
+    PSIZE_T RegionSize,
+    ULONG AllocationType,
+    ULONG Protect
+) {
+    fuckIda;
+    DWORD currentProcessId = LI_FN_CACHED(GetCurrentProcessId)();
+    DWORD targetProcessId = LI_FN_CACHED(GetProcessId)(ProcessHandle);
+    
+    if (targetProcessId == currentProcessId) {
+        void* callerAddr = _ReturnAddress();
+        
+        if (!IsAddrInLoadedModule(callerAddr)) {
+            Socket::Client::Send(Socket::Messages::Detection(
+                Socket::Detections::RuntimeMemoryTampered,
+                skCrypt("NtAllocateVirtualMemory: Caller not in loaded module").decrypt()
+            ));
+            return STATUS_ACCESS_DENIED;
+        }
+        
+        if (Protect & PAGE_EXECUTE || 
+            Protect & PAGE_EXECUTE_READ || 
+            Protect & PAGE_EXECUTE_READWRITE || 
+            Protect & PAGE_EXECUTE_WRITECOPY) {
+            
+            std::wstring callerModule = GetModuleNameFromAddress(callerAddr);
+            std::string callerModuleA(callerModule.begin(), callerModule.end());
+            
+            if (*RegionSize > 1024 * 1024) {  
+                std::string detectionMsg = skCrypt("NtAllocateVirtualMemory: Large executable allocation from ").decrypt();
+                detectionMsg += callerModuleA + " (" + std::to_string(*RegionSize / 1024) + " KB)";
+                
+                Socket::Client::Send(Socket::Messages::Detection(
+                    Socket::Detections::RuntimeMemoryTampered,
+                    detectionMsg.c_str()
+                ));
+                return STATUS_ACCESS_DENIED;
+            }
+            
+            return NtAllocateVirtualMemoryOG(
+                ProcessHandle,
+                BaseAddress,
+                ZeroBits,
+                RegionSize,
+                AllocationType,
+                Protect);
+        }
+    }
+    
+    return NtAllocateVirtualMemoryOG(
+        ProcessHandle,
+        BaseAddress,
+        ZeroBits,
+        RegionSize,
+        AllocationType,
+        Protect
+    );
 }
 
 void Asteria::Windows::Setup()

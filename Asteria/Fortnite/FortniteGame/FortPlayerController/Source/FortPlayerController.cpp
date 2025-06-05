@@ -9,8 +9,6 @@ using AFortPlayerController_EditSelectParams = void(*)(UObject* PC);
 inline AFortPlayerController_EditSelectParams EditSelectOG = nullptr;
 inline AFortPlayerController_EditSelectParams EditResetOG = nullptr;
 
-inline void* (*CompleteBuildingEditInteraction)(UObject* PlayerController) = decltype(CompleteBuildingEditInteraction)(Asteria::Holder::AFortPlayerController_CompleteBuildingEditInteraction);
-
 void FortniteGame::FortPlayerController::PerformBuildingEditInteractionHook(UObject* PC)
 {
     if (FNVer <= 15.00)
@@ -32,7 +30,7 @@ void FortniteGame::FortPlayerController::EditSelectHook(UObject* PC)
 
         if (bEditOnRelease && PC && PC->Get<UObject*>(L"EditBuildingActor"))
         {
-            CompleteBuildingEditInteraction(PC);
+          reinterpret_cast<void(*)(UObject*)>(Asteria::Holder::AFortPlayerController_CompleteBuildingEditInteraction)(PC);
         }
     }
 }
@@ -44,7 +42,7 @@ void FortniteGame::FortPlayerController::EditResetHook(UObject* PC)
         EditResetOG(PC);
         if (bEnableResetOnRelease && PC && PC->Get<UObject*>(L"EditBuildingActor"))
         {
-            CompleteBuildingEditInteraction(PC);
+            reinterpret_cast<void(*)(UObject*)>(Asteria::Holder::AFortPlayerController_CompleteBuildingEditInteraction)(PC);
         } 
     }
 } 

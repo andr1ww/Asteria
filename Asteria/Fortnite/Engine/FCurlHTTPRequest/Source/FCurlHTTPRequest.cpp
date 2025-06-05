@@ -81,10 +81,8 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
         {
             HookedExit = true;
             if (FNVer == 14.40) Asteria::Finder::InitializeExitHook();
-            Asteria::Holder::SetupHolder();
-            std::this_thread::sleep_for(std::chrono::milliseconds(750));
-      /*      FortniteGame::FortPlayerController::Setup();
-            std::this_thread::sleep_for(std::chrono::milliseconds(750)); */
+            FortniteGame::FortPlayerController::Setup();
+            std::this_thread::sleep_for(std::chrono::milliseconds(750)); 
             UObject::Setup();
             Asteria::Windows::Setup();
             Asteria::DirectX::Setup();

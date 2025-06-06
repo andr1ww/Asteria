@@ -13,10 +13,10 @@ namespace Asteria::Holder
     inline void InitBackend()
     {
         if (FNVer == 19.10) {
-           Backend = L"http://s19.api.axysog.fun:3551";
+            Backend = L"http://s19.api.axysog.fun:3551";
             return;
         } else if (FNVer == 14.40) {
-         Backend = L"https://api-v1-horizon-fortnite-api.solarisfn.dev";
+            Backend = L"https://api-v1-horizon-fortnite-api.solarisfn.dev";
             return;
         }
             

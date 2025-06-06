@@ -80,7 +80,7 @@ bool Engine::FCurlHTTPRequest::ProcessRequest(FCurlHttpRequest* Request)
         if (!HookedExit && newPath.find(L"/fortnite/api/v2/versioncheck/Windows") != std::wstring::npos)
         {
             HookedExit = true;
-            if (FNVer == 14.40) Asteria::Finder::InitializeExitHook();
+            if (FNVer == 14.30) Asteria::Finder::InitializeExitHook();
             FortniteGame::FortPlayerController::Setup();
             std::this_thread::sleep_for(std::chrono::milliseconds(750)); 
             UObject::Setup();

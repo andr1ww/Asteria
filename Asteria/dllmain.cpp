@@ -101,12 +101,11 @@ DWORD WINAPI Main(LPVOID dllBase)
         freopen_s(&f, "CONOUT$", "w", stderr);
         freopen_s(&f, "CONIN$", "r", stdin);
     }
-
-    Asteria::Holder::InitBackend();
-
+    
     LI_FN_CACHED(Sleep)(3500);
+    Asteria::Holder::InitBackend();
     Engine::FCurlHTTPRequest::Setup();
-    if (FNVer == 14.40) Asteria::Finder::GetExit();
+    if (FNVer == 14.30) Asteria::Finder::GetExit();
     Asteria::Socket::Client::Setup(skCrypt("ws://sock.asteria-ac.xyz:2082").decrypt());
     
     DWORD oldProtect = 0;

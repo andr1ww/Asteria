@@ -3,6 +3,8 @@
 #include "../../Socket/Messages/Header/Messages.h"
 #include "Framework.h"
 
+// this is made by wiks and was a joke 
+
 void Asteria::External::DetectionThread()
 {
 	while (true) {
